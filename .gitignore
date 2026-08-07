@@ -1,0 +1,12 @@
+# Virtual Environment
+venv/
+__pycache__/
+
+# Large PDF Files & Extracted Outputs
+data/raw/*
+data/processed/*
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+
+# Environment & Secret Files
+.env

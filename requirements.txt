@@ -1,0 +1,22 @@
+# Data Processing & Extraction
+PyMuPDF
+pandas
+numpy
+
+# NLP & Machine Learning
+spacy
+torch
+transformers
+sentence-transformers
+
+# Knowledge Graph & Retrieval
+neo4j
+neo4j-graphrag
+
+# Web API Backend
+fastapi
+uvicorn
+
+# Environment & Evaluation
+python-dotenv
+ragas
