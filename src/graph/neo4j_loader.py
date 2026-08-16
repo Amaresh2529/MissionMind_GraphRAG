@@ -3,14 +3,13 @@ from pathlib import Path
 from neo4j import GraphDatabase
 from sentence_transformers import SentenceTransformer
 
-# Hardcoded Neo4j Aura Credentials
-NEO4J_URI = "neo4j+s://977dc26d.databases.neo4j.io"
-NEO4J_USERNAME = "977dc26d"
-NEO4J_PASSWORD = "_3TKAVEcstPYAxJ31McvAjd6umCp1Tg8TJi98AQnnCY"
-NEO4J_DATABASE = "977dc26d"
+# Local Docker Neo4j Credentials
+NEO4J_URI = "bolt://localhost:7687"
+NEO4J_USERNAME = "neo4j"
+NEO4J_PASSWORD = "password"
 
 def ingest_chunks_to_neo4j():
-    """Reads chunked JSON files, generates embeddings, and pushes nodes to Neo4j Aura."""
+    """Reads chunked JSON files, generates embeddings, and pushes nodes to local Neo4j."""
     base_dir = Path(__file__).resolve().parent.parent.parent
     chunks_dir = base_dir / "data" / "processed" / "chunks"
     
@@ -22,12 +21,11 @@ def ingest_chunks_to_neo4j():
     print("Loading Sentence-Transformer model (all-MiniLM-L6-v2)...")
     embedder = SentenceTransformer('all-MiniLM-L6-v2')
 
-    print(f"Connecting to Neo4j Aura instance at {NEO4J_URI}...")
+    print(f"Connecting to Local Neo4j instance at {NEO4J_URI}...")
     driver = GraphDatabase.driver(NEO4J_URI, auth=(NEO4J_USERNAME, NEO4J_PASSWORD))
 
-    # Specify the database explicitly for Aura cloud environments
-    with driver.session(database=NEO4J_DATABASE) as session:
-        # Create vector index constraint for hybrid search
+    # Create vector index constraint for hybrid search
+    with driver.session() as session:
         session.run("""
             CREATE VECTOR INDEX chunk_vector_index IF NOT EXISTS
             FOR (c:Chunk) ON (c.embedding)
@@ -48,7 +46,7 @@ def ingest_chunks_to_neo4j():
         texts = [c["text"] for c in chunks]
         embeddings = embedder.encode(texts, show_progress_bar=False)
 
-        with driver.session(database=NEO4J_DATABASE) as session:
+        with driver.session() as session:
             for chunk, embedding in zip(chunks, embeddings):
                 session.run("""
                     MERGE (d:Document {id: $doc_id})
@@ -69,7 +67,7 @@ def ingest_chunks_to_neo4j():
         print(f"   ✅ Successfully loaded {len(chunks)} chunks into Neo4j for {doc_id}")
 
     driver.close()
-    print(f"{'='*60}\n🎉 Ingestion Complete: Stored {total_inserted} total text chunks with vector embeddings in Neo4j Aura.")
+    print(f"{'='*60}\n🎉 Ingestion Complete: Stored {total_inserted} total text chunks with vector embeddings in local Neo4j.")
 
 if __name__ == "__main__":
     ingest_chunks_to_neo4j()
