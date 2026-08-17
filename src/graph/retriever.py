@@ -1,69 +1,85 @@
-from neo4j import GraphDatabase
-from sentence_transformers import SentenceTransformer
+"""
+main.py
 
-# Local Docker Neo4j Credentials
-NEO4J_URI = "bolt://localhost:7687"
-NEO4J_USERNAME = "neo4j"
-NEO4J_PASSWORD = "password"
+FastAPI backend for MissionMind Graph-RAG. Retrieval logic lives entirely in
+retriever.py — this file just wires the API layer around it, so there's one
+place that knows how to query the graph, not three.
+"""
 
-class GraphRAGRetriever:
-    def __init__(self):
-        print("Loading Embedding Model...")
-        self.embedder = SentenceTransformer('all-MiniLM-L6-v2')
-        self.driver = GraphDatabase.driver(NEO4J_URI, auth=(NEO4J_USERNAME, NEO4J_PASSWORD))
+import sys
+from pathlib import Path
 
-    def hybrid_search(self, query: str, top_k: int = 3):
-        """Performs a vector search and traverses the FMEA knowledge graph."""
-        print(f"\n🔍 Querying: '{query}'")
-        
-        # 1. Embed the user question
-        query_embedding = self.embedder.encode(query, show_progress_bar=False).tolist()
+from fastapi import FastAPI, HTTPException
+from pydantic import BaseModel
+import ollama
 
-        # 2. Cypher query for Hybrid Retrieval
-        cypher_query = """
-        // Step A: Vector similarity search to find the most relevant chunks
-        CALL db.index.vector.queryNodes('chunk_vector_index', $top_k, $embedding)
-        YIELD node AS chunk, score
-        
-        // Step B: Graph traversal to pull deterministic FMEA entities
-        OPTIONAL MATCH (chunk)-[:MENTIONS]->(fm:FailureMode)
-        OPTIONAL MATCH (fm)-[:OCCURRED_IN_SUBSYSTEM]->(s:Subsystem)
-        OPTIONAL MATCH (fm)-[:CAUSED_BY]->(rc:RootCause)
-        OPTIONAL MATCH (m:Mission)-[:EXPERIENCED_FAILURE]->(fm)
-        
-        RETURN 
-            score,
-            chunk.text AS context,
-            m.name AS mission,
-            s.name AS subsystem,
-            fm.name AS failure_mode,
-            rc.description AS root_cause
-        ORDER BY score DESC
-        """
-        
-        with self.driver.session() as session:
-            results = session.run(cypher_query, {"embedding": query_embedding, "top_k": top_k})
-            
-            print(f"\n{'='*60}\n🚀 HYBRID SEARCH RESULTS\n{'='*60}")
-            for record in results:
-                print(f"[{record['score']:.4f}] Context: {record['context'][:150]}...")
-                if record['failure_mode']:
-                    print(f"   ▶ Mission: {record['mission']}")
-                    print(f"   ▶ Subsystem: {record['subsystem']}")
-                    print(f"   ▶ Failure Mode: {record['failure_mode']}")
-                    print(f"   ▶ Root Cause: {record['root_cause']}")
-                else:
-                    print("   ▶ No structured FMEA entities attached to this chunk.")
-                print("-" * 60)
+sys.path.append(str(Path(__file__).resolve().parent.parent))  # -> src/
+from graph.retriever import GraphRAGRetriever
+from graph.neo4j_connector import close_driver
 
-    def close(self):
-        self.driver.close()
+app = FastAPI(
+    title="MissionMind Graph-RAG API",
+    description="Backend API for aerospace failure analysis using Neo4j, local embeddings, and Ollama.",
+    version="1.0.0"
+)
 
-if __name__ == "__main__":
-    retriever = GraphRAGRetriever()
-    
-    # Let's test a complex diagnostic query!
-    test_query = "What caused the O-ring seal to fail during the launch?"
-    retriever.hybrid_search(test_query)
-    
-    retriever.close()
+retriever = GraphRAGRetriever()  # one shared instance — owns the embedder + driver
+
+_PROMPT_TEMPLATE = """You are MissionMind, an advanced aerospace failure analysis AI assistant.
+Use the following retrieved document chunks and Knowledge Graph FMEA insights — including any cross-mission patterns — to answer the user's diagnostic query accurately and professionally. If a cross-mission pattern is present in the context, mention it explicitly.
+
+CONTEXT:
+{context}
+
+USER QUERY:
+{question}
+
+ANSWER:
+"""
+
+
+class QueryRequest(BaseModel):
+    question: str
+    model_name: str = "llama3"
+    top_k: int = 3
+
+
+class QueryResponse(BaseModel):
+    question: str
+    synthesized_answer: str
+    retrieved_contexts: list
+
+
+@app.get("/")
+def health_check():
+    return {"status": "online", "message": "MissionMind Graph-RAG API is running smoothly."}
+
+
+@app.post("/query", response_model=QueryResponse)
+def execute_graph_rag(payload: QueryRequest):
+    try:
+        results = retriever.hybrid_search(payload.question, top_k=payload.top_k)
+        aggregated_context = retriever.build_context_text(results)
+
+        prompt = _PROMPT_TEMPLATE.format(context=aggregated_context, question=payload.question)
+        response = ollama.chat(model=payload.model_name, messages=[{"role": "user", "content": prompt}])
+        answer = response["message"]["content"]
+
+        structured_contexts = [
+            {
+                "score": r["score"], "mission": r["mission"], "subsystem": r["subsystem"],
+                "failure_mode": r["failure_mode"], "root_cause": r["root_cause"],
+                "text": r["context"][:200], "related_failures": r.get("related_failures", []),
+            }
+            for r in results
+        ]
+
+        return {"question": payload.question, "synthesized_answer": answer, "retrieved_contexts": structured_contexts}
+
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+
+@app.on_event("shutdown")
+def shutdown_event():
+    close_driver()

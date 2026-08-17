@@ -1,0 +1,28 @@
+{
+  "labeled_chunks": [
+    {
+      "chunk_id": "Challenger_3",
+      "text": "<paste the actual chunk text from data/processed/chunks/Challenger_chunks.json>",
+      "has_failure_data": true,
+      "mission": "STS-51-L Challenger",
+      "subsystem": "Solid Rocket Booster (SRB)",
+      "failure_mode": "O-ring Primary Seal Erosion",
+      "root_cause": "Low ambient launch temperature reduced O-ring resiliency"
+    },
+    {
+      "chunk_id": "Annual_Report_2024_25_Eng_7",
+      "text": "<paste a chunk from one of the annual report PDFs>",
+      "has_failure_data": false,
+      "mission": null,
+      "subsystem": null,
+      "failure_mode": null,
+      "root_cause": null
+    }
+  ],
+  "test_queries": [
+    {
+      "question": "What caused the O-ring seal failure during the Challenger launch?",
+      "relevant_chunk_ids": ["Challenger_3", "Challenger_4"]
+    }
+  ]
+}

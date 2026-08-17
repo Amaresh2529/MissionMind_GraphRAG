@@ -1,6 +1,20 @@
-import fitz  # PyMuPDF
-import re
+"""
+pdf_loader.py
+
+Extracts text from PDFs in data/raw, with automatic OCR fallback for pages
+that score poorly on extraction quality (scanned/corrupted pages).
+
+Text cleaning and quality scoring now live in text_cleaner.py — this file
+only handles PDF-specific work (page iteration, OCR).
+"""
+
+import sys
 from pathlib import Path
+
+import fitz  # PyMuPDF
+
+sys.path.append(str(Path(__file__).resolve().parent.parent))  # -> src/
+from pipeline.text_cleaner import sanitize_text, text_quality_score, WORDFREQ_AVAILABLE
 
 try:
     import pytesseract
@@ -8,84 +22,6 @@ try:
     OCR_AVAILABLE = True
 except ImportError:
     OCR_AVAILABLE = False
-
-try:
-    from wordfreq import zipf_frequency
-    WORDFREQ_AVAILABLE = True
-except ImportError:
-    WORDFREQ_AVAILABLE = False
-
-# Signal 1: a digit fused directly between letters is close to unambiguous
-# evidence of extraction corruption (e.g. "faci8ities" from "facilities").
-# Legitimate technical tokens like "STS-51-L" or "24/7" don't match this —
-# the digit has to sit *inside* an unbroken run of letters on both sides.
-_EMBEDDED_DIGIT_RE = re.compile(r'[A-Za-z]\d[A-Za-z]')
-
-_STRIP_CHARS = '.,;:()[]{}"\'`'
-
-# Known, fixed font-mapping artifact in older scanned reports: the glyph for
-# capital "O" gets extracted as digit "0" specifically in "O-ring"/"O-rings"
-# (e.g. Challenger's report). This is a deterministic substitution — "0-ring"
-# never legitimately means a numeric zero — so it's safe to correct globally
-# rather than relying on OCR to catch it.
-_ORING_RE = re.compile(r'\b0-ring', re.IGNORECASE)
-
-
-def _fix_oring(match: re.Match) -> str:
-    return 'O' + match.group(0)[1:]
-
-
-def sanitize_text(text: str) -> str:
-    """Removes excessive newlines, unprintable characters, and fixes broken formatting."""
-    cleaned = re.sub(r'\s+', ' ', text)
-    cleaned = re.sub(r'[^\x00-\x7F]+', ' ', cleaned)
-    cleaned = _ORING_RE.sub(_fix_oring, cleaned)
-    return cleaned.strip()
-
-
-def text_quality_score(text: str) -> float:
-    """
-    Estimates extraction quality for a page, returning a score in [0, 1]
-    where higher is cleaner. Two signals are combined, and both are
-    designed to leave normal technical-document text (citations, page
-    numbers, hyphenated part names, ALL-CAPS acronyms, proper nouns)
-    completely untouched:
-
-    1. Embedded-digit corruption — a digit fused directly between letters
-       is a strong, low-noise signature of broken font/encoding
-       extraction. Any meaningful presence of it fails the page outright.
-
-    2. Dictionary coverage — for ordinary *lowercase* words only (numbers,
-       proper nouns, and ALL-CAPS acronyms are excluded so we never punish
-       "Marshall", "Thiokol", or "NASA"), the fraction that are
-       recognizable English words. Requires the `wordfreq` package; if
-       it isn't installed, this signal is skipped and only signal 1 runs.
-    """
-    tokens = text.split()
-    if not tokens:
-        return 1.0  # nothing to judge; don't force OCR on a blank page
-
-    embedded_digit_hits = sum(1 for t in tokens if _EMBEDDED_DIGIT_RE.search(t))
-    if embedded_digit_hits / len(tokens) > 0.01:
-        return 0.0
-
-    if not WORDFREQ_AVAILABLE:
-        return 1.0
-
-    checkable = []
-    for t in tokens:
-        core = t.strip(_STRIP_CHARS)
-        if len(core) < 3 or not core.isalpha():
-            continue
-        if core[0].isupper() or core.isupper():
-            continue  # assume proper noun / acronym — don't penalize
-        checkable.append(core.lower())
-
-    if len(checkable) < 8:
-        return 1.0  # too little evidence either way; don't force OCR
-
-    known = sum(1 for w in checkable if zipf_frequency(w, 'en') > 0)
-    return known / len(checkable)
 
 
 def ocr_page(pdf_path: Path, page_num: int) -> str:
