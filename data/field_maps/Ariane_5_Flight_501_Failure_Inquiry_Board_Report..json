@@ -1,0 +1,52 @@
+{
+  "doc_id": "Ariane_5_Flight_501_Failure_Inquiry_Board_Report.",
+  "status": "draft",
+  "drafted_by": "assistant (Claude), from the report's numbered chapters and page outline",
+  "reviewed_by": null,
+  "default": "other",
+  "ranges": [
+    {
+      "pages": [
+        1,
+        2
+      ],
+      "section_regex": "foreword|ariane|flight 501",
+      "field": "other",
+      "label": "Title, Foreword, Board membership"
+    },
+    {
+      "pages": [
+        2,
+        4
+      ],
+      "section_regex": "^1([.][0-9])?[.]? ",
+      "field": "description",
+      "label": "1. The Failure (1.1-1.4)"
+    },
+    {
+      "pages": [
+        4,
+        12
+      ],
+      "field": "analysis",
+      "label": "2. Analysis of the Failure; 3.1 Findings"
+    },
+    {
+      "pages": [
+        13,
+        13
+      ],
+      "section_regex": "^3[.]",
+      "field": "analysis",
+      "label": "3.1 Findings (end) and 3.2 Cause of the Failure"
+    },
+    {
+      "pages": [
+        13,
+        15
+      ],
+      "field": "recommendations",
+      "label": "4. Recommendations"
+    }
+  ]
+}

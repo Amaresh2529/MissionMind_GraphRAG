@@ -1,0 +1,265 @@
+{
+  "documents": {
+    "Annual_Report_2024_25_Eng": {
+      "pages": 214,
+      "passages": 620,
+      "slice_mismatch": 0,
+      "duplicate_ids": 0,
+      "bad_page": 0,
+      "uncovered_chars": 0,
+      "covered_chars": 271201,
+      "bad_chars": 0
+    },
+    "Annual_Report_2025_26_Eng_29042026_Rev": {
+      "pages": 262,
+      "passages": 854,
+      "slice_mismatch": 0,
+      "duplicate_ids": 0,
+      "bad_page": 0,
+      "uncovered_chars": 0,
+      "covered_chars": 333974,
+      "bad_chars": 0
+    },
+    "Ariane_5_Flight_501_Failure_Inquiry_Board_Report.": {
+      "pages": 15,
+      "passages": 52,
+      "slice_mismatch": 0,
+      "duplicate_ids": 0,
+      "bad_page": 0,
+      "uncovered_chars": 0,
+      "covered_chars": 31511,
+      "bad_chars": 0
+    },
+    "Challenger": {
+      "pages": 261,
+      "passages": 1030,
+      "slice_mismatch": 0,
+      "duplicate_ids": 0,
+      "bad_page": 0,
+      "uncovered_chars": 0,
+      "covered_chars": 614945,
+      "bad_chars": 0
+    },
+    "ESA_ExoMars2016_Schiaparelli_Anomaly_Inquiry": {
+      "pages": 28,
+      "passages": 56,
+      "slice_mismatch": 0,
+      "duplicate_ids": 0,
+      "bad_page": 0,
+      "uncovered_chars": 0,
+      "covered_chars": 47620,
+      "bad_chars": 0
+    },
+    "ESA_Vega_VV15_Inquiry_Findings": {
+      "pages": 1,
+      "passages": 6,
+      "slice_mismatch": 0,
+      "duplicate_ids": 0,
+      "bad_page": 0,
+      "uncovered_chars": 0,
+      "covered_chars": 4987,
+      "bad_chars": 0
+    },
+    "ESA_Vega_VV17_Inquiry_Conclusions": {
+      "pages": 1,
+      "passages": 7,
+      "slice_mismatch": 0,
+      "duplicate_ids": 0,
+      "bad_page": 0,
+      "uncovered_chars": 0,
+      "covered_chars": 4869,
+      "bad_chars": 0
+    },
+    "ESA_VegaC_VV22_Inquiry_Conclusions": {
+      "pages": 1,
+      "passages": 9,
+      "slice_mismatch": 0,
+      "duplicate_ids": 0,
+      "bad_page": 0,
+      "uncovered_chars": 0,
+      "covered_chars": 6081,
+      "bad_chars": 0
+    },
+    "ExoMars_2016_Schiaparelli_Module_Trajectory": {
+      "pages": 31,
+      "passages": 95,
+      "slice_mismatch": 0,
+      "duplicate_ids": 0,
+      "bad_page": 0,
+      "uncovered_chars": 0,
+      "covered_chars": 64522,
+      "bad_chars": 0
+    },
+    "ISRO_GSLV_F10_FAC_Conclusions": {
+      "pages": 1,
+      "passages": 3,
+      "slice_mismatch": 0,
+      "duplicate_ids": 0,
+      "bad_page": 0,
+      "uncovered_chars": 0,
+      "covered_chars": 3339,
+      "bad_chars": 0
+    },
+    "JAXA_Hitomi_Experience_Report": {
+      "pages": 104,
+      "passages": 277,
+      "slice_mismatch": 0,
+      "duplicate_ids": 0,
+      "bad_page": 0,
+      "uncovered_chars": 0,
+      "covered_chars": 84155,
+      "bad_chars": 0
+    },
+    "Mars_Climate_Orbiter": {
+      "pages": 48,
+      "passages": 131,
+      "slice_mismatch": 0,
+      "duplicate_ids": 0,
+      "bad_page": 0,
+      "uncovered_chars": 0,
+      "covered_chars": 71623,
+      "bad_chars": 0
+    },
+    "NASA_Apollo13_Review_Board": {
+      "pages": 215,
+      "passages": 708,
+      "slice_mismatch": 0,
+      "duplicate_ids": 0,
+      "bad_page": 0,
+      "uncovered_chars": 0,
+      "covered_chars": 231624,
+      "bad_chars": 0
+    },
+    "NASA_Apollo204_Review_Board": {
+      "pages": 192,
+      "passages": 494,
+      "slice_mismatch": 0,
+      "duplicate_ids": 0,
+      "bad_page": 0,
+      "uncovered_chars": 0,
+      "covered_chars": 214966,
+      "bad_chars": 0
+    },
+    "NASA_Columbia_CAIB_Vol1": {
+      "pages": 248,
+      "passages": 1123,
+      "slice_mismatch": 0,
+      "duplicate_ids": 0,
+      "bad_page": 0,
+      "uncovered_chars": 0,
+      "covered_chars": 905202,
+      "bad_chars": 0
+    },
+    "NASA_DART_MIB_Overview": {
+      "pages": 10,
+      "passages": 21,
+      "slice_mismatch": 0,
+      "duplicate_ids": 0,
+      "bad_page": 0,
+      "uncovered_chars": 0,
+      "covered_chars": 29196,
+      "bad_chars": 0
+    },
+    "NASA_ESA_SOHO_Interruption_Final_Report": {
+      "pages": 31,
+      "passages": 74,
+      "slice_mismatch": 0,
+      "duplicate_ids": 0,
+      "bad_page": 0,
+      "uncovered_chars": 0,
+      "covered_chars": 46613,
+      "bad_chars": 0
+    },
+    "NASA_Genesis_MIB_Report": {
+      "pages": 125,
+      "passages": 397,
+      "slice_mismatch": 0,
+      "duplicate_ids": 0,
+      "bad_page": 0,
+      "uncovered_chars": 0,
+      "covered_chars": 193835,
+      "bad_chars": 0
+    },
+    "NASA_Glory_T9_MIB_Summary": {
+      "pages": 8,
+      "passages": 17,
+      "slice_mismatch": 0,
+      "duplicate_ids": 0,
+      "bad_page": 0,
+      "uncovered_chars": 0,
+      "covered_chars": 14953,
+      "bad_chars": 0
+    },
+    "NASA_IRT_CRS7_Public_Summary": {
+      "pages": 9,
+      "passages": 23,
+      "slice_mismatch": 0,
+      "duplicate_ids": 0,
+      "bad_page": 0,
+      "uncovered_chars": 0,
+      "covered_chars": 16939,
+      "bad_chars": 0
+    },
+    "NASA_IRT_Orb3_Executive_Summary": {
+      "pages": 11,
+      "passages": 27,
+      "slice_mismatch": 0,
+      "duplicate_ids": 0,
+      "bad_page": 0,
+      "uncovered_chars": 0,
+      "covered_chars": 19367,
+      "bad_chars": 0
+    },
+    "NASA_NOAA_NPrime_MIB_Report": {
+      "pages": 113,
+      "passages": 243,
+      "slice_mismatch": 0,
+      "duplicate_ids": 0,
+      "bad_page": 0,
+      "uncovered_chars": 0,
+      "covered_chars": 182359,
+      "bad_chars": 0
+    },
+    "NASA_OCO_MIB_Summary": {
+      "pages": 6,
+      "passages": 11,
+      "slice_mismatch": 0,
+      "duplicate_ids": 0,
+      "bad_page": 0,
+      "uncovered_chars": 0,
+      "covered_chars": 11369,
+      "bad_chars": 0
+    },
+    "NASA_Starliner_CFT_Propulsion_Anomalies": {
+      "pages": 311,
+      "passages": 616,
+      "slice_mismatch": 0,
+      "duplicate_ids": 0,
+      "bad_page": 0,
+      "uncovered_chars": 0,
+      "covered_chars": 518602,
+      "bad_chars": 0
+    },
+    "NASA_TaurusXL_T8_T9_Summary_2019": {
+      "pages": 8,
+      "passages": 19,
+      "slice_mismatch": 0,
+      "duplicate_ids": 0,
+      "bad_page": 0,
+      "uncovered_chars": 0,
+      "covered_chars": 19411,
+      "bad_chars": 0
+    },
+    "NASA_WIRE_MIB_Vol1": {
+      "pages": 24,
+      "passages": 75,
+      "slice_mismatch": 0,
+      "duplicate_ids": 0,
+      "bad_page": 0,
+      "uncovered_chars": 0,
+      "covered_chars": 34259,
+      "bad_chars": 0
+    }
+  },
+  "failures": {}
+}

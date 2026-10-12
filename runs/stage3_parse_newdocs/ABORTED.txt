@@ -1,0 +1,4 @@
+ABORTED 2026-10-12 (stopped deliberately during NASA_Genesis_MIB_Report).
+Superseded: while it ran, the parser gained the boilerplate-key fix, Private-Use-Area bullet
+mapping and the manifest "ocr_policy" override. All 26 documents are re-parsed with the fixed
+parser in runs/stage3_parse_all. Outputs written by this run were overwritten there.

@@ -1,0 +1,27 @@
+{
+  "NASA_Starliner_CFT_Propulsion_Anomalies": {
+    "doc_id": "NASA_Starliner_CFT_Propulsion_Anomalies",
+    "pages": 311,
+    "scanned": false,
+    "pages_ocr": 70,
+    "pages_low_quality": 5,
+    "pages_empty": 0,
+    "blocks": {
+      "heading": 128,
+      "body": 1922,
+      "boilerplate": 304
+    },
+    "headings": 128,
+    "passages": 616,
+    "words_in_passages": 86610,
+    "pseudo_fields": {
+      "findings": 212,
+      "summary": 47,
+      "recommendations": 62,
+      "other": 46,
+      "narrative": 189,
+      "causes": 60
+    },
+    "body_font_size": 10.0
+  }
+}

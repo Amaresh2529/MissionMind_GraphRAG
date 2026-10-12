@@ -1,0 +1,89 @@
+{
+  "doc_id": "NASA_Apollo13_Review_Board",
+  "status": "draft",
+  "drafted_by": "assistant (Claude), from the contents (p. 11) and chapter/part openings in the OCR outline",
+  "reviewed_by": null,
+  "default": "other",
+  "ranges": [
+    {
+      "pages": [
+        4,
+        4
+      ],
+      "field": "description",
+      "label": "Preface (summary of the accident and the Board's work) - REVIEW"
+    },
+    {
+      "pages": [
+        1,
+        11
+      ],
+      "field": "other",
+      "label": "Cover, transmittal, configuration drawings, contents"
+    },
+    {
+      "pages": [
+        12,
+        31
+      ],
+      "field": "other",
+      "label": "Chapter 1 Authority (establishment memos, NASA management instructions)"
+    },
+    {
+      "pages": [
+        32,
+        75
+      ],
+      "field": "other",
+      "label": "Chapter 2 Board history, biographies, organisation, activities log"
+    },
+    {
+      "pages": [
+        76,
+        107
+      ],
+      "field": "description",
+      "label": "Chapter 3 Description of the Apollo 13 space vehicle and mission"
+    },
+    {
+      "pages": [
+        134,
+        144
+      ],
+      "field": "description",
+      "label": "Chapter 4 Part 3 The Apollo 13 flight (chronology)"
+    },
+    {
+      "pages": [
+        153,
+        171
+      ],
+      "field": "description",
+      "label": "Chapter 4 Part 5 Apollo 13 recovery (crew/ground response) - REVIEW"
+    },
+    {
+      "pages": [
+        108,
+        152
+      ],
+      "field": "analysis",
+      "label": "Chapter 4 Review and analysis: O2 tank history and design; summary analysis of the accident"
+    },
+    {
+      "pages": [
+        172,
+        212
+      ],
+      "field": "analysis",
+      "label": "Chapter 5 Findings and determinations"
+    },
+    {
+      "pages": [
+        213,
+        215
+      ],
+      "field": "recommendations",
+      "label": "Chapter 5 Part 4 Recommendations"
+    }
+  ]
+}

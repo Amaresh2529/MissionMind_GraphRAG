@@ -1,0 +1,583 @@
+﻿id,passage_id,report,page,section_heading,text,label
+T001,NASA_Columbia_CAIB_Vol1::p0203::04,"Columbia Accident Investigation Board Report, Volume I",203,8.6 CHANGING NASA'S ORGANIZATIONAL SYSTEM,"Because ill-structured problems are less visible and therefore invite the normalization of deviance, they may be the most risky of all.",
+T002,Challenger::p0009::03,"Report of the Presidential Commission on the Space Shuttle Challenger Accident, Volume 1",9,Introduction,"Space Shuttle, earlier considered only the transport element of a broad, multi-objective space plan, became the focus of NASA's near-term future.",
+T003,Challenger::p0120::00,"Report of the Presidential Commission on the Space Shuttle Challenger Accident, Volume 1",120,Present at KSC,"Above, foot long icicles on a lower level of the Fixed Service Structure frame the attachment point where the Orbiter is attached to the external tank (arrow). Icing was even more extensive at upper levels of the service structure (upper p ""ae. right and below). At right below is a ground com- * | ¥ munications box (not used during launch) ren-
+
+dered inoperable by heavy ice.",
+T004,Ariane_5_Flight_501_Failure_Inquiry_Board_Report.::p0003::03,ARIANE 5 Flight 501 Failure — Report by the Inquiry Board,3,1.3 RECOVERY OF MATERIAL,"1.3 RECOVERY OF MATERIAL
+
+The self-destruction of the launcher occurred near to the launch pad, at an altitude of approximately 4000 m. Therefore, all the launcher debris fell back onto the ground, scattered over an area of approximately 12 km2 east of the launch pad. Recovery of material proved difficult, however, since this area is nearly all mangrove swamp or savanna.
+
+Nevertheless, it was possible to retrieve from the debris the two Inertial Reference Systems. Of particular interest was the one which had worked in active mode and stopped functioning last, and for which, therefore, certain information was not available in the telemetry data (provision for transmission",
+T005,Challenger::p0106::00,"Report of the Presidential Commission on the Space Shuttle Challenger Accident, Volume 1",106,Chairman Rogers: Could you explain why?,"So those are the certification data that we kind of discussed, all of which we didn't discuss. The two cold gas tests we did, the segment proof tests we did, the development and qualification motor test we did, as a basis for understanding what we could expect to happen at colder temperatures on the joints.
+
+Mr. Hardy testified as follows:?°
+
+Mr. Hardy: At the teleconference on the evening of January 27, 1986, Thiokol engineering personnel in Utah reviewed charts that had been datafaxed to Huntsville and KSC participants just prior to the beginning of the conference. Now, I am not going to repeat a lot of what you have already heard, but I will give you some of my views on the whole matter.
+
+The presentations were professional in nature. There were numerous questions and answers. There was a discussion of various data and points raised by individuals at Thiokol or at Marshall or at Kennedy. I think it was a rather full discussion. There were some 14 charts presented, and as has been mentioned earlier, we spent about two, two and a half hours reviewing this. To my knowledge, anyone who desired to make a point, ask a question or express a view was in no way restrained from doing so.",
+T006,NASA_Starliner_CFT_Propulsion_Anomalies::p0122::01,"NASA report on Starliner propulsion system anomalies during the Crew Flight Test (redacted, 2026)",122,5.2.1 Process and Communication,"A single entity of integration was identified as missing or necessary for successful intersection of the entire CFT Boeing/NASA team. There was not an effective NASA forum where the different technical experts and those with differing perspectives could have an open exchange about disagreements regarding the major prop anomalies and the resolution plans. The Provider-led MMT was not the right environment for having that internal-to-NASA integration. It led to Boeing personnel feeling like they had to ""integrate NASA"" which is not their responsibility. The NOM is the only NASA position that is supposed to be polled at the SMMT but there wasn't an effective way for the NOM to gain the NASA position with so many stakeholders out of alignment. For anomalies of this magnitude, it may be asking too much for the NOM to be responsible for this level of integration. Observation 6: Lack of a CCP MMI equivalent on the Boeing side led to disconnects and a lack of understanding of goals and objectives for meetings. Boeing should have a CCP MMI equivalent to help manage the content, logistics, development of data, presentation, SMMT timing and agendas. The CCP MMI didn't have an equivalent mission manager at Boeing. The CCP MMI was supposed to work directly with the Boeing SMMT Chair who was the NOM's direct counterpart. This mismatch hindered communication.",
+T007,NASA_Starliner_CFT_Propulsion_Anomalies::p0011::00,"NASA report on Starliner propulsion system anomalies during the Crew Flight Test (redacted, 2026)",11,1.3 Establishing the Investigation,"e Identify the causes and factors that led to the propulsion system in-flight anomalies, including issues from previous flights, programmatic culture, programmatic resources, pre-flight processes, analysis, and test plans that led to a ""Go"" for launch with reduced system capability.
+
+e Develop recommendations for change to future missions, including certification, processes, procedures, testing, analytical methods, and in-flight operations.
+
+e Develop a fault tree for the following propulsion system anomalies:
+
+o Helium manifold leaks o Service Module (SM) Reaction Control System (RCS) Thruster fail offs o Crew Module (CM) RCS fail off = Each fault tree is to include proximate cause(s), intermediate cause(s), contributing factors, organization factors, observations and recommendations.
+
+e Assess meeting/team/organization structure, contractor and contractual relationships, effectiveness in team decision making, and any potential cultural barriers or organizational factors that contributed to the findings.
+
+e Produce a findings reports that includes all fault trees evaluating propulsion system anomalies with identified proximate, intermediate, and contributing causes, organizational factors, observations, and recommendations.",
+T008,Challenger::p0161::02,"Report of the Presidential Commission on the Space Shuttle Challenger Accident, Volume 1",161,Reporting of In-flight Anomalies,"Reporting of In-flight Anomalies
+
+A second method of notifying Level II of problems would have been through the in-flight anomaly reporting channels. The identification and resolution of anomalies that occur during",
+T009,NASA_Apollo13_Review_Board::p0140::00,Report of Apollo 13 Review Board (NTRS 19700076776),140,ea HERES TET ER TESTS REL TE LTE,u,
+T010,NASA_Columbia_CAIB_Vol1::p0176::04,"Columbia Accident Investigation Board Report, Volume I",176,ENDNOTES FOR CHAPTER 6,ENDNOTES FOR CHAPTER 6,
+T011,Challenger::p0118::02,"Report of the Presidential Commission on the Space Shuttle Challenger Accident, Volume 1",118,Present at KSC,"Present at KSC
+
+17. Allan J. McDonald, Director, SRM Project, MTI 1 8. Jack Buchanan, Manager, KSC Operations, MTI",
+T012,NASA_Apollo13_Review_Board::p0009::01,Report of Apollo 13 Review Board (NTRS 19700076776),9,Access panel CM/SM umbilical,"Buk E LE BE BE LE LE LE EE LE
+
+rr het
+
+ae",
+T013,NASA_Apollo13_Review_Board::p0148::03,Report of Apollo 13 Review Board (NTRS 19700076776),148,55:54:53 .220 Stabilization control system body rate changes begin. 55:54:53.555* Loss of telemetry data begins. 55:54:55.35 Recovery of telemetry data.,EK LE E E LE LE BEB iE & BB EB ck Bik,
+T014,NASA_Starliner_CFT_Propulsion_Anomalies::p0105::01,"NASA report on Starliner propulsion system anomalies during the Crew Flight Test (redacted, 2026)",105,4.8.1 Testing,"[ SMCS Failure during OF T2 Mission )
+
+"" = at 2 '6 Se | ay Noa arent Peed eee con mter",
+T015,NASA_Starliner_CFT_Propulsion_Anomalies::p0116::01,"NASA report on Starliner propulsion system anomalies during the Crew Flight Test (redacted, 2026)",116,5.1.1 NASA Human Factors Analysis and Classification System (NASAHFACS),"Rating Distribution - All Interviewees
+
+ommunication
+
+Team Dynamics
+
+@ 1 (Least Effective) 4 (Somewhat Effective) m 2 (Ineffective) . = 5 (Effective)
+
+3 (Somewhat Ineffective) m6 (Most Effetive)
+
+Decision Making
+
+Figure 74: Rating Distribution of all Interviewees",
+T016,NASA_Apollo13_Review_Board::p0160::00,Report of Apollo 13 Review Board (NTRS 19700076776),160,pare,"pow
+
+| aime) hnray
+
+preeecansl
+
+pene
+
+a i die od
+
+alee",
+T017,Challenger::p0173::04,"Report of the Presidential Commission on the Space Shuttle Challenger Accident, Volume 1",173,Customer Requests HS-376 (removed from 51-I). G-Star (removed from 61-C). Satellite Television Corporation - Direct Broadcast Satellite (removed from 61-E). Westar (removed from 61-C). Satellite Television Corporation - Direct Broadcast Satellite (removed from 61-H). Electrophoresis Operations in Space (removed from 61-B). Electrophoresis Operations in Space (removed from 61-H). Hubble Space Telescope (swap. with Earth Observation Mission). Operational Constraints,"Customer Requests
+
+HS-376 (removed from 51-I).
+
+G-Star (removed from 61-C).
+
+Satellite Television Corporation - Direct Broadcast Satellite (removed from 61-E).
+
+Westar (removed from 61-C).
+
+Satellite Television Corporation - Direct Broadcast Satellite (removed from 61-H).
+
+Electrophoresis Operations in Space (removed from 61-B).
+
+Electrophoresis Operations in Space (removed from 61-H).
+
+Hubble Space Telescope (swap. with Earth
+
+Observation Mission).
+
+Operational Constraints
+
+No launch window for Skynet/Indian Satellite Combination (61-H).
+
+Unacceptable structural loads for Tracking and Data Relay Satellite/Indian Satellite (61-H).
+
+Landing weight above allowable limits for each of the following missions: 61-A, 61-E, 71-A, 61-K.
+
+External Factors
+
+Late addition of Senator Jake Garn (R-Utah) (51-D).
+
+Late addition of Representative Bill Nelson (D-Florida) (61-C).",
+T018,NASA_WIRE_MIB_Vol1::p0007::02,"WIRE Mishap Investigation Board Report, Volume 1",7,Support: Mike Blau Kim Brown Pat Crouse Quang Nguyen Giulio Rosanova Tom Spitzer Mark Voyton,"Support:
+
+Mike Blau Kim Brown Pat Crouse Quang Nguyen Giulio Rosanova Tom Spitzer Mark Voyton",
+T019,NASA_Starliner_CFT_Propulsion_Anomalies::p0070::00,"NASA report on Starliner propulsion system anomalies during the Crew Flight Test (redacted, 2026)",70,4.6 Analysis: Helium Leak,"4.6 Analysis: Helium Leak
+
+Fault tree analysis was used to determine the most probable proximate cause of the helium leaks that occurred on the CFT mission. The fault tree showed the most probable proximate cause was the material of the seals within the Starliner helium manifold being incompatible with NTO (Helium Fault Tree Block D1.2.1). The fault tree is graphically depicted at the end of the report. The O-ring sizing is a potential component of this failure and therefore is also a possible contributing factor for the helium leaks. Fault tree analysis has determined the intermediate causes for material compatibility are NTO permeation and NTO leakage. The Teflon seal, which is spring energized for both the RCS and OMACs, allow for NTO to seep and permeate past. This allows for a direct path for the NTO to degrade the RCS/OMAC helium O-rings in combination with the design of the RCS/OMACs flange. It is also possible for the NTO to travel via the open path to the vent circuit on both flanges. Once the NTO reaches the helium O-ring, it is then capable of permeating past and interacting with the remaining helium manifold softgoods while on the ground and on orbit. Contributing factors to the helium leaks include excessive lubricant (Fault Tree Block D1.4), flange build tolerancing (Fault Tree Block D2.2), and the variability of the environment during the CFT Mission. These factors are unlikely to have caused the leaks but may help to explain the variability of the leak rates, as the leak rate did not remain constant and additional leaks developed during the CFT mission. The RCCA fault tree lists the possible proximate cause1 of the helium leakage to be material incompatibility of the O-ring with NTO within the RCS flange.",
+T020,NASA_Columbia_CAIB_Vol1::p0004::02,"Columbia Accident Investigation Board Report, Volume I",4,PART ONE THE ACCIDENT,Chapter 4 Other Factors Considered 4.1 Fault Tree ..................................................................................................................................................... 85 4.2 Remaining Factors ....................................................................................................................................... 86,
+T021,NASA_ESA_SOHO_Interruption_Final_Report::p0022::01,SOHO Mission Interruption Joint NASA/ESA Investigation Board Final Report,22,7. DURATION,"7. DURATION
+
+The ESA Director of the Scientific Programme and the NASA Associate Administrator of the Office of Space Science will dismiss the board when it has fulfilled its requirements.
+
+8 . CANCELLATION
+
+This appointment letter is automatically canceled 1 year from its effective date unless otherwise specifically extended by the establishing authorities.
+
+Signed by:
+
+ORIGINAL SIGNED BY ORIGINAL SIGNED BY Dr. R. M. Bonnet - ESA Dr. Wesley T. Huntress - NASA",
+T022,ESA_ExoMars2016_Schiaparelli_Anomaly_Inquiry::p0017::01,ExoMars 2016 - Schiaparelli Anomaly Inquiry (DG-I/2017/546/TTN),17,6.2.3 Links between unexpected spin rate and unexpected transverse angular rates,"6.2.3 Links between unexpected spin rate and unexpected transverse angular rates
+
+During entry and descent the EDM spin rate showed an unexpected behaviour Between EIP and PDD triggering the spin rate:
+
+- increases from 16 to 18 deg/s before the black-out; - decreases to 12 deg/s before PDD. After PDD triggering the spin rate
+
+- decreases up to almost zero before Front Shield Jettisoning. A similar anomaly was observed during NASA's Mars Exploration Rover mission1. In that case inspection using the Opportunity Rover on the surface of Mars revealed that remaining thermal blanket hardware could induce torques explaining the unexpected spin rate after black-out. This flight experience supports the hypothesis that the unexpected spin rate during entry could be due to uneven disintegration of thermal blankets and associated hardware, nevertheless the SIB did not perform an in depth investigation of the possible root cause of the spin rate evolution beyond its possible impact on the unexpected transversal angular rates. The angular acceleration around the spin axis changed value again after parachute deployment. The root cause of this is believed to be a possible slight twist in the parachute riser after deployment. Based on the analyses performed, the SIB consider that there is no link between the unexpected spin rate behaviour and the unexpected transverse angular rates that saturated the IMU.",
+T023,NASA_Starliner_CFT_Propulsion_Anomalies::p0044::01,"NASA report on Starliner propulsion system anomalies during the Crew Flight Test (redacted, 2026)",44,o8SueS =,"As a comparison, MOOG found a similar issue during an ATP of hardware bound for the Japanese experimental HOPE-X project in 2000. This hardware was identical to hardware used in the Shuttle APU upgrade, leading to a presentation regarding the issue presented at the STS-101 FRR showcasing separation between the concerned hardware and the hardware set to fly. In this instance, during an ATP test campaign at the manufacturer, poppet extrusion was noted after the poppet seat had only been exposed to water, not NTO, at ambient temperatures (not elevated temperatures). Teflon poppet seats of this geometry can demonstrate extrusion without propellant or high temperature exposure.
+
+Another notable difference is that this comparison hardware utilizes teeth to keep the poppet in place, unlike the Starliner valve. The finding here was that the teeth had been filed down too far during the deburring process, allowing an improper engagement of the teflon to remain in position. While this is not a one-for-one hardware comparison, this corollary representation shows that extrusion can happen without adequate poppet seat retention.",
+T024,JAXA_Hitomi_Experience_Report::p0023::00,"Hitomi Experience Report: Investigation of Anomalies Affecting the X-ray Astronomy Satellite Hitomi (ASTRO-H), 8 June 2016 version",23,"Time (JST) Station Attitude Power Communication Data Handling Temperature Distribution 3/26 03:02 -03:13 USC Normal Normal Normal Normal Normal 3/26 05:49 -06:02 MSP anomaly Lower power Normal Normal Some parts higher, other parts lower than expected 3/26 07:31 -07:44 MSP anomaly Night time Normal Normal Some parts higher, other parts lower than expected 3/26 09:52 -10:04 MGN anomaly Lower power (during day time) Normal Normal Some parts higher, other parts lower than expected 3.3 Summary of ASTRO-H Condition based on the last 4 operation HK data","Time
+
+(JST) Station Attitude Power Communication Data Handling Temperature
+
+Distribution
+
+3/26 03:02 -03:13 USC Normal Normal Normal Normal Normal
+
+3/26 05:49 -06:02 MSP anomaly Lower power Normal Normal
+
+Some parts
+
+higher, other
+
+parts lower
+
+than expected
+
+3/26 07:31 -07:44 MSP anomaly Night time Normal Normal
+
+Some parts
+
+higher, other
+
+parts lower
+
+than expected
+
+3/26 09:52 -10:04 MGN anomaly Lower power
+
+(during day
+
+time) Normal Normal
+
+Some parts
+
+higher, other
+
+parts lower
+
+than expected
+
+3.3 Summary of ASTRO-H Condition based on the last 4 operation HK data",
+T025,Challenger::p0189::03,"Report of the Presidential Commission on the Space Shuttle Challenger Accident, Volume 1",189,Crew Escape Options,"An escape module does theoretically offer the widest range of crew escape options. The other two options, rocket extraction and bail-out, are only practical during gliding flight. Both methods would be useful when the Orbiter could not reach a prepared runway, for they would allow the crew to escape before a very hazardous landing or a water ditching. Aerodynamic model tests showed that a crew member bailing out through either the side or overhead hatch would subsequently contact the wing, tail or orbital maneuvering system pod unless he or she could exit with sufficient velocity (> 5 to 10 feet per second) to avoid these obstacles. Slides and pendant rocket systems were evaluated as means of providing this velocity, but all concepts of bail-out and rocket extraction that were studied require many minutes to get the entire crew out and would be practical only during controlled gliding flight. The results of these studies were presented at the Program Requirements Change Board session held on May 12, 1983, and subsequently to the NASA administrator, but none of the alternatives was",
+T026,NASA_Columbia_CAIB_Vol1::p0064::05,"Columbia Accident Investigation Board Report, Volume I",64,3.6 DE-ORBIT/RE-ENTRY,"The Modular Auxiliary Data System is a supplemental instrumentation system that gathers Orbiter data for processing after the mission is completed. Inputs are almost exclusively physical sensor readings of temperatures, pressures, mechanical strains, accelerations, and vibrations. The Modular Auxiliary Data System usually records only the mission's first and last two hours (see Figure 3.6-1).
+
+The Orbiter Experiment instrumentation is an expanded suite of sensors for the Modular Auxiliary Data System that was installed on Columbia for engineering development purposes. Because Columbia was the first Orbiter launched,",
+T027,NASA_Apollo204_Review_Board::p0075::03,Report of Apollo 204 Review Board (NTRS 19930078717),75,"February 26, 27, 28, 1967","2. A general discussion was held (in Executive Session) regarding the future activities of the Panels and other Board activities, with the objective of developing assurance that the Board's Final Report will be completed by the end of March. An additional objective was to establish a mode of operation whereby the Board will be able to effect an orderly reduction of its activities at KSC, eventually re-",
+T028,NASA_Starliner_CFT_Propulsion_Anomalies::p0266::00,"NASA report on Starliner propulsion system anomalies during the Crew Flight Test (redacted, 2026)",266,SDRT Scope,"OFT-2 Mission (5/19/2022 - 5/25/2022)
+
+The SM propulsion system uses a Fault Detection, Isolation, and Recovery (FDIR) scheme where it checks for thruster chamber pressure as an indicator of thruster status. Any chamber pressure less than 110 pounds per square inch absolute (psia) is considered ""off"" or degraded by FDIR. Any pressure above this limit and the thruster is considered to be ""on"". The Integrated Propulsion Controller (IPC) and the Flight Management Computer (FMC) use these measurements to determine if the thruster is on when it has been commanded off (thruster failed on) or off when commanded on (thruster failed off). For the OFT-2 mission, the persistence, or the number of failed thruster flags required for the FMC to remove a thruster from the availability table was set to two. This means that the IPC had to detect low chamber pressure readings and set the ""failed off flag"" twice for the FMC to read on the data bus.",
+T029,NASA_Starliner_CFT_Propulsion_Anomalies::p0173::01,"NASA report on Starliner propulsion system anomalies during the Crew Flight Test (redacted, 2026)",173,Associated R#s (Table 2),"Tolerancing D2.1
+
+Flange Build D2
+
+Fastener Torque/ Retention D2.2",
+T030,NASA_Genesis_MIB_Report::p0026::00,Genesis Mishap Investigation Board Report (NTRS 20060008607),26,TECHNICAL INVESTIGATION 2),"TECHNICAL INVESTIGATION
+
+&
+
+The EST electronics card comprises four functional blocks: low-pass filter, counter, timer decodes for each event, and FET drivers to trigger the pyros. The G-switches each feed into low-pass filters. When a G-switch closes, the input to the low-pass filter is pulled high. The low-pass filter only allows signals through that persist for longer than ~500 ms, effectively eliminating accidental initiation of the timers due to glitching or g-switch chatter. The two low-pass filters feed into two independent timer circuits. These timers use a 10-Hz timing source to measure the passage of time (Figure 2-12). They are designed to not initiate a countdown until the g-switch indicates that it was open after having been closed for more than 500 ms. By doing this, the time for the various pyro events was tied to the falling edge of the deceleration curve illustrated in Figure 2-5. Once the counters began counting they would continue counting. The output of the counter chain went into a decode tree that was used to select the 3 times required to fire the pyros identified in Table 2-3 (see also Figure 2-12). The cross-coupling of the two timer branches precluded firing a pyro before both chains indicated the pyro should be fired.",
+T031,Challenger::p0149::05,"Report of the Presidential Commission on the Space Shuttle Challenger Accident, Volume 1",149,"Mr. Ebeling: Unfortunately, not to the right people. 136 The Closure Issue","Mr. Russell: Normally, whether it takes engineering analysis or tests or some corrective action, a closeout to the problem would occur after an adequate corrective action had been taken to satisfy those on the problem review board that the problem had indeed been closed out. That is the way that that happens; for example, we had found a loose bolt on the recovery one time, and we had to take corrective action in our procedures and in the engineering to make sure that that wouldn't happen again, and then to verify that corrective action, and at that point that problem would be ready to be closed out. It generally involves a report or at least a mention by the review board stating what had been done to adequately close it out, and then it is agreed upon by the parties involved... .
+
+Question: What do you understand a launch constraint to mean?",
+T032,NASA_Apollo204_Review_Board::p0120::00,Report of Apollo 204 Review Board (NTRS 19930078717),120,3. EVENTS FROM THE INITIATION OF THE T-10 MINUTE HOLD AT 23:20 GMT UNTIL,"in other equipment. Variations found in the signal level from the gas chromatograph cable at earlier times in the test have been correlated with either crew movement or voltage transients when equipment was turned off or on at these earlier times. The variation at 23:30:50 GMT, may have resulted because it was touched or approached by the crew since there does not appear to be any voltage transient condition at this time which could have given the observed signal.
+
+A significant voltage transient was recorded at 23:30:54.8 GMT. The records show a surge in the AC Bus 2 voltage.
+
+Several other parameters being measured also showed anomalous behaviour at this time. There was a 1.7 second dropout in signal from the C-Band decoder and transmitter outputs, a brief dropout of the VHF-FM carrier, a fluctuation in the rotation controller null outputs and a fluctuation in the",
+T033,Challenger::p0218::00,"Report of the Presidential Commission on the Space Shuttle Challenger Accident, Volume 1",218,Development- Orbiter,"Sec. 3. Administration. (a) The heads of Executive departments and agencies shall, to the extent permitted by law, provide the Commission with such information as it may require for purposes of carrying out its functions.
+
+(b) Members of the Commission shall serve without compensation for their work on the Commission. However, members appointed from among private citizens of the United States may be allowed travel expenses, including per diem in lieu of subsistence, to the extent permitted by law for persons serving intermittently in the government service (5 U.S.C. 5701-5707).
+
+(c) To the extent permitted by law, and subject to the availability of appropriations, the Administrator of the National Aeronautics and Space Administration shall provide the Commission with such administrative services, funds, facilities, staff, and other support services as may be necessary for the performance of its functions.
+
+Sec. 4. General Provisions. (a) Notwithstanding the provisions of any other Executive Order, the functions of the President under the Federal Advisory Committee Act which are applicable to the Commission, except that of reporting annually to the Congress, shall be performed by the Administrator of the National Aeronautics and Space Administration, in accordance with guidelines and procedures established by the Administrator of General Services.",
+T034,Challenger::p0202::01,"Report of the Presidential Commission on the Space Shuttle Challenger Accident, Volume 1",202,Involvement of Development Contractors,"18 Rocketdyne Report, BC 86-38, pages 315-324.
+
+19 NASA Pre-Launch Activities Team Report, Appendix D, page 188.
+
+20 NASA Pre-Launch Activities Team Report, Appendix D, page 186.
+
+21 Commission Work Session, Pre-Launch. March +, 1986, page 206.",
+T035,NASA_Columbia_CAIB_Vol1::p0169::02,"Columbia Accident Investigation Board Report, Volume I",169,A Lack of Clear Communication,"A Lack of Clear Communication
+
+Communication did not flow effectively up to or down from Program managers. As it became clear during the mission that managers were not as concerned as others about the danger of the foam strike, the ability of engineers to challenge those beliefs greatly diminished. Managers' tendency to accept opinions that agree with their own dams the flow of effective communications.
+
+After the accident, Program managers stated privately and publicly that if engineers had a safety concern, they were obligated to communicate their concerns to management. Managers did not seem to understand that as leaders they had a corresponding and perhaps greater obligation to create viable routes for the engineering community to express their views and receive information. This barrier to communications not only blocked the flow of information to managers, but it also prevented the downstream flow of information from managers to engineers, leaving Debris Assessment Team members no basis for understanding the reasoning behind Mission Management Team decisions.",
+T036,NASA_Genesis_MIB_Report::p0039::04,Genesis Mishap Investigation Board Report (NTRS 20060008607),39,IMA Project Management Background,"IMA Project Management Background
+
+The LMA Project Manager was ""empowered"" by the JPL Development Project Manager to accomplish the design, build, and testing of the hardware and software in accordance with the Verification Matrix of the requirements document. There was no formal review and approval requiring JPL sign-off of LMA activities. The LMA Development Project Manager chaired a weekly telecom and a monthly meeting to review program status. As LMA chaired these meetings, the issues and problems raised and discussed were heavily driven by LMA. JPL had one person in residence at LMA; other JPL project personnel traveled to LMA either to assist in issue and problem reduction or to witness the development testing of a subsystem. LMA also was driven by profit and loss (P&L). Under the Discovery program, funding is identified with risk funds. However, the belief was that the program would be terminated if it exceeded the cost cap. The design and development issues common to all projects surfaced and began to significantly reduce LMA's profit position on Genesis.",
+T037,NASA_Starliner_CFT_Propulsion_Anomalies::p0081::01,"NASA report on Starliner propulsion system anomalies during the Crew Flight Test (redacted, 2026)",81,4.6.3 Fault Tree,"D1.3 Fo Sizing addresses O-ring sizing. Based on the dimensions of the RCS thruster common flange, the O-ring and associated fill area is not of the necessary dimensions to prevent leakage, as shown in Figure 58: RCS Flange Oxidizer Transport Mechanism. Gland/O-ring sizing potential issues include insufficient gland fill or insufficient squeeze of the O-ring, each of which can cause leakage. Without additional testing it is not possible to evaluate whether it is required in order",
+T038,NASA_Columbia_CAIB_Vol1::p0055::05,"Columbia Accident Investigation Board Report, Volume I",55,REINFORCED CARBON-CARBON (RCC),"1 2
+
+3 4",
+T039,Challenger::p0167::03,"Report of the Presidential Commission on the Space Shuttle Challenger Accident, Volume 1",167,Aerospace Safety Advisory Panel,"Aerospace Safety Advisory Panel
+
+The Aerospace Safety Advisory Panel (the ""panel"" in what follows) was established in the aftermath of the Apollo spacecraft fire January 27, 1967. Shortly thereafter the United States Congress enacted legislation (Section 6 of the NASA Authorization Act, 1968; 42 U.S.C. 2477) to establish the panel as a senior advisory committee to NASA. The statutory duties of the panel are:
+
+""The panel shall review safety studies and operations plans referred to it and shall make reports thereon, shall advise the Administrator with respect to the hazards of proposed operations and with respect to the adequacy of proposed or existing safety standards, and shall perform such other duties as the Administrator may request.""
+
+'The panel membership is set by statute at no more than nine members, of whom up to four may come from NASA. The NASA Chief Engineer is an ex-officio member. The staff consists of full-time NASA employees, and the staff director serves as both executive secretary and technical assistant to the panel.",
+T040,NASA_Apollo204_Review_Board::p0122::02,Report of Apollo 204 Review Board (NTRS 19930078717),122,4. EVENTS FROM THE REPORT OF FIRE UNTIL CREW REMOVAL,"The Senior Pilot's couch (the center couch) was in the ''96 degree'' postion in which the back portion is horizontal and lower portion in the raised position. The buckle releasing the shoulder straps and lap belts was not opened. The straps and belts were burned through. The suit oxygen outlet hose was connected but the inlet hose was disconnected. The helmet visor was closed and locked and all electrical connections were intact. The Senior Pilot was lying transversely across the Command Module just below the level of the hatchway.
+
+The Pilot's couch (the right hand couch) was in the ''264 degree'' position in which the back portion is horizontal and the lower portion dropped toward the floor. All restraints were disconnected, all hoses and electrical connections were intact and the helmet visor was closed and locked. The Pilot was supine on his couch.
+
+From the foregoing it has been determined that in all probability the Command Pilot left his couch to avoid the initial fire, the Senior Pilot remained in his couch as planned for emergency egress, attempting to open the hatch until his restraints burned through and the Pilot remained in his couch to maintain communications until the hatch could be opened by the Senior Pilot as planned. With a slightly higher pressure inside the Command Module than outside, opening the inner hatch is impossible because of the resulting force on the hatch. Thus the inability of the pressure relief system to cope with pressure increase due to the fire made opening of the inner hatch impossible until after cabin rupture,",
+T041,NASA_WIRE_MIB_Vol1::p0020::02,"WIRE Mishap Investigation Board Report, Volume 1",20,Contributing Causes,"Contributing Causes
+
+1. The spacecraft system test program did not uncover the design failure mode. A contributing cause
+
+which should have been able to prevent the WIRE mishap was the failure to correctly identify the
+
+source of the signal which caused the Electro Explosive Device (EED) Simulator to ""latch"" upon Pyro
+
+Box power-up during spacecraft integration testing. The incident was incorrectly attributed to
+
+excessive sensitivity of the EED Simulator. In fact, it possibly was an indication of the transient that
+
+caused the in-flight mishap. (It should be noted that this device has been used on numerous occasions
+
+for successful verification testing of NSI based pyrotechnic subsystems and is a standard GSFC test
+
+device). The EED simulator does not accurately simulate the load of a pyrotechnic device for the first
+
+21 milliseconds. This possibly prevented a large current transient from being registered on the
+
+power-input lines during spacecraft test. Additionally, the box does not provide adequate information",
+T042,Challenger::p0087::00,"Report of the Presidential Commission on the Space Shuttle Challenger Accident, Volume 1",87,S ORIGINAL PAGE |! OF POOR QUALITY,At upper left is the aft segment burn viewed from inside the casing; the lower photo is a closeup of the same section. The latter photo shows a hole (arrow) where the flame plume may have burned through the casing from the outside. At right is a composite view of the burn above and below the aft field joint.,
+T043,Ariane_5_Flight_501_Failure_Inquiry_Board_Report.::p0013::03,ARIANE 5 Flight 501 Failure — Report by the Inquiry Board,13,4. RECOMMENDATIONS,4. RECOMMENDATIONS,
+T044,JAXA_Hitomi_Experience_Report::p0019::00,"Hitomi Experience Report: Investigation of Anomalies Affecting the X-ray Astronomy Satellite Hitomi (ASTRO-H), 8 June 2016 version",19,ASTRO-H Project Organizational Chart,"Satellite Control
+
+Satellite Control Group",
+T045,NASA_Columbia_CAIB_Vol1::p0201::05,"Columbia Accident Investigation Board Report, Volume I",201,8.5 HISTORY AS CAUSE: TWO ACCIDENTS,"As what the Board calls an ""informal chain of command"" began to shape STS-107's outcome, location in the structure empowered some to speak and silenced others. For example, a Thermal Protection System tile expert, who was a member of the Debris Assessment Team but had an office in the more prestigious Shuttle Program, used his personal network to shape the Mission Management Team view and snuff out dissent. The informal hierarchy among and within Centers was also influential. Early identifications of problems by Marshall and Kennedy may have contributed to the Johnson-based Mission Management Team's indifference to concerns about the foam strike. The engineers and managers circulating e-mails at Langley were peripheral to the Shuttle Program, not structurally connected to the proceedings, and",
+T046,NASA_Columbia_CAIB_Vol1::p0017::00,"Columbia Accident Investigation Board Report, Volume I",17,THE LOCATIONS,"Shuttle Main Engines and External Tank. (The Solid Rocket Boosters are tested at the ATK Thiokol Propulsion facilities in Utah.)
+
+The Ames Research Center at Moffett Field, California, has evolved from its aeronautical research roots to become a Center of Excellence for information technology. The Center's primary importance to the Space Shuttle Program, however, lies in wind tunnel and arc-jet testing, and the development of thermal protection system concepts.
+
+The Langley Research Center, at Hampton, Virginia, is the agency's primary center for structures and materials and supports the Space Shuttle Program in these areas, as well as in basic aerodynamic and thermodynamic research.",
+T047,NASA_Starliner_CFT_Propulsion_Anomalies::p0150::00,"NASA report on Starliner propulsion system anomalies during the Crew Flight Test (redacted, 2026)",150,7 Additional Observations from the Investigation Team,"7 Additional Observations from the Investigation Team
+
+Observation 1: No clear criteria for Starliner-1 There is no clear objective for utilizing Starliner-1 in returning to crewed flight. Recommendation: R.56 [CCP, Boeing] - Return to Crewed Flight Create/disposition criteria for returning to crewed flight. Include, but not limited to:
+
+- The top-level objectives for Starliner-1 and future tests that must be completed to sufficiently reduce risk to the crew. - A detailed listing of all configuration differences between CFT, Starliner-1, and Starliner-2 and clear risk justification if deltas are identified. - Re-examination of all CFT Flight Test Objectives (FTOs) that were not met, or only partially met, on CFT and determine if these will be met on Starliner-1, or in other ways, prior to Starliner-2. - Define qualification envelope for SM RCS and CM RCS. Show tested range and operational range for critical parameters (e.g., inlet valve temperature, mixture ratio duty cycle, etc). - Identification of any new, critical FTOs that must be achieved on Starliner-1. Starliner-1 should be utilized to obtain necessary data to ensure there is a reduction in risk for future Starliner missions. Reductions in risk include validating the new therm11-c with Starliner-1 data, validating GNC firings for RCS Thrusters and validating thrusters RCS thruster performance during key phases of flight. Observation 2: Starliner Longevity (Mission Suitability) Hardware and launch vehicle availability raise longevity concerns for current and future programs. As noted by the STAR report and PIT interviews, Starliner has limited hardware spare availability. This is a concern for being able to complete remaining flights to ISS due to limited life nature of some components and ability to replace critical components when failures occur or utilizing hardware for testing. Long term use of Starliner requires a launch vehicle transition.",
+T048,NASA_Starliner_CFT_Propulsion_Anomalies::p0003::01,"NASA report on Starliner propulsion system anomalies during the Crew Flight Test (redacted, 2026)",3,Key Findings and Observations (Truncated Summary),"The PIT also identified cultural and leadership challenges that undermined technical rigor and exacerbated technical risks. These organizational findings are outlined below: Near-Real Time Cultural and Organizational Findings
+
+1. Decision Authority - Overlapping roles between NASA's CCP, ISSP, and Boeing led to unclear governance. 2. Erosion of Trust - Mistrust between NASA and Boeing was intensified by selective data sharing, perceived favoritism, and inconsistent transparency. - NASA teams outside CCP felt excluded from critical decisions, while CCP felt overwhelmed by external input. 3. Leadership Approach - CCP and Boeing leadership were perceived as overly risk-tolerant and dismissive of dissenting views. - A risk-acceptance posture created division and undermined confidence in the decision-making process. 4. Team Dynamics and Communication - The mission was marked by chaotic meeting schedules, unclear roles, and communication breakdowns. - Survey data shows low effectiveness ratings in team dynamics and organizational structure. 5. Cultural Divergence - NASA's traditional culture of technical rigor clashed with the commercial model's emphasis on provider autonomy. All of the findings explained in this report led the team to determining the following as root causes for the anomalies that occurred over the CFT: Root Causes (Organizational) While these root causes are specifically separated out to bulletize each, it is nearly impossible to consider one without the others. It is important to keep in mind, NASA created and implemented the contract structure; Boeing built the vehicle. Together the organizations agreed to fly.",
+T049,JAXA_Hitomi_Experience_Report::p0099::02,"Hitomi Experience Report: Investigation of Anomalies Affecting the X-ray Astronomy Satellite Hitomi (ASTRO-H), 8 June 2016 version",99,Reference,Reference,
+T050,NASA_Columbia_CAIB_Vol1::p0211::00,"Columbia Accident Investigation Board Report, Volume I",211,9.3 LONG-TERM: FUTURE DIRECTIONS FOR THE U.S. IN SPACE,"as soon as possible as the primary means for transporting humans to and from Earth orbit. At least in the mid-term, that replacement will be some form of what NASA now characterizes as an Orbital Space Plane. The design of the system should give overriding priority to crew safety, rather than trade safety against other performance criteria, such as low cost and reusability, or against advanced space operation capabilities other than crew transfer.
+
+This conclusion implies that whatever design NASA chooses should become the primary means for taking people to and from the International Space Station, not just a complement to the Space Shuttle. And it follows from the same conclusion that there is urgency in choosing that design, after serious review of a ""concept of operations"" for human space flight, and bringing it into operation as soon as possible. This is likely to require a significant commitment of resources over the next several years. The nation must not shy from making that commitment. The International Space Station is likely to be the major destination for human space travel for the next decade or longer. The Space Shuttle would continue to be used when its unique capabilities are required, both with respect to space station missions such as experiment delivery and retrieval or other logistical missions, and with respect to the few planned missions not traveling to the space station. When cargo can be carried to the space station or other destinations by an expendable launch vehicle, it should be.",
+T051,NASA_Genesis_MIB_Report::p0063::03,Genesis Mishap Investigation Board Report (NTRS 20060008607),63,"the battery cells, suggesting a possible","the battery cells, suggesting a possible
+
+battery leak. Initial battery voltage measurements (post-impact) indicated a totally depleted battery. However, the outer physical appearance of the battery after the impact did not show significant damage.
+
+The battery was de-integrated from the SRC and shipped to the LMA facility in Denver. Later, the NASA MIB and JPL FRB decided to perform the full investigation of the battery at JPL. Guided by pertinent sections of the fault tree, a battery analysis and test plan was developed that would methodically inspect, test, and disassemble the battery down to the cell level, and if necessary, to the
+
+cell component level.
+
+' The two batteries are collectively referred to as the SRC battery.
+
+GENESIS FAILURE INVESTIGATION REPORT) ---AAA AA -__ 55",
+T052,Challenger::p0173::01,"Report of the Presidential Commission on the Space Shuttle Challenger Accident, Volume 1",173,Changes in the Manifest,"of the Long Duration Exposure Facility. The |
+
+retrieval mission was then added to mission 61-1, replacing another satellite. A new mission (61-M) was scheduled for July, 1986, to accommodate the Tracking and Data Relay Satellite and the displaced satellite, and all flights scheduled later in 1986 slipped to make room for 61-M.
+
+Customers occasionally have notified NASA Headquarters of a desire to change their scheduled launch date because of development problems, financial difficulties or changing market conditions. NASA generally accedes to these requests and has never imposed the penalties available. An example is the request made to delay the flight of the Westar satellite from mission 61-C (December, 1985) to a flight in March, 1986. Westar was added to flight 61-E, and the Getaway Special bridge assembly was removed to make room for it; the HS-376 satellite slot was deleted from 31-L and added to 61-C; the Spartan-Halley satellite was deleted from 61-D and added to 51-L. Thus, four flights experienced major payload changes as a result of one customer's request.",
+T053,NASA_Apollo204_Review_Board::p0129::01,Report of Apollo 204 Review Board (NTRS 19930078717),129,VIEW OF SPACECRAFT LAUNCH VEHICLE IN SERVICE STRUCTURE WITH ACCESS ARMS EXTENDED,SERVICE STRUCTURE,
+T054,NASA_NOAA_NPrime_MIB_Report::p0018::02,NOAA N-Prime Mishap Investigation Final Report,18,"' Meri bea G! Lb Oe, teftylee Weber NASA Headquarters/Code O","' Meri bea G! Lb Oe, teftylee Weber NASA Headquarters/Code O
+
+/ Lew Gis Ese; A ra oe jt eye
+
+Dr. Anngienctta R. Totnsea NASA SIeadquarters/Code Y
+
+d
+
+Robert Navarra NASA Arnes Research Center
+
+pon -
+
+Daniel Dittman NASA Ames Research Center",
+T055,Challenger::p0100::03,"Report of the Presidential Commission on the Space Shuttle Challenger Accident, Volume 1",100,51-C. Mr. Mulloy's testimony:?!?,"As appears from the foregoing, after the discussion between Morton Thiokol management and the engineers, a final management review was conducted by Mason, Lund, Kilminster, and Wiggins. Lund and Mason recall this review as an unemotional, rational discussion of the engineering facts as they knew them at that time; differences of opinion as to the impact of those facts, however, had to be resolved as a judgment call and therefore a management decision. The testimony of Lund taken by Commission staff investigators is as follows:'*
+
+-Mr. Lund: We tried to have the telecon, as I remember it was about 6:00 o'clock [MST], but we didn't quite get things in order, and we started transmitting charts down to Marshall around 6:00 or 6:30 [MST], something like that, and we were making charts in real time and seeing the data, and we were discussing them with the Marshall folks who went along.",
+T056,NASA_Columbia_CAIB_Vol1::p0192::02,"Columbia Accident Investigation Board Report, Volume I",192,ENGINEERING BY VIEWGRAPHS,"Similarly, Mission Management Team participants felt pressured to remain quiet unless discussion turned to their particular area of technological or system expertise, and, even then, to be brief. The initial damage assessment briefing prepared for the Mission Evaluation Room was cut down considerably in order to make it ""fit"" the schedule. Even so, it took 40 minutes. It was cut down further to a three-minute discussion topic at the Mission Management Team. Tapes of STS-107 Mission Management Team sessions reveal a noticeable ""rush"" by the meeting's leader to the preconceived bottom line that there was ""no safety-of-flight"" issue (see Chapter 6). Program managers created huge barriers against dissenting opinions by stating preconceived conclusions based on subjective knowledge and experience, rather than
+
+on solid data. Managers demonstrated little concern for mission safety.
+
+Organizations with strong safety cultures generally acknowledge that a leader's best response to unanimous consent is to play devil's advocate and encourage an exhaustive debate. Mission Management Team leaders failed to seek out such minority opinions. Imagine the difference if any Shuttle manager had simply asked, ""Prove to me that Columbia has not been harmed.""",
+T057,NASA_NOAA_NPrime_MIB_Report::p0089::02,NOAA N-Prime Mishap Investigation Final Report,89,SECTION 7 FINDINGS,"TOC procedure step without personally validating the TOC configuration or, in the case of the PA, even being present at the time this step of the procedures was completed during the operation. For both the PQC and the PA, such a validation of the TOC configuration minimally should involve visual verification of the attachment bolts. This investigation uncovered that such violations (e.g., procedure sign-off without personal cognizance) have occurred prior to and during the NOAA N-PRIME mishap. L-3b) Routine Violation: The safety representative was not present as called for in the
+
+procedure. Again, this investigation determines that such a violation is routine. Operations often proceed without safety representative presence, contrary to specific",
+T058,NASA_Apollo204_Review_Board::p0005::00,Report of Apollo 204 Review Board (NTRS 19930078717),5,REPORT OF APOLLO 204 REVIEW BOARD PREGEDING PAGE BL ANK NOT FILMED,"REPORT OF APOLLO 204 REVIEW BOARD
+
+PREGEDING PAGE BL
+
+ANK NOT FILMED",
+T059,Challenger::p0180::05,"Report of the Presidential Commission on the Space Shuttle Challenger Accident, Volume 1",180,The Importance of Flight Experience,"understand and resolve the problems, and Kennedy landings were suspended until certain improvements were made. (See section ""Landing: Another Critical Phase."" page 186.) Mission 51-L was to be the first flight to land",
+T060,NASA_Apollo13_Review_Board::p0143::00,Report of Apollo 13 Review Board (NTRS 19700076776),143,Recovery of telemetry data. During 5 Minutes Following the Accident,"TABLE 4-II.- DETAILED CHRONOLOGY FROM
+
+2, 5 MINUTES BEFORE THE ACCIDENT TO 5 MINUTES AFTER THE ACCIDENT - Continued",
+T061,NASA_Columbia_CAIB_Vol1::p0006::02,"Columbia Accident Investigation Board Report, Volume I",6,BOARD STATEMENT,"In order to understand the findings and recommendations in this report, it is important to appreciate the way the Board looked at this accident. It is our view that complex systems almost always fail in complex ways, and we believe it would be wrong to reduce the complexities and weaknesses associated with these systems to some simple explanation. Too often, accident investigations blame a failure only on the last step in a complex process, when a more comprehensive understanding of that process could reveal that earlier steps might be equally or even more culpable. In this Board's opinion, unless the technical, organizational, and cultural recommendations made in this report are implemented, little will have been accomplished to lessen the chance that another accident will follow.
+
+From its inception, the Board has considered itself an independent and public institution, accountable to the American public, the White House, Congress, the astronaut corps and their families, and NASA. With the support of these constituents, the Board resolved to broaden the scope of the accident investigation into a far-reaching examination of NASA's operation of the Shuttle fleet. We have explored the impact of NASA's organizational history and practices on Shuttle safety, as well as the roles of public expectations and national policy-making.",
+T062,NASA_Apollo13_Review_Board::p0061::01,Report of Apollo 13 Review Board (NTRS 19700076776),61,"APRIL 27, 1970","APRIL 27, 1970
+
+An Executive Session of the Board met to discuss progress of specific analyses required to verify tentative conclusions on oxygen tank failure and service module EPS failure.
+
+Additicnal Board specialists arrived at MSC and received detailed briefings by MSC and Board personnel on selected aspects of the Apollo 13 data.
+
+Panel Members received and assessed a preliminary MSC evaluation of the Apollo 13 accident, including tentative conclusions on the most probable failure modes.
+
+Procedures were established to provide information flow on the status of review to Board observers.
+
+The Board reviewed work plans for the coming week with each Panel and established review priorities and special task assignments.",
+T063,Challenger::p0146::04,"Report of the Presidential Commission on the Space Shuttle Challenger Accident, Volume 1",146,Escalating Concerns,"Nine days later (July 31) Boisjoly wrote another memorandum titled ""O-ring Erosion/Potential
+
+Failure Criticality"" to R. K. Lund, Thiokol's Vice President of Engineering:
+
+""The mistakenly accepted position on the joint problem was to fly without fear of failure and to run a series of design evaluations which would ultimately lead to a solution or at least a significant reduction of the erosion problem. This position is now changed as a result of the (51-B] nozzle joint erosion which eroded a secondary O-ring with the primary O-ring never sealing. If the same scenario should occur in a field joint (and it could), then it is a jump ball whether as to the success or failure of the joint because the secondary O-ring cannot respond to the clevis opening rate and may not be capable of pressurization. The result would be a catastrophe of the highest order-loss of human life.""
+
+Boisjoly recommended setting up a team to solve the O-ring problem, and concluded by stating:",
+T064,Challenger::p0249::01,"Report of the Presidential Commission on the Space Shuttle Challenger Accident, Volume 1",249,[ SRB CRITICAL ITEMS LIST 0 wan Ly,requ~rement to Level I.,
+T065,NASA_Columbia_CAIB_Vol1::p0103::00,"Columbia Accident Investigation Board Report, Volume I",103,5.3 AN AGENCY TRYING TO DO TOO MUCH WITH TOO LITTLE,"produce valuable scientific and symbolic payoffs for the nation without a need for increased budgets. Recent budget allocations reflect this continuing policy reality. Between 1993 and 2002, the government's discretionary spending grew in purchasing power by more than 25 percent, defense spending by 15 percent, and non-defense spending by 40 percent (see Figure 5.3-2). NASA's budget, in comparison, showed little change, going from $14.31 billion in Fiscal Year 1993 to a low of $13.6 billion in Fiscal Year 2000, and increasing to $14.87 billion in Fiscal Year 2002. This represented a loss of 13 percent in purchasing power over the decade (see Figure 5.3-3).19
+
+Fiscal Year Real Dollars
+
+(in millions)
+
+Constant Dollars (in FY 2002 millions)
+
+1965 5,250 24,696
+
+1975 3,229 10,079
+
+1985 7,573 11,643
+
+1993 14,310 17,060
+
+1994 14,570 16,965
+
+1995 13,854 15,790
+
+1996 13,884 15,489
+
+1997 13,709 14,994
+
+1998 13,648 14,641
+
+1999 13,653 14,443
+
+2000 13,601 14,202
+
+2001 14,230 14,559",
+T066,NASA_ESA_SOHO_Interruption_Final_Report::p0003::02,SOHO Mission Interruption Joint NASA/ESA Investigation Board Final Report,3,APPENDICES,"APPENDICES
+
+APPENDIX A. Assignment Letter
+
+APPENDIX B. Summary of Interviewed Individuals
+
+APPENDIX C. Sequence of Events
+
+APPENDIX D. Failure Event Tree
+
+APPENDIX E. A_CONFIG_N Modification History",
+T067,NASA_Starliner_CFT_Propulsion_Anomalies::p0006::01,"NASA report on Starliner propulsion system anomalies during the Crew Flight Test (redacted, 2026)",6,6 Root Causes ........................................................................................................................... 147 7 Additional Observations from the Investigation Team ......................................... 151 8 Consolidated Recommendations ................................................................................... 156,"6 Root Causes ........................................................................................................................... 147
+
+7 Additional Observations from the Investigation Team ......................................... 151
+
+8 Consolidated Recommendations ................................................................................... 156",
+T068,Challenger::p0101::02,"Report of the Presidential Commission on the Space Shuttle Challenger Accident, Volume 1",101,51-C. Mr. Mulloy's testimony:?!?,"And so we went off line on the telecon. . . so we could have a roundtable discussion here.
+
+Question: Who were the management people that were there?",
+T069,NASA_Genesis_MIB_Report::p0096::01,Genesis Mishap Investigation Board Report (NTRS 20060008607),96,Image No:0411A00679. Project NO.: 20041 10004,"Image No:0411A00679. Project NO.: 20041 10004
+
+Figure 32. SEM view of power cable strand 6 at Area 3.",
+T070,NASA_Apollo13_Review_Board::p0046::01,Report of Apollo 13 Review Board (NTRS 19700076776),46,sity of Maine and a Master of Engineering Administration degree from George Washington University.,"Mr. Schurmeier was a naval officer in World War II. He and his wife and four children live in Altadena, California.
+
+FRANCIS B, SMITH NASA Headquarters
+
+Francis B. Smith, 47, Assistant Administrator for University Affairs, NASA Headquarters, is leader of the Mission Events Panel of the Apollo 13 Review Board.
+
+Mr. Smith has been in his present position since 1967. Prior to that he had been Assistant Director, Langley Research Center, Hampton, Virginia, since 1964. He joined the Langley science staff in 1947. He is an expert in several fields, including radio telemetry, radar, electronic tracking systems, and missile and range instrumentation.",
+T071,NASA_Columbia_CAIB_Vol1::p0066::01,"Columbia Accident Investigation Board Report, Volume I",66,3.6 DE-ORBIT/RE-ENTRY,"A series of thermal analyses were performed for different sized holes in RCC panel 8 to compute the time required to heat Sensor 2 to the temperature recorded by the Modular Auxiliary Data System. To heat the clevis, various insulators would have to be bypassed with a small amount of leakage, or ""sneak flow."" Figure 3.6-5 shows the results of these calculations for, as an example, a 10-inch hole, and demonstrates that with sneak flow around the insulation, the temperature profile of the clevis sensor was closely matched by the engineering calculations. This is consistent with the same sneak flow required to match a similar but abnormal ascent temperature rise of the same sensor, which further supports the premise that the breach in the leading edge of the wing occurred during ascent. While the exact size of the breach will never be known, and may have been smaller or larger than 10 inches, these analyses do provide a plausible explanation for the observed rises in temperature sensor data during re-entry.",
+T072,NASA_Columbia_CAIB_Vol1::p0214::03,"Columbia Accident Investigation Board Report, Volume I",214,CHAPTER 10 Other Significant Observations,"Findings:
+
+F10.1-1 The Columbia accident demonstrated that Orbiter breakup during re-entry has the potential to cause casualties among the general public. F10.1-2 Given the best information available to date, a formal risk analysis sponsored by the Board found that the lack of general-public casualties from Columbia's break-up was the expected outcome. F10.1-3 The history of U.S. space flight has a flawless public safety record. Since the 1950s, hundreds of space flights have occurred without a single public injury. F10.1-4 The FAA and U.S. space launch ranges have safety standards designed to ensure that the general public is exposed to less than a one-in-a-million chance of serious injury from the operation of space launch vehicles and unmanned aircraft. F10.1-5 NASA did not demonstrably follow public risk acceptability standards during past Orbiter re-entries. NASA efforts are underway to define a national policy for the protection of public safety during all operations involving space launch vehicles.",
+T073,NASA_Apollo13_Review_Board::p0001::04,Report of Apollo 13 Review Board (NTRS 19700076776),1,REPRODUCED BY 7 NATIONAL TECHNICAL | INFORMATION SERVICE,"REPRODUCED BY 7 NATIONAL TECHNICAL | INFORMATION SERVICE
+
+U. S. DEPARTMENT OF COMME - _ SPRINGFIELD, VA. 2216] Ree
+
+URE LE EEL ERELE YE EEE RL Le",
+T074,NASA_Genesis_MIB_Report::p0113::03,Genesis Mishap Investigation Board Report (NTRS 20060008607),113,~The Recovery Team Chief and helicopter crews will begin the following steps.,"Any contingency would be visible either on optical trackers or on radar, which will be able to monitor the speed of the capsule. Ifno chutes deploy, the capsule will hit the ground at about 100 mph. If only the drogue deploys, the final speed would be 60-70 mph. if the parafoil deploys, the final speed is about 30 mph.
+
+The chase helicopters remain on the perimeter of the target ellipse until confirmation of parafoil deployment, after which they move in to capture it. [n the event of a contingency, the helicopters would remain outside the ellipse until radar confirms the capsule has reached the ground, after which the helicopters would go in to locate the capsule.
+
+Genesis Failure Investigation Report, ----_______________ 105",
+T075,NASA_Genesis_MIB_Report::p0112::00,Genesis Mishap Investigation Board Report (NTRS 20060008607),112,"APPENDIX F: ""NO MAR CONTINGENCY"" DOCUMENTATION INCONSISTENCIES","Genesis Mid-Air Retrieval Mission Plan, Rev. 5, Vertigo Doc. 3506-19-0085, August 20, 2004",
+T076,NASA_Apollo13_Review_Board::p0057::02,Report of Apollo 13 Review Board (NTRS 19700076776),57,Mary Chandler Secretary,"Mary Chandler Secretary
+
+Rex Cline Technical Writer/Editor",
+T077,NASA_TaurusXL_T8_T9_Summary_2019::p0006::02,NASA Investigative Summary: Taurus XL T8 and T9 Mission Failures (2019 update),6,,"- Vibration environments were more flight-like (i.e., vibration frequency and magnitude consistent with applicable flight environments). - Thermal conditions were controlled (i.e., centrifuge is indoors and frangible joint's temperature was consistent with applicable pre-launch operating temperature).",
+T078,Challenger::p0186::00,"Report of the Presidential Commission on the Space Shuttle Challenger Accident, Volume 1",186,Leste | 6:00 8:00,"Shuttle will then re-enter the lower atmosphere much like a normal entry. The landing, however, will be at a pre-selected site in Africa or Europe.
+
+Design. The Shuttle design specifications do not require that the Orbiter be able to manage an intact abort (i.e., make it to a runway) if a second main engine should fail. If two (or all three) main engines fail within the first five to six minutes of the flight. the Space Shuttle will land in water. This maneuver is called a ""contingency abort"" and is not believed to be survivable because of damage incurred at water impact.
+
+The Shuttle design requirements did not specify that the Shuttle should be able to survive a Solid Rocket Booster failure. The system has no way to identify when a booster is about to fail, and no way to get the Orbiter or the crew away from a failing Solid Rocket Booster.",
+T079,NASA_Columbia_CAIB_Vol1::p0150::03,"Columbia Accident Investigation Board Report, Volume I",150,MISSED OPPORTUNITY 3,"MISSED OPPORTUNITY 3
+
+The foam strike to STS-107 was mentioned by a speaker at an unrelated meeting of NASA Headquarters and National Imagery and Mapping Agency personnel, who then discussed a possible NASA request for Department of Defense imagery support. However, no action was taken.",
+T080,Challenger::p0200::02,"Report of the Presidential Commission on the Space Shuttle Challenger Accident, Volume 1",200,Launch Pad 39B,"Launch Pad 39B
+
+All launch damage and launch measurement - data from Pad B ground systems anomalies were considered to be normal or minor with three exceptions: the loss of the springs and plungers on the booster hold-down posts; the failure of the gaseous hydrogen vent arm to latch; and the loss of bricks from the flame trench. These three items are treated in Appendix I, the NASA Pre-Launch Activities Team Report (May, 1986). None contributed to the accident.",
+T081,NASA_Starliner_CFT_Propulsion_Anomalies::p0188::00,"NASA report on Starliner propulsion system anomalies during the Crew Flight Test (redacted, 2026)",188,Appendix C. References Significant Starliner PCBs and Documentation for Prop System,CCP Program Control Board Meetings from Launch to Undock,
+T082,NASA_NOAA_NPrime_MIB_Report::p0052::01,NOAA N-Prime Mishap Investigation Final Report,52,Name Previous Lifts Previous TOC Ops,"(Findings L-3, L-9, L-10, and L-13)",
+T083,Challenger::p0209::04,"Report of the Presidential Commission on the Space Shuttle Challenger Accident, Volume 1",209,"John B. Hungerford, Jr.","John B. Hungerford, Jr.
+
+John P. Chase Brewster Shaw John C, Macidull Ron Waite",
+T084,Challenger::p0064::01,"Report of the Presidential Commission on the Space Shuttle Challenger Accident, Volume 1",64,Propellant,"Joint Seal Failure
+
+Enhanced photographic and computer-graphic positioning determined that the flame from the right Solid Rocket Booster near the aft field joint emanated at about the 305-degree circumferential position. The smoke at lift off appeared in the same general location. Thus, early in the investigation the right Solid Rocket Booster aft field joint seal became the prime failure suspect. This supposition was confirmed when the Salvage Team recovered portions of both sides of the aft joint containing large holes extending from 291 degrees to 318 degrees. Several possible causes could have resulted in this failure. These possible causes are treated in the following paragraphs of this report.
+
+During stacking operations at the launch site, four segments are assembled to form the Solid Rocket Motor. The resulting joints are referred to as field joints, located as depicted in Figures 8 and 13. Joint sealing is provided by two rubber O-rings with diameters of 0.280 inches (+0.005, - 0.003), which are installed, as received from Morton Thiokol, during motor assembly. O-ring static compression during and after assembly is dictated by the width of the gap",
+T085,NASA_Columbia_CAIB_Vol1::p0016::04,"Columbia Accident Investigation Board Report, Volume I",16,THE LOCATIONS,"Rocket Motor (RSRM, the major piece of the Solid Rocket Booster). Marshall is also involved in microgravity research and space product development programs that fly as payloads on the Space Shuttle.
+
+The Stennis Space Center in Bay St. Louis, Mississippi, is the largest rocket propulsion test complex in the United States. Stennis provides all of the testing facilities for the Space",
+T086,Mars_Climate_Orbiter::p0034::02,Mars Climate Orbiter Mishap Investigation Board Phase I Report,34,MPL Observation No. 6: MPL Terminal Descent Maneuver,"MPL Observation No. 6: MPL Terminal Descent Maneuver
+
+The MPL terminal descent maneuver will use simultaneous soft pulse mode firings of 12 monopropellant hydrazine thrusters operating at 267 Newtons of thrust each. All these thrusters must operate in unison to ensure a stable descent. This type of powered descent maneuver has always been considered to be very difficult and stressing for a planetary exploration soft landing. Hence, in the last 35 years of planetary exploration, MPL is the first user of this soft pulsed thrust soft landing technique.
+
+The concern has been that the feedline hydraulics and water hammer effects could be very complex and interactive. This issue could be further aggravated by fuel slosh, uneven feeding of propellant from the two tanks and possible center of gravity mismatch on the vehicle. Additional complications could result from non-uniform exhaust plume impingement on the lander legs sticking below the thruster nozzles due to any uneven pulse firings.",
+T087,NASA_Apollo13_Review_Board::p0152::01,Report of Apollo 13 Review Board (NTRS 19700076776),152,Key Data,"Key Data
+
+55254:53.323 Oxygen tank no. 1 pressure drops 4 psia (from 883 psia to 879 psia).
+
+55:54:53.555 to Loss of telemetry data. 55254355.35
+
+55:54:56 Oxygen tank no. 1 pressure reads 782 psia and drops steadily. Pressure drops over a period of 130 minutes to the point at which it was insufficient to sustain operation of fuel cell no. 2.
+
+There is no clear evidence of abnormal behavior associated with oxygen tank no. 1 prior to loss of signal, although the one data bit (4 psi) drop in pressure in the last tank no. 1 pressure reading prior to loss of signal may indicate that a problem was beginning. Immediately after signal strength was regained, data show that tank no. 1 system had lost its integrity. Pressure decreases were recorded over a period of approximately 130 minutes, indicating that a relatively slow leak had developed in the tank no. 1 system. Analysis has indicated that the leak rate is less than that which would result from a completely ruptured line, but could be consistent with a partial line rupture or a leaking check or relief valve.",
+T088,JAXA_Hitomi_Experience_Report::p0058::01,"Hitomi Experience Report: Investigation of Anomalies Affecting the X-ray Astronomy Satellite Hitomi (ASTRO-H), 8 June 2016 version",58,Anomaly (1): Occurrence of Attitude Anomaly (Rotation) - AOCS Design,"telemetry Exist
+
+telemetry
+
+Exist telemetry
+
+21.7deg/h (affirmation on the
+
+telemetry)
+
+(Unexpected situation)
+
+Planned end time of
+
+Attitude maneuver
+
+*The time that Earth comes in sight of STT
+
+Tracking
+
+(affirmation on the telemetry)
+
+04 :10 (back calculation from telemetry) 04:14 (back calculation from telemetry)
+
+USC: JAXA Uchinoura station",
+T089,NASA_Apollo204_Review_Board::p0043::02,Report of Apollo 204 Review Board (NTRS 19930078717),43,PREGEDING PAGE BLANK NOT FILMED,PREGEDING PAGE BLANK NOT FILMED,
+T090,NASA_Genesis_MIB_Report::p0073::00,Genesis Mishap Investigation Board Report (NTRS 20060008607),73,B.2.5 Depassivation Not Complete,APPENDIX C a,
+T091,NASA_Genesis_MIB_Report::p0031::01,Genesis Mishap Investigation Board Report (NTRS 20060008607),31,Continuity Testing,"Continuity Testing
+
+Continuity tests were performed power-to-ground and power-to-power on all power and ground nets (including secondary voltage regulator outputs), as well as on the Relay and EST cards. Continuim tests were also performed pro-to-ground and pyro-to-pyro on all the pyro outputs on the EST card. These tests found no unexpected shorts. Fuses on the EST and Motor control card were checked for continuity. There were no open fuses.
+
+Continuity tests were performed on the power relays in an attempt to determine relay state; however, tile resuits were arrhiguoils aiid indicad~c of relay damzge. S rays of thc re!qs a!so FKI'.ed hard to interpret, but suggested the fight relays had most likely been damaged due to impact. The LhIA relay failure analyst reported that relays are fragile and dropping them even 3 to 4 feet onto a bench will damage them.",
+T092,NASA_Apollo204_Review_Board::p0009::02,Report of Apollo 204 Review Board (NTRS 19930078717),9,"PREGEDING PAGE BLANK ""CT FILMED","PREGEDING PAGE BLANK ""CT FILMED",
+T093,Challenger::p0054::02,"Report of the Presidential Commission on the Space Shuttle Challenger Accident, Volume 1",54,ORIGINAL PAGE Is OF POOR QUALITY | Forward | Mid Fuselage,"Structures evaluation included analysis of
+
+ground and flight data (loads, temperatures, pressures and purge flows), hardware changes and discrepancy reports since the last Challenger flight, and wreckage. The Commission found that no Orbiter structural elements contributed to the accident.
+
+Orbiter structural pre-launch temperature measurements were evaluated and found to be within specified limits.
+
+Data related to the atmospheric revitalization system, which maintains cabin atmosphere, were evaluated.?3 During pre-launch, launch and until signal loss, data indicated that both of the water coolant loops were normal, the pressure control system functioned normally, all fans functioned normally, and all switches and valve positions were proper.
+
+Active thermal control subsystem data indicated that both of the freon coolant loops functioned normally, the ammonia boiler system was normal, and all switch and valve positions were proper.?*
+
+The water management subsystem functioned",
+T094,JAXA_Hitomi_Experience_Report::p0097::02,"Hitomi Experience Report: Investigation of Anomalies Affecting the X-ray Astronomy Satellite Hitomi (ASTRO-H), 8 June 2016 version",97,7 Summary of the Event A 〜D,"14 3/16 18:37:07~ 18:37:12 2 (c) sunshine 16.2 Daytime yes
+
+15 3/16 19:16:33~ 19:16:39 2 (b) shade 1.0 Night yes
+
+A 16 3/25 19:10:00 ? (a) sunshine 33.1 Night After passing
+
+SAA Cause 2
+
+C 17 2/27 15:07:34 1 (a) sunshine 32.6 Daytime Cause 2
+
+18 3/15 20:15:06~20;15:11 2 (c) sunshine 16.5 Daytime yes Cause 1
+
+19 3/19 21:35:27 1 (a) sunshine 96.3 Daytime Cause 2
+
+D 20 2/19 11:16 1 (d) sunshine 0 Daytime yes Cause 1",
+T095,NASA_Apollo13_Review_Board::p0139::03,Report of Apollo 13 Review Board (NTRS 19700076776),139,aa ems HT EE LUTE SG RAAT EN i,"i i ut HE !
+
+i tl",
+T096,NASA_Columbia_CAIB_Vol1::p0238::07,"Columbia Accident Investigation Board Report, Volume I",238,ENDNOTES FOR APPENDIX A,"ENDNOTES FOR APPENDIX A
+
+1 NASA Agency Contingency Action Plan for Space Flight Operations, January 2003, p. D-2. 2 Guidelines per NASA Policy Guideline 8621. 3 5 U.S.C. App § §1 et seq. (1972). 4 JSC Form 564 (March 24, 2003). 5 Harold W. Gehman to Sean O'Keefe, February 25, 2003.",
+T097,Challenger::p0075::00,"Report of the Presidential Commission on the Space Shuttle Challenger Accident, Volume 1",75,Analysis of the Wreckage,"@H SRB Recovered Debris Ait Segment
+
+Burn Area",
+T098,NASA_Genesis_MIB_Report::p0048::01,Genesis Mishap Investigation Board Report (NTRS 20060008607),48,2 CONTINGENCY PLANNING AND GROUND SAFETY INVESTIGATION,"RT-A and RT-B then proceeded to the landing site. The first priority was personnel safety (1.e., safe the unexploded ordnance) and then to recover as much science as possible. All operations from this point forward were performed using the contingency section of LMA Procedure GN 1R11, Genesis SRC Ground Operations for Solar Wind Recovery, as the work-authorizing document. Procedural steps were written out in the field and then concurred with by LMA and JSC curation team personnel before implementation. Since the procedural steps were being written in real time, they were treated as amendments, or flags, to GN 1R11. At approximately 12:53 p.m., the LMA Systems Safety Engineer swept the SRC area with an SO2 monitor. No respiratory protective equipment was used by recovery personnel from this point forward. The unexploded ordnance was safed at approximately 1:36pm by LMA personnel and the SRC battery was disconnected after separating from the heat shield at approximately 3:00 p.m. An initial check of the SRC battery indicated approximately 3 volts, open circuit.",
+T099,NASA_Starliner_CFT_Propulsion_Anomalies::p0192::00,"NASA report on Starliner propulsion system anomalies during the Crew Flight Test (redacted, 2026)",192,Appendix C. References Significant Starliner PCBs and Documentation for Prop System,Starliner CCP ERBs from Go/No-GO to Return,
+T100,Challenger::p0019::01,"Report of the Presidential Commission on the Space Shuttle Challenger Accident, Volume 1",19,Space Shuttle 51-L on Pad 398 of Kennedy Space Center's launch complex. BRIGilNAL PAGE IS,"Mission specialist Ronald E. McNair, Ph.D., a native of Lake City, South Carolina, received his doctorate in physics from the Massachusetts Institute of Technology in 1976. After working as a research physicist in civilian industry, he
+
+Mission 51-L Major Milestone Summary
+
+Launch Minus : (rmonths) 8 7 6 5
+
+Daie | Jun. 85 Jul 85
+
+Aug 85
+
+Standard Production Concept
+
+| | | | | | | | | | | |
+
+Flignt Design Cycle 1
+
+|
+
+Diagram Shows. the scheduling of various preparatory milestones in the months that preceded the launching of the Mission 51-L Shuttle.
+
+Sep 85
+
+Basic Crew Activity Plan
+
+Flight Design Cycle 2
+
+Facility & Vehicle Software
+
+4 3 2 1 0 Oct 85 Nov 85 Dec 85 Jan 86 . Feb 86
+
+Final Crew Activity Plan
+
+Standalone Shuttie Mission Simulator Crew Training
+
+Integrated Simulations
+
+Launch 7
+
+Configure Mission Control Center & Shuttle Simulator
+
+Facility & Flight | Software Final Cycle",

@@ -1,0 +1,33 @@
+{
+  "doc_id": "NASA_IRT_CRS7_Public_Summary",
+  "status": "draft",
+  "drafted_by": "assistant (Claude), from page text",
+  "reviewed_by": null,
+  "default": "other",
+  "ranges": [
+    {
+      "pages": [
+        1,
+        1
+      ],
+      "field": "other",
+      "label": "Title page"
+    },
+    {
+      "pages": [
+        2,
+        4
+      ],
+      "field": "description",
+      "label": "Commercial services background; the CRS-7 accident; SpaceX investigation"
+    },
+    {
+      "pages": [
+        5,
+        9
+      ],
+      "field": "analysis",
+      "label": "NASA Independent Review Team: review, alternative scenarios, credible causes, findings"
+    }
+  ]
+}

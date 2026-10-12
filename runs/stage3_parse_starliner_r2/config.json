@@ -1,0 +1,14 @@
+{
+  "args": {
+    "docs": [
+      "NASA_Starliner_CFT_Propulsion_Anomalies"
+    ],
+    "no_ocr": false,
+    "run_id": "stage3_parse_starliner_r2"
+  },
+  "ocr_threshold": 0.6,
+  "passage_words": [
+    150,
+    300
+  ]
+}

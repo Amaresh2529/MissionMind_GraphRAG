@@ -61,13 +61,19 @@ def main(argv=None):
                 out = ROOT / "data" / "raw_html" / f"{c['doc_id']}.html"
             out.parent.mkdir(parents=True, exist_ok=True)
             if out.exists():
-                raise FileExistsError(f"{out.name} already exists; not overwritten")
+                if hashlib.sha256(out.read_bytes()).hexdigest() != entry["sha256"]:
+                    raise FileExistsError(f"{out.name} exists with different content; not overwritten")
+                entry["saved"] = str(out.relative_to(ROOT))
+                entry["already_present"] = True
+                print(f"SAME {c['doc_id']}: already present, identical")
+                log.append(entry)
+                continue
             out.write_bytes(data)
             entry["saved"] = str(out.relative_to(ROOT))
-            print(f"✅ {c['doc_id']}: {len(data):,} bytes")
+            print(f"OK   {c['doc_id']}: {len(data):,} bytes")
         except Exception as err:
             entry["error"] = f"{type(err).__name__}: {err}"
-            print(f"❌ {c['doc_id']}: {err}")
+            print(f"FAIL {c['doc_id']}: {err}")
         log.append(entry)
     write_json(run_dir / "fetch_log.json", log)
     return 0 if all("error" not in e for e in log) else 1

@@ -1,0 +1,74 @@
+{
+  "doc_id": "Mars_Climate_Orbiter",
+  "status": "draft",
+  "drafted_by": "assistant (Claude), from the table of contents and page outline",
+  "reviewed_by": null,
+  "default": "other",
+  "ranges": [
+    {
+      "pages": [
+        6,
+        36
+      ],
+      "section_regex": "^MPL Recommendations",
+      "field": "recommendations",
+      "label": "MPL Recommendations blocks inside summary, cause and observation chapters"
+    },
+    {
+      "pages": [
+        1,
+        5
+      ],
+      "field": "other",
+      "label": "Title, contents, signatures, consultants, acknowledgements"
+    },
+    {
+      "pages": [
+        6,
+        8
+      ],
+      "field": "description",
+      "label": "Executive Summary"
+    },
+    {
+      "pages": [
+        9,
+        14
+      ],
+      "field": "description",
+      "label": "1. Project Description; 2. MCO Mishap"
+    },
+    {
+      "pages": [
+        15,
+        15
+      ],
+      "field": "other",
+      "label": "3. Method of Investigation"
+    },
+    {
+      "pages": [
+        16,
+        30
+      ],
+      "field": "analysis",
+      "label": "4. Root Cause; 5. Contributing Causes; 6. MCO Observations"
+    },
+    {
+      "pages": [
+        31,
+        36
+      ],
+      "field": "analysis",
+      "label": "7. MPL Observations"
+    },
+    {
+      "pages": [
+        37,
+        48
+      ],
+      "field": "other",
+      "label": "8. Phase II Plan; Appendix letter; membership; acronyms"
+    }
+  ]
+}

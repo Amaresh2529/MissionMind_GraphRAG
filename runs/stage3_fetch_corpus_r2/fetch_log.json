@@ -1,0 +1,149 @@
+[
+  {
+    "doc_id": "ESA_ExoMars2016_Schiaparelli_Anomaly_Inquiry",
+    "url": "https://sci.esa.int/documents/33431/35950/1567260317467-ESA_ExoMars_2016_Schiaparelli_Anomaly_Inquiry.pdf",
+    "content_type": "application/pdf",
+    "bytes": 1540561,
+    "sha256": "2ded368864734368216dac8e709c10d2e9d6a86ec39bb35596b8831daef8a796",
+    "saved": "data\\raw\\ESA_ExoMars2016_Schiaparelli_Anomaly_Inquiry.pdf",
+    "already_present": true
+  },
+  {
+    "doc_id": "NASA_WIRE_MIB_Vol1",
+    "url": "https://llis.nasa.gov/llis_lib/pdf/1009462main1_0637-mr.pdf",
+    "content_type": "application/pdf",
+    "bytes": 64227,
+    "sha256": "7b66ec4152b9473a9f6e7f0c36e1a35ed99119cafd552a5672e65955753c5f9c",
+    "saved": "data\\raw\\NASA_WIRE_MIB_Vol1.pdf"
+  },
+  {
+    "doc_id": "NASA_ESA_SOHO_Interruption_Final_Report",
+    "url": "https://llis.nasa.gov/llis_lib/pdf/1009465main1_0664-mr.pdf",
+    "content_type": "application/pdf",
+    "bytes": 119888,
+    "sha256": "58fb88897655712b323b13dd236cf37063a9485672cbd64b68b893e7a5deb635",
+    "saved": "data\\raw\\NASA_ESA_SOHO_Interruption_Final_Report.pdf"
+  },
+  {
+    "doc_id": "NASA_Genesis_MIB_Report",
+    "url": "https://ntrs.nasa.gov/api/citations/20060008607/downloads/20060008607.pdf",
+    "content_type": "application/pdf",
+    "bytes": 86229552,
+    "sha256": "d7e53e9f60acae3e0860455037c51b8cabcafb523a1db89ab602059cf3b6d508",
+    "saved": "data\\raw\\NASA_Genesis_MIB_Report.pdf"
+  },
+  {
+    "doc_id": "NASA_NOAA_NPrime_MIB_Report",
+    "url": "https://www.nasa.gov/pdf/65776main_noaa_np_mishap.pdf",
+    "content_type": "application/pdf",
+    "bytes": 4159989,
+    "sha256": "753938cc1d3770436851e975c1ffb305ffe76422366f2631ceaa5076cdf42154",
+    "saved": "data\\raw\\NASA_NOAA_NPrime_MIB_Report.pdf"
+  },
+  {
+    "doc_id": "NASA_Apollo13_Review_Board",
+    "url": "https://ntrs.nasa.gov/api/citations/19700076776/downloads/19700076776.pdf",
+    "content_type": "application/pdf",
+    "bytes": 9022769,
+    "sha256": "9c8f4e7da932ca5d3c20e5be62f2b853ba85dedeb36c36fbc0a10d008c3683d9",
+    "saved": "data\\raw\\NASA_Apollo13_Review_Board.pdf"
+  },
+  {
+    "doc_id": "NASA_Apollo204_Review_Board",
+    "url": "https://ntrs.nasa.gov/api/citations/19930078717/downloads/19930078717.pdf",
+    "content_type": "application/pdf",
+    "bytes": 8011148,
+    "sha256": "c4495fd2e11406f91e029ea4388377c7cc33569c424592efa1fc32c68ae4871d",
+    "saved": "data\\raw\\NASA_Apollo204_Review_Board.pdf"
+  },
+  {
+    "doc_id": "NASA_Starliner_CFT_Propulsion_Anomalies",
+    "url": "https://www.nasa.gov/wp-content/uploads/2026/02/nasa-report-with-redactions-021926.pdf",
+    "error": "URLError: <urlopen error [Errno 11001] getaddrinfo failed>"
+  },
+  {
+    "doc_id": "JAXA_Hitomi_Experience_Report",
+    "url": "https://global.jaxa.jp/projects/sat/astro_h/files/topics_20160608.pdf",
+    "content_type": "application/pdf",
+    "bytes": 1697487,
+    "sha256": "08f60b414531509e358e7301bd0592ae66518f29a57d452bda09a95498365052",
+    "saved": "data\\raw\\JAXA_Hitomi_Experience_Report.pdf"
+  },
+  {
+    "doc_id": "NASA_OCO_MIB_Summary",
+    "url": "https://www.nasa.gov/wp-content/uploads/2019/05/369037main_ocoexecutivesummary_71609.pdf",
+    "content_type": "application/pdf",
+    "bytes": 52079,
+    "sha256": "0dd0e5971c437c4b6391b8d217d44c096af561a10704a91e62b5792f0b69fe7f",
+    "saved": "data\\raw\\NASA_OCO_MIB_Summary.pdf"
+  },
+  {
+    "doc_id": "NASA_Glory_T9_MIB_Summary",
+    "url": "https://www.nasa.gov/pdf/728836main_T9_MIB_Public_Release_Summary.pdf",
+    "content_type": "application/pdf",
+    "bytes": 267227,
+    "sha256": "6a705fbf74c7d5cfa228491e40a4978889a23dacb2019976d8c5d81620227865",
+    "saved": "data\\raw\\NASA_Glory_T9_MIB_Summary.pdf"
+  },
+  {
+    "doc_id": "NASA_TaurusXL_T8_T9_Summary_2019",
+    "url": "https://www.nasa.gov/wp-content/uploads/2019/04/oco_glory_public_summary_update_-_for_the_web_-_04302019.pdf",
+    "content_type": "application/pdf",
+    "bytes": 856043,
+    "sha256": "5f3fe77682c6580b97e75019176628eb1ffa9aca2fdf84062668d0fa2f2db6e2",
+    "saved": "data\\raw\\NASA_TaurusXL_T8_T9_Summary_2019.pdf"
+  },
+  {
+    "doc_id": "NASA_DART_MIB_Overview",
+    "url": "https://www.nasa.gov/pdf/148072main_DART_mishap_overview.pdf",
+    "content_type": "application/pdf",
+    "bytes": 89137,
+    "sha256": "2ed7b504fc9f840537c2e546fda043401eed1b01811bd8602ab058679f2a4cf7",
+    "saved": "data\\raw\\NASA_DART_MIB_Overview.pdf"
+  },
+  {
+    "doc_id": "NASA_IRT_CRS7_Public_Summary",
+    "url": "https://www.nasa.gov/sites/default/files/atoms/files/public_summary_nasa_irt_spacex_crs-7_final.pdf",
+    "content_type": "application/pdf",
+    "bytes": 763225,
+    "sha256": "0be4c42beb5b3211a5b63565d8f431a415506d58dcbc1717f16ee271597cef94",
+    "saved": "data\\raw\\NASA_IRT_CRS7_Public_Summary.pdf"
+  },
+  {
+    "doc_id": "NASA_IRT_Orb3_Executive_Summary",
+    "url": "https://www.nasa.gov/sites/default/files/atoms/files/orb3_irt_execsumm_0.pdf",
+    "content_type": "application/pdf",
+    "bytes": 1411753,
+    "sha256": "862e38ac5916720feab77765af445bcdaa9384e89c641cf4f7e505444883d7b7",
+    "saved": "data\\raw\\NASA_IRT_Orb3_Executive_Summary.pdf"
+  },
+  {
+    "doc_id": "ESA_Vega_VV15_Inquiry_Findings",
+    "url": "https://esa.int/Newsroom/Press_Releases/Vega_flight_VV15_findings_of_the_Independent_Inquiry_Commission_s_investigations",
+    "error": "URLError: <urlopen error [Errno 11001] getaddrinfo failed>"
+  },
+  {
+    "doc_id": "ESA_Vega_VV17_Inquiry_Conclusions",
+    "url": "https://esa.int/Newsroom/Press_Releases/Loss_of_Vega_flight_VV17_Independent_Enquiry_Commission_announces_conclusions",
+    "content_type": "text/html; charset=utf-8",
+    "bytes": 12414,
+    "sha256": "16860ba7d8fa7831f854226b314c8d6cebc1c323e4320d242aa9457c28e503b6",
+    "saved": "data\\raw_html\\ESA_Vega_VV17_Inquiry_Conclusions.html"
+  },
+  {
+    "doc_id": "ESA_VegaC_VV22_Inquiry_Conclusions",
+    "url": "https://www.esa.int/Newsroom/Press_Releases/Loss_of_flight_VV22_Independent_Enquiry_Commission_announces_conclusions",
+    "content_type": "text/html; charset=utf-8",
+    "bytes": 14688,
+    "sha256": "86d088af48f5dda67cce4368b9c572d73cd01e929cf833243812d2ad05c6a44b",
+    "saved": "data\\raw_html\\ESA_VegaC_VV22_Inquiry_Conclusions.html"
+  },
+  {
+    "doc_id": "ISRO_GSLV_F10_FAC_Conclusions",
+    "url": "https://www.isro.gov.in/GSLVMission.html",
+    "content_type": "text/html; charset=UTF-8",
+    "bytes": 7895,
+    "sha256": "095d176ca97b349b6d639936933d202a061b5dcae05329deb391df2fedb17bf7",
+    "saved": "data\\raw_html\\ISRO_GSLV_F10_FAC_Conclusions.html"
+  }
+]

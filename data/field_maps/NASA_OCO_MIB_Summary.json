@@ -1,0 +1,25 @@
+{
+  "doc_id": "NASA_OCO_MIB_Summary",
+  "status": "draft",
+  "drafted_by": "assistant (Claude), from run-in capital headings (no detected headings); pages mix content - REVIEW",
+  "reviewed_by": null,
+  "default": "other",
+  "ranges": [
+    {
+      "pages": [
+        1,
+        3
+      ],
+      "field": "description",
+      "label": "Summary; mission overview; launch vehicle and fairing description; description of mishap"
+    },
+    {
+      "pages": [
+        4,
+        6
+      ],
+      "field": "analysis",
+      "label": "Mishap causes and recommendations (each cause followed by its recommendations) - REVIEW"
+    }
+  ]
+}

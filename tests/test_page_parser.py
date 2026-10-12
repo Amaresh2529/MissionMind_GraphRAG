@@ -112,3 +112,10 @@ def test_normalisation_applied_in_pages(parsed):
 ])
 def test_pseudo_field_rules(section, chapter, expected):
     assert assign_pseudo_field(section, chapter) == expected
+
+
+def test_boiler_key_ignores_page_digits_and_letter_spacing():
+    from pipeline.page_parser import _boiler_key
+    assert _boiler_key("1 0 R e p o r t V o l u m e I A u g u s t 2 0 0 3") == \
+        _boiler_key("2 2 8 R e p o r t V o l u m e I A u g u s t 2 0 0 3")
+    assert _boiler_key("Reference: DG-I/2017 Page 4") == _boiler_key("Reference: DG-I/2017 Page 27")

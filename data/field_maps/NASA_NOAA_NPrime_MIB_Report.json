@@ -1,0 +1,121 @@
+{
+  "doc_id": "NASA_NOAA_NPrime_MIB_Report",
+  "status": "draft",
+  "drafted_by": "assistant (Claude), from the table of contents (p. 23) and section openings",
+  "reviewed_by": null,
+  "default": "other",
+  "ranges": [
+    {
+      "pages": [
+        1,
+        2
+      ],
+      "field": "other",
+      "label": "Cover"
+    },
+    {
+      "pages": [
+        3,
+        14
+      ],
+      "field": "analysis",
+      "label": "Endorsement and OSMA's critique of the MIB report - REVIEW"
+    },
+    {
+      "pages": [
+        15,
+        26
+      ],
+      "field": "other",
+      "label": "Transmittal/signature pages; contents; Sections 1-2 Board, advisors, staff"
+    },
+    {
+      "pages": [
+        27,
+        32
+      ],
+      "field": "description",
+      "label": "Section 3 Executive summary"
+    },
+    {
+      "pages": [
+        33,
+        38
+      ],
+      "field": "description",
+      "label": "Section 4 Program description"
+    },
+    {
+      "pages": [
+        39,
+        44
+      ],
+      "field": "description",
+      "label": "Section 5.1 Description of events leading to the mishap; timeline"
+    },
+    {
+      "pages": [
+        45,
+        54
+      ],
+      "field": "analysis",
+      "label": "Section 5.2-5.3 Planning, procedure review, staffing and notification (deficiencies) - REVIEW"
+    },
+    {
+      "pages": [
+        55,
+        71
+      ],
+      "field": "description",
+      "label": "Section 5.4-5.5 Turnover cart history; Saturday sequence of events - REVIEW"
+    },
+    {
+      "pages": [
+        72,
+        75
+      ],
+      "field": "analysis",
+      "label": "Section 5.6 Missed opportunities; findings summary tables"
+    },
+    {
+      "pages": [
+        76,
+        83
+      ],
+      "field": "other",
+      "label": "Section 6 Method of investigation (HFACS description)"
+    },
+    {
+      "pages": [
+        84,
+        99
+      ],
+      "field": "analysis",
+      "label": "Section 7 Findings (proximate cause, unsafe acts, supervision, organisational and Government factors)"
+    },
+    {
+      "pages": [
+        100,
+        108
+      ],
+      "field": "recommendations",
+      "label": "Section 8 Recommendations"
+    },
+    {
+      "pages": [
+        109,
+        109
+      ],
+      "field": "analysis",
+      "label": "Section 9 Observations"
+    },
+    {
+      "pages": [
+        110,
+        113
+      ],
+      "field": "other",
+      "label": "Sections 10-11 Acronyms; references"
+    }
+  ]
+}

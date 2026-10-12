@@ -1,0 +1,32 @@
+{
+ "n": 100,
+ "seed": 20261012,
+ "pool_passages": 5031,
+ "excluded_dev_passages": 388,
+ "documents": [
+  "Ariane_5_Flight_501_Failure_Inquiry_Board_Report.",
+  "Challenger",
+  "ESA_ExoMars2016_Schiaparelli_Anomaly_Inquiry",
+  "ESA_VegaC_VV22_Inquiry_Conclusions",
+  "ESA_Vega_VV15_Inquiry_Findings",
+  "ESA_Vega_VV17_Inquiry_Conclusions",
+  "ISRO_GSLV_F10_FAC_Conclusions",
+  "JAXA_Hitomi_Experience_Report",
+  "Mars_Climate_Orbiter",
+  "NASA_Apollo13_Review_Board",
+  "NASA_Apollo204_Review_Board",
+  "NASA_Columbia_CAIB_Vol1",
+  "NASA_DART_MIB_Overview",
+  "NASA_ESA_SOHO_Interruption_Final_Report",
+  "NASA_Genesis_MIB_Report",
+  "NASA_Glory_T9_MIB_Summary",
+  "NASA_IRT_CRS7_Public_Summary",
+  "NASA_IRT_Orb3_Executive_Summary",
+  "NASA_NOAA_NPrime_MIB_Report",
+  "NASA_OCO_MIB_Summary",
+  "NASA_Starliner_CFT_Propulsion_Anomalies",
+  "NASA_TaurusXL_T8_T9_Summary_2019",
+  "NASA_WIRE_MIB_Vol1"
+ ],
+ "sha256_sheet_blank": "5bdf7a3782e2d9d8482afd8fcd30faa6f762ae0aacdfee2074fa5eeb61bccc71"
+}

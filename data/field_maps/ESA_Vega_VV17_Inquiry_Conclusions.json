@@ -1,0 +1,26 @@
+{
+  "doc_id": "ESA_Vega_VV17_Inquiry_Conclusions",
+  "status": "draft",
+  "drafted_by": "assistant (Claude), from the press release's headings",
+  "reviewed_by": null,
+  "default": "other",
+  "ranges": [
+    {
+      "pages": [
+        1,
+        1
+      ],
+      "field": "other",
+      "label": "About ESA/Arianespace; press contacts",
+      "section_regex": "^about |for further information"
+    },
+    {
+      "pages": [
+        1,
+        1
+      ],
+      "field": "analysis",
+      "label": "Release body: commission's conclusions on cause and recommendations (single section) - REVIEW"
+    }
+  ]
+}

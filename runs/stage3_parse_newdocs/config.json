@@ -1,0 +1,32 @@
+{
+  "args": {
+    "docs": [
+      "ESA_ExoMars2016_Schiaparelli_Anomaly_Inquiry",
+      "NASA_WIRE_MIB_Vol1",
+      "NASA_ESA_SOHO_Interruption_Final_Report",
+      "NASA_Genesis_MIB_Report",
+      "NASA_NOAA_NPrime_MIB_Report",
+      "NASA_Apollo13_Review_Board",
+      "NASA_Apollo204_Review_Board",
+      "NASA_Starliner_CFT_Propulsion_Anomalies",
+      "JAXA_Hitomi_Experience_Report",
+      "NASA_OCO_MIB_Summary",
+      "NASA_Glory_T9_MIB_Summary",
+      "NASA_TaurusXL_T8_T9_Summary_2019",
+      "NASA_DART_MIB_Overview",
+      "NASA_IRT_CRS7_Public_Summary",
+      "NASA_IRT_Orb3_Executive_Summary",
+      "ESA_Vega_VV15_Inquiry_Findings",
+      "ESA_Vega_VV17_Inquiry_Conclusions",
+      "ESA_VegaC_VV22_Inquiry_Conclusions",
+      "ISRO_GSLV_F10_FAC_Conclusions"
+    ],
+    "no_ocr": false,
+    "run_id": "stage3_parse_newdocs"
+  },
+  "ocr_threshold": 0.6,
+  "passage_words": [
+    150,
+    300
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "doc_id": "NASA_Apollo204_Review_Board",
+  "status": "draft",
+  "drafted_by": "assistant (Claude), from the table of contents (pp. 11-12) and part openings in the OCR outline",
+  "reviewed_by": null,
+  "default": "other",
+  "ranges": [
+    {
+      "pages": [
+        9,
+        9
+      ],
+      "field": "description",
+      "label": "Preface - REVIEW"
+    },
+    {
+      "pages": [
+        1,
+        12
+      ],
+      "field": "other",
+      "label": "Cover, transmittal letters, title, contents"
+    },
+    {
+      "pages": [
+        13,
+        28
+      ],
+      "field": "other",
+      "label": "Part I Authority (establishment, NASA management instructions)"
+    },
+    {
+      "pages": [
+        29,
+        48
+      ],
+      "field": "other",
+      "label": "Part II Biographies"
+    },
+    {
+      "pages": [
+        97,
+        112
+      ],
+      "field": "analysis",
+      "label": "Part III: Chairman's interim status reports to the Administrator (preliminary findings) - REVIEW"
+    },
+    {
+      "pages": [
+        49,
+        96
+      ],
+      "field": "other",
+      "label": "Part III Board: organisation, procedures, proceedings log, administrative memos"
+    },
+    {
+      "pages": [
+        113,
+        138
+      ],
+      "field": "description",
+      "label": "Part IV History of the accident (spacecraft 012 history, events of the test)"
+    },
+    {
+      "pages": [
+        139,
+        186
+      ],
+      "field": "analysis",
+      "label": "Part V Investigation and analysis (incl. photo enclosures, time line)"
+    },
+    {
+      "pages": [
+        187,
+        192
+      ],
+      "field": "recommendations",
+      "label": "Part VI recommendations",
+      "section_regex": "recommendation"
+    },
+    {
+      "pages": [
+        187,
+        192
+      ],
+      "field": "analysis",
+      "label": "Part VI findings and determinations"
+    }
+  ]
+}

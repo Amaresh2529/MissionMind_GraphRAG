@@ -4,7 +4,10 @@ passage_loader.py
 Loads Stage 2 page-aware passages (data/processed/passages/<doc_id>.jsonl)
 into Neo4j as :Passage nodes with full provenance (doc_id, page,
 char_start, char_end, section, chapter, pseudo_field) and an embedding, and
-links them to their :Document.
+links them to their :Document. Where a curated field map has been applied
+(data/processed/fields/<doc_id>.jsonl, scripts/field_map_tool.py apply), each
+passage also carries `field` (description | analysis | recommendations | other)
+and `field_map_status` (draft | reviewed); otherwise both are null.
 
 Re-ingestion is refresh-on-change (fixes the Stage 1 stale-data defect):
   - new passage id            -> inserted (embedded)
@@ -28,7 +31,7 @@ from graph.neo4j_connector import get_driver
 
 INDEX_NAME = "passage_vector_index"
 _PROPS = ("doc_id", "page", "char_start", "char_end", "section", "chapter", "pseudo_field",
-          "n_words", "source", "low_quality", "text")
+          "n_words", "source", "low_quality", "text", "field", "field_map_status")
 
 
 def content_hash(p: dict) -> str:
@@ -48,9 +51,19 @@ def plan_changes(existing: dict[str, str], current: list[dict]) -> dict:
 
 
 def load_passages(doc_id: str) -> list[dict]:
-    path = get_settings().processed_dir / "passages" / f"{doc_id}.jsonl"
-    with open(path, encoding="utf-8") as f:
-        return [json.loads(line) for line in f]
+    base = get_settings().processed_dir
+    with open(base / "passages" / f"{doc_id}.jsonl", encoding="utf-8") as f:
+        passages = [json.loads(line) for line in f]
+    fields_path = base / "fields" / f"{doc_id}.jsonl"
+    if fields_path.exists():
+        with open(fields_path, encoding="utf-8") as f:
+            fields = {r["passage_id"]: r for r in map(json.loads, f)}
+        for p in passages:
+            r = fields.get(p["passage_id"])
+            if r is None:
+                raise ValueError(f"{doc_id}: field file is stale (no entry for {p['passage_id']}); re-run field_map_tool apply")
+            p["field"], p["field_map_status"] = r["field"], r["map_status"]
+    return passages
 
 
 def ingest_passages(doc_ids: list[str] | None = None, embedder=None, batch_size: int = 64) -> dict:

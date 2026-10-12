@@ -1,0 +1,58 @@
+{
+  "doc_id": "NASA_WIRE_MIB_Vol1",
+  "status": "draft",
+  "drafted_by": "assistant (Claude), from the table of contents (p. 2) and page outline",
+  "reviewed_by": null,
+  "default": "other",
+  "ranges": [
+    {
+      "pages": [
+        1,
+        7
+      ],
+      "field": "other",
+      "label": "Cover, contents, appendix list, signature page, members, advisors, observers"
+    },
+    {
+      "pages": [
+        8,
+        9
+      ],
+      "field": "description",
+      "label": "Executive Summary"
+    },
+    {
+      "pages": [
+        11,
+        11
+      ],
+      "field": "other",
+      "label": "Method of Investigation",
+      "section_regex": "method of investigation"
+    },
+    {
+      "pages": [
+        10,
+        11
+      ],
+      "field": "description",
+      "label": "Introduction; WIRE program description; WIRE mishap"
+    },
+    {
+      "pages": [
+        12,
+        21
+      ],
+      "field": "analysis",
+      "label": "Possible causes; timeline; attitude, cryostat and pyro analyses; root and contributing causes"
+    },
+    {
+      "pages": [
+        22,
+        24
+      ],
+      "field": "recommendations",
+      "label": "Lessons learned and recommendations"
+    }
+  ]
+}

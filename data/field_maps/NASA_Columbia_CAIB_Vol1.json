@@ -1,0 +1,122 @@
+{
+  "doc_id": "NASA_Columbia_CAIB_Vol1",
+  "status": "draft",
+  "drafted_by": "assistant (Claude), from the report's table of contents (pp. 4-5) and chapter openings",
+  "reviewed_by": null,
+  "default": "other",
+  "ranges": [
+    {
+      "pages": [
+        1,
+        248
+      ],
+      "field": "other",
+      "label": "Endnotes of every chapter",
+      "section_regex": "^endnotes"
+    },
+    {
+      "pages": [
+        1,
+        8
+      ],
+      "field": "other",
+      "label": "Cover, title, contents, Board Statement"
+    },
+    {
+      "pages": [
+        9,
+        10
+      ],
+      "field": "description",
+      "label": "Executive Summary"
+    },
+    {
+      "pages": [
+        11,
+        18
+      ],
+      "field": "description",
+      "label": "Report Synopsis; introduction to the Space Shuttle, NASA, programs and contractors"
+    },
+    {
+      "pages": [
+        19,
+        48
+      ],
+      "field": "description",
+      "label": "Part One: Ch. 1 Evolution of the Space Shuttle Program; Ch. 2 Columbia's Final Flight"
+    },
+    {
+      "pages": [
+        49,
+        96
+      ],
+      "field": "analysis",
+      "label": "Ch. 3 Accident Analysis (physical cause); Ch. 4 Other Factors Considered"
+    },
+    {
+      "pages": [
+        97,
+        120
+      ],
+      "field": "analysis",
+      "label": "Part Two: Ch. 5 From Challenger to Columbia (incl. selected Rogers recommendations, as history)"
+    },
+    {
+      "pages": [
+        121,
+        176
+      ],
+      "field": "analysis",
+      "label": "Ch. 6 Decision Making at NASA"
+    },
+    {
+      "pages": [
+        177,
+        194
+      ],
+      "field": "analysis",
+      "label": "Ch. 7 The Accident's Organizational Causes (7.6 findings and recommendations kept as analysis)"
+    },
+    {
+      "pages": [
+        195,
+        204
+      ],
+      "field": "analysis",
+      "label": "Ch. 8 History as Cause: Columbia and Challenger"
+    },
+    {
+      "pages": [
+        205,
+        212
+      ],
+      "field": "recommendations",
+      "label": "Part Three: Ch. 9 Implications for the Future of Human Space Flight (forward-looking) - REVIEW"
+    },
+    {
+      "pages": [
+        213,
+        224
+      ],
+      "field": "analysis",
+      "label": "Ch. 10 Other Significant Observations"
+    },
+    {
+      "pages": [
+        225,
+        228
+      ],
+      "field": "recommendations",
+      "label": "Ch. 11 Recommendations"
+    },
+    {
+      "pages": [
+        229,
+        248
+      ],
+      "field": "other",
+      "label": "Part Four: Appendices A-C (investigation, biographies, staff)"
+    }
+  ]
+}

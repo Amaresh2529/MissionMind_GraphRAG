@@ -1,0 +1,89 @@
+{
+  "doc_id": "JAXA_Hitomi_Experience_Report",
+  "status": "draft",
+  "drafted_by": "assistant (Claude), from the slide-deck agenda (p. 2) and section titles",
+  "reviewed_by": null,
+  "default": "other",
+  "ranges": [
+    {
+      "pages": [
+        1,
+        2
+      ],
+      "field": "other",
+      "label": "Title, agenda"
+    },
+    {
+      "pages": [
+        3,
+        4
+      ],
+      "field": "description",
+      "label": "1 Summary"
+    },
+    {
+      "pages": [
+        5,
+        19
+      ],
+      "field": "description",
+      "label": "2 Background information on ASTRO-H (mission, schedule, organisation)"
+    },
+    {
+      "pages": [
+        20,
+        27
+      ],
+      "field": "description",
+      "label": "3 Anomaly description and ground-based observations"
+    },
+    {
+      "pages": [
+        28,
+        48
+      ],
+      "field": "analysis",
+      "label": "4 Causes of the anomaly (mechanisms 1-4, Appendices A-I)"
+    },
+    {
+      "pages": [
+        49,
+        84
+      ],
+      "field": "analysis",
+      "label": "5 Factors contributing to the anomaly (direct and background factors)"
+    },
+    {
+      "pages": [
+        85,
+        92
+      ],
+      "field": "recommendations",
+      "label": "6 Management reform for future ISAS projects"
+    },
+    {
+      "pages": [
+        93,
+        94
+      ],
+      "field": "description",
+      "label": "7 Summary"
+    },
+    {
+      "pages": [
+        95,
+        100
+      ],
+      "field": "analysis",
+      "label": "Reference slides (sequence of events, STT behaviour, heritage table)"
+    },
+    {
+      "pages": [
+        101,
+        104
+      ],
+      "field": "other",
+      "label": "Abbreviations"
+    }
+  ]
+}

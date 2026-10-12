@@ -1,0 +1,161 @@
+{
+  "doc_id": "Challenger",
+  "status": "draft",
+  "drafted_by": "assistant (Claude), from chapter openings in the page outline (Rogers Commission Vol. 1)",
+  "reviewed_by": null,
+  "default": "other",
+  "ranges": [
+    {
+      "pages": [
+        1,
+        8
+      ],
+      "field": "other",
+      "label": "Title, In Memoriam, transmittal letter, contents, Preface"
+    },
+    {
+      "pages": [
+        9,
+        16
+      ],
+      "field": "description",
+      "label": "Chapter I Introduction (Shuttle design and development)"
+    },
+    {
+      "pages": [
+        17,
+        25
+      ],
+      "field": "description",
+      "label": "Chapter II Events Leading Up to the Challenger Mission"
+    },
+    {
+      "pages": [
+        26,
+        46
+      ],
+      "field": "description",
+      "label": "Chapter III The Accident (sequence of events)"
+    },
+    {
+      "pages": [
+        80,
+        80
+      ],
+      "field": "other",
+      "label": "Chapter IV references"
+    },
+    {
+      "pages": [
+        47,
+        88
+      ],
+      "field": "analysis",
+      "label": "Chapter IV The Cause of the Accident (incl. findings, photo pages)"
+    },
+    {
+      "pages": [
+        126,
+        126
+      ],
+      "field": "other",
+      "label": "Chapter V references"
+    },
+    {
+      "pages": [
+        89,
+        125
+      ],
+      "field": "analysis",
+      "label": "Chapter V The Contributing Cause: Flaws in the Decision Making Process"
+    },
+    {
+      "pages": [
+        156,
+        158
+      ],
+      "field": "other",
+      "label": "Chapter VI references"
+    },
+    {
+      "pages": [
+        127,
+        155
+      ],
+      "field": "analysis",
+      "label": "Chapter VI An Accident Rooted in History"
+    },
+    {
+      "pages": [
+        169,
+        169
+      ],
+      "field": "other",
+      "label": "Chapter VII references"
+    },
+    {
+      "pages": [
+        159,
+        168
+      ],
+      "field": "analysis",
+      "label": "Chapter VII The Silent Safety Program"
+    },
+    {
+      "pages": [
+        170,
+        183
+      ],
+      "field": "analysis",
+      "label": "Chapter VIII Pressures on the System"
+    },
+    {
+      "pages": [
+        202,
+        202
+      ],
+      "field": "other",
+      "label": "Chapter IX references"
+    },
+    {
+      "pages": [
+        184,
+        201
+      ],
+      "field": "analysis",
+      "label": "Chapter IX Other Safety Considerations"
+    },
+    {
+      "pages": [
+        203,
+        206
+      ],
+      "field": "recommendations",
+      "label": "Recommendations; Concluding Thought"
+    },
+    {
+      "pages": [
+        207,
+        223
+      ],
+      "field": "other",
+      "label": "Commission members and staff; Appendix A Commission Activities; Appendix B Documentation System"
+    },
+    {
+      "pages": [
+        224,
+        229
+      ],
+      "field": "analysis",
+      "label": "Appendix C Observations Concerning the Processing and Assembly of Flight 51-L"
+    },
+    {
+      "pages": [
+        230,
+        261
+      ],
+      "field": "analysis",
+      "label": "Appendix D Supporting charts and documents (Thiokol/Marshall memos, evidence)"
+    }
+  ]
+}

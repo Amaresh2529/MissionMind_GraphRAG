@@ -18,9 +18,13 @@ MANIFEST = ROOT / "data" / "manifest.json"
 
 
 def file_facts(path: Path) -> dict:
-    import pymupdf
     data = path.read_bytes()
-    return {"sha256": hashlib.sha256(data).hexdigest(), "bytes": len(data), "pages": len(pymupdf.open(path))}
+    if path.suffix.lower() == ".html":      # web pages (press releases) count as one page
+        pages = 1
+    else:
+        import pymupdf
+        pages = len(pymupdf.open(path))
+    return {"sha256": hashlib.sha256(data).hexdigest(), "bytes": len(data), "pages": pages}
 
 
 def main(argv=None):

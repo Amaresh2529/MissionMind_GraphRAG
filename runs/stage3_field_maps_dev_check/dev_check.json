@@ -1,0 +1,14 @@
+{
+  "note": "DEV sample (inspected in Stage 2); not a reportable accuracy. Draft maps, 4 labels.",
+  "map": {
+    "n": 100,
+    "accuracy": 0.81,
+    "word_weighted_accuracy": 0.837
+  },
+  "rules": {
+    "n": 100,
+    "accuracy": 0.59,
+    "word_weighted_accuracy": 0.7661
+  },
+  "sections_not_found_after_reparse": []
+}

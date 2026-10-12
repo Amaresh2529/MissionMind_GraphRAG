@@ -1,0 +1,35 @@
+{
+  "doc_id": "ESA_Vega_VV15_Inquiry_Findings",
+  "status": "draft",
+  "drafted_by": "assistant (Claude), from the press release's headings",
+  "reviewed_by": null,
+  "default": "other",
+  "ranges": [
+    {
+      "pages": [
+        1,
+        1
+      ],
+      "field": "other",
+      "label": "About ESA/Arianespace; press contacts",
+      "section_regex": "^about |for further information"
+    },
+    {
+      "pages": [
+        1,
+        1
+      ],
+      "field": "analysis",
+      "label": "Flight data analysis; causes of the anomaly and work plan",
+      "section_regex": "flight data analysis|causes of the anomaly"
+    },
+    {
+      "pages": [
+        1,
+        1
+      ],
+      "field": "description",
+      "label": "Release title section: summary of the commission's findings - REVIEW"
+    }
+  ]
+}

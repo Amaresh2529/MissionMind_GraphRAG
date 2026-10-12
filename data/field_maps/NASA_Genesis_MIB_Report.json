@@ -1,0 +1,97 @@
+{
+  "doc_id": "NASA_Genesis_MIB_Report",
+  "status": "draft",
+  "drafted_by": "assistant (Claude), from the contents (pp. 4-5) and section numbering in the OCR outline",
+  "reviewed_by": null,
+  "default": "other",
+  "ranges": [
+    {
+      "pages": [
+        1,
+        5
+      ],
+      "field": "other",
+      "label": "Cover, title, contents, lists of figures/tables/appendices"
+    },
+    {
+      "pages": [
+        6,
+        8
+      ],
+      "field": "description",
+      "label": "Executive Summary"
+    },
+    {
+      "pages": [
+        9,
+        16
+      ],
+      "field": "description",
+      "label": "1 Genesis mission description"
+    },
+    {
+      "pages": [
+        17,
+        44
+      ],
+      "field": "analysis",
+      "label": "2 Technical investigation: proximate cause, fault tree, discussion, findings, other considerations"
+    },
+    {
+      "pages": [
+        45,
+        48
+      ],
+      "field": "description",
+      "label": "3.1-3.2 Nominal mission plan; contingency plan and its implementation"
+    },
+    {
+      "pages": [
+        49,
+        56
+      ],
+      "field": "analysis",
+      "label": "3.3-3.5 Ground-safety investigation: observations, proximate and root causes (with recommendations) - REVIEW"
+    },
+    {
+      "pages": [
+        57,
+        58
+      ],
+      "field": "recommendations",
+      "label": "4 Closing recommendations"
+    },
+    {
+      "pages": [
+        59,
+        104
+      ],
+      "field": "analysis",
+      "label": "Appendices A-D: fault analysis, battery analysis, NTSB materials report, Faster-Better-Cheaper"
+    },
+    {
+      "pages": [
+        105,
+        110
+      ],
+      "field": "description",
+      "label": "Appendix E Event timeline"
+    },
+    {
+      "pages": [
+        111,
+        124
+      ],
+      "field": "analysis",
+      "label": "Appendices F-G: documentation inconsistencies, fault tree closeout, avionics inspections"
+    },
+    {
+      "pages": [
+        125,
+        125
+      ],
+      "field": "other",
+      "label": "Report documentation page"
+    }
+  ]
+}

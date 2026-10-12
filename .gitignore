@@ -5,6 +5,7 @@ __pycache__/
 # Large PDF Files & Extracted Outputs
 data/raw/*
 data/processed/*
+data/raw_html/*
 !data/raw/.gitkeep
 !data/processed/.gitkeep
 

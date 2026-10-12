@@ -1,0 +1,138 @@
+{
+  "doc_id": "NASA_Starliner_CFT_Propulsion_Anomalies",
+  "status": "draft",
+  "drafted_by": "assistant (Claude), from the table of contents (pp. 5-8) and section numbering",
+  "reviewed_by": null,
+  "default": "other",
+  "ranges": [
+    {
+      "pages": [
+        1,
+        1
+      ],
+      "field": "other",
+      "label": "Cover"
+    },
+    {
+      "pages": [
+        2,
+        4
+      ],
+      "field": "description",
+      "label": "Executive summary; key technical anomalies; key findings (truncated summary)"
+    },
+    {
+      "pages": [
+        5,
+        8
+      ],
+      "field": "other",
+      "label": "Contents"
+    },
+    {
+      "pages": [
+        9,
+        12
+      ],
+      "field": "other",
+      "label": "1.3 Establishing the investigation",
+      "section_regex": "establishing the investigation"
+    },
+    {
+      "pages": [
+        9,
+        12
+      ],
+      "field": "description",
+      "label": "1 Scope: mission background; position in human spaceflight history"
+    },
+    {
+      "pages": [
+        13,
+        14
+      ],
+      "field": "analysis",
+      "label": "2 Additional investigations (STAR report findings; Boeing eRCCA)"
+    },
+    {
+      "pages": [
+        15,
+        20
+      ],
+      "field": "description",
+      "label": "3 Commercial Crew Program background; OFT and OFT-2 summaries"
+    },
+    {
+      "pages": [
+        21,
+        113
+      ],
+      "field": "analysis",
+      "label": "4 Technical root cause analysis and findings (CM/SM RCS jets, helium leak, common observations)"
+    },
+    {
+      "pages": [
+        114,
+        145
+      ],
+      "field": "analysis",
+      "label": "5 Culture and decision-making during the mission"
+    },
+    {
+      "pages": [
+        146,
+        154
+      ],
+      "field": "analysis",
+      "label": "6 Root causes; 7 Additional observations"
+    },
+    {
+      "pages": [
+        155,
+        170
+      ],
+      "field": "recommendations",
+      "label": "8 Consolidated recommendations (Tables 1-2)"
+    },
+    {
+      "pages": [
+        171,
+        174
+      ],
+      "field": "analysis",
+      "label": "Fault-tree diagrams (helium leak, SM RCS)"
+    },
+    {
+      "pages": [
+        175,
+        184
+      ],
+      "field": "analysis",
+      "label": "Appendices A-B: human factors (HFACS) analysis; survey data"
+    },
+    {
+      "pages": [
+        185,
+        198
+      ],
+      "field": "other",
+      "label": "Appendices C-D: references, acronyms, tables and figures"
+    },
+    {
+      "pages": [
+        199,
+        205
+      ],
+      "field": "other",
+      "label": "Appendix E sample organisational trust plan; Appendix F chartering memo - REVIEW"
+    },
+    {
+      "pages": [
+        206,
+        311
+      ],
+      "field": "analysis",
+      "label": "Appendix G CCP STAR/SDRT report (embedded investigation report)"
+    }
+  ]
+}

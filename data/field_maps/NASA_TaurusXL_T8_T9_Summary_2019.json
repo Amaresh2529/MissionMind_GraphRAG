@@ -1,0 +1,25 @@
+{
+  "doc_id": "NASA_TaurusXL_T8_T9_Summary_2019",
+  "status": "draft",
+  "drafted_by": "assistant (Claude), from page text (no headings)",
+  "reviewed_by": null,
+  "default": "other",
+  "ranges": [
+    {
+      "pages": [
+        1,
+        1
+      ],
+      "field": "description",
+      "label": "Investigative summary introduction"
+    },
+    {
+      "pages": [
+        2,
+        8
+      ],
+      "field": "analysis",
+      "label": "Factors (charge holder, extrusion process, test lab); conclusion"
+    }
+  ]
+}

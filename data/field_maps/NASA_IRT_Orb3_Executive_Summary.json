@@ -1,0 +1,42 @@
+{
+  "doc_id": "NASA_IRT_Orb3_Executive_Summary",
+  "status": "draft",
+  "drafted_by": "assistant (Claude), from page text and headings",
+  "reviewed_by": null,
+  "default": "other",
+  "ranges": [
+    {
+      "pages": [
+        1,
+        1
+      ],
+      "field": "other",
+      "label": "Title page"
+    },
+    {
+      "pages": [
+        9,
+        11
+      ],
+      "field": "recommendations",
+      "label": "Programmatic recommendations",
+      "section_regex": "recommendation"
+    },
+    {
+      "pages": [
+        2,
+        4
+      ],
+      "field": "description",
+      "label": "Commercial services background; Orb-3 accident"
+    },
+    {
+      "pages": [
+        5,
+        11
+      ],
+      "field": "analysis",
+      "label": "IRT analysis; technical root causes; technical and programmatic findings"
+    }
+  ]
+}

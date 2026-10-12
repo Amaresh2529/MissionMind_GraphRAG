@@ -1,0 +1,33 @@
+{
+  "doc_id": "NASA_Glory_T9_MIB_Summary",
+  "status": "draft",
+  "drafted_by": "assistant (Claude), from run-in capital headings (OCR text); pages mix content - REVIEW",
+  "reviewed_by": null,
+  "default": "other",
+  "ranges": [
+    {
+      "pages": [
+        1,
+        5
+      ],
+      "field": "description",
+      "label": "Summary; background; mission overview; launch vehicle; fairing"
+    },
+    {
+      "pages": [
+        6,
+        7
+      ],
+      "field": "analysis",
+      "label": "Mishap causes: proximate and intermediate causes; root cause analysis"
+    },
+    {
+      "pages": [
+        8,
+        8
+      ],
+      "field": "recommendations",
+      "label": "Technical recommendations"
+    }
+  ]
+}

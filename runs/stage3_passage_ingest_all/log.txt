@@ -1,0 +1,75 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|██████████| 103/103 [00:00<00:00, 4371.45it/s]
+[1mBertModel LOAD REPORT[0m from: sentence-transformers/all-MiniLM-L6-v2
+Key                     | Status     |  | 
+------------------------+------------+--+-
+embeddings.position_ids | UNEXPECTED |  | 
+
+[3mNotes:
+- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m
+C:\Project\MissionMind_GraphRAG\src\graph\passage_loader.py:78: FutureWarning: The `get_sentence_embedding_dimension` method has been renamed to `get_embedding_dimension`.
+  dims = embedder.get_sentence_embedding_dimension()
+   Annual_Report_2024_25_Eng: +0 ~620 =0 -0
+   Annual_Report_2025_26_Eng_29042026_Rev: +0 ~854 =0 -0
+   Ariane_5_Flight_501_Failure_Inquiry_Board_Report.: +0 ~52 =0 -0
+   Challenger: +0 ~1030 =0 -1
+   ESA_ExoMars2016_Schiaparelli_Anomaly_Inquiry: +56 ~0 =0 -0
+   ESA_Vega_VV15_Inquiry_Findings: +6 ~0 =0 -0
+   ESA_Vega_VV17_Inquiry_Conclusions: +7 ~0 =0 -0
+   ESA_VegaC_VV22_Inquiry_Conclusions: +9 ~0 =0 -0
+   ExoMars_2016_Schiaparelli_Module_Trajectory: +0 ~95 =0 -0
+   ISRO_GSLV_F10_FAC_Conclusions: +3 ~0 =0 -0
+   JAXA_Hitomi_Experience_Report: +277 ~0 =0 -0
+   Mars_Climate_Orbiter: +0 ~131 =0 -0
+   NASA_Apollo13_Review_Board: +708 ~0 =0 -0
+   NASA_Apollo204_Review_Board: +494 ~0 =0 -0
+   NASA_Columbia_CAIB_Vol1: +0 ~1123 =0 -58
+   NASA_DART_MIB_Overview: +21 ~0 =0 -0
+   NASA_ESA_SOHO_Interruption_Final_Report: +74 ~0 =0 -0
+   NASA_Genesis_MIB_Report: +397 ~0 =0 -0
+   NASA_Glory_T9_MIB_Summary: +17 ~0 =0 -0
+   NASA_IRT_CRS7_Public_Summary: +23 ~0 =0 -0
+   NASA_IRT_Orb3_Executive_Summary: +27 ~0 =0 -0
+   NASA_NOAA_NPrime_MIB_Report: +243 ~0 =0 -0
+   NASA_OCO_MIB_Summary: +11 ~0 =0 -0
+   NASA_Starliner_CFT_Propulsion_Anomalies: +616 ~0 =0 -0
+   NASA_TaurusXL_T8_T9_Summary_2019: +19 ~0 =0 -0
+   NASA_WIRE_MIB_Vol1: +75 ~0 =0 -0
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|██████████| 103/103 [00:00<00:00, 8133.39it/s]
+[1mBertModel LOAD REPORT[0m from: sentence-transformers/all-MiniLM-L6-v2
+Key                     | Status     |  | 
+------------------------+------------+--+-
+embeddings.position_ids | UNEXPECTED |  | 
+
+[3mNotes:
+- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m
+C:\Project\MissionMind_GraphRAG\src\graph\passage_loader.py:78: FutureWarning: The `get_sentence_embedding_dimension` method has been renamed to `get_embedding_dimension`.
+  dims = embedder.get_sentence_embedding_dimension()
+   Annual_Report_2024_25_Eng: +0 ~0 =620 -0
+   Annual_Report_2025_26_Eng_29042026_Rev: +0 ~0 =854 -0
+   Ariane_5_Flight_501_Failure_Inquiry_Board_Report.: +0 ~0 =52 -0
+   Challenger: +0 ~0 =1030 -0
+   ESA_ExoMars2016_Schiaparelli_Anomaly_Inquiry: +0 ~0 =56 -0
+   ESA_Vega_VV15_Inquiry_Findings: +0 ~0 =6 -0
+   ESA_Vega_VV17_Inquiry_Conclusions: +0 ~0 =7 -0
+   ESA_VegaC_VV22_Inquiry_Conclusions: +0 ~0 =9 -0
+   ExoMars_2016_Schiaparelli_Module_Trajectory: +0 ~0 =95 -0
+   ISRO_GSLV_F10_FAC_Conclusions: +0 ~0 =3 -0
+   JAXA_Hitomi_Experience_Report: +0 ~0 =277 -0
+   Mars_Climate_Orbiter: +0 ~0 =131 -0
+   NASA_Apollo13_Review_Board: +0 ~0 =708 -0
+   NASA_Apollo204_Review_Board: +0 ~0 =494 -0
+   NASA_Columbia_CAIB_Vol1: +0 ~0 =1123 -0
+   NASA_DART_MIB_Overview: +0 ~0 =21 -0
+   NASA_ESA_SOHO_Interruption_Final_Report: +0 ~0 =74 -0
+   NASA_Genesis_MIB_Report: +0 ~0 =397 -0
+   NASA_Glory_T9_MIB_Summary: +0 ~0 =17 -0
+   NASA_IRT_CRS7_Public_Summary: +0 ~0 =23 -0
+   NASA_IRT_Orb3_Executive_Summary: +0 ~0 =27 -0
+   NASA_NOAA_NPrime_MIB_Report: +0 ~0 =243 -0
+   NASA_OCO_MIB_Summary: +0 ~0 =11 -0
+   NASA_Starliner_CFT_Propulsion_Anomalies: +0 ~0 =616 -0
+   NASA_TaurusXL_T8_T9_Summary_2019: +0 ~0 =19 -0
+   NASA_WIRE_MIB_Vol1: +0 ~0 =75 -0
+FIRST {'insert': 3083, 'update': 3905, 'unchanged': 0, 'delete': 59, 'documents': 26} 46.0 s
+SECOND {'insert': 0, 'update': 0, 'unchanged': 6988, 'delete': 0, 'documents': 26} 7.9 s

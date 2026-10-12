@@ -1,0 +1,1 @@
+ABORTED 2026-10-12: crashed on console encoding (emoji print, cp1252) after saving the first PDF (ESA_ExoMars2016_Schiaparelli_Anomaly_Inquiry.pdf). No log written. Rerun as stage3_fetch_corpus_r2; the existing file is verified by SHA-256 there.

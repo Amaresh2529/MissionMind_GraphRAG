@@ -1,0 +1,25 @@
+{
+  "doc_id": "NASA_DART_MIB_Overview",
+  "status": "draft",
+  "drafted_by": "assistant (Claude), from run-in capital headings",
+  "reviewed_by": null,
+  "default": "other",
+  "ranges": [
+    {
+      "pages": [
+        1,
+        3
+      ],
+      "field": "description",
+      "label": "Overview; project background; spacecraft; mission plan; description of the mishap"
+    },
+    {
+      "pages": [
+        4,
+        10
+      ],
+      "field": "analysis",
+      "label": "Identifying mishap causes; summary of root causes and recommendations (interleaved); conclusion - REVIEW"
+    }
+  ]
+}

@@ -21,6 +21,9 @@ body size, bold weight, numbering patterns) because 6 of the 7 PDFs have no
 usable embedded table of contents. Its accuracy is measured, not assumed
 (docs/research/06_Stage2_Ingestion_Provenance.md).
 
+Web pages (press releases in data/raw_html/*.html) are read as a single page
+from their h1-h4/p/li elements (source "html").
+
 The Stage 1 word-window pipeline (pdf_loader.py, text_chunker.py) is not
 touched; baseline B4 keeps using it.
 """
@@ -28,9 +31,11 @@ touched; baseline B4 keeps using it.
 import argparse
 import collections
 import json
+import os
 import re
 import sys
 from dataclasses import dataclass, field
+from html.parser import HTMLParser
 from pathlib import Path
 
 import pymupdf
@@ -190,7 +195,7 @@ def _ocr_raw_paragraphs(pdf_path: Path, page_index: int) -> list[dict] | None:
         images = convert_from_path(str(pdf_path), first_page=page_index + 1, last_page=page_index + 1, dpi=OCR_DPI)
         data = pytesseract.image_to_data(images[0], output_type=pytesseract.Output.DICT)
     except Exception as err:
-        print(f"   ⚠️  OCR failed on page {page_index + 1}: {err}")
+        print(f"   WARNING: OCR failed on page {page_index + 1}: {err}")
         return None
     paras: dict[tuple, dict] = {}
     for i, word in enumerate(data["text"]):
@@ -205,7 +210,9 @@ def _ocr_raw_paragraphs(pdf_path: Path, page_index: int) -> list[dict] | None:
                  for p in paras.values()]  # dict keeps Tesseract's reading order
     if cache:
         cache.parent.mkdir(parents=True, exist_ok=True)
-        cache.write_text(json.dumps(raw_paras), encoding="utf-8")
+        tmp = cache.with_suffix(f".tmp{os.getpid()}")   # atomic: parallel pre-warming never exposes half a file
+        tmp.write_text(json.dumps(raw_paras), encoding="utf-8")
+        os.replace(tmp, cache)
     return raw_paras
 
 
@@ -236,9 +243,10 @@ def is_scanned(doc) -> bool:
     return len(doc) > 0 and covered / len(doc) >= 0.8
 
 
-def _read_pages(pdf_path: Path, use_ocr: bool) -> tuple[list[Page], bool]:
+def _read_pages(pdf_path: Path, use_ocr: bool, force_ocr: bool = False) -> tuple[list[Page], bool]:
     doc = pymupdf.open(pdf_path)
-    scanned = use_ocr and is_scanned(doc)
+    # force_ocr: text layer damaged in a way the quality score misses (manifest "ocr_policy": "full")
+    scanned = use_ocr and (force_ocr or is_scanned(doc))
     pages = []
     for i, p in enumerate(doc):
         page = Page(number=i + 1, blocks=_text_layer_blocks(p))
@@ -255,11 +263,70 @@ def _read_pages(pdf_path: Path, use_ocr: bool) -> tuple[list[Page], bool]:
     return pages, scanned
 
 
+class _HTMLBlocks(HTMLParser):
+    """Collects headings (h1-h4) and paragraphs/list items from the first <h1>
+    onwards; navigation, scripts and footers are skipped."""
+    SKIP = {"script", "style", "nav", "footer", "header_nav", "noscript", "form"}
+
+    def __init__(self):
+        super().__init__(convert_charrefs=True)
+        self.blocks, self._buf, self._tag, self._skip, self._started = [], [], None, 0, False
+
+    def handle_starttag(self, tag, attrs):
+        if tag in self.SKIP:
+            self._skip += 1
+        elif tag in ("h1", "h2", "h3", "h4", "p", "li") and not self._skip:
+            self._flush()
+            self._started = self._started or tag == "h1"
+            self._tag = tag
+        elif tag == "br" and self._tag:
+            self._buf.append(" ")
+
+    def handle_endtag(self, tag):
+        if tag in self.SKIP:
+            self._skip = max(0, self._skip - 1)
+        elif tag == self._tag:
+            self._flush()
+
+    def handle_data(self, data):
+        if self._tag and not self._skip and self._started:
+            self._buf.append(data)
+
+    def _flush(self):
+        text = normalize_block(" ".join("".join(self._buf).split()))
+        if text and self._tag:
+            # press-release contact blocks start with "For further information" -> own section
+            heading = self._tag.startswith("h") or text.lower().startswith("for further information")
+            self.blocks.append(Block(text=text, max_size=16.0 if self._tag == "h1" else 14.0 if heading else 11.0,
+                                     bold_frac=1.0 if heading else 0.0))
+        self._buf, self._tag = [], None
+
+
+def _read_html(path: Path) -> list[Page]:
+    """A web page (press release) becomes one Page with source "html"."""
+    parser = _HTMLBlocks()
+    parser.feed(path.read_bytes().decode("utf-8", errors="replace"))
+    parser.close()
+    parser._flush()
+    page = Page(number=1, blocks=parser.blocks, source="html")
+    page.q_text_layer = text_quality_score(page.text)
+    return [page]
+
+
+BOILER_MAX_CHARS = 160   # running headers can be long ("EXOMARS 2016 - ... Reference ... Page 4")
+
+
+def _boiler_key(text: str) -> str:
+    """Page-independent key: digits and whitespace removed, so "1 0 R e p o r t" and
+    "2 2 8 R e p o r t" (letter-spaced CAIB header) map to the same key."""
+    return re.sub(r"[\d\s]+", "", text.lower())
+
+
 def _boilerplate_keys(pages: list[Page]) -> set[str]:
     """Short block texts repeated on many pages (running headers/footers)."""
     seen = collections.Counter()
     for page in pages:
-        keys = {re.sub(r"\d+", "#", b.text.lower()) for b in page.blocks if len(b.text.split()) <= 12}
+        keys = {k for k in (_boiler_key(b.text) for b in page.blocks) if 0 < len(k) <= BOILER_MAX_CHARS}
         seen.update(keys)
     threshold = max(3, int(0.25 * len(pages)))
     return {k for k, n in seen.items() if n >= threshold}
@@ -280,7 +347,7 @@ def _classify_blocks(pages: list[Page]) -> None:
     for page in pages:
         for b in page.blocks:
             words = b.text.split()
-            if _PAGE_NUMBER.match(b.text) or re.sub(r"\d+", "#", b.text.lower()) in boiler:
+            if _PAGE_NUMBER.match(b.text) or _boiler_key(b.text) in boiler:
                 b.kind = "boilerplate"
                 continue
             half = len(words) // 2
@@ -393,9 +460,12 @@ def build_passages(doc_id: str, pages: list[Page]) -> list[dict]:
     return passages
 
 
-def parse_document(pdf_path: Path, use_ocr: bool = True) -> tuple[list[Page], list[dict], dict]:
+def parse_document(pdf_path: Path, use_ocr: bool = True, force_ocr: bool = False) -> tuple[list[Page], list[dict], dict]:
     doc_id = pdf_path.stem
-    pages, scanned = _read_pages(pdf_path, use_ocr)
+    if pdf_path.suffix.lower() == ".html":
+        pages, scanned = _read_html(pdf_path), False
+    else:
+        pages, scanned = _read_pages(pdf_path, use_ocr, force_ocr)
     _classify_blocks(pages)
     for page in pages:
         _assign_offsets(page)
@@ -442,9 +512,13 @@ def main(argv=None):
     parser.add_argument("--run-id", default=None)
     args = parser.parse_args(argv)
 
-    pdfs = sorted(get_settings().raw_dir.glob("*.pdf"))
+    s = get_settings()
+    pdfs = sorted(s.raw_dir.glob("*.pdf")) + sorted((s.data_dir / "raw_html").glob("*.html"))
     if args.docs:
         pdfs = [p for p in pdfs if p.stem in set(args.docs)]
+    manifest_path = s.data_dir / "manifest.json"
+    force_ocr = {d["doc_id"] for d in json.loads(manifest_path.read_text(encoding="utf-8"))["documents"]
+                 if d.get("ocr_policy") == "full"} if manifest_path.exists() else set()
     run_dir = new_run_dir(args.run_id, prefix="parse")
     timer, report = Timer(), {}
     with tee_output(run_dir / "log.txt"):
@@ -455,15 +529,19 @@ def main(argv=None):
             print(f"Parsing {pdf.name} ...")
             try:
                 with timer.step(pdf.stem):
-                    pages, passages, stats = parse_document(pdf, use_ocr=not args.no_ocr)
+                    pages, passages, stats = parse_document(pdf, use_ocr=not args.no_ocr,
+                                                            force_ocr=pdf.stem in force_ocr)
                     write_outputs(pdf.stem, pages, passages)
                 report[pdf.stem] = stats
                 print(f"   {stats['pages']} pages ({stats['pages_ocr']} OCR, {stats['pages_low_quality']} low quality), "
                       f"{stats['headings']} headings, {stats['passages']} passages")
             except Exception as err:  # recorded, not hidden
                 report[pdf.stem] = {"error": f"{type(err).__name__}: {err}"}
-                print(f"   ❌ {pdf.name}: {err}")
-        write_json(get_settings().processed_dir / "parse_report.json", report)
+                print(f"   FAILED {pdf.name}: {err}")
+        merged_path = s.processed_dir / "parse_report.json"   # merge: a --docs subset keeps other entries
+        merged = json.loads(merged_path.read_text(encoding="utf-8")) if merged_path.exists() else {}
+        merged.update(report)
+        write_json(merged_path, merged)
         write_json(run_dir / "parse_report.json", report)
         write_json(run_dir / "timings.json", timer.timings)
     return report

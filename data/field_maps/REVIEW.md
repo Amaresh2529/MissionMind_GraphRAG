@@ -1,0 +1,335 @@
+# Field map review sheet
+
+Generated from `data/field_maps/*.json` (regenerate after edits). For each report, check the page ranges against the PDF's
+table of contents and fix any range or field that is wrong **in the JSON file**, then set `"status": "reviewed"` and
+`"reviewed_by": "<your name>"`. Ranges marked **REVIEW** are judgement calls the drafter was unsure about.
+Do this **before** labelling `evalutation/fixtures/field_test_sheet.csv`, and do not change maps after labelling starts.
+
+Fields: `description` (summary, background, what happened), `analysis` (investigation, findings, causes),
+`recommendations`, `other` (front/back matter). First matching range wins; `section_regex` limits a range to passages
+whose section heading matches.
+
+## ARIANE 5 Flight 501 Failure — Report by the Inquiry Board
+
+`Ariane_5_Flight_501_Failure_Inquiry_Board_Report..json` · 15 pages · status **draft** · default `other`
+
+| # | Pages | Field | Applies to | Section filter |
+|---|---|---|---|---|
+| 0 | 1–2 | `other` | Title, Foreword, Board membership | `foreword|ariane|flight 501` |
+| 1 | 2–4 | `description` | 1. The Failure (1.1-1.4) | `^1([.][0-9])?[.]? ` |
+| 2 | 4–12 | `analysis` | 2. Analysis of the Failure; 3.1 Findings |  |
+| 3 | 13–13 | `analysis` | 3.1 Findings (end) and 3.2 Cause of the Failure | `^3[.]` |
+| 4 | 13–15 | `recommendations` | 4. Recommendations |  |
+
+## Report of the Presidential Commission on the Space Shuttle Challenger Accident, Volume 1
+
+`Challenger.json` · 261 pages · status **draft** · default `other`
+
+| # | Pages | Field | Applies to | Section filter |
+|---|---|---|---|---|
+| 0 | 1–8 | `other` | Title, In Memoriam, transmittal letter, contents, Preface |  |
+| 1 | 9–16 | `description` | Chapter I Introduction (Shuttle design and development) |  |
+| 2 | 17–25 | `description` | Chapter II Events Leading Up to the Challenger Mission |  |
+| 3 | 26–46 | `description` | Chapter III The Accident (sequence of events) |  |
+| 4 | 80–80 | `other` | Chapter IV references |  |
+| 5 | 47–88 | `analysis` | Chapter IV The Cause of the Accident (incl. findings, photo pages) |  |
+| 6 | 126–126 | `other` | Chapter V references |  |
+| 7 | 89–125 | `analysis` | Chapter V The Contributing Cause: Flaws in the Decision Making Process |  |
+| 8 | 156–158 | `other` | Chapter VI references |  |
+| 9 | 127–155 | `analysis` | Chapter VI An Accident Rooted in History |  |
+| 10 | 169–169 | `other` | Chapter VII references |  |
+| 11 | 159–168 | `analysis` | Chapter VII The Silent Safety Program |  |
+| 12 | 170–183 | `analysis` | Chapter VIII Pressures on the System |  |
+| 13 | 202–202 | `other` | Chapter IX references |  |
+| 14 | 184–201 | `analysis` | Chapter IX Other Safety Considerations |  |
+| 15 | 203–206 | `recommendations` | Recommendations; Concluding Thought |  |
+| 16 | 207–223 | `other` | Commission members and staff; Appendix A Commission Activities; Appendix B Documentation System |  |
+| 17 | 224–229 | `analysis` | Appendix C Observations Concerning the Processing and Assembly of Flight 51-L |  |
+| 18 | 230–261 | `analysis` | Appendix D Supporting charts and documents (Thiokol/Marshall memos, evidence) |  |
+
+## ExoMars 2016 - Schiaparelli Anomaly Inquiry (DG-I/2017/546/TTN)
+
+`ESA_ExoMars2016_Schiaparelli_Anomaly_Inquiry.json` · 28 pages · status **draft** · default `other`
+
+| # | Pages | Field | Applies to | Section filter |
+|---|---|---|---|---|
+| 0 | 1–3 | `other` | Cover, approval sheet, contents |  |
+| 1 | 4–5 | `description` | 1 Introduction (mission and sequence of events) |  |
+| 2 | 6–7 | `other` | 2 Acronyms |  |
+| 3 | 8–13 | `description` | 3 System & mission description; 4 Validation approach; 5 Circumstances of the anomaly |  |
+| 4 | 14–20 | `analysis` | 6 Investigation and findings; root cause analysis |  |
+| 5 | 21–23 | `analysis` | 7.1 General observations; 7.2 Identified weaknesses | `^7[.][12]` |
+| 6 | 24–25 | `analysis` | 8.1 General observations; 8.2 Differences 2016/2020 | `^8[.][12]` |
+| 7 | 21–26 | `recommendations` | 7 Recommendations; 8.3 ExoMars 2020 specific recommendations |  |
+| 8 | 27–28 | `description` | 9 Conclusion (summary of the inquiry) — **REVIEW** |  |
+
+## Vega flight VV15: findings of the Independent Inquiry Commission's investigations
+
+`ESA_Vega_VV15_Inquiry_Findings.json` · 1 pages · status **draft** · default `other`
+
+| # | Pages | Field | Applies to | Section filter |
+|---|---|---|---|---|
+| 0 | 1–1 | `other` | About ESA/Arianespace; press contacts | `^about |for further information` |
+| 1 | 1–1 | `analysis` | Flight data analysis; causes of the anomaly and work plan | `flight data analysis|causes of the anomaly` |
+| 2 | 1–1 | `description` | Release title section: summary of the commission's findings — **REVIEW** |  |
+
+## Loss of Vega flight VV17: Independent Enquiry Commission announces conclusions
+
+`ESA_Vega_VV17_Inquiry_Conclusions.json` · 1 pages · status **draft** · default `other`
+
+| # | Pages | Field | Applies to | Section filter |
+|---|---|---|---|---|
+| 0 | 1–1 | `other` | About ESA/Arianespace; press contacts | `^about |for further information` |
+| 1 | 1–1 | `analysis` | Release body: commission's conclusions on cause and recommendations (single section) — **REVIEW** |  |
+
+## Loss of flight VV22: Independent Enquiry Commission announces conclusions
+
+`ESA_VegaC_VV22_Inquiry_Conclusions.json` · 1 pages · status **draft** · default `other`
+
+| # | Pages | Field | Applies to | Section filter |
+|---|---|---|---|---|
+| 0 | 1–1 | `other` | About ESA/Arianespace; press contacts | `^about |for further information` |
+| 1 | 1–1 | `analysis` | Release body: commission's conclusions, recommendations, roadmap (single section) — **REVIEW** |  |
+
+## GSLV-F10/EOS-03 Mission Failure: Failure Analysis Committee submits conclusions & recommendations
+
+`ISRO_GSLV_F10_FAC_Conclusions.json` · 1 pages · status **draft** · default `other`
+
+| # | Pages | Field | Applies to | Section filter |
+|---|---|---|---|---|
+| 0 | 1–1 | `analysis` | Release body: failure analysis committee conclusions and recommendations (single section) — **REVIEW** |  |
+
+## Hitomi Experience Report: Investigation of Anomalies Affecting the X-ray Astronomy Satellite Hitomi (ASTRO-H), 8 June 2016 version
+
+`JAXA_Hitomi_Experience_Report.json` · 104 pages · status **draft** · default `other`
+
+| # | Pages | Field | Applies to | Section filter |
+|---|---|---|---|---|
+| 0 | 1–2 | `other` | Title, agenda |  |
+| 1 | 3–4 | `description` | 1 Summary |  |
+| 2 | 5–19 | `description` | 2 Background information on ASTRO-H (mission, schedule, organisation) |  |
+| 3 | 20–27 | `description` | 3 Anomaly description and ground-based observations |  |
+| 4 | 28–48 | `analysis` | 4 Causes of the anomaly (mechanisms 1-4, Appendices A-I) |  |
+| 5 | 49–84 | `analysis` | 5 Factors contributing to the anomaly (direct and background factors) |  |
+| 6 | 85–92 | `recommendations` | 6 Management reform for future ISAS projects |  |
+| 7 | 93–94 | `description` | 7 Summary |  |
+| 8 | 95–100 | `analysis` | Reference slides (sequence of events, STT behaviour, heritage table) |  |
+| 9 | 101–104 | `other` | Abbreviations |  |
+
+## Mars Climate Orbiter Mishap Investigation Board Phase I Report
+
+`Mars_Climate_Orbiter.json` · 48 pages · status **draft** · default `other`
+
+| # | Pages | Field | Applies to | Section filter |
+|---|---|---|---|---|
+| 0 | 6–36 | `recommendations` | MPL Recommendations blocks inside summary, cause and observation chapters | `^MPL Recommendations` |
+| 1 | 1–5 | `other` | Title, contents, signatures, consultants, acknowledgements |  |
+| 2 | 6–8 | `description` | Executive Summary |  |
+| 3 | 9–14 | `description` | 1. Project Description; 2. MCO Mishap |  |
+| 4 | 15–15 | `other` | 3. Method of Investigation |  |
+| 5 | 16–30 | `analysis` | 4. Root Cause; 5. Contributing Causes; 6. MCO Observations |  |
+| 6 | 31–36 | `analysis` | 7. MPL Observations |  |
+| 7 | 37–48 | `other` | 8. Phase II Plan; Appendix letter; membership; acronyms |  |
+
+## Report of Apollo 13 Review Board (NTRS 19700076776)
+
+`NASA_Apollo13_Review_Board.json` · 215 pages · status **draft** · default `other`
+
+| # | Pages | Field | Applies to | Section filter |
+|---|---|---|---|---|
+| 0 | 4–4 | `description` | Preface (summary of the accident and the Board's work) — **REVIEW** |  |
+| 1 | 1–11 | `other` | Cover, transmittal, configuration drawings, contents |  |
+| 2 | 12–31 | `other` | Chapter 1 Authority (establishment memos, NASA management instructions) |  |
+| 3 | 32–75 | `other` | Chapter 2 Board history, biographies, organisation, activities log |  |
+| 4 | 76–107 | `description` | Chapter 3 Description of the Apollo 13 space vehicle and mission |  |
+| 5 | 134–144 | `description` | Chapter 4 Part 3 The Apollo 13 flight (chronology) |  |
+| 6 | 153–171 | `description` | Chapter 4 Part 5 Apollo 13 recovery (crew/ground response) — **REVIEW** |  |
+| 7 | 108–152 | `analysis` | Chapter 4 Review and analysis: O2 tank history and design; summary analysis of the accident |  |
+| 8 | 172–212 | `analysis` | Chapter 5 Findings and determinations |  |
+| 9 | 213–215 | `recommendations` | Chapter 5 Part 4 Recommendations |  |
+
+## Report of Apollo 204 Review Board (NTRS 19930078717)
+
+`NASA_Apollo204_Review_Board.json` · 192 pages · status **draft** · default `other`
+
+| # | Pages | Field | Applies to | Section filter |
+|---|---|---|---|---|
+| 0 | 9–9 | `description` | Preface — **REVIEW** |  |
+| 1 | 1–12 | `other` | Cover, transmittal letters, title, contents |  |
+| 2 | 13–28 | `other` | Part I Authority (establishment, NASA management instructions) |  |
+| 3 | 29–48 | `other` | Part II Biographies |  |
+| 4 | 97–112 | `analysis` | Part III: Chairman's interim status reports to the Administrator (preliminary findings) — **REVIEW** |  |
+| 5 | 49–96 | `other` | Part III Board: organisation, procedures, proceedings log, administrative memos |  |
+| 6 | 113–138 | `description` | Part IV History of the accident (spacecraft 012 history, events of the test) |  |
+| 7 | 139–186 | `analysis` | Part V Investigation and analysis (incl. photo enclosures, time line) |  |
+| 8 | 187–192 | `recommendations` | Part VI recommendations | `recommendation` |
+| 9 | 187–192 | `analysis` | Part VI findings and determinations |  |
+
+## Columbia Accident Investigation Board Report, Volume I
+
+`NASA_Columbia_CAIB_Vol1.json` · 248 pages · status **draft** · default `other`
+
+| # | Pages | Field | Applies to | Section filter |
+|---|---|---|---|---|
+| 0 | 1–248 | `other` | Endnotes of every chapter | `^endnotes` |
+| 1 | 1–8 | `other` | Cover, title, contents, Board Statement |  |
+| 2 | 9–10 | `description` | Executive Summary |  |
+| 3 | 11–18 | `description` | Report Synopsis; introduction to the Space Shuttle, NASA, programs and contractors |  |
+| 4 | 19–48 | `description` | Part One: Ch. 1 Evolution of the Space Shuttle Program; Ch. 2 Columbia's Final Flight |  |
+| 5 | 49–96 | `analysis` | Ch. 3 Accident Analysis (physical cause); Ch. 4 Other Factors Considered |  |
+| 6 | 97–120 | `analysis` | Part Two: Ch. 5 From Challenger to Columbia (incl. selected Rogers recommendations, as history) |  |
+| 7 | 121–176 | `analysis` | Ch. 6 Decision Making at NASA |  |
+| 8 | 177–194 | `analysis` | Ch. 7 The Accident's Organizational Causes (7.6 findings and recommendations kept as analysis) |  |
+| 9 | 195–204 | `analysis` | Ch. 8 History as Cause: Columbia and Challenger |  |
+| 10 | 205–212 | `recommendations` | Part Three: Ch. 9 Implications for the Future of Human Space Flight (forward-looking) — **REVIEW** |  |
+| 11 | 213–224 | `analysis` | Ch. 10 Other Significant Observations |  |
+| 12 | 225–228 | `recommendations` | Ch. 11 Recommendations |  |
+| 13 | 229–248 | `other` | Part Four: Appendices A-C (investigation, biographies, staff) |  |
+
+## DART Mishap Investigation Results overview
+
+`NASA_DART_MIB_Overview.json` · 10 pages · status **draft** · default `other`
+
+| # | Pages | Field | Applies to | Section filter |
+|---|---|---|---|---|
+| 0 | 1–3 | `description` | Overview; project background; spacecraft; mission plan; description of the mishap |  |
+| 1 | 4–10 | `analysis` | Identifying mishap causes; summary of root causes and recommendations (interleaved); conclusion — **REVIEW** |  |
+
+## SOHO Mission Interruption Joint NASA/ESA Investigation Board Final Report
+
+`NASA_ESA_SOHO_Interruption_Final_Report.json` · 31 pages · status **draft** · default `other`
+
+| # | Pages | Field | Applies to | Section filter |
+|---|---|---|---|---|
+| 0 | 1–3 | `other` | Cover, signatures, contents |  |
+| 1 | 4–4 | `description` | Executive Summary |  |
+| 2 | 5–8 | `description` | Introduction; Background; spacecraft control; operational timeline |  |
+| 3 | 9–16 | `analysis` | Factors directly and indirectly contributing to the loss |  |
+| 4 | 17–19 | `recommendations` | Recommendations |  |
+| 5 | 20–26 | `other` | Appendices A-C (board charter, membership, administrative) |  |
+| 6 | 27–30 | `analysis` | Appendix D failure event tree; Appendix E gyro operations (technical evidence) |  |
+| 7 | 31–31 | `other` | Acronym list |  |
+
+## Genesis Mishap Investigation Board Report (NTRS 20060008607)
+
+`NASA_Genesis_MIB_Report.json` · 125 pages · status **draft** · default `other`
+
+| # | Pages | Field | Applies to | Section filter |
+|---|---|---|---|---|
+| 0 | 1–5 | `other` | Cover, title, contents, lists of figures/tables/appendices |  |
+| 1 | 6–8 | `description` | Executive Summary |  |
+| 2 | 9–16 | `description` | 1 Genesis mission description |  |
+| 3 | 17–44 | `analysis` | 2 Technical investigation: proximate cause, fault tree, discussion, findings, other considerations |  |
+| 4 | 45–48 | `description` | 3.1-3.2 Nominal mission plan; contingency plan and its implementation |  |
+| 5 | 49–56 | `analysis` | 3.3-3.5 Ground-safety investigation: observations, proximate and root causes (with recommendations) — **REVIEW** |  |
+| 6 | 57–58 | `recommendations` | 4 Closing recommendations |  |
+| 7 | 59–104 | `analysis` | Appendices A-D: fault analysis, battery analysis, NTSB materials report, Faster-Better-Cheaper |  |
+| 8 | 105–110 | `description` | Appendix E Event timeline |  |
+| 9 | 111–124 | `analysis` | Appendices F-G: documentation inconsistencies, fault tree closeout, avionics inspections |  |
+| 10 | 125–125 | `other` | Report documentation page |  |
+
+## Taurus XL T9 (Glory) MIB Public Release Summary
+
+`NASA_Glory_T9_MIB_Summary.json` · 8 pages · status **draft** · default `other`
+
+| # | Pages | Field | Applies to | Section filter |
+|---|---|---|---|---|
+| 0 | 1–5 | `description` | Summary; background; mission overview; launch vehicle; fairing |  |
+| 1 | 6–7 | `analysis` | Mishap causes: proximate and intermediate causes; root cause analysis |  |
+| 2 | 8–8 | `recommendations` | Technical recommendations |  |
+
+## NASA Independent Review Team SpaceX CRS-7 Accident Investigation Report, Public Summary
+
+`NASA_IRT_CRS7_Public_Summary.json` · 9 pages · status **draft** · default `other`
+
+| # | Pages | Field | Applies to | Section filter |
+|---|---|---|---|---|
+| 0 | 1–1 | `other` | Title page |  |
+| 1 | 2–4 | `description` | Commercial services background; the CRS-7 accident; SpaceX investigation |  |
+| 2 | 5–9 | `analysis` | NASA Independent Review Team: review, alternative scenarios, credible causes, findings |  |
+
+## NASA Independent Review Team Orb-3 Accident Investigation Report, Executive Summary
+
+`NASA_IRT_Orb3_Executive_Summary.json` · 11 pages · status **draft** · default `other`
+
+| # | Pages | Field | Applies to | Section filter |
+|---|---|---|---|---|
+| 0 | 1–1 | `other` | Title page |  |
+| 1 | 9–11 | `recommendations` | Programmatic recommendations | `recommendation` |
+| 2 | 2–4 | `description` | Commercial services background; Orb-3 accident |  |
+| 3 | 5–11 | `analysis` | IRT analysis; technical root causes; technical and programmatic findings |  |
+
+## NOAA N-Prime Mishap Investigation Final Report
+
+`NASA_NOAA_NPrime_MIB_Report.json` · 113 pages · status **draft** · default `other`
+
+| # | Pages | Field | Applies to | Section filter |
+|---|---|---|---|---|
+| 0 | 1–2 | `other` | Cover |  |
+| 1 | 3–14 | `analysis` | Endorsement and OSMA's critique of the MIB report — **REVIEW** |  |
+| 2 | 15–26 | `other` | Transmittal/signature pages; contents; Sections 1-2 Board, advisors, staff |  |
+| 3 | 27–32 | `description` | Section 3 Executive summary |  |
+| 4 | 33–38 | `description` | Section 4 Program description |  |
+| 5 | 39–44 | `description` | Section 5.1 Description of events leading to the mishap; timeline |  |
+| 6 | 45–54 | `analysis` | Section 5.2-5.3 Planning, procedure review, staffing and notification (deficiencies) — **REVIEW** |  |
+| 7 | 55–71 | `description` | Section 5.4-5.5 Turnover cart history; Saturday sequence of events — **REVIEW** |  |
+| 8 | 72–75 | `analysis` | Section 5.6 Missed opportunities; findings summary tables |  |
+| 9 | 76–83 | `other` | Section 6 Method of investigation (HFACS description) |  |
+| 10 | 84–99 | `analysis` | Section 7 Findings (proximate cause, unsafe acts, supervision, organisational and Government factors) |  |
+| 11 | 100–108 | `recommendations` | Section 8 Recommendations |  |
+| 12 | 109–109 | `analysis` | Section 9 Observations |  |
+| 13 | 110–113 | `other` | Sections 10-11 Acronyms; references |  |
+
+## Overview of the OCO Mishap Investigation Results
+
+`NASA_OCO_MIB_Summary.json` · 6 pages · status **draft** · default `other`
+
+| # | Pages | Field | Applies to | Section filter |
+|---|---|---|---|---|
+| 0 | 1–3 | `description` | Summary; mission overview; launch vehicle and fairing description; description of mishap |  |
+| 1 | 4–6 | `analysis` | Mishap causes and recommendations (each cause followed by its recommendations) — **REVIEW** |  |
+
+## NASA report on Starliner propulsion system anomalies during the Crew Flight Test (redacted, 2026)
+
+`NASA_Starliner_CFT_Propulsion_Anomalies.json` · 311 pages · status **draft** · default `other`
+
+| # | Pages | Field | Applies to | Section filter |
+|---|---|---|---|---|
+| 0 | 1–1 | `other` | Cover |  |
+| 1 | 2–4 | `description` | Executive summary; key technical anomalies; key findings (truncated summary) |  |
+| 2 | 5–8 | `other` | Contents |  |
+| 3 | 9–12 | `other` | 1.3 Establishing the investigation | `establishing the investigation` |
+| 4 | 9–12 | `description` | 1 Scope: mission background; position in human spaceflight history |  |
+| 5 | 13–14 | `analysis` | 2 Additional investigations (STAR report findings; Boeing eRCCA) |  |
+| 6 | 15–20 | `description` | 3 Commercial Crew Program background; OFT and OFT-2 summaries |  |
+| 7 | 21–113 | `analysis` | 4 Technical root cause analysis and findings (CM/SM RCS jets, helium leak, common observations) |  |
+| 8 | 114–145 | `analysis` | 5 Culture and decision-making during the mission |  |
+| 9 | 146–154 | `analysis` | 6 Root causes; 7 Additional observations |  |
+| 10 | 155–170 | `recommendations` | 8 Consolidated recommendations (Tables 1-2) |  |
+| 11 | 171–174 | `analysis` | Fault-tree diagrams (helium leak, SM RCS) |  |
+| 12 | 175–184 | `analysis` | Appendices A-B: human factors (HFACS) analysis; survey data |  |
+| 13 | 185–198 | `other` | Appendices C-D: references, acronyms, tables and figures |  |
+| 14 | 199–205 | `other` | Appendix E sample organisational trust plan; Appendix F chartering memo — **REVIEW** |  |
+| 15 | 206–311 | `analysis` | Appendix G CCP STAR/SDRT report (embedded investigation report) |  |
+
+## NASA Investigative Summary: Taurus XL T8 and T9 Mission Failures (2019 update)
+
+`NASA_TaurusXL_T8_T9_Summary_2019.json` · 8 pages · status **draft** · default `other`
+
+| # | Pages | Field | Applies to | Section filter |
+|---|---|---|---|---|
+| 0 | 1–1 | `description` | Investigative summary introduction |  |
+| 1 | 2–8 | `analysis` | Factors (charge holder, extrusion process, test lab); conclusion |  |
+
+## WIRE Mishap Investigation Board Report, Volume 1
+
+`NASA_WIRE_MIB_Vol1.json` · 24 pages · status **draft** · default `other`
+
+| # | Pages | Field | Applies to | Section filter |
+|---|---|---|---|---|
+| 0 | 1–7 | `other` | Cover, contents, appendix list, signature page, members, advisors, observers |  |
+| 1 | 8–9 | `description` | Executive Summary |  |
+| 2 | 11–11 | `other` | Method of Investigation | `method of investigation` |
+| 3 | 10–11 | `description` | Introduction; WIRE program description; WIRE mishap |  |
+| 4 | 12–21 | `analysis` | Possible causes; timeline; attitude, cryostat and pyro analyses; root and contributing causes |  |
+| 5 | 22–24 | `recommendations` | Lessons learned and recommendations |  |

@@ -1,0 +1,18 @@
+[
+  {
+    "doc_id": "NASA_Starliner_CFT_Propulsion_Anomalies",
+    "url": "https://www.nasa.gov/wp-content/uploads/2026/02/nasa-report-with-redactions-021926.pdf",
+    "content_type": "application/pdf",
+    "bytes": 20079972,
+    "sha256": "7a6558fdeb603dafbeea84f058342b53e322dfd63752e2a076f4359d548e7fee",
+    "saved": "data\\raw\\NASA_Starliner_CFT_Propulsion_Anomalies.pdf"
+  },
+  {
+    "doc_id": "ESA_Vega_VV15_Inquiry_Findings",
+    "url": "https://esa.int/Newsroom/Press_Releases/Vega_flight_VV15_findings_of_the_Independent_Inquiry_Commission_s_investigations",
+    "content_type": "text/html; charset=utf-8",
+    "bytes": 12933,
+    "sha256": "a56e1fa15ab5504422e98e655dc5934552b186b43ab7d222aaee71476a4cba65",
+    "saved": "data\\raw_html\\ESA_Vega_VV15_Inquiry_Findings.html"
+  }
+]
