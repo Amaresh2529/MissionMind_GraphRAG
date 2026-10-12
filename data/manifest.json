@@ -19,7 +19,10 @@
       "notes": "Scanned report; text taken from fresh Tesseract OCR (Stage 2 decision, CER study).",
       "sha256": "6e820b6cf96a6f03f98cc539454ed7686e87f8be9a94bdfdb7ad69f995d5ef00",
       "bytes": 25108908,
-      "pages": 261
+      "pages": 261,
+      "mission_ids": [
+        "sts-51l-challenger"
+      ]
     },
     {
       "doc_id": "NASA_Columbia_CAIB_Vol1",
@@ -38,7 +41,10 @@
       "notes": "Local 10.7 MB copy matches neither checked NTRS file; probable origin is the CAIB website archive (govinfo.library.unt.edu/caib, '11 MB'). Volume I was revised 2003-09-08 for typographic errors; edition of the local file unknown.",
       "sha256": "b66d10ce2945ed7d3ab824245d67e31af60573896897276288bf3848699d7d70",
       "bytes": 10704354,
-      "pages": 248
+      "pages": 248,
+      "mission_ids": [
+        "sts-107-columbia"
+      ]
     },
     {
       "doc_id": "Mars_Climate_Orbiter",
@@ -57,7 +63,10 @@
       "notes": "Also contains Mars Polar Lander observations and recommendations (MPL is a separate mission).",
       "sha256": "d2d88108a22d26f8fdeeacc68aa37af2b195f2829ad768619b31c78847b6681f",
       "bytes": 1460534,
-      "pages": 48
+      "pages": 48,
+      "mission_ids": [
+        "mars-climate-orbiter"
+      ]
     },
     {
       "doc_id": "Ariane_5_Flight_501_Failure_Inquiry_Board_Report.",
@@ -76,7 +85,10 @@
       "notes": "Original ESA address (esrin.esa.it, 1996) no longer available; official-host provenance unresolved.",
       "sha256": "aac1144c58eaf86566b4d0a5bedd2b837a14f69022f6e6fa8f6925be10ab2684",
       "bytes": 54730,
-      "pages": 15
+      "pages": 15,
+      "mission_ids": [
+        "ariane5-501"
+      ]
     },
     {
       "doc_id": "ExoMars_2016_Schiaparelli_Module_Trajectory",
@@ -95,7 +107,10 @@
       "notes": "Not an investigation report. To be replaced by ESA 'ExoMars 2016 - Schiaparelli Anomaly Inquiry' (DG-I/2017/546/TTN); official ESA download link not yet located (only a third-party mirror found). Replaced by ESA_ExoMars2016_Schiaparelli_Anomaly_Inquiry (official ESA report, Stage 3 fetch).",
       "sha256": "034153a4d52896bbd7f3aee214463ae2bca24fba8b45201014d19914d421f052",
       "bytes": 1990283,
-      "pages": 31
+      "pages": 31,
+      "mission_ids": [
+        "exomars2016-schiaparelli"
+      ]
     },
     {
       "doc_id": "Annual_Report_2024_25_Eng",
@@ -113,7 +128,8 @@
       "notes": "Not a failure report; used only as distractor text. Contains Hindi text in a legacy non-Unicode font that extracts as Latin garbage.",
       "sha256": "31cb5fb3372b04baf99fcd206f371aa6ee3900eb69d4b68f0fb68fbdee645c20",
       "bytes": 79459579,
-      "pages": 214
+      "pages": 214,
+      "mission_ids": []
     },
     {
       "doc_id": "Annual_Report_2025_26_Eng_29042026_Rev",
@@ -131,7 +147,8 @@
       "notes": "As above.",
       "sha256": "3f56aa2d62f430ca42aaa89b5c463575aec8fe8ae87ed7ff83656722baaba318",
       "bytes": 8412231,
-      "pages": 262
+      "pages": 262,
+      "mission_ids": []
     },
     {
       "doc_id": "ESA_ExoMars2016_Schiaparelli_Anomaly_Inquiry",
@@ -149,7 +166,10 @@
       "notes": "Downloaded 2026-10-12 with user approval (runs/stage3_fetch_corpus_r2, _r3_retry).",
       "sha256": "2ded368864734368216dac8e709c10d2e9d6a86ec39bb35596b8831daef8a796",
       "bytes": 1540561,
-      "pages": 28
+      "pages": 28,
+      "mission_ids": [
+        "exomars2016-schiaparelli"
+      ]
     },
     {
       "doc_id": "NASA_WIRE_MIB_Vol1",
@@ -167,7 +187,10 @@
       "notes": "Downloaded 2026-10-12 with user approval (runs/stage3_fetch_corpus_r2, _r3_retry).",
       "sha256": "7b66ec4152b9473a9f6e7f0c36e1a35ed99119cafd552a5672e65955753c5f9c",
       "bytes": 64227,
-      "pages": 24
+      "pages": 24,
+      "mission_ids": [
+        "wire"
+      ]
     },
     {
       "doc_id": "NASA_ESA_SOHO_Interruption_Final_Report",
@@ -185,7 +208,10 @@
       "notes": "Downloaded 2026-10-12 with user approval (runs/stage3_fetch_corpus_r2, _r3_retry).",
       "sha256": "58fb88897655712b323b13dd236cf37063a9485672cbd64b68b893e7a5deb635",
       "bytes": 119888,
-      "pages": 31
+      "pages": 31,
+      "mission_ids": [
+        "soho-1998"
+      ]
     },
     {
       "doc_id": "NASA_Genesis_MIB_Report",
@@ -203,7 +229,10 @@
       "notes": "Downloaded 2026-10-12 with user approval (runs/stage3_fetch_corpus_r2, _r3_retry).",
       "sha256": "d7e53e9f60acae3e0860455037c51b8cabcafb523a1db89ab602059cf3b6d508",
       "bytes": 86229552,
-      "pages": 125
+      "pages": 125,
+      "mission_ids": [
+        "genesis"
+      ]
     },
     {
       "doc_id": "NASA_NOAA_NPrime_MIB_Report",
@@ -221,7 +250,10 @@
       "notes": "Downloaded 2026-10-12 with user approval (runs/stage3_fetch_corpus_r2, _r3_retry).",
       "sha256": "753938cc1d3770436851e975c1ffb305ffe76422366f2631ceaa5076cdf42154",
       "bytes": 4159989,
-      "pages": 113
+      "pages": 113,
+      "mission_ids": [
+        "noaa-n-prime"
+      ]
     },
     {
       "doc_id": "NASA_Apollo13_Review_Board",
@@ -239,7 +271,10 @@
       "notes": "Downloaded 2026-10-12 with user approval (runs/stage3_fetch_corpus_r2, _r3_retry).",
       "sha256": "9c8f4e7da932ca5d3c20e5be62f2b853ba85dedeb36c36fbc0a10d008c3683d9",
       "bytes": 9022769,
-      "pages": 215
+      "pages": 215,
+      "mission_ids": [
+        "apollo13"
+      ]
     },
     {
       "doc_id": "NASA_Apollo204_Review_Board",
@@ -257,7 +292,10 @@
       "notes": "Downloaded 2026-10-12 with user approval (runs/stage3_fetch_corpus_r2, _r3_retry).",
       "sha256": "c4495fd2e11406f91e029ea4388377c7cc33569c424592efa1fc32c68ae4871d",
       "bytes": 8011148,
-      "pages": 192
+      "pages": 192,
+      "mission_ids": [
+        "apollo1-as204"
+      ]
     },
     {
       "doc_id": "NASA_Starliner_CFT_Propulsion_Anomalies",
@@ -275,7 +313,10 @@
       "notes": "Downloaded 2026-10-12 with user approval (runs/stage3_fetch_corpus_r2, _r3_retry).",
       "sha256": "7a6558fdeb603dafbeea84f058342b53e322dfd63752e2a076f4359d548e7fee",
       "bytes": 20079972,
-      "pages": 311
+      "pages": 311,
+      "mission_ids": [
+        "starliner-cft"
+      ]
     },
     {
       "doc_id": "JAXA_Hitomi_Experience_Report",
@@ -293,7 +334,10 @@
       "notes": "Downloaded 2026-10-12 with user approval (runs/stage3_fetch_corpus_r2, _r3_retry).",
       "sha256": "08f60b414531509e358e7301bd0592ae66518f29a57d452bda09a95498365052",
       "bytes": 1697487,
-      "pages": 104
+      "pages": 104,
+      "mission_ids": [
+        "hitomi"
+      ]
     },
     {
       "doc_id": "NASA_OCO_MIB_Summary",
@@ -311,7 +355,10 @@
       "notes": "Downloaded 2026-10-12 with user approval (runs/stage3_fetch_corpus_r2, _r3_retry).",
       "sha256": "0dd0e5971c437c4b6391b8d217d44c096af561a10704a91e62b5792f0b69fe7f",
       "bytes": 52079,
-      "pages": 6
+      "pages": 6,
+      "mission_ids": [
+        "oco-taurus-t8"
+      ]
     },
     {
       "doc_id": "NASA_Glory_T9_MIB_Summary",
@@ -330,7 +377,10 @@
       "sha256": "6a705fbf74c7d5cfa228491e40a4978889a23dacb2019976d8c5d81620227865",
       "bytes": 267227,
       "pages": 8,
-      "ocr_policy": "full"
+      "ocr_policy": "full",
+      "mission_ids": [
+        "glory-taurus-t9"
+      ]
     },
     {
       "doc_id": "NASA_TaurusXL_T8_T9_Summary_2019",
@@ -348,7 +398,11 @@
       "notes": "Downloaded 2026-10-12 with user approval (runs/stage3_fetch_corpus_r2, _r3_retry).",
       "sha256": "5f3fe77682c6580b97e75019176628eb1ffa9aca2fdf84062668d0fa2f2db6e2",
       "bytes": 856043,
-      "pages": 8
+      "pages": 8,
+      "mission_ids": [
+        "oco-taurus-t8",
+        "glory-taurus-t9"
+      ]
     },
     {
       "doc_id": "NASA_DART_MIB_Overview",
@@ -366,7 +420,10 @@
       "notes": "Downloaded 2026-10-12 with user approval (runs/stage3_fetch_corpus_r2, _r3_retry).",
       "sha256": "2ed7b504fc9f840537c2e546fda043401eed1b01811bd8602ab058679f2a4cf7",
       "bytes": 89137,
-      "pages": 10
+      "pages": 10,
+      "mission_ids": [
+        "dart-2005"
+      ]
     },
     {
       "doc_id": "NASA_IRT_CRS7_Public_Summary",
@@ -384,7 +441,10 @@
       "notes": "Downloaded 2026-10-12 with user approval (runs/stage3_fetch_corpus_r2, _r3_retry).",
       "sha256": "0be4c42beb5b3211a5b63565d8f431a415506d58dcbc1717f16ee271597cef94",
       "bytes": 763225,
-      "pages": 9
+      "pages": 9,
+      "mission_ids": [
+        "spacex-crs7"
+      ]
     },
     {
       "doc_id": "NASA_IRT_Orb3_Executive_Summary",
@@ -402,7 +462,10 @@
       "notes": "Downloaded 2026-10-12 with user approval (runs/stage3_fetch_corpus_r2, _r3_retry).",
       "sha256": "862e38ac5916720feab77765af445bcdaa9384e89c641cf4f7e505444883d7b7",
       "bytes": 1411753,
-      "pages": 11
+      "pages": 11,
+      "mission_ids": [
+        "antares-orb3"
+      ]
     },
     {
       "doc_id": "ESA_Vega_VV15_Inquiry_Findings",
@@ -420,7 +483,10 @@
       "notes": "Downloaded 2026-10-12 with user approval (runs/stage3_fetch_corpus_r2, _r3_retry).",
       "sha256": "a56e1fa15ab5504422e98e655dc5934552b186b43ab7d222aaee71476a4cba65",
       "bytes": 12933,
-      "pages": 1
+      "pages": 1,
+      "mission_ids": [
+        "vega-vv15"
+      ]
     },
     {
       "doc_id": "ESA_Vega_VV17_Inquiry_Conclusions",
@@ -438,7 +504,10 @@
       "notes": "Downloaded 2026-10-12 with user approval (runs/stage3_fetch_corpus_r2, _r3_retry).",
       "sha256": "16860ba7d8fa7831f854226b314c8d6cebc1c323e4320d242aa9457c28e503b6",
       "bytes": 12414,
-      "pages": 1
+      "pages": 1,
+      "mission_ids": [
+        "vega-vv17"
+      ]
     },
     {
       "doc_id": "ESA_VegaC_VV22_Inquiry_Conclusions",
@@ -456,7 +525,10 @@
       "notes": "Downloaded 2026-10-12 with user approval (runs/stage3_fetch_corpus_r2, _r3_retry).",
       "sha256": "86d088af48f5dda67cce4368b9c572d73cd01e929cf833243812d2ad05c6a44b",
       "bytes": 14688,
-      "pages": 1
+      "pages": 1,
+      "mission_ids": [
+        "vegac-vv22"
+      ]
     },
     {
       "doc_id": "ISRO_GSLV_F10_FAC_Conclusions",
@@ -474,7 +546,10 @@
       "notes": "Downloaded 2026-10-12 with user approval (runs/stage3_fetch_corpus_r2, _r3_retry).",
       "sha256": "095d176ca97b349b6d639936933d202a061b5dcae05329deb391df2fedb17bf7",
       "bytes": 7895,
-      "pages": 1
+      "pages": 1,
+      "mission_ids": [
+        "gslv-f10"
+      ]
     }
   ]
 }

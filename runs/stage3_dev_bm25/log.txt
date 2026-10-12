@@ -1,0 +1,3 @@
+B1                 19 queries, lists=['whole/bm25']
+SF-summary-bm25    19 queries, lists=['summary/bm25']
+SF-causes-bm25     19 queries, lists=['causes/bm25']

@@ -1,0 +1,7 @@
+{
+  "load_units": 0.31,
+  "build_indexes": 1.77,
+  "search_B1": 2.61,
+  "search_SF-summary-bm25": 0.51,
+  "search_SF-causes-bm25": 2.24
+}

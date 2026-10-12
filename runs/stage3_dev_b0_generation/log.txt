@@ -1,0 +1,20 @@
+B1                 19 queries, lists=['whole/bm25']
+  B0 dev-antares-orb3: chunks=0 schema_ok=True invalid_cites=0 cached=False
+  B0 dev-apollo1-as204: chunks=0 schema_ok=True invalid_cites=0 cached=False
+  B0 dev-apollo13: chunks=0 schema_ok=True invalid_cites=0 cached=False
+  B0 dev-ariane5-501: chunks=0 schema_ok=True invalid_cites=0 cached=False
+  B0 dev-dart-2005: chunks=0 schema_ok=True invalid_cites=0 cached=False
+  B0 dev-exomars2016-schiaparelli: chunks=0 schema_ok=True invalid_cites=0 cached=False
+  B0 dev-genesis: chunks=0 schema_ok=True invalid_cites=0 cached=False
+  B0 dev-glory-taurus-t9: chunks=0 schema_ok=True invalid_cites=0 cached=False
+  B0 dev-hitomi: chunks=0 schema_ok=True invalid_cites=0 cached=False
+  B0 dev-mars-climate-orbiter: chunks=0 schema_ok=True invalid_cites=0 cached=False
+  B0 dev-noaa-n-prime: chunks=0 schema_ok=True invalid_cites=0 cached=False
+  B0 dev-oco-taurus-t8: chunks=0 schema_ok=True invalid_cites=0 cached=False
+  B0 dev-soho-1998: chunks=0 schema_ok=True invalid_cites=0 cached=False
+  B0 dev-spacex-crs7: chunks=0 schema_ok=True invalid_cites=0 cached=False
+  B0 dev-starliner-cft: chunks=0 schema_ok=True invalid_cites=0 cached=False
+  B0 dev-sts-107-columbia: chunks=0 schema_ok=True invalid_cites=0 cached=False
+  B0 dev-sts-51l-challenger: chunks=0 schema_ok=True invalid_cites=0 cached=False
+  B0 dev-vega-vv15: chunks=0 schema_ok=True invalid_cites=0 cached=False
+  B0 dev-wire: chunks=0 schema_ok=True invalid_cites=0 cached=False

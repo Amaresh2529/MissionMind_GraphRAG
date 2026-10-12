@@ -26,3 +26,10 @@ def test_every_raw_pdf_is_in_manifest():
     files = {d["file"] for d in MANIFEST["documents"]}
     for pdf in (ROOT / "data" / "raw").glob("*.pdf"):
         assert pdf.relative_to(ROOT).as_posix() in files
+
+
+def test_primary_documents_have_mission_ids():
+    for d in MANIFEST["documents"]:
+        assert isinstance(d["mission_ids"], list)
+        if d["role"] == "primary":
+            assert d["mission_ids"], d["doc_id"]

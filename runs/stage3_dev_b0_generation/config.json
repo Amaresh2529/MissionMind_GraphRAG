@@ -1,0 +1,43 @@
+{
+  "args": {
+    "run_id": "stage3_dev_b0_generation",
+    "systems": [
+      "B1"
+    ],
+    "queries": null,
+    "embedder": "none",
+    "generate": [
+      "B0"
+    ],
+    "allow_draft_fields": true
+  },
+  "dev_run": true,
+  "systems": {
+    "B1": {
+      "fields": null,
+      "methods": [
+        "bm25"
+      ]
+    }
+  },
+  "skipped_no_embedder": [],
+  "bm25": {
+    "k1": 1.2,
+    "b": 0.75,
+    "tokenizer": "lowercase [a-z0-9]+, no stemming/stopwords"
+  },
+  "rrf_k": 60,
+  "list_depth": 1000,
+  "top_k": 100,
+  "dense": null,
+  "generation": {
+    "top_k_gen": 40,
+    "context_word_budget": 4200,
+    "num_ctx": 8192
+  },
+  "queries": {
+    "source": "automatic dev queries (300 words)",
+    "n": 19,
+    "sha256": "9eb19ce537784302508f685248bad6cca62b834a81a29f9ac60c7ce9ed82b14b"
+  }
+}
