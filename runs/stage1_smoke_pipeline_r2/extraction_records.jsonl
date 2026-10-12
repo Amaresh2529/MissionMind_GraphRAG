@@ -1,0 +1,96 @@
+{"chunk_id": "Ariane_5_Flight_501_Failure_Inquiry_Board_Report._0", "has_failure_data": false, "mission": null, "subsystem": null, "failure_mode": null, "root_cause": null, "method": "llm"}
+{"chunk_id": "Ariane_5_Flight_501_Failure_Inquiry_Board_Report._1", "has_failure_data": false, "mission": null, "subsystem": null, "failure_mode": null, "root_cause": null, "method": "llm"}
+{"chunk_id": "Ariane_5_Flight_501_Failure_Inquiry_Board_Report._2", "has_failure_data": false, "mission": null, "subsystem": null, "failure_mode": null, "root_cause": null, "method": "llm"}
+{"chunk_id": "Ariane_5_Flight_501_Failure_Inquiry_Board_Report._3", "has_failure_data": false, "mission": null, "subsystem": null, "failure_mode": null, "root_cause": null, "method": "llm"}
+{"chunk_id": "Ariane_5_Flight_501_Failure_Inquiry_Board_Report._4", "has_failure_data": false, "mission": null, "subsystem": null, "failure_mode": null, "root_cause": null, "method": "llm"}
+{"chunk_id": "Ariane_5_Flight_501_Failure_Inquiry_Board_Report._5", "has_failure_data": false, "mission": null, "subsystem": null, "failure_mode": null, "root_cause": null, "method": "llm"}
+{"chunk_id": "Ariane_5_Flight_501_Failure_Inquiry_Board_Report._6", "has_failure_data": false, "mission": null, "subsystem": null, "failure_mode": null, "root_cause": null, "method": "llm"}
+{"chunk_id": "Ariane_5_Flight_501_Failure_Inquiry_Board_Report._7", "has_failure_data": true, "mission": "Ariane 5 Flight 501", "subsystem": "Unspecified Subsystem", "failure_mode": "software exception", "root_cause": "The reason why the active SRI 2 did not send correct attitude data was that the unit had declared a failure due to a software exception.", "method": "ner"}
+{"chunk_id": "Ariane_5_Flight_501_Failure_Inquiry_Board_Report._8", "has_failure_data": true, "mission": "Ariane 5 Flight 501", "subsystem": "Unspecified Subsystem", "failure_mode": "software exception", "root_cause": "The reason why the active SRI 2 did not send correct attitude data was that the unit had declared a failure due to a software exception.", "method": "ner"}
+{"chunk_id": "Ariane_5_Flight_501_Failure_Inquiry_Board_Report._9", "has_failure_data": true, "mission": "Ariane 5 Flight 501", "subsystem": "SRI (computer)", "failure_mode": "Operand Error", "root_cause": "unexpected high value of internal alignment function result called BH, Horizontal Bias", "method": "llm"}
+{"chunk_id": "Ariane_5_Flight_501_Failure_Inquiry_Board_Report._10", "has_failure_data": true, "mission": "Ariane 5 Flight 501", "subsystem": "SRI computer", "failure_mode": "Operand Error when converting the horizontal bias variable BH", "root_cause": "Lack of protection of the conversion, faulty reasoning that there was a large margin of safety", "method": "llm"}
+{"chunk_id": "Ariane_5_Flight_501_Failure_Inquiry_Board_Report._11", "has_failure_data": true, "mission": "Ariane 5 Flight 501", "subsystem": "SRI processor and Inertial Reference System", "failure_mode": "Processor shutdown due to exception-handling mechanism", "root_cause": "Cultural approach of only addressing random hardware failures", "method": "llm"}
+{"chunk_id": "Ariane_5_Flight_501_Failure_Inquiry_Board_Report._12", "has_failure_data": true, "mission": "Ariane 5 Flight 501", "subsystem": "Unspecified Subsystem", "failure_mode": "software exception", "root_cause": "There is reason for concern that a software exception should be allowed, or even required, to cause a processor to halt while handling mission-critical equipment.", "method": "ner"}
+{"chunk_id": "Ariane_5_Flight_501_Failure_Inquiry_Board_Report._13", "has_failure_data": false, "mission": null, "subsystem": null, "failure_mode": null, "root_cause": null, "method": "llm"}
+{"chunk_id": "Ariane_5_Flight_501_Failure_Inquiry_Board_Report._14", "has_failure_data": true, "mission": "Ariane 5 Flight 501", "subsystem": "Software (SRI)", "failure_mode": "Design error", "root_cause": "Incorrect handling of detected exception due to design error", "method": "llm"}
+{"chunk_id": "Ariane_5_Flight_501_Failure_Inquiry_Board_Report._15", "has_failure_data": false, "mission": null, "subsystem": null, "failure_mode": null, "root_cause": null, "method": "llm"}
+{"chunk_id": "Ariane_5_Flight_501_Failure_Inquiry_Board_Report._16", "has_failure_data": false, "mission": null, "subsystem": null, "failure_mode": null, "root_cause": null, "method": "llm"}
+{"chunk_id": "Ariane_5_Flight_501_Failure_Inquiry_Board_Report._17", "has_failure_data": false, "mission": null, "subsystem": null, "failure_mode": null, "root_cause": null, "method": "llm"}
+{"chunk_id": "Ariane_5_Flight_501_Failure_Inquiry_Board_Report._18", "has_failure_data": false, "mission": null, "subsystem": null, "failure_mode": null, "root_cause": null, "method": "llm"}
+{"chunk_id": "Ariane_5_Flight_501_Failure_Inquiry_Board_Report._19", "has_failure_data": false, "mission": null, "subsystem": null, "failure_mode": null, "root_cause": null, "method": "llm"}
+{"chunk_id": "Ariane_5_Flight_501_Failure_Inquiry_Board_Report._20", "has_failure_data": false, "mission": null, "subsystem": null, "failure_mode": null, "root_cause": null, "method": "llm"}
+{"chunk_id": "Ariane_5_Flight_501_Failure_Inquiry_Board_Report._21", "has_failure_data": false, "mission": null, "subsystem": null, "failure_mode": null, "root_cause": null, "method": "llm"}
+{"chunk_id": "Ariane_5_Flight_501_Failure_Inquiry_Board_Report._22", "has_failure_data": false, "mission": null, "subsystem": null, "failure_mode": null, "root_cause": null, "method": "llm"}
+{"chunk_id": "Ariane_5_Flight_501_Failure_Inquiry_Board_Report._23", "has_failure_data": false, "mission": null, "subsystem": null, "failure_mode": null, "root_cause": null, "method": "llm"}
+{"chunk_id": "Ariane_5_Flight_501_Failure_Inquiry_Board_Report._24", "has_failure_data": false, "mission": null, "subsystem": null, "failure_mode": null, "root_cause": null, "method": "llm"}
+{"chunk_id": "Ariane_5_Flight_501_Failure_Inquiry_Board_Report._25", "has_failure_data": true, "mission": "Ariane 5 Flight 501", "subsystem": "inertial reference system", "failure_mode": "excessive value of the variable related to horizontal velocity making the inertial system computer inoperative", "root_cause": "design decision not to protect the inertial system computer from excessive values", "method": "llm"}
+{"chunk_id": "Ariane_5_Flight_501_Failure_Inquiry_Board_Report._26", "has_failure_data": true, "mission": "Ariane 5 Flight 501", "subsystem": "inertial system", "failure_mode": "cease operation", "root_cause": "design error due to lack of analysis and testing under simulated Ariane 5 flight conditions", "method": "llm"}
+{"chunk_id": "Ariane_5_Flight_501_Failure_Inquiry_Board_Report._27", "has_failure_data": true, "mission": "Ariane 5 Flight 501", "subsystem": "inertial reference system", "failure_mode": "complete loss of guidance and attitude information", "root_cause": "specification and design errors in the software", "method": "llm"}
+{"chunk_id": "Ariane_5_Flight_501_Failure_Inquiry_Board_Report._28", "has_failure_data": false, "mission": null, "subsystem": null, "failure_mode": null, "root_cause": null, "method": "llm"}
+{"chunk_id": "Ariane_5_Flight_501_Failure_Inquiry_Board_Report._29", "has_failure_data": false, "mission": null, "subsystem": null, "failure_mode": null, "root_cause": null, "method": "llm"}
+{"chunk_id": "Ariane_5_Flight_501_Failure_Inquiry_Board_Report._30", "has_failure_data": false, "mission": null, "subsystem": null, "failure_mode": null, "root_cause": null, "method": "llm"}
+{"chunk_id": "Mars_Climate_Orbiter_0", "has_failure_data": false, "mission": null, "subsystem": null, "failure_mode": null, "root_cause": null, "method": "llm"}
+{"chunk_id": "Mars_Climate_Orbiter_1", "has_failure_data": false, "mission": null, "subsystem": null, "failure_mode": null, "root_cause": null, "method": "llm"}
+{"chunk_id": "Mars_Climate_Orbiter_2", "has_failure_data": false, "mission": null, "subsystem": null, "failure_mode": null, "root_cause": null, "method": "llm"}
+{"chunk_id": "Mars_Climate_Orbiter_3", "has_failure_data": false, "mission": null, "subsystem": null, "failure_mode": null, "root_cause": null, "method": "llm"}
+{"chunk_id": "Mars_Climate_Orbiter_4", "has_failure_data": true, "mission": "Mars Climate Orbiter", "subsystem": "Propulsion", "failure_mode": "Angular Momentum Desaturation (AMD) events", "root_cause": "Asymmetrical solar array and incorrect unit usage", "method": "llm"}
+{"chunk_id": "Mars_Climate_Orbiter_5", "has_failure_data": false, "mission": null, "subsystem": null, "failure_mode": null, "root_cause": null, "method": "llm"}
+{"chunk_id": "Mars_Climate_Orbiter_6", "has_failure_data": false, "mission": null, "subsystem": null, "failure_mode": null, "root_cause": null, "method": "llm"}
+{"chunk_id": "Mars_Climate_Orbiter_7", "has_failure_data": false, "mission": null, "subsystem": null, "failure_mode": null, "root_cause": null, "method": "llm"}
+{"chunk_id": "Mars_Climate_Orbiter_8", "has_failure_data": false, "mission": null, "subsystem": null, "failure_mode": null, "root_cause": null, "method": "llm"}
+{"chunk_id": "Mars_Climate_Orbiter_9", "has_failure_data": false, "mission": null, "subsystem": null, "failure_mode": null, "root_cause": null, "method": "llm"}
+{"chunk_id": "Mars_Climate_Orbiter_10", "has_failure_data": false, "mission": null, "subsystem": null, "failure_mode": null, "root_cause": null, "method": "llm"}
+{"chunk_id": "Mars_Climate_Orbiter_11", "has_failure_data": false, "mission": null, "subsystem": null, "failure_mode": null, "root_cause": null, "method": "llm"}
+{"chunk_id": "Mars_Climate_Orbiter_12", "has_failure_data": false, "mission": null, "subsystem": null, "failure_mode": null, "root_cause": null, "method": "llm"}
+{"chunk_id": "Mars_Climate_Orbiter_13", "has_failure_data": true, "mission": "Mars Climate Orbiter", "subsystem": "Orbit determination schemes", "failure_mode": "Abrupt loss of mission", "root_cause": "Discrepancies between navigation solutions", "method": "llm"}
+{"chunk_id": "Mars_Climate_Orbiter_14", "has_failure_data": false, "mission": null, "subsystem": null, "failure_mode": null, "root_cause": null, "method": "llm"}
+{"chunk_id": "Mars_Climate_Orbiter_15", "has_failure_data": false, "mission": null, "subsystem": null, "failure_mode": null, "root_cause": null, "method": "llm"}
+{"chunk_id": "Mars_Climate_Orbiter_16", "has_failure_data": false, "mission": null, "subsystem": null, "failure_mode": null, "root_cause": null, "method": "llm"}
+{"chunk_id": "Mars_Climate_Orbiter_17", "has_failure_data": false, "mission": null, "subsystem": null, "failure_mode": null, "root_cause": null, "method": "llm"}
+{"chunk_id": "Mars_Climate_Orbiter_18", "has_failure_data": true, "mission": "Mars Climate Orbiter", "subsystem": "ground software file", "failure_mode": "failure to use metric units in coding", "root_cause": "the failure to use metric units in the coding of a ground software file", "method": "llm"}
+{"chunk_id": "Mars_Climate_Orbiter_19", "has_failure_data": true, "mission": "Mars Climate Orbiter", "subsystem": "ground software file, Small Forces", "failure_mode": "incorrect data reporting and processing", "root_cause": "failure to use metric units in coding of ground software file", "method": "llm"}
+{"chunk_id": "Mars_Climate_Orbiter_20", "has_failure_data": false, "mission": null, "subsystem": null, "failure_mode": null, "root_cause": null, "method": "llm"}
+{"chunk_id": "Mars_Climate_Orbiter_21", "has_failure_data": false, "mission": null, "subsystem": null, "failure_mode": null, "root_cause": null, "method": "llm"}
+{"chunk_id": "Mars_Climate_Orbiter_22", "has_failure_data": false, "mission": null, "subsystem": null, "failure_mode": null, "root_cause": null, "method": "llm"}
+{"chunk_id": "Mars_Climate_Orbiter_23", "has_failure_data": true, "mission": "Mars Climate Orbiter", "subsystem": "attitude control system", "failure_mode": "mismodeled small forces", "root_cause": "unfamiliarity with spacecraft characteristics", "method": "llm"}
+{"chunk_id": "Mars_Climate_Orbiter_24", "has_failure_data": false, "mission": null, "subsystem": null, "failure_mode": null, "root_cause": null, "method": "llm"}
+{"chunk_id": "Mars_Climate_Orbiter_25", "has_failure_data": false, "mission": null, "subsystem": null, "failure_mode": null, "root_cause": null, "method": "llm"}
+{"chunk_id": "Mars_Climate_Orbiter_26", "has_failure_data": false, "mission": null, "subsystem": null, "failure_mode": null, "root_cause": null, "method": "llm"}
+{"chunk_id": "Mars_Climate_Orbiter_27", "has_failure_data": false, "mission": null, "subsystem": null, "failure_mode": null, "root_cause": null, "method": "llm"}
+{"chunk_id": "Mars_Climate_Orbiter_28", "has_failure_data": true, "mission": "Mars Climate Orbiter", "subsystem": "Angular Momentum Desaturation (AMD) and solar array", "failure_mode": "Increased AMD events", "root_cause": "Poor communication between project elements, specifically the lack of communication about systems engineering decisions to the operations navigation team", "method": "llm"}
+{"chunk_id": "Mars_Climate_Orbiter_29", "has_failure_data": false, "mission": null, "subsystem": null, "failure_mode": null, "root_cause": null, "method": "llm"}
+{"chunk_id": "Mars_Climate_Orbiter_30", "has_failure_data": false, "mission": null, "subsystem": null, "failure_mode": null, "root_cause": null, "method": "llm"}
+{"chunk_id": "Mars_Climate_Orbiter_31", "has_failure_data": false, "mission": null, "subsystem": null, "failure_mode": null, "root_cause": null, "method": "llm"}
+{"chunk_id": "Mars_Climate_Orbiter_32", "has_failure_data": false, "mission": null, "subsystem": null, "failure_mode": null, "root_cause": null, "method": "llm"}
+{"chunk_id": "Mars_Climate_Orbiter_33", "has_failure_data": false, "mission": null, "subsystem": null, "failure_mode": null, "root_cause": null, "method": "llm"}
+{"chunk_id": "Mars_Climate_Orbiter_34", "has_failure_data": false, "mission": null, "subsystem": null, "failure_mode": null, "root_cause": null, "method": "llm"}
+{"chunk_id": "Mars_Climate_Orbiter_35", "has_failure_data": false, "mission": null, "subsystem": null, "failure_mode": null, "root_cause": null, "method": "llm"}
+{"chunk_id": "Mars_Climate_Orbiter_36", "has_failure_data": true, "mission": "Mars Climate Orbiter", "subsystem": "Trajectory and Navigation", "failure_mode": "Inadequate statistical analyses leading to misunderstanding of actual vehicle trajectory", "root_cause": "Erosion of margins needed to ensure successful orbit capture over time", "method": "llm"}
+{"chunk_id": "Mars_Climate_Orbiter_37", "has_failure_data": false, "mission": null, "subsystem": null, "failure_mode": null, "root_cause": null, "method": "llm"}
+{"chunk_id": "Mars_Climate_Orbiter_38", "has_failure_data": false, "mission": null, "subsystem": null, "failure_mode": null, "root_cause": null, "method": "llm"}
+{"chunk_id": "Mars_Climate_Orbiter_39", "has_failure_data": false, "mission": null, "subsystem": null, "failure_mode": null, "root_cause": null, "method": "llm"}
+{"chunk_id": "Mars_Climate_Orbiter_40", "has_failure_data": false, "mission": null, "subsystem": null, "failure_mode": null, "root_cause": null, "method": "llm"}
+{"chunk_id": "Mars_Climate_Orbiter_41", "has_failure_data": false, "mission": null, "subsystem": null, "failure_mode": null, "root_cause": null, "method": "llm"}
+{"chunk_id": "Mars_Climate_Orbiter_42", "has_failure_data": false, "mission": null, "subsystem": null, "failure_mode": null, "root_cause": null, "method": "llm"}
+{"chunk_id": "Mars_Climate_Orbiter_43", "has_failure_data": false, "mission": null, "subsystem": null, "failure_mode": null, "root_cause": null, "method": "llm"}
+{"chunk_id": "Mars_Climate_Orbiter_44", "has_failure_data": false, "mission": null, "subsystem": null, "failure_mode": null, "root_cause": null, "method": "llm"}
+{"chunk_id": "Mars_Climate_Orbiter_45", "has_failure_data": false, "mission": null, "subsystem": null, "failure_mode": null, "root_cause": null, "method": "llm"}
+{"chunk_id": "Mars_Climate_Orbiter_46", "has_failure_data": false, "mission": null, "subsystem": null, "failure_mode": null, "root_cause": null, "method": "llm"}
+{"chunk_id": "Mars_Climate_Orbiter_47", "has_failure_data": false, "mission": null, "subsystem": null, "failure_mode": null, "root_cause": null, "method": "llm"}
+{"chunk_id": "Mars_Climate_Orbiter_48", "has_failure_data": false, "mission": null, "subsystem": null, "failure_mode": null, "root_cause": null, "method": "llm"}
+{"chunk_id": "Mars_Climate_Orbiter_49", "has_failure_data": true, "mission": "Mars Climate Orbiter", "subsystem": "Thrusters", "failure_mode": "Ignition delay and irregular pulses on startup", "root_cause": "Cold catalyst bed temperature", "method": "llm"}
+{"chunk_id": "Mars_Climate_Orbiter_50", "has_failure_data": false, "mission": null, "subsystem": null, "failure_mode": null, "root_cause": null, "method": "llm"}
+{"chunk_id": "Mars_Climate_Orbiter_51", "has_failure_data": false, "mission": null, "subsystem": null, "failure_mode": null, "root_cause": null, "method": "llm"}
+{"chunk_id": "Mars_Climate_Orbiter_52", "has_failure_data": false, "mission": null, "subsystem": null, "failure_mode": null, "root_cause": null, "method": "llm"}
+{"chunk_id": "Mars_Climate_Orbiter_53", "has_failure_data": false, "mission": null, "subsystem": null, "failure_mode": null, "root_cause": null, "method": "llm"}
+{"chunk_id": "Mars_Climate_Orbiter_54", "has_failure_data": false, "mission": null, "subsystem": null, "failure_mode": null, "root_cause": null, "method": "llm"}
+{"chunk_id": "Mars_Climate_Orbiter_55", "has_failure_data": false, "mission": null, "subsystem": null, "failure_mode": null, "root_cause": null, "method": "llm"}
+{"chunk_id": "Mars_Climate_Orbiter_56", "has_failure_data": false, "mission": null, "subsystem": null, "failure_mode": null, "root_cause": null, "method": "llm"}
+{"chunk_id": "Mars_Climate_Orbiter_57", "has_failure_data": false, "mission": null, "subsystem": null, "failure_mode": null, "root_cause": null, "method": "llm"}
+{"chunk_id": "Mars_Climate_Orbiter_58", "has_failure_data": false, "mission": null, "subsystem": null, "failure_mode": null, "root_cause": null, "method": "llm"}
+{"chunk_id": "Mars_Climate_Orbiter_59", "has_failure_data": false, "mission": null, "subsystem": null, "failure_mode": null, "root_cause": null, "method": "llm"}
+{"chunk_id": "Mars_Climate_Orbiter_60", "has_failure_data": false, "mission": null, "subsystem": null, "failure_mode": null, "root_cause": null, "method": "llm"}
+{"chunk_id": "Mars_Climate_Orbiter_61", "has_failure_data": false, "mission": null, "subsystem": null, "failure_mode": null, "root_cause": null, "method": "llm"}
+{"chunk_id": "Mars_Climate_Orbiter_62", "has_failure_data": false, "mission": null, "subsystem": null, "failure_mode": null, "root_cause": null, "method": "llm"}
+{"chunk_id": "Mars_Climate_Orbiter_63", "has_failure_data": false, "mission": null, "subsystem": null, "failure_mode": null, "root_cause": null, "method": "llm"}
+{"chunk_id": "Mars_Climate_Orbiter_64", "has_failure_data": false, "mission": null, "subsystem": null, "failure_mode": null, "root_cause": null, "method": "llm"}

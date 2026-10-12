@@ -26,11 +26,10 @@ from pathlib import Path
 import ollama
 
 sys.path.append(str(Path(__file__).resolve().parent.parent))  # -> src/
+from config import get_settings
 from models.ner_model import FailureNER, ROOT_CAUSE_CATEGORIES
 from models.embeddings import FailureRecord, find_cross_mission_similarities, DEFAULT_SIMILARITY_THRESHOLD
 from graph.neo4j_connector import get_driver, close_driver
-
-LLM_FALLBACK_MODEL = "llama3"
 
 # Maps a chunk's source document_id (== PDF filename stem) to a display mission
 # name. This is provenance labeling, not content inference — unlike the old
@@ -67,13 +66,14 @@ EXCERPT:
 """
 
 
-def _llm_fallback_extract(chunk_text: str, model: str = LLM_FALLBACK_MODEL) -> dict:
-    """Only called when NER found nothing — see build_knowledge_graph()."""
+def _llm_fallback_extract(chunk_text: str, model: str | None = None) -> dict:
+    """Only called when NER found nothing — see extract_failure_data()."""
+    s = get_settings()
     response = ollama.chat(
-        model=model,
+        model=model or s.llm_model,
         messages=[{"role": "user", "content": _LLM_EXTRACTION_PROMPT.format(chunk_text=chunk_text)}],
         format="json",
-        options={"temperature": 0}
+        options={"temperature": 0, "seed": s.llm_seed}
     )
     try:
         data = json.loads(response["message"]["content"])
@@ -99,24 +99,87 @@ def _extract_cause_sentence(text: str, category: str) -> str | None:
     return None
 
 
-def build_knowledge_graph():
-    base_dir = Path(__file__).resolve().parent.parent.parent
-    chunks_dir = base_dir / "data" / "processed" / "chunks"
+_ner_singleton = None
 
-    json_files = list(chunks_dir.glob("*_chunks.json"))
+
+def _get_ner() -> FailureNER:
+    global _ner_singleton
+    if _ner_singleton is None:
+        print("Loading NER model...")
+        _ner_singleton = FailureNER()
+    return _ner_singleton
+
+
+def extract_failure_data(text: str, mission: str | None = None, ner: FailureNER | None = None,
+                         llm_fn=None) -> dict:
+    """
+    Per-chunk extraction exactly as build_knowledge_graph() performs it:
+    NER gate (domain entity AND root-cause keyword) first, LLM fallback
+    otherwise. Exposed so evaluation (run_eval.py / metrics.extraction_metrics)
+    scores the same code path that builds the graph.
+
+    `mission`: the graph labels every record with the mission of its source
+    document (provenance), so pass the document's mission to reproduce the
+    graph's behaviour. If None, the LLM's own mission guess is returned for
+    LLM-path records and None for NER-path records.
+
+    Returns {"has_failure_data", "mission", "subsystem", "failure_mode",
+             "root_cause", "method"}; method is "ner", "llm" or None.
+    Raises whatever the LLM call raises (the build loop counts those as
+    llm_failures).
+    """
+    ner = ner or _get_ner()
+    llm_fn = llm_fn or _llm_fallback_extract
+    empty = {"has_failure_data": False, "mission": None, "subsystem": None,
+             "failure_mode": None, "root_cause": None, "method": None}
+
+    ner_fields = ner.extract_structured_fields(text)
+    if ner_fields["has_entities"] and ner_fields["root_cause_category"]:
+        category = ner_fields["root_cause_category"]
+        return {
+            "has_failure_data": True,
+            "mission": mission,
+            "subsystem": ner_fields["subsystem"] or "Unspecified Subsystem",
+            "failure_mode": ner_fields["failure_type"] or f"{category.replace('_', ' ')} related failure",
+            "root_cause": _extract_cause_sentence(text, category) or category.replace("_", " "),
+            "method": "ner",
+        }
+
+    llm_result = llm_fn(text)
+    if not llm_result.get("has_failure_data"):
+        return {**empty, "method": "llm"}
+    return {
+        "has_failure_data": True,
+        "mission": mission if mission is not None else llm_result.get("mission"),
+        "subsystem": llm_result["subsystem"],
+        "failure_mode": llm_result["failure_mode"],
+        "root_cause": llm_result["root_cause"],
+        "method": "llm",
+    }
+
+
+def build_knowledge_graph(doc_ids: list[str] | None = None, records_out: Path | None = None) -> dict:
+    """Builds the graph from chunk files. `doc_ids` restricts the build to a
+    subset of documents (smoke runs); `records_out` writes one JSON line per
+    chunk with the extraction result (run artefact). Returns statistics."""
+    chunks_dir = get_settings().chunks_dir
+
+    json_files = sorted(chunks_dir.glob("*_chunks.json"))
+    if doc_ids:
+        json_files = [p for p in json_files if p.name[: -len("_chunks.json")] in set(doc_ids)]
     if not json_files:
-        print(f"No chunk files found in {chunks_dir}.")
-        return
+        print(f"No chunk files found in {chunks_dir} (filter: {doc_ids}).")
+        return {}
 
-    print("Loading NER model...")
-    ner = FailureNER()
+    ner = _get_ner()
 
     driver = get_driver()
     print(f"Connected to Neo4j. Building FMEA causal graph...\n{'='*60}")
 
-    stats = {"ner_hits": 0, "llm_hits": 0, "no_data": 0, "llm_failures": 0}
+    stats = {"chunks": 0, "ner_hits": 0, "llm_hits": 0, "no_data": 0, "llm_failures": 0}
     records_by_key = {}  # (mission, failure_mode) -> FailureRecord, deduped for pass 2
     similar_pairs = []
+    records_fh = open(records_out, "w", encoding="utf-8") if records_out else None
 
     with driver.session() as session:
         for json_path in json_files:
@@ -131,33 +194,29 @@ def build_knowledge_graph():
             for chunk in data["chunks"]:
                 text = chunk["text"]
                 chunk_id = chunk["chunk_id"]
+                stats["chunks"] += 1
 
-                ner_fields = ner.extract_structured_fields(text)
+                try:
+                    record = extract_failure_data(text, mission=mission, ner=ner)
+                except Exception as err:
+                    print(f"   ⚠️  LLM fallback failed on {chunk_id}: {err}")
+                    stats["llm_failures"] += 1
+                    if records_fh:
+                        records_fh.write(json.dumps({"chunk_id": chunk_id, "error": str(err)}) + "\n")
+                    continue
 
-                if ner_fields["has_entities"] and ner_fields["root_cause_category"]:
-                    subsystem = ner_fields["subsystem"] or "Unspecified Subsystem"
-                    failure_mode = ner_fields["failure_type"] or f"{ner_fields['root_cause_category'].replace('_', ' ')} related failure"
-                    root_cause = (_extract_cause_sentence(text, ner_fields["root_cause_category"])
-                                   or ner_fields["root_cause_category"].replace("_", " "))
-                    method = "ner"
-                    stats["ner_hits"] += 1
-                else:
-                    try:
-                        llm_result = _llm_fallback_extract(text)
-                    except Exception as err:
-                        print(f"   ⚠️  LLM fallback failed on {chunk_id}: {err}")
-                        stats["llm_failures"] += 1
-                        continue
+                if records_fh:
+                    records_fh.write(json.dumps({"chunk_id": chunk_id, **record}) + "\n")
 
-                    if not llm_result.get("has_failure_data"):
-                        stats["no_data"] += 1
-                        continue
+                if not record["has_failure_data"]:
+                    stats["no_data"] += 1
+                    continue
 
-                    subsystem = llm_result["subsystem"]
-                    failure_mode = llm_result["failure_mode"]
-                    root_cause = llm_result["root_cause"]
-                    method = "llm"
-                    stats["llm_hits"] += 1
+                subsystem = record["subsystem"]
+                failure_mode = record["failure_mode"]
+                root_cause = record["root_cause"]
+                method = record["method"]
+                stats["ner_hits" if method == "ner" else "llm_hits"] += 1
 
                 session.run("""
                     MATCH (c:Chunk {id: $chunk_id})
@@ -199,11 +258,16 @@ def build_knowledge_graph():
                 SET r.similarity = $similarity
             """, pair)
 
+    if records_fh:
+        records_fh.close()
     close_driver()
+    stats["unique_failure_records"] = len(records_by_key)
+    stats["similarity_edges"] = len(similar_pairs)
     print(f"{'='*60}\nKnowledge Graph Built.")
     print(f"  Extraction: {stats['ner_hits']} via NER, {stats['llm_hits']} via LLM fallback, "
           f"{stats['no_data']} chunks with no failure data, {stats['llm_failures']} LLM failures.")
     print(f"  Cross-mission similarity edges created: {len(similar_pairs)}")
+    return stats
 
 
 if __name__ == "__main__":

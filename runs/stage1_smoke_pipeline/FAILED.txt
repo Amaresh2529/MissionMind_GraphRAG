@@ -1,0 +1,1 @@
+FAILED at neo4j_ingestion start: AttributeError '_Tee' object has no attribute 'isatty' (raised by transformers loading report). Fixed in src/runlog.py; regression test added. No database writes occurred (fresh DB had 0 nodes afterwards). Rerun: stage1_smoke_pipeline_r2.

@@ -1,0 +1,37 @@
+{
+  "extraction": {
+    "detection_precision": 1.0,
+    "detection_recall": 1.0,
+    "detection_f1": 1.0,
+    "field_accuracy": {
+      "mission": 1.0,
+      "subsystem": 0.5,
+      "failure_mode": 0.5,
+      "root_cause": 0.5
+    },
+    "n_gold_positive": 2,
+    "n_predicted_positive": 2
+  },
+  "retrieval": {
+    "k": 3,
+    "n_queries": 2,
+    "mean_precision_at_k": 0.0,
+    "mean_recall_at_k": 0.0,
+    "mean_reciprocal_rank": 0.0
+  },
+  "answers": {
+    "judge_model": "llama3",
+    "chunk_only": {
+      "mean_factual_accuracy": 5,
+      "mean_specificity": 4.5,
+      "mean_completeness": 4.5,
+      "mean_overall": 4.667
+    },
+    "graph_facts": {
+      "mean_factual_accuracy": 4.5,
+      "mean_specificity": 3.5,
+      "mean_completeness": 2.5,
+      "mean_overall": 3.5
+    }
+  }
+}

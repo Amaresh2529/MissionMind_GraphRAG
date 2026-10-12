@@ -1,7 +1,15 @@
+# Top-level dependencies. Exact versions verified for reproduction are in
+# requirements-lock.txt (Python 3.14.2, Windows 11, CUDA 12.6).
+# System tools needed for OCR fallback: Tesseract OCR and Poppler (pdftoppm).
+# spaCy model: python -m spacy download en_core_web_sm
+
 # Data Processing & Extraction
 PyMuPDF
 pandas
 numpy
+pytesseract
+pdf2image
+wordfreq
 
 # NLP & Machine Learning
 spacy
@@ -11,12 +19,18 @@ sentence-transformers
 
 # Knowledge Graph & Retrieval
 neo4j
-neo4j-graphrag
+neo4j-graphrag  # listed in the original stack; not imported by the current code
+
+# LLM runtime client (local Ollama server)
+ollama
 
 # Web API Backend
 fastapi
 uvicorn
+pydantic
 
 # Environment & Evaluation
 python-dotenv
-ragas
+ragas  # listed in the original stack; not imported by the current code
+pytest
+httpx

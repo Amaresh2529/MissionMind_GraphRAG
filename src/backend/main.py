@@ -1,108 +1,83 @@
+"""
+main.py
+
+FastAPI backend for MissionMind Graph-RAG. Retrieval lives in
+graph/retriever.py and generation in backend/generation.py; this file only
+wires the HTTP layer around them.
+
+Run from the repository root:
+    uvicorn --app-dir src backend.main:app --reload
+
+(The previous content of this file was an older duplicate of the pipeline
+with hard-coded credentials; the app that briefly lived in graph/retriever.py
+has been moved here.)
+"""
+
+import sys
+from functools import lru_cache
+from pathlib import Path
+
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
-from neo4j import GraphDatabase
-from sentence_transformers import SentenceTransformer
-import ollama
+
+sys.path.append(str(Path(__file__).resolve().parent.parent))  # -> src/
+from config import get_settings
+from graph.retriever import GraphRAGRetriever
+from graph.neo4j_connector import close_driver
+from backend.generation import build_prompt, generate
 
 app = FastAPI(
     title="MissionMind Graph-RAG API",
-    description="Backend API for aerospace failure analysis using Neo4j, local embeddings, and Ollama.",
-    version="1.0.0"
+    description="Aerospace failure analysis using Neo4j, local embeddings, and Ollama.",
+    version="1.1.0",
 )
 
-# Local Credentials
-NEO4J_URI = "bolt://localhost:7687"
-NEO4J_USERNAME = "neo4j"
-NEO4J_PASSWORD = "password"
 
-# Initialize global models and driver on startup to avoid reloading overhead
-embedder = SentenceTransformer('all-MiniLM-L6-v2')
-driver = GraphDatabase.driver(NEO4J_URI, auth=(NEO4J_USERNAME, NEO4J_PASSWORD))
+@lru_cache(maxsize=1)
+def get_retriever() -> GraphRAGRetriever:
+    """Created on first request, not at import time, so importing the app
+    (e.g. in tests) does not load models or open database connections."""
+    return GraphRAGRetriever()
+
 
 class QueryRequest(BaseModel):
     question: str
-    model_name: str = "llama3"
+    model_name: str | None = None
     top_k: int = 3
+
 
 class QueryResponse(BaseModel):
     question: str
+    model: str
     synthesized_answer: str
     retrieved_contexts: list
 
+
 @app.get("/")
 def health_check():
-    return {"status": "online", "message": "MissionMind Graph-RAG API is running smoothly."}
+    return {"status": "online", "message": "MissionMind Graph-RAG API is running."}
+
 
 @app.post("/query", response_model=QueryResponse)
 def execute_graph_rag(payload: QueryRequest):
     try:
-        # 1. Embed query
-        query_embedding = embedder.encode(payload.question, show_progress_bar=False).tolist()
-
-        # 2. Hybrid Cypher Query
-        cypher_query = """
-        CALL db.index.vector.queryNodes('chunk_vector_index', $top_k, $embedding)
-        YIELD node AS chunk, score
-        OPTIONAL MATCH (chunk)-[:MENTIONS]->(fm:FailureMode)
-        OPTIONAL MATCH (fm)-[:OCCURRED_IN_SUBSYSTEM]->(s:Subsystem)
-        OPTIONAL MATCH (fm)-[:CAUSED_BY]->(rc:RootCause)
-        OPTIONAL MATCH (m:Mission)-[:EXPERIENCED_FAILURE]->(fm)
-        RETURN 
-            chunk.text AS text_context,
-            m.name AS mission,
-            s.name AS subsystem,
-            fm.name AS failure_mode,
-            rc.description AS root_cause,
-            score
-        """
-
-        context_blocks = []
-        structured_contexts = []
-        
-        with driver.session() as session:
-            results = session.run(cypher_query, {"embedding": query_embedding, "top_k": payload.top_k})
-            for record in results:
-                block = f"Text Snippet: {record['text_context']}\n"
-                if record['failure_mode']:
-                    block += f"[Graph Intelligence] Mission: {record['mission']} | Subsystem: {record['subsystem']} | Failure Mode: {record['failure_mode']} | Root Cause: {record['root_cause']}\n"
-                context_blocks.append(block)
-                
-                structured_contexts.append({
-                    "score": record["score"],
-                    "mission": record["mission"],
-                    "subsystem": record["subsystem"],
-                    "failure_mode": record["failure_mode"],
-                    "root_cause": record["root_cause"],
-                    "text": record["text_context"][:200]
-                })
-
-        aggregated_context = "\n---\n".join(context_blocks)
-
-        # 3. Prompt Construction
-        prompt = f"""You are MissionMind, an advanced aerospace failure analysis AI assistant. 
-Use the following retrieved document chunks and Knowledge Graph FMEA insights to answer the user's diagnostic query accurately and professionally.
-
-CONTEXT:
-{aggregated_context}
-
-USER QUERY:
-{payload.question}
-
-ANSWER:
-"""
-
-        # 4. Ollama Generation
-        response = ollama.chat(model=payload.model_name, messages=[
-            {"role": "user", "content": prompt}
-        ])
-        
-        answer = response['message']['content']
-
-        return {
-            "question": payload.question,
-            "synthesized_answer": answer,
-            "retrieved_contexts": structured_contexts
-        }
-
+        retriever = get_retriever()
+        results = retriever.hybrid_search(payload.question, top_k=payload.top_k)
+        prompt = build_prompt(payload.question, retriever.build_context_text(results))
+        model = payload.model_name or get_settings().llm_model
+        answer = generate(prompt, model=model)
+        contexts = [
+            {"chunk_id": r["chunk_id"], "doc_id": r["doc_id"], "score": r["score"],
+             "text": r["context"][:200], "facts": r["facts"],
+             "related_failures": r["related_failures"]}
+            for r in results
+        ]
+        return {"question": payload.question, "model": model,
+                "synthesized_answer": answer, "retrieved_contexts": contexts}
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
+
+
+@app.on_event("shutdown")
+def shutdown_event():
+    close_driver()

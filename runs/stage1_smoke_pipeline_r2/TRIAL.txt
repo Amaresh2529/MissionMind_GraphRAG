@@ -1,0 +1,1 @@
+TRIAL RUN on uncommitted working tree (pre-commit). Superseded by the verified runs made on the committed code; kept for history, not for reporting.

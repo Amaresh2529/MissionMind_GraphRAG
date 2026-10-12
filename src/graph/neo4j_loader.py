@@ -14,31 +14,40 @@ from pathlib import Path
 from sentence_transformers import SentenceTransformer
 
 sys.path.append(str(Path(__file__).resolve().parent.parent))  # -> src/
+from config import get_settings
 from graph.neo4j_connector import get_driver, close_driver
 
-EMBEDDING_MODEL = "all-MiniLM-L6-v2"
+# Known limitation (Stage 2 work, kept as-is so the current system stays
+# reproducible): chunks whose id already exists are skipped, never updated,
+# so a re-chunked document leaves stale text in an existing database. Always
+# build into a fresh database for experiments.
 
 
-def ingest_chunks_to_neo4j():
-    base_dir = Path(__file__).resolve().parent.parent.parent
-    chunks_dir = base_dir / "data" / "processed" / "chunks"
+def ingest_chunks_to_neo4j(doc_ids: list[str] | None = None) -> dict:
+    """Embeds and stores Chunk nodes. `doc_ids` restricts ingestion to a
+    subset of documents. Returns {"inserted", "skipped", "documents"}."""
+    s = get_settings()
+    chunks_dir = s.chunks_dir
 
-    json_files = list(chunks_dir.glob("*_chunks.json"))
+    json_files = sorted(chunks_dir.glob("*_chunks.json"))
+    if doc_ids:
+        json_files = [p for p in json_files if p.name[: -len("_chunks.json")] in set(doc_ids)]
     if not json_files:
-        print(f"No chunk files found in {chunks_dir}. Run text_chunker.py first.")
-        return
+        print(f"No chunk files found in {chunks_dir} (filter: {doc_ids}). Run text_chunker.py first.")
+        return {"inserted": 0, "skipped": 0, "documents": 0}
 
-    print(f"Loading Sentence-Transformer model ({EMBEDDING_MODEL})...")
-    embedder = SentenceTransformer(EMBEDDING_MODEL)
+    print(f"Loading Sentence-Transformer model ({s.embedding_model})...")
+    embedder = SentenceTransformer(s.embedding_model)
 
     driver = get_driver()
     print("Connecting to local Neo4j instance...")
 
+    dims = embedder.get_sentence_embedding_dimension()  # 384 for all-MiniLM-L6-v2
     with driver.session() as session:
-        session.run("""
+        session.run(f"""
             CREATE VECTOR INDEX chunk_vector_index IF NOT EXISTS
             FOR (c:Chunk) ON (c.embedding)
-            OPTIONS {indexConfig: {`vector.dimensions`: 384, `vector.similarity_function`: 'cosine'}}
+            OPTIONS {{indexConfig: {{`vector.dimensions`: {int(dims)}, `vector.similarity_function`: 'cosine'}}}}
         """)
 
     total_inserted = 0
@@ -92,6 +101,7 @@ def ingest_chunks_to_neo4j():
     close_driver()
     print(f"{'='*60}\n🎉 Ingestion Complete: {total_inserted} new chunks stored, "
           f"{total_skipped} already present and skipped.")
+    return {"inserted": total_inserted, "skipped": total_skipped, "documents": len(json_files)}
 
 
 if __name__ == "__main__":

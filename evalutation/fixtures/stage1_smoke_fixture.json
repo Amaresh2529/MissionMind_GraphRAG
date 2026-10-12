@@ -1,0 +1,45 @@
+{
+  "dataset_info": {
+    "name": "stage1_smoke_fixture",
+    "purpose": "Pipeline plumbing check for evalutation/run_eval.py only (does every track run, write predictions and compute metrics?).",
+    "status": "NOT A BENCHMARK. Do not report these numbers as results. 3 labelled chunks and 2 queries cannot support any claim.",
+    "annotator": "Claude (AI assistant), 2026-10-12, labels chosen by reading the chunk text in data/processed/chunks; not reviewed by a second annotator.",
+    "corpus_subset": ["Ariane_5_Flight_501_Failure_Inquiry_Board_Report.", "Mars_Climate_Orbiter"]
+  },
+  "labeled_chunks": [
+    {
+      "chunk_id": "Ariane_5_Flight_501_Failure_Inquiry_Board_Report._10",
+      "has_failure_data": true,
+      "mission": "Ariane 5 Flight 501",
+      "subsystem": "Inertial Reference System (SRI) computer",
+      "failure_mode": "Operand Error when converting the horizontal bias variable BH stopped the SRI computer",
+      "root_cause": "Unprotected floating-point to integer conversion of BH, left unprotected because of an 80% maximum workload target"
+    },
+    {
+      "chunk_id": "Mars_Climate_Orbiter_19",
+      "has_failure_data": true,
+      "mission": "Mars Climate Orbiter",
+      "subsystem": "Ground trajectory software (SM_FORCES / Small Forces file)",
+      "failure_mode": "Trajectory modelling error from thruster performance data in the wrong units",
+      "root_cause": "Failure to use metric units in the Small Forces ground software file; data reported in pound-seconds instead of newton-seconds"
+    },
+    {
+      "chunk_id": "Mars_Climate_Orbiter_1",
+      "has_failure_data": false,
+      "mission": null,
+      "subsystem": null,
+      "failure_mode": null,
+      "root_cause": null
+    }
+  ],
+  "test_queries": [
+    {
+      "question": "What caused the inertial reference system computer on Ariane 5 Flight 501 to stop?",
+      "relevant_chunk_ids": ["Ariane_5_Flight_501_Failure_Inquiry_Board_Report._9", "Ariane_5_Flight_501_Failure_Inquiry_Board_Report._10"]
+    },
+    {
+      "question": "What was the root cause of the loss of the Mars Climate Orbiter?",
+      "relevant_chunk_ids": ["Mars_Climate_Orbiter_19"]
+    }
+  ]
+}

@@ -1,0 +1,87 @@
+warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.
+Loading Sentence-Transformer model (all-MiniLM-L6-v2)...
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|##########| 103/103 [00:00<00:00, 5293.24it/s]
+Traceback (most recent call last):
+  File "C:\Project\MissionMind_GraphRAG\run_pipeline.py", line 90, in <module>
+    main()
+    ~~~~^^
+  File "C:\Project\MissionMind_GraphRAG\run_pipeline.py", line 76, in main
+    stats["ingestion"] = ingest_chunks_to_neo4j(doc_ids=args.docs)
+                         ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Project\MissionMind_GraphRAG\src\graph\neo4j_loader.py", line 40, in ingest_chunks_to_neo4j
+    embedder = SentenceTransformer(s.embedding_model)
+  File "C:\Users\madhu\AppData\Roaming\Python\Python314\site-packages\sentence_transformers\util\decorators.py", line 41, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\madhu\AppData\Roaming\Python\Python314\site-packages\sentence_transformers\sentence_transformer\model.py", line 188, in __init__
+    super().__init__(
+    ~~~~~~~~~~~~~~~~^
+        model_name_or_path=model_name_or_path,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<13 lines>...
+        default_prompt_name=default_prompt_name,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\madhu\AppData\Roaming\Python\Python314\site-packages\sentence_transformers\base\model.py", line 222, in __init__
+    modules, self.module_kwargs = self._load_modules(
+                                  ~~~~~~~~~~~~~~~~~~^
+        model_name_or_path,
+        ^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+        config_kwargs=config_kwargs,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\madhu\AppData\Roaming\Python\Python314\site-packages\sentence_transformers\base\model.py", line 1023, in _load_modules
+    return self._load_config_modules(model_name_or_path, **load_kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\madhu\AppData\Roaming\Python\Python314\site-packages\sentence_transformers\base\model.py", line 1229, in _load_config_modules
+    module = module_class.load(
+        model_name_or_path,
+    ...<11 lines>...
+        backend=self.backend,
+    )
+  File "C:\Users\madhu\AppData\Roaming\Python\Python314\site-packages\sentence_transformers\base\modules\transformer.py", line 2130, in load
+    return cls(model_name_or_path=model_name_or_path, **init_kwargs)
+  File "C:\Users\madhu\AppData\Roaming\Python\Python314\site-packages\sentence_transformers\util\decorators.py", line 87, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\madhu\AppData\Roaming\Python\Python314\site-packages\sentence_transformers\base\modules\transformer.py", line 654, in __init__
+    self.model = self._load_model(
+                 ~~~~~~~~~~~~~~~~^
+        model_name_or_path, transformer_task, config, backend, is_peft_model, **model_kwargs
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\madhu\AppData\Roaming\Python\Python314\site-packages\sentence_transformers\base\modules\transformer.py", line 1836, in _load_model
+    return model_cls.from_pretrained(model_name_or_path, config=config, **model_kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\madhu\AppData\Roaming\Python\Python314\site-packages\transformers\models\auto\auto_factory.py", line 374, in from_pretrained
+    return model_class.from_pretrained(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        pretrained_model_name_or_path, *model_args, config=config, **hub_kwargs, **kwargs
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\madhu\AppData\Roaming\Python\Python314\site-packages\transformers\modeling_utils.py", line 4138, in from_pretrained
+    loading_info = cls._finalize_model_loading(model, load_config, loading_info)
+  File "C:\Users\madhu\AppData\Roaming\Python\Python314\site-packages\transformers\modeling_utils.py", line 4299, in _finalize_model_loading
+    log_state_dict_report(
+    ~~~~~~~~~~~~~~~~~~~~~^
+        model=model,
+        ^^^^^^^^^^^^
+    ...<3 lines>...
+        logger=logger,
+        ^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\madhu\AppData\Roaming\Python\Python314\site-packages\transformers\utils\loading_report.py", line 262, in log_state_dict_report
+    report = loading_info.create_loading_report()
+  File "C:\Users\madhu\AppData\Roaming\Python\Python314\site-packages\transformers\utils\loading_report.py", line 182, in create_loading_report
+    f"\n- {_color('UNEXPECTED', 'orange') + PALETTE['italic']}\t:can be ignored when loading from different "
+           ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\madhu\AppData\Roaming\Python\Python314\site-packages\transformers\utils\loading_report.py", line 123, in _color
+    if sys.stdout.isatty():
+       ^^^^^^^^^^^^^^^^^
+AttributeError: '_Tee' object has no attribute 'isatty'
+exit=1

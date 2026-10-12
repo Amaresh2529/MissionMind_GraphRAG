@@ -1,0 +1,83 @@
+{
+ "taken_at": "2026-10-12T10:36:38",
+ "nodes": [
+  {
+   "label": "Chunk",
+   "n": 2177
+  },
+  {
+   "label": "Document",
+   "n": 7
+  },
+  {
+   "label": "FailureMode",
+   "n": 161
+  },
+  {
+   "label": "Mission",
+   "n": 5
+  },
+  {
+   "label": "RootCause",
+   "n": 192
+  },
+  {
+   "label": "Subsystem",
+   "n": 133
+  }
+ ],
+ "rels": [
+  {
+   "type": "CAUSED_BY",
+   "n": 192
+  },
+  {
+   "type": "EXPERIENCED_FAILURE",
+   "n": 163
+  },
+  {
+   "type": "HAS_CHUNK",
+   "n": 2177
+  },
+  {
+   "type": "MENTIONS",
+   "n": 1681
+  },
+  {
+   "type": "OCCURRED_IN_SUBSYSTEM",
+   "n": 185
+  },
+  {
+   "type": "SIMILAR_ROOT_CAUSE",
+   "n": 1
+  }
+ ],
+ "annual_chunks_with_mentions_by_method": [
+  {
+   "method": "legacy_rules",
+   "chunks": 245
+  }
+ ],
+ "annual_chunks_per_legacy_fm": [
+  {
+   "failure_mode": "Software Arithmetic Exception / 64-bit to 16-bit Overflow",
+   "chunks": 95
+  },
+  {
+   "failure_mode": "Premature Parachute Jettison and Thruster Cutoff",
+   "chunks": 89
+  },
+  {
+   "failure_mode": "O-ring Primary/Secondary Seal Erosion",
+   "chunks": 76
+  },
+  {
+   "failure_mode": "Trajectory Navigation Discrepancy",
+   "chunks": 28
+  },
+  {
+   "failure_mode": "Left Wing RCC Panel Breached by Foam Debris",
+   "chunks": 8
+  }
+ ]
+}

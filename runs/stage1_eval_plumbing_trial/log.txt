@@ -1,0 +1,82 @@
+⚠️  Judge model == generator model (llama3): self-preference bias risk. Treat answer scores as unvalidated.
+
+============================================================
+1. EXTRACTION QUALITY  (3 labelled chunks)
+============================================================
+Loading NER model...
+Loading spaCy model: en_core_web_sm...
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|██████████| 103/103 [00:00<00:00, 4969.73it/s]
+[1mBertModel LOAD REPORT[0m from: sentence-transformers/all-MiniLM-L6-v2
+Key                     | Status     |  | 
+------------------------+------------+--+-
+embeddings.position_ids | UNEXPECTED |  | 
+
+[3mNotes:
+- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m
+{
+  "detection_precision": 1.0,
+  "detection_recall": 1.0,
+  "detection_f1": 1.0,
+  "field_accuracy": {
+    "mission": 1.0,
+    "subsystem": 0.5,
+    "failure_mode": 0.5,
+    "root_cause": 0.5
+  },
+  "n_gold_positive": 2,
+  "n_predicted_positive": 2
+}
+
+============================================================
+2. RETRIEVAL QUALITY  (2 questions, k=3)
+============================================================
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|██████████| 103/103 [00:00<00:00, 4889.24it/s]
+[1mBertModel LOAD REPORT[0m from: sentence-transformers/all-MiniLM-L6-v2
+Key                     | Status     |  | 
+------------------------+------------+--+-
+embeddings.position_ids | UNEXPECTED |  | 
+
+[3mNotes:
+- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m
+Received notification from DBMS server: <GqlStatusObject gql_status='01N51', status_description='warn: relationship type does not exist. The relationship type `SIMILAR_ROOT_CAUSE` does not exist. Verify that the spelling is correct.', position=<SummaryInputPosition line=9, column=26, offset=395>, raw_classification='UNRECOGNIZED', classification=<NotificationClassification.UNRECOGNIZED: 'UNRECOGNIZED'>, raw_severity='WARNING', severity=<NotificationSeverity.WARNING: 'WARNING'>, diagnostic_record={'_classification': 'UNRECOGNIZED', '_severity': 'WARNING', '_position': {'offset': 395, 'line': 9, 'column': 26}, 'OPERATION': '', 'OPERATION_CODE': '0', 'CURRENT_SCHEMA': '/'}> for query: "\nCALL db.index.vector.queryNodes('chunk_vector_index', $top_k, $embedding)\nYIELD node AS chunk, score\nOPTIONAL MATCH (d:Document)-[:HAS_CHUNK]->(chunk)\nOPTIONAL MATCH (chunk)-[:MENTIONS]->(fm:FailureMode)\nOPTIONAL MATCH (m:Mission)-[:EXPERIENCED_FAILURE]->(fm)\nOPTIONAL MATCH (fm)-[:OCCURRED_IN_SUBSYSTEM]->(s:Subsystem)\nOPTIONAL MATCH (fm)-[:CAUSED_BY]->(rc:RootCause)\nOPTIONAL MATCH (fm)-[sim:SIMILAR_ROOT_CAUSE]-(fm2:FailureMode)<-[:EXPERIENCED_FAILURE]-(m2:Mission)\nWHERE m2.name <> m.name\nWITH chunk, score, d, fm, m, s, rc,\n     collect(DISTINCT CASE WHEN fm2 IS NULL THEN NULL ELSE\n       {mission: m2.name, failure_mode: fm2.name, similarity: sim.similarity} END) AS related\nRETURN chunk.id AS chunk_id, d.id AS doc_id, chunk.text AS context, score,\n       m.name AS mission, s.name AS subsystem, fm.name AS failure_mode,\n       rc.description AS root_cause, fm.extraction_method AS extraction_method,\n       related\nORDER BY score DESC\n"
+Received notification from DBMS server: <GqlStatusObject gql_status='01N52', status_description='warn: property key does not exist. The property `similarity` does not exist. Verify that the spelling is correct.', position=<SummaryInputPosition line=13, column=67, offset=655>, raw_classification='UNRECOGNIZED', classification=<NotificationClassification.UNRECOGNIZED: 'UNRECOGNIZED'>, raw_severity='WARNING', severity=<NotificationSeverity.WARNING: 'WARNING'>, diagnostic_record={'_classification': 'UNRECOGNIZED', '_severity': 'WARNING', '_position': {'offset': 655, 'line': 13, 'column': 67}, 'OPERATION': '', 'OPERATION_CODE': '0', 'CURRENT_SCHEMA': '/'}> for query: "\nCALL db.index.vector.queryNodes('chunk_vector_index', $top_k, $embedding)\nYIELD node AS chunk, score\nOPTIONAL MATCH (d:Document)-[:HAS_CHUNK]->(chunk)\nOPTIONAL MATCH (chunk)-[:MENTIONS]->(fm:FailureMode)\nOPTIONAL MATCH (m:Mission)-[:EXPERIENCED_FAILURE]->(fm)\nOPTIONAL MATCH (fm)-[:OCCURRED_IN_SUBSYSTEM]->(s:Subsystem)\nOPTIONAL MATCH (fm)-[:CAUSED_BY]->(rc:RootCause)\nOPTIONAL MATCH (fm)-[sim:SIMILAR_ROOT_CAUSE]-(fm2:FailureMode)<-[:EXPERIENCED_FAILURE]-(m2:Mission)\nWHERE m2.name <> m.name\nWITH chunk, score, d, fm, m, s, rc,\n     collect(DISTINCT CASE WHEN fm2 IS NULL THEN NULL ELSE\n       {mission: m2.name, failure_mode: fm2.name, similarity: sim.similarity} END) AS related\nRETURN chunk.id AS chunk_id, d.id AS doc_id, chunk.text AS context, score,\n       m.name AS mission, s.name AS subsystem, fm.name AS failure_mode,\n       rc.description AS root_cause, fm.extraction_method AS extraction_method,\n       related\nORDER BY score DESC\n"
+  'What caused the inertial reference system computer on Ariane': {'precision_at_k': 0.0, 'recall_at_k': 0.0, 'reciprocal_rank': 0.0}
+Received notification from DBMS server: <GqlStatusObject gql_status='01N51', status_description='warn: relationship type does not exist. The relationship type `SIMILAR_ROOT_CAUSE` does not exist. Verify that the spelling is correct.', position=<SummaryInputPosition line=9, column=26, offset=395>, raw_classification='UNRECOGNIZED', classification=<NotificationClassification.UNRECOGNIZED: 'UNRECOGNIZED'>, raw_severity='WARNING', severity=<NotificationSeverity.WARNING: 'WARNING'>, diagnostic_record={'_classification': 'UNRECOGNIZED', '_severity': 'WARNING', '_position': {'offset': 395, 'line': 9, 'column': 26}, 'OPERATION': '', 'OPERATION_CODE': '0', 'CURRENT_SCHEMA': '/'}> for query: "\nCALL db.index.vector.queryNodes('chunk_vector_index', $top_k, $embedding)\nYIELD node AS chunk, score\nOPTIONAL MATCH (d:Document)-[:HAS_CHUNK]->(chunk)\nOPTIONAL MATCH (chunk)-[:MENTIONS]->(fm:FailureMode)\nOPTIONAL MATCH (m:Mission)-[:EXPERIENCED_FAILURE]->(fm)\nOPTIONAL MATCH (fm)-[:OCCURRED_IN_SUBSYSTEM]->(s:Subsystem)\nOPTIONAL MATCH (fm)-[:CAUSED_BY]->(rc:RootCause)\nOPTIONAL MATCH (fm)-[sim:SIMILAR_ROOT_CAUSE]-(fm2:FailureMode)<-[:EXPERIENCED_FAILURE]-(m2:Mission)\nWHERE m2.name <> m.name\nWITH chunk, score, d, fm, m, s, rc,\n     collect(DISTINCT CASE WHEN fm2 IS NULL THEN NULL ELSE\n       {mission: m2.name, failure_mode: fm2.name, similarity: sim.similarity} END) AS related\nRETURN chunk.id AS chunk_id, d.id AS doc_id, chunk.text AS context, score,\n       m.name AS mission, s.name AS subsystem, fm.name AS failure_mode,\n       rc.description AS root_cause, fm.extraction_method AS extraction_method,\n       related\nORDER BY score DESC\n"
+Received notification from DBMS server: <GqlStatusObject gql_status='01N52', status_description='warn: property key does not exist. The property `similarity` does not exist. Verify that the spelling is correct.', position=<SummaryInputPosition line=13, column=67, offset=655>, raw_classification='UNRECOGNIZED', classification=<NotificationClassification.UNRECOGNIZED: 'UNRECOGNIZED'>, raw_severity='WARNING', severity=<NotificationSeverity.WARNING: 'WARNING'>, diagnostic_record={'_classification': 'UNRECOGNIZED', '_severity': 'WARNING', '_position': {'offset': 655, 'line': 13, 'column': 67}, 'OPERATION': '', 'OPERATION_CODE': '0', 'CURRENT_SCHEMA': '/'}> for query: "\nCALL db.index.vector.queryNodes('chunk_vector_index', $top_k, $embedding)\nYIELD node AS chunk, score\nOPTIONAL MATCH (d:Document)-[:HAS_CHUNK]->(chunk)\nOPTIONAL MATCH (chunk)-[:MENTIONS]->(fm:FailureMode)\nOPTIONAL MATCH (m:Mission)-[:EXPERIENCED_FAILURE]->(fm)\nOPTIONAL MATCH (fm)-[:OCCURRED_IN_SUBSYSTEM]->(s:Subsystem)\nOPTIONAL MATCH (fm)-[:CAUSED_BY]->(rc:RootCause)\nOPTIONAL MATCH (fm)-[sim:SIMILAR_ROOT_CAUSE]-(fm2:FailureMode)<-[:EXPERIENCED_FAILURE]-(m2:Mission)\nWHERE m2.name <> m.name\nWITH chunk, score, d, fm, m, s, rc,\n     collect(DISTINCT CASE WHEN fm2 IS NULL THEN NULL ELSE\n       {mission: m2.name, failure_mode: fm2.name, similarity: sim.similarity} END) AS related\nRETURN chunk.id AS chunk_id, d.id AS doc_id, chunk.text AS context, score,\n       m.name AS mission, s.name AS subsystem, fm.name AS failure_mode,\n       rc.description AS root_cause, fm.extraction_method AS extraction_method,\n       related\nORDER BY score DESC\n"
+  'What was the root cause of the loss of the Mars Climate Orbi': {'precision_at_k': 0.0, 'recall_at_k': 0.0, 'reciprocal_rank': 0.0}
+{
+  "k": 3,
+  "n_queries": 2,
+  "mean_precision_at_k": 0.0,
+  "mean_recall_at_k": 0.0,
+  "mean_reciprocal_rank": 0.0
+}
+
+============================================================
+3. ANSWERS — graph facts vs chunk text only  (2 questions)
+============================================================
+Received notification from DBMS server: <GqlStatusObject gql_status='01N51', status_description='warn: relationship type does not exist. The relationship type `SIMILAR_ROOT_CAUSE` does not exist. Verify that the spelling is correct.', position=<SummaryInputPosition line=9, column=26, offset=395>, raw_classification='UNRECOGNIZED', classification=<NotificationClassification.UNRECOGNIZED: 'UNRECOGNIZED'>, raw_severity='WARNING', severity=<NotificationSeverity.WARNING: 'WARNING'>, diagnostic_record={'_classification': 'UNRECOGNIZED', '_severity': 'WARNING', '_position': {'offset': 395, 'line': 9, 'column': 26}, 'OPERATION': '', 'OPERATION_CODE': '0', 'CURRENT_SCHEMA': '/'}> for query: "\nCALL db.index.vector.queryNodes('chunk_vector_index', $top_k, $embedding)\nYIELD node AS chunk, score\nOPTIONAL MATCH (d:Document)-[:HAS_CHUNK]->(chunk)\nOPTIONAL MATCH (chunk)-[:MENTIONS]->(fm:FailureMode)\nOPTIONAL MATCH (m:Mission)-[:EXPERIENCED_FAILURE]->(fm)\nOPTIONAL MATCH (fm)-[:OCCURRED_IN_SUBSYSTEM]->(s:Subsystem)\nOPTIONAL MATCH (fm)-[:CAUSED_BY]->(rc:RootCause)\nOPTIONAL MATCH (fm)-[sim:SIMILAR_ROOT_CAUSE]-(fm2:FailureMode)<-[:EXPERIENCED_FAILURE]-(m2:Mission)\nWHERE m2.name <> m.name\nWITH chunk, score, d, fm, m, s, rc,\n     collect(DISTINCT CASE WHEN fm2 IS NULL THEN NULL ELSE\n       {mission: m2.name, failure_mode: fm2.name, similarity: sim.similarity} END) AS related\nRETURN chunk.id AS chunk_id, d.id AS doc_id, chunk.text AS context, score,\n       m.name AS mission, s.name AS subsystem, fm.name AS failure_mode,\n       rc.description AS root_cause, fm.extraction_method AS extraction_method,\n       related\nORDER BY score DESC\n"
+Received notification from DBMS server: <GqlStatusObject gql_status='01N52', status_description='warn: property key does not exist. The property `similarity` does not exist. Verify that the spelling is correct.', position=<SummaryInputPosition line=13, column=67, offset=655>, raw_classification='UNRECOGNIZED', classification=<NotificationClassification.UNRECOGNIZED: 'UNRECOGNIZED'>, raw_severity='WARNING', severity=<NotificationSeverity.WARNING: 'WARNING'>, diagnostic_record={'_classification': 'UNRECOGNIZED', '_severity': 'WARNING', '_position': {'offset': 655, 'line': 13, 'column': 67}, 'OPERATION': '', 'OPERATION_CODE': '0', 'CURRENT_SCHEMA': '/'}> for query: "\nCALL db.index.vector.queryNodes('chunk_vector_index', $top_k, $embedding)\nYIELD node AS chunk, score\nOPTIONAL MATCH (d:Document)-[:HAS_CHUNK]->(chunk)\nOPTIONAL MATCH (chunk)-[:MENTIONS]->(fm:FailureMode)\nOPTIONAL MATCH (m:Mission)-[:EXPERIENCED_FAILURE]->(fm)\nOPTIONAL MATCH (fm)-[:OCCURRED_IN_SUBSYSTEM]->(s:Subsystem)\nOPTIONAL MATCH (fm)-[:CAUSED_BY]->(rc:RootCause)\nOPTIONAL MATCH (fm)-[sim:SIMILAR_ROOT_CAUSE]-(fm2:FailureMode)<-[:EXPERIENCED_FAILURE]-(m2:Mission)\nWHERE m2.name <> m.name\nWITH chunk, score, d, fm, m, s, rc,\n     collect(DISTINCT CASE WHEN fm2 IS NULL THEN NULL ELSE\n       {mission: m2.name, failure_mode: fm2.name, similarity: sim.similarity} END) AS related\nRETURN chunk.id AS chunk_id, d.id AS doc_id, chunk.text AS context, score,\n       m.name AS mission, s.name AS subsystem, fm.name AS failure_mode,\n       rc.description AS root_cause, fm.extraction_method AS extraction_method,\n       related\nORDER BY score DESC\n"
+  ✓ 'What caused the inertial reference system computer on Ariane'
+Received notification from DBMS server: <GqlStatusObject gql_status='01N51', status_description='warn: relationship type does not exist. The relationship type `SIMILAR_ROOT_CAUSE` does not exist. Verify that the spelling is correct.', position=<SummaryInputPosition line=9, column=26, offset=395>, raw_classification='UNRECOGNIZED', classification=<NotificationClassification.UNRECOGNIZED: 'UNRECOGNIZED'>, raw_severity='WARNING', severity=<NotificationSeverity.WARNING: 'WARNING'>, diagnostic_record={'_classification': 'UNRECOGNIZED', '_severity': 'WARNING', '_position': {'offset': 395, 'line': 9, 'column': 26}, 'OPERATION': '', 'OPERATION_CODE': '0', 'CURRENT_SCHEMA': '/'}> for query: "\nCALL db.index.vector.queryNodes('chunk_vector_index', $top_k, $embedding)\nYIELD node AS chunk, score\nOPTIONAL MATCH (d:Document)-[:HAS_CHUNK]->(chunk)\nOPTIONAL MATCH (chunk)-[:MENTIONS]->(fm:FailureMode)\nOPTIONAL MATCH (m:Mission)-[:EXPERIENCED_FAILURE]->(fm)\nOPTIONAL MATCH (fm)-[:OCCURRED_IN_SUBSYSTEM]->(s:Subsystem)\nOPTIONAL MATCH (fm)-[:CAUSED_BY]->(rc:RootCause)\nOPTIONAL MATCH (fm)-[sim:SIMILAR_ROOT_CAUSE]-(fm2:FailureMode)<-[:EXPERIENCED_FAILURE]-(m2:Mission)\nWHERE m2.name <> m.name\nWITH chunk, score, d, fm, m, s, rc,\n     collect(DISTINCT CASE WHEN fm2 IS NULL THEN NULL ELSE\n       {mission: m2.name, failure_mode: fm2.name, similarity: sim.similarity} END) AS related\nRETURN chunk.id AS chunk_id, d.id AS doc_id, chunk.text AS context, score,\n       m.name AS mission, s.name AS subsystem, fm.name AS failure_mode,\n       rc.description AS root_cause, fm.extraction_method AS extraction_method,\n       related\nORDER BY score DESC\n"
+Received notification from DBMS server: <GqlStatusObject gql_status='01N52', status_description='warn: property key does not exist. The property `similarity` does not exist. Verify that the spelling is correct.', position=<SummaryInputPosition line=13, column=67, offset=655>, raw_classification='UNRECOGNIZED', classification=<NotificationClassification.UNRECOGNIZED: 'UNRECOGNIZED'>, raw_severity='WARNING', severity=<NotificationSeverity.WARNING: 'WARNING'>, diagnostic_record={'_classification': 'UNRECOGNIZED', '_severity': 'WARNING', '_position': {'offset': 655, 'line': 13, 'column': 67}, 'OPERATION': '', 'OPERATION_CODE': '0', 'CURRENT_SCHEMA': '/'}> for query: "\nCALL db.index.vector.queryNodes('chunk_vector_index', $top_k, $embedding)\nYIELD node AS chunk, score\nOPTIONAL MATCH (d:Document)-[:HAS_CHUNK]->(chunk)\nOPTIONAL MATCH (chunk)-[:MENTIONS]->(fm:FailureMode)\nOPTIONAL MATCH (m:Mission)-[:EXPERIENCED_FAILURE]->(fm)\nOPTIONAL MATCH (fm)-[:OCCURRED_IN_SUBSYSTEM]->(s:Subsystem)\nOPTIONAL MATCH (fm)-[:CAUSED_BY]->(rc:RootCause)\nOPTIONAL MATCH (fm)-[sim:SIMILAR_ROOT_CAUSE]-(fm2:FailureMode)<-[:EXPERIENCED_FAILURE]-(m2:Mission)\nWHERE m2.name <> m.name\nWITH chunk, score, d, fm, m, s, rc,\n     collect(DISTINCT CASE WHEN fm2 IS NULL THEN NULL ELSE\n       {mission: m2.name, failure_mode: fm2.name, similarity: sim.similarity} END) AS related\nRETURN chunk.id AS chunk_id, d.id AS doc_id, chunk.text AS context, score,\n       m.name AS mission, s.name AS subsystem, fm.name AS failure_mode,\n       rc.description AS root_cause, fm.extraction_method AS extraction_method,\n       related\nORDER BY score DESC\n"
+  ✓ 'What was the root cause of the loss of the Mars Climate Orbi'
+{
+  "judge_model": "llama3",
+  "chunk_only": {
+    "mean_factual_accuracy": 5,
+    "mean_specificity": 4.5,
+    "mean_completeness": 4.5,
+    "mean_overall": 4.667
+  },
+  "graph_facts": {
+    "mean_factual_accuracy": 4.5,
+    "mean_specificity": 3.5,
+    "mean_completeness": 2.5,
+    "mean_overall": 3.5
+  }
+}
+
+============================================================
+Saved results to C:\Project\MissionMind_GraphRAG\runs\stage1_eval_plumbing_trial\eval

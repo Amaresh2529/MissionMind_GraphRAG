@@ -1,0 +1,49 @@
+warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.
+Loading Sentence-Transformer model (all-MiniLM-L6-v2)...
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|██████████| 103/103 [00:00<00:00, 7343.67it/s]
+[1mBertModel LOAD REPORT[0m from: sentence-transformers/all-MiniLM-L6-v2
+Key                     | Status     |  | 
+------------------------+------------+--+-
+embeddings.position_ids | UNEXPECTED |  | 
+
+[3mNotes:
+- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m
+Connecting to local Neo4j instance...
+C:\Project\MissionMind_GraphRAG\src\graph\neo4j_loader.py:45: FutureWarning: The `get_sentence_embedding_dimension` method has been renamed to `get_embedding_dimension`.
+  dims = embedder.get_sentence_embedding_dimension()  # 384 for all-MiniLM-L6-v2
+📥 Processing chunks from: Ariane_5_Flight_501_Failure_Inquiry_Board_Report._chunks.json
+Received notification from DBMS server: <GqlStatusObject gql_status='01N52', status_description='warn: property key does not exist. The property `id` does not exist. Verify that the spelling is correct.', position=<SummaryInputPosition line=1, column=25, offset=24>, raw_classification='UNRECOGNIZED', classification=<NotificationClassification.UNRECOGNIZED: 'UNRECOGNIZED'>, raw_severity='WARNING', severity=<NotificationSeverity.WARNING: 'WARNING'>, diagnostic_record={'_classification': 'UNRECOGNIZED', '_severity': 'WARNING', '_position': {'offset': 24, 'line': 1, 'column': 25}, 'OPERATION': '', 'OPERATION_CODE': '0', 'CURRENT_SCHEMA': '/'}> for query: 'MATCH (c:Chunk) WHERE c.id STARTS WITH $prefix RETURN c.id AS id'
+Received notification from DBMS server: <GqlStatusObject gql_status='01N52', status_description='warn: property key does not exist. The property `id` does not exist. Verify that the spelling is correct.', position=<SummaryInputPosition line=1, column=57, offset=56>, raw_classification='UNRECOGNIZED', classification=<NotificationClassification.UNRECOGNIZED: 'UNRECOGNIZED'>, raw_severity='WARNING', severity=<NotificationSeverity.WARNING: 'WARNING'>, diagnostic_record={'_classification': 'UNRECOGNIZED', '_severity': 'WARNING', '_position': {'offset': 56, 'line': 1, 'column': 57}, 'OPERATION': '', 'OPERATION_CODE': '0', 'CURRENT_SCHEMA': '/'}> for query: 'MATCH (c:Chunk) WHERE c.id STARTS WITH $prefix RETURN c.id AS id'
+   ✅ 31 chunks processed in 2.2s
+📥 Processing chunks from: Mars_Climate_Orbiter_chunks.json
+   ✅ 65 chunks processed in 1.9s
+============================================================
+🎉 Ingestion Complete: 96 new chunks stored, 0 already present and skipped.
+Loading NER model...
+Loading spaCy model: en_core_web_sm...
+Connected to Neo4j. Building FMEA causal graph...
+============================================================
+📄 Ariane_5_Flight_501_Failure_Inquiry_Board_Report._chunks.json -> mission: Ariane 5 Flight 501 (31 chunks)
+   ✅ Done in 49.0s
+📄 Mars_Climate_Orbiter_chunks.json -> mission: Mars Climate Orbiter (65 chunks)
+   ✅ Done in 89.6s
+
+============================================================
+Comparing 16 unique failure records across missions...
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|██████████| 103/103 [00:00<00:00, 4703.77it/s]
+[1mBertModel LOAD REPORT[0m from: sentence-transformers/all-MiniLM-L6-v2
+Key                     | Status     |  | 
+------------------------+------------+--+-
+embeddings.position_ids | UNEXPECTED |  | 
+
+[3mNotes:
+- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m
+============================================================
+Knowledge Graph Built.
+  Extraction: 3 via NER, 15 via LLM fallback, 78 chunks with no failure data, 0 LLM failures.
+  Cross-mission similarity edges created: 0
+
+============================================================
+🎉 Pipeline complete in 2.7 minutes. Run artefacts: C:\Project\MissionMind_GraphRAG\runs\stage1_smoke_pipeline_r2
+exit=0

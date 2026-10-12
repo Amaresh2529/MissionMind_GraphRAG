@@ -6,6 +6,19 @@
 ![LLM](https://img.shields.io/badge/LLM-Llama_3-000000)
 ![FastAPI](https://img.shields.io/badge/Backend-FastAPI-009688)
 
+> **Project status (2026-10-12): research prototype, Stage 1 (repair + reproducible baseline).**
+> No experimental results exist yet. Statements below such as "hallucination-free", "transformer-backed NER",
+> `neo4j-graphrag` and RAGAS describe the original plan and are **not** supported by the current code or evidence —
+> see `docs/research/05_Stage1_Audit_BasePaper_Plan.md` for the verified state.
+>
+> **Run (Stage 1):**
+> 1. `pip install -r requirements.txt` (exact versions: `requirements-lock.txt`), `python -m spacy download en_core_web_sm`; Tesseract + Poppler for OCR.
+> 2. `cp .env.example .env` and point `NEO4J_*` at a **fresh** Neo4j 5 instance; `ollama pull llama3`.
+> 3. `python run_pipeline.py --skip-extract-text --docs Mars_Climate_Orbiter` (omit `--docs` for all documents). Artefacts go to `runs/<run_id>/`.
+> 4. Query: `python src/backend/rag_pipeline.py "your question"` or `uvicorn --app-dir src backend.main:app`.
+> 5. Evaluate: `python evalutation/run_eval.py --data <labelled file>` (the shipped `test_data.json` is a placeholder and is rejected).
+> 6. Tests: `python -m pytest -m "not integration"` (no services) / `python -m pytest` (needs the smoke database).
+
 **MissionMind** is an advanced Natural Language Processing (NLP) and Knowledge Graph pipeline designed to automatically extract, link, and analyze aerospace failure modes across multiple international space agencies (NASA, ESA, and ISRO). 
 
 Traditional Retrieval-Augmented Generation (RAG) systems frequently hallucinate or lose causal structural integrity when processing complex engineering and numerical failure data. MissionMind solves this by mapping unstructured, multi-hundred-page incident reports into an explicit **Failure Mode and Effects Analysis (FMEA) Knowledge Graph**, enabling deterministic, hallucination-free LLM diagnostic querying.
