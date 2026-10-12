@@ -1,0 +1,17 @@
+{
+  "load_units": 0.36,
+  "load_embedder": 115.45,
+  "build_indexes": 1.96,
+  "search_B1": 2.96,
+  "search_B2": 5.46,
+  "search_H-whole": 6.89,
+  "search_SF-summary-bm25": 0.47,
+  "search_SF-summary-dense": 2.37,
+  "search_SF-summary-hybrid": 2.88,
+  "search_SF-causes-bm25": 2.16,
+  "search_SF-causes-dense": 2.33,
+  "search_SF-causes-hybrid": 4.5,
+  "search_B3": 9.51,
+  "generate_B3": 0.36,
+  "generate_B0": 0.04
+}

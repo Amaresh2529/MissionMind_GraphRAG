@@ -17,6 +17,7 @@ sessions — Stage 1 finding), so re-runs return identical answers.
 
 import hashlib
 import json
+import os
 import sys
 from pathlib import Path
 
@@ -75,7 +76,8 @@ def _cache_path(model: str, prompt: str) -> Path:
 
 def _chat(prompt: str, model: str) -> dict:
     cache = _cache_path(model, prompt)
-    if cache.exists():
+    no_cache = os.environ.get("MISSIONMIND_GEN_NO_CACHE") == "1"   # determinism probe: regenerate, never overwrite
+    if cache.exists() and not no_cache:
         return {**json.loads(cache.read_text(encoding="utf-8")), "cached": True}
     import ollama
     s = get_settings()
@@ -84,8 +86,9 @@ def _chat(prompt: str, model: str) -> dict:
                     options={"temperature": s.llm_temperature, "seed": s.llm_seed, "num_ctx": NUM_CTX})
     out = {"raw": r["message"]["content"], "prompt_eval_count": r.get("prompt_eval_count"),
            "eval_count": r.get("eval_count")}
-    cache.parent.mkdir(parents=True, exist_ok=True)
-    cache.write_text(json.dumps(out), encoding="utf-8")
+    if not (no_cache and cache.exists()):
+        cache.parent.mkdir(parents=True, exist_ok=True)
+        cache.write_text(json.dumps(out), encoding="utf-8")
     return {**out, "cached": False}
 
 

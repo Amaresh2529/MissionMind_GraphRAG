@@ -1,0 +1,195 @@
+{
+ "C3": {
+  "B1": {
+   "queries": 19,
+   "queries_not_100": [],
+   "missing_provenance": 0,
+   "n_lists": [
+    1
+   ],
+   "empty_mission_ranking": 0
+  },
+  "B2": {
+   "queries": 19,
+   "queries_not_100": [],
+   "missing_provenance": 0,
+   "n_lists": [
+    1
+   ],
+   "empty_mission_ranking": 0
+  },
+  "B3": {
+   "queries": 19,
+   "queries_not_100": [],
+   "missing_provenance": 0,
+   "n_lists": [
+    6
+   ],
+   "empty_mission_ranking": 0
+  },
+  "H-whole": {
+   "queries": 19,
+   "queries_not_100": [],
+   "missing_provenance": 0,
+   "n_lists": [
+    2
+   ],
+   "empty_mission_ranking": 0
+  },
+  "SF-causes-bm25": {
+   "queries": 19,
+   "queries_not_100": [],
+   "missing_provenance": 0,
+   "n_lists": [
+    1
+   ],
+   "empty_mission_ranking": 0
+  },
+  "SF-causes-dense": {
+   "queries": 19,
+   "queries_not_100": [],
+   "missing_provenance": 0,
+   "n_lists": [
+    1
+   ],
+   "empty_mission_ranking": 0
+  },
+  "SF-causes-hybrid": {
+   "queries": 19,
+   "queries_not_100": [],
+   "missing_provenance": 0,
+   "n_lists": [
+    2
+   ],
+   "empty_mission_ranking": 0
+  },
+  "SF-summary-bm25": {
+   "queries": 19,
+   "queries_not_100": [],
+   "missing_provenance": 0,
+   "n_lists": [
+    1
+   ],
+   "empty_mission_ranking": 0
+  },
+  "SF-summary-dense": {
+   "queries": 19,
+   "queries_not_100": [],
+   "missing_provenance": 0,
+   "n_lists": [
+    1
+   ],
+   "empty_mission_ranking": 0
+  },
+  "SF-summary-hybrid": {
+   "queries": 19,
+   "queries_not_100": [],
+   "missing_provenance": 0,
+   "n_lists": [
+    2
+   ],
+   "empty_mission_ranking": 0
+  }
+ },
+ "C4": {
+  "B1": {
+   "leaked_passages": 0,
+   "leaked_missions": []
+  },
+  "B2": {
+   "leaked_passages": 0,
+   "leaked_missions": []
+  },
+  "B3": {
+   "leaked_passages": 0,
+   "leaked_missions": []
+  },
+  "H-whole": {
+   "leaked_passages": 0,
+   "leaked_missions": []
+  },
+  "SF-causes-bm25": {
+   "leaked_passages": 0,
+   "leaked_missions": []
+  },
+  "SF-causes-dense": {
+   "leaked_passages": 0,
+   "leaked_missions": []
+  },
+  "SF-causes-hybrid": {
+   "leaked_passages": 0,
+   "leaked_missions": []
+  },
+  "SF-summary-bm25": {
+   "leaked_passages": 0,
+   "leaked_missions": []
+  },
+  "SF-summary-dense": {
+   "leaked_passages": 0,
+   "leaked_missions": []
+  },
+  "SF-summary-hybrid": {
+   "leaked_passages": 0,
+   "leaked_missions": []
+  }
+ },
+ "C6": {
+  "B0": {
+   "queries": 19,
+   "parsed": 19,
+   "schema_ok": 19,
+   "items": 102,
+   "citations": 0,
+   "invalid_citations": 0,
+   "uncited_items": 102,
+   "chunks_used_min_max": [
+    0,
+    0
+   ],
+   "prompt_tokens_max": 740
+  },
+  "B3": {
+   "queries": 19,
+   "parsed": 19,
+   "schema_ok": 19,
+   "items": 117,
+   "citations": 226,
+   "invalid_citations": 9,
+   "uncited_items": 2,
+   "chunks_used_min_max": [
+    18,
+    24
+   ],
+   "prompt_tokens_max": 7534
+  }
+ },
+ "C5_cache_flags": {
+  "B0.jsonl": {
+   "a_cached": 19,
+   "b_cached": 19
+  },
+  "B3.jsonl": {
+   "a_cached": 0,
+   "b_cached": 19
+  }
+ },
+ "C5": {
+  "run_b": "runs\\stage3_verified_b",
+  "identical": {
+   "predictions/B1.jsonl": true,
+   "predictions/B2.jsonl": true,
+   "predictions/B3.jsonl": true,
+   "predictions/H-whole.jsonl": true,
+   "predictions/SF-causes-bm25.jsonl": true,
+   "predictions/SF-causes-dense.jsonl": true,
+   "predictions/SF-causes-hybrid.jsonl": true,
+   "predictions/SF-summary-bm25.jsonl": true,
+   "predictions/SF-summary-dense.jsonl": true,
+   "predictions/SF-summary-hybrid.jsonl": true,
+   "generation/B0.jsonl": true,
+   "generation/B3.jsonl": true
+  },
+  "all_identical": true
+ },
+ "failures": []
+}

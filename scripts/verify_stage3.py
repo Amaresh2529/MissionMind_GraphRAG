@@ -7,7 +7,8 @@ verify_stage3.py — checks Stage 3 criteria C3-C6 from SAVED run files only
 C3  every query of every system has 100 passages (or all allowed units if fewer), each with
     doc_id/page/field; B3 has exactly 6 lists; mission ranking present
 C4  no passage belongs to the query's mission (manifest mission_ids of its document)
-C5  (with run_b) predictions/*.jsonl and generation/*.jsonl byte-identical between runs
+C5  (with run_b) predictions/*.jsonl byte-identical; generation/*.jsonl identical apart from the
+    "cached" flag (reported separately: cached answers prove the cache, not model determinism)
 C6  generation: parse rate, schema validity, invalid citations, chunks used
 """
 
@@ -62,9 +63,16 @@ def main(argv=None):
         for sub in ("predictions", "generation"):
             for f in sorted((a / sub).glob("*.jsonl")) if (a / sub).exists() else []:
                 g = b / sub / f.name
-                ha = hashlib.sha256(f.read_bytes()).hexdigest()
-                hb = hashlib.sha256(g.read_bytes()).hexdigest() if g.exists() else None
-                diff[f"{sub}/{f.name}"] = ha == hb
+                if sub == "predictions":
+                    same = g.exists() and hashlib.sha256(f.read_bytes()).digest() == hashlib.sha256(g.read_bytes()).digest()
+                else:   # generation: compare content; the "cached" flag only says where the answer came from
+                    strip = lambda path: [{k: v for k, v in json.loads(l).items() if k != "cached"}
+                                          for l in open(path, encoding="utf-8")]
+                    same = g.exists() and strip(f) == strip(g)
+                    report.setdefault("C5_cache_flags", {})[f.name] = {
+                        "a_cached": sum(json.loads(l)["cached"] for l in open(f, encoding="utf-8")),
+                        "b_cached": sum(json.loads(l)["cached"] for l in open(g, encoding="utf-8")) if g.exists() else None}
+                diff[f"{sub}/{f.name}"] = same
         report["C5"] = {"run_b": str(b), "identical": diff, "all_identical": all(diff.values())}
         if not all(diff.values()):
             failures.append("C5")
