@@ -1,0 +1,16 @@
+{
+ "data/processed/chunks/Annual_Report_2024_25_Eng_chunks.json": "72716f0ea67899ab4384b6a52d9ae0f6585ad9a4bc437a0eb249e9b04d77bdb2",
+ "data/processed/chunks/Annual_Report_2025_26_Eng_29042026_Rev_chunks.json": "64feb93e5215b67f12c4d73baeaccc4e902f23016c8ad8cab79e62db02a8b70e",
+ "data/processed/chunks/Ariane_5_Flight_501_Failure_Inquiry_Board_Report._chunks.json": "efa877c0da9168a7cac3ceacbf314a3325ec5467686ceca2672683c3cd420cf0",
+ "data/processed/chunks/Challenger_chunks.json": "678b21d0cdf6574771cc66ebad56981b7b2b3e37e6f8f03404f39ef30c5c837c",
+ "data/processed/chunks/ExoMars_2016_Schiaparelli_Module_Trajectory_chunks.json": "666ef34cb6322d11239f3b032d396331cb6897a6382d5baef76170aed8c129fe",
+ "data/processed/chunks/Mars_Climate_Orbiter_chunks.json": "18f07fa03c324a35847b8a655d6015a0875223563bb0af2d6fb00a83f65bcef7",
+ "data/processed/chunks/NASA_Columbia_CAIB_Vol1_chunks.json": "075571ecafeb1d443f14baf11c7907820f56af143d68a3ccb037257d11fdd800",
+ "data/processed/Annual_Report_2024_25_Eng.txt": "2bb669fc72f1311df8df310710503bf94a247d41f5b06372b9bf0bcd16e2f26e",
+ "data/processed/Annual_Report_2025_26_Eng_29042026_Rev.txt": "01681a6f15e898742d107428630a7e910e1bbdf210010d22f0139dc530cc869f",
+ "data/processed/Ariane_5_Flight_501_Failure_Inquiry_Board_Report..txt": "0bde6628fa96e8d9045a3b4bc8c5b04fdf3a52db6fb843ad8da962084daabb63",
+ "data/processed/Challenger.txt": "9df0bf0bc356c46cfdffca8f12e0e44d8a72cb4d39c17018abe7f3727de172e5",
+ "data/processed/ExoMars_2016_Schiaparelli_Module_Trajectory.txt": "2da42322591c1b460e7fc2b840046404f7ed22334a44ffcec9de23f9ae6bf9ad",
+ "data/processed/Mars_Climate_Orbiter.txt": "aece2a77dfadacd38d7ab79c48645c9b3979fcc3a107916e16b720e789f99564",
+ "data/processed/NASA_Columbia_CAIB_Vol1.txt": "e94355db8be97c817c7fc6bf355e9ee2fdb3b0448857e62b8e0f129735c47d81"
+}

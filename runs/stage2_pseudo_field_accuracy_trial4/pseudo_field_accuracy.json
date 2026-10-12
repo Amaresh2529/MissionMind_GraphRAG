@@ -1,0 +1,384 @@
+{
+  "n": 100,
+  "correct": 52,
+  "accuracy": 0.52,
+  "per_document": {
+    "Ariane_5_Flight_501_Failure_Inquiry_Board_Report.": {
+      "correct": 1,
+      "n": 1,
+      "accuracy": 1.0
+    },
+    "Challenger": {
+      "correct": 22,
+      "n": 55,
+      "accuracy": 0.4
+    },
+    "Mars_Climate_Orbiter": {
+      "correct": 9,
+      "n": 9,
+      "accuracy": 1.0
+    },
+    "NASA_Columbia_CAIB_Vol1": {
+      "correct": 20,
+      "n": 35,
+      "accuracy": 0.5714
+    }
+  },
+  "confusion_gold_vs_pred": {
+    "causes -> causes": 5,
+    "causes -> findings": 1,
+    "causes -> narrative": 1,
+    "causes -> other": 1,
+    "findings -> causes": 2,
+    "findings -> findings": 23,
+    "findings -> narrative": 6,
+    "findings -> recommendations": 1,
+    "narrative -> findings": 9,
+    "narrative -> narrative": 11,
+    "narrative -> other": 3,
+    "narrative -> summary": 4,
+    "other -> findings": 14,
+    "other -> narrative": 5,
+    "other -> other": 12,
+    "summary -> findings": 1,
+    "summary -> summary": 1
+  },
+  "errors": [
+    {
+      "id": "S002",
+      "doc": "Challenger",
+      "section": "(Positive is Tang Larger)",
+      "gold": "other",
+      "pred": "narrative"
+    },
+    {
+      "id": "S004",
+      "doc": "Challenger",
+      "section": "- Ying a a a aE =s\\er Attach Stubs ?",
+      "gold": "other",
+      "pred": "findings"
+    },
+    {
+      "id": "S005",
+      "doc": "Challenger",
+      "section": "Aerospace Corp Aerospace Corp",
+      "gold": "other",
+      "pred": "findings"
+    },
+    {
+      "id": "S006",
+      "doc": "Challenger",
+      "section": "Alignment Tool Use History",
+      "gold": "findings",
+      "pred": "narrative"
+    },
+    {
+      "id": "S007",
+      "doc": "Challenger",
+      "section": "Approximately",
+      "gold": "narrative",
+      "pred": "other"
+    },
+    {
+      "id": "S008",
+      "doc": "Challenger",
+      "section": "Approximately 7:00-9:00 AM (EST)",
+      "gold": "narrative",
+      "pred": "findings"
+    },
+    {
+      "id": "S010",
+      "doc": "Challenger",
+      "section": "At Kennedy Space Center",
+      "gold": "other",
+      "pred": "findings"
+    },
+    {
+      "id": "S012",
+      "doc": "Challenger",
+      "section": "Change in anomalous plume shape (LH, tank leak near 2058 ring frame)",
+      "gold": "narrative",
+      "pred": "findings"
+    },
+    {
+      "id": "S014",
+      "doc": "Challenger",
+      "section": "Concluding Thought",
+      "gold": "summary",
+      "pred": "findings"
+    },
+    {
+      "id": "S015",
+      "doc": "Challenger",
+      "section": "Conclusion",
+      "gold": "causes",
+      "pred": "findings"
+    },
+    {
+      "id": "S016",
+      "doc": "Challenger",
+      "section": "Crew Assignments",
+      "gold": "narrative",
+      "pred": "findings"
+    },
+    {
+      "id": "S017",
+      "doc": "Challenger",
+      "section": "Dae Vere)",
+      "gold": "other",
+      "pred": "findings"
+    },
+    {
+      "id": "S018",
+      "doc": "Challenger",
+      "section": "Date Location",
+      "gold": "other",
+      "pred": "narrative"
+    },
+    {
+      "id": "S020",
+      "doc": "Challenger",
+      "section": "External Tank",
+      "gold": "narrative",
+      "pred": "findings"
+    },
+    {
+      "id": "S022",
+      "doc": "Challenger",
+      "section": "Flight Readiness Reviews",
+      "gold": "findings",
+      "pred": "narrative"
+    },
+    {
+      "id": "S024",
+      "doc": "Challenger",
+      "section": "John R. Molesworth, Jr.",
+      "gold": "other",
+      "pred": "findings"
+    },
+    {
+      "id": "S025",
+      "doc": "Challenger",
+      "section": "Judson A. Lovingood, Deputy Manager, Shuttle Projects Office, MSFC. At Kennedy S",
+      "gold": "narrative",
+      "pred": "other"
+    },
+    {
+      "id": "S026",
+      "doc": "Challenger",
+      "section": "Key Participants",
+      "gold": "narrative",
+      "pred": "other"
+    },
+    {
+      "id": "S028",
+      "doc": "Challenger",
+      "section": "Launch-Minus Days rad",
+      "gold": "findings",
+      "pred": "narrative"
+    },
+    {
+      "id": "S030",
+      "doc": "Challenger",
+      "section": "OF POOR QUALITY",
+      "gold": "other",
+      "pred": "findings"
+    },
+    {
+      "id": "S032",
+      "doc": "Challenger",
+      "section": "Other Materials",
+      "gold": "other",
+      "pred": "narrative"
+    },
+    {
+      "id": "S035",
+      "doc": "Challenger",
+      "section": "Pilot Michael J. Smith",
+      "gold": "narrative",
+      "pred": "findings"
+    },
+    {
+      "id": "S036",
+      "doc": "Challenger",
+      "section": "Planning of a Mission",
+      "gold": "findings",
+      "pred": "narrative"
+    },
+    {
+      "id": "S038",
+      "doc": "Challenger",
+      "section": "Presidential Commission Staff",
+      "gold": "other",
+      "pred": "narrative"
+    },
+    {
+      "id": "S040",
+      "doc": "Challenger",
+      "section": "Processing of Documents and Tapes by the Support Center",
+      "gold": "other",
+      "pred": "narrative"
+    },
+    {
+      "id": "S041",
+      "doc": "Challenger",
+      "section": "Range Safety System Components",
+      "gold": "narrative",
+      "pred": "findings"
+    },
+    {
+      "id": "S042",
+      "doc": "Challenger",
+      "section": "SRB CRITICAL ITEMS LIS] Poot 2 ot 2",
+      "gold": "other",
+      "pred": "findings"
+    },
+    {
+      "id": "S044",
+      "doc": "Challenger",
+      "section": "Space Shuttle Range Safety System",
+      "gold": "narrative",
+      "pred": "findings"
+    },
+    {
+      "id": "S045",
+      "doc": "Challenger",
+      "section": "Start SSME gimbal angle large pitch variations",
+      "gold": "narrative",
+      "pred": "findings"
+    },
+    {
+      "id": "S046",
+      "doc": "Challenger",
+      "section": "Start divergent pitch rates (RH vs. LH SRB)",
+      "gold": "narrative",
+      "pred": "findings"
+    },
+    {
+      "id": "S047",
+      "doc": "Challenger",
+      "section": "Technical - Integration",
+      "gold": "other",
+      "pred": "findings"
+    },
+    {
+      "id": "S052",
+      "doc": "Challenger",
+      "section": "Tracking and Data Relay Satellite (canceled 51-E, added 61-M). Synchronous Commu",
+      "gold": "findings",
+      "pred": "narrative"
+    },
+    {
+      "id": "S054",
+      "doc": "Challenger",
+      "section": "recommendation.\"... .",
+      "gold": "findings",
+      "pred": "recommendations"
+    },
+    {
+      "id": "S070",
+      "doc": "NASA_Columbia_CAIB_Vol1",
+      "section": "3.1 THE PHYSICAL CAUSE",
+      "gold": "causes",
+      "pred": "other"
+    },
+    {
+      "id": "S073",
+      "doc": "NASA_Columbia_CAIB_Vol1",
+      "section": "8.2 FAILURES OF FORESIGHT: TWO DECISION HISTORIES AND THE NORMALIZATION OF DEVIA",
+      "gold": "causes",
+      "pred": "narrative"
+    },
+    {
+      "id": "S074",
+      "doc": "NASA_Columbia_CAIB_Vol1",
+      "section": "ADVISORS TO THE CHAIR",
+      "gold": "other",
+      "pred": "findings"
+    },
+    {
+      "id": "S076",
+      "doc": "NASA_Columbia_CAIB_Vol1",
+      "section": "CANCELLATION OF THE REQUEST FOR IMAGERY",
+      "gold": "narrative",
+      "pred": "summary"
+    },
+    {
+      "id": "S079",
+      "doc": "NASA_Columbia_CAIB_Vol1",
+      "section": "GROUP I: MANAGEMENT AND TREATMENT OF MATERIALS",
+      "gold": "other",
+      "pred": "findings"
+    },
+    {
+      "id": "S080",
+      "doc": "NASA_Columbia_CAIB_Vol1",
+      "section": "IMAGERY REQUEST 2",
+      "gold": "narrative",
+      "pred": "summary"
+    },
+    {
+      "id": "S084",
+      "doc": "NASA_Columbia_CAIB_Vol1",
+      "section": "PART FOUR APPENDICES",
+      "gold": "other",
+      "pred": "findings"
+    },
+    {
+      "id": "S087",
+      "doc": "NASA_Columbia_CAIB_Vol1",
+      "section": "REAR ADMIRAL STEPHEN A. TURCOTTE",
+      "gold": "other",
+      "pred": "findings"
+    },
+    {
+      "id": "S088",
+      "doc": "NASA_Columbia_CAIB_Vol1",
+      "section": "SPACE SHUTTLE MAIN ENGINES",
+      "gold": "narrative",
+      "pred": "summary"
+    },
+    {
+      "id": "S089",
+      "doc": "NASA_Columbia_CAIB_Vol1",
+      "section": "STEVEN B. WALLACE",
+      "gold": "other",
+      "pred": "findings"
+    },
+    {
+      "id": "S090",
+      "doc": "NASA_Columbia_CAIB_Vol1",
+      "section": "Safety Policy",
+      "gold": "findings",
+      "pred": "causes"
+    },
+    {
+      "id": "S091",
+      "doc": "NASA_Columbia_CAIB_Vol1",
+      "section": "Safety Process",
+      "gold": "findings",
+      "pred": "causes"
+    },
+    {
+      "id": "S094",
+      "doc": "NASA_Columbia_CAIB_Vol1",
+      "section": "THE SHUTTLE STACK",
+      "gold": "narrative",
+      "pred": "summary"
+    },
+    {
+      "id": "S095",
+      "doc": "NASA_Columbia_CAIB_Vol1",
+      "section": "TIME",
+      "gold": "other",
+      "pred": "findings"
+    },
+    {
+      "id": "S096",
+      "doc": "NASA_Columbia_CAIB_Vol1",
+      "section": "The Failure of Safety's Role",
+      "gold": "findings",
+      "pred": "narrative"
+    }
+  ]
+}

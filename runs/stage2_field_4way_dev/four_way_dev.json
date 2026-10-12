@@ -1,0 +1,24 @@
+{
+  "mapping": {
+    "summary": "description",
+    "narrative": "description",
+    "findings": "analysis",
+    "causes": "analysis",
+    "recommendations": "recommendations",
+    "other": "other"
+  },
+  "results": {
+    "rules": {
+      "accuracy": 0.59,
+      "word_weighted_accuracy": 0.7691
+    },
+    "llm": {
+      "accuracy": 0.62,
+      "word_weighted_accuracy": 0.4666
+    },
+    "hybrid": {
+      "accuracy": 0.64,
+      "word_weighted_accuracy": 0.4689
+    }
+  }
+}

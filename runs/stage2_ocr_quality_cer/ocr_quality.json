@@ -1,0 +1,340 @@
+{
+  "per_document": {
+    "Annual_Report_2024_25_Eng": {
+      "pages": 214,
+      "ocr_pages": 1,
+      "quality_mean": 0.9989,
+      "quality_min": 0.968,
+      "pages_below_0.6": 0,
+      "pages_below_0.8": 0,
+      "english_word_share": 0.9613
+    },
+    "Annual_Report_2025_26_Eng_29042026_Rev": {
+      "pages": 262,
+      "ocr_pages": 0,
+      "quality_mean": 0.9919,
+      "quality_min": 0.75,
+      "pages_below_0.6": 0,
+      "pages_below_0.8": 1,
+      "english_word_share": 0.9541
+    },
+    "Ariane_5_Flight_501_Failure_Inquiry_Board_Report.": {
+      "pages": 15,
+      "ocr_pages": 0,
+      "quality_mean": 0.998,
+      "quality_min": 0.9888,
+      "pages_below_0.6": 0,
+      "pages_below_0.8": 0,
+      "english_word_share": 0.9946
+    },
+    "Challenger": {
+      "pages": 261,
+      "ocr_pages": 28,
+      "quality_mean": 0.9513,
+      "quality_min": 0.0,
+      "pages_below_0.6": 1,
+      "pages_below_0.8": 12,
+      "english_word_share": 0.9411
+    },
+    "ExoMars_2016_Schiaparelli_Module_Trajectory": {
+      "pages": 31,
+      "ocr_pages": 0,
+      "quality_mean": 0.994,
+      "quality_min": 0.9583,
+      "pages_below_0.6": 0,
+      "pages_below_0.8": 0,
+      "english_word_share": 0.9737
+    },
+    "Mars_Climate_Orbiter": {
+      "pages": 48,
+      "ocr_pages": 0,
+      "quality_mean": 0.9963,
+      "quality_min": 0.92,
+      "pages_below_0.6": 0,
+      "pages_below_0.8": 0,
+      "english_word_share": 0.9919
+    },
+    "NASA_Columbia_CAIB_Vol1": {
+      "pages": 248,
+      "ocr_pages": 0,
+      "quality_mean": 0.9984,
+      "quality_min": 0.9802,
+      "pages_below_0.6": 0,
+      "pages_below_0.8": 0,
+      "english_word_share": 0.9932
+    }
+  },
+  "challenger_sample": {
+    "seed": 42,
+    "pages": [
+      12,
+      13,
+      14,
+      44,
+      45,
+      48,
+      50,
+      58,
+      79,
+      90,
+      92,
+      95,
+      103,
+      143,
+      178,
+      190,
+      202,
+      213,
+      232,
+      233
+    ],
+    "comparison": [
+      {
+        "page": 12,
+        "quality_text_layer": 0.9799,
+        "quality_tesseract": 1.0,
+        "english_share_text_layer": 0.972,
+        "english_share_tesseract": 1.0,
+        "agreement_ratio": 0.9818,
+        "words_text_layer": 661,
+        "words_tesseract": 652
+      },
+      {
+        "page": 13,
+        "quality_text_layer": 0.9732,
+        "quality_tesseract": 0.9967,
+        "english_share_text_layer": 0.9505,
+        "english_share_tesseract": 0.9916,
+        "agreement_ratio": 0.9697,
+        "words_text_layer": 569,
+        "words_tesseract": 555
+      },
+      {
+        "page": 14,
+        "quality_text_layer": 0.9868,
+        "quality_tesseract": 0.9926,
+        "english_share_text_layer": 0.9745,
+        "english_share_tesseract": 0.9933,
+        "agreement_ratio": 0.9853,
+        "words_text_layer": 769,
+        "words_tesseract": 766
+      },
+      {
+        "page": 44,
+        "quality_text_layer": 0.9216,
+        "quality_tesseract": 0.9901,
+        "english_share_text_layer": 0.7982,
+        "english_share_tesseract": 0.9444,
+        "agreement_ratio": 0.5666,
+        "words_text_layer": 480,
+        "words_tesseract": 479
+      },
+      {
+        "page": 45,
+        "quality_text_layer": 0.9556,
+        "quality_tesseract": 0.964,
+        "english_share_text_layer": 0.9316,
+        "english_share_tesseract": 0.9463,
+        "agreement_ratio": 0.7733,
+        "words_text_layer": 266,
+        "words_tesseract": 337
+      },
+      {
+        "page": 48,
+        "quality_text_layer": 0.9838,
+        "quality_tesseract": 0.9808,
+        "english_share_text_layer": 0.9688,
+        "english_share_tesseract": 0.9785,
+        "agreement_ratio": 0.811,
+        "words_text_layer": 403,
+        "words_tesseract": 432
+      },
+      {
+        "page": 50,
+        "quality_text_layer": 0.972,
+        "quality_tesseract": 0.9781,
+        "english_share_text_layer": 0.9473,
+        "english_share_tesseract": 0.9799,
+        "agreement_ratio": 0.9114,
+        "words_text_layer": 537,
+        "words_tesseract": 525
+      },
+      {
+        "page": 58,
+        "quality_text_layer": 0.9844,
+        "quality_tesseract": 1.0,
+        "english_share_text_layer": 0.9756,
+        "english_share_tesseract": 0.9986,
+        "agreement_ratio": 0.984,
+        "words_text_layer": 708,
+        "words_tesseract": 705
+      },
+      {
+        "page": 79,
+        "quality_text_layer": 0.9758,
+        "quality_tesseract": 1.0,
+        "english_share_text_layer": 0.974,
+        "english_share_tesseract": 0.9971,
+        "agreement_ratio": 0.9787,
+        "words_text_layer": 371,
+        "words_tesseract": 373
+      },
+      {
+        "page": 90,
+        "quality_text_layer": 0.956,
+        "quality_tesseract": 0.9878,
+        "english_share_text_layer": 0.9395,
+        "english_share_tesseract": 0.9932,
+        "agreement_ratio": 0.8675,
+        "words_text_layer": 261,
+        "words_tesseract": 316
+      },
+      {
+        "page": 92,
+        "quality_text_layer": 0.9931,
+        "quality_tesseract": 1.0,
+        "english_share_text_layer": 0.9809,
+        "english_share_tesseract": 0.9956,
+        "agreement_ratio": 0.9803,
+        "words_text_layer": 738,
+        "words_tesseract": 727
+      },
+      {
+        "page": 95,
+        "quality_text_layer": 0.9723,
+        "quality_tesseract": 1.0,
+        "english_share_text_layer": 0.9646,
+        "english_share_tesseract": 0.983,
+        "agreement_ratio": 0.982,
+        "words_text_layer": 707,
+        "words_tesseract": 696
+      },
+      {
+        "page": 103,
+        "quality_text_layer": 0.984,
+        "quality_tesseract": 0.9977,
+        "english_share_text_layer": 0.966,
+        "english_share_tesseract": 0.9881,
+        "agreement_ratio": 0.9753,
+        "words_text_layer": 728,
+        "words_tesseract": 709
+      },
+      {
+        "page": 143,
+        "quality_text_layer": 0.9651,
+        "quality_tesseract": 0.9979,
+        "english_share_text_layer": 0.9496,
+        "english_share_tesseract": 0.9916,
+        "agreement_ratio": 0.9658,
+        "words_text_layer": 786,
+        "words_tesseract": 759
+      },
+      {
+        "page": 178,
+        "quality_text_layer": 0.9788,
+        "quality_tesseract": 0.9944,
+        "english_share_text_layer": 0.9649,
+        "english_share_tesseract": 0.9918,
+        "agreement_ratio": 0.9756,
+        "words_text_layer": 773,
+        "words_tesseract": 766
+      },
+      {
+        "page": 190,
+        "quality_text_layer": 0.9867,
+        "quality_tesseract": 0.9956,
+        "english_share_text_layer": 0.9819,
+        "english_share_tesseract": 0.997,
+        "agreement_ratio": 0.6855,
+        "words_text_layer": 698,
+        "words_tesseract": 686
+      },
+      {
+        "page": 202,
+        "quality_text_layer": 0.9444,
+        "quality_tesseract": 1.0,
+        "english_share_text_layer": 0.9412,
+        "english_share_tesseract": 1.0,
+        "agreement_ratio": 0.8715,
+        "words_text_layer": 193,
+        "words_tesseract": 190
+      },
+      {
+        "page": 213,
+        "quality_text_layer": 0.9604,
+        "quality_tesseract": 1.0,
+        "english_share_text_layer": 0.9245,
+        "english_share_tesseract": 0.9794,
+        "agreement_ratio": 0.963,
+        "words_text_layer": 509,
+        "words_tesseract": 508
+      },
+      {
+        "page": 232,
+        "quality_text_layer": 0.6,
+        "quality_tesseract": 0.9,
+        "english_share_text_layer": 0.6301,
+        "english_share_tesseract": 0.8812,
+        "agreement_ratio": 0.3245,
+        "words_text_layer": 220,
+        "words_tesseract": 396
+      },
+      {
+        "page": 233,
+        "quality_text_layer": 0.9286,
+        "quality_tesseract": 0.8333,
+        "english_share_text_layer": 0.8621,
+        "english_share_tesseract": 0.9572,
+        "agreement_ratio": 0.4905,
+        "words_text_layer": 218,
+        "words_tesseract": 259
+      }
+    ],
+    "mean": {
+      "quality_text_layer": 0.9501,
+      "quality_tesseract": 0.9805,
+      "english_share_text_layer": 0.9299,
+      "english_share_tesseract": 0.9794,
+      "agreement_ratio": 0.8522,
+      "words_text_layer": 529.75,
+      "words_tesseract": 541.8
+    }
+  },
+  "cer": {
+    "rows": [
+      {
+        "page": 13,
+        "ref_chars": 347,
+        "cer_text_layer": 0.0346,
+        "cer_tesseract": 0.0144
+      },
+      {
+        "page": 44,
+        "ref_chars": 150,
+        "cer_text_layer": 0.54,
+        "cer_tesseract": 0.0333
+      },
+      {
+        "page": 90,
+        "ref_chars": 311,
+        "cer_text_layer": 0.0289,
+        "cer_tesseract": 0.0161
+      },
+      {
+        "page": 190,
+        "ref_chars": 325,
+        "cer_text_layer": 0.0215,
+        "cer_tesseract": 0.0246
+      },
+      {
+        "page": 232,
+        "ref_chars": 64,
+        "cer_text_layer": 0.0938,
+        "cer_tesseract": 0.0781
+      }
+    ],
+    "transcriber": "Claude (AI assistant), read from a 150 dpi page image, 2026-10-12; not double-checked by a human",
+    "mean_cer_text_layer": 0.1438,
+    "mean_cer_tesseract": 0.0333
+  }
+}

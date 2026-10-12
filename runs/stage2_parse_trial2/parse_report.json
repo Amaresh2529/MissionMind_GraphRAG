@@ -1,0 +1,169 @@
+{
+  "Annual_Report_2024_25_Eng": {
+    "doc_id": "Annual_Report_2024_25_Eng",
+    "pages": 214,
+    "scanned": false,
+    "pages_ocr": 1,
+    "pages_low_quality": 0,
+    "pages_empty": 0,
+    "blocks": {
+      "heading": 485,
+      "boilerplate": 490,
+      "body": 2590
+    },
+    "headings": 485,
+    "passages": 628,
+    "words_in_passages": 46530,
+    "pseudo_fields": {
+      "other": 531,
+      "narrative": 48,
+      "findings": 44,
+      "summary": 5
+    },
+    "body_font_size": 12.0
+  },
+  "Annual_Report_2025_26_Eng_29042026_Rev": {
+    "doc_id": "Annual_Report_2025_26_Eng_29042026_Rev",
+    "pages": 262,
+    "scanned": false,
+    "pages_ocr": 0,
+    "pages_low_quality": 0,
+    "pages_empty": 0,
+    "blocks": {
+      "heading": 637,
+      "body": 3587,
+      "boilerplate": 701
+    },
+    "headings": 637,
+    "passages": 864,
+    "words_in_passages": 57215,
+    "pseudo_fields": {
+      "other": 720,
+      "narrative": 70,
+      "findings": 71,
+      "recommendations": 2,
+      "summary": 1
+    },
+    "body_font_size": 12.0
+  },
+  "Ariane_5_Flight_501_Failure_Inquiry_Board_Report.": {
+    "doc_id": "Ariane_5_Flight_501_Failure_Inquiry_Board_Report.",
+    "pages": 15,
+    "scanned": false,
+    "pages_ocr": 0,
+    "pages_low_quality": 0,
+    "pages_empty": 0,
+    "blocks": {
+      "body": 140,
+      "heading": 17
+    },
+    "headings": 17,
+    "passages": 52,
+    "words_in_passages": 6093,
+    "pseudo_fields": {
+      "other": 5,
+      "narrative": 15,
+      "findings": 19,
+      "causes": 8,
+      "recommendations": 5
+    },
+    "body_font_size": 14.0
+  },
+  "Challenger": {
+    "doc_id": "Challenger",
+    "pages": 261,
+    "scanned": true,
+    "pages_ocr": 252,
+    "pages_low_quality": 1,
+    "pages_empty": 4,
+    "blocks": {
+      "heading": 455,
+      "body": 3898,
+      "boilerplate": 231
+    },
+    "headings": 455,
+    "passages": 1067,
+    "words_in_passages": 118443,
+    "pseudo_fields": {
+      "other": 678,
+      "narrative": 219,
+      "causes": 17,
+      "findings": 104,
+      "recommendations": 49
+    },
+    "body_font_size": 9.0
+  },
+  "ExoMars_2016_Schiaparelli_Module_Trajectory": {
+    "doc_id": "ExoMars_2016_Schiaparelli_Module_Trajectory",
+    "pages": 31,
+    "scanned": false,
+    "pages_ocr": 0,
+    "pages_low_quality": 0,
+    "pages_empty": 0,
+    "blocks": {
+      "body": 418,
+      "heading": 18,
+      "boilerplate": 39
+    },
+    "headings": 18,
+    "passages": 96,
+    "words_in_passages": 12345,
+    "pseudo_fields": {
+      "other": 78,
+      "findings": 8,
+      "narrative": 5,
+      "summary": 5
+    },
+    "body_font_size": 9.0
+  },
+  "Mars_Climate_Orbiter": {
+    "doc_id": "Mars_Climate_Orbiter",
+    "pages": 48,
+    "scanned": false,
+    "pages_ocr": 0,
+    "pages_low_quality": 0,
+    "pages_empty": 0,
+    "blocks": {
+      "heading": 67,
+      "boilerplate": 67,
+      "body": 304
+    },
+    "headings": 67,
+    "passages": 131,
+    "words_in_passages": 12915,
+    "pseudo_fields": {
+      "other": 35,
+      "summary": 6,
+      "narrative": 13,
+      "recommendations": 12,
+      "causes": 26,
+      "findings": 39
+    },
+    "body_font_size": 12.0
+  },
+  "NASA_Columbia_CAIB_Vol1": {
+    "doc_id": "NASA_Columbia_CAIB_Vol1",
+    "pages": 248,
+    "scanned": false,
+    "pages_ocr": 0,
+    "pages_low_quality": 0,
+    "pages_empty": 0,
+    "blocks": {
+      "heading": 283,
+      "body": 3778,
+      "boilerplate": 478
+    },
+    "headings": 283,
+    "passages": 1185,
+    "words_in_passages": 170430,
+    "pseudo_fields": {
+      "other": 482,
+      "narrative": 217,
+      "causes": 130,
+      "summary": 156,
+      "findings": 179,
+      "recommendations": 21
+    },
+    "body_font_size": 10.0
+  }
+}

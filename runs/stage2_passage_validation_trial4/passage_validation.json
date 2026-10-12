@@ -1,0 +1,75 @@
+{
+  "documents": {
+    "Annual_Report_2024_25_Eng": {
+      "pages": 214,
+      "passages": 620,
+      "slice_mismatch": 0,
+      "duplicate_ids": 0,
+      "bad_page": 0,
+      "uncovered_chars": 0,
+      "covered_chars": 271201,
+      "bad_chars": 0
+    },
+    "Annual_Report_2025_26_Eng_29042026_Rev": {
+      "pages": 262,
+      "passages": 854,
+      "slice_mismatch": 0,
+      "duplicate_ids": 0,
+      "bad_page": 0,
+      "uncovered_chars": 0,
+      "covered_chars": 333974,
+      "bad_chars": 0
+    },
+    "Ariane_5_Flight_501_Failure_Inquiry_Board_Report.": {
+      "pages": 15,
+      "passages": 52,
+      "slice_mismatch": 0,
+      "duplicate_ids": 0,
+      "bad_page": 0,
+      "uncovered_chars": 0,
+      "covered_chars": 31511,
+      "bad_chars": 0
+    },
+    "Challenger": {
+      "pages": 261,
+      "passages": 1031,
+      "slice_mismatch": 0,
+      "duplicate_ids": 0,
+      "bad_page": 0,
+      "uncovered_chars": 0,
+      "covered_chars": 614940,
+      "bad_chars": 0
+    },
+    "ExoMars_2016_Schiaparelli_Module_Trajectory": {
+      "pages": 31,
+      "passages": 95,
+      "slice_mismatch": 0,
+      "duplicate_ids": 0,
+      "bad_page": 0,
+      "uncovered_chars": 0,
+      "covered_chars": 64522,
+      "bad_chars": 0
+    },
+    "Mars_Climate_Orbiter": {
+      "pages": 48,
+      "passages": 131,
+      "slice_mismatch": 0,
+      "duplicate_ids": 0,
+      "bad_page": 0,
+      "uncovered_chars": 0,
+      "covered_chars": 71623,
+      "bad_chars": 0
+    },
+    "NASA_Columbia_CAIB_Vol1": {
+      "pages": 248,
+      "passages": 1181,
+      "slice_mismatch": 0,
+      "duplicate_ids": 0,
+      "bad_page": 0,
+      "uncovered_chars": 0,
+      "covered_chars": 911427,
+      "bad_chars": 0
+    }
+  },
+  "failures": {}
+}

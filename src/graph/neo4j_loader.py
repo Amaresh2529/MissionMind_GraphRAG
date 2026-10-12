@@ -17,15 +17,28 @@ sys.path.append(str(Path(__file__).resolve().parent.parent))  # -> src/
 from config import get_settings
 from graph.neo4j_connector import get_driver, close_driver
 
-# Known limitation (Stage 2 work, kept as-is so the current system stays
-# reproducible): chunks whose id already exists are skipped, never updated,
-# so a re-chunked document leaves stale text in an existing database. Always
-# build into a fresh database for experiments.
+# Stage 2: re-ingestion is refresh-on-change. Until Stage 1, chunks whose id
+# already existed were skipped and never updated, which left stale text in a
+# reused database (449/596 Challenger chunks in the legacy DB). Now a chunk
+# whose text changed is updated and re-embedded, and chunks that a document no
+# longer produces are deleted. On a fresh database the result is identical to
+# Stage 1 (every chunk is an insert), so baseline B4 is unaffected.
+
+
+def plan_chunk_changes(existing: dict[str, str], chunks: list[dict]) -> dict:
+    """Pure diff: existing {chunk_id: text} vs current chunks."""
+    cur = {c["chunk_id"]: c["text"] for c in chunks}
+    return {
+        "insert": [cid for cid in cur if cid not in existing],
+        "update": [cid for cid in cur if cid in existing and existing[cid] != cur[cid]],
+        "unchanged": [cid for cid in cur if existing.get(cid) == cur[cid]],
+        "delete": [cid for cid in existing if cid not in cur],
+    }
 
 
 def ingest_chunks_to_neo4j(doc_ids: list[str] | None = None) -> dict:
     """Embeds and stores Chunk nodes. `doc_ids` restricts ingestion to a
-    subset of documents. Returns {"inserted", "skipped", "documents"}."""
+    subset of documents. Returns counts of inserted/updated/skipped/deleted."""
     s = get_settings()
     chunks_dir = s.chunks_dir
 
@@ -50,8 +63,7 @@ def ingest_chunks_to_neo4j(doc_ids: list[str] | None = None) -> dict:
             OPTIONS {{indexConfig: {{`vector.dimensions`: {int(dims)}, `vector.similarity_function`: 'cosine'}}}}
         """)
 
-    total_inserted = 0
-    total_skipped = 0
+    totals = {"inserted": 0, "updated": 0, "skipped": 0, "deleted": 0, "documents": len(json_files)}
 
     for json_path in json_files:
         print(f"📥 Processing chunks from: {json_path.name}")
@@ -63,45 +75,40 @@ def ingest_chunks_to_neo4j(doc_ids: list[str] | None = None) -> dict:
         doc_id = data["document_id"]
         chunks = data["chunks"]
 
-        texts = [c["text"] for c in chunks]
-        embeddings = embedder.encode(texts, show_progress_bar=False)
-
         with driver.session() as session:
-            # Skip chunks already ingested (idempotent re-runs, e.g. after
-            # adding a new PDF without wanting to re-embed everything)
-            existing = session.run(
-                "MATCH (c:Chunk) WHERE c.id STARTS WITH $prefix RETURN c.id AS id",
-                {"prefix": f"{doc_id}_"}
-            )
-            existing_ids = {r["id"] for r in existing}
-
-            for chunk, embedding in zip(chunks, embeddings):
-                if chunk["chunk_id"] in existing_ids:
-                    total_skipped += 1
-                    continue
-
+            # Chunks of this document: (Document)-[:HAS_CHUNK]->(Chunk). The id
+            # prefix match of Stage 1 also caught other documents whose id starts
+            # with this one; the relationship is exact.
+            existing = {r["id"]: r["text"] for r in session.run(
+                "MATCH (:Document {id: $doc})-[:HAS_CHUNK]->(c:Chunk) RETURN c.id AS id, c.text AS text",
+                doc=doc_id)}
+            plan = plan_chunk_changes(existing, chunks)
+            todo_ids = set(plan["insert"]) | set(plan["update"])
+            todo = [c for c in chunks if c["chunk_id"] in todo_ids]
+            if todo:
+                embeddings = embedder.encode([c["text"] for c in todo], show_progress_bar=False)
+                rows = [{"chunk_id": c["chunk_id"], "text": c["text"], "embedding": e.tolist()}
+                        for c, e in zip(todo, embeddings)]
                 session.run("""
+                    UNWIND $rows AS row
                     MERGE (d:Document {id: $doc_id})
-                    CREATE (c:Chunk {
-                        id: $chunk_id,
-                        text: $text,
-                        embedding: $embedding
-                    })
+                    MERGE (c:Chunk {id: row.chunk_id})
+                    SET c.text = row.text, c.embedding = row.embedding
                     MERGE (d)-[:HAS_CHUNK]->(c)
-                """, {
-                    "doc_id": doc_id,
-                    "chunk_id": chunk["chunk_id"],
-                    "text": chunk["text"],
-                    "embedding": embedding.tolist(),
-                })
-                total_inserted += 1
+                """, rows=rows, doc_id=doc_id)
+            if plan["delete"]:
+                session.run("MATCH (c:Chunk) WHERE c.id IN $ids DETACH DELETE c", ids=plan["delete"])
 
-        print(f"   ✅ {len(chunks)} chunks processed in {time.time() - start:.1f}s")
+        totals["inserted"] += len(plan["insert"])
+        totals["updated"] += len(plan["update"])
+        totals["skipped"] += len(plan["unchanged"])
+        totals["deleted"] += len(plan["delete"])
+        print(f"   ✅ {len(chunks)} chunks: +{len(plan['insert'])} ~{len(plan['update'])} "
+              f"={len(plan['unchanged'])} -{len(plan['delete'])} in {time.time() - start:.1f}s")
 
     close_driver()
-    print(f"{'='*60}\n🎉 Ingestion Complete: {total_inserted} new chunks stored, "
-          f"{total_skipped} already present and skipped.")
-    return {"inserted": total_inserted, "skipped": total_skipped, "documents": len(json_files)}
+    print(f"{'='*60}\n🎉 Ingestion Complete: {totals}")
+    return totals
 
 
 if __name__ == "__main__":

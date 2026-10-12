@@ -10,3 +10,5 @@ data/processed/*
 
 # Environment & Secret Files
 .env
+!data/manifest.json
+!data/corpus_candidates.json

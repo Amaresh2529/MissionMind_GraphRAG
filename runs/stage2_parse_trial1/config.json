@@ -1,0 +1,12 @@
+{
+  "args": {
+    "docs": null,
+    "no_ocr": false,
+    "run_id": "stage2_parse_trial1"
+  },
+  "ocr_threshold": 0.6,
+  "passage_words": [
+    150,
+    300
+  ]
+}
