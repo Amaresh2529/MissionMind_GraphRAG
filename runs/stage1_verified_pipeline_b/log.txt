@@ -1,0 +1,30 @@
+Loading Sentence-Transformer model (all-MiniLM-L6-v2)...
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|██████████| 103/103 [00:00<00:00, 5636.33it/s]
+Connecting to local Neo4j instance...
+C:\Project\MissionMind_GraphRAG\src\graph\neo4j_loader.py:45: FutureWarning: The `get_sentence_embedding_dimension` method has been renamed to `get_embedding_dimension`.
+  dims = embedder.get_sentence_embedding_dimension()  # 384 for all-MiniLM-L6-v2
+📥 Processing chunks from: Ariane_5_Flight_501_Failure_Inquiry_Board_Report._chunks.json
+   ✅ 31 chunks processed in 1.3s
+📥 Processing chunks from: Mars_Climate_Orbiter_chunks.json
+   ✅ 65 chunks processed in 1.4s
+============================================================
+🎉 Ingestion Complete: 96 new chunks stored, 0 already present and skipped.
+Loading NER model...
+Loading spaCy model: en_core_web_sm...
+Connected to Neo4j. Building FMEA causal graph...
+============================================================
+📄 Ariane_5_Flight_501_Failure_Inquiry_Board_Report._chunks.json -> mission: Ariane 5 Flight 501 (31 chunks)
+   ✅ Done in 46.1s
+📄 Mars_Climate_Orbiter_chunks.json -> mission: Mars Climate Orbiter (65 chunks)
+   ✅ Done in 95.9s
+
+============================================================
+Comparing 17 unique failure records across missions...
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|██████████| 103/103 [00:00<00:00, 5341.87it/s]
+============================================================
+Knowledge Graph Built.
+  Extraction: 3 via NER, 16 via LLM fallback, 77 chunks with no failure data, 0 LLM failures.
+  Cross-mission similarity edges created: 0
+
+============================================================
+🎉 Pipeline complete in 2.8 minutes. Run artefacts: C:\Project\MissionMind_GraphRAG\runs\stage1_verified_pipeline_b

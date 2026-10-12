@@ -160,6 +160,81 @@ Commands are listed in the Stage 1 verification report (§7), with their actual 
 
 ---
 
-## 7. Stage 1 verification report
+## 7. Stage 1 verification report (Deliverable 7)
 
-*(Filled in after execution — see below.)*
+**Objective.** Repair the minimum working pipeline and make it reproducible, without changing the extraction method (the repaired system is baseline B4).
+**Code under test:** commits `91e3ca4` (repairs) and `40cf711` (query-check script) on branch `stage1-repair`. All verified runs record `git_dirty: false`.
+
+### 7.1 Files changed
+
+| File | Change | Reason |
+|---|---|---|
+| `src/graph/retriever.py` | Restored `GraphRAGRetriever` (vector search + graph facts, from `7d9ce24`), plus `aggregate_rows`, `build_context_text`, `related_failures` | File had been overwritten by the API (circular import) |
+| `src/backend/main.py` | FastAPI app moved here; lazy retriever; no credentials | Old content was a duplicate with hard-coded password |
+| `src/backend/generation.py` (new) | One prompt template and one Ollama call (temperature 0, seed 42) | Three divergent prompt copies existed |
+| `src/backend/rag_pipeline.py`, `src/backend/__init__.py` | Use shared retriever and generation | Import repair |
+| `backend/` (root, 4 empty files) | Removed | Shadowed `src/backend` |
+| `src/graph/graph_builder.py` | `extract_failure_data()` (same logic as the build loop, which now calls it); document filter; per-chunk records; stats returned; seed passed to the LLM | Eval import; run artefacts |
+| `src/graph/neo4j_loader.py` | Config-driven; document filter; vector dimension from embedder; stats returned | Reproducibility |
+| `src/graph/neo4j_connector.py` | Config-driven; no default password; server notifications off | Security; log noise |
+| `src/config.py`, `src/runlog.py`, `.env.example` (new) | Central settings; per-run directories with config, env, model digest, timings, log | Reproducibility |
+| `evalutation/run_eval.py` | Uses the real retriever/extractor; input validation; CLI; run directories | Was broken and duplicated retrieval logic |
+| `evalutation/fixtures/stage1_smoke_fixture.json` (new) | 3 chunks + 2 queries labelled by the assistant, marked **not a benchmark** | Plumbing check only |
+| `run_pipeline.py` | `--docs`, `--run-id`, `--skip-extract-text`; run artefacts | Subset smoke runs |
+| `scripts/stage1_query_check.py` (new) | CLI + HTTP API check | Query-side acceptance |
+| `tests/` (new, 44 tests), `pytest.ini` | Unit + integration tests | A1–A7 |
+| `requirements.txt`, `requirements-lock.txt` (new) | Missing packages added; exact versions pinned | Dependency repair |
+| `README.md` | Status block; unsupported claims flagged, not deleted | Accuracy |
+
+### 7.2 Commands executed and actual results
+
+| Step | Command | Result |
+|---|---|---|
+| Unit tests | `python -m pytest -m "not integration"` | 41 passed |
+| Fresh DB | `docker run … neo4j-missionmind-stage1` on ports 7688/7475, own volume | Neo4j 5.26.29, 0 nodes |
+| Smoke run (failed) | `run_pipeline.py --run-id stage1_smoke_pipeline …` | **Failed**: `'_Tee' object has no attribute 'isatty'` (bug in new run logger). Fixed and regression test added; no DB writes occurred. Kept in `runs/stage1_smoke_pipeline/FAILED.txt` |
+| Trial runs | `stage1_smoke_pipeline_r2`, `stage1_eval_plumbing_trial` | Passed on uncommitted tree; labelled TRIAL, not for reporting |
+| Verified run A / B | DB emptied, then `python run_pipeline.py --skip-extract-text --run-id stage1_verified_pipeline_{a,b} --docs "Ariane_5_Flight_501_Failure_Inquiry_Board_Report." Mars_Climate_Orbiter` | Both exit 0. Ingestion ~10–11 s; graph build ~156 s. 96 chunks: 3 NER, 16 LLM, 77 no data, 0 LLM failures; 17 FailureMode, 16 Subsystem, 18 RootCause, 0 similarity edges |
+| Determinism | Compare `extraction_records.jsonl` of A and B | **96/96 identical** back to back |
+| Full suite | `python -m pytest -v` | **44 passed** (41 unit + 3 integration) — `runs/stage1_verified_tests/pytest_all.txt` |
+| Eval runner | `python evalutation/run_eval.py --data evalutation/fixtures/stage1_smoke_fixture.json --run-id stage1_verified_eval_plumbing` | Exit 0; all three tracks wrote predictions and metrics |
+| Independent recomputation | Script recomputing detection counts, recall and MRR from the saved predictions | Matches reported metrics exactly |
+| Query paths | `python scripts/stage1_query_check.py --run-id stage1_verified_query` | CLI answer produced; API `GET /` 200, `POST /query` 200 |
+| Legacy DB | Counts vs `runs/_legacy_db_snapshot/neo4j_local_counts.json` | Unchanged |
+
+### 7.3 Acceptance criteria
+
+| ID | Criterion | Status |
+|---|---|---|
+| A1 | Retriever, API and CLI import | **Pass** |
+| A2 | Eval runner starts, validates, rejects placeholder data (exit 2) | **Pass** |
+| A3 | `extract_failure_data()` returns the metrics schema; same path as graph build | **Pass** (unit tests with mocked LLM; build loop calls it) |
+| A4 | Unit tests pass without services | **Pass** (41) |
+| A5 | Single configuration; no hard-coded password in active code | **Pass** (test scans `src/`, `evalutation/`, `run_pipeline.py`) |
+| A6 | Dependencies pinned | **Partial** — versions pinned from the verified environment; installation into a clean virtual environment was **not** tested |
+| A7 | End-to-end smoke run on a fresh DB, including query and answer | **Pass** |
+| A8 | Run artefacts saved (config, env incl. model digest, timings, stats, records, logs) | **Pass** |
+| A9 | Legacy `neo4j-local` unchanged | **Pass** |
+
+### 7.4 Observations (facts from this stage; none is a research result)
+
+1. **Cross-session LLM non-determinism.** Back-to-back runs were identical, but the earlier trial run (same extraction code, earlier Ollama session) differed on 5/96 records (e.g. `Ariane…_15`: no data vs "Inappropriately handled exception"). Temperature 0 + seed does not guarantee reproducibility across sessions. **Consequence for later stages:** freeze LLM outputs as versioned artefacts and reuse them across experiments; report extraction variance from repeated runs.
+2. **Dense retrieval misses the causal passages on the plumbing queries.** Exact-cosine re-ranking confirmed the Neo4j index result: the labelled Ariane chunks rank 5th and 20th, the MCO root-cause chunk 45th of 96. The API answer for "Why was the Mars Climate Orbiter lost?" consequently names the wrong root cause. Two queries are an anecdote, not evidence; they motivate the planned BM25/multi-field baselines.
+3. **LLM-judge scores on 2 questions with the generator as judge** are recorded but carry no weight (self-preference, n = 2).
+4. **Graph defect visible in the fresh build:** `FailureMode.extraction_method` is overwritten by the last chunk that merges into the node (3 NER chunks produced a single `ner`-labelled node). Recorded for Stage 4 (canonicalisation), unchanged here to keep B4 faithful.
+
+### 7.5 Behaviour changes relative to the original code (recorded deviations)
+
+- One shared generation prompt (asks for source ids, allows "not in context") with temperature 0 and seed 42 for API, CLI and eval — previously three prompt variants and Ollama's default temperature.
+- LLM extraction call now passes `seed` (temperature 0 was already set).
+- Retriever returns one entry per chunk with a `facts` list (previously one row per chunk×fact) and adds `related_failures`; API response schema changed accordingly.
+- Answer track compares chunk-only vs graph-fact context under the same prompt (previously two different prompts).
+- `NEO4J_PASSWORD` must be set; no fallback.
+
+### 7.6 Remaining limitations (carried to Stage 2+)
+
+Ingestion skips existing chunks (stale text in reused DBs) · no page or offset provenance · ligature loss from ASCII stripping · OCR noise in the Challenger scan · case-sensitive gazetteer · first-match root-cause labels · MERGE-by-raw-string canonicalisation · corpus of 5 failure reports (RQ2 untestable) · no human-labelled data · clean-environment install untested · folder name `evalutation` kept to avoid breaking paths.
+
+### 7.7 Next step (awaiting approval)
+
+**Stage 2 — ingestion and provenance:** page-aware parsing (page numbers and character offsets per passage), NFKC before filtering, refresh-on-change ingestion, OCR quality sampling on Challenger, pseudo-field segmentation with a 100-section accuracy check, and a corpus manifest with checksums. In parallel, start the corpus search (≥ 20 missions), because RQ2 depends on it.

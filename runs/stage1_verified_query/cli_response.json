@@ -1,0 +1,48 @@
+{
+  "question": "What caused the inertial reference system on Ariane 5 Flight 501 to fail?",
+  "answer": "According to the context, the failure of the inertial reference system on Ariane 5 Flight 501 was caused by specification and design errors in the software [1]. Specifically, a design decision not to protect the inertial system computer from excessive values of the variable related to horizontal velocity led to the system's complete loss of guidance and attitude information [2][3].\n\nSource: [1], [2], [3]",
+  "retrieved": [
+    {
+      "chunk_id": "Ariane_5_Flight_501_Failure_Inquiry_Board_Report._27",
+      "score": 0.9031658172607422,
+      "facts": [
+        {
+          "mission": "Ariane 5 Flight 501",
+          "subsystem": "inertial reference system",
+          "failure_mode": "complete loss of guidance and attitude information",
+          "root_cause": "specification and design errors in the software",
+          "extraction_method": "llm"
+        }
+      ],
+      "related_failures": []
+    },
+    {
+      "chunk_id": "Ariane_5_Flight_501_Failure_Inquiry_Board_Report._25",
+      "score": 0.8518216609954834,
+      "facts": [
+        {
+          "mission": "Ariane 5 Flight 501",
+          "subsystem": "inertial reference system",
+          "failure_mode": "excessive value of the variable related to horizontal velocity making the inertial system computer inoperative",
+          "root_cause": "design decision not to protect the inertial system computer from excessive values",
+          "extraction_method": "llm"
+        }
+      ],
+      "related_failures": []
+    },
+    {
+      "chunk_id": "Ariane_5_Flight_501_Failure_Inquiry_Board_Report._26",
+      "score": 0.8514435291290283,
+      "facts": [
+        {
+          "mission": "Ariane 5 Flight 501",
+          "subsystem": "inertial system",
+          "failure_mode": "cease operation",
+          "root_cause": "design error due to lack of analysis and testing under simulated Ariane 5 flight conditions",
+          "extraction_method": "llm"
+        }
+      ],
+      "related_failures": []
+    }
+  ]
+}

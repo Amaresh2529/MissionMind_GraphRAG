@@ -1,0 +1,55 @@
+{
+ "legacy_db_unchanged": true,
+ "nodes": [
+  {
+   "label": "Chunk",
+   "n": 2177
+  },
+  {
+   "label": "Document",
+   "n": 7
+  },
+  {
+   "label": "FailureMode",
+   "n": 161
+  },
+  {
+   "label": "Mission",
+   "n": 5
+  },
+  {
+   "label": "RootCause",
+   "n": 192
+  },
+  {
+   "label": "Subsystem",
+   "n": 133
+  }
+ ],
+ "rels": [
+  {
+   "type": "CAUSED_BY",
+   "n": 192
+  },
+  {
+   "type": "EXPERIENCED_FAILURE",
+   "n": 163
+  },
+  {
+   "type": "HAS_CHUNK",
+   "n": 2177
+  },
+  {
+   "type": "MENTIONS",
+   "n": 1681
+  },
+  {
+   "type": "OCCURRED_IN_SUBSYSTEM",
+   "n": 185
+  },
+  {
+   "type": "SIMILAR_ROOT_CAUSE",
+   "n": 1
+  }
+ ]
+}

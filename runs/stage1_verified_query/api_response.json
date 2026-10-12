@@ -1,0 +1,43 @@
+{
+  "health_status": 200,
+  "status": 200,
+  "body": {
+    "question": "Why was the Mars Climate Orbiter lost?",
+    "model": "llama3",
+    "synthesized_answer": "According to the context, the Mars Climate Orbiter (MCO) was lost due to an abrupt loss of mission shortly after the start of the Mars Orbit Insertion burn on September 23, 1999. The root cause of this mishap was identified as discrepancies between navigation solutions [1]. Specifically, the Doppler-only solutions consistently indicated a flight path insertion closer to the planet than expected, which was not resolved before the loss of mission [2].",
+    "retrieved_contexts": [
+      {
+        "chunk_id": "Mars_Climate_Orbiter_0",
+        "doc_id": "Mars_Climate_Orbiter",
+        "score": 0.8021426200866699,
+        "text": "Mars Climate Orbiter Mishap Investigation Board Phase I Report November 10, 1999 2 Table of Contents Mars Climate Orbiter Mishap Investigation Board Phase I Report Page Signature Page (Board Members) ",
+        "facts": [],
+        "related_failures": []
+      },
+      {
+        "chunk_id": "Mars_Climate_Orbiter_13",
+        "doc_id": "Mars_Climate_Orbiter",
+        "score": 0.7896609306335449,
+        "text": "maneuver 9/1/99, Contingency maneuver up to Entry 7 hr. 11 Month Cruise Near-simultaneous tracking w/ Mars Climate Orbiter or MGS during approach Entry, Descent, and Landing Arrival 12/3/99 Jettison C",
+        "facts": [
+          {
+            "mission": "Mars Climate Orbiter",
+            "subsystem": "Orbit determination schemes",
+            "failure_mode": "Abrupt loss of mission",
+            "root_cause": "Discrepancies between navigation solutions",
+            "extraction_method": "llm"
+          }
+        ],
+        "related_failures": []
+      },
+      {
+        "chunk_id": "Mars_Climate_Orbiter_2",
+        "doc_id": "Mars_Climate_Orbiter",
+        "score": 0.7865636348724365,
+        "text": "Martin Astronautics for their cooperation which was essential in our review of the Mars Climate Orbiter and Mars Polar Lander projects. Special thanks to Lia LaPiana and Frank Bauer for pulling this r",
+        "facts": [],
+        "related_failures": []
+      }
+    ]
+  }
+}

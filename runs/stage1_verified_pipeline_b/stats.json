@@ -1,0 +1,37 @@
+{
+  "ingestion": {
+    "inserted": 96,
+    "skipped": 0,
+    "documents": 2
+  },
+  "graph_build": {
+    "chunks": 96,
+    "ner_hits": 3,
+    "llm_hits": 16,
+    "no_data": 77,
+    "llm_failures": 0,
+    "unique_failure_records": 17,
+    "similarity_edges": 0
+  },
+  "graph": {
+    "nodes": {
+      "Document": 2,
+      "Chunk": 96,
+      "Mission": 2,
+      "Subsystem": 16,
+      "FailureMode": 17,
+      "RootCause": 18
+    },
+    "relationships": {
+      "HAS_CHUNK": 96,
+      "MENTIONS": 19,
+      "EXPERIENCED_FAILURE": 17,
+      "OCCURRED_IN_SUBSYSTEM": 17,
+      "CAUSED_BY": 18
+    },
+    "failure_mode_extraction_method": {
+      "ner": 1,
+      "llm": 16
+    }
+  }
+}
