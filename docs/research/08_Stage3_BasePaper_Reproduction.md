@@ -72,4 +72,64 @@ Stage 3 does **not** measure retrieval or answer quality. That needs the human-l
 
 ## 5. Verification report
 
-*(Filled in after execution.)*
+Code under test: commits `0fb4833` (Stage 3 implementation) and `dbcff59` (determinism probe and checker fix). Runs on draft field maps are **DEV runs** (`--allow-draft-fields`); no effectiveness number is reported.
+
+### 5.1 Commands and results
+
+| Step | Command / run | Result |
+|---|---|---|
+| bge-m3 download (user-approved) | `snapshot_download('BAAI/bge-m3', revision='5617a9f…')`, 10 files | 2.29 GB; `pytorch_model.bin` SHA-256 `b5e0ce34…6aad38` = Hugging Face LFS hash. Loads in fp16 on the RTX 4060 (1,024-dim vectors) |
+| Unit tests | `pytest tests/test_retrieval.py` | 10 passed (BM25 vs hand computation, RRF formula, 6-list B3, leave-one-mission-out, determinism, generation packing/citation checks) |
+| Full suite | `pytest` | 143 passed |
+| BM25-only dev run | `stage3_dev_bm25` (uncommitted tree; DEV) | 3 BM25 systems × 19 queries; checker PASS |
+| B0 dev run | `stage3_dev_b0_generation` (uncommitted tree; DEV) | 19/19 valid JSON, 102 items, 0 citations (as intended) |
+| Verified run A | `run_retrieval.py --run-id stage3_verified_a --generate B3 B0 --allow-draft-fields` | Exit 0. 10 configurations × 19 queries. Indexing 39 s (bge-m3 encoding of 4,453 passages); search 0.5–9.3 s per configuration for all 19 queries; B3 generation 577 s (≈ 30 s/query) |
+| Verified run B | same, `stage3_verified_b` | Exit 0; embedding cache hit; generation served from cache |
+| Checker, first version | `verify_stage3.py … --out runs/stage3_verified_check` | **FAIL (C5)**: `generation/B3.jsonl` differed. Cause: only the `cached` flag (A generated, B read the cache); content identical. Kept as evidence |
+| Checker, fixed | `… --out runs/stage3_verified_check_r2` | **PASS**: C3, C4, C5 (10/10 prediction files byte-identical; generation identical apart from the cache flag), C6 |
+| No-cache generation probe | `MISSIONMIND_GEN_NO_CACHE=1 … --run-id stage3_gen_nocache_probe` | B3: **19/19** answers identical to run A (≈ 1 h apart). B0: only **5/19** identical to the dev run (≈ 2 h apart, same prompts, model 100% on GPU); 9/19 below 0.7 string similarity |
+| Artefact check | `runs/stage3_artifact_check` | Stage 1: 14/14 hashes unchanged. Stage 2b passages/fields: none modified after commit `123b614` (SHA-256 recorded) |
+
+### 5.2 Corpus and generation figures (run A)
+
+| Item | Value |
+|---|---|
+| Indexed units | 4,453 passages: Summary 926, Causes 3,340, Disposition 187 (22 missions, 23 documents) |
+| Dev queries | 19 (one per mission with description text; VV17, VV22 and GSLV-F10 have none) |
+| B3 generation | 19/19 parsed and schema-valid; 117 items; 226 citations, **9 invalid (4.0%)** (ids not shown in the context); 2 items uncited; 18–24 chunks fit the context (not 40); max prompt 7,534 tokens of 8,192 |
+| B0 generation | 19/19 parsed and schema-valid; 102 items; 0 citations |
+
+### 5.3 Descriptive observations (not quality measures)
+
+- **B3 is dominated by the smallest field.** In B3's top 100, Disposition passages make up 861 of 1,900 (45%) although they are 4% of the units; Summary 645, Causes 394. RRF gives each of the 6 lists equal weight, so the top ranks of the 187-passage Disposition index earn as much credit as those of the 3,340-passage Causes index. In the paper every card contributes exactly one chunk per field, so fields are balanced and this effect does not arise. This is a **faithful consequence of the reproduced method on unbalanced fields**. It is reported, not tuned. Whether to add a field-balanced variant is a design decision for Stage 5, to be fixed before any test labels exist.
+- Configurations differ substantially. Mean top-10 passage overlap with B3: H-whole 0.60, B1 0.39, B2 0.37, single-field Causes ≈ 0.17–0.20. Top-5 mission overlap: 0.56–0.74.
+- Qualitatively plausible mission neighbours appear: OCO↔Glory, Challenger↔Columbia, CRS-7↔Orb-3, the three Vega flights. Very long reports (Columbia, Starliner) appear often in mission rankings, a possible document-length bias to check in Stage 5.
+
+### 5.4 Acceptance criteria
+
+| ID | Status | Evidence |
+|---|---|---|
+| C1 BM25 correct, deterministic | **Pass** | unit tests; query terms summed in sorted order (no hash-seed effect) |
+| C2 RRF = paper formula, k = 60 | **Pass** | unit test |
+| C3 All configurations on real corpus; 100 passages with provenance; B3 = 6 lists | **Pass** | `stage3_verified_check_r2` |
+| C4 Leave-one-mission-out | **Pass** | 0 leaked passages or missions in 10 × 19 predictions |
+| C5 Re-run identical | **Pass** | retrieval byte-identical; generation identical **because of the cache** |
+| C6 Generation schema, citations, repeatability | **Pass with finding** | Schema 19/19 for both; 4.0% invalid B3 citations. The model itself is not reproducible across time for B0 (5/19), so reported generations must come from the saved cache |
+| C7 Run artefacts | **Pass** | config, env, index stats, queries, predictions, generation, timings, log in every run |
+| C8 Deviations recorded | **Pass** | Section 3 (D1–D13) |
+| C9 Earlier artefacts unchanged | **Pass** | `stage3_artifact_check` |
+
+### 5.5 Limitations
+
+- No effectiveness results: relevance labels (D2) and answer references (D3) do not exist. The paper's proxy cannot be rebuilt without equivalent metadata.
+- Field maps are drafts. Every Stage 3 run is DEV until the maps are reviewed (`load_units(require_status="reviewed")` is the default for non-dev runs).
+- Dev queries are taken from each mission's own report summary and can contain the board's causes; they are for plumbing only.
+- Generator is an 8B model with an 8k context (18–24 chunks instead of 40); a stronger local generator is a possible Stage 5 ablation.
+- bge-m3 load takes about 20–110 s because the repo ships `pytorch_model.bin` (no safetensors).
+
+### 5.6 Next step
+
+Before Stage 4 (the proposed extension), three inputs are needed:
+1. The field-map review and held-out field test (from Stage 2b).
+2. A decision on the field-imbalance effect (keep the faithful B3 only, or also add a field-balanced B3 variant as a pre-registered secondary baseline).
+3. Start of the D2/D3 annotation, without which no retrieval comparison can be reported.

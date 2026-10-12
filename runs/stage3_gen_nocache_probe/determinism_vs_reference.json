@@ -1,0 +1,31 @@
+{
+ "B3": {
+  "queries": 19,
+  "identical_answers": 19,
+  "fresh_in_probe": 19,
+  "differing": [],
+  "reference_run": "stage3_verified_a"
+ },
+ "B0": {
+  "queries": 19,
+  "identical_answers": 5,
+  "fresh_in_probe": 19,
+  "differing": [
+   "dev-antares-orb3",
+   "dev-apollo1-as204",
+   "dev-apollo13",
+   "dev-ariane5-501",
+   "dev-dart-2005",
+   "dev-exomars2016-schiaparelli",
+   "dev-genesis",
+   "dev-glory-taurus-t9",
+   "dev-hitomi",
+   "dev-mars-climate-orbiter",
+   "dev-noaa-n-prime",
+   "dev-oco-taurus-t8",
+   "dev-starliner-cft",
+   "dev-vega-vv15"
+  ],
+  "reference_run": "stage3_dev_b0_generation"
+ }
+}

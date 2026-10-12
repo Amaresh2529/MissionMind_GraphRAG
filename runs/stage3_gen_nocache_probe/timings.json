@@ -1,0 +1,8 @@
+{
+  "load_units": 0.34,
+  "load_embedder": 108.41,
+  "build_indexes": 1.91,
+  "search_B3": 11.13,
+  "generate_B3": 581.87,
+  "generate_B0": 126.34
+}

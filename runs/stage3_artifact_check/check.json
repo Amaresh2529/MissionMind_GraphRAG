@@ -1,0 +1,98 @@
+{
+  "stage1_changed": [],
+  "stage2b_files_modified_after_123b614": [],
+  "stage2b_file_sha256": {
+    "data/processed/fields/Ariane_5_Flight_501_Failure_Inquiry_Board_Report..jsonl": "7d11348b52c66f8a7da2df51153fe0c4bceb6ef46f7f4241d5ccaf43f8b60017",
+    "data/processed/fields/Challenger.jsonl": "93ea40890d2b441a0389fb7a70fbb1e8e8c90f51cba77fb4b0915299130d4bb8",
+    "data/processed/fields/ESA_ExoMars2016_Schiaparelli_Anomaly_Inquiry.jsonl": "fd03eef49c55fed5de6e1e3281b32c22b8633ac7e68142a19e24859768c0dbe7",
+    "data/processed/fields/ESA_VegaC_VV22_Inquiry_Conclusions.jsonl": "647a6fca63652a2796a2c2ae36a7cd12caefbcae54332ede781fdc33704e8f96",
+    "data/processed/fields/ESA_Vega_VV15_Inquiry_Findings.jsonl": "47a9e1bb2f7230f00eb983c44339598202121fa191b9421171b0061e7f81f4bd",
+    "data/processed/fields/ESA_Vega_VV17_Inquiry_Conclusions.jsonl": "f985a0d4dbe70414ef7931ebcdd7d11228c540914e05f84738bd875b79a8bd7b",
+    "data/processed/fields/ISRO_GSLV_F10_FAC_Conclusions.jsonl": "165b604f20725e47c6e8a24506decf15c47395e28e2177ec4be7553c5e721e71",
+    "data/processed/fields/JAXA_Hitomi_Experience_Report.jsonl": "2abee745a580c811ed9366a4b373352824dbcb8d0dd1a52e4803ba4c2ee133d1",
+    "data/processed/fields/Mars_Climate_Orbiter.jsonl": "7fd0180dbde8b37254d5a19438daccdbe85406c2e45b9eea2f263a849b09f819",
+    "data/processed/fields/NASA_Apollo13_Review_Board.jsonl": "5034cb96a6906251da9e34232f9c11fdd6e026c0767a5fce07882ba58f41bba4",
+    "data/processed/fields/NASA_Apollo204_Review_Board.jsonl": "9fffca63d7dba8acb065938535edd6c16602f0acace1ab82db657a37c66a949c",
+    "data/processed/fields/NASA_Columbia_CAIB_Vol1.jsonl": "8c3e04bf178396627e087f950ed11c411c232ebb9a7af6eaf29eb910d86f2d21",
+    "data/processed/fields/NASA_DART_MIB_Overview.jsonl": "83dcc540d902095fb4c215649c63342151339384e788bc7f5a6ed109737d8ea2",
+    "data/processed/fields/NASA_ESA_SOHO_Interruption_Final_Report.jsonl": "717f2aea7df6c4ae2e335d64cf8aef11ef41461189d265847ce8d02e899ae904",
+    "data/processed/fields/NASA_Genesis_MIB_Report.jsonl": "d934c11fca2d4c4c57492b5cb9ec3ef81841871e2fa214b1c9a5cfa06ee1da0e",
+    "data/processed/fields/NASA_Glory_T9_MIB_Summary.jsonl": "7b4ab2858a7c460a275f91363f978586d7cdc9d16a147dd2c851366a7858882f",
+    "data/processed/fields/NASA_IRT_CRS7_Public_Summary.jsonl": "e87043e71da16045a97c26fdd4565243c4d8b002581f807f88c2798468f81619",
+    "data/processed/fields/NASA_IRT_Orb3_Executive_Summary.jsonl": "1e8c8f65f990eeb9ea364dee7823aa52025c1449f96ebc1c24e8fde5b6cb90af",
+    "data/processed/fields/NASA_NOAA_NPrime_MIB_Report.jsonl": "00eaa9af2cbd7a45b3f3138048a48a94224b18f1dfe597b8a26f1cac0667c2f6",
+    "data/processed/fields/NASA_OCO_MIB_Summary.jsonl": "90e7f2e85fd947f1236c6ad1dd26f48eb1fe9c58d3a334070d82078925052a3f",
+    "data/processed/fields/NASA_Starliner_CFT_Propulsion_Anomalies.jsonl": "318a3608f95ed213b9eaad4c136d8d439cdd01bdedc7910dcf553614fb707cdc",
+    "data/processed/fields/NASA_TaurusXL_T8_T9_Summary_2019.jsonl": "58bd3c4c5556a8f008be52ead8d20f33be3ba7e64eee2fbefd420af1125d0c3c",
+    "data/processed/fields/NASA_WIRE_MIB_Vol1.jsonl": "72566d769b4ddf8fb7b79048706068a4a88226f5e32a1a4bfecc3c6112c30d0c",
+    "data/processed/passages/Annual_Report_2024_25_Eng.jsonl": "a08baf03da7ba3ed337a27dd759a98fe722bc454c3e9f6dbb5b3ffa2dfed6ab9",
+    "data/processed/passages/Annual_Report_2025_26_Eng_29042026_Rev.jsonl": "51588baf5f875894c30a267819a01322a77f6810cbe6530306398de65654d91f",
+    "data/processed/passages/Ariane_5_Flight_501_Failure_Inquiry_Board_Report..jsonl": "0d9840d9788801859abc58214aa5a741d32d0ffa36ecd95246961fcb19f2d957",
+    "data/processed/passages/Challenger.jsonl": "5092f3dd04cabca118c32f42083aa0307267b3f0995196279e35427b624430c9",
+    "data/processed/passages/ESA_ExoMars2016_Schiaparelli_Anomaly_Inquiry.jsonl": "895a8ba247b1f9fa2e6cc0683dc4558ec041ae9da1dbd6c51ce5f76aa5349c5b",
+    "data/processed/passages/ESA_VegaC_VV22_Inquiry_Conclusions.jsonl": "5a8d1a12344bba082031a4a2695a2888f199d62fac24baa2806d967c69fc3a6c",
+    "data/processed/passages/ESA_Vega_VV15_Inquiry_Findings.jsonl": "dfa5a912ad4d73ab06b892d707178ffdbb80cf7ea5e4521113c842818b4be538",
+    "data/processed/passages/ESA_Vega_VV17_Inquiry_Conclusions.jsonl": "c71794939deaeca1d97edc92d36b021bc6dfa4ab8447773e0a10030597e16347",
+    "data/processed/passages/ExoMars_2016_Schiaparelli_Module_Trajectory.jsonl": "7c8c3059ed3671327724e9a00fcc43c8035e261f3e09da7cae8208c22f69f391",
+    "data/processed/passages/ISRO_GSLV_F10_FAC_Conclusions.jsonl": "5371083f314ca35cda354ad4669d514bc7bc8a79da267a711ba2e5c7adccb1c2",
+    "data/processed/passages/JAXA_Hitomi_Experience_Report.jsonl": "021a2d3f06ea2c32f27c3774b76b0060bedcd6df11bde48a429c9cb7a963c7c3",
+    "data/processed/passages/Mars_Climate_Orbiter.jsonl": "8766fef191b45e4b87729fbe49e5193c98754776c9b72a55331e8d8300ab0533",
+    "data/processed/passages/NASA_Apollo13_Review_Board.jsonl": "048d0e2a59e7271ebe6f8b1d393151f517707a3ea7ef02c9912b1da68d476a55",
+    "data/processed/passages/NASA_Apollo204_Review_Board.jsonl": "a3bc3d3124c239074bc97d893a839bb95d09de6c506f9790324956d078a91d9e",
+    "data/processed/passages/NASA_Columbia_CAIB_Vol1.jsonl": "e74ee9763e22f1a554b5dd4ebea2ac4ee6d9506025c7edf61b53cf40f783442a",
+    "data/processed/passages/NASA_DART_MIB_Overview.jsonl": "6590e38c6bf7a95b819df5efbeae9095840c00fa7d1b62c0d6eaddb1000a3de0",
+    "data/processed/passages/NASA_ESA_SOHO_Interruption_Final_Report.jsonl": "1f1b6dd79486a47e095a7151e096e056bfd2f8b2c2751f29fb1b84a44f85d48d",
+    "data/processed/passages/NASA_Genesis_MIB_Report.jsonl": "b869988bb722d419abb67d1e3e555fe8030d573bb7c02291adb2c78022a15abc",
+    "data/processed/passages/NASA_Glory_T9_MIB_Summary.jsonl": "03ad873aa6d887e7529e762f914be6670a569e6bdd27582306c00188f53b9c4f",
+    "data/processed/passages/NASA_IRT_CRS7_Public_Summary.jsonl": "533dd8011dac0ad35762e447148b5d42814cf2d77d9c075e6c4c363d9b221e49",
+    "data/processed/passages/NASA_IRT_Orb3_Executive_Summary.jsonl": "9b9b4735c55a200c5210d3a389f593b0ca847a7292554176cb24ad6539a6058a",
+    "data/processed/passages/NASA_NOAA_NPrime_MIB_Report.jsonl": "ce23af991a1a944bacaa3a32381cb8c272b146196f7a0d664411dd9e8521b340",
+    "data/processed/passages/NASA_OCO_MIB_Summary.jsonl": "6cc1fe63c1ef0ba22e9073dc5f893c83585f9814d54320ba0de511cfea930918",
+    "data/processed/passages/NASA_Starliner_CFT_Propulsion_Anomalies.jsonl": "6e3c13c30502fb48236ea7649deaa81b9939ce2fd162abcf2d68bd724ec4bff4",
+    "data/processed/passages/NASA_TaurusXL_T8_T9_Summary_2019.jsonl": "78c1e6a31bc8f3497e883ad88b0dd0a363e40516225cc95f1f1794cbc8df99bf",
+    "data/processed/passages/NASA_WIRE_MIB_Vol1.jsonl": "e676a24b4d64d824997b04a59d5b4b7e05830f343f89d4879877de162870d838"
+  },
+  "descriptive_overlap": {
+    "B1": {
+      "top10_passage_overlap_with_B3": 0.389,
+      "top5_mission_overlap_with_B3": 0.568
+    },
+    "B2": {
+      "top10_passage_overlap_with_B3": 0.374,
+      "top5_mission_overlap_with_B3": 0.695
+    },
+    "H-whole": {
+      "top10_passage_overlap_with_B3": 0.595,
+      "top5_mission_overlap_with_B3": 0.737
+    },
+    "SF-causes-bm25": {
+      "top10_passage_overlap_with_B3": 0.174,
+      "top5_mission_overlap_with_B3": 0.558
+    },
+    "SF-causes-dense": {
+      "top10_passage_overlap_with_B3": 0.168,
+      "top5_mission_overlap_with_B3": 0.6
+    },
+    "SF-causes-hybrid": {
+      "top10_passage_overlap_with_B3": 0.195,
+      "top5_mission_overlap_with_B3": 0.632
+    },
+    "SF-summary-bm25": {
+      "top10_passage_overlap_with_B3": 0.368,
+      "top5_mission_overlap_with_B3": 0.558
+    },
+    "SF-summary-dense": {
+      "top10_passage_overlap_with_B3": 0.347,
+      "top5_mission_overlap_with_B3": 0.642
+    },
+    "SF-summary-hybrid": {
+      "top10_passage_overlap_with_B3": 0.421,
+      "top5_mission_overlap_with_B3": 0.642
+    }
+  },
+  "B3_top100_field_mix": {
+    "disposition": 861,
+    "summary": 645,
+    "causes": 394
+  }
+}
