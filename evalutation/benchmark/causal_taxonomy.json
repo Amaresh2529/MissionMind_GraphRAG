@@ -1,0 +1,156 @@
+{
+  "version": "0.1-draft",
+  "status": "draft",
+  "drafted_by": "assistant (Claude), 2026-10-13; to be reviewed by the project owner before annotation",
+  "basis": [
+    "NASA HFACS levels (unsafe acts, preconditions, supervision, organisational influences), as used in the NOAA-N Prime and Starliner reports",
+    "technical failure classes used across the corpus' board reports (design, manufacturing, software, test/verification, operations)"
+  ],
+  "roles": {
+    "root": "stated by the board as a root/primary/proximate cause",
+    "contributing": "stated as a contributing/intermediate/significant cause or factor",
+    "observation": "deficiency noted by the board but not stated to have caused the mishap"
+  },
+  "categories": [
+    {
+      "code": "T",
+      "name": "Technical",
+      "children": [
+        {
+          "code": "T1",
+          "name": "Hardware design deficiency",
+          "desc": "design (geometry, materials, margins, redundancy) inadequate for the conditions; e.g. joint design, insulation, fairing separation design"
+        },
+        {
+          "code": "T2",
+          "name": "Software / requirements / specification error",
+          "desc": "flight or ground software fault, wrong requirement, unhandled exception, specification error"
+        },
+        {
+          "code": "T3",
+          "name": "Manufacturing / workmanship / material defect",
+          "desc": "defect introduced in production, assembly, handling or supplier processes"
+        },
+        {
+          "code": "T4",
+          "name": "Interface / integration / heritage-reuse mismatch",
+          "desc": "units mismatch, incompatible interfaces, component reused outside its qualified envelope"
+        },
+        {
+          "code": "T5",
+          "name": "Environmental condition beyond design",
+          "desc": "temperature, debris/foam strike, loads, radiation, atmosphere, thermal environment exceeding what the design tolerated"
+        },
+        {
+          "code": "T6",
+          "name": "Component failure (unexplained / wear / random)",
+          "desc": "part failed without a design or workmanship cause identified (e.g. thruster, valve, battery, gyro)"
+        }
+      ]
+    },
+    {
+      "code": "V",
+      "name": "Verification & validation",
+      "children": [
+        {
+          "code": "V1",
+          "name": "Inadequate testing / qualification",
+          "desc": "tests missing, not representative, not end-to-end, qualification by similarity"
+        },
+        {
+          "code": "V2",
+          "name": "Inadequate analysis / modelling / simulation",
+          "desc": "models, simulations or analyses wrong, missing or not validated"
+        },
+        {
+          "code": "V3",
+          "name": "Inadequate review / independent assessment",
+          "desc": "design/peer/readiness reviews missed the problem; lack of independent verification"
+        }
+      ]
+    },
+    {
+      "code": "O",
+      "name": "Operations",
+      "children": [
+        {
+          "code": "O1",
+          "name": "Procedure deficient or not followed",
+          "desc": "operational/test procedure missing, wrong, or violated"
+        },
+        {
+          "code": "O2",
+          "name": "Operational configuration / parameter / data error",
+          "desc": "wrong command, parameter, uploaded data or configuration state"
+        },
+        {
+          "code": "O3",
+          "name": "Inadequate anomaly response / contingency planning",
+          "desc": "anomaly not recognised or handled; contingency plans missing or not executed"
+        },
+        {
+          "code": "O4",
+          "name": "Inadequate monitoring / telemetry / data use",
+          "desc": "available data not monitored, telemetry gaps, warnings missed"
+        }
+      ]
+    },
+    {
+      "code": "H",
+      "name": "Human factors (individual/team)",
+      "children": [
+        {
+          "code": "H1",
+          "name": "Decision or skill-based error",
+          "desc": "an individual or team made a wrong decision or execution error"
+        },
+        {
+          "code": "H2",
+          "name": "Training / qualification / experience of personnel",
+          "desc": "personnel not trained, inexperienced, or unqualified for the task"
+        },
+        {
+          "code": "H3",
+          "name": "Communication failure",
+          "desc": "information not passed between people, teams, contractor and agency"
+        }
+      ]
+    },
+    {
+      "code": "M",
+      "name": "Management & organisation",
+      "children": [
+        {
+          "code": "M1",
+          "name": "Schedule / cost / launch pressure",
+          "desc": "pressure to meet schedule or budget affected decisions"
+        },
+        {
+          "code": "M2",
+          "name": "Risk acceptance / normalisation of deviance",
+          "desc": "known anomalies accepted as normal; flawed risk assessment; flight rationale based on success"
+        },
+        {
+          "code": "M3",
+          "name": "Safety & mission assurance deficiency",
+          "desc": "safety/quality organisation weak, silent, not independent or absent"
+        },
+        {
+          "code": "M4",
+          "name": "Systems engineering / configuration management deficiency",
+          "desc": "requirements flow-down, configuration control, change management, systems integration process"
+        },
+        {
+          "code": "M5",
+          "name": "Oversight / organisational structure / roles",
+          "desc": "unclear responsibilities, inadequate contractor/government oversight or insight, matrix management issues"
+        },
+        {
+          "code": "M6",
+          "name": "Staffing / resources",
+          "desc": "teams understaffed or spread thin, insufficient resources"
+        }
+      ]
+    }
+  ]
+}
