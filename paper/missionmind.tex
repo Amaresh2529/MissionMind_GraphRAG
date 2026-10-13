@@ -1,0 +1,84 @@
+% MissionMind — IEEE conference manuscript SKELETON (2026-10-13).
+% Every number marked \PENDING{} must come from a reportable run (runs/<eval_id>/...) after the human labels
+% exist. Nothing in this file is a result yet. Compile with the IEEEtran class (e.g. on Overleaf).
+\documentclass[conference]{IEEEtran}
+\usepackage{amsmath,booktabs,url,xcolor}
+\newcommand{\PENDING}[1]{\textcolor{red}{[PENDING: #1]}}
+
+\begin{document}
+\title{MissionMind: A Benchmark and Evidence-Anchored Graph-Augmented Retrieval Study for Cross-Mission Causal Analogy in Spaceflight Mishap Investigation Reports}
+\author{\IEEEauthorblockN{Amaresh Nookala}\IEEEauthorblockA{\PENDING{affiliation}}}
+\maketitle
+
+\begin{abstract}
+Investigation boards for spaceflight mishaps repeatedly identify causal patterns seen in earlier missions,
+yet finding those precedents in long, heterogeneous reports remains manual. We study precedent retrieval and
+grounded root-cause drafting over \PENDING{23} official investigation reports covering 22 missions
+(1967--2024). We (i) reproduce a recent multi-field hybrid retrieval method for accident investigation
+reports~\cite{kim2026} on this domain, documenting all adaptations; (ii) add an evidence-anchored causal-factor
+graph channel whose every edge is tied to a verbatim, page-located quote; and (iii) release a human-labelled
+benchmark for cross-mission causal analogy, passage-level causal-factor extraction and question answering.
+On the primary comparison, mission-level nDCG@5, the graph-augmented method \PENDING{result vs.\ B3 with
+95\% CI and p-value}. \PENDING{one-sentence secondary findings}.
+\end{abstract}
+
+\section{Introduction}
+\PENDING{motivation; gap G1 (no human-judged benchmark for cross-case causal analogy); contributions C1--C3
+stated as above, no novelty claim for the retrieval method itself}
+
+\section{Related Work}
+Multi-field hybrid RAG over accident investigation reports~\cite{kim2026}; causal knowledge graphs from
+aviation accident reports~\cite{xiang2026}; provenance-anchored extraction~\cite{aevs2026}; hybrid graph+BM25
+retrieval for fault diagnosis~\cite{xie2025}; reciprocal rank fusion~\cite{rrf}; HFACS~\cite{hfacs}.
+\PENDING{expand from docs/research/03 and 04 (verified references only)}
+
+\section{Corpus and Benchmark}
+\subsection{Corpus}
+Official reports (NASA, ESA, JAXA, ISRO) with SHA-256 manifest; page-aware passages whose text equals the page
+slice (6,988 passages; provenance verified on all 26 documents). Fields recovered with curated, human-reviewed
+page-range maps (Summary/Causes/Disposition analogue), accuracy \PENDING{held-out field accuracy}.
+\subsection{Labels}
+D2a board-stated factors, D2q query descriptions, D2b graded analogy for 231 pairs, D1 passage factors (200),
+D3 questions (\PENDING{n}). Agreement: \PENDING{$\kappa_w$ on D2b; D1 Jaccard}.
+
+\section{Methods}
+\subsection{Baselines}
+B0 LLM-only; B1 BM25; B2 dense (bge-m3); H-whole; single-field variants; B3 multi-field hybrid with RRF
+($k=60$)~\cite{kim2026}; B3-bal (field-balanced, added after observing field imbalance, before labelling).
+\subsection{Evidence-anchored causal-factor graph (P)}
+Taxonomy of 22 categories; LLM proposals verified deterministically (code, role, verbatim quote located in the
+passage); idf-weighted Jaccard mission analogy; graph list fused with B3 by RRF; citation-constrained
+generation with abstention.
+
+\section{Experimental Setup}
+Leave-one-mission-out; pre-registered primary test (paired permutation, bootstrap CI); Holm correction for
+secondary comparisons; local llama3-8B generator; all outputs cached; independent audit.
+
+\section{Results}
+\begin{table}[t]\centering\caption{Mission-level retrieval (T1, $n=22$ queries)}
+\begin{tabular}{lccc}\toprule System & nDCG@5 & R@5 & MRR\\\midrule
+B1 & \PENDING{} & \PENDING{} & \PENDING{}\\
+B2 & \PENDING{} & \PENDING{} & \PENDING{}\\
+B3 & \PENDING{} & \PENDING{} & \PENDING{}\\
+B3-bal & \PENDING{} & \PENDING{} & \PENDING{}\\
+P & \PENDING{} & \PENDING{} & \PENDING{}\\\bottomrule\end{tabular}\end{table}
+\PENDING{passage-level NormRecall@100/nDCG@100; ablations; extraction P/R/F1 verified vs.\ unverified;
+D3 key-point recall, citation precision, abstention; judge--human agreement}
+
+\section{Discussion and Limitations}
+Small number of query missions (low power); eleven of 23 documents are summaries or press releases; 8B
+generator not reproducible across sessions (outputs cached); taxonomy and labels by a small team;
+\PENDING{findings-specific limitations}.
+
+\section{Conclusion}
+\PENDING{}
+
+\begin{thebibliography}{9}
+\bibitem{kim2026} S.~Kim and S.~Kim, ``Multi-field hybrid retrieval-augmented generation for maritime accident root cause analysis,'' in \emph{Proc.\ IEEE CASE}, 2026, pp.~238--243, doi: 10.1109/CASE69030.2026.11704480.
+\bibitem{xiang2026} X.~Xiang, X.~Chen, and J.~Yang, \emph{Aerospace}, vol.~13, no.~1, Art.~16, 2026, doi: 10.3390/aerospace13010016. \PENDING{full title from docs/research/04}
+\bibitem{aevs2026} Y.~Yang, G.~Chen, B.~He, and Y.~Zhao, \emph{Computers}, vol.~15, no.~3, Art.~178, 2026, doi: 10.3390/computers15030178. \PENDING{full title}
+\bibitem{xie2025} X.~Xie, X.~Tang, S.~Gu, and L.~Cui, \emph{Sci.\ Rep.}, vol.~15, Art.~17752, 2025, doi: 10.1038/s41598-025-02643-2. \PENDING{full title}
+\bibitem{rrf} G.~V.~Cormack, C.~L.~A.~Clarke, and S.~Buettcher, ``Reciprocal rank fusion outperforms Condorcet and individual rank learning methods,'' in \emph{Proc.\ SIGIR}, 2009, pp.~758--759.
+\bibitem{hfacs} S.~A.~Shappell and D.~A.~Wiegmann, ``The human factors analysis and classification system---HFACS,'' DOT/FAA/AM-00/7, 2000.
+\end{thebibliography}
+\end{document}
