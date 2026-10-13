@@ -44,6 +44,8 @@ def main(argv=None):
     ap.add_argument("--proposed", nargs="*", default=[],
                     choices=["P", "P-noverif", "P-nofields", "P-graphonly", "P-noidf"],
                     help="Stage 4 method and ablations (need data/processed/factors from extract_factors.py)")
+    ap.add_argument("--qa", nargs="*", default=[], choices=["B0", "B3", "P"],
+                    help="answer the queries as D3 questions (QA schema) with these systems")
     ap.add_argument("--allow-draft-fields", action="store_true")
     args = ap.parse_args(argv)
 
@@ -158,6 +160,36 @@ def main(argv=None):
                 with open(run / "generation" / f"{g}.jsonl", "w", encoding="utf-8") as f:
                     for r in rows:
                         f.write(json.dumps(r, ensure_ascii=False) + "\n")
+        if args.qa:
+            from extension import qa
+            if embedder is not None and hasattr(embedder, "model"):
+                import torch
+                del embedder.model
+                torch.cuda.empty_cache()
+            (run / "qa").mkdir(exist_ok=True)
+            units_by_id = {u.id: u for u in units}
+            for s_ in args.qa:
+                if s_ != "B0" and s_ not in results:
+                    print(f"QA with {s_} needs {s_} retrieval in this run; skipped")
+                    continue
+                with timer.step(f"qa_{s_}"):
+                    rows = []
+                    for qi, q in enumerate(queries):
+                        kw = {}
+                        if s_ in ("B3", "P"):
+                            kw = {"passages": results[s_][qi]["passages"], "units_by_id": units_by_id}
+                        if s_ == "P":
+                            pr = results["P"][qi]
+                            prof = prop.variants["verified"]["profiles"]
+                            qc = qfs[q["query_id"]].codes
+                            kw |= {"graph": pr["graph"], "code_names": {c: v["name"] for c, v in fx.codes().items()},
+                                   "mission_evidence": {m: {c: [e["passage_id"] for e in prof[m][c]["evidence"]]
+                                                            for c in qc & set(prof[m])} for m in pr["graph"]["mission_analogy"]}}
+                        rows.append({"query_id": q["query_id"], **qa.answer(s_, q["text"], **kw)})
+                with open(run / "qa" / f"{s_}.jsonl", "w", encoding="utf-8") as f:
+                    for r in rows:
+                        f.write(json.dumps(r, ensure_ascii=False) + chr(10))
+                print(f"QA {s_}: {len(rows)} answers, abstained={sum(bool((r['answer'] or {}).get('abstain')) for r in rows)}")
         write_json(run / "timings.json", timer.timings)
     return 0
 
