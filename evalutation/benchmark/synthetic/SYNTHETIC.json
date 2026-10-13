@@ -1,0 +1,26 @@
+{
+ "SYNTHETIC": true,
+ "not_reportable": true,
+ "created": "2026-10-13",
+ "requested_by": "project owner",
+ "method": "keyword rules + templates; no LLM; independent of the P extractor",
+ "known_bias": "D2q queries are copied report sentences (favours lexical retrieval); keyword factors are coarse",
+ "counts": {
+  "D2a_rows": 109,
+  "D2b_pairs": 231,
+  "grade_hist": {
+   "1": 97,
+   "0": 56,
+   "2": 43,
+   "3": 35
+  },
+  "D2q": 22,
+  "D1_with_factor": 49,
+  "D3": {
+   "single": 17,
+   "cross": 15,
+   "lesson": 10,
+   "unanswerable": 10
+  }
+ }
+}

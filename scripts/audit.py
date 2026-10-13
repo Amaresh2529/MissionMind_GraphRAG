@@ -59,6 +59,7 @@ def main(argv=None):
     ap.add_argument("--run", required=True)
     ap.add_argument("--eval", default=None)
     ap.add_argument("--out", required=True)
+    ap.add_argument("--labels", default=str(ROOT / "evalutation" / "benchmark"))
     args = ap.parse_args(argv)
     run = Path(args.run)
     man = {d["doc_id"]: d for d in json.loads((ROOT / "data" / "manifest.json").read_text(encoding="utf-8"))["documents"]}
@@ -126,7 +127,8 @@ def main(argv=None):
 
     if args.eval:
         ev = json.loads((Path(args.eval) / "per_query.json").read_text(encoding="utf-8"))
-        rows = list(csv.DictReader(open(ROOT / "evalutation" / "benchmark" / "D2b_mission_pairs.csv", encoding="utf-8-sig")))
+        rows = list(csv.DictReader(open(Path(args.labels) / "D2b_mission_pairs.csv", encoding="utf-8-sig")))
+        rep["A5_labels_dir"] = args.labels
         grade = {frozenset((r["mission_a"], r["mission_b"])): int(r["grade"]) for r in rows if r["grade"].strip()}
         missions = sorted({r["mission_a"] for r in rows} | {r["mission_b"] for r in rows})
         mism = []

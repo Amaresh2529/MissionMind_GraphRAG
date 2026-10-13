@@ -46,9 +46,10 @@ def main(argv=None):
     ap = argparse.ArgumentParser()
     ap.add_argument("--run", required=True)
     ap.add_argument("--eval-id", required=True)
+    ap.add_argument("--labels", default=None)
     args = ap.parse_args(argv)
     run = Path(args.run)
-    labels = Labels(require_complete=False)
+    labels = Labels(Path(args.labels), require_complete=False) if args.labels else Labels(require_complete=False)
     qs = {r["qid"]: r for r in labels.questions_d3()}
     if not qs:
         print("REFUSED: D3 questions not written")
@@ -94,7 +95,8 @@ def main(argv=None):
             comps[f"{a} vs {b} [key_point_recall]"] = {"permutation": S.paired_permutation(va, vb),
                                                        "bootstrap95": S.bootstrap_ci(va, vb)}
     out = new_run_dir(args.eval_id, prefix="eval_answers")
-    write_json(out / "answer_metrics.json", {"run": str(run), "judge": "local LLM (see env), yes/no per key point",
+    write_json(out / "answer_metrics.json", {"SYNTHETIC_LABELS_NOT_REPORTABLE": labels.synthetic,
+                                             "labels_dir": str(labels.base), "run": str(run), "judge": "local LLM (see env), yes/no per key point",
                                              "d3_sha256": hashlib.sha256((labels.base / "D3_questions.csv").read_bytes()).hexdigest(),
                                              "results": results, "comparisons": comps})
     write_json(out / "per_question.json", per_q)

@@ -36,6 +36,7 @@ def _codes(s: str) -> set[str]:
 class Labels:
     def __init__(self, base: Path = B, require_complete: bool = True):
         self.base = base
+        self.synthetic = (base / "SYNTHETIC.json").exists()      # pseudo-labels: results are never reportable
         d2b = _rows("D2b_mission_pairs.csv", base)
         missing = [r["pair_id"] for r in d2b if not r["grade"].strip()]
         if require_complete and missing:

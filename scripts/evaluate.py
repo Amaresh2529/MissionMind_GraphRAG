@@ -104,6 +104,8 @@ def main(argv=None):
         return 2
     cfg = json.loads((run / "config.json").read_text(encoding="utf-8"))
     problems = []
+    if labels.synthetic:
+        problems.append("SYNTHETIC pseudo-labels (evalutation/benchmark/synthetic): proof of concept only")
     if cfg.get("dev_run"):
         problems.append("retrieval run is a DEV run (draft field maps or automatic queries)")
     try:
@@ -123,7 +125,8 @@ def main(argv=None):
         units_by_page.setdefault((u.doc_id, u.page), []).append(u.id)
     per_query, summary = evaluate_run(run, labels, units_by_page)
     out = new_run_dir(args.eval_id, prefix="eval")
-    write_json(out / "metrics.json", {"DEV_NOT_REPORTABLE": bool(problems), "problems": problems, "run": str(run),
+    write_json(out / "metrics.json", {"DEV_NOT_REPORTABLE": bool(problems), "SYNTHETIC_LABELS_NOT_REPORTABLE": labels.synthetic,
+                                      "labels_dir": str(labels.base), "problems": problems, "run": str(run),
                                       "labels_sha256": {p.name: hashlib.sha256(p.read_bytes()).hexdigest()
                                                         for p in sorted(labels.base.glob("*.csv"))},
                                       "summary": summary})

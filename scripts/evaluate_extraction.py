@@ -62,9 +62,11 @@ def main(argv=None):
     ap = argparse.ArgumentParser()
     ap.add_argument("--eval-id", required=True)
     ap.add_argument("--dev", action="store_true")
+    ap.add_argument("--labels", default=None)
     args = ap.parse_args(argv)
     try:
-        gold, none = Labels(require_complete=False).d1()
+        lab = Labels(Path(args.labels), require_complete=False) if args.labels else Labels(require_complete=False)
+        gold, none = lab.d1()
     except IncompleteLabels as err:
         print("REFUSED: human labels incomplete:", err)
         return 2
@@ -74,8 +76,12 @@ def main(argv=None):
         res[v] = {"code": score(gold, pred, False), "code+role": score(gold, pred, True),
                   "has_factor_accuracy": sum(bool(pred.get(p)) == bool(gold[p]) for p in gold) / len(gold),
                   "f1_bootstrap95": bootstrap_f1(gold, pred)}
+    if lab.synthetic and not args.dev:
+        print("REFUSED: synthetic labels need --dev")
+        return 2
     out = new_run_dir(args.eval_id, prefix="eval_extraction")
-    write_json(out / "extraction_metrics.json", {"n_passages": len(gold), "gold_no_factor": len(none),
+    write_json(out / "extraction_metrics.json", {"SYNTHETIC_LABELS_NOT_REPORTABLE": lab.synthetic, "labels_dir": str(lab.base),
+                                                 "n_passages": len(gold), "gold_no_factor": len(none),
                                                  "passages_not_extracted": missing, "results": res})
     for v, r in res.items():
         print(v, {k: round(r["code"][k], 3) for k in ("precision", "recall", "f1")}, "CI", r["f1_bootstrap95"])
