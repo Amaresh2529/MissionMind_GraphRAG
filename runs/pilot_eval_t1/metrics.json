@@ -1,0 +1,201 @@
+{
+  "DEV_NOT_REPORTABLE": false,
+  "SYNTHETIC_LABELS_NOT_REPORTABLE": false,
+  "PILOT_HUMAN_LABELS": true,
+  "labelled_missions": [
+    "apollo13",
+    "ariane5-501",
+    "genesis",
+    "hitomi",
+    "mars-climate-orbiter",
+    "soho-1998",
+    "starliner-cft",
+    "sts-107-columbia",
+    "sts-51l-challenger",
+    "wire"
+  ],
+  "limitations": [
+    "field maps are drafts (not yet human-reviewed)"
+  ],
+  "labels_dir": "evalutation\\benchmark\\pilot",
+  "problems": [],
+  "run": "runs\\pilot_t1",
+  "labels_sha256": {
+    "D2a_mission_factors.csv": "0c74934f01e506d976bdc057b53d0900d68ad59455de72c64d2546c9f321297a",
+    "D2a_mission_factors.owner_original.csv": "9858b1efea6b761303055cd7f8f13e0343be08ea6dc860061de763dc3a2dc901",
+    "D2b_mission_pairs.csv": "553044466a37ea4e78e634f697ddaa8ea52cd884f1f34e3384f41984ff27f348",
+    "D2q_query_descriptions.csv": "a25f5458d13e03cf4703c5eaf729e109ca664f675aba61461e6c1c4b06ecff28"
+  },
+  "summary": {
+    "B1": {
+      "mission_ndcg@5": 0.6436714775680186,
+      "mission_ndcg@10": 0.8307196858622307,
+      "mission_recall@5": 0.5353571428571429,
+      "mission_mrr": 0.8333333333333334,
+      "passage_normrecall@100": 0.02227272727272727,
+      "passage_ndcg@100": 0.01454688305663871,
+      "queries": 10,
+      "queries_defined_ndcg@5": 10
+    },
+    "B2": {
+      "mission_ndcg@5": 0.6437931404563391,
+      "mission_ndcg@10": 0.8059804833543278,
+      "mission_recall@5": 0.5713095238095238,
+      "mission_mrr": 0.7333333333333333,
+      "passage_normrecall@100": 0.046951316091283335,
+      "passage_ndcg@100": 0.03104085820611303,
+      "queries": 10,
+      "queries_defined_ndcg@5": 10
+    },
+    "B3-bal": {
+      "mission_ndcg@5": 0.641937106066007,
+      "mission_ndcg@10": 0.8283456204476828,
+      "mission_recall@5": 0.5153571428571428,
+      "mission_mrr": 0.9,
+      "passage_normrecall@100": 0.03450677577037632,
+      "passage_ndcg@100": 0.02405555759505844,
+      "queries": 10,
+      "queries_defined_ndcg@5": 10
+    },
+    "B3": {
+      "mission_ndcg@5": 0.6476289818782355,
+      "mission_ndcg@10": 0.8003449910462658,
+      "mission_recall@5": 0.5796428571428571,
+      "mission_mrr": 0.7333333333333333,
+      "passage_normrecall@100": 0.018686371100164204,
+      "passage_ndcg@100": 0.010648658761382875,
+      "queries": 10,
+      "queries_defined_ndcg@5": 10
+    },
+    "H-whole": {
+      "mission_ndcg@5": 0.6577107590035522,
+      "mission_ndcg@10": 0.8258211458148021,
+      "mission_recall@5": 0.5570238095238096,
+      "mission_mrr": 0.85,
+      "passage_normrecall@100": 0.029887300252312864,
+      "passage_ndcg@100": 0.019373168395535212,
+      "queries": 10,
+      "queries_defined_ndcg@5": 10
+    },
+    "P-graphonly": {
+      "mission_ndcg@5": 0.7131438124763869,
+      "mission_ndcg@10": 0.8596642115485078,
+      "mission_recall@5": 0.5980952380952381,
+      "mission_mrr": 0.8833333333333334,
+      "passage_normrecall@100": 0.056195825407237034,
+      "passage_ndcg@100": 0.05335467884015934,
+      "queries": 10,
+      "queries_defined_ndcg@5": 10
+    },
+    "P-nofields": {
+      "mission_ndcg@5": 0.6296478368433849,
+      "mission_ndcg@10": 0.804402050372181,
+      "mission_recall@5": 0.5403571428571429,
+      "mission_mrr": 0.7833333333333333,
+      "passage_normrecall@100": 0.03990193658318132,
+      "passage_ndcg@100": 0.025521920789906137,
+      "queries": 10,
+      "queries_defined_ndcg@5": 10
+    },
+    "P-noidf": {
+      "mission_ndcg@5": 0.6375813002730594,
+      "mission_ndcg@10": 0.8161565726596081,
+      "mission_recall@5": 0.5403571428571429,
+      "mission_mrr": 0.8333333333333334,
+      "passage_normrecall@100": 0.022686371100164204,
+      "passage_ndcg@100": 0.011768820158069402,
+      "queries": 10,
+      "queries_defined_ndcg@5": 10
+    },
+    "P-noprf": {
+      "mission_ndcg@5": 0.6376709593990058,
+      "mission_ndcg@10": 0.8111531160261649,
+      "mission_recall@5": 0.5546428571428572,
+      "mission_mrr": 0.7833333333333333,
+      "passage_normrecall@100": 0.02213464696223317,
+      "passage_ndcg@100": 0.013121831932643388,
+      "queries": 10,
+      "queries_defined_ndcg@5": 10
+    },
+    "P-noverif": {
+      "mission_ndcg@5": 0.6722841284704069,
+      "mission_ndcg@10": 0.831472724959154,
+      "mission_recall@5": 0.5546428571428572,
+      "mission_mrr": 0.9,
+      "passage_normrecall@100": 0.018686371100164204,
+      "passage_ndcg@100": 0.010621901098979059,
+      "queries": 10,
+      "queries_defined_ndcg@5": 10
+    },
+    "P": {
+      "mission_ndcg@5": 0.6375813002730594,
+      "mission_ndcg@10": 0.8161565726596081,
+      "mission_recall@5": 0.5403571428571429,
+      "mission_mrr": 0.8333333333333334,
+      "passage_normrecall@100": 0.022686371100164204,
+      "passage_ndcg@100": 0.011747615503088112,
+      "queries": 10,
+      "queries_defined_ndcg@5": 10
+    },
+    "SF-causes-bm25": {
+      "mission_ndcg@5": 0.6076726362982713,
+      "mission_ndcg@10": 0.7925978423952169,
+      "mission_recall@5": 0.5189285714285714,
+      "mission_mrr": 0.7666666666666667,
+      "passage_normrecall@100": 0.03014792409573517,
+      "passage_ndcg@100": 0.021151413708751978,
+      "queries": 10,
+      "queries_defined_ndcg@5": 10
+    },
+    "SF-causes-dense": {
+      "mission_ndcg@5": 0.6550762173781053,
+      "mission_ndcg@10": 0.8138617107674214,
+      "mission_recall@5": 0.5713095238095238,
+      "mission_mrr": 0.8166666666666667,
+      "passage_normrecall@100": 0.052052532508731875,
+      "passage_ndcg@100": 0.03795453459012908,
+      "queries": 10,
+      "queries_defined_ndcg@5": 10
+    },
+    "SF-causes-hybrid": {
+      "mission_ndcg@5": 0.641937106066007,
+      "mission_ndcg@10": 0.8283456204476828,
+      "mission_recall@5": 0.5153571428571428,
+      "mission_mrr": 0.9,
+      "passage_normrecall@100": 0.03926868053228108,
+      "passage_ndcg@100": 0.026790888606167445,
+      "queries": 10,
+      "queries_defined_ndcg@5": 10
+    },
+    "SF-summary-bm25": {
+      "mission_ndcg@5": 0.6046396306004247,
+      "mission_ndcg@10": 0.799222165244059,
+      "mission_recall@5": 0.5153571428571428,
+      "mission_mrr": 0.7333333333333333,
+      "passage_normrecall@100": 0.023982538347550965,
+      "passage_ndcg@100": 0.013304374621206944,
+      "queries": 10,
+      "queries_defined_ndcg@5": 10
+    },
+    "SF-summary-dense": {
+      "mission_ndcg@5": 0.6428409323313649,
+      "mission_ndcg@10": 0.8117586742867351,
+      "mission_recall@5": 0.5605952380952381,
+      "mission_mrr": 0.7333333333333333,
+      "passage_normrecall@100": 0.041326910249091645,
+      "passage_ndcg@100": 0.024300556616263715,
+      "queries": 10,
+      "queries_defined_ndcg@5": 10
+    },
+    "SF-summary-hybrid": {
+      "mission_ndcg@5": 0.6750845297117292,
+      "mission_ndcg@10": 0.8352058941955033,
+      "mission_recall@5": 0.5639285714285714,
+      "mission_mrr": 0.8333333333333334,
+      "passage_normrecall@100": 0.03877414481995952,
+      "passage_ndcg@100": 0.022112516714317756,
+      "queries": 10,
+      "queries_defined_ndcg@5": 10
+    }
+  }
+}

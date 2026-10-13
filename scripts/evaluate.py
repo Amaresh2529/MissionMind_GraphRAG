@@ -139,7 +139,9 @@ def main(argv=None):
     per_query, summary = evaluate_run(run, labels, units_by_page, missions_of)
     out = new_run_dir(args.eval_id, prefix="eval")
     write_json(out / "metrics.json", {"DEV_NOT_REPORTABLE": bool(problems), "SYNTHETIC_LABELS_NOT_REPORTABLE": labels.synthetic,
-                                      "PILOT_HUMAN_LABELS": pilot, "labelled_missions": labels.missions,
+                                      "PILOT": pilot, "pilot_labels_by": (json.loads((labels.base / "PILOT.json").read_text(
+                                          encoding="utf-8")).get("labels_by") if pilot else None),
+                                      "labelled_missions": labels.missions,
                                       "limitations": limitations,
                                       "labels_dir": str(labels.base), "problems": problems, "run": str(run),
                                       "labels_sha256": {p.name: hashlib.sha256(p.read_bytes()).hexdigest()
