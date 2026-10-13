@@ -11,12 +11,14 @@ fused order is deterministic.
 K_RRF = 60
 
 
-def rrf(rankings: dict[str, list], k: int = K_RRF) -> list[tuple]:
-    """rankings: {list_name: [item_id, ...] best first}. Returns [(item_id, score, {list_name: rank})]."""
+def rrf(rankings: dict[str, list], k: int = K_RRF, weights: dict[str, float] | None = None) -> list[tuple]:
+    """rankings: {list_name: [item_id, ...] best first}. Returns [(item_id, score, {list_name: rank})].
+    weights: optional per-list multipliers (default 1; used only by the field-balanced B3 variant)."""
     scores, ranks = {}, {}
     for name, items in rankings.items():
+        w = 1.0 if weights is None else weights.get(name, 1.0)
         for r, item in enumerate(items, 1):
-            scores[item] = scores.get(item, 0.0) + 1.0 / (k + r)
+            scores[item] = scores.get(item, 0.0) + w / (k + r)
             ranks.setdefault(item, {})[name] = r
     order = sorted(scores, key=lambda i: (-scores[i], min(ranks[i].values()), i))
     return [(i, scores[i], ranks[i]) for i in order]

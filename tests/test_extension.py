@@ -1,0 +1,97 @@
+"""Stage 4: evidence verification, factor graph, graph channel, citation enforcement (no LLM, no DB)."""
+import math
+
+import pytest
+
+from extension import factor_graph as fg
+from extension.factor_extractor import codes, locate_quote, verify
+from extension.grounded_generation import enforce
+from extension.proposed import ProposedRetriever, QueryFactors
+from retrieval.corpus import Unit
+from retrieval.systems import Retriever
+
+TEXT = "The Board found that the O-ring  seals were never tested at\nlow temperature before flight."
+
+
+def test_locate_quote_normalises_whitespace_case_and_maps_back():
+    span = locate_quote(TEXT, "o-ring seals were never tested at low temperature")
+    assert span is not None
+    assert TEXT[span[0]:span[1]] == "O-ring  seals were never tested at\nlow temperature"
+    assert locate_quote(TEXT, "seals were tested at high temperature") is None
+
+
+def test_verify_rules():
+    valid = set(codes())
+    ok, reason, _ = verify({"code": "V1", "role": "root", "quote": "seals were never tested at low temperature"}, TEXT, valid)
+    assert ok and reason == "ok"
+    assert verify({"code": "X9", "role": "root", "quote": "seals were never tested at low"}, TEXT, valid)[1] == "bad_code"
+    assert verify({"code": "V1", "role": "maybe", "quote": "seals were never tested at low"}, TEXT, valid)[1] == "bad_role"
+    assert verify({"code": "V1", "role": "root", "quote": "never tested"}, TEXT, valid)[1] == "quote_too_short"
+    assert verify({"code": "V1", "role": "root", "quote": "the board invented this quote here"}, TEXT, valid)[1] == "quote_not_in_passage"
+
+
+def test_taxonomy_has_22_codes():
+    assert len(codes()) == 22
+
+
+def _m(pid, missions, code, role):
+    return {"passage_id": pid, "doc_id": pid.split("::")[0], "page": 1, "missions": missions, "code": code,
+            "role": role, "statement": "", "quote": "q", "char_start": 0, "char_end": 1}
+
+
+MENTIONS = [
+    _m("Da::p0001::00", ["a"], "V1", "root"), _m("Da::p0001::00", ["a"], "M2", "contributing"),
+    _m("Db::p0001::00", ["b"], "V1", "contributing"), _m("Db::p0002::00", ["b"], "T5", "root"),
+    _m("Dc::p0001::00", ["c"], "M2", "root"), _m("Dc::p0002::00", ["c"], "V1", "observation"),
+    _m("Dd::p0001::00", ["d"], "T2", "root"),
+]
+
+
+def test_profiles_idf_and_analogy():
+    prof = fg.profiles(MENTIONS)
+    assert set(prof) == {"a", "b", "c", "d"} and set(prof["a"]) == {"V1", "M2"}
+    w = fg.idf(prof)
+    assert w["V1"] == pytest.approx(math.log(4 / 3) + 1) and w["T2"] == pytest.approx(math.log(4) + 1)
+    assert fg.analogy({"V1", "M2"}, {"V1", "M2"}, w) == 1.0
+    assert fg.analogy({"V1"}, {"T2"}, w) == 0.0
+    expected = w["V1"] / (w["V1"] + w["M2"] + w["T5"])
+    assert fg.analogy({"V1", "M2"}, {"V1", "T5"}, w) == pytest.approx(expected)
+
+
+def _unit(pid, mission):
+    return Unit(pid, pid.split("::")[0], (mission,), "causes", 1, 0, 10, None, f"text of {pid} seal test")
+
+
+@pytest.fixture
+def prop():
+    units = [_unit(p, p[1]) for p in ["Da::p0001::00", "Db::p0001::00", "Db::p0002::00", "Dc::p0001::00",
+                                      "Dc::p0002::00", "Dd::p0001::00"]]
+    return ProposedRetriever(Retriever(units, None), MENTIONS)
+
+
+def test_graph_list_orders_by_analogy_then_role_and_excludes_query_mission(prop):
+    qf = QueryFactors({"V1", "M2"}, [], [])
+    allowed = prop.base.allowed({"a"})
+    glist, scores = prop.graph_list(qf, allowed, {"a"})
+    ids = [prop.base.units[i].id for i in glist]
+    assert "a" not in scores and set(scores) == {"b", "c"}
+    assert scores["c"] > scores["b"]                       # c shares V1 and M2, b only V1
+    assert ids == ["Dc::p0001::00", "Dc::p0002::00", "Db::p0001::00"]   # c first; root before observation
+
+
+def test_empty_query_factors_fall_back(prop):
+    qf = QueryFactors(set(), [], [])
+    glist, scores = prop.graph_list(qf, prop.base.allowed(set()), set())
+    assert glist == [] and scores == {}
+
+
+def test_enforce_drops_uncited_and_abstains():
+    ans = {"probable_root_causes": [{"cause": "x", "evidence": ["C1", "C9"]}, {"cause": "y", "evidence": []}],
+           "contributing_factors": [], "similar_precedents": [], "recommended_actions": [{"action": "z", "evidence": ["C7"]}]}
+    out, st = enforce(ans, {"C1", "C2"})
+    assert out["probable_root_causes"] == [{"cause": "x", "evidence": ["C1"]}]
+    assert out["recommended_actions"] == [] and st == {"abstain": False, "dropped_items": 2, "removed_citations": 2}
+    out2, st2 = enforce({k: [] for k in ("probable_root_causes", "contributing_factors", "similar_precedents",
+                                         "recommended_actions")}, {"C1"})
+    assert st2["abstain"] and "abstained" in out2
+    assert enforce(None, set())[1]["abstain"]

@@ -26,13 +26,24 @@ from retrieval.corpus import FIELDS, load_units, missions  # noqa: E402
 from retrieval.queries import QUERY_WORDS, dev_queries, load_queries  # noqa: E402
 
 
+def _exclusions(q: dict) -> set[str]:
+    """T1 queries exclude their own mission (leave-one-mission-out); D3 questions set
+    "exclude_missions": [] because they may ask about any mission."""
+    if "exclude_missions" in q:
+        return set(q["exclude_missions"])
+    return {q["mission"]} if q.get("mission") else set()
+
+
 def main(argv=None):
     ap = argparse.ArgumentParser()
     ap.add_argument("--run-id", required=True)
     ap.add_argument("--systems", nargs="*", default=list(systems.SYSTEMS))
     ap.add_argument("--queries", default=None, help="jsonl with query_id, mission, text; default: automatic dev queries")
     ap.add_argument("--embedder", default=dense.DEFAULT_MODEL, help="model name, or 'none' for BM25-only runs")
-    ap.add_argument("--generate", nargs="*", default=[], choices=["B3", "B0"])
+    ap.add_argument("--generate", nargs="*", default=[], choices=["B3", "B0", "P"])
+    ap.add_argument("--proposed", nargs="*", default=[],
+                    choices=["P", "P-noverif", "P-nofields", "P-graphonly", "P-noidf"],
+                    help="Stage 4 method and ablations (need data/processed/factors from extract_factors.py)")
     ap.add_argument("--allow-draft-fields", action="store_true")
     args = ap.parse_args(argv)
 
@@ -75,18 +86,46 @@ def main(argv=None):
             for q in queries:
                 f.write(json.dumps(q, ensure_ascii=False) + "\n")
         (run / "predictions").mkdir()
-        results = {}
+        results, prop, qfs = {}, None, {}
+        if args.proposed:
+            from extension import factor_extractor as fx, factor_graph as fg
+            from extension.proposed import ProposedRetriever, query_factors
+            valid = set(fx.codes())
+            prop = ProposedRetriever(retriever, fg.load_mentions(),
+                                     fg.load_mentions(include_rejected=True, valid_codes=valid))
+            with timer.step("query_factors"):
+                for q in queries:
+                    qfs[q["query_id"]] = query_factors(q["text"], fx.extract)
+            with open(run / "query_factors.jsonl", "w", encoding="utf-8") as f:
+                for qid, qf in qfs.items():
+                    f.write(json.dumps({"query_id": qid, "codes": sorted(qf.codes), "accepted": qf.accepted,
+                                        "rejected": qf.rejected}, ensure_ascii=False) + "\n")
+            write_json(run / "factor_graph_stats.json", {
+                v: {"missions": len(d["profiles"]), "mentions": sum(len(e["evidence"]) for p_ in d["profiles"].values() for e in p_.values()),
+                    "codes_per_mission": {m: sorted(p_) for m, p_ in d["profiles"].items()},
+                    "idf": {c: round(x, 4) for c, x in sorted(d["idf"].items())}}
+                for v, d in prop.variants.items()})
         for cfg in cfgs:
             with timer.step(f"search_{cfg.id}"):
                 rows = []
                 for q in queries:
-                    r = retriever.search(cfg, q["text"], exclude_missions={q["mission"]})
+                    r = retriever.search(cfg, q["text"], exclude_missions=_exclusions(q))
                     rows.append({"query_id": q["query_id"], "mission": q["mission"], **r})
             results[cfg.id] = rows
             with open(run / "predictions" / f"{cfg.id}.jsonl", "w", encoding="utf-8") as f:
                 for r in rows:
                     f.write(json.dumps(r) + "\n")
             print(f"{cfg.id:18s} {len(rows)} queries, lists={rows[0]['lists'] if rows else []}")
+        for sid in args.proposed:
+            with timer.step(f"search_{sid}"):
+                rows = [{"query_id": q["query_id"], "mission": q["mission"],
+                         **prop.search(sid, q["text"], qfs[q["query_id"]], exclude_missions=_exclusions(q))}
+                        for q in queries]
+            results[sid] = rows
+            with open(run / "predictions" / f"{sid}.jsonl", "w", encoding="utf-8") as f:
+                for r in rows:
+                    f.write(json.dumps(r) + "\n")
+            print(f"{sid:18s} {len(rows)} queries, fallback_to_B3={sum(r['graph']['fallback_to_base'] for r in rows)}")
         if args.generate:
             if embedder is not None:          # free GPU memory for the local LLM (8 GB card)
                 import torch
@@ -95,14 +134,24 @@ def main(argv=None):
             (run / "generation").mkdir()
             units_by_id = {u.id: u for u in units}
             for g in args.generate:
-                if g == "B3" and "B3" not in results:
-                    print("B3 generation needs B3 retrieval in this run; skipped")
+                if g in ("B3", "P") and g not in results:
+                    print(f"{g} generation needs {g} retrieval in this run; skipped")
                     continue
                 with timer.step(f"generate_{g}"):
                     rows = []
                     for qi, q in enumerate(queries):
-                        passages = results["B3"][qi]["passages"] if g == "B3" else None
-                        out = rca_generation.draft_rca(q["text"], passages, units_by_id)
+                        if g == "P":
+                            from extension.grounded_generation import draft_rca_p
+                            pr = results["P"][qi]
+                            prof = prop.variants["verified"]["profiles"]
+                            qc = qfs[q["query_id"]].codes
+                            mev = {m: {c: [e["passage_id"] for e in prof[m][c]["evidence"]] for c in qc & set(prof[m])}
+                                   for m in pr["graph"]["mission_analogy"]}
+                            names = {c: v["name"] for c, v in fx.codes().items()}
+                            out = draft_rca_p(q["text"], pr["passages"], units_by_id, pr["graph"], names, mev)
+                        else:
+                            passages = results["B3"][qi]["passages"] if g == "B3" else None
+                            out = rca_generation.draft_rca(q["text"], passages, units_by_id)
                         rows.append({"query_id": q["query_id"], "mission": q["mission"], "system": g, **out})
                         print(f"  {g} {q['query_id']}: chunks={out['chunks_used']} schema_ok={out['checks']['schema_ok']} "
                               f"invalid_cites={out['checks']['invalid_citations']} cached={out['cached']}")

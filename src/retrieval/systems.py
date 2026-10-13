@@ -36,6 +36,7 @@ class SystemConfig:
     id: str
     fields: tuple[str, ...] | None     # None = whole (single index over all fields)
     methods: tuple[str, ...]           # "bm25", "dense"
+    field_balanced: bool = False       # B3-bal: each field's lists weighted by the field's share of units
 
 
 def _sf(field: str) -> list[SystemConfig]:
@@ -50,6 +51,10 @@ SYSTEMS = {c.id: c for c in [
     SystemConfig("H-whole", None, ("bm25", "dense")),
     *_sf("summary"), *_sf("causes"),
     SystemConfig("B3", FIELDS, ("bm25", "dense")),
+    # Secondary baseline (decided 2026-10-13, before any test label exists): Stage 3 found B3's top-100
+    # dominated by the 187-unit Disposition field; here each field's RRF contribution is multiplied by
+    # 3 * n_field / n_total, so fields count in proportion to their size (weights average to 1).
+    SystemConfig("B3-bal", FIELDS, ("bm25", "dense"), field_balanced=True),
 ]}
 
 
@@ -86,15 +91,26 @@ class Retriever:
                 out[f"{f}/{method}"] = [i for i, _ in ranked]
         return out
 
+    def allowed(self, exclude_missions: set[str]) -> set[int]:
+        return {i for i, u in enumerate(self.units) if not exclude_missions.intersection(u.missions)}
+
+    def field_weights(self, lists: dict[str, list]) -> dict[str, float]:
+        n = len(self.units)
+        return {name: len(FIELDS) * len(self.field_members[name.split("/")[0]]) / n
+                for name in lists if name.split("/")[0] in self.field_members}
+
     def search(self, cfg: SystemConfig, query: str, exclude_missions: set[str] = frozenset(),
                k: int = TOP_K) -> dict:
-        allowed = {i for i, u in enumerate(self.units) if not exclude_missions.intersection(u.missions)}
-        lists = self._lists(cfg, query, allowed)
+        lists = self._lists(cfg, query, self.allowed(exclude_missions))
+        return self.assemble(cfg.id, lists, k, self.field_weights(lists) if cfg.field_balanced else None)
+
+    def assemble(self, system_id: str, lists: dict[str, list], k: int = TOP_K,
+                 weights: dict[str, float] | None = None) -> dict:
         if len(lists) == 1:                      # single ranking: no fusion, report its own order
             (name, items), = lists.items()
             fused = [(i, 1.0 / (K_RRF + r), {name: r}) for r, i in enumerate(items, 1)]
         else:
-            fused = rrf(lists)
+            fused = rrf(lists, weights=weights)
         top = fused[:k]
         missions, seen = [], set()
         for i, _, _ in fused:                    # mission rank = first (best) passage of each mission
@@ -102,7 +118,7 @@ class Retriever:
                 if m not in seen:
                     seen.add(m)
                     missions.append(m)
-        return {"system": cfg.id, "lists": sorted(lists),
+        return {"system": system_id, "lists": sorted(lists),
                 "passages": [{"rank": r, "id": self.units[i].id, "doc_id": self.units[i].doc_id,
                               "field": self.units[i].field, "page": self.units[i].page,
                               "score": round(s, 8), "list_ranks": lr}

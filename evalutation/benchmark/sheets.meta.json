@@ -28,7 +28,8 @@
   "D2a_mission_factors.csv": "bb688bd1a7b7d31b25a39acf83f8c3d13e23ebbdeaf57c7fd8a4a837c87fb83c",
   "D2b_mission_pairs.csv": "7619b497c2e7716afac6916a209568f16543e7bb5624b2bcb387de7996d1c80a",
   "D1_passage_factors.csv": "cc6fb1fe4b9d0570be2f457d450ca4efea76fbc36a940666824325754de47817",
-  "D3_questions.csv": "92bc5024fef085035ad0d4a3145fad4e919c002dc3a65d8262a48e0bb35b0c57"
+  "D3_questions.csv": "92bc5024fef085035ad0d4a3145fad4e919c002dc3a65d8262a48e0bb35b0c57",
+  "D2q_query_descriptions.csv": "06797296bda20c70f48b8541385066708488134c44660a1a8f03f19e857421da"
  },
  "n_pairs": 231,
  "d1": {

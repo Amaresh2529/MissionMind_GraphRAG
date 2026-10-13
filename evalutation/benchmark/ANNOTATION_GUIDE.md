@@ -21,6 +21,7 @@ annotation starts it is frozen.
 | 1 | `D2a_mission_factors.csv` | Board-stated causal factors of each of the 22 missions | 15–20 h | 6 missions (≈ 4 h) |
 | 2 | `D2b_mission_pairs.csv` | Analogy grade for 231 mission pairs (uses step 1) | 5–7 h | 60 pairs (≈ 1.5 h) |
 | 3 | `D1_passage_factors.csv` | Causal factors stated in 200 sampled passages | 10–14 h | 50 passages (≈ 3 h) |
+| 1b | `D2q_query_descriptions.csv` | A 100–200-word description of each mishap **as first observed** (no board causes) | 3–4 h | — |
 | 4 | `D3_questions.csv` | Write ≈ 105 questions with key points and evidence | 15–20 h | review 30 questions (≈ 2 h) |
 
 Agreement subsets for annotator B: in D2a, the first 6 missions in alphabetical order; in D2b, `P001`–`P060`; in D1,
@@ -40,6 +41,13 @@ page ranges). Add one row per causal factor the board states:
 | `quote` | A short verbatim excerpt (≤ 30 words) |
 
 Add or delete the empty rows as needed; every mission needs at least one `root` row. Typical: 3–10 rows per mission.
+
+## Step 1b — D2q: query descriptions (main retrieval test queries)
+
+For each mission, write 100–200 words describing the mishap as an investigator would know it in the first days:
+the vehicle and mission phase, what was observed (telemetry, events, damage), and when. **Do not state the board's
+causes, findings or recommendations**, and do not copy sentences from the report. These texts are the queries
+of the main test (T1). A system that only matches words of the board's findings must not be rewarded.
 
 ## Step 2 — D2b: mission-pair analogy grade
 

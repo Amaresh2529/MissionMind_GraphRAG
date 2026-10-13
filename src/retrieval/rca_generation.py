@@ -69,20 +69,20 @@ def pack_context(passages: list[dict], units_by_id: dict) -> tuple[str, list[str
     return "\n\n".join(lines), used
 
 
-def _cache_path(model: str, prompt: str) -> Path:
-    key = hashlib.sha256(f"{model}|{NUM_CTX}|{SYSTEM}|{prompt}".encode("utf-8")).hexdigest()
+def _cache_path(model: str, prompt: str, system: str = SYSTEM) -> Path:
+    key = hashlib.sha256(f"{model}|{NUM_CTX}|{system}|{prompt}".encode("utf-8")).hexdigest()
     return get_settings().processed_dir / "gen_cache" / model.replace(":", "_") / f"{key}.json"
 
 
-def _chat(prompt: str, model: str) -> dict:
-    cache = _cache_path(model, prompt)
+def _chat(prompt: str, model: str, system: str = SYSTEM) -> dict:
+    cache = _cache_path(model, prompt, system)
     no_cache = os.environ.get("MISSIONMIND_GEN_NO_CACHE") == "1"   # determinism probe: regenerate, never overwrite
     if cache.exists() and not no_cache:
         return {**json.loads(cache.read_text(encoding="utf-8")), "cached": True}
     import ollama
     s = get_settings()
     r = ollama.chat(model=model, format="json",
-                    messages=[{"role": "system", "content": SYSTEM}, {"role": "user", "content": prompt}],
+                    messages=[{"role": "system", "content": system}, {"role": "user", "content": prompt}],
                     options={"temperature": s.llm_temperature, "seed": s.llm_seed, "num_ctx": NUM_CTX})
     out = {"raw": r["message"]["content"], "prompt_eval_count": r.get("prompt_eval_count"),
            "eval_count": r.get("eval_count")}

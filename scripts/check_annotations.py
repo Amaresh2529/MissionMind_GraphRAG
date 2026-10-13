@@ -121,6 +121,14 @@ def check() -> dict:
             if _norm(q) not in _norm(r["text"]): errs.append(f"D1 {r['item_id']}: quote not in passage")
     rep["D1"] = {"labelled": len(done), "total": len(d1), "errors": errs}
 
+    d2q = _rows("D2q_query_descriptions.csv") or []
+    errs, written = [], [r for r in d2q if r["text"].strip()]
+    for r in written:
+        n = len(r["text"].split())
+        if r["mission"] not in missions: errs.append(f"D2q {r['query_id']}: unknown mission")
+        if not 80 <= n <= 250: errs.append(f"D2q {r['query_id']}: {n} words (expected 100-200)")
+    rep["D2q"] = {"written": len(written), "total": len(d2q), "errors": errs}
+
     d3 = _rows("D3_questions.csv") or []
     errs = []
     for r in d3:
@@ -155,7 +163,7 @@ def check() -> dict:
         ms = sorted({r["mission"] for r in b2a if r["factor_code"].strip()})
         agreement["D2a_code_jaccard"] = {m: round(len(mc(filled, m) & mc(b2a, m)) / max(1, len(mc(filled, m) | mc(b2a, m))), 3) for m in ms}
     rep["agreement"] = agreement
-    rep["ok"] = not any(rep[k]["errors"] for k in ("D2a", "D2b", "D1", "D3"))
+    rep["ok"] = not any(rep[k]["errors"] for k in ("D2a", "D2q", "D2b", "D1", "D3"))
     return rep
 
 
@@ -167,7 +175,7 @@ def main(argv=None):
     if args.out:
         out = Path(args.out); out.mkdir(parents=True, exist_ok=False)
         (out / "annotation_check.json").write_text(json.dumps(rep, indent=1), encoding="utf-8")
-    for k in ("D2a", "D2b", "D1", "D3"):
+    for k in ("D2a", "D2q", "D2b", "D1", "D3"):
         r = rep[k]
         print(k, {x: v for x, v in r.items() if x != "errors"}, f"errors={len(r['errors'])}")
         for e in r["errors"][:15]:

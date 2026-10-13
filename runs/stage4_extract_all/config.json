@@ -1,0 +1,12 @@
+{
+  "args": {
+    "run_id": "stage4_extract_all",
+    "docs": null
+  },
+  "min_words": 20,
+  "min_quote_words": 5,
+  "num_ctx": 4096,
+  "model": "llama3",
+  "taxonomy_version": "0.1-draft",
+  "passages": 3456
+}
