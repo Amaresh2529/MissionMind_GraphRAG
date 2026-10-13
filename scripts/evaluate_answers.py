@@ -77,8 +77,8 @@ def main(argv=None):
                 rec["key_point_recall"] = sum(cov) / len(points) if points else None
                 kp.append(rec["key_point_recall"])
                 gold_pages = {(e.rpartition(":")[0], int(e.rpartition(":")[2])) for e in q["evidence"].split(";") if e.strip()}
-                cited = [r["chunk_map"].get(c) for k in ans.get("key_points", []) if isinstance(k, dict)
-                         for c in (k.get("evidence") or []) if c in r["chunk_map"]]
+                cited = [r["chunk_map"].get(rg.norm_cite(c)) for k in ans.get("key_points", []) if isinstance(k, dict)
+                         for c in (k.get("evidence") or []) if rg.norm_cite(c) in r["chunk_map"]]
                 if cited:
                     rec["citation_page_prec"] = sum(page_of.get(c) in gold_pages for c in cited) / len(cited)
                     cp.append(rec["citation_page_prec"])

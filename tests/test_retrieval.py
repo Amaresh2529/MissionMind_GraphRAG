@@ -134,3 +134,12 @@ def test_generation_packing_and_citation_checks():
     c = rca_generation.validate(ok, {"C1", "C2"})
     assert c == {"schema_ok": True, "citations": 2, "invalid_citations": 1, "items": 2, "uncited_items": 0}
     assert rca_generation.validate(None, set())["schema_ok"] is False
+
+
+def test_citation_normalisation_is_uniform():
+    from retrieval.rca_generation import norm_cite, validate
+    assert [norm_cite(x) for x in ["C3", "[C19] mission=x | page=2", " C7 ", "R.58", "C12a"]] == \
+        ["C3", "C19", "C7", "R.58", "C12a"]
+    ans = {"probable_root_causes": [{"cause": "x", "evidence": ["[C1] mission=a"]}], "contributing_factors": [],
+           "similar_precedents": [], "recommended_actions": []}
+    assert validate(ans, {"C1"})["invalid_citations"] == 0

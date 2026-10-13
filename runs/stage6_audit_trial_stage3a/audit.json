@@ -1,0 +1,142 @@
+{
+ "A1": {
+  "same_query_ids": true,
+  "systems": [
+   "B1",
+   "B2",
+   "B3",
+   "H-whole",
+   "SF-causes-bm25",
+   "SF-causes-dense",
+   "SF-causes-hybrid",
+   "SF-summary-bm25",
+   "SF-summary-dense",
+   "SF-summary-hybrid"
+  ],
+  "git_dirty": false,
+  "git_commit": "0fb48337dbb5bafc4f5cbf00102a6ead0b7cfe06"
+ },
+ "A2": {
+  "own_mission_leaks": 0,
+  "queries_with_own_8gram_overlap_gt_0.2": [
+   "dev-antares-orb3",
+   "dev-apollo1-as204",
+   "dev-apollo13",
+   "dev-ariane5-501",
+   "dev-dart-2005",
+   "dev-exomars2016-schiaparelli",
+   "dev-genesis",
+   "dev-glory-taurus-t9",
+   "dev-hitomi",
+   "dev-mars-climate-orbiter",
+   "dev-noaa-n-prime",
+   "dev-oco-taurus-t8",
+   "dev-soho-1998",
+   "dev-spacex-crs7",
+   "dev-starliner-cft",
+   "dev-sts-107-columbia",
+   "dev-sts-51l-challenger",
+   "dev-vega-vv15",
+   "dev-wire"
+  ],
+  "overlap": {
+   "dev-antares-orb3": {
+    "own_8gram_overlap": 1.0,
+    "max_other_8gram_overlap": 0.941
+   },
+   "dev-apollo1-as204": {
+    "own_8gram_overlap": 0.976,
+    "max_other_8gram_overlap": 0.0
+   },
+   "dev-apollo13": {
+    "own_8gram_overlap": 0.976,
+    "max_other_8gram_overlap": 0.0
+   },
+   "dev-ariane5-501": {
+    "own_8gram_overlap": 1.0,
+    "max_other_8gram_overlap": 0.0
+   },
+   "dev-dart-2005": {
+    "own_8gram_overlap": 1.0,
+    "max_other_8gram_overlap": 0.0
+   },
+   "dev-exomars2016-schiaparelli": {
+    "own_8gram_overlap": 1.0,
+    "max_other_8gram_overlap": 0.0
+   },
+   "dev-genesis": {
+    "own_8gram_overlap": 1.0,
+    "max_other_8gram_overlap": 0.0
+   },
+   "dev-glory-taurus-t9": {
+    "own_8gram_overlap": 1.0,
+    "max_other_8gram_overlap": 0.036
+   },
+   "dev-hitomi": {
+    "own_8gram_overlap": 1.0,
+    "max_other_8gram_overlap": 0.0
+   },
+   "dev-mars-climate-orbiter": {
+    "own_8gram_overlap": 1.0,
+    "max_other_8gram_overlap": 0.0
+   },
+   "dev-noaa-n-prime": {
+    "own_8gram_overlap": 1.0,
+    "max_other_8gram_overlap": 0.0
+   },
+   "dev-oco-taurus-t8": {
+    "own_8gram_overlap": 1.0,
+    "max_other_8gram_overlap": 0.141
+   },
+   "dev-soho-1998": {
+    "own_8gram_overlap": 1.0,
+    "max_other_8gram_overlap": 0.007
+   },
+   "dev-spacex-crs7": {
+    "own_8gram_overlap": 1.0,
+    "max_other_8gram_overlap": 0.927
+   },
+   "dev-starliner-cft": {
+    "own_8gram_overlap": 1.0,
+    "max_other_8gram_overlap": 0.0
+   },
+   "dev-sts-107-columbia": {
+    "own_8gram_overlap": 1.0,
+    "max_other_8gram_overlap": 0.0
+   },
+   "dev-sts-51l-challenger": {
+    "own_8gram_overlap": 1.0,
+    "max_other_8gram_overlap": 0.0
+   },
+   "dev-vega-vv15": {
+    "own_8gram_overlap": 1.0,
+    "max_other_8gram_overlap": 0.0
+   },
+   "dev-wire": {
+    "own_8gram_overlap": 1.0,
+    "max_other_8gram_overlap": 0.0
+   }
+  }
+ },
+ "A3": {
+  "checked": 19000,
+  "bad": []
+ },
+ "A4": {
+  "citations_checked": 226,
+  "invalid_in_final_answers": 9,
+  "examples": [
+   "B3:dev-dart-2005:R.58",
+   "B3:dev-dart-2005:R.58",
+   "B3:dev-dart-2005:R.60",
+   "B3:dev-genesis:C19",
+   "B3:dev-genesis:C19",
+   "B3:dev-noaa-n-prime:[C19] mission=sts-107-columbia | doc=NASA_Columbia_CAIB_Vol1 | field=Disposition | page=208",
+   "B3:dev-noaa-n-prime:[C19] mission=sts-107-columbia | doc=NASA_Columbia_CAIB_Vol1 | field=Disposition | page=208",
+   "B3:dev-noaa-n-prime:[C18] mission=sts-107-columbia | doc=NASA_Columbia_CAIB_Vol1 | field=Disposition | page=227",
+   "B3:dev-noaa-n-prime:[C19] mission=sts-107-columbia | doc=NASA_Columbia_CAIB_Vol1 | field=Disposition | page=208"
+  ],
+  "note": "B3/B0 answers are not filtered; P answers are enforced. Invalid citations in B3 are a property of the system and are reported, not an audit failure."
+ },
+ "failures": []
+}

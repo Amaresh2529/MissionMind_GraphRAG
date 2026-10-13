@@ -61,7 +61,7 @@ def enforce(answer, allowed: set[str]) -> tuple[dict | None, dict]:
                 continue
             ev = it.get("evidence") or []
             ev = ev if isinstance(ev, list) else [ev]
-            good = [str(e) for e in ev if str(e) in allowed]
+            good = [rg.norm_cite(e) for e in ev if rg.norm_cite(e) in allowed]
             removed += len(ev) - len(good)
             if good:
                 kept.append({**it, "evidence": good})

@@ -18,6 +18,7 @@ sessions — Stage 1 finding), so re-runs return identical answers.
 import hashlib
 import json
 import os
+import re
 import sys
 from pathlib import Path
 
@@ -92,6 +93,16 @@ def _chat(prompt: str, model: str, system: str = SYSTEM) -> dict:
     return {**out, "cached": False}
 
 
+_CITE = re.compile(r"^\W*(C\d+)\b")
+
+
+def norm_cite(e) -> str:
+    """Canonical chunk id: "[C19] mission=... page=208" or " C19 " -> "C19" (applied identically to every
+    system and checker; Stage 4 change, Stage 3 numbers were computed without it)."""
+    m = _CITE.match(str(e))
+    return m.group(1) if m else str(e).strip()
+
+
 def validate(answer: dict | None, allowed_ids: set[str]) -> dict:
     """Schema and citation checks: every cited id must be one of the chunks shown."""
     keys = ("probable_root_causes", "contributing_factors", "similar_precedents", "recommended_actions")
@@ -108,7 +119,7 @@ def validate(answer: dict | None, allowed_ids: set[str]) -> dict:
             ev = it.get("evidence") or []
             ev = ev if isinstance(ev, list) else [ev]
             cites += len(ev)
-            invalid += sum(1 for e in ev if str(e) not in allowed_ids)
+            invalid += sum(1 for e in ev if norm_cite(e) not in allowed_ids)
             uncited += not ev
     return {"schema_ok": schema_ok, "citations": cites, "invalid_citations": invalid,
             "items": items, "uncited_items": uncited}
