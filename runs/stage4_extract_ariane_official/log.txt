@@ -1,0 +1,1 @@
+{"passages": 39, "cached": 0, "parse_fail": 0, "proposed": 40, "accepted": 36, "passages_with_factor": 28, "rejection_reasons": {"quote_not_in_passage": 3, "quote_too_short": 1}}

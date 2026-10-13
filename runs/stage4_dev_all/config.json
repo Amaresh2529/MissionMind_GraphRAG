@@ -1,0 +1,154 @@
+{
+  "args": {
+    "run_id": "stage4_dev_all",
+    "systems": [
+      "B1",
+      "B2",
+      "H-whole",
+      "SF-summary-bm25",
+      "SF-summary-dense",
+      "SF-summary-hybrid",
+      "SF-causes-bm25",
+      "SF-causes-dense",
+      "SF-causes-hybrid",
+      "B3",
+      "B3-bal"
+    ],
+    "queries": null,
+    "embedder": "BAAI/bge-m3",
+    "generate": [
+      "B3",
+      "P"
+    ],
+    "proposed": [
+      "P",
+      "P-noverif",
+      "P-nofields",
+      "P-graphonly",
+      "P-noidf"
+    ],
+    "qa": [],
+    "allow_draft_fields": true
+  },
+  "dev_run": true,
+  "systems": {
+    "B1": {
+      "fields": null,
+      "methods": [
+        "bm25"
+      ]
+    },
+    "B2": {
+      "fields": null,
+      "methods": [
+        "dense"
+      ]
+    },
+    "H-whole": {
+      "fields": null,
+      "methods": [
+        "bm25",
+        "dense"
+      ]
+    },
+    "SF-summary-bm25": {
+      "fields": [
+        "summary"
+      ],
+      "methods": [
+        "bm25"
+      ]
+    },
+    "SF-summary-dense": {
+      "fields": [
+        "summary"
+      ],
+      "methods": [
+        "dense"
+      ]
+    },
+    "SF-summary-hybrid": {
+      "fields": [
+        "summary"
+      ],
+      "methods": [
+        "bm25",
+        "dense"
+      ]
+    },
+    "SF-causes-bm25": {
+      "fields": [
+        "causes"
+      ],
+      "methods": [
+        "bm25"
+      ]
+    },
+    "SF-causes-dense": {
+      "fields": [
+        "causes"
+      ],
+      "methods": [
+        "dense"
+      ]
+    },
+    "SF-causes-hybrid": {
+      "fields": [
+        "causes"
+      ],
+      "methods": [
+        "bm25",
+        "dense"
+      ]
+    },
+    "B3": {
+      "fields": [
+        "summary",
+        "causes",
+        "disposition"
+      ],
+      "methods": [
+        "bm25",
+        "dense"
+      ]
+    },
+    "B3-bal": {
+      "fields": [
+        "summary",
+        "causes",
+        "disposition"
+      ],
+      "methods": [
+        "bm25",
+        "dense"
+      ]
+    }
+  },
+  "skipped_no_embedder": [],
+  "bm25": {
+    "k1": 1.2,
+    "b": 0.75,
+    "tokenizer": "lowercase [a-z0-9]+, no stemming/stopwords"
+  },
+  "rrf_k": 60,
+  "list_depth": 1000,
+  "top_k": 100,
+  "dense": {
+    "model": "BAAI/bge-m3",
+    "revision": "5617a9f61b028005a4858fdac845db406aefb181",
+    "max_seq_length": 1024,
+    "normalized": true,
+    "cache": "data\\processed\\emb_cache\\BAAI__bge-m3@5617a9f61b02_len1024\\f2da1efe765d82d03a23.npy",
+    "cache_hit": true
+  },
+  "generation": {
+    "top_k_gen": 40,
+    "context_word_budget": 4200,
+    "num_ctx": 8192
+  },
+  "queries": {
+    "source": "automatic dev queries (300 words)",
+    "n": 19,
+    "sha256": "9eb19ce537784302508f685248bad6cca62b834a81a29f9ac60c7ce9ed82b14b"
+  }
+}

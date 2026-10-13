@@ -62,6 +62,11 @@ def main(argv=None):
         OUT / "D2a_mission_factors.csv",
         ["mission", "factor_code", "role", "factor_short", "doc_id", "page", "quote", "note"], rows)
 
+    # D2q: one human-written query description per mission
+    meta["sha256_blank"]["D2q_query_descriptions.csv"] = _write(
+        OUT / "D2q_query_descriptions.csv", ["query_id", "mission", "text", "author", "note"],
+        [[f"T1-{m}", m, "", "", ""] for m in missions])
+
     # D2b: all unordered pairs, in random order (seeded) so grading order carries no system signal
     pairs = list(itertools.combinations(missions, 2))
     random.Random(args.seed).shuffle(pairs)

@@ -1,0 +1,26 @@
+{
+  "ESA_Ariane5_501_Inquiry_Board_Report": {
+    "doc_id": "ESA_Ariane5_501_Inquiry_Board_Report",
+    "pages": 60,
+    "scanned": true,
+    "pages_ocr": 60,
+    "pages_low_quality": 0,
+    "pages_empty": 0,
+    "blocks": {
+      "heading": 58,
+      "body": 616,
+      "boilerplate": 3
+    },
+    "headings": 58,
+    "passages": 129,
+    "words_in_passages": 10092,
+    "pseudo_fields": {
+      "other": 10,
+      "narrative": 10,
+      "findings": 94,
+      "recommendations": 4,
+      "causes": 11
+    },
+    "body_font_size": 9.0
+  }
+}

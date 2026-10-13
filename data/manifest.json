@@ -77,12 +77,12 @@
       "event_year": 1996,
       "published": "1996-07-19",
       "doc_type": "official_investigation_report",
-      "role": "primary",
+      "role": "exclude_replace",
       "source_url": "https://ocw.mit.edu/courses/16-355j-software-engineering-concepts-fall-2005/91f1e550b30b00ad797293f430220f18_ari5fail_ful_rep.pdf",
       "source_record": "MIT OpenCourseWare mirror (not an official ESA host)",
       "source_check": "size_match",
       "licence": "Public inquiry report; mirror licence to be checked",
-      "notes": "Original ESA address (esrin.esa.it, 1996) no longer available; official-host provenance unresolved.",
+      "notes": "Original ESA address (esrin.esa.it, 1996) no longer available; official-host provenance unresolved. 2026-10-13: replaced by ESA_Ariane5_501_Inquiry_Board_Report (official ESA copy, user-approved download).",
       "sha256": "aac1144c58eaf86566b4d0a5bedd2b837a14f69022f6e6fa8f6925be10ab2684",
       "bytes": 54730,
       "pages": 15,
@@ -556,6 +556,28 @@
       "mission_ids": [
         "gslv-f10"
       ]
+    },
+    {
+      "doc_id": "ESA_Ariane5_501_Inquiry_Board_Report",
+      "file": "data/raw/ESA_Ariane5_501_Inquiry_Board_Report.pdf",
+      "title": "ARIANE 5 Flight 501 Failure - Report by the Inquiry Board (official ESA copy)",
+      "agency": "ESA / CNES (Inquiry Board)",
+      "mission": "Ariane 5 Flight 501",
+      "event_year": 1996,
+      "published": "1996-07-19",
+      "doc_type": "official_investigation_report",
+      "role": "primary",
+      "mission_ids": [
+        "ariane5-501"
+      ],
+      "source_url": "https://esamultimedia.esa.int/docs/esa-x-1819eng.pdf",
+      "source_record": "official (ESA)",
+      "source_check": "size_match",
+      "licence": "Public inquiry report; to be checked",
+      "notes": "Downloaded 2026-10-13 with user approval (runs/stage4_fetch_ariane_official). Scanned; OCR on every page. Pages 19-60 are rotated annex scans (OCR unreadable; field 'other'). Report body pp. 1-18 matches the MIT mirror's content.",
+      "sha256": "a2c2ee1f22e41eb0e43a1cd230b735be3b6b88c404391d595b9dfb8f3c8f7a86",
+      "bytes": 2168608,
+      "pages": 60
     }
   ]
 }

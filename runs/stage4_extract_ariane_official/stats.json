@@ -1,0 +1,21 @@
+{
+  "passages": 39,
+  "cached": 0,
+  "parse_fail": 0,
+  "proposed": 40,
+  "accepted": 36,
+  "passages_with_factor": 28,
+  "rejection_reasons": {
+    "quote_not_in_passage": 3,
+    "quote_too_short": 1
+  },
+  "accepted_by_code": {
+    "T2": 14,
+    "V2": 8,
+    "V1": 7,
+    "O1": 3,
+    "T4": 2,
+    "H1": 1,
+    "M2": 1
+  }
+}

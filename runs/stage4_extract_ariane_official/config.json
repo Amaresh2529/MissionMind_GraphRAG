@@ -1,0 +1,14 @@
+{
+  "args": {
+    "run_id": "stage4_extract_ariane_official",
+    "docs": [
+      "ESA_Ariane5_501_Inquiry_Board_Report"
+    ]
+  },
+  "min_words": 20,
+  "min_quote_words": 5,
+  "num_ctx": 4096,
+  "model": "llama3",
+  "taxonomy_version": "0.1-draft",
+  "passages": 39
+}

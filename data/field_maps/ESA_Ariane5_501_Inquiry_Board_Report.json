@@ -1,0 +1,49 @@
+{
+  "doc_id": "ESA_Ariane5_501_Inquiry_Board_Report",
+  "status": "draft",
+  "drafted_by": "assistant (Claude), from the report's numbered chapters (OCR outline); same structure as the replaced MIT mirror",
+  "reviewed_by": null,
+  "default": "other",
+  "ranges": [
+    {
+      "pages": [
+        1,
+        4
+      ],
+      "field": "other",
+      "label": "Transmittal letter, title, Foreword and Board membership, contents"
+    },
+    {
+      "pages": [
+        5,
+        6
+      ],
+      "field": "description",
+      "label": "1. The Failure (1.1-1.4)"
+    },
+    {
+      "pages": [
+        7,
+        16
+      ],
+      "field": "analysis",
+      "label": "2. Analysis of the Failure; 3.1 Findings; 3.2 Cause of the Failure"
+    },
+    {
+      "pages": [
+        17,
+        18
+      ],
+      "field": "recommendations",
+      "label": "4. Recommendations (R1-R14)"
+    },
+    {
+      "pages": [
+        19,
+        60
+      ],
+      "field": "other",
+      "label": "Annexes: rotated scanned pages (French technical annex); OCR unreadable - see manifest notes"
+    }
+  ]
+}

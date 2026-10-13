@@ -1,0 +1,19 @@
+{"query_id": "dev-antares-orb3", "codes": [], "accepted": [], "rejected": []}
+{"query_id": "dev-apollo1-as204", "codes": [], "accepted": [], "rejected": []}
+{"query_id": "dev-apollo13", "codes": [], "accepted": [], "rejected": []}
+{"query_id": "dev-ariane5-501", "codes": ["T4"], "accepted": [{"code": "T4", "role": "root", "statement": "failure of the back-up Inertial Reference System followed immediately by failure of the active Inertial Reference System", "quote": "failure of the back-up Inertial Reference System followed immediately by failure of the active Inertial Reference System; - swivelling into the extreme position of the nozzles of the two solid boosters and, slightly later, of the Vulcain engine, causing the launcher to veer abruptly;", "char_start": 1272, "char_end": 1556}], "rejected": []}
+{"query_id": "dev-dart-2005", "codes": [], "accepted": [], "rejected": []}
+{"query_id": "dev-exomars2016-schiaparelli", "codes": [], "accepted": [], "rejected": []}
+{"query_id": "dev-genesis", "codes": [], "accepted": [], "rejected": []}
+{"query_id": "dev-glory-taurus-t9", "codes": [], "accepted": [], "rejected": []}
+{"query_id": "dev-hitomi", "codes": [], "accepted": [], "rejected": []}
+{"query_id": "dev-mars-climate-orbiter", "codes": [], "accepted": [], "rejected": []}
+{"query_id": "dev-noaa-n-prime", "codes": ["M6"], "accepted": [{"code": "M6", "role": "root", "statement": "TOC adapter plate not secured with required 24 bolts", "quote": "the satellite fell because the TOC adapter plate was not secured to the TOC with the required 24 bolts", "char_start": 980, "char_end": 1082}], "rejected": []}
+{"query_id": "dev-oco-taurus-t8", "codes": ["T1"], "accepted": [{"code": "T1", "role": "root", "statement": "payload fairing failed to separate during ascent", "quote": "A payload fairing is a clamshell-shaped cover that encloses and protects a payload on the pad and during early flight. Fairings are a standard component of expendable launch vehicles, and they are always jettisoned as soon as possible after a launch vehicle has achieved an altitude where aeroheating is no longer a risk to the satellite.", "char_start": 553, "char_end": 891}], "rejected": []}
+{"query_id": "dev-soho-1998", "codes": ["O1"], "accepted": [{"code": "O1", "role": "root", "statement": "operational errors", "quote": "A number of ground errors led to the major loss of attitude experienced by the spacecraft.", "char_start": 822, "char_end": 912}], "rejected": []}
+{"query_id": "dev-spacex-crs7", "codes": [], "accepted": [], "rejected": []}
+{"query_id": "dev-starliner-cft", "codes": ["T1"], "accepted": [{"code": "T1", "role": "root", "statement": "Two-phase oxidizer flow and cavitation caused thrusters to trigger fail-off FDIR.", "quote": "i. Two-phase oxidizer flow (vaporization and cavitation) ii. Teflon poppet extrusion in oxidizer valves, restricting flow", "char_start": 1832, "char_end": 1953}], "rejected": []}
+{"query_id": "dev-sts-107-columbia", "codes": [], "accepted": [], "rejected": []}
+{"query_id": "dev-sts-51l-challenger", "codes": [], "accepted": [], "rejected": []}
+{"query_id": "dev-vega-vv15", "codes": ["T1"], "accepted": [{"code": "T1", "role": "root", "statement": "thermo-structural failure in the forward dome area", "quote": "a thermo-structural failure in the forward dome area of the Z23 motor", "char_start": 758, "char_end": 827}], "rejected": []}
+{"query_id": "dev-wire", "codes": ["T1"], "accepted": [{"code": "T1", "role": "root", "statement": "digital logic design error in instrument pyro electronics box", "quote": "The root cause of the WIRE mission loss is a digital logic design error in the instrument pyro electronics box.", "char_start": 941, "char_end": 1052}], "rejected": []}

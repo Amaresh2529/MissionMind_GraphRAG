@@ -42,7 +42,7 @@ def main(argv=None):
     ap.add_argument("--embedder", default=dense.DEFAULT_MODEL, help="model name, or 'none' for BM25-only runs")
     ap.add_argument("--generate", nargs="*", default=[], choices=["B3", "B0", "P"])
     ap.add_argument("--proposed", nargs="*", default=[],
-                    choices=["P", "P-noverif", "P-nofields", "P-graphonly", "P-noidf"],
+                    choices=["P", "P-noverif", "P-nofields", "P-graphonly", "P-noidf", "P-noprf"],
                     help="Stage 4 method and ablations (need data/processed/factors from extract_factors.py)")
     ap.add_argument("--qa", nargs="*", default=[], choices=["B0", "B3", "P"],
                     help="answer the queries as D3 questions (QA schema) with these systems")
@@ -146,7 +146,7 @@ def main(argv=None):
                             from extension.grounded_generation import draft_rca_p
                             pr = results["P"][qi]
                             prof = prop.variants["verified"]["profiles"]
-                            qc = qfs[q["query_id"]].codes
+                            qc = set(pr["graph"]["query_codes"])
                             mev = {m: {c: [e["passage_id"] for e in prof[m][c]["evidence"]] for c in qc & set(prof[m])}
                                    for m in pr["graph"]["mission_analogy"]}
                             names = {c: v["name"] for c, v in fx.codes().items()}
@@ -181,7 +181,7 @@ def main(argv=None):
                         if s_ == "P":
                             pr = results["P"][qi]
                             prof = prop.variants["verified"]["profiles"]
-                            qc = qfs[q["query_id"]].codes
+                            qc = set(pr["graph"]["query_codes"])
                             kw |= {"graph": pr["graph"], "code_names": {c: v["name"] for c, v in fx.codes().items()},
                                    "mission_evidence": {m: {c: [e["passage_id"] for e in prof[m][c]["evidence"]]
                                                             for c in qc & set(prof[m])} for m in pr["graph"]["mission_analogy"]}}

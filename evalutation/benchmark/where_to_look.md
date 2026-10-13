@@ -14,7 +14,7 @@ report and record only what the board itself states.
 - **Report of Apollo 13 Review Board (NTRS 19700076776)** (`data/raw/NASA_Apollo13_Review_Board.pdf`, 215 pages): description: pp. 4-4, pp. 76-107, pp. 134-144, pp. 153-171; analysis: pp. 108-152, pp. 172-212; recommendations: pp. 213-215
 
 ## ariane5-501
-- **ARIANE 5 Flight 501 Failure — Report by the Inquiry Board** (`data/raw/Ariane_5_Flight_501_Failure_Inquiry_Board_Report..pdf`, 15 pages): description: pp. 2-4; analysis: pp. 4-12, pp. 13-13; recommendations: pp. 13-15
+- **ARIANE 5 Flight 501 Failure - Report by the Inquiry Board (official ESA copy)** (`data/raw/ESA_Ariane5_501_Inquiry_Board_Report.pdf`, 60 pages): description: pp. 5-6; analysis: pp. 7-16; recommendations: pp. 17-18
 
 ## dart-2005
 - **DART Mishap Investigation Results overview** (`data/raw/NASA_DART_MIB_Overview.pdf`, 10 pages): description: pp. 1-3; analysis: pp. 4-10

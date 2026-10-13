@@ -1,0 +1,18 @@
+{
+  "first": {
+    "insert": 129,
+    "update": 0,
+    "unchanged": 6988,
+    "delete": 0,
+    "documents": 27
+  },
+  "first_seconds": 37.9,
+  "second": {
+    "insert": 0,
+    "update": 0,
+    "unchanged": 7117,
+    "delete": 0,
+    "documents": 27
+  },
+  "second_seconds": 10.8
+}

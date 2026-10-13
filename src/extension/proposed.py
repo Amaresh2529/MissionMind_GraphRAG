@@ -4,8 +4,11 @@ proposed.py — the MissionMind method P and its ablations (Stage 4).
 P = B3 (6 field x method lists, RRF k=60) + one GRAPH list from the verified
 causal-factor graph, fused by the same RRF:
 
-  1. Query factors: the evidence-anchored extractor runs on the query text (quotes
-     verified against the query), giving a code set Q.
+  1. Query factors: Q = codes the evidence-anchored extractor finds in the query text (quotes
+     verified against the query) UNION codes of verified factors stated in B3's top PRF_N
+     passages (graph expansion through retrieved evidence). Added 2026-10-13 on DEV queries,
+     before any label: a new-mishap description states symptoms, not the board's causes, so
+     direct query factors were empty for 12/19 dev queries ("P-noprf" keeps the old behaviour).
   2. Mission analogy: idf-weighted Jaccard between Q and each candidate mission's
      profile F_m (factor_graph.analogy); the query's own mission is excluded.
   3. Graph list: evidence passages of shared codes, ordered by mission analogy,
@@ -17,6 +20,7 @@ Ablations (Proposal v2, Sec. 13):
   P-nofields    whole-index hybrid (H-whole) + graph list ("-fields")
   P-graphonly   graph list alone; missions ranked by analogy score ("graph only")
   P-noidf       analogy with all idf weights = 1 ("idf off")
+  P-noprf       query codes from the query text only (no expansion through B3's top passages)
 """
 
 from dataclasses import dataclass
@@ -25,6 +29,7 @@ from extension import factor_graph as fg
 from retrieval.systems import SYSTEMS, Retriever
 
 ROLE_ORDER = fg.ROLE_ORDER
+PRF_N = 20
 
 
 @dataclass
@@ -45,7 +50,17 @@ class ProposedRetriever:
     @staticmethod
     def _prepare(mentions: list[dict]) -> dict:
         prof = fg.profiles(mentions)
-        return {"profiles": prof, "idf": fg.idf(prof)}
+        by_passage = {}
+        for m in mentions:
+            by_passage.setdefault(m["passage_id"], set()).add(m["code"])
+        return {"profiles": prof, "idf": fg.idf(prof), "codes_by_passage": by_passage}
+
+    def expanded_codes(self, qf: QueryFactors, query: str, exclude_missions: set[str],
+                       variant: str = "verified") -> tuple[set, set]:
+        top = self.base.search(SYSTEMS["B3"], query, exclude_missions, k=PRF_N)["passages"]
+        cbp = self.variants[variant]["codes_by_passage"]
+        prf = set().union(*[cbp.get(p["id"], set()) for p in top]) if top else set()
+        return qf.codes | prf, prf
 
     def graph_list(self, qf: QueryFactors, allowed: set[int], exclude_missions: set[str],
                    variant: str = "verified", use_idf: bool = True) -> tuple[list[int], dict]:
@@ -71,7 +86,12 @@ class ProposedRetriever:
     def search(self, system: str, query: str, qf: QueryFactors, exclude_missions: set[str], k: int = 100) -> dict:
         allowed = self.base.allowed(exclude_missions)
         variant = "noverif" if system == "P-noverif" else "verified"
-        glist, mscores = self.graph_list(qf, allowed, exclude_missions, variant, use_idf=(system != "P-noidf"))
+        if system == "P-noprf":
+            codes, prf = set(qf.codes), set()
+        else:
+            codes, prf = self.expanded_codes(qf, query, exclude_missions, variant)
+        qx = QueryFactors(codes, qf.accepted, qf.rejected)
+        glist, mscores = self.graph_list(qx, allowed, exclude_missions, variant, use_idf=(system != "P-noidf"))
         if system == "P-graphonly":
             lists = {"graph/factors": glist} if glist else {}
         else:
@@ -85,7 +105,8 @@ class ProposedRetriever:
             out = {"system": system, "lists": [], "passages": [], "mission_ranking": []}
         if system == "P-graphonly":           # missions by analogy score directly
             out["mission_ranking"] = [m for m, _ in sorted(mscores.items(), key=lambda x: (-x[1], x[0]))]
-        out["graph"] = {"query_codes": sorted(qf.codes), "graph_list_len": len(glist),
+        out["graph"] = {"query_codes": sorted(codes), "direct_query_codes": sorted(qf.codes),
+                        "prf_codes": sorted(prf), "graph_list_len": len(glist),
                         "fallback_to_base": not glist,
                         "mission_analogy": {m: round(s, 4) for m, s in sorted(mscores.items(), key=lambda x: (-x[1], x[0]))[:10]}}
         return out
