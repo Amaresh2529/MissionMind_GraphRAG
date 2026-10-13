@@ -1,0 +1,33 @@
+Loading weights:   0%|          | 0/391 [00:00<?, ?it/s]Loading weights: 100%|██████████| 391/391 [00:00<00:00, 15282.72it/s]
+B3                 10 queries, lists=['causes/bm25', 'causes/dense', 'disposition/bm25', 'disposition/dense', 'summary/bm25', 'summary/dense']
+P                  10 queries, fallback_to_B3=0
+  B0 T1-sts-51l-challenger: chunks=0 schema_ok=True invalid_cites=0 cached=False
+  B0 T1-sts-107-columbia: chunks=0 schema_ok=True invalid_cites=0 cached=False
+  B0 T1-mars-climate-orbiter: chunks=0 schema_ok=True invalid_cites=0 cached=False
+  B0 T1-ariane5-501: chunks=0 schema_ok=True invalid_cites=0 cached=False
+  B0 T1-apollo13: chunks=0 schema_ok=True invalid_cites=0 cached=False
+  B0 T1-genesis: chunks=0 schema_ok=True invalid_cites=0 cached=False
+  B0 T1-soho-1998: chunks=0 schema_ok=True invalid_cites=0 cached=False
+  B0 T1-wire: chunks=0 schema_ok=True invalid_cites=0 cached=False
+  B0 T1-hitomi: chunks=0 schema_ok=True invalid_cites=0 cached=False
+  B0 T1-starliner-cft: chunks=0 schema_ok=True invalid_cites=0 cached=False
+  B3 T1-sts-51l-challenger: chunks=25 schema_ok=True invalid_cites=0 cached=False
+  B3 T1-sts-107-columbia: chunks=26 schema_ok=True invalid_cites=0 cached=False
+  B3 T1-mars-climate-orbiter: chunks=24 schema_ok=True invalid_cites=0 cached=False
+  B3 T1-ariane5-501: chunks=23 schema_ok=True invalid_cites=0 cached=False
+  B3 T1-apollo13: chunks=26 schema_ok=True invalid_cites=0 cached=False
+  B3 T1-genesis: chunks=22 schema_ok=True invalid_cites=0 cached=False
+  B3 T1-soho-1998: chunks=26 schema_ok=True invalid_cites=0 cached=False
+  B3 T1-wire: chunks=25 schema_ok=True invalid_cites=0 cached=False
+  B3 T1-hitomi: chunks=22 schema_ok=True invalid_cites=0 cached=False
+  B3 T1-starliner-cft: chunks=24 schema_ok=True invalid_cites=0 cached=False
+  P T1-sts-51l-challenger: chunks=23 schema_ok=True invalid_cites=0 cached=False
+  P T1-sts-107-columbia: chunks=27 schema_ok=True invalid_cites=0 cached=False
+  P T1-mars-climate-orbiter: chunks=24 schema_ok=True invalid_cites=0 cached=False
+  P T1-ariane5-501: chunks=23 schema_ok=True invalid_cites=0 cached=False
+  P T1-apollo13: chunks=23 schema_ok=True invalid_cites=0 cached=False
+  P T1-genesis: chunks=21 schema_ok=True invalid_cites=0 cached=False
+  P T1-soho-1998: chunks=25 schema_ok=True invalid_cites=0 cached=False
+  P T1-wire: chunks=24 schema_ok=True invalid_cites=0 cached=False
+  P T1-hitomi: chunks=23 schema_ok=True invalid_cites=0 cached=False
+  P T1-starliner-cft: chunks=23 schema_ok=True invalid_cites=0 cached=False

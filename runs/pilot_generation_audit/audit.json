@@ -1,0 +1,68 @@
+{
+ "A1": {
+  "same_query_ids": true,
+  "systems": [
+   "B3",
+   "P"
+  ],
+  "git_dirty": false,
+  "git_commit": "d3d856f9f736dc6eb588bee5caa80c4227e6de60"
+ },
+ "A2": {
+  "own_mission_leaks": 0,
+  "queries_with_own_8gram_overlap_gt_0.2": [],
+  "overlap": {
+   "T1-sts-51l-challenger": {
+    "own_8gram_overlap": 0.033,
+    "max_other_8gram_overlap": 0.0
+   },
+   "T1-sts-107-columbia": {
+    "own_8gram_overlap": 0.0,
+    "max_other_8gram_overlap": 0.0
+   },
+   "T1-mars-climate-orbiter": {
+    "own_8gram_overlap": 0.0,
+    "max_other_8gram_overlap": 0.0
+   },
+   "T1-ariane5-501": {
+    "own_8gram_overlap": 0.0,
+    "max_other_8gram_overlap": 0.0
+   },
+   "T1-apollo13": {
+    "own_8gram_overlap": 0.0,
+    "max_other_8gram_overlap": 0.0
+   },
+   "T1-genesis": {
+    "own_8gram_overlap": 0.0,
+    "max_other_8gram_overlap": 0.0
+   },
+   "T1-soho-1998": {
+    "own_8gram_overlap": 0.0,
+    "max_other_8gram_overlap": 0.0
+   },
+   "T1-wire": {
+    "own_8gram_overlap": 0.0,
+    "max_other_8gram_overlap": 0.0
+   },
+   "T1-hitomi": {
+    "own_8gram_overlap": 0.0,
+    "max_other_8gram_overlap": 0.0
+   },
+   "T1-starliner-cft": {
+    "own_8gram_overlap": 0.0,
+    "max_other_8gram_overlap": 0.0
+   }
+  }
+ },
+ "A3": {
+  "checked": 2000,
+  "bad": []
+ },
+ "A4": {
+  "citations_checked": 520,
+  "invalid_in_final_answers": 0,
+  "examples": [],
+  "note": "B3/B0 answers are not filtered; P answers are enforced. Invalid citations in B3 are a property of the system and are reported, not an audit failure."
+ },
+ "failures": []
+}

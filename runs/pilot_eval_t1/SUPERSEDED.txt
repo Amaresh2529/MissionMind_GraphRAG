@@ -1,0 +1,2 @@
+SUPERSEDED by runs/pilot_eval_t1_r2 (2026-10-13). Metric values are identical; this run's metrics.json carried the
+flag "PILOT_HUMAN_LABELS": true, which is inaccurate: the pilot labels are mixed (owner + assistant), see PILOT.json.
