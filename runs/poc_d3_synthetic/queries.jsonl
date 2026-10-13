@@ -1,0 +1,52 @@
+{"query_id": "S001", "mission": "", "exclude_missions": [], "kind": "D3_single", "text": "What caused the Antares Orb-3 mishap, according to the investigation board?"}
+{"query_id": "S002", "mission": "", "exclude_missions": [], "kind": "D3_single", "text": "What caused the Apollo 1 (AS-204) mishap, according to the investigation board?"}
+{"query_id": "S003", "mission": "", "exclude_missions": [], "kind": "D3_single", "text": "What caused the Ariane 5 Flight 501 mishap, according to the investigation board?"}
+{"query_id": "S004", "mission": "", "exclude_missions": [], "kind": "D3_single", "text": "What caused the DART (2005) mishap, according to the investigation board?"}
+{"query_id": "S005", "mission": "", "exclude_missions": [], "kind": "D3_single", "text": "What caused the ExoMars 2016 Schiaparelli mishap, according to the investigation board?"}
+{"query_id": "S006", "mission": "", "exclude_missions": [], "kind": "D3_single", "text": "What caused the Genesis mishap, according to the investigation board?"}
+{"query_id": "S007", "mission": "", "exclude_missions": [], "kind": "D3_single", "text": "What caused the Glory (Taurus XL T9) mishap, according to the investigation board?"}
+{"query_id": "S008", "mission": "", "exclude_missions": [], "kind": "D3_single", "text": "What caused the Mars Climate Orbiter mishap, according to the investigation board?"}
+{"query_id": "S009", "mission": "", "exclude_missions": [], "kind": "D3_single", "text": "What caused the NOAA-N Prime mishap, according to the investigation board?"}
+{"query_id": "S010", "mission": "", "exclude_missions": [], "kind": "D3_single", "text": "What caused the Orbiting Carbon Observatory (Taurus XL T8) mishap, according to the investigation board?"}
+{"query_id": "S011", "mission": "", "exclude_missions": [], "kind": "D3_single", "text": "What caused the SOHO (mission interruption) mishap, according to the investigation board?"}
+{"query_id": "S012", "mission": "", "exclude_missions": [], "kind": "D3_single", "text": "What caused the SpaceX CRS-7 mishap, according to the investigation board?"}
+{"query_id": "S013", "mission": "", "exclude_missions": [], "kind": "D3_single", "text": "What caused the Boeing Starliner Crew Flight Test mishap, according to the investigation board?"}
+{"query_id": "S014", "mission": "", "exclude_missions": [], "kind": "D3_single", "text": "What caused the STS-107 Columbia mishap, according to the investigation board?"}
+{"query_id": "S015", "mission": "", "exclude_missions": [], "kind": "D3_single", "text": "What caused the STS-51-L Challenger mishap, according to the investigation board?"}
+{"query_id": "S016", "mission": "", "exclude_missions": [], "kind": "D3_single", "text": "What caused the Vega VV17 mishap, according to the investigation board?"}
+{"query_id": "S017", "mission": "", "exclude_missions": [], "kind": "D3_single", "text": "What caused the WIRE mishap, according to the investigation board?"}
+{"query_id": "C001", "mission": "", "exclude_missions": [], "kind": "D3_cross", "text": "Which missions' boards identified inadequate review / independent assessment as a cause or contributing factor?"}
+{"query_id": "C002", "mission": "", "exclude_missions": [], "kind": "D3_cross", "text": "Which missions' boards identified inadequate analysis / modelling / simulation as a cause or contributing factor?"}
+{"query_id": "C003", "mission": "", "exclude_missions": [], "kind": "D3_cross", "text": "Which missions' boards identified schedule / cost / launch pressure as a cause or contributing factor?"}
+{"query_id": "C004", "mission": "", "exclude_missions": [], "kind": "D3_cross", "text": "Which missions' boards identified inadequate testing / qualification as a cause or contributing factor?"}
+{"query_id": "C005", "mission": "", "exclude_missions": [], "kind": "D3_cross", "text": "Which missions' boards identified decision or skill-based error as a cause or contributing factor?"}
+{"query_id": "C006", "mission": "", "exclude_missions": [], "kind": "D3_cross", "text": "Which missions' boards identified safety & mission assurance deficiency as a cause or contributing factor?"}
+{"query_id": "C007", "mission": "", "exclude_missions": [], "kind": "D3_cross", "text": "Which missions' boards identified inadequate monitoring / telemetry / data use as a cause or contributing factor?"}
+{"query_id": "C008", "mission": "", "exclude_missions": [], "kind": "D3_cross", "text": "Which missions' boards identified software / requirements / specification error as a cause or contributing factor?"}
+{"query_id": "C009", "mission": "", "exclude_missions": [], "kind": "D3_cross", "text": "Which missions' boards identified environmental condition beyond design as a cause or contributing factor?"}
+{"query_id": "C010", "mission": "", "exclude_missions": [], "kind": "D3_cross", "text": "Which missions' boards identified communication failure as a cause or contributing factor?"}
+{"query_id": "C011", "mission": "", "exclude_missions": [], "kind": "D3_cross", "text": "Which missions' boards identified systems engineering / configuration management deficiency as a cause or contributing factor?"}
+{"query_id": "C012", "mission": "", "exclude_missions": [], "kind": "D3_cross", "text": "Which missions' boards identified procedure deficient or not followed as a cause or contributing factor?"}
+{"query_id": "C013", "mission": "", "exclude_missions": [], "kind": "D3_cross", "text": "Which missions' boards identified operational configuration / parameter / data error as a cause or contributing factor?"}
+{"query_id": "C014", "mission": "", "exclude_missions": [], "kind": "D3_cross", "text": "Which missions' boards identified manufacturing / workmanship / material defect as a cause or contributing factor?"}
+{"query_id": "C015", "mission": "", "exclude_missions": [], "kind": "D3_cross", "text": "Which missions' boards identified component failure (unexplained / wear / random) as a cause or contributing factor?"}
+{"query_id": "L001", "mission": "", "exclude_missions": [], "kind": "D3_lesson", "text": "What did the Antares Orb-3 investigation board recommend?"}
+{"query_id": "L002", "mission": "", "exclude_missions": [], "kind": "D3_lesson", "text": "What did the Apollo 1 (AS-204) investigation board recommend?"}
+{"query_id": "L003", "mission": "", "exclude_missions": [], "kind": "D3_lesson", "text": "What did the Apollo 13 investigation board recommend?"}
+{"query_id": "L004", "mission": "", "exclude_missions": [], "kind": "D3_lesson", "text": "What did the Ariane 5 Flight 501 investigation board recommend?"}
+{"query_id": "L005", "mission": "", "exclude_missions": [], "kind": "D3_lesson", "text": "What did the ExoMars 2016 Schiaparelli investigation board recommend?"}
+{"query_id": "L006", "mission": "", "exclude_missions": [], "kind": "D3_lesson", "text": "What did the Genesis investigation board recommend?"}
+{"query_id": "L007", "mission": "", "exclude_missions": [], "kind": "D3_lesson", "text": "What did the Glory (Taurus XL T9) investigation board recommend?"}
+{"query_id": "L008", "mission": "", "exclude_missions": [], "kind": "D3_lesson", "text": "What did the Mars Climate Orbiter investigation board recommend?"}
+{"query_id": "L009", "mission": "", "exclude_missions": [], "kind": "D3_lesson", "text": "What did the NOAA-N Prime investigation board recommend?"}
+{"query_id": "L010", "mission": "", "exclude_missions": [], "kind": "D3_lesson", "text": "What did the SOHO (mission interruption) investigation board recommend?"}
+{"query_id": "U001", "mission": "", "exclude_missions": [], "kind": "D3_unanswerable", "text": "What caused the loss of Mars Observer (1993)?"}
+{"query_id": "U002", "mission": "", "exclude_missions": [], "kind": "D3_unanswerable", "text": "What caused the loss of Mars Polar Lander (1999)?"}
+{"query_id": "U003", "mission": "", "exclude_missions": [], "kind": "D3_unanswerable", "text": "What caused the loss of Beagle 2 (2003)?"}
+{"query_id": "U004", "mission": "", "exclude_missions": [], "kind": "D3_unanswerable", "text": "What caused the loss of Phobos-Grunt (2011)?"}
+{"query_id": "U005", "mission": "", "exclude_missions": [], "kind": "D3_unanswerable", "text": "What caused the loss of CONTOUR (2002)?"}
+{"query_id": "U006", "mission": "", "exclude_missions": [], "kind": "D3_unanswerable", "text": "What caused the loss of Lewis spacecraft (1997)?"}
+{"query_id": "U007", "mission": "", "exclude_missions": [], "kind": "D3_unanswerable", "text": "What caused the loss of Deep Space 2 (1999)?"}
+{"query_id": "U008", "mission": "", "exclude_missions": [], "kind": "D3_unanswerable", "text": "What caused the loss of Mars 96?"}
+{"query_id": "U009", "mission": "", "exclude_missions": [], "kind": "D3_unanswerable", "text": "What caused the loss of Zenit-3SL Sea Launch NSS-8 (2007)?"}
+{"query_id": "U010", "mission": "", "exclude_missions": [], "kind": "D3_unanswerable", "text": "What caused the loss of Proton-M Glonass launch failure (2013)?"}

@@ -114,8 +114,11 @@ Trial run on Stage 3 run A: PASS. A2 flagged all 19 automatic dev queries as cop
 
 | Date | Change | Reason |
 |---|---|---|
+| 2026-10-13 | P query codes = direct query factors ∪ verified factors of B3's top-20 passages; ablation P-noprf added | Direct query factors were empty for 12/19 dev queries (symptoms, not causes). Decided on dev queries, before any human label |
+| 2026-10-13 | Ariane 501: official ESA copy (user-approved) replaces the MIT mirror; blank D1 and field-test sheets regenerated with the same seeds | Official provenance; the sheets were still blank |
+| 2026-10-13 | Synthetic pseudo-labels and a full proof-of-concept run (`docs/research/10`) | Requested by the owner; all outputs stamped SYNTHETIC_LABELS_NOT_REPORTABLE |
 | 2026-10-13 | Citation ids normalised identically for every system (`norm_cite`) | Some B3 citations were the copied chunk header ("[C19] mission=…"). Stage 3 counts (9 invalid) were computed without it and are not changed |
 
-## 8. Development results (dev queries; NOT reportable)
+## 8. Development results (NOT reportable)
 
-*(Filled in after the corpus-wide extraction finishes.)*
+See `docs/research/10_Proof_of_Concept_Synthetic_Labels.md`.

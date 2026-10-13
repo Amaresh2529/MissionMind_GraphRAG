@@ -1,0 +1,482 @@
+[
+  {
+    "item": "R001",
+    "system": "B0"
+  },
+  {
+    "item": "R002",
+    "system": "P"
+  },
+  {
+    "item": "R003",
+    "system": "P"
+  },
+  {
+    "item": "R004",
+    "system": "B0"
+  },
+  {
+    "item": "R005",
+    "system": "B3"
+  },
+  {
+    "item": "R006",
+    "system": "P"
+  },
+  {
+    "item": "R007",
+    "system": "P"
+  },
+  {
+    "item": "R008",
+    "system": "B3"
+  },
+  {
+    "item": "R009",
+    "system": "B0"
+  },
+  {
+    "item": "R010",
+    "system": "B3"
+  },
+  {
+    "item": "R011",
+    "system": "P"
+  },
+  {
+    "item": "R012",
+    "system": "B0"
+  },
+  {
+    "item": "R013",
+    "system": "P"
+  },
+  {
+    "item": "R014",
+    "system": "P"
+  },
+  {
+    "item": "R015",
+    "system": "B3"
+  },
+  {
+    "item": "R016",
+    "system": "B0"
+  },
+  {
+    "item": "R017",
+    "system": "B3"
+  },
+  {
+    "item": "R018",
+    "system": "P"
+  },
+  {
+    "item": "R019",
+    "system": "B0"
+  },
+  {
+    "item": "R020",
+    "system": "P"
+  },
+  {
+    "item": "R021",
+    "system": "P"
+  },
+  {
+    "item": "R022",
+    "system": "P"
+  },
+  {
+    "item": "R023",
+    "system": "P"
+  },
+  {
+    "item": "R024",
+    "system": "P"
+  },
+  {
+    "item": "R025",
+    "system": "P"
+  },
+  {
+    "item": "R026",
+    "system": "B0"
+  },
+  {
+    "item": "R027",
+    "system": "P"
+  },
+  {
+    "item": "R028",
+    "system": "B3"
+  },
+  {
+    "item": "R029",
+    "system": "P"
+  },
+  {
+    "item": "R030",
+    "system": "B0"
+  },
+  {
+    "item": "R031",
+    "system": "B0"
+  },
+  {
+    "item": "R032",
+    "system": "B0"
+  },
+  {
+    "item": "R033",
+    "system": "B0"
+  },
+  {
+    "item": "R034",
+    "system": "P"
+  },
+  {
+    "item": "R035",
+    "system": "P"
+  },
+  {
+    "item": "R036",
+    "system": "B0"
+  },
+  {
+    "item": "R037",
+    "system": "P"
+  },
+  {
+    "item": "R038",
+    "system": "P"
+  },
+  {
+    "item": "R039",
+    "system": "B0"
+  },
+  {
+    "item": "R040",
+    "system": "P"
+  },
+  {
+    "item": "R041",
+    "system": "B3"
+  },
+  {
+    "item": "R042",
+    "system": "B3"
+  },
+  {
+    "item": "R043",
+    "system": "B0"
+  },
+  {
+    "item": "R044",
+    "system": "P"
+  },
+  {
+    "item": "R045",
+    "system": "B3"
+  },
+  {
+    "item": "R046",
+    "system": "B0"
+  },
+  {
+    "item": "R047",
+    "system": "P"
+  },
+  {
+    "item": "R048",
+    "system": "B0"
+  },
+  {
+    "item": "R049",
+    "system": "B3"
+  },
+  {
+    "item": "R050",
+    "system": "B3"
+  },
+  {
+    "item": "R051",
+    "system": "B3"
+  },
+  {
+    "item": "R052",
+    "system": "B3"
+  },
+  {
+    "item": "R053",
+    "system": "B0"
+  },
+  {
+    "item": "R054",
+    "system": "P"
+  },
+  {
+    "item": "R055",
+    "system": "P"
+  },
+  {
+    "item": "R056",
+    "system": "B3"
+  },
+  {
+    "item": "R057",
+    "system": "B3"
+  },
+  {
+    "item": "R058",
+    "system": "B0"
+  },
+  {
+    "item": "R059",
+    "system": "P"
+  },
+  {
+    "item": "R060",
+    "system": "B0"
+  },
+  {
+    "item": "R061",
+    "system": "B3"
+  },
+  {
+    "item": "R062",
+    "system": "B0"
+  },
+  {
+    "item": "R063",
+    "system": "P"
+  },
+  {
+    "item": "R064",
+    "system": "B0"
+  },
+  {
+    "item": "R065",
+    "system": "B3"
+  },
+  {
+    "item": "R066",
+    "system": "P"
+  },
+  {
+    "item": "R067",
+    "system": "B3"
+  },
+  {
+    "item": "R068",
+    "system": "B0"
+  },
+  {
+    "item": "R069",
+    "system": "B3"
+  },
+  {
+    "item": "R070",
+    "system": "P"
+  },
+  {
+    "item": "R071",
+    "system": "B3"
+  },
+  {
+    "item": "R072",
+    "system": "B3"
+  },
+  {
+    "item": "R073",
+    "system": "B3"
+  },
+  {
+    "item": "R074",
+    "system": "B3"
+  },
+  {
+    "item": "R075",
+    "system": "B0"
+  },
+  {
+    "item": "R076",
+    "system": "B3"
+  },
+  {
+    "item": "R077",
+    "system": "B3"
+  },
+  {
+    "item": "R078",
+    "system": "B0"
+  },
+  {
+    "item": "R079",
+    "system": "B3"
+  },
+  {
+    "item": "R080",
+    "system": "B3"
+  },
+  {
+    "item": "R081",
+    "system": "P"
+  },
+  {
+    "item": "R082",
+    "system": "B3"
+  },
+  {
+    "item": "R083",
+    "system": "P"
+  },
+  {
+    "item": "R084",
+    "system": "P"
+  },
+  {
+    "item": "R085",
+    "system": "B3"
+  },
+  {
+    "item": "R086",
+    "system": "B0"
+  },
+  {
+    "item": "R087",
+    "system": "B0"
+  },
+  {
+    "item": "R088",
+    "system": "B0"
+  },
+  {
+    "item": "R089",
+    "system": "B3"
+  },
+  {
+    "item": "R090",
+    "system": "B0"
+  },
+  {
+    "item": "R091",
+    "system": "P"
+  },
+  {
+    "item": "R092",
+    "system": "B0"
+  },
+  {
+    "item": "R093",
+    "system": "B0"
+  },
+  {
+    "item": "R094",
+    "system": "P"
+  },
+  {
+    "item": "R095",
+    "system": "B3"
+  },
+  {
+    "item": "R096",
+    "system": "B0"
+  },
+  {
+    "item": "R097",
+    "system": "B0"
+  },
+  {
+    "item": "R098",
+    "system": "P"
+  },
+  {
+    "item": "R099",
+    "system": "B0"
+  },
+  {
+    "item": "R100",
+    "system": "B3"
+  },
+  {
+    "item": "R101",
+    "system": "P"
+  },
+  {
+    "item": "R102",
+    "system": "B3"
+  },
+  {
+    "item": "R103",
+    "system": "B0"
+  },
+  {
+    "item": "R104",
+    "system": "P"
+  },
+  {
+    "item": "R105",
+    "system": "B3"
+  },
+  {
+    "item": "R106",
+    "system": "B0"
+  },
+  {
+    "item": "R107",
+    "system": "B3"
+  },
+  {
+    "item": "R108",
+    "system": "B0"
+  },
+  {
+    "item": "R109",
+    "system": "P"
+  },
+  {
+    "item": "R110",
+    "system": "B0"
+  },
+  {
+    "item": "R111",
+    "system": "B3"
+  },
+  {
+    "item": "R112",
+    "system": "P"
+  },
+  {
+    "item": "R113",
+    "system": "B3"
+  },
+  {
+    "item": "R114",
+    "system": "B3"
+  },
+  {
+    "item": "R115",
+    "system": "B3"
+  },
+  {
+    "item": "R116",
+    "system": "B0"
+  },
+  {
+    "item": "R117",
+    "system": "P"
+  },
+  {
+    "item": "R118",
+    "system": "B0"
+  },
+  {
+    "item": "R119",
+    "system": "B3"
+  },
+  {
+    "item": "R120",
+    "system": "B0"
+  }
+]

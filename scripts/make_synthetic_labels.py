@@ -165,6 +165,7 @@ def main():
             if code not in found:
                 # quote must be an exact substring of the passage text
                 q = s if s in r["text"] else next((x for x in sentences(r["text"]) if x[:40] in s), "")
+                q = re.split(r"[;|]", q)[0].strip()      # ";" and "|" are field separators in the D1 sheet
                 if q and q in r["text"]:
                     found[code] = f"{code}|{role}|{quote_of(q, 25) if quote_of(q, 25) in r['text'] else q}"
         d1.append([r["item_id"], r["passage_id"], r["mission"], r["report"], r["page"], r["text"],

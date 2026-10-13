@@ -1,0 +1,27 @@
+{
+ "A1": {
+  "same_query_ids": true,
+  "systems": [
+   "B3",
+   "P"
+  ],
+  "git_dirty": false,
+  "git_commit": "3de259efd2b2d46466d7bce66bc4a9e5d7ebba7f"
+ },
+ "A2": {
+  "own_mission_leaks": 0,
+  "queries_with_own_8gram_overlap_gt_0.2": [],
+  "overlap": {}
+ },
+ "A3": {
+  "checked": 10400,
+  "bad": []
+ },
+ "A4": {
+  "citations_checked": 414,
+  "invalid_in_final_answers": 0,
+  "examples": [],
+  "note": "B3/B0 answers are not filtered; P answers are enforced. Invalid citations in B3 are a property of the system and are reported, not an audit failure."
+ },
+ "failures": []
+}

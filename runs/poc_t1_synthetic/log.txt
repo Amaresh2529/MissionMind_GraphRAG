@@ -1,0 +1,18 @@
+Loading weights:   0%|          | 0/391 [00:00<?, ?it/s]Loading weights: 100%|██████████| 391/391 [00:00<00:00, 6210.87it/s]
+B1                 22 queries, lists=['whole/bm25']
+B2                 22 queries, lists=['whole/dense']
+H-whole            22 queries, lists=['whole/bm25', 'whole/dense']
+SF-summary-bm25    22 queries, lists=['summary/bm25']
+SF-summary-dense   22 queries, lists=['summary/dense']
+SF-summary-hybrid  22 queries, lists=['summary/bm25', 'summary/dense']
+SF-causes-bm25     22 queries, lists=['causes/bm25']
+SF-causes-dense    22 queries, lists=['causes/dense']
+SF-causes-hybrid   22 queries, lists=['causes/bm25', 'causes/dense']
+B3                 22 queries, lists=['causes/bm25', 'causes/dense', 'disposition/bm25', 'disposition/dense', 'summary/bm25', 'summary/dense']
+B3-bal             22 queries, lists=['causes/bm25', 'causes/dense', 'disposition/bm25', 'disposition/dense', 'summary/bm25', 'summary/dense']
+P                  22 queries, fallback_to_B3=2
+P-noverif          22 queries, fallback_to_B3=0
+P-nofields         22 queries, fallback_to_B3=2
+P-graphonly        22 queries, fallback_to_B3=2
+P-noidf            22 queries, fallback_to_B3=2
+P-noprf            22 queries, fallback_to_B3=12

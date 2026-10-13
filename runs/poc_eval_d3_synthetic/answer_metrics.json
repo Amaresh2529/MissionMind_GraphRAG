@@ -1,0 +1,71 @@
+{
+  "SYNTHETIC_LABELS_NOT_REPORTABLE": true,
+  "labels_dir": "evalutation\\benchmark\\synthetic",
+  "run": "runs\\poc_d3_synthetic",
+  "judge": "local LLM (see env), yes/no per key point",
+  "d3_sha256": "5a9db5a686dcbc8440b497930efbed5ab67e48504454e44bd02610a6142e2956",
+  "results": {
+    "B0": {
+      "key_point_recall": 0.8115079365079365,
+      "citation_page_prec": null,
+      "abstain_correct": 0.8076923076923077,
+      "questions": 52
+    },
+    "B3": {
+      "key_point_recall": 0.7698412698412699,
+      "citation_page_prec": 0.20470521541950115,
+      "abstain_correct": 0.9615384615384616,
+      "questions": 52
+    },
+    "P": {
+      "key_point_recall": 0.8273809523809523,
+      "citation_page_prec": 0.14484126984126983,
+      "abstain_correct": 0.9807692307692307,
+      "questions": 52
+    }
+  },
+  "comparisons": {
+    "P vs B3 [key_point_recall]": {
+      "permutation": {
+        "n": 42,
+        "mean_diff": 0.05753968253968254,
+        "p": 0.33718314084295786,
+        "exact": false
+      },
+      "bootstrap95": {
+        "n": 42,
+        "mean_diff": 0.05753968253968254,
+        "low": -0.047619047619047616,
+        "high": 0.17063492063492064
+      }
+    },
+    "P vs B0 [key_point_recall]": {
+      "permutation": {
+        "n": 42,
+        "mean_diff": 0.01587301587301588,
+        "p": 0.7748612569371531,
+        "exact": false
+      },
+      "bootstrap95": {
+        "n": 42,
+        "mean_diff": 0.01587301587301588,
+        "low": -0.07539682539682539,
+        "high": 0.10317460317460318
+      }
+    },
+    "B3 vs B0 [key_point_recall]": {
+      "permutation": {
+        "n": 42,
+        "mean_diff": -0.041666666666666664,
+        "p": 0.4185290735463227,
+        "exact": false
+      },
+      "bootstrap95": {
+        "n": 42,
+        "mean_diff": -0.041666666666666664,
+        "low": -0.14087301587301587,
+        "high": 0.047619047619047616
+      }
+    }
+  }
+}

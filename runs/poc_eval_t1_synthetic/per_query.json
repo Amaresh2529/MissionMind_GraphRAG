@@ -1,0 +1,3776 @@
+{
+  "B1": {
+    "T1-antares-orb3": {
+      "mission_ndcg@5": 0.5560906761394714,
+      "mission_ndcg@10": 0.6722888956679628,
+      "mission_recall@5": 0.2857142857142857,
+      "mission_mrr": 0.3333333333333333,
+      "passage_normrecall@100": 0.06896551724137931,
+      "passage_ndcg@100": 0.03723389939242692,
+      "n_relevant_missions": 7,
+      "n_gold_passages": 29
+    },
+    "T1-apollo1-as204": {
+      "mission_ndcg@5": 0.6328638588981044,
+      "mission_ndcg@10": 0.7500904076678122,
+      "mission_recall@5": 0.375,
+      "mission_mrr": 0.5,
+      "passage_normrecall@100": 0.01639344262295082,
+      "passage_ndcg@100": 0.035668157423830005,
+      "n_relevant_missions": 8,
+      "n_gold_passages": 61
+    },
+    "T1-apollo13": {
+      "mission_ndcg@5": 1.0,
+      "mission_ndcg@10": 0.9216017310213246,
+      "mission_recall@5": null,
+      "mission_mrr": null,
+      "passage_normrecall@100": null,
+      "passage_ndcg@100": 0.09708015909485222,
+      "n_relevant_missions": 0,
+      "n_gold_passages": 0
+    },
+    "T1-ariane5-501": {
+      "mission_ndcg@5": 0.5878056198050307,
+      "mission_ndcg@10": 0.6115261901008114,
+      "mission_recall@5": 0.2222222222222222,
+      "mission_mrr": 0.5,
+      "passage_normrecall@100": 0.05555555555555555,
+      "passage_ndcg@100": 0.08236484594444343,
+      "n_relevant_missions": 9,
+      "n_gold_passages": 72
+    },
+    "T1-dart-2005": {
+      "mission_ndcg@5": 0.9434732991210639,
+      "mission_ndcg@10": 0.8895444691421204,
+      "mission_recall@5": 0.5,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.0425531914893617,
+      "passage_ndcg@100": 0.04324334800652747,
+      "n_relevant_missions": 10,
+      "n_gold_passages": 94
+    },
+    "T1-exomars2016-schiaparelli": {
+      "mission_ndcg@5": 0.8008157892980458,
+      "mission_ndcg@10": 0.8108594527522524,
+      "mission_recall@5": 0.5,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.0625,
+      "passage_ndcg@100": 0.07541067847121598,
+      "n_relevant_missions": 8,
+      "n_gold_passages": 48
+    },
+    "T1-genesis": {
+      "mission_ndcg@5": 0.646910188523972,
+      "mission_ndcg@10": 0.7257987793222311,
+      "mission_recall@5": 0.3,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.0,
+      "passage_ndcg@100": 0.00496206978945253,
+      "n_relevant_missions": 10,
+      "n_gold_passages": 66
+    },
+    "T1-glory-taurus-t9": {
+      "mission_ndcg@5": 0.7458326725095431,
+      "mission_ndcg@10": 0.7966665236609216,
+      "mission_recall@5": 0.2727272727272727,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.04225352112676056,
+      "passage_ndcg@100": 0.03553864719204887,
+      "n_relevant_missions": 11,
+      "n_gold_passages": 71
+    },
+    "T1-gslv-f10": {
+      "mission_ndcg@5": 1.0,
+      "mission_ndcg@10": 0.7819835854675755,
+      "mission_recall@5": null,
+      "mission_mrr": null,
+      "passage_normrecall@100": null,
+      "passage_ndcg@100": 0.06971244964088132,
+      "n_relevant_missions": 0,
+      "n_gold_passages": 0
+    },
+    "T1-hitomi": {
+      "mission_ndcg@5": 1.0,
+      "mission_ndcg@10": 1.0,
+      "mission_recall@5": null,
+      "mission_mrr": null,
+      "passage_normrecall@100": null,
+      "passage_ndcg@100": 0.04592807097506442,
+      "n_relevant_missions": 0,
+      "n_gold_passages": 0
+    },
+    "T1-mars-climate-orbiter": {
+      "mission_ndcg@5": 0.8153807673520377,
+      "mission_ndcg@10": 0.8654350926401684,
+      "mission_recall@5": 0.35714285714285715,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.08974358974358974,
+      "passage_ndcg@100": 0.10726436260006043,
+      "n_relevant_missions": 14,
+      "n_gold_passages": 78
+    },
+    "T1-noaa-n-prime": {
+      "mission_ndcg@5": 0.72012972761384,
+      "mission_ndcg@10": 0.7605018669697287,
+      "mission_recall@5": 0.5,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.0,
+      "passage_ndcg@100": 0.0,
+      "n_relevant_missions": 6,
+      "n_gold_passages": 31
+    },
+    "T1-oco-taurus-t8": {
+      "mission_ndcg@5": 0.7013481241955779,
+      "mission_ndcg@10": 0.7117010898395043,
+      "mission_recall@5": 0.375,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.07407407407407407,
+      "passage_ndcg@100": 0.07860356228499163,
+      "n_relevant_missions": 8,
+      "n_gold_passages": 54
+    },
+    "T1-soho-1998": {
+      "mission_ndcg@5": 0.6608397947263839,
+      "mission_ndcg@10": 0.7114158785527639,
+      "mission_recall@5": 0.36363636363636365,
+      "mission_mrr": 0.5,
+      "passage_normrecall@100": 0.04054054054054054,
+      "passage_ndcg@100": 0.05318884462534727,
+      "n_relevant_missions": 11,
+      "n_gold_passages": 74
+    },
+    "T1-spacex-crs7": {
+      "mission_ndcg@5": 0.6298964439304254,
+      "mission_ndcg@10": 0.7374466367322308,
+      "mission_recall@5": 0.3333333333333333,
+      "mission_mrr": 0.5,
+      "passage_normrecall@100": 0.03125,
+      "passage_ndcg@100": 0.02392350006290425,
+      "n_relevant_missions": 9,
+      "n_gold_passages": 64
+    },
+    "T1-starliner-cft": {
+      "mission_ndcg@5": 0.5875006608237904,
+      "mission_ndcg@10": 0.7265164067510432,
+      "mission_recall@5": 0.23076923076923078,
+      "mission_mrr": 0.3333333333333333,
+      "passage_normrecall@100": 0.0,
+      "passage_ndcg@100": 0.0,
+      "n_relevant_missions": 13,
+      "n_gold_passages": 104
+    },
+    "T1-sts-107-columbia": {
+      "mission_ndcg@5": 0.8799817951409221,
+      "mission_ndcg@10": 0.9165739535520107,
+      "mission_recall@5": 0.35714285714285715,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.05,
+      "passage_ndcg@100": 0.05290009621141389,
+      "n_relevant_missions": 14,
+      "n_gold_passages": 103
+    },
+    "T1-sts-51l-challenger": {
+      "mission_ndcg@5": 0.928671245088491,
+      "mission_ndcg@10": 0.8447580414368361,
+      "mission_recall@5": 0.38461538461538464,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.01020408163265306,
+      "passage_ndcg@100": 0.008386341420928919,
+      "n_relevant_missions": 13,
+      "n_gold_passages": 98
+    },
+    "T1-vega-vv15": {
+      "mission_ndcg@5": 0.6548086577531307,
+      "mission_ndcg@10": 0.6281649475693718,
+      "mission_recall@5": null,
+      "mission_mrr": null,
+      "passage_normrecall@100": null,
+      "passage_ndcg@100": 0.21369528010181046,
+      "n_relevant_missions": 0,
+      "n_gold_passages": 0
+    },
+    "T1-vega-vv17": {
+      "mission_ndcg@5": 0.10961051126301759,
+      "mission_ndcg@10": 0.25106770185367905,
+      "mission_recall@5": 0.0,
+      "mission_mrr": 0.05555555555555555,
+      "passage_normrecall@100": 0.0,
+      "passage_ndcg@100": 0.02888826417027209,
+      "n_relevant_missions": 1,
+      "n_gold_passages": 3
+    },
+    "T1-vegac-vv22": {
+      "mission_ndcg@5": null,
+      "mission_ndcg@10": null,
+      "mission_recall@5": null,
+      "mission_mrr": null,
+      "passage_normrecall@100": null,
+      "passage_ndcg@100": null,
+      "n_relevant_missions": 0,
+      "n_gold_passages": 0
+    },
+    "T1-wire": {
+      "mission_ndcg@5": 0.9557034395662896,
+      "mission_ndcg@10": 0.9656479583489962,
+      "mission_recall@5": 1.0,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.23333333333333334,
+      "passage_ndcg@100": 0.14703038845390615,
+      "n_relevant_missions": 4,
+      "n_gold_passages": 30
+    }
+  },
+  "B2": {
+    "T1-antares-orb3": {
+      "mission_ndcg@5": 0.4439093238605286,
+      "mission_ndcg@10": 0.5083684836929006,
+      "mission_recall@5": 0.14285714285714285,
+      "mission_mrr": 0.3333333333333333,
+      "passage_normrecall@100": 0.0,
+      "passage_ndcg@100": 0.0056591235838854385,
+      "n_relevant_missions": 7,
+      "n_gold_passages": 29
+    },
+    "T1-apollo1-as204": {
+      "mission_ndcg@5": 0.6601054139978735,
+      "mission_ndcg@10": 0.6752810052451093,
+      "mission_recall@5": 0.375,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.01639344262295082,
+      "passage_ndcg@100": 0.021847070297502304,
+      "n_relevant_missions": 8,
+      "n_gold_passages": 61
+    },
+    "T1-apollo13": {
+      "mission_ndcg@5": 0.8687949224876582,
+      "mission_ndcg@10": 0.914856882358379,
+      "mission_recall@5": null,
+      "mission_mrr": null,
+      "passage_normrecall@100": null,
+      "passage_ndcg@100": 0.06306977012141389,
+      "n_relevant_missions": 0,
+      "n_gold_passages": 0
+    },
+    "T1-ariane5-501": {
+      "mission_ndcg@5": 0.819972692711383,
+      "mission_ndcg@10": 0.733890961112309,
+      "mission_recall@5": 0.3333333333333333,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.05555555555555555,
+      "passage_ndcg@100": 0.14466941086604423,
+      "n_relevant_missions": 9,
+      "n_gold_passages": 72
+    },
+    "T1-dart-2005": {
+      "mission_ndcg@5": 0.7438222935184587,
+      "mission_ndcg@10": 0.8476589065820624,
+      "mission_recall@5": 0.3,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.031914893617021274,
+      "passage_ndcg@100": 0.0423067018092113,
+      "n_relevant_missions": 10,
+      "n_gold_passages": 94
+    },
+    "T1-exomars2016-schiaparelli": {
+      "mission_ndcg@5": 0.646910188523972,
+      "mission_ndcg@10": 0.7796327928832015,
+      "mission_recall@5": 0.25,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.08333333333333333,
+      "passage_ndcg@100": 0.09870231998949645,
+      "n_relevant_missions": 8,
+      "n_gold_passages": 48
+    },
+    "T1-genesis": {
+      "mission_ndcg@5": 0.8638404983775366,
+      "mission_ndcg@10": 0.879957268964889,
+      "mission_recall@5": 0.4,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.045454545454545456,
+      "passage_ndcg@100": 0.03797790838636073,
+      "n_relevant_missions": 10,
+      "n_gold_passages": 66
+    },
+    "T1-glory-taurus-t9": {
+      "mission_ndcg@5": 0.7895676983469904,
+      "mission_ndcg@10": 0.7710823554897689,
+      "mission_recall@5": 0.2727272727272727,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.07042253521126761,
+      "passage_ndcg@100": 0.06352508616852183,
+      "n_relevant_missions": 11,
+      "n_gold_passages": 71
+    },
+    "T1-gslv-f10": {
+      "mission_ndcg@5": 1.0,
+      "mission_ndcg@10": 0.9363792118010481,
+      "mission_recall@5": null,
+      "mission_mrr": null,
+      "passage_normrecall@100": null,
+      "passage_ndcg@100": 0.05697955420700798,
+      "n_relevant_missions": 0,
+      "n_gold_passages": 0
+    },
+    "T1-hitomi": {
+      "mission_ndcg@5": 1.0,
+      "mission_ndcg@10": 1.0,
+      "mission_recall@5": null,
+      "mission_mrr": null,
+      "passage_normrecall@100": null,
+      "passage_ndcg@100": 0.04070586462313558,
+      "n_relevant_missions": 0,
+      "n_gold_passages": 0
+    },
+    "T1-mars-climate-orbiter": {
+      "mission_ndcg@5": 0.7274130677856426,
+      "mission_ndcg@10": 0.8020656114388226,
+      "mission_recall@5": 0.2857142857142857,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.038461538461538464,
+      "passage_ndcg@100": 0.03109844595346463,
+      "n_relevant_missions": 14,
+      "n_gold_passages": 78
+    },
+    "T1-noaa-n-prime": {
+      "mission_ndcg@5": 0.696668695148475,
+      "mission_ndcg@10": 0.8407557504100691,
+      "mission_recall@5": 0.5,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.03225806451612903,
+      "passage_ndcg@100": 0.025953584799188148,
+      "n_relevant_missions": 6,
+      "n_gold_passages": 31
+    },
+    "T1-oco-taurus-t8": {
+      "mission_ndcg@5": 0.7493503044419051,
+      "mission_ndcg@10": 0.8070691036216516,
+      "mission_recall@5": 0.375,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.09259259259259259,
+      "passage_ndcg@100": 0.1271352726583996,
+      "n_relevant_missions": 8,
+      "n_gold_passages": 54
+    },
+    "T1-soho-1998": {
+      "mission_ndcg@5": 0.8421757737602428,
+      "mission_ndcg@10": 0.7972801269920727,
+      "mission_recall@5": 0.2727272727272727,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.013513513513513514,
+      "passage_ndcg@100": 0.07930872642367168,
+      "n_relevant_missions": 11,
+      "n_gold_passages": 74
+    },
+    "T1-spacex-crs7": {
+      "mission_ndcg@5": 0.6298964439304254,
+      "mission_ndcg@10": 0.6369751481207034,
+      "mission_recall@5": 0.3333333333333333,
+      "mission_mrr": 0.5,
+      "passage_normrecall@100": 0.0,
+      "passage_ndcg@100": 0.0,
+      "n_relevant_missions": 9,
+      "n_gold_passages": 64
+    },
+    "T1-starliner-cft": {
+      "mission_ndcg@5": 0.9125299483251055,
+      "mission_ndcg@10": 0.841504921429498,
+      "mission_recall@5": 0.3076923076923077,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.03,
+      "passage_ndcg@100": 0.030132953169075372,
+      "n_relevant_missions": 13,
+      "n_gold_passages": 104
+    },
+    "T1-sts-107-columbia": {
+      "mission_ndcg@5": 0.7994765465672335,
+      "mission_ndcg@10": 0.8277383588276315,
+      "mission_recall@5": 0.2857142857142857,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.02,
+      "passage_ndcg@100": 0.014988329457801894,
+      "n_relevant_missions": 14,
+      "n_gold_passages": 103
+    },
+    "T1-sts-51l-challenger": {
+      "mission_ndcg@5": 0.8869465982421281,
+      "mission_ndcg@10": 0.8729169425679765,
+      "mission_recall@5": 0.3076923076923077,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.0,
+      "passage_ndcg@100": 0.0,
+      "n_relevant_missions": 13,
+      "n_gold_passages": 98
+    },
+    "T1-vega-vv15": {
+      "mission_ndcg@5": 0.4703652827859579,
+      "mission_ndcg@10": 0.5868720866710773,
+      "mission_recall@5": null,
+      "mission_mrr": null,
+      "passage_normrecall@100": null,
+      "passage_ndcg@100": 0.09770469834109115,
+      "n_relevant_missions": 0,
+      "n_gold_passages": 0
+    },
+    "T1-vega-vv17": {
+      "mission_ndcg@5": 0.0,
+      "mission_ndcg@10": 0.21922102252603518,
+      "mission_recall@5": 0.0,
+      "mission_mrr": 0.14285714285714285,
+      "passage_normrecall@100": 0.0,
+      "passage_ndcg@100": 0.0,
+      "n_relevant_missions": 1,
+      "n_gold_passages": 3
+    },
+    "T1-vegac-vv22": {
+      "mission_ndcg@5": null,
+      "mission_ndcg@10": null,
+      "mission_recall@5": null,
+      "mission_mrr": null,
+      "passage_normrecall@100": null,
+      "passage_ndcg@100": null,
+      "n_relevant_missions": 0,
+      "n_gold_passages": 0
+    },
+    "T1-wire": {
+      "mission_ndcg@5": 0.5351041935991797,
+      "mission_ndcg@10": 0.731973999938431,
+      "mission_recall@5": 0.0,
+      "mission_mrr": 0.16666666666666666,
+      "passage_normrecall@100": 0.0,
+      "passage_ndcg@100": 0.0867617422986385,
+      "n_relevant_missions": 4,
+      "n_gold_passages": 30
+    }
+  },
+  "B3-bal": {
+    "T1-antares-orb3": {
+      "mission_ndcg@5": 0.5560906761394714,
+      "mission_ndcg@10": 0.6970045091398347,
+      "mission_recall@5": 0.2857142857142857,
+      "mission_mrr": 0.3333333333333333,
+      "passage_normrecall@100": 0.0,
+      "passage_ndcg@100": 0.0,
+      "n_relevant_missions": 7,
+      "n_gold_passages": 29
+    },
+    "T1-apollo1-as204": {
+      "mission_ndcg@5": 0.6601054139978735,
+      "mission_ndcg@10": 0.7637734615515128,
+      "mission_recall@5": 0.375,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.01639344262295082,
+      "passage_ndcg@100": 0.00720422024231748,
+      "n_relevant_missions": 8,
+      "n_gold_passages": 61
+    },
+    "T1-apollo13": {
+      "mission_ndcg@5": 1.0,
+      "mission_ndcg@10": 1.0,
+      "mission_recall@5": null,
+      "mission_mrr": null,
+      "passage_normrecall@100": null,
+      "passage_ndcg@100": 0.018400814372953905,
+      "n_relevant_missions": 0,
+      "n_gold_passages": 0
+    },
+    "T1-ariane5-501": {
+      "mission_ndcg@5": 0.6069931323672637,
+      "mission_ndcg@10": 0.6320181712403092,
+      "mission_recall@5": 0.1111111111111111,
+      "mission_mrr": 0.5,
+      "passage_normrecall@100": 0.06944444444444445,
+      "passage_ndcg@100": 0.13506825243623782,
+      "n_relevant_missions": 9,
+      "n_gold_passages": 72
+    },
+    "T1-dart-2005": {
+      "mission_ndcg@5": 0.7994765465672335,
+      "mission_ndcg@10": 0.7894506560325097,
+      "mission_recall@5": 0.4,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.0425531914893617,
+      "passage_ndcg@100": 0.07609771828557489,
+      "n_relevant_missions": 10,
+      "n_gold_passages": 94
+    },
+    "T1-exomars2016-schiaparelli": {
+      "mission_ndcg@5": 0.6455709457931598,
+      "mission_ndcg@10": 0.7005237995032153,
+      "mission_recall@5": 0.25,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.041666666666666664,
+      "passage_ndcg@100": 0.044426712091573145,
+      "n_relevant_missions": 8,
+      "n_gold_passages": 48
+    },
+    "T1-genesis": {
+      "mission_ndcg@5": 0.7162285644443968,
+      "mission_ndcg@10": 0.7036434522366098,
+      "mission_recall@5": 0.3,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.030303030303030304,
+      "passage_ndcg@100": 0.023723397242392693,
+      "n_relevant_missions": 10,
+      "n_gold_passages": 66
+    },
+    "T1-glory-taurus-t9": {
+      "mission_ndcg@5": 0.660839794726384,
+      "mission_ndcg@10": 0.7107216250158287,
+      "mission_recall@5": 0.2727272727272727,
+      "mission_mrr": 0.5,
+      "passage_normrecall@100": 0.056338028169014086,
+      "passage_ndcg@100": 0.05461277843009363,
+      "n_relevant_missions": 11,
+      "n_gold_passages": 71
+    },
+    "T1-gslv-f10": {
+      "mission_ndcg@5": 1.0,
+      "mission_ndcg@10": 0.9305687780632227,
+      "mission_recall@5": null,
+      "mission_mrr": null,
+      "passage_normrecall@100": null,
+      "passage_ndcg@100": 0.05592450932721273,
+      "n_relevant_missions": 0,
+      "n_gold_passages": 0
+    },
+    "T1-hitomi": {
+      "mission_ndcg@5": 1.0,
+      "mission_ndcg@10": 1.0,
+      "mission_recall@5": null,
+      "mission_mrr": null,
+      "passage_normrecall@100": null,
+      "passage_ndcg@100": 0.026653934074046766,
+      "n_relevant_missions": 0,
+      "n_gold_passages": 0
+    },
+    "T1-mars-climate-orbiter": {
+      "mission_ndcg@5": 0.8611160259039345,
+      "mission_ndcg@10": 0.8675455157128772,
+      "mission_recall@5": 0.35714285714285715,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.07692307692307693,
+      "passage_ndcg@100": 0.08818694755784946,
+      "n_relevant_missions": 14,
+      "n_gold_passages": 78
+    },
+    "T1-noaa-n-prime": {
+      "mission_ndcg@5": 0.7851245386009928,
+      "mission_ndcg@10": 0.8854356607024856,
+      "mission_recall@5": 0.5,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.03225806451612903,
+      "passage_ndcg@100": 0.021706709888911012,
+      "n_relevant_missions": 6,
+      "n_gold_passages": 31
+    },
+    "T1-oco-taurus-t8": {
+      "mission_ndcg@5": 0.6563286073639966,
+      "mission_ndcg@10": 0.67504971569261,
+      "mission_recall@5": 0.375,
+      "mission_mrr": 0.5,
+      "passage_normrecall@100": 0.07407407407407407,
+      "passage_ndcg@100": 0.09758096903089267,
+      "n_relevant_missions": 8,
+      "n_gold_passages": 54
+    },
+    "T1-soho-1998": {
+      "mission_ndcg@5": 0.7227265726449519,
+      "mission_ndcg@10": 0.7853529070204396,
+      "mission_recall@5": 0.2727272727272727,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.04054054054054054,
+      "passage_ndcg@100": 0.055018430918708866,
+      "n_relevant_missions": 11,
+      "n_gold_passages": 74
+    },
+    "T1-spacex-crs7": {
+      "mission_ndcg@5": 0.7133457376231512,
+      "mission_ndcg@10": 0.7525897943009762,
+      "mission_recall@5": 0.3333333333333333,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.015625,
+      "passage_ndcg@100": 0.014288306049329284,
+      "n_relevant_missions": 9,
+      "n_gold_passages": 64
+    },
+    "T1-starliner-cft": {
+      "mission_ndcg@5": 0.8588860742674151,
+      "mission_ndcg@10": 0.8057543705801602,
+      "mission_recall@5": 0.3076923076923077,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.03,
+      "passage_ndcg@100": 0.03361174671975891,
+      "n_relevant_missions": 13,
+      "n_gold_passages": 104
+    },
+    "T1-sts-107-columbia": {
+      "mission_ndcg@5": 0.8997382732836168,
+      "mission_ndcg@10": 0.883934467829844,
+      "mission_recall@5": 0.35714285714285715,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.05,
+      "passage_ndcg@100": 0.046935956511276244,
+      "n_relevant_missions": 14,
+      "n_gold_passages": 103
+    },
+    "T1-sts-51l-challenger": {
+      "mission_ndcg@5": 0.759963590281844,
+      "mission_ndcg@10": 0.8295583649154237,
+      "mission_recall@5": 0.23076923076923078,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.01020408163265306,
+      "passage_ndcg@100": 0.008229716883068046,
+      "n_relevant_missions": 13,
+      "n_gold_passages": 98
+    },
+    "T1-vega-vv15": {
+      "mission_ndcg@5": 0.4912596920895758,
+      "mission_ndcg@10": 0.448668937538067,
+      "mission_recall@5": null,
+      "mission_mrr": null,
+      "passage_normrecall@100": null,
+      "passage_ndcg@100": 0.18996024212932472,
+      "n_relevant_missions": 0,
+      "n_gold_passages": 0
+    },
+    "T1-vega-vv17": {
+      "mission_ndcg@5": 0.0,
+      "mission_ndcg@10": 0.0,
+      "mission_recall@5": 0.0,
+      "mission_mrr": 0.06666666666666667,
+      "passage_normrecall@100": 0.0,
+      "passage_ndcg@100": 0.020840979094091196,
+      "n_relevant_missions": 1,
+      "n_gold_passages": 3
+    },
+    "T1-vegac-vv22": {
+      "mission_ndcg@5": null,
+      "mission_ndcg@10": null,
+      "mission_recall@5": null,
+      "mission_mrr": null,
+      "passage_normrecall@100": null,
+      "passage_ndcg@100": null,
+      "n_relevant_missions": 0,
+      "n_gold_passages": 0
+    },
+    "T1-wire": {
+      "mission_ndcg@5": 0.8649604154943542,
+      "mission_ndcg@10": 0.9454101736187588,
+      "mission_recall@5": 0.75,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.2,
+      "passage_ndcg@100": 0.14085062351973038,
+      "n_relevant_missions": 4,
+      "n_gold_passages": 30
+    }
+  },
+  "B3": {
+    "T1-antares-orb3": {
+      "mission_ndcg@5": 0.4439093238605286,
+      "mission_ndcg@10": 0.5104296741194574,
+      "mission_recall@5": 0.14285714285714285,
+      "mission_mrr": 0.3333333333333333,
+      "passage_normrecall@100": 0.0,
+      "passage_ndcg@100": 0.0074806960027519,
+      "n_relevant_missions": 7,
+      "n_gold_passages": 29
+    },
+    "T1-apollo1-as204": {
+      "mission_ndcg@5": 0.5686348968940799,
+      "mission_ndcg@10": 0.7870765134992922,
+      "mission_recall@5": 0.25,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.01639344262295082,
+      "passage_ndcg@100": 0.0270832997837549,
+      "n_relevant_missions": 8,
+      "n_gold_passages": 61
+    },
+    "T1-apollo13": {
+      "mission_ndcg@5": 1.0,
+      "mission_ndcg@10": 1.0,
+      "mission_recall@5": null,
+      "mission_mrr": null,
+      "passage_normrecall@100": null,
+      "passage_ndcg@100": 0.08096615133498788,
+      "n_relevant_missions": 0,
+      "n_gold_passages": 0
+    },
+    "T1-ariane5-501": {
+      "mission_ndcg@5": 0.8613632863224759,
+      "mission_ndcg@10": 0.8319750287960769,
+      "mission_recall@5": 0.3333333333333333,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.041666666666666664,
+      "passage_ndcg@100": 0.05543796902186873,
+      "n_relevant_missions": 9,
+      "n_gold_passages": 72
+    },
+    "T1-dart-2005": {
+      "mission_ndcg@5": 0.8869465982421281,
+      "mission_ndcg@10": 0.8729681852560034,
+      "mission_recall@5": 0.5,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.02127659574468085,
+      "passage_ndcg@100": 0.021186994027869145,
+      "n_relevant_missions": 10,
+      "n_gold_passages": 94
+    },
+    "T1-exomars2016-schiaparelli": {
+      "mission_ndcg@5": 0.8151510484299679,
+      "mission_ndcg@10": 0.8234070008544166,
+      "mission_recall@5": 0.375,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.041666666666666664,
+      "passage_ndcg@100": 0.08506991693394335,
+      "n_relevant_missions": 8,
+      "n_gold_passages": 48
+    },
+    "T1-genesis": {
+      "mission_ndcg@5": 0.7442890884191097,
+      "mission_ndcg@10": 0.7880446061092656,
+      "mission_recall@5": 0.4,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.015151515151515152,
+      "passage_ndcg@100": 0.009960183851137804,
+      "n_relevant_missions": 10,
+      "n_gold_passages": 66
+    },
+    "T1-glory-taurus-t9": {
+      "mission_ndcg@5": 0.7698724385020872,
+      "mission_ndcg@10": 0.7382584784285939,
+      "mission_recall@5": 0.2727272727272727,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.014084507042253521,
+      "passage_ndcg@100": 0.009873101778439244,
+      "n_relevant_missions": 11,
+      "n_gold_passages": 71
+    },
+    "T1-gslv-f10": {
+      "mission_ndcg@5": 1.0,
+      "mission_ndcg@10": 1.0,
+      "mission_recall@5": null,
+      "mission_mrr": null,
+      "passage_normrecall@100": null,
+      "passage_ndcg@100": 0.03485954989427717,
+      "n_relevant_missions": 0,
+      "n_gold_passages": 0
+    },
+    "T1-hitomi": {
+      "mission_ndcg@5": 1.0,
+      "mission_ndcg@10": 1.0,
+      "mission_recall@5": null,
+      "mission_mrr": null,
+      "passage_normrecall@100": null,
+      "passage_ndcg@100": 0.022375262328256443,
+      "n_relevant_missions": 0,
+      "n_gold_passages": 0
+    },
+    "T1-mars-climate-orbiter": {
+      "mission_ndcg@5": 0.8611160259039345,
+      "mission_ndcg@10": 0.8685726812918226,
+      "mission_recall@5": 0.35714285714285715,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.05128205128205128,
+      "passage_ndcg@100": 0.06116653709001981,
+      "n_relevant_missions": 14,
+      "n_gold_passages": 78
+    },
+    "T1-noaa-n-prime": {
+      "mission_ndcg@5": 0.4647000236407098,
+      "mission_ndcg@10": 0.6167657478940447,
+      "mission_recall@5": 0.16666666666666666,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.0,
+      "passage_ndcg@100": 0.0,
+      "n_relevant_missions": 6,
+      "n_gold_passages": 31
+    },
+    "T1-oco-taurus-t8": {
+      "mission_ndcg@5": 0.6083264271176694,
+      "mission_ndcg@10": 0.7293657099326003,
+      "mission_recall@5": 0.25,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.09259259259259259,
+      "passage_ndcg@100": 0.08332564959034977,
+      "n_relevant_missions": 8,
+      "n_gold_passages": 54
+    },
+    "T1-soho-1998": {
+      "mission_ndcg@5": 0.915209948681596,
+      "mission_ndcg@10": 0.7732767371587794,
+      "mission_recall@5": 0.36363636363636365,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.05405405405405406,
+      "passage_ndcg@100": 0.05147995415440213,
+      "n_relevant_missions": 11,
+      "n_gold_passages": 74
+    },
+    "T1-spacex-crs7": {
+      "mission_ndcg@5": 0.6150943898978523,
+      "mission_ndcg@10": 0.678312106601107,
+      "mission_recall@5": 0.3333333333333333,
+      "mission_mrr": 0.5,
+      "passage_normrecall@100": 0.015625,
+      "passage_ndcg@100": 0.007522214749034444,
+      "n_relevant_missions": 9,
+      "n_gold_passages": 64
+    },
+    "T1-starliner-cft": {
+      "mission_ndcg@5": 0.5634608948312463,
+      "mission_ndcg@10": 0.7105782440435956,
+      "mission_recall@5": 0.15384615384615385,
+      "mission_mrr": 0.5,
+      "passage_normrecall@100": 0.01,
+      "passage_ndcg@100": 0.008344062418166142,
+      "n_relevant_missions": 13,
+      "n_gold_passages": 104
+    },
+    "T1-sts-107-columbia": {
+      "mission_ndcg@5": 0.8023593733884791,
+      "mission_ndcg@10": 0.832943968690557,
+      "mission_recall@5": 0.2857142857142857,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.03,
+      "passage_ndcg@100": 0.01963842962475782,
+      "n_relevant_missions": 14,
+      "n_gold_passages": 103
+    },
+    "T1-sts-51l-challenger": {
+      "mission_ndcg@5": 0.7994765465672335,
+      "mission_ndcg@10": 0.8187350671671078,
+      "mission_recall@5": 0.23076923076923078,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.01020408163265306,
+      "passage_ndcg@100": 0.00820534266554481,
+      "n_relevant_missions": 13,
+      "n_gold_passages": 98
+    },
+    "T1-vega-vv15": {
+      "mission_ndcg@5": 0.639945385422766,
+      "mission_ndcg@10": 0.6145870006788592,
+      "mission_recall@5": null,
+      "mission_mrr": null,
+      "passage_normrecall@100": null,
+      "passage_ndcg@100": 0.08596407673043893,
+      "n_relevant_missions": 0,
+      "n_gold_passages": 0
+    },
+    "T1-vega-vv17": {
+      "mission_ndcg@5": 0.0848062679690234,
+      "mission_ndcg@10": 0.0848062679690234,
+      "mission_recall@5": 0.0,
+      "mission_mrr": 0.08333333333333333,
+      "passage_normrecall@100": 0.0,
+      "passage_ndcg@100": 0.0,
+      "n_relevant_missions": 1,
+      "n_gold_passages": 3
+    },
+    "T1-vegac-vv22": {
+      "mission_ndcg@5": null,
+      "mission_ndcg@10": null,
+      "mission_recall@5": null,
+      "mission_mrr": null,
+      "passage_normrecall@100": null,
+      "passage_ndcg@100": null,
+      "n_relevant_missions": 0,
+      "n_gold_passages": 0
+    },
+    "T1-wire": {
+      "mission_ndcg@5": 0.7165902417430504,
+      "mission_ndcg@10": 0.8652984806093615,
+      "mission_recall@5": 0.25,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.06666666666666667,
+      "passage_ndcg@100": 0.06284694424120588,
+      "n_relevant_missions": 4,
+      "n_gold_passages": 30
+    }
+  },
+  "H-whole": {
+    "T1-antares-orb3": {
+      "mission_ndcg@5": 0.5560906761394714,
+      "mission_ndcg@10": 0.6248871312129499,
+      "mission_recall@5": 0.2857142857142857,
+      "mission_mrr": 0.3333333333333333,
+      "passage_normrecall@100": 0.0,
+      "passage_ndcg@100": 0.006515306064012511,
+      "n_relevant_missions": 7,
+      "n_gold_passages": 29
+    },
+    "T1-apollo1-as204": {
+      "mission_ndcg@5": 0.5413933417943108,
+      "mission_ndcg@10": 0.737713415975033,
+      "mission_recall@5": 0.25,
+      "mission_mrr": 0.5,
+      "passage_normrecall@100": 0.01639344262295082,
+      "passage_ndcg@100": 0.03995044393222888,
+      "n_relevant_missions": 8,
+      "n_gold_passages": 61
+    },
+    "T1-apollo13": {
+      "mission_ndcg@5": 1.0,
+      "mission_ndcg@10": 0.9305687780632227,
+      "mission_recall@5": null,
+      "mission_mrr": null,
+      "passage_normrecall@100": null,
+      "passage_ndcg@100": 0.06875362684936663,
+      "n_relevant_missions": 0,
+      "n_gold_passages": 0
+    },
+    "T1-ariane5-501": {
+      "mission_ndcg@5": 0.6917831836856678,
+      "mission_ndcg@10": 0.6821871336793361,
+      "mission_recall@5": 0.2222222222222222,
+      "mission_mrr": 0.5,
+      "passage_normrecall@100": 0.05555555555555555,
+      "passage_ndcg@100": 0.10836004032939689,
+      "n_relevant_missions": 9,
+      "n_gold_passages": 72
+    },
+    "T1-dart-2005": {
+      "mission_ndcg@5": 0.8869465982421281,
+      "mission_ndcg@10": 0.8396993749076882,
+      "mission_recall@5": 0.5,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.0425531914893617,
+      "passage_ndcg@100": 0.04936418396571925,
+      "n_relevant_missions": 10,
+      "n_gold_passages": 94
+    },
+    "T1-exomars2016-schiaparelli": {
+      "mission_ndcg@5": 0.7507870966196646,
+      "mission_ndcg@10": 0.8051872740243199,
+      "mission_recall@5": 0.375,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.0625,
+      "passage_ndcg@100": 0.08266256210232614,
+      "n_relevant_missions": 8,
+      "n_gold_passages": 48
+    },
+    "T1-genesis": {
+      "mission_ndcg@5": 0.6150943898978523,
+      "mission_ndcg@10": 0.7531157238634696,
+      "mission_recall@5": 0.3,
+      "mission_mrr": 0.5,
+      "passage_normrecall@100": 0.030303030303030304,
+      "passage_ndcg@100": 0.02754105255705308,
+      "n_relevant_missions": 10,
+      "n_gold_passages": 66
+    },
+    "T1-glory-taurus-t9": {
+      "mission_ndcg@5": 0.7698724385020872,
+      "mission_ndcg@10": 0.779167753908523,
+      "mission_recall@5": 0.2727272727272727,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.056338028169014086,
+      "passage_ndcg@100": 0.04976669641786694,
+      "n_relevant_missions": 11,
+      "n_gold_passages": 71
+    },
+    "T1-gslv-f10": {
+      "mission_ndcg@5": 1.0,
+      "mission_ndcg@10": 0.8643145546088337,
+      "mission_recall@5": null,
+      "mission_mrr": null,
+      "passage_normrecall@100": null,
+      "passage_ndcg@100": 0.05438206556771815,
+      "n_relevant_missions": 0,
+      "n_gold_passages": 0
+    },
+    "T1-hitomi": {
+      "mission_ndcg@5": 1.0,
+      "mission_ndcg@10": 1.0,
+      "mission_recall@5": null,
+      "mission_mrr": null,
+      "passage_normrecall@100": null,
+      "passage_ndcg@100": 0.049813279225511445,
+      "n_relevant_missions": 0,
+      "n_gold_passages": 0
+    },
+    "T1-mars-climate-orbiter": {
+      "mission_ndcg@5": 0.7696455088001409,
+      "mission_ndcg@10": 0.8384959074872033,
+      "mission_recall@5": 0.2857142857142857,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.05128205128205128,
+      "passage_ndcg@100": 0.06148456777268085,
+      "n_relevant_missions": 14,
+      "n_gold_passages": 78
+    },
+    "T1-noaa-n-prime": {
+      "mission_ndcg@5": 0.5238119877994297,
+      "mission_ndcg@10": 0.7093793330432886,
+      "mission_recall@5": 0.3333333333333333,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.03225806451612903,
+      "passage_ndcg@100": 0.015419786558041588,
+      "n_relevant_missions": 6,
+      "n_gold_passages": 31
+    },
+    "T1-oco-taurus-t8": {
+      "mission_ndcg@5": 0.6272927852404767,
+      "mission_ndcg@10": 0.8109629531806107,
+      "mission_recall@5": 0.25,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.1111111111111111,
+      "passage_ndcg@100": 0.11664158355555335,
+      "n_relevant_missions": 8,
+      "n_gold_passages": 54
+    },
+    "T1-soho-1998": {
+      "mission_ndcg@5": 0.8930068676327362,
+      "mission_ndcg@10": 0.7554226091584011,
+      "mission_recall@5": 0.36363636363636365,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.05405405405405406,
+      "passage_ndcg@100": 0.07607121411611313,
+      "n_relevant_missions": 11,
+      "n_gold_passages": 74
+    },
+    "T1-spacex-crs7": {
+      "mission_ndcg@5": 0.6298964439304254,
+      "mission_ndcg@10": 0.6357462829110736,
+      "mission_recall@5": 0.3333333333333333,
+      "mission_mrr": 0.5,
+      "passage_normrecall@100": 0.03125,
+      "passage_ndcg@100": 0.016942862902594637,
+      "n_relevant_missions": 9,
+      "n_gold_passages": 64
+    },
+    "T1-starliner-cft": {
+      "mission_ndcg@5": 0.759963590281844,
+      "mission_ndcg@10": 0.7874599602342347,
+      "mission_recall@5": 0.23076923076923078,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.02,
+      "passage_ndcg@100": 0.01965080334418451,
+      "n_relevant_missions": 13,
+      "n_gold_passages": 104
+    },
+    "T1-sts-107-columbia": {
+      "mission_ndcg@5": 0.8947838491734952,
+      "mission_ndcg@10": 0.9009452278979222,
+      "mission_recall@5": 0.35714285714285715,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.05,
+      "passage_ndcg@100": 0.04554047815809966,
+      "n_relevant_missions": 14,
+      "n_gold_passages": 103
+    },
+    "T1-sts-51l-challenger": {
+      "mission_ndcg@5": 0.9513105500524313,
+      "mission_ndcg@10": 0.8694941090632535,
+      "mission_recall@5": 0.38461538461538464,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.0,
+      "passage_ndcg@100": 0.0,
+      "n_relevant_missions": 13,
+      "n_gold_passages": 98
+    },
+    "T1-vega-vv15": {
+      "mission_ndcg@5": 0.5296347172140421,
+      "mission_ndcg@10": 0.48571574856977245,
+      "mission_recall@5": null,
+      "mission_mrr": null,
+      "passage_normrecall@100": null,
+      "passage_ndcg@100": 0.1626388158693667,
+      "n_relevant_missions": 0,
+      "n_gold_passages": 0
+    },
+    "T1-vega-vv17": {
+      "mission_ndcg@5": 0.0,
+      "mission_ndcg@10": 0.07808810378894336,
+      "mission_recall@5": 0.0,
+      "mission_mrr": 0.0625,
+      "passage_normrecall@100": 0.0,
+      "passage_ndcg@100": 0.01970034359845677,
+      "n_relevant_missions": 1,
+      "n_gold_passages": 3
+    },
+    "T1-vegac-vv22": {
+      "mission_ndcg@5": null,
+      "mission_ndcg@10": null,
+      "mission_recall@5": null,
+      "mission_mrr": null,
+      "passage_normrecall@100": null,
+      "passage_ndcg@100": null,
+      "n_relevant_missions": 0,
+      "n_gold_passages": 0
+    },
+    "T1-wire": {
+      "mission_ndcg@5": 0.6132659801521241,
+      "mission_ndcg@10": 0.8008506412914672,
+      "mission_recall@5": 0.25,
+      "mission_mrr": 0.25,
+      "passage_normrecall@100": 0.13333333333333333,
+      "passage_ndcg@100": 0.13797278548636197,
+      "n_relevant_missions": 4,
+      "n_gold_passages": 30
+    }
+  },
+  "P-graphonly": {
+    "T1-antares-orb3": {
+      "mission_ndcg@5": 0.0,
+      "mission_ndcg@10": 0.0,
+      "mission_recall@5": 0.0,
+      "mission_mrr": 0.0,
+      "passage_normrecall@100": 0.0,
+      "passage_ndcg@100": 0.0,
+      "n_relevant_missions": 7,
+      "n_gold_passages": 29
+    },
+    "T1-apollo1-as204": {
+      "mission_ndcg@5": 0.8374413064740331,
+      "mission_ndcg@10": 0.8421460215271068,
+      "mission_recall@5": 0.5,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.01639344262295082,
+      "passage_ndcg@100": 0.011016081009843949,
+      "n_relevant_missions": 8,
+      "n_gold_passages": 61
+    },
+    "T1-apollo13": {
+      "mission_ndcg@5": 1.0,
+      "mission_ndcg@10": 0.9266360779006398,
+      "mission_recall@5": null,
+      "mission_mrr": null,
+      "passage_normrecall@100": null,
+      "passage_ndcg@100": 0.05532093291523813,
+      "n_relevant_missions": 0,
+      "n_gold_passages": 0
+    },
+    "T1-ariane5-501": {
+      "mission_ndcg@5": 0.8930068676327362,
+      "mission_ndcg@10": 0.85985653578158,
+      "mission_recall@5": 0.4444444444444444,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.027777777777777776,
+      "passage_ndcg@100": 0.062043194066973964,
+      "n_relevant_missions": 9,
+      "n_gold_passages": 72
+    },
+    "T1-dart-2005": {
+      "mission_ndcg@5": 0.5614505158401619,
+      "mission_ndcg@10": 0.6942188866283424,
+      "mission_recall@5": 0.3,
+      "mission_mrr": 0.5,
+      "passage_normrecall@100": 0.18085106382978725,
+      "passage_ndcg@100": 0.20371439889321807,
+      "n_relevant_missions": 10,
+      "n_gold_passages": 94
+    },
+    "T1-exomars2016-schiaparelli": {
+      "mission_ndcg@5": 0.6312356866612376,
+      "mission_ndcg@10": 0.7055830508696969,
+      "mission_recall@5": 0.375,
+      "mission_mrr": 0.3333333333333333,
+      "passage_normrecall@100": 0.1875,
+      "passage_ndcg@100": 0.15576418305169723,
+      "n_relevant_missions": 8,
+      "n_gold_passages": 48
+    },
+    "T1-genesis": {
+      "mission_ndcg@5": 0.31069402836939297,
+      "mission_ndcg@10": 0.45965832535050993,
+      "mission_recall@5": 0.2,
+      "mission_mrr": 0.3333333333333333,
+      "passage_normrecall@100": 0.015151515151515152,
+      "passage_ndcg@100": 0.007453041896566876,
+      "n_relevant_missions": 10,
+      "n_gold_passages": 66
+    },
+    "T1-glory-taurus-t9": {
+      "mission_ndcg@5": 0.6249420198203038,
+      "mission_ndcg@10": 0.6524998549043632,
+      "mission_recall@5": 0.36363636363636365,
+      "mission_mrr": 0.5,
+      "passage_normrecall@100": 0.08450704225352113,
+      "passage_ndcg@100": 0.11970374092088583,
+      "n_relevant_missions": 11,
+      "n_gold_passages": 71
+    },
+    "T1-gslv-f10": {
+      "mission_ndcg@5": 0.6608397947263839,
+      "mission_ndcg@10": 0.7799082337019198,
+      "mission_recall@5": null,
+      "mission_mrr": null,
+      "passage_normrecall@100": null,
+      "passage_ndcg@100": 0.015309490816398378,
+      "n_relevant_missions": 0,
+      "n_gold_passages": 0
+    },
+    "T1-hitomi": {
+      "mission_ndcg@5": 1.0,
+      "mission_ndcg@10": 1.0,
+      "mission_recall@5": null,
+      "mission_mrr": null,
+      "passage_normrecall@100": null,
+      "passage_ndcg@100": 0.08843838101100904,
+      "n_relevant_missions": 0,
+      "n_gold_passages": 0
+    },
+    "T1-mars-climate-orbiter": {
+      "mission_ndcg@5": 0.710533544641421,
+      "mission_ndcg@10": 0.8179174909730418,
+      "mission_recall@5": 0.21428571428571427,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.038461538461538464,
+      "passage_ndcg@100": 0.06557040070937299,
+      "n_relevant_missions": 14,
+      "n_gold_passages": 78
+    },
+    "T1-noaa-n-prime": {
+      "mission_ndcg@5": 0.09665153308156733,
+      "mission_ndcg@10": 0.260115274146317,
+      "mission_recall@5": 0.0,
+      "mission_mrr": 0.125,
+      "passage_normrecall@100": 0.0,
+      "passage_ndcg@100": 0.0,
+      "n_relevant_missions": 6,
+      "n_gold_passages": 31
+    },
+    "T1-oco-taurus-t8": {
+      "mission_ndcg@5": 0.6354765731856906,
+      "mission_ndcg@10": 0.6609761853425831,
+      "mission_recall@5": 0.375,
+      "mission_mrr": 0.5,
+      "passage_normrecall@100": 0.2222222222222222,
+      "passage_ndcg@100": 0.1992678848036618,
+      "n_relevant_missions": 8,
+      "n_gold_passages": 54
+    },
+    "T1-soho-1998": {
+      "mission_ndcg@5": 0.35262297841205165,
+      "mission_ndcg@10": 0.5120538868517106,
+      "mission_recall@5": 0.09090909090909091,
+      "mission_mrr": 0.5,
+      "passage_normrecall@100": 0.04054054054054054,
+      "passage_ndcg@100": 0.07821089768142493,
+      "n_relevant_missions": 11,
+      "n_gold_passages": 74
+    },
+    "T1-spacex-crs7": {
+      "mission_ndcg@5": 0.0,
+      "mission_ndcg@10": 0.0,
+      "mission_recall@5": 0.0,
+      "mission_mrr": 0.0,
+      "passage_normrecall@100": 0.0,
+      "passage_ndcg@100": 0.0,
+      "n_relevant_missions": 9,
+      "n_gold_passages": 64
+    },
+    "T1-starliner-cft": {
+      "mission_ndcg@5": 0.6886348353703349,
+      "mission_ndcg@10": 0.8152339214293645,
+      "mission_recall@5": 0.23076923076923078,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.04,
+      "passage_ndcg@100": 0.09776508265380228,
+      "n_relevant_missions": 13,
+      "n_gold_passages": 104
+    },
+    "T1-sts-107-columbia": {
+      "mission_ndcg@5": 0.7458326725095431,
+      "mission_ndcg@10": 0.7702723471623251,
+      "mission_recall@5": 0.21428571428571427,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.02,
+      "passage_ndcg@100": 0.03449047561355216,
+      "n_relevant_missions": 14,
+      "n_gold_passages": 103
+    },
+    "T1-sts-51l-challenger": {
+      "mission_ndcg@5": 0.8869465982421281,
+      "mission_ndcg@10": 0.7543772812527391,
+      "mission_recall@5": 0.38461538461538464,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.030612244897959183,
+      "passage_ndcg@100": 0.04088497646009598,
+      "n_relevant_missions": 13,
+      "n_gold_passages": 98
+    },
+    "T1-vega-vv15": {
+      "mission_ndcg@5": 0.830419897363192,
+      "mission_ndcg@10": 0.7503359712972107,
+      "mission_recall@5": null,
+      "mission_mrr": null,
+      "passage_normrecall@100": null,
+      "passage_ndcg@100": 0.09821122368760081,
+      "n_relevant_missions": 0,
+      "n_gold_passages": 0
+    },
+    "T1-vega-vv17": {
+      "mission_ndcg@5": 0.2888301346708836,
+      "mission_ndcg@10": 0.49629973325093496,
+      "mission_recall@5": 0.0,
+      "mission_mrr": 0.125,
+      "passage_normrecall@100": 0.6666666666666666,
+      "passage_ndcg@100": 0.12518801400695773,
+      "n_relevant_missions": 1,
+      "n_gold_passages": 3
+    },
+    "T1-vegac-vv22": {
+      "mission_ndcg@5": null,
+      "mission_ndcg@10": null,
+      "mission_recall@5": null,
+      "mission_mrr": null,
+      "passage_normrecall@100": null,
+      "passage_ndcg@100": null,
+      "n_relevant_missions": 0,
+      "n_gold_passages": 0
+    },
+    "T1-wire": {
+      "mission_ndcg@5": 0.6496091412312497,
+      "mission_ndcg@10": 0.7751856461221223,
+      "mission_recall@5": 0.25,
+      "mission_mrr": 0.5,
+      "passage_normrecall@100": 0.23333333333333334,
+      "passage_ndcg@100": 0.2543764208444104,
+      "n_relevant_missions": 4,
+      "n_gold_passages": 30
+    }
+  },
+  "P-nofields": {
+    "T1-antares-orb3": {
+      "mission_ndcg@5": 0.5560906761394714,
+      "mission_ndcg@10": 0.6248871312129499,
+      "mission_recall@5": 0.2857142857142857,
+      "mission_mrr": 0.3333333333333333,
+      "passage_normrecall@100": 0.0,
+      "passage_ndcg@100": 0.006515306064012511,
+      "n_relevant_missions": 7,
+      "n_gold_passages": 29
+    },
+    "T1-apollo1-as204": {
+      "mission_ndcg@5": 0.5850262761521785,
+      "mission_ndcg@10": 0.77108737286606,
+      "mission_recall@5": 0.25,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.01639344262295082,
+      "passage_ndcg@100": 0.027222362079858797,
+      "n_relevant_missions": 8,
+      "n_gold_passages": 61
+    },
+    "T1-apollo13": {
+      "mission_ndcg@5": 1.0,
+      "mission_ndcg@10": 1.0,
+      "mission_recall@5": null,
+      "mission_mrr": null,
+      "passage_normrecall@100": null,
+      "passage_ndcg@100": 0.0646085653639983,
+      "n_relevant_missions": 0,
+      "n_gold_passages": 0
+    },
+    "T1-ariane5-501": {
+      "mission_ndcg@5": 0.7543701539552121,
+      "mission_ndcg@10": 0.7918782508378667,
+      "mission_recall@5": 0.2222222222222222,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.06944444444444445,
+      "passage_ndcg@100": 0.12244312351376614,
+      "n_relevant_missions": 9,
+      "n_gold_passages": 72
+    },
+    "T1-dart-2005": {
+      "mission_ndcg@5": 0.9434732991210639,
+      "mission_ndcg@10": 0.8750490034636139,
+      "mission_recall@5": 0.5,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.11702127659574468,
+      "passage_ndcg@100": 0.122052643472032,
+      "n_relevant_missions": 10,
+      "n_gold_passages": 94
+    },
+    "T1-exomars2016-schiaparelli": {
+      "mission_ndcg@5": 0.7162285644443968,
+      "mission_ndcg@10": 0.7454881682777131,
+      "mission_recall@5": 0.375,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.10416666666666667,
+      "passage_ndcg@100": 0.14566678846028408,
+      "n_relevant_missions": 8,
+      "n_gold_passages": 48
+    },
+    "T1-genesis": {
+      "mission_ndcg@5": 0.6298964439304254,
+      "mission_ndcg@10": 0.7126886292704584,
+      "mission_recall@5": 0.3,
+      "mission_mrr": 0.5,
+      "passage_normrecall@100": 0.015151515151515152,
+      "passage_ndcg@100": 0.016795104593445763,
+      "n_relevant_missions": 10,
+      "n_gold_passages": 66
+    },
+    "T1-glory-taurus-t9": {
+      "mission_ndcg@5": 0.6199875957101822,
+      "mission_ndcg@10": 0.6577281467284325,
+      "mission_recall@5": 0.2727272727272727,
+      "mission_mrr": 0.5,
+      "passage_normrecall@100": 0.1267605633802817,
+      "passage_ndcg@100": 0.08874029751400095,
+      "n_relevant_missions": 11,
+      "n_gold_passages": 71
+    },
+    "T1-gslv-f10": {
+      "mission_ndcg@5": 1.0,
+      "mission_ndcg@10": 0.9266360779006398,
+      "mission_recall@5": null,
+      "mission_mrr": null,
+      "passage_normrecall@100": null,
+      "passage_ndcg@100": 0.051018322446759364,
+      "n_relevant_missions": 0,
+      "n_gold_passages": 0
+    },
+    "T1-hitomi": {
+      "mission_ndcg@5": 1.0,
+      "mission_ndcg@10": 1.0,
+      "mission_recall@5": null,
+      "mission_mrr": null,
+      "passage_normrecall@100": null,
+      "passage_ndcg@100": 0.07974804218105662,
+      "n_relevant_missions": 0,
+      "n_gold_passages": 0
+    },
+    "T1-mars-climate-orbiter": {
+      "mission_ndcg@5": 0.7407897733924658,
+      "mission_ndcg@10": 0.8175428034700604,
+      "mission_recall@5": 0.2857142857142857,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.08974358974358974,
+      "passage_ndcg@100": 0.08707484669334702,
+      "n_relevant_missions": 14,
+      "n_gold_passages": 78
+    },
+    "T1-noaa-n-prime": {
+      "mission_ndcg@5": 0.547974851115454,
+      "mission_ndcg@10": 0.6944558249675097,
+      "mission_recall@5": 0.5,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.0,
+      "passage_ndcg@100": 0.0,
+      "n_relevant_missions": 6,
+      "n_gold_passages": 31
+    },
+    "T1-oco-taurus-t8": {
+      "mission_ndcg@5": 0.5909337069508637,
+      "mission_ndcg@10": 0.7176195478911253,
+      "mission_recall@5": 0.25,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.12962962962962962,
+      "passage_ndcg@100": 0.1728868136032307,
+      "n_relevant_missions": 8,
+      "n_gold_passages": 54
+    },
+    "T1-soho-1998": {
+      "mission_ndcg@5": 0.830419897363192,
+      "mission_ndcg@10": 0.7529694065526481,
+      "mission_recall@5": 0.36363636363636365,
+      "mission_mrr": 0.5,
+      "passage_normrecall@100": 0.06756756756756757,
+      "passage_ndcg@100": 0.09490839058139429,
+      "n_relevant_missions": 11,
+      "n_gold_passages": 74
+    },
+    "T1-spacex-crs7": {
+      "mission_ndcg@5": 0.6298964439304254,
+      "mission_ndcg@10": 0.6357462829110736,
+      "mission_recall@5": 0.3333333333333333,
+      "mission_mrr": 0.5,
+      "passage_normrecall@100": 0.03125,
+      "passage_ndcg@100": 0.016942862902594637,
+      "n_relevant_missions": 9,
+      "n_gold_passages": 64
+    },
+    "T1-starliner-cft": {
+      "mission_ndcg@5": 0.7442890884191097,
+      "mission_ndcg@10": 0.7360701998397554,
+      "mission_recall@5": 0.23076923076923078,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.04,
+      "passage_ndcg@100": 0.045167893447813794,
+      "n_relevant_missions": 13,
+      "n_gold_passages": 104
+    },
+    "T1-sts-107-columbia": {
+      "mission_ndcg@5": 0.8947838491734952,
+      "mission_ndcg@10": 0.9009452278979222,
+      "mission_recall@5": 0.35714285714285715,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.05,
+      "passage_ndcg@100": 0.04781602920915431,
+      "n_relevant_missions": 14,
+      "n_gold_passages": 103
+    },
+    "T1-sts-51l-challenger": {
+      "mission_ndcg@5": 0.928671245088491,
+      "mission_ndcg@10": 0.8731802417912726,
+      "mission_recall@5": 0.38461538461538464,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.01020408163265306,
+      "passage_ndcg@100": 0.010972139222952662,
+      "n_relevant_missions": 13,
+      "n_gold_passages": 98
+    },
+    "T1-vega-vv15": {
+      "mission_ndcg@5": 0.8539316501572937,
+      "mission_ndcg@10": 0.6275071330616558,
+      "mission_recall@5": null,
+      "mission_mrr": null,
+      "passage_normrecall@100": null,
+      "passage_ndcg@100": 0.1767785131916937,
+      "n_relevant_missions": 0,
+      "n_gold_passages": 0
+    },
+    "T1-vega-vv17": {
+      "mission_ndcg@5": 0.1383130657200343,
+      "mission_ndcg@10": 0.21138673989537934,
+      "mission_recall@5": 0.0,
+      "mission_mrr": 0.09090909090909091,
+      "passage_normrecall@100": 0.0,
+      "passage_ndcg@100": 0.035099838847865106,
+      "n_relevant_missions": 1,
+      "n_gold_passages": 3
+    },
+    "T1-vegac-vv22": {
+      "mission_ndcg@5": null,
+      "mission_ndcg@10": null,
+      "mission_recall@5": null,
+      "mission_mrr": null,
+      "passage_normrecall@100": null,
+      "passage_ndcg@100": null,
+      "n_relevant_missions": 0,
+      "n_gold_passages": 0
+    },
+    "T1-wire": {
+      "mission_ndcg@5": 0.6053125807975392,
+      "mission_ndcg@10": 0.7884523015205142,
+      "mission_recall@5": 0.25,
+      "mission_mrr": 0.2,
+      "passage_normrecall@100": 0.23333333333333334,
+      "passage_ndcg@100": 0.24796227388991876,
+      "n_relevant_missions": 4,
+      "n_gold_passages": 30
+    }
+  },
+  "P-noidf": {
+    "T1-antares-orb3": {
+      "mission_ndcg@5": 0.4439093238605286,
+      "mission_ndcg@10": 0.5104296741194574,
+      "mission_recall@5": 0.14285714285714285,
+      "mission_mrr": 0.3333333333333333,
+      "passage_normrecall@100": 0.0,
+      "passage_ndcg@100": 0.0074806960027519,
+      "n_relevant_missions": 7,
+      "n_gold_passages": 29
+    },
+    "T1-apollo1-as204": {
+      "mission_ndcg@5": 0.5686348968940799,
+      "mission_ndcg@10": 0.7770974852441499,
+      "mission_recall@5": 0.25,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.01639344262295082,
+      "passage_ndcg@100": 0.028693747280782295,
+      "n_relevant_missions": 8,
+      "n_gold_passages": 61
+    },
+    "T1-apollo13": {
+      "mission_ndcg@5": 1.0,
+      "mission_ndcg@10": 1.0,
+      "mission_recall@5": null,
+      "mission_mrr": null,
+      "passage_normrecall@100": null,
+      "passage_ndcg@100": 0.0493586527644024,
+      "n_relevant_missions": 0,
+      "n_gold_passages": 0
+    },
+    "T1-ariane5-501": {
+      "mission_ndcg@5": 0.8613632863224759,
+      "mission_ndcg@10": 0.8319750287960769,
+      "mission_recall@5": 0.3333333333333333,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.041666666666666664,
+      "passage_ndcg@100": 0.08861724150325186,
+      "n_relevant_missions": 9,
+      "n_gold_passages": 72
+    },
+    "T1-dart-2005": {
+      "mission_ndcg@5": 0.9434732991210639,
+      "mission_ndcg@10": 0.9132008303798284,
+      "mission_recall@5": 0.5,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.06382978723404255,
+      "passage_ndcg@100": 0.06434012987279647,
+      "n_relevant_missions": 10,
+      "n_gold_passages": 94
+    },
+    "T1-exomars2016-schiaparelli": {
+      "mission_ndcg@5": 0.7698724385020872,
+      "mission_ndcg@10": 0.7371655535859208,
+      "mission_recall@5": 0.375,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.0625,
+      "passage_ndcg@100": 0.11531412052589478,
+      "n_relevant_missions": 8,
+      "n_gold_passages": 48
+    },
+    "T1-genesis": {
+      "mission_ndcg@5": 0.684412765818277,
+      "mission_ndcg@10": 0.7968930034130243,
+      "mission_recall@5": 0.3,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.015151515151515152,
+      "passage_ndcg@100": 0.009748178200813879,
+      "n_relevant_missions": 10,
+      "n_gold_passages": 66
+    },
+    "T1-glory-taurus-t9": {
+      "mission_ndcg@5": 0.6150943898978523,
+      "mission_ndcg@10": 0.656207381834797,
+      "mission_recall@5": 0.2727272727272727,
+      "mission_mrr": 0.5,
+      "passage_normrecall@100": 0.04225352112676056,
+      "passage_ndcg@100": 0.031218505060759443,
+      "n_relevant_missions": 11,
+      "n_gold_passages": 71
+    },
+    "T1-gslv-f10": {
+      "mission_ndcg@5": 1.0,
+      "mission_ndcg@10": 1.0,
+      "mission_recall@5": null,
+      "mission_mrr": null,
+      "passage_normrecall@100": null,
+      "passage_ndcg@100": 0.0648597656607957,
+      "n_relevant_missions": 0,
+      "n_gold_passages": 0
+    },
+    "T1-hitomi": {
+      "mission_ndcg@5": 1.0,
+      "mission_ndcg@10": 1.0,
+      "mission_recall@5": null,
+      "mission_mrr": null,
+      "passage_normrecall@100": null,
+      "passage_ndcg@100": 0.03280965676113799,
+      "n_relevant_missions": 0,
+      "n_gold_passages": 0
+    },
+    "T1-mars-climate-orbiter": {
+      "mission_ndcg@5": 0.7407897733924658,
+      "mission_ndcg@10": 0.8165156378911147,
+      "mission_recall@5": 0.2857142857142857,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.05128205128205128,
+      "passage_ndcg@100": 0.047542194115507454,
+      "n_relevant_missions": 14,
+      "n_gold_passages": 78
+    },
+    "T1-noaa-n-prime": {
+      "mission_ndcg@5": 0.3743554631412293,
+      "mission_ndcg@10": 0.4795424704074909,
+      "mission_recall@5": 0.3333333333333333,
+      "mission_mrr": 0.5,
+      "passage_normrecall@100": 0.0,
+      "passage_ndcg@100": 0.0,
+      "n_relevant_missions": 6,
+      "n_gold_passages": 31
+    },
+    "T1-oco-taurus-t8": {
+      "mission_ndcg@5": 0.5759032237509147,
+      "mission_ndcg@10": 0.6492608885675044,
+      "mission_recall@5": 0.25,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.09259259259259259,
+      "passage_ndcg@100": 0.1269749352633129,
+      "n_relevant_missions": 8,
+      "n_gold_passages": 54
+    },
+    "T1-soho-1998": {
+      "mission_ndcg@5": 0.830419897363192,
+      "mission_ndcg@10": 0.7873957831869881,
+      "mission_recall@5": 0.36363636363636365,
+      "mission_mrr": 0.5,
+      "passage_normrecall@100": 0.05405405405405406,
+      "passage_ndcg@100": 0.06454791543136389,
+      "n_relevant_missions": 11,
+      "n_gold_passages": 74
+    },
+    "T1-spacex-crs7": {
+      "mission_ndcg@5": 0.6150943898978523,
+      "mission_ndcg@10": 0.678312106601107,
+      "mission_recall@5": 0.3333333333333333,
+      "mission_mrr": 0.5,
+      "passage_normrecall@100": 0.015625,
+      "passage_ndcg@100": 0.007522214749034444,
+      "n_relevant_missions": 9,
+      "n_gold_passages": 64
+    },
+    "T1-starliner-cft": {
+      "mission_ndcg@5": 0.5634608948312463,
+      "mission_ndcg@10": 0.7322446514147095,
+      "mission_recall@5": 0.15384615384615385,
+      "mission_mrr": 0.5,
+      "passage_normrecall@100": 0.03,
+      "passage_ndcg@100": 0.024450341173362516,
+      "n_relevant_missions": 13,
+      "n_gold_passages": 104
+    },
+    "T1-sts-107-columbia": {
+      "mission_ndcg@5": 0.907575524214984,
+      "mission_ndcg@10": 0.8500960437004638,
+      "mission_recall@5": 0.35714285714285715,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.02,
+      "passage_ndcg@100": 0.016458881023585833,
+      "n_relevant_missions": 14,
+      "n_gold_passages": 103
+    },
+    "T1-sts-51l-challenger": {
+      "mission_ndcg@5": 0.7994765465672335,
+      "mission_ndcg@10": 0.8187350671671078,
+      "mission_recall@5": 0.23076923076923078,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.02040816326530612,
+      "passage_ndcg@100": 0.01726713226657663,
+      "n_relevant_missions": 13,
+      "n_gold_passages": 98
+    },
+    "T1-vega-vv15": {
+      "mission_ndcg@5": 0.8539316501572937,
+      "mission_ndcg@10": 0.6911279212606075,
+      "mission_recall@5": null,
+      "mission_mrr": null,
+      "passage_normrecall@100": null,
+      "passage_ndcg@100": 0.1422357911442065,
+      "n_relevant_missions": 0,
+      "n_gold_passages": 0
+    },
+    "T1-vega-vv17": {
+      "mission_ndcg@5": 0.2231193336890577,
+      "mission_ndcg@10": 0.2231193336890577,
+      "mission_recall@5": 0.0,
+      "mission_mrr": 0.0625,
+      "passage_normrecall@100": 0.0,
+      "passage_ndcg@100": 0.0,
+      "n_relevant_missions": 1,
+      "n_gold_passages": 3
+    },
+    "T1-vegac-vv22": {
+      "mission_ndcg@5": null,
+      "mission_ndcg@10": null,
+      "mission_recall@5": null,
+      "mission_mrr": null,
+      "passage_normrecall@100": null,
+      "passage_ndcg@100": null,
+      "n_relevant_missions": 0,
+      "n_gold_passages": 0
+    },
+    "T1-wire": {
+      "mission_ndcg@5": 0.6132659801521241,
+      "mission_ndcg@10": 0.7424550182054953,
+      "mission_recall@5": 0.25,
+      "mission_mrr": 0.25,
+      "passage_normrecall@100": 0.16666666666666666,
+      "passage_ndcg@100": 0.16639962399665287,
+      "n_relevant_missions": 4,
+      "n_gold_passages": 30
+    }
+  },
+  "P-noprf": {
+    "T1-antares-orb3": {
+      "mission_ndcg@5": 0.4439093238605286,
+      "mission_ndcg@10": 0.5104296741194574,
+      "mission_recall@5": 0.14285714285714285,
+      "mission_mrr": 0.3333333333333333,
+      "passage_normrecall@100": 0.0,
+      "passage_ndcg@100": 0.0074806960027519,
+      "n_relevant_missions": 7,
+      "n_gold_passages": 29
+    },
+    "T1-apollo1-as204": {
+      "mission_ndcg@5": 0.5686348968940799,
+      "mission_ndcg@10": 0.7870765134992922,
+      "mission_recall@5": 0.25,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.01639344262295082,
+      "passage_ndcg@100": 0.0270832997837549,
+      "n_relevant_missions": 8,
+      "n_gold_passages": 61
+    },
+    "T1-apollo13": {
+      "mission_ndcg@5": 1.0,
+      "mission_ndcg@10": 1.0,
+      "mission_recall@5": null,
+      "mission_mrr": null,
+      "passage_normrecall@100": null,
+      "passage_ndcg@100": 0.08096615133498788,
+      "n_relevant_missions": 0,
+      "n_gold_passages": 0
+    },
+    "T1-ariane5-501": {
+      "mission_ndcg@5": 0.650392590074575,
+      "mission_ndcg@10": 0.6935720459717996,
+      "mission_recall@5": 0.2222222222222222,
+      "mission_mrr": 0.3333333333333333,
+      "passage_normrecall@100": 0.027777777777777776,
+      "passage_ndcg@100": 0.07924748540565359,
+      "n_relevant_missions": 9,
+      "n_gold_passages": 72
+    },
+    "T1-dart-2005": {
+      "mission_ndcg@5": 0.8869465982421281,
+      "mission_ndcg@10": 0.8729681852560034,
+      "mission_recall@5": 0.5,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.02127659574468085,
+      "passage_ndcg@100": 0.021186994027869145,
+      "n_relevant_missions": 10,
+      "n_gold_passages": 94
+    },
+    "T1-exomars2016-schiaparelli": {
+      "mission_ndcg@5": 0.8151510484299679,
+      "mission_ndcg@10": 0.8234070008544166,
+      "mission_recall@5": 0.375,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.041666666666666664,
+      "passage_ndcg@100": 0.08506991693394335,
+      "n_relevant_missions": 8,
+      "n_gold_passages": 48
+    },
+    "T1-genesis": {
+      "mission_ndcg@5": 0.7442890884191097,
+      "mission_ndcg@10": 0.7880446061092656,
+      "mission_recall@5": 0.4,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.015151515151515152,
+      "passage_ndcg@100": 0.009960183851137804,
+      "n_relevant_missions": 10,
+      "n_gold_passages": 66
+    },
+    "T1-glory-taurus-t9": {
+      "mission_ndcg@5": 0.7698724385020872,
+      "mission_ndcg@10": 0.7382584784285939,
+      "mission_recall@5": 0.2727272727272727,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.014084507042253521,
+      "passage_ndcg@100": 0.009873101778439244,
+      "n_relevant_missions": 11,
+      "n_gold_passages": 71
+    },
+    "T1-gslv-f10": {
+      "mission_ndcg@5": 0.7860137352654724,
+      "mission_ndcg@10": 0.8611375561264454,
+      "mission_recall@5": null,
+      "mission_mrr": null,
+      "passage_normrecall@100": null,
+      "passage_ndcg@100": 0.06177607354374322,
+      "n_relevant_missions": 0,
+      "n_gold_passages": 0
+    },
+    "T1-hitomi": {
+      "mission_ndcg@5": 1.0,
+      "mission_ndcg@10": 1.0,
+      "mission_recall@5": null,
+      "mission_mrr": null,
+      "passage_normrecall@100": null,
+      "passage_ndcg@100": 0.022375262328256443,
+      "n_relevant_missions": 0,
+      "n_gold_passages": 0
+    },
+    "T1-mars-climate-orbiter": {
+      "mission_ndcg@5": 0.8611160259039345,
+      "mission_ndcg@10": 0.8685726812918226,
+      "mission_recall@5": 0.35714285714285715,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.0641025641025641,
+      "passage_ndcg@100": 0.0691719888335134,
+      "n_relevant_missions": 14,
+      "n_gold_passages": 78
+    },
+    "T1-noaa-n-prime": {
+      "mission_ndcg@5": 0.60870099558208,
+      "mission_ndcg@10": 0.5591237594448082,
+      "mission_recall@5": 0.5,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.0,
+      "passage_ndcg@100": 0.0,
+      "n_relevant_missions": 6,
+      "n_gold_passages": 31
+    },
+    "T1-oco-taurus-t8": {
+      "mission_ndcg@5": 0.6655375395855885,
+      "mission_ndcg@10": 0.6807130781843704,
+      "mission_recall@5": 0.375,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.09259259259259259,
+      "passage_ndcg@100": 0.1043779715651438,
+      "n_relevant_missions": 8,
+      "n_gold_passages": 54
+    },
+    "T1-soho-1998": {
+      "mission_ndcg@5": 0.915209948681596,
+      "mission_ndcg@10": 0.7732767371587794,
+      "mission_recall@5": 0.36363636363636365,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.05405405405405406,
+      "passage_ndcg@100": 0.05147995415440213,
+      "n_relevant_missions": 11,
+      "n_gold_passages": 74
+    },
+    "T1-spacex-crs7": {
+      "mission_ndcg@5": 0.6150943898978523,
+      "mission_ndcg@10": 0.678312106601107,
+      "mission_recall@5": 0.3333333333333333,
+      "mission_mrr": 0.5,
+      "passage_normrecall@100": 0.015625,
+      "passage_ndcg@100": 0.007522214749034444,
+      "n_relevant_missions": 9,
+      "n_gold_passages": 64
+    },
+    "T1-starliner-cft": {
+      "mission_ndcg@5": 0.7994765465672335,
+      "mission_ndcg@10": 0.8353231253659742,
+      "mission_recall@5": 0.23076923076923078,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.06,
+      "passage_ndcg@100": 0.05024462387267821,
+      "n_relevant_missions": 13,
+      "n_gold_passages": 104
+    },
+    "T1-sts-107-columbia": {
+      "mission_ndcg@5": 0.8023593733884791,
+      "mission_ndcg@10": 0.832943968690557,
+      "mission_recall@5": 0.2857142857142857,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.03,
+      "passage_ndcg@100": 0.01936685101725049,
+      "n_relevant_missions": 14,
+      "n_gold_passages": 103
+    },
+    "T1-sts-51l-challenger": {
+      "mission_ndcg@5": 0.7994765465672335,
+      "mission_ndcg@10": 0.8187350671671078,
+      "mission_recall@5": 0.23076923076923078,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.01020408163265306,
+      "passage_ndcg@100": 0.00820534266554481,
+      "n_relevant_missions": 13,
+      "n_gold_passages": 98
+    },
+    "T1-vega-vv15": {
+      "mission_ndcg@5": 0.8539316501572937,
+      "mission_ndcg@10": 0.6911279212606075,
+      "mission_recall@5": null,
+      "mission_mrr": null,
+      "passage_normrecall@100": null,
+      "passage_ndcg@100": 0.11150185999316779,
+      "n_relevant_missions": 0,
+      "n_gold_passages": 0
+    },
+    "T1-vega-vv17": {
+      "mission_ndcg@5": 0.0848062679690234,
+      "mission_ndcg@10": 0.0848062679690234,
+      "mission_recall@5": 0.0,
+      "mission_mrr": 0.08333333333333333,
+      "passage_normrecall@100": 0.0,
+      "passage_ndcg@100": 0.0,
+      "n_relevant_missions": 1,
+      "n_gold_passages": 3
+    },
+    "T1-vegac-vv22": {
+      "mission_ndcg@5": null,
+      "mission_ndcg@10": null,
+      "mission_recall@5": null,
+      "mission_mrr": null,
+      "passage_normrecall@100": null,
+      "passage_ndcg@100": null,
+      "n_relevant_missions": 0,
+      "n_gold_passages": 0
+    },
+    "T1-wire": {
+      "mission_ndcg@5": 0.6496091412312497,
+      "mission_ndcg@10": 0.8113229441537562,
+      "mission_recall@5": 0.25,
+      "mission_mrr": 0.5,
+      "passage_normrecall@100": 0.1,
+      "passage_ndcg@100": 0.13013880623433127,
+      "n_relevant_missions": 4,
+      "n_gold_passages": 30
+    }
+  },
+  "P-noverif": {
+    "T1-antares-orb3": {
+      "mission_ndcg@5": 0.5624447823254674,
+      "mission_ndcg@10": 0.5275137670818856,
+      "mission_recall@5": 0.2857142857142857,
+      "mission_mrr": 0.3333333333333333,
+      "passage_normrecall@100": 0.0,
+      "passage_ndcg@100": 0.007248962909994958,
+      "n_relevant_missions": 7,
+      "n_gold_passages": 29
+    },
+    "T1-apollo1-as204": {
+      "mission_ndcg@5": 0.6601054139978735,
+      "mission_ndcg@10": 0.7926189034096057,
+      "mission_recall@5": 0.375,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.01639344262295082,
+      "passage_ndcg@100": 0.02482995976279172,
+      "n_relevant_missions": 8,
+      "n_gold_passages": 61
+    },
+    "T1-apollo13": {
+      "mission_ndcg@5": 1.0,
+      "mission_ndcg@10": 1.0,
+      "mission_recall@5": null,
+      "mission_mrr": null,
+      "passage_normrecall@100": null,
+      "passage_ndcg@100": 0.05821865849114553,
+      "n_relevant_missions": 0,
+      "n_gold_passages": 0
+    },
+    "T1-ariane5-501": {
+      "mission_ndcg@5": 0.8613632863224759,
+      "mission_ndcg@10": 0.7662639451289709,
+      "mission_recall@5": 0.3333333333333333,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.05555555555555555,
+      "passage_ndcg@100": 0.08252764853517232,
+      "n_relevant_missions": 9,
+      "n_gold_passages": 72
+    },
+    "T1-dart-2005": {
+      "mission_ndcg@5": 0.8869465982421281,
+      "mission_ndcg@10": 0.8502521036329471,
+      "mission_recall@5": 0.5,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.06382978723404255,
+      "passage_ndcg@100": 0.08224748365467875,
+      "n_relevant_missions": 10,
+      "n_gold_passages": 94
+    },
+    "T1-exomars2016-schiaparelli": {
+      "mission_ndcg@5": 0.8151510484299679,
+      "mission_ndcg@10": 0.7721580822488292,
+      "mission_recall@5": 0.375,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.041666666666666664,
+      "passage_ndcg@100": 0.09538296692824096,
+      "n_relevant_missions": 8,
+      "n_gold_passages": 48
+    },
+    "T1-genesis": {
+      "mission_ndcg@5": 0.8156178433306188,
+      "mission_ndcg@10": 0.8158372617436804,
+      "mission_recall@5": 0.4,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.015151515151515152,
+      "passage_ndcg@100": 0.00977031023159725,
+      "n_relevant_missions": 10,
+      "n_gold_passages": 66
+    },
+    "T1-glory-taurus-t9": {
+      "mission_ndcg@5": 0.6051855416776092,
+      "mission_ndcg@10": 0.6947517897371371,
+      "mission_recall@5": 0.2727272727272727,
+      "mission_mrr": 0.5,
+      "passage_normrecall@100": 0.04225352112676056,
+      "passage_ndcg@100": 0.03349640734546615,
+      "n_relevant_missions": 11,
+      "n_gold_passages": 71
+    },
+    "T1-gslv-f10": {
+      "mission_ndcg@5": 1.0,
+      "mission_ndcg@10": 1.0,
+      "mission_recall@5": null,
+      "mission_mrr": null,
+      "passage_normrecall@100": null,
+      "passage_ndcg@100": 0.027985118603523342,
+      "n_relevant_missions": 0,
+      "n_gold_passages": 0
+    },
+    "T1-hitomi": {
+      "mission_ndcg@5": 1.0,
+      "mission_ndcg@10": 1.0,
+      "mission_recall@5": null,
+      "mission_mrr": null,
+      "passage_normrecall@100": null,
+      "passage_ndcg@100": 0.014959559937710677,
+      "n_relevant_missions": 0,
+      "n_gold_passages": 0
+    },
+    "T1-mars-climate-orbiter": {
+      "mission_ndcg@5": 0.7407897733924658,
+      "mission_ndcg@10": 0.8175428034700604,
+      "mission_recall@5": 0.2857142857142857,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.05128205128205128,
+      "passage_ndcg@100": 0.04808206034644821,
+      "n_relevant_missions": 14,
+      "n_gold_passages": 78
+    },
+    "T1-noaa-n-prime": {
+      "mission_ndcg@5": 0.6026076301470595,
+      "mission_ndcg@10": 0.6939269641466971,
+      "mission_recall@5": 0.5,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.0,
+      "passage_ndcg@100": 0.0,
+      "n_relevant_missions": 6,
+      "n_gold_passages": 31
+    },
+    "T1-oco-taurus-t8": {
+      "mission_ndcg@5": 0.5817247747292718,
+      "mission_ndcg@10": 0.6507465401063418,
+      "mission_recall@5": 0.25,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.09259259259259259,
+      "passage_ndcg@100": 0.14139089450959144,
+      "n_relevant_missions": 8,
+      "n_gold_passages": 54
+    },
+    "T1-soho-1998": {
+      "mission_ndcg@5": 0.830419897363192,
+      "mission_ndcg@10": 0.7873957831869881,
+      "mission_recall@5": 0.36363636363636365,
+      "mission_mrr": 0.5,
+      "passage_normrecall@100": 0.06756756756756757,
+      "passage_ndcg@100": 0.0724147352949357,
+      "n_relevant_missions": 11,
+      "n_gold_passages": 74
+    },
+    "T1-spacex-crs7": {
+      "mission_ndcg@5": 0.703436889402908,
+      "mission_ndcg@10": 0.7147137731458217,
+      "mission_recall@5": 0.3333333333333333,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.015625,
+      "passage_ndcg@100": 0.007425942808533727,
+      "n_relevant_missions": 9,
+      "n_gold_passages": 64
+    },
+    "T1-starliner-cft": {
+      "mission_ndcg@5": 0.6724935386069495,
+      "mission_ndcg@10": 0.8045323774041929,
+      "mission_recall@5": 0.15384615384615385,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.02,
+      "passage_ndcg@100": 0.016059308493984084,
+      "n_relevant_missions": 13,
+      "n_gold_passages": 104
+    },
+    "T1-sts-107-columbia": {
+      "mission_ndcg@5": 0.907575524214984,
+      "mission_ndcg@10": 0.8500960437004638,
+      "mission_recall@5": 0.35714285714285715,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.02,
+      "passage_ndcg@100": 0.016131026760101877,
+      "n_relevant_missions": 14,
+      "n_gold_passages": 103
+    },
+    "T1-sts-51l-challenger": {
+      "mission_ndcg@5": 0.8382571482945591,
+      "mission_ndcg@10": 0.8365774190065021,
+      "mission_recall@5": 0.3076923076923077,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.01020408163265306,
+      "passage_ndcg@100": 0.009047351002136134,
+      "n_relevant_missions": 13,
+      "n_gold_passages": 98
+    },
+    "T1-vega-vv15": {
+      "mission_ndcg@5": 0.8687949224876582,
+      "mission_ndcg@10": 0.6968404678259545,
+      "mission_recall@5": null,
+      "mission_mrr": null,
+      "passage_normrecall@100": null,
+      "passage_ndcg@100": 0.12815816381992262,
+      "n_relevant_missions": 0,
+      "n_gold_passages": 0
+    },
+    "T1-vega-vv17": {
+      "mission_ndcg@5": 0.1383130657200343,
+      "mission_ndcg@10": 0.21138673989537934,
+      "mission_recall@5": 0.0,
+      "mission_mrr": 0.058823529411764705,
+      "passage_normrecall@100": 0.0,
+      "passage_ndcg@100": 0.0,
+      "n_relevant_missions": 1,
+      "n_gold_passages": 3
+    },
+    "T1-vegac-vv22": {
+      "mission_ndcg@5": null,
+      "mission_ndcg@10": null,
+      "mission_recall@5": null,
+      "mission_mrr": null,
+      "passage_normrecall@100": null,
+      "passage_ndcg@100": null,
+      "n_relevant_missions": 0,
+      "n_gold_passages": 0
+    },
+    "T1-wire": {
+      "mission_ndcg@5": 0.6132659801521241,
+      "mission_ndcg@10": 0.7424550182054953,
+      "mission_recall@5": 0.25,
+      "mission_mrr": 0.25,
+      "passage_normrecall@100": 0.2,
+      "passage_ndcg@100": 0.17748312824669274,
+      "n_relevant_missions": 4,
+      "n_gold_passages": 30
+    }
+  },
+  "P": {
+    "T1-antares-orb3": {
+      "mission_ndcg@5": 0.4439093238605286,
+      "mission_ndcg@10": 0.5104296741194574,
+      "mission_recall@5": 0.14285714285714285,
+      "mission_mrr": 0.3333333333333333,
+      "passage_normrecall@100": 0.0,
+      "passage_ndcg@100": 0.0074806960027519,
+      "n_relevant_missions": 7,
+      "n_gold_passages": 29
+    },
+    "T1-apollo1-as204": {
+      "mission_ndcg@5": 0.5686348968940799,
+      "mission_ndcg@10": 0.7870765134992922,
+      "mission_recall@5": 0.25,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.01639344262295082,
+      "passage_ndcg@100": 0.027382718780699294,
+      "n_relevant_missions": 8,
+      "n_gold_passages": 61
+    },
+    "T1-apollo13": {
+      "mission_ndcg@5": 1.0,
+      "mission_ndcg@10": 1.0,
+      "mission_recall@5": null,
+      "mission_mrr": null,
+      "passage_normrecall@100": null,
+      "passage_ndcg@100": 0.05045107424196547,
+      "n_relevant_missions": 0,
+      "n_gold_passages": 0
+    },
+    "T1-ariane5-501": {
+      "mission_ndcg@5": 0.8613632863224759,
+      "mission_ndcg@10": 0.8319750287960769,
+      "mission_recall@5": 0.3333333333333333,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.041666666666666664,
+      "passage_ndcg@100": 0.08861724150325186,
+      "n_relevant_missions": 9,
+      "n_gold_passages": 72
+    },
+    "T1-dart-2005": {
+      "mission_ndcg@5": 0.9434732991210639,
+      "mission_ndcg@10": 0.9132008303798284,
+      "mission_recall@5": 0.5,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.06382978723404255,
+      "passage_ndcg@100": 0.06434012987279647,
+      "n_relevant_missions": 10,
+      "n_gold_passages": 94
+    },
+    "T1-exomars2016-schiaparelli": {
+      "mission_ndcg@5": 0.7698724385020872,
+      "mission_ndcg@10": 0.7371655535859208,
+      "mission_recall@5": 0.375,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.0625,
+      "passage_ndcg@100": 0.11530195894538266,
+      "n_relevant_missions": 8,
+      "n_gold_passages": 48
+    },
+    "T1-genesis": {
+      "mission_ndcg@5": 0.684412765818277,
+      "mission_ndcg@10": 0.7950471148822266,
+      "mission_recall@5": 0.3,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.015151515151515152,
+      "passage_ndcg@100": 0.009748178200813879,
+      "n_relevant_missions": 10,
+      "n_gold_passages": 66
+    },
+    "T1-glory-taurus-t9": {
+      "mission_ndcg@5": 0.6150943898978523,
+      "mission_ndcg@10": 0.656207381834797,
+      "mission_recall@5": 0.2727272727272727,
+      "mission_mrr": 0.5,
+      "passage_normrecall@100": 0.04225352112676056,
+      "passage_ndcg@100": 0.031218505060759443,
+      "n_relevant_missions": 11,
+      "n_gold_passages": 71
+    },
+    "T1-gslv-f10": {
+      "mission_ndcg@5": 1.0,
+      "mission_ndcg@10": 1.0,
+      "mission_recall@5": null,
+      "mission_mrr": null,
+      "passage_normrecall@100": null,
+      "passage_ndcg@100": 0.04126427066535784,
+      "n_relevant_missions": 0,
+      "n_gold_passages": 0
+    },
+    "T1-hitomi": {
+      "mission_ndcg@5": 1.0,
+      "mission_ndcg@10": 1.0,
+      "mission_recall@5": null,
+      "mission_mrr": null,
+      "passage_normrecall@100": null,
+      "passage_ndcg@100": 0.02616056246400373,
+      "n_relevant_missions": 0,
+      "n_gold_passages": 0
+    },
+    "T1-mars-climate-orbiter": {
+      "mission_ndcg@5": 0.7407897733924658,
+      "mission_ndcg@10": 0.8175428034700604,
+      "mission_recall@5": 0.2857142857142857,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.05128205128205128,
+      "passage_ndcg@100": 0.04757082304452535,
+      "n_relevant_missions": 14,
+      "n_gold_passages": 78
+    },
+    "T1-noaa-n-prime": {
+      "mission_ndcg@5": 0.3743554631412293,
+      "mission_ndcg@10": 0.4795424704074909,
+      "mission_recall@5": 0.3333333333333333,
+      "mission_mrr": 0.5,
+      "passage_normrecall@100": 0.0,
+      "passage_ndcg@100": 0.0,
+      "n_relevant_missions": 6,
+      "n_gold_passages": 31
+    },
+    "T1-oco-taurus-t8": {
+      "mission_ndcg@5": 0.5817247747292718,
+      "mission_ndcg@10": 0.6535878980045586,
+      "mission_recall@5": 0.25,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.09259259259259259,
+      "passage_ndcg@100": 0.12862662260150712,
+      "n_relevant_missions": 8,
+      "n_gold_passages": 54
+    },
+    "T1-soho-1998": {
+      "mission_ndcg@5": 0.830419897363192,
+      "mission_ndcg@10": 0.7873957831869881,
+      "mission_recall@5": 0.36363636363636365,
+      "mission_mrr": 0.5,
+      "passage_normrecall@100": 0.05405405405405406,
+      "passage_ndcg@100": 0.0696963359694516,
+      "n_relevant_missions": 11,
+      "n_gold_passages": 74
+    },
+    "T1-spacex-crs7": {
+      "mission_ndcg@5": 0.6150943898978523,
+      "mission_ndcg@10": 0.678312106601107,
+      "mission_recall@5": 0.3333333333333333,
+      "mission_mrr": 0.5,
+      "passage_normrecall@100": 0.015625,
+      "passage_ndcg@100": 0.007522214749034444,
+      "n_relevant_missions": 9,
+      "n_gold_passages": 64
+    },
+    "T1-starliner-cft": {
+      "mission_ndcg@5": 0.5634608948312463,
+      "mission_ndcg@10": 0.7322446514147095,
+      "mission_recall@5": 0.15384615384615385,
+      "mission_mrr": 0.5,
+      "passage_normrecall@100": 0.03,
+      "passage_ndcg@100": 0.024421044390619345,
+      "n_relevant_missions": 13,
+      "n_gold_passages": 104
+    },
+    "T1-sts-107-columbia": {
+      "mission_ndcg@5": 0.907575524214984,
+      "mission_ndcg@10": 0.8500960437004638,
+      "mission_recall@5": 0.35714285714285715,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.04,
+      "passage_ndcg@100": 0.032643414308288085,
+      "n_relevant_missions": 14,
+      "n_gold_passages": 103
+    },
+    "T1-sts-51l-challenger": {
+      "mission_ndcg@5": 0.7994765465672335,
+      "mission_ndcg@10": 0.8187350671671078,
+      "mission_recall@5": 0.23076923076923078,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.02040816326530612,
+      "passage_ndcg@100": 0.01726713226657663,
+      "n_relevant_missions": 13,
+      "n_gold_passages": 98
+    },
+    "T1-vega-vv15": {
+      "mission_ndcg@5": 0.8539316501572937,
+      "mission_ndcg@10": 0.6911279212606075,
+      "mission_recall@5": null,
+      "mission_mrr": null,
+      "passage_normrecall@100": null,
+      "passage_ndcg@100": 0.1443621972905717,
+      "n_relevant_missions": 0,
+      "n_gold_passages": 0
+    },
+    "T1-vega-vv17": {
+      "mission_ndcg@5": 0.2327264211588769,
+      "mission_ndcg@10": 0.2327264211588769,
+      "mission_recall@5": 0.0,
+      "mission_mrr": 0.09090909090909091,
+      "passage_normrecall@100": 0.0,
+      "passage_ndcg@100": 0.0,
+      "n_relevant_missions": 1,
+      "n_gold_passages": 3
+    },
+    "T1-vegac-vv22": {
+      "mission_ndcg@5": null,
+      "mission_ndcg@10": null,
+      "mission_recall@5": null,
+      "mission_mrr": null,
+      "passage_normrecall@100": null,
+      "passage_ndcg@100": null,
+      "n_relevant_missions": 0,
+      "n_gold_passages": 0
+    },
+    "T1-wire": {
+      "mission_ndcg@5": 0.6053125807975392,
+      "mission_ndcg@10": 0.7362871464064055,
+      "mission_recall@5": 0.25,
+      "mission_mrr": 0.2,
+      "passage_normrecall@100": 0.16666666666666666,
+      "passage_ndcg@100": 0.16708925367425043,
+      "n_relevant_missions": 4,
+      "n_gold_passages": 30
+    }
+  },
+  "SF-causes-bm25": {
+    "T1-antares-orb3": {
+      "mission_ndcg@5": 0.5560906761394714,
+      "mission_ndcg@10": 0.7082195866017338,
+      "mission_recall@5": 0.2857142857142857,
+      "mission_mrr": 0.3333333333333333,
+      "passage_normrecall@100": 0.06896551724137931,
+      "passage_ndcg@100": 0.03273871273366131,
+      "n_relevant_missions": 7,
+      "n_gold_passages": 29
+    },
+    "T1-apollo1-as204": {
+      "mission_ndcg@5": 0.6601054139978735,
+      "mission_ndcg@10": 0.7659374129933567,
+      "mission_recall@5": 0.375,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.03278688524590164,
+      "passage_ndcg@100": 0.018991377054102827,
+      "n_relevant_missions": 8,
+      "n_gold_passages": 61
+    },
+    "T1-apollo13": {
+      "mission_ndcg@5": 1.0,
+      "mission_ndcg@10": 1.0,
+      "mission_recall@5": null,
+      "mission_mrr": null,
+      "passage_normrecall@100": null,
+      "passage_ndcg@100": 0.03802612901433607,
+      "n_relevant_missions": 0,
+      "n_gold_passages": 0
+    },
+    "T1-ariane5-501": {
+      "mission_ndcg@5": 0.5878056198050307,
+      "mission_ndcg@10": 0.6018637330633265,
+      "mission_recall@5": 0.2222222222222222,
+      "mission_mrr": 0.5,
+      "passage_normrecall@100": 0.08333333333333333,
+      "passage_ndcg@100": 0.10913849683074343,
+      "n_relevant_missions": 9,
+      "n_gold_passages": 72
+    },
+    "T1-dart-2005": {
+      "mission_ndcg@5": 0.8869465982421281,
+      "mission_ndcg@10": 0.8678910870525216,
+      "mission_recall@5": 0.5,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.0425531914893617,
+      "passage_ndcg@100": 0.0656143744619939,
+      "n_relevant_missions": 10,
+      "n_gold_passages": 94
+    },
+    "T1-exomars2016-schiaparelli": {
+      "mission_ndcg@5": 0.5890442449142238,
+      "mission_ndcg@10": 0.7061892552861969,
+      "mission_recall@5": 0.25,
+      "mission_mrr": 0.5,
+      "passage_normrecall@100": 0.0625,
+      "passage_ndcg@100": 0.04407806041214243,
+      "n_relevant_missions": 8,
+      "n_gold_passages": 48
+    },
+    "T1-genesis": {
+      "mission_ndcg@5": 0.6298964439304254,
+      "mission_ndcg@10": 0.6101048310848091,
+      "mission_recall@5": 0.3,
+      "mission_mrr": 0.5,
+      "passage_normrecall@100": 0.030303030303030304,
+      "passage_ndcg@100": 0.021425727674034754,
+      "n_relevant_missions": 10,
+      "n_gold_passages": 66
+    },
+    "T1-glory-taurus-t9": {
+      "mission_ndcg@5": 0.6765142965891183,
+      "mission_ndcg@10": 0.7236917939548515,
+      "mission_recall@5": 0.2727272727272727,
+      "mission_mrr": 0.5,
+      "passage_normrecall@100": 0.028169014084507043,
+      "passage_ndcg@100": 0.029960368331150188,
+      "n_relevant_missions": 11,
+      "n_gold_passages": 71
+    },
+    "T1-gslv-f10": {
+      "mission_ndcg@5": 1.0,
+      "mission_ndcg@10": 0.7846170207230129,
+      "mission_recall@5": null,
+      "mission_mrr": null,
+      "passage_normrecall@100": null,
+      "passage_ndcg@100": 0.0681737910189289,
+      "n_relevant_missions": 0,
+      "n_gold_passages": 0
+    },
+    "T1-hitomi": {
+      "mission_ndcg@5": 1.0,
+      "mission_ndcg@10": 0.9363792118010481,
+      "mission_recall@5": null,
+      "mission_mrr": null,
+      "passage_normrecall@100": null,
+      "passage_ndcg@100": 0.025728183216591354,
+      "n_relevant_missions": 0,
+      "n_gold_passages": 0
+    },
+    "T1-mars-climate-orbiter": {
+      "mission_ndcg@5": 0.8153807673520377,
+      "mission_ndcg@10": 0.8574048222581505,
+      "mission_recall@5": 0.35714285714285715,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.08974358974358974,
+      "passage_ndcg@100": 0.10643061950121913,
+      "n_relevant_missions": 14,
+      "n_gold_passages": 78
+    },
+    "T1-noaa-n-prime": {
+      "mission_ndcg@5": 0.7583711273873467,
+      "mission_ndcg@10": 0.8031832639776645,
+      "mission_recall@5": 0.6666666666666666,
+      "mission_mrr": 0.5,
+      "passage_normrecall@100": 0.0,
+      "passage_ndcg@100": 0.0,
+      "n_relevant_missions": 6,
+      "n_gold_passages": 31
+    },
+    "T1-oco-taurus-t8": {
+      "mission_ndcg@5": 0.5666942915293228,
+      "mission_ndcg@10": 0.6730698481037262,
+      "mission_recall@5": 0.375,
+      "mission_mrr": 0.3333333333333333,
+      "passage_normrecall@100": 0.07407407407407407,
+      "passage_ndcg@100": 0.08372425096256018,
+      "n_relevant_missions": 8,
+      "n_gold_passages": 54
+    },
+    "T1-soho-1998": {
+      "mission_ndcg@5": 0.6608397947263839,
+      "mission_ndcg@10": 0.6683828529960499,
+      "mission_recall@5": 0.36363636363636365,
+      "mission_mrr": 0.5,
+      "passage_normrecall@100": 0.04054054054054054,
+      "passage_ndcg@100": 0.05974770637656545,
+      "n_relevant_missions": 11,
+      "n_gold_passages": 74
+    },
+    "T1-spacex-crs7": {
+      "mission_ndcg@5": 0.7281477916557243,
+      "mission_ndcg@10": 0.8126608837093229,
+      "mission_recall@5": 0.3333333333333333,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.015625,
+      "passage_ndcg@100": 0.02114666785275167,
+      "n_relevant_missions": 9,
+      "n_gold_passages": 64
+    },
+    "T1-starliner-cft": {
+      "mission_ndcg@5": 0.71736649560532,
+      "mission_ndcg@10": 0.7168814446421478,
+      "mission_recall@5": 0.3076923076923077,
+      "mission_mrr": 0.5,
+      "passage_normrecall@100": 0.02,
+      "passage_ndcg@100": 0.019770455311723775,
+      "n_relevant_missions": 13,
+      "n_gold_passages": 104
+    },
+    "T1-sts-107-columbia": {
+      "mission_ndcg@5": 0.9513105500524313,
+      "mission_ndcg@10": 0.9172444065653901,
+      "mission_recall@5": 0.35714285714285715,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.05,
+      "passage_ndcg@100": 0.05670159746817277,
+      "n_relevant_missions": 14,
+      "n_gold_passages": 103
+    },
+    "T1-sts-51l-challenger": {
+      "mission_ndcg@5": 0.6955996384715408,
+      "mission_ndcg@10": 0.7935264071004409,
+      "mission_recall@5": 0.23076923076923078,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.04081632653061224,
+      "passage_ndcg@100": 0.03155008464537952,
+      "n_relevant_missions": 13,
+      "n_gold_passages": 98
+    },
+    "T1-vega-vv15": {
+      "mission_ndcg@5": 0.639945385422766,
+      "mission_ndcg@10": 0.6235540477207573,
+      "mission_recall@5": null,
+      "mission_mrr": null,
+      "passage_normrecall@100": null,
+      "passage_ndcg@100": 0.2508212711122926,
+      "n_relevant_missions": 0,
+      "n_gold_passages": 0
+    },
+    "T1-vega-vv17": {
+      "mission_ndcg@5": 0.10961051126301759,
+      "mission_ndcg@10": 0.10961051126301759,
+      "mission_recall@5": 0.0,
+      "mission_mrr": 0.06666666666666667,
+      "passage_normrecall@100": 0.0,
+      "passage_ndcg@100": 0.03372296823274621,
+      "n_relevant_missions": 1,
+      "n_gold_passages": 3
+    },
+    "T1-vegac-vv22": {
+      "mission_ndcg@5": null,
+      "mission_ndcg@10": null,
+      "mission_recall@5": null,
+      "mission_mrr": null,
+      "passage_normrecall@100": null,
+      "passage_ndcg@100": null,
+      "n_relevant_missions": 0,
+      "n_gold_passages": 0
+    },
+    "T1-wire": {
+      "mission_ndcg@5": 0.8073332658149857,
+      "mission_ndcg@10": 0.9373538266188268,
+      "mission_recall@5": 0.5,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.2,
+      "passage_ndcg@100": 0.14516466897420444,
+      "n_relevant_missions": 4,
+      "n_gold_passages": 30
+    }
+  },
+  "SF-causes-dense": {
+    "T1-antares-orb3": {
+      "mission_ndcg@5": 0.5750744815229616,
+      "mission_ndcg@10": 0.529035048327046,
+      "mission_recall@5": 0.2857142857142857,
+      "mission_mrr": 0.5,
+      "passage_normrecall@100": 0.0,
+      "passage_ndcg@100": 0.006046579340697528,
+      "n_relevant_missions": 7,
+      "n_gold_passages": 29
+    },
+    "T1-apollo1-as204": {
+      "mission_ndcg@5": 0.6764967932559721,
+      "mission_ndcg@10": 0.7720928722696326,
+      "mission_recall@5": 0.375,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.03278688524590164,
+      "passage_ndcg@100": 0.015171150859006735,
+      "n_relevant_missions": 8,
+      "n_gold_passages": 61
+    },
+    "T1-apollo13": {
+      "mission_ndcg@5": 1.0,
+      "mission_ndcg@10": 0.9363792118010481,
+      "mission_recall@5": null,
+      "mission_mrr": null,
+      "passage_normrecall@100": null,
+      "passage_ndcg@100": 0.02322350146130223,
+      "n_relevant_missions": 0,
+      "n_gold_passages": 0
+    },
+    "T1-ariane5-501": {
+      "mission_ndcg@5": 0.7426142775581612,
+      "mission_ndcg@10": 0.7865987209617608,
+      "mission_recall@5": 0.2222222222222222,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.06944444444444445,
+      "passage_ndcg@100": 0.16931300219683873,
+      "n_relevant_missions": 9,
+      "n_gold_passages": 72
+    },
+    "T1-dart-2005": {
+      "mission_ndcg@5": 0.5338567867660999,
+      "mission_ndcg@10": 0.6771128063175625,
+      "mission_recall@5": 0.2,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.06382978723404255,
+      "passage_ndcg@100": 0.07928955290170712,
+      "n_relevant_missions": 10,
+      "n_gold_passages": 94
+    },
+    "T1-exomars2016-schiaparelli": {
+      "mission_ndcg@5": 0.8432115724046808,
+      "mission_ndcg@10": 0.765765845173467,
+      "mission_recall@5": 0.5,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.020833333333333332,
+      "passage_ndcg@100": 0.04877115223370054,
+      "n_relevant_missions": 8,
+      "n_gold_passages": 48
+    },
+    "T1-genesis": {
+      "mission_ndcg@5": 0.7994765465672335,
+      "mission_ndcg@10": 0.8257966914645164,
+      "mission_recall@5": 0.4,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.030303030303030304,
+      "passage_ndcg@100": 0.02671199837469262,
+      "n_relevant_missions": 10,
+      "n_gold_passages": 66
+    },
+    "T1-glory-taurus-t9": {
+      "mission_ndcg@5": 0.6568190367442152,
+      "mission_ndcg@10": 0.637897945401843,
+      "mission_recall@5": 0.18181818181818182,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.056338028169014086,
+      "passage_ndcg@100": 0.05655132392042044,
+      "n_relevant_missions": 11,
+      "n_gold_passages": 71
+    },
+    "T1-gslv-f10": {
+      "mission_ndcg@5": 1.0,
+      "mission_ndcg@10": 0.9363792118010481,
+      "mission_recall@5": null,
+      "mission_mrr": null,
+      "passage_normrecall@100": null,
+      "passage_ndcg@100": 0.049156109782349494,
+      "n_relevant_missions": 0,
+      "n_gold_passages": 0
+    },
+    "T1-hitomi": {
+      "mission_ndcg@5": 1.0,
+      "mission_ndcg@10": 1.0,
+      "mission_recall@5": null,
+      "mission_mrr": null,
+      "passage_normrecall@100": null,
+      "passage_ndcg@100": 0.020718162371219026,
+      "n_relevant_missions": 0,
+      "n_gold_passages": 0
+    },
+    "T1-mars-climate-orbiter": {
+      "mission_ndcg@5": 0.7208315584644993,
+      "mission_ndcg@10": 0.7749418237421405,
+      "mission_recall@5": 0.2857142857142857,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.038461538461538464,
+      "passage_ndcg@100": 0.04851087931174655,
+      "n_relevant_missions": 14,
+      "n_gold_passages": 78
+    },
+    "T1-noaa-n-prime": {
+      "mission_ndcg@5": 0.8817760716825603,
+      "mission_ndcg@10": 0.9061343016504371,
+      "mission_recall@5": 0.6666666666666666,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.03225806451612903,
+      "passage_ndcg@100": 0.03825656706635466,
+      "n_relevant_missions": 6,
+      "n_gold_passages": 31
+    },
+    "T1-oco-taurus-t8": {
+      "mission_ndcg@5": 0.7809849087978046,
+      "mission_ndcg@10": 0.8060637649784431,
+      "mission_recall@5": 0.375,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.07407407407407407,
+      "passage_ndcg@100": 0.06829483421685581,
+      "n_relevant_missions": 8,
+      "n_gold_passages": 54
+    },
+    "T1-soho-1998": {
+      "mission_ndcg@5": 0.764817358607021,
+      "mission_ndcg@10": 0.7461409419938962,
+      "mission_recall@5": 0.2727272727272727,
+      "mission_mrr": 0.5,
+      "passage_normrecall@100": 0.013513513513513514,
+      "passage_ndcg@100": 0.023367470009692106,
+      "n_relevant_missions": 11,
+      "n_gold_passages": 74
+    },
+    "T1-spacex-crs7": {
+      "mission_ndcg@5": 0.7133457376231512,
+      "mission_ndcg@10": 0.837555062526895,
+      "mission_recall@5": 0.3333333333333333,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.0,
+      "passage_ndcg@100": 0.0,
+      "n_relevant_missions": 9,
+      "n_gold_passages": 64
+    },
+    "T1-starliner-cft": {
+      "mission_ndcg@5": 0.9026211001048624,
+      "mission_ndcg@10": 0.8622669278061706,
+      "mission_recall@5": 0.3076923076923077,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.04,
+      "passage_ndcg@100": 0.040536027308030624,
+      "n_relevant_missions": 13,
+      "n_gold_passages": 104
+    },
+    "T1-sts-107-columbia": {
+      "mission_ndcg@5": 0.7994765465672335,
+      "mission_ndcg@10": 0.7823061955815189,
+      "mission_recall@5": 0.2857142857142857,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.03,
+      "passage_ndcg@100": 0.022301525184007045,
+      "n_relevant_missions": 14,
+      "n_gold_passages": 103
+    },
+    "T1-sts-51l-challenger": {
+      "mission_ndcg@5": 0.8869465982421281,
+      "mission_ndcg@10": 0.8195806447464381,
+      "mission_recall@5": 0.3076923076923077,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.01020408163265306,
+      "passage_ndcg@100": 0.008157935082850593,
+      "n_relevant_missions": 13,
+      "n_gold_passages": 98
+    },
+    "T1-vega-vv15": {
+      "mission_ndcg@5": 0.27727342735504823,
+      "mission_ndcg@10": 0.3940151963810134,
+      "mission_recall@5": null,
+      "mission_mrr": null,
+      "passage_normrecall@100": null,
+      "passage_ndcg@100": 0.09507930681914195,
+      "n_relevant_missions": 0,
+      "n_gold_passages": 0
+    },
+    "T1-vega-vv17": {
+      "mission_ndcg@5": 0.0,
+      "mission_ndcg@10": 0.0,
+      "mission_recall@5": 0.0,
+      "mission_mrr": 0.05555555555555555,
+      "passage_normrecall@100": 0.0,
+      "passage_ndcg@100": 0.0,
+      "n_relevant_missions": 1,
+      "n_gold_passages": 3
+    },
+    "T1-vegac-vv22": {
+      "mission_ndcg@5": null,
+      "mission_ndcg@10": null,
+      "mission_recall@5": null,
+      "mission_mrr": null,
+      "passage_normrecall@100": null,
+      "passage_ndcg@100": null,
+      "n_relevant_missions": 0,
+      "n_gold_passages": 0
+    },
+    "T1-wire": {
+      "mission_ndcg@5": 0.6132659801521241,
+      "mission_ndcg@10": 0.705821433828548,
+      "mission_recall@5": 0.25,
+      "mission_mrr": 0.25,
+      "passage_normrecall@100": 0.0,
+      "passage_ndcg@100": 0.06407788350386424,
+      "n_relevant_missions": 4,
+      "n_gold_passages": 30
+    }
+  },
+  "SF-causes-hybrid": {
+    "T1-antares-orb3": {
+      "mission_ndcg@5": 0.5560906761394714,
+      "mission_ndcg@10": 0.6970045091398347,
+      "mission_recall@5": 0.2857142857142857,
+      "mission_mrr": 0.3333333333333333,
+      "passage_normrecall@100": 0.0,
+      "passage_ndcg@100": 0.0,
+      "n_relevant_missions": 7,
+      "n_gold_passages": 29
+    },
+    "T1-apollo1-as204": {
+      "mission_ndcg@5": 0.6601054139978735,
+      "mission_ndcg@10": 0.7637734615515128,
+      "mission_recall@5": 0.375,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.01639344262295082,
+      "passage_ndcg@100": 0.00720422024231748,
+      "n_relevant_missions": 8,
+      "n_gold_passages": 61
+    },
+    "T1-apollo13": {
+      "mission_ndcg@5": 1.0,
+      "mission_ndcg@10": 1.0,
+      "mission_recall@5": null,
+      "mission_mrr": null,
+      "passage_normrecall@100": null,
+      "passage_ndcg@100": 0.018400814372953905,
+      "n_relevant_missions": 0,
+      "n_gold_passages": 0
+    },
+    "T1-ariane5-501": {
+      "mission_ndcg@5": 0.6069931323672637,
+      "mission_ndcg@10": 0.6320181712403092,
+      "mission_recall@5": 0.1111111111111111,
+      "mission_mrr": 0.5,
+      "passage_normrecall@100": 0.06944444444444445,
+      "passage_ndcg@100": 0.13506825243623782,
+      "n_relevant_missions": 9,
+      "n_gold_passages": 72
+    },
+    "T1-dart-2005": {
+      "mission_ndcg@5": 0.7994765465672335,
+      "mission_ndcg@10": 0.7894506560325097,
+      "mission_recall@5": 0.4,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.0425531914893617,
+      "passage_ndcg@100": 0.07609771828557489,
+      "n_relevant_missions": 10,
+      "n_gold_passages": 94
+    },
+    "T1-exomars2016-schiaparelli": {
+      "mission_ndcg@5": 0.6455709457931598,
+      "mission_ndcg@10": 0.7005237995032153,
+      "mission_recall@5": 0.25,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.041666666666666664,
+      "passage_ndcg@100": 0.044426712091573145,
+      "n_relevant_missions": 8,
+      "n_gold_passages": 48
+    },
+    "T1-genesis": {
+      "mission_ndcg@5": 0.7162285644443968,
+      "mission_ndcg@10": 0.7036434522366098,
+      "mission_recall@5": 0.3,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.030303030303030304,
+      "passage_ndcg@100": 0.023723397242392693,
+      "n_relevant_missions": 10,
+      "n_gold_passages": 66
+    },
+    "T1-glory-taurus-t9": {
+      "mission_ndcg@5": 0.660839794726384,
+      "mission_ndcg@10": 0.7107216250158287,
+      "mission_recall@5": 0.2727272727272727,
+      "mission_mrr": 0.5,
+      "passage_normrecall@100": 0.056338028169014086,
+      "passage_ndcg@100": 0.05461277843009363,
+      "n_relevant_missions": 11,
+      "n_gold_passages": 71
+    },
+    "T1-gslv-f10": {
+      "mission_ndcg@5": 1.0,
+      "mission_ndcg@10": 0.9305687780632227,
+      "mission_recall@5": null,
+      "mission_mrr": null,
+      "passage_normrecall@100": null,
+      "passage_ndcg@100": 0.05592450932721273,
+      "n_relevant_missions": 0,
+      "n_gold_passages": 0
+    },
+    "T1-hitomi": {
+      "mission_ndcg@5": 1.0,
+      "mission_ndcg@10": 1.0,
+      "mission_recall@5": null,
+      "mission_mrr": null,
+      "passage_normrecall@100": null,
+      "passage_ndcg@100": 0.026653934074046766,
+      "n_relevant_missions": 0,
+      "n_gold_passages": 0
+    },
+    "T1-mars-climate-orbiter": {
+      "mission_ndcg@5": 0.8611160259039345,
+      "mission_ndcg@10": 0.8675455157128772,
+      "mission_recall@5": 0.35714285714285715,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.07692307692307693,
+      "passage_ndcg@100": 0.08818694755784946,
+      "n_relevant_missions": 14,
+      "n_gold_passages": 78
+    },
+    "T1-noaa-n-prime": {
+      "mission_ndcg@5": 0.7851245386009928,
+      "mission_ndcg@10": 0.8854356607024856,
+      "mission_recall@5": 0.5,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.03225806451612903,
+      "passage_ndcg@100": 0.021706709888911012,
+      "n_relevant_missions": 6,
+      "n_gold_passages": 31
+    },
+    "T1-oco-taurus-t8": {
+      "mission_ndcg@5": 0.6563286073639966,
+      "mission_ndcg@10": 0.67504971569261,
+      "mission_recall@5": 0.375,
+      "mission_mrr": 0.5,
+      "passage_normrecall@100": 0.07407407407407407,
+      "passage_ndcg@100": 0.09758096903089267,
+      "n_relevant_missions": 8,
+      "n_gold_passages": 54
+    },
+    "T1-soho-1998": {
+      "mission_ndcg@5": 0.7227265726449519,
+      "mission_ndcg@10": 0.7853529070204396,
+      "mission_recall@5": 0.2727272727272727,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.04054054054054054,
+      "passage_ndcg@100": 0.055018430918708866,
+      "n_relevant_missions": 11,
+      "n_gold_passages": 74
+    },
+    "T1-spacex-crs7": {
+      "mission_ndcg@5": 0.7133457376231512,
+      "mission_ndcg@10": 0.7525897943009762,
+      "mission_recall@5": 0.3333333333333333,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.015625,
+      "passage_ndcg@100": 0.014288306049329284,
+      "n_relevant_missions": 9,
+      "n_gold_passages": 64
+    },
+    "T1-starliner-cft": {
+      "mission_ndcg@5": 0.8588860742674151,
+      "mission_ndcg@10": 0.8057543705801602,
+      "mission_recall@5": 0.3076923076923077,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.03,
+      "passage_ndcg@100": 0.03361174671975891,
+      "n_relevant_missions": 13,
+      "n_gold_passages": 104
+    },
+    "T1-sts-107-columbia": {
+      "mission_ndcg@5": 0.8997382732836168,
+      "mission_ndcg@10": 0.883934467829844,
+      "mission_recall@5": 0.35714285714285715,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.05,
+      "passage_ndcg@100": 0.046935956511276244,
+      "n_relevant_missions": 14,
+      "n_gold_passages": 103
+    },
+    "T1-sts-51l-challenger": {
+      "mission_ndcg@5": 0.759963590281844,
+      "mission_ndcg@10": 0.8295583649154237,
+      "mission_recall@5": 0.23076923076923078,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.01020408163265306,
+      "passage_ndcg@100": 0.008229716883068046,
+      "n_relevant_missions": 13,
+      "n_gold_passages": 98
+    },
+    "T1-vega-vv15": {
+      "mission_ndcg@5": 0.4912596920895758,
+      "mission_ndcg@10": 0.448668937538067,
+      "mission_recall@5": null,
+      "mission_mrr": null,
+      "passage_normrecall@100": null,
+      "passage_ndcg@100": 0.18996024212932472,
+      "n_relevant_missions": 0,
+      "n_gold_passages": 0
+    },
+    "T1-vega-vv17": {
+      "mission_ndcg@5": 0.0,
+      "mission_ndcg@10": 0.0,
+      "mission_recall@5": 0.0,
+      "mission_mrr": 0.06666666666666667,
+      "passage_normrecall@100": 0.0,
+      "passage_ndcg@100": 0.020840979094091196,
+      "n_relevant_missions": 1,
+      "n_gold_passages": 3
+    },
+    "T1-vegac-vv22": {
+      "mission_ndcg@5": null,
+      "mission_ndcg@10": null,
+      "mission_recall@5": null,
+      "mission_mrr": null,
+      "passage_normrecall@100": null,
+      "passage_ndcg@100": null,
+      "n_relevant_missions": 0,
+      "n_gold_passages": 0
+    },
+    "T1-wire": {
+      "mission_ndcg@5": 0.8649604154943542,
+      "mission_ndcg@10": 0.9454101736187588,
+      "mission_recall@5": 0.75,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.2,
+      "passage_ndcg@100": 0.14085062351973038,
+      "n_relevant_missions": 4,
+      "n_gold_passages": 30
+    }
+  },
+  "SF-summary-bm25": {
+    "T1-antares-orb3": {
+      "mission_ndcg@5": 0.5560906761394714,
+      "mission_ndcg@10": 0.5952421785767242,
+      "mission_recall@5": 0.2857142857142857,
+      "mission_mrr": 0.3333333333333333,
+      "passage_normrecall@100": 0.034482758620689655,
+      "passage_ndcg@100": 0.03358599464634567,
+      "n_relevant_missions": 7,
+      "n_gold_passages": 29
+    },
+    "T1-apollo1-as204": {
+      "mission_ndcg@5": 0.6328638588981044,
+      "mission_ndcg@10": 0.7490084319468904,
+      "mission_recall@5": 0.375,
+      "mission_mrr": 0.5,
+      "passage_normrecall@100": 0.01639344262295082,
+      "passage_ndcg@100": 0.0511068182860771,
+      "n_relevant_missions": 8,
+      "n_gold_passages": 61
+    },
+    "T1-apollo13": {
+      "mission_ndcg@5": 0.8539316501572937,
+      "mission_ndcg@10": 0.905211635630449,
+      "mission_recall@5": null,
+      "mission_mrr": null,
+      "passage_normrecall@100": null,
+      "passage_ndcg@100": 0.10618447351711598,
+      "n_relevant_missions": 0,
+      "n_gold_passages": 0
+    },
+    "T1-ariane5-501": {
+      "mission_ndcg@5": 0.819972692711383,
+      "mission_ndcg@10": 0.8414490671706254,
+      "mission_recall@5": 0.3333333333333333,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.0,
+      "passage_ndcg@100": 0.016733341561115087,
+      "n_relevant_missions": 9,
+      "n_gold_passages": 72
+    },
+    "T1-dart-2005": {
+      "mission_ndcg@5": 0.9513105500524313,
+      "mission_ndcg@10": 0.9177083148022449,
+      "mission_recall@5": 0.5,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.02127659574468085,
+      "passage_ndcg@100": 0.021496822278058516,
+      "n_relevant_missions": 10,
+      "n_gold_passages": 94
+    },
+    "T1-exomars2016-schiaparelli": {
+      "mission_ndcg@5": 0.7133457376231512,
+      "mission_ndcg@10": 0.8080267651246689,
+      "mission_recall@5": 0.375,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.10416666666666667,
+      "passage_ndcg@100": 0.12848739111214413,
+      "n_relevant_missions": 8,
+      "n_gold_passages": 48
+    },
+    "T1-genesis": {
+      "mission_ndcg@5": 0.8156178433306188,
+      "mission_ndcg@10": 0.754085506346607,
+      "mission_recall@5": 0.4,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.030303030303030304,
+      "passage_ndcg@100": 0.026081200258963235,
+      "n_relevant_missions": 10,
+      "n_gold_passages": 66
+    },
+    "T1-glory-taurus-t9": {
+      "mission_ndcg@5": 0.6377336948617925,
+      "mission_ndcg@10": 0.6416778723288571,
+      "mission_recall@5": 0.2727272727272727,
+      "mission_mrr": 0.5,
+      "passage_normrecall@100": 0.028169014084507043,
+      "passage_ndcg@100": 0.024488452771390366,
+      "n_relevant_missions": 11,
+      "n_gold_passages": 71
+    },
+    "T1-gslv-f10": {
+      "mission_ndcg@5": 0.830419897363192,
+      "mission_ndcg@10": 0.8899541168509599,
+      "mission_recall@5": null,
+      "mission_mrr": null,
+      "passage_normrecall@100": null,
+      "passage_ndcg@100": 0.0364151783362007,
+      "n_relevant_missions": 0,
+      "n_gold_passages": 0
+    },
+    "T1-hitomi": {
+      "mission_ndcg@5": 1.0,
+      "mission_ndcg@10": 1.0,
+      "mission_recall@5": null,
+      "mission_mrr": null,
+      "passage_normrecall@100": null,
+      "passage_ndcg@100": 0.06692948628784064,
+      "n_relevant_missions": 0,
+      "n_gold_passages": 0
+    },
+    "T1-mars-climate-orbiter": {
+      "mission_ndcg@5": 0.8611160259039345,
+      "mission_ndcg@10": 0.8771097270683738,
+      "mission_recall@5": 0.35714285714285715,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.038461538461538464,
+      "passage_ndcg@100": 0.061025163830972,
+      "n_relevant_missions": 14,
+      "n_gold_passages": 78
+    },
+    "T1-noaa-n-prime": {
+      "mission_ndcg@5": 0.624180025382932,
+      "mission_ndcg@10": 0.7812789880696337,
+      "mission_recall@5": 0.3333333333333333,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.0,
+      "passage_ndcg@100": 0.005581193630022783,
+      "n_relevant_missions": 6,
+      "n_gold_passages": 31
+    },
+    "T1-oco-taurus-t8": {
+      "mission_ndcg@5": 0.6829302597523941,
+      "mission_ndcg@10": 0.7299927381586078,
+      "mission_recall@5": 0.375,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.05555555555555555,
+      "passage_ndcg@100": 0.06530418920768108,
+      "n_relevant_missions": 8,
+      "n_gold_passages": 54
+    },
+    "T1-soho-1998": {
+      "mission_ndcg@5": 1.0,
+      "mission_ndcg@10": 0.8582425318466904,
+      "mission_recall@5": 0.45454545454545453,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.013513513513513514,
+      "passage_ndcg@100": 0.03506176939308091,
+      "n_relevant_missions": 11,
+      "n_gold_passages": 74
+    },
+    "T1-spacex-crs7": {
+      "mission_ndcg@5": 0.5325175440352877,
+      "mission_ndcg@10": 0.7288360781357073,
+      "mission_recall@5": 0.2222222222222222,
+      "mission_mrr": 0.5,
+      "passage_normrecall@100": 0.03125,
+      "passage_ndcg@100": 0.02458298253888865,
+      "n_relevant_missions": 9,
+      "n_gold_passages": 64
+    },
+    "T1-starliner-cft": {
+      "mission_ndcg@5": 0.6312356866612376,
+      "mission_ndcg@10": 0.7268346268642237,
+      "mission_recall@5": 0.23076923076923078,
+      "mission_mrr": 0.3333333333333333,
+      "passage_normrecall@100": 0.03,
+      "passage_ndcg@100": 0.025892468013768842,
+      "n_relevant_missions": 13,
+      "n_gold_passages": 104
+    },
+    "T1-sts-107-columbia": {
+      "mission_ndcg@5": 0.8721445442095549,
+      "mission_ndcg@10": 0.9338422711379984,
+      "mission_recall@5": 0.35714285714285715,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.02,
+      "passage_ndcg@100": 0.025883237217154086,
+      "n_relevant_missions": 14,
+      "n_gold_passages": 103
+    },
+    "T1-sts-51l-challenger": {
+      "mission_ndcg@5": 0.9434732991210639,
+      "mission_ndcg@10": 0.9098814644054928,
+      "mission_recall@5": 0.38461538461538464,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.07142857142857142,
+      "passage_ndcg@100": 0.06075559395446199,
+      "n_relevant_missions": 13,
+      "n_gold_passages": 98
+    },
+    "T1-vega-vv15": {
+      "mission_ndcg@5": 0.830419897363192,
+      "mission_ndcg@10": 0.8205228949141826,
+      "mission_recall@5": null,
+      "mission_mrr": null,
+      "passage_normrecall@100": null,
+      "passage_ndcg@100": 0.05283597717499421,
+      "n_relevant_missions": 0,
+      "n_gold_passages": 0
+    },
+    "T1-vega-vv17": {
+      "mission_ndcg@5": 0.2231193336890577,
+      "mission_ndcg@10": 0.2961930078644027,
+      "mission_recall@5": 0.0,
+      "mission_mrr": 0.07142857142857142,
+      "passage_normrecall@100": 0.0,
+      "passage_ndcg@100": 0.0,
+      "n_relevant_missions": 1,
+      "n_gold_passages": 3
+    },
+    "T1-vegac-vv22": {
+      "mission_ndcg@5": null,
+      "mission_ndcg@10": null,
+      "mission_recall@5": null,
+      "mission_mrr": null,
+      "passage_normrecall@100": null,
+      "passage_ndcg@100": null,
+      "n_relevant_missions": 0,
+      "n_gold_passages": 0
+    },
+    "T1-wire": {
+      "mission_ndcg@5": 0.7040090042240593,
+      "mission_ndcg@10": 0.8128263543078106,
+      "mission_recall@5": 0.5,
+      "mission_mrr": 0.3333333333333333,
+      "passage_normrecall@100": 0.03333333333333333,
+      "passage_ndcg@100": 0.05484203587338512,
+      "n_relevant_missions": 4,
+      "n_gold_passages": 30
+    }
+  },
+  "SF-summary-dense": {
+    "T1-antares-orb3": {
+      "mission_ndcg@5": 0.4375552176745327,
+      "mission_ndcg@10": 0.5985441730025932,
+      "mission_recall@5": 0.14285714285714285,
+      "mission_mrr": 0.3333333333333333,
+      "passage_normrecall@100": 0.0,
+      "passage_ndcg@100": 0.008098200677961534,
+      "n_relevant_missions": 7,
+      "n_gold_passages": 29
+    },
+    "T1-apollo1-as204": {
+      "mission_ndcg@5": 0.6307615347040754,
+      "mission_ndcg@10": 0.7963136560438673,
+      "mission_recall@5": 0.375,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.03278688524590164,
+      "passage_ndcg@100": 0.04897273810399431,
+      "n_relevant_missions": 8,
+      "n_gold_passages": 61
+    },
+    "T1-apollo13": {
+      "mission_ndcg@5": 0.830419897363192,
+      "mission_ndcg@10": 0.8899541168509599,
+      "mission_recall@5": null,
+      "mission_mrr": null,
+      "passage_normrecall@100": null,
+      "passage_ndcg@100": 0.12549557106403642,
+      "n_relevant_missions": 0,
+      "n_gold_passages": 0
+    },
+    "T1-ariane5-501": {
+      "mission_ndcg@5": 0.795760747566305,
+      "mission_ndcg@10": 0.8175894471603286,
+      "mission_recall@5": 0.3333333333333333,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.013888888888888888,
+      "passage_ndcg@100": 0.026760545366135504,
+      "n_relevant_missions": 9,
+      "n_gold_passages": 72
+    },
+    "T1-dart-2005": {
+      "mission_ndcg@5": 0.7438222935184587,
+      "mission_ndcg@10": 0.8703749882051186,
+      "mission_recall@5": 0.3,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.031914893617021274,
+      "passage_ndcg@100": 0.025724052866335945,
+      "n_relevant_missions": 10,
+      "n_gold_passages": 94
+    },
+    "T1-exomars2016-schiaparelli": {
+      "mission_ndcg@5": 0.646910188523972,
+      "mission_ndcg@10": 0.7829847894659747,
+      "mission_recall@5": 0.25,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.08333333333333333,
+      "passage_ndcg@100": 0.09973644186772072,
+      "n_relevant_missions": 8,
+      "n_gold_passages": 48
+    },
+    "T1-genesis": {
+      "mission_ndcg@5": 0.8638404983775366,
+      "mission_ndcg@10": 0.8768740469007671,
+      "mission_recall@5": 0.4,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.030303030303030304,
+      "passage_ndcg@100": 0.031400865744423856,
+      "n_relevant_missions": 10,
+      "n_gold_passages": 66
+    },
+    "T1-glory-taurus-t9": {
+      "mission_ndcg@5": 0.7994765465672335,
+      "mission_ndcg@10": 0.8339550028049125,
+      "mission_recall@5": 0.2727272727272727,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.07042253521126761,
+      "passage_ndcg@100": 0.05967578934468748,
+      "n_relevant_missions": 11,
+      "n_gold_passages": 71
+    },
+    "T1-gslv-f10": {
+      "mission_ndcg@5": 1.0,
+      "mission_ndcg@10": 0.933745776545611,
+      "mission_recall@5": null,
+      "mission_mrr": null,
+      "passage_normrecall@100": null,
+      "passage_ndcg@100": 0.03879963759337498,
+      "n_relevant_missions": 0,
+      "n_gold_passages": 0
+    },
+    "T1-hitomi": {
+      "mission_ndcg@5": 1.0,
+      "mission_ndcg@10": 1.0,
+      "mission_recall@5": null,
+      "mission_mrr": null,
+      "passage_normrecall@100": null,
+      "passage_ndcg@100": 0.04461644413482705,
+      "n_relevant_missions": 0,
+      "n_gold_passages": 0
+    },
+    "T1-mars-climate-orbiter": {
+      "mission_ndcg@5": 0.7044401792064006,
+      "mission_ndcg@10": 0.7605690898159423,
+      "mission_recall@5": 0.2857142857142857,
+      "mission_mrr": 0.5,
+      "passage_normrecall@100": 0.01282051282051282,
+      "passage_ndcg@100": 0.010315120511901666,
+      "n_relevant_missions": 14,
+      "n_gold_passages": 78
+    },
+    "T1-noaa-n-prime": {
+      "mission_ndcg@5": 0.5264024558795816,
+      "mission_ndcg@10": 0.6437656199431895,
+      "mission_recall@5": 0.5,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.03225806451612903,
+      "passage_ndcg@100": 0.030456075244458376,
+      "n_relevant_missions": 6,
+      "n_gold_passages": 31
+    },
+    "T1-oco-taurus-t8": {
+      "mission_ndcg@5": 0.7053559318867019,
+      "mission_ndcg@10": 0.7213094008207847,
+      "mission_recall@5": 0.375,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.07407407407407407,
+      "passage_ndcg@100": 0.10805868881586705,
+      "n_relevant_missions": 8,
+      "n_gold_passages": 54
+    },
+    "T1-soho-1998": {
+      "mission_ndcg@5": 0.8421757737602428,
+      "mission_ndcg@10": 0.8644557645135099,
+      "mission_recall@5": 0.2727272727272727,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.013513513513513514,
+      "passage_ndcg@100": 0.06899707893401867,
+      "n_relevant_missions": 11,
+      "n_gold_passages": 74
+    },
+    "T1-spacex-crs7": {
+      "mission_ndcg@5": 0.5325175440352877,
+      "mission_ndcg@10": 0.6511517923127436,
+      "mission_recall@5": 0.2222222222222222,
+      "mission_mrr": 0.5,
+      "passage_normrecall@100": 0.015625,
+      "passage_ndcg@100": 0.012247674915674684,
+      "n_relevant_missions": 9,
+      "n_gold_passages": 64
+    },
+    "T1-starliner-cft": {
+      "mission_ndcg@5": 0.9026211001048624,
+      "mission_ndcg@10": 0.8603742822971658,
+      "mission_recall@5": 0.3076923076923077,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.04,
+      "passage_ndcg@100": 0.033429880685707375,
+      "n_relevant_missions": 13,
+      "n_gold_passages": 104
+    },
+    "T1-sts-107-columbia": {
+      "mission_ndcg@5": 0.9513105500524313,
+      "mission_ndcg@10": 0.8917905096814451,
+      "mission_recall@5": 0.35714285714285715,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.04,
+      "passage_ndcg@100": 0.042902410144740284,
+      "n_relevant_missions": 14,
+      "n_gold_passages": 103
+    },
+    "T1-sts-51l-challenger": {
+      "mission_ndcg@5": 0.8869465982421281,
+      "mission_ndcg@10": 0.8707031027559212,
+      "mission_recall@5": 0.3076923076923077,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.04081632653061224,
+      "passage_ndcg@100": 0.03605466560148085,
+      "n_relevant_missions": 13,
+      "n_gold_passages": 98
+    },
+    "T1-vega-vv15": {
+      "mission_ndcg@5": 0.6843515475204855,
+      "mission_ndcg@10": 0.65554760692766,
+      "mission_recall@5": null,
+      "mission_mrr": null,
+      "passage_normrecall@100": null,
+      "passage_ndcg@100": 0.019530949273396925,
+      "n_relevant_missions": 0,
+      "n_gold_passages": 0
+    },
+    "T1-vega-vv17": {
+      "mission_ndcg@5": 0.2832400663165278,
+      "mission_ndcg@10": 0.41576568597826313,
+      "mission_recall@5": 1.0,
+      "mission_mrr": 0.25,
+      "passage_normrecall@100": 0.0,
+      "passage_ndcg@100": 0.0,
+      "n_relevant_missions": 1,
+      "n_gold_passages": 3
+    },
+    "T1-vegac-vv22": {
+      "mission_ndcg@5": null,
+      "mission_ndcg@10": null,
+      "mission_recall@5": null,
+      "mission_mrr": null,
+      "passage_normrecall@100": null,
+      "passage_ndcg@100": null,
+      "n_relevant_missions": 0,
+      "n_gold_passages": 0
+    },
+    "T1-wire": {
+      "mission_ndcg@5": 0.5351041935991797,
+      "mission_ndcg@10": 0.6369578282401739,
+      "mission_recall@5": 0.0,
+      "mission_mrr": 0.125,
+      "passage_normrecall@100": 0.1,
+      "passage_ndcg@100": 0.12756536564361487,
+      "n_relevant_missions": 4,
+      "n_gold_passages": 30
+    }
+  },
+  "SF-summary-hybrid": {
+    "T1-antares-orb3": {
+      "mission_ndcg@5": 0.4936458938140041,
+      "mission_ndcg@10": 0.5824178459085132,
+      "mission_recall@5": 0.2857142857142857,
+      "mission_mrr": 0.3333333333333333,
+      "passage_normrecall@100": 0.0,
+      "passage_ndcg@100": 0.010281997695615826,
+      "n_relevant_missions": 7,
+      "n_gold_passages": 29
+    },
+    "T1-apollo1-as204": {
+      "mission_ndcg@5": 0.6328638588981044,
+      "mission_ndcg@10": 0.7155007152219826,
+      "mission_recall@5": 0.375,
+      "mission_mrr": 0.5,
+      "passage_normrecall@100": 0.01639344262295082,
+      "passage_ndcg@100": 0.047960301734870286,
+      "n_relevant_missions": 8,
+      "n_gold_passages": 61
+    },
+    "T1-apollo13": {
+      "mission_ndcg@5": 1.0,
+      "mission_ndcg@10": 0.933745776545611,
+      "mission_recall@5": null,
+      "mission_mrr": null,
+      "passage_normrecall@100": null,
+      "passage_ndcg@100": 0.12096307524302406,
+      "n_relevant_missions": 0,
+      "n_gold_passages": 0
+    },
+    "T1-ariane5-501": {
+      "mission_ndcg@5": 0.915209948681596,
+      "mission_ndcg@10": 0.7930826174652217,
+      "mission_recall@5": 0.4444444444444444,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.0,
+      "passage_ndcg@100": 0.016770575142224284,
+      "n_relevant_missions": 9,
+      "n_gold_passages": 72
+    },
+    "T1-dart-2005": {
+      "mission_ndcg@5": 0.8869465982421281,
+      "mission_ndcg@10": 0.843294446200162,
+      "mission_recall@5": 0.5,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.031914893617021274,
+      "passage_ndcg@100": 0.026090221347378408,
+      "n_relevant_missions": 10,
+      "n_gold_passages": 94
+    },
+    "T1-exomars2016-schiaparelli": {
+      "mission_ndcg@5": 0.7507870966196646,
+      "mission_ndcg@10": 0.8273207142486109,
+      "mission_recall@5": 0.375,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.08333333333333333,
+      "passage_ndcg@100": 0.12469141676899839,
+      "n_relevant_missions": 8,
+      "n_gold_passages": 48
+    },
+    "T1-genesis": {
+      "mission_ndcg@5": 0.7025644415727468,
+      "mission_ndcg@10": 0.8047161102330809,
+      "mission_recall@5": 0.4,
+      "mission_mrr": 0.5,
+      "passage_normrecall@100": 0.015151515151515152,
+      "passage_ndcg@100": 0.018447416320451625,
+      "n_relevant_missions": 10,
+      "n_gold_passages": 66
+    },
+    "T1-glory-taurus-t9": {
+      "mission_ndcg@5": 0.7020976466720958,
+      "mission_ndcg@10": 0.7465521755762424,
+      "mission_recall@5": 0.18181818181818182,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.056338028169014086,
+      "passage_ndcg@100": 0.044621790865053704,
+      "n_relevant_missions": 11,
+      "n_gold_passages": 71
+    },
+    "T1-gslv-f10": {
+      "mission_ndcg@5": 1.0,
+      "mission_ndcg@10": 0.9216017310213246,
+      "mission_recall@5": null,
+      "mission_mrr": null,
+      "passage_normrecall@100": null,
+      "passage_ndcg@100": 0.0351540802458787,
+      "n_relevant_missions": 0,
+      "n_gold_passages": 0
+    },
+    "T1-hitomi": {
+      "mission_ndcg@5": 1.0,
+      "mission_ndcg@10": 1.0,
+      "mission_recall@5": null,
+      "mission_mrr": null,
+      "passage_normrecall@100": null,
+      "passage_ndcg@100": 0.060930501838983846,
+      "n_relevant_missions": 0,
+      "n_gold_passages": 0
+    },
+    "T1-mars-climate-orbiter": {
+      "mission_ndcg@5": 0.7999017375511857,
+      "mission_ndcg@10": 0.8298868851650364,
+      "mission_recall@5": 0.2857142857142857,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.02564102564102564,
+      "passage_ndcg@100": 0.027737885822304877,
+      "n_relevant_missions": 14,
+      "n_gold_passages": 78
+    },
+    "T1-noaa-n-prime": {
+      "mission_ndcg@5": 0.3743554631412293,
+      "mission_ndcg@10": 0.5794330762089064,
+      "mission_recall@5": 0.3333333333333333,
+      "mission_mrr": 0.5,
+      "passage_normrecall@100": 0.03225806451612903,
+      "passage_ndcg@100": 0.029158004190552464,
+      "n_relevant_missions": 6,
+      "n_gold_passages": 31
+    },
+    "T1-oco-taurus-t8": {
+      "mission_ndcg@5": 0.6331143362188337,
+      "mission_ndcg@10": 0.8193127210050108,
+      "mission_recall@5": 0.375,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.07407407407407407,
+      "passage_ndcg@100": 0.0857929837566681,
+      "n_relevant_missions": 8,
+      "n_gold_passages": 54
+    },
+    "T1-soho-1998": {
+      "mission_ndcg@5": 0.8930068676327362,
+      "mission_ndcg@10": 0.796200050299775,
+      "mission_recall@5": 0.36363636363636365,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.013513513513513514,
+      "passage_ndcg@100": 0.03957035311187273,
+      "n_relevant_missions": 11,
+      "n_gold_passages": 74
+    },
+    "T1-spacex-crs7": {
+      "mission_ndcg@5": 0.5325175440352877,
+      "mission_ndcg@10": 0.695245479123723,
+      "mission_recall@5": 0.2222222222222222,
+      "mission_mrr": 0.5,
+      "passage_normrecall@100": 0.03125,
+      "passage_ndcg@100": 0.024264436478673847,
+      "n_relevant_missions": 9,
+      "n_gold_passages": 64
+    },
+    "T1-starliner-cft": {
+      "mission_ndcg@5": 0.6765142965891183,
+      "mission_ndcg@10": 0.7638652913943892,
+      "mission_recall@5": 0.23076923076923078,
+      "mission_mrr": 0.5,
+      "passage_normrecall@100": 0.02,
+      "passage_ndcg@100": 0.019045383803664523,
+      "n_relevant_missions": 13,
+      "n_gold_passages": 104
+    },
+    "T1-sts-107-columbia": {
+      "mission_ndcg@5": 0.8799817951409221,
+      "mission_ndcg@10": 0.8894387635979101,
+      "mission_recall@5": 0.35714285714285715,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.04,
+      "passage_ndcg@100": 0.041528132046804125,
+      "n_relevant_missions": 14,
+      "n_gold_passages": 103
+    },
+    "T1-sts-51l-challenger": {
+      "mission_ndcg@5": 0.9562649741625527,
+      "mission_ndcg@10": 0.9136796863053989,
+      "mission_recall@5": 0.38461538461538464,
+      "mission_mrr": 1.0,
+      "passage_normrecall@100": 0.04081632653061224,
+      "passage_ndcg@100": 0.038674851394474186,
+      "n_relevant_missions": 13,
+      "n_gold_passages": 98
+    },
+    "T1-vega-vv15": {
+      "mission_ndcg@5": 0.6843515475204855,
+      "mission_ndcg@10": 0.72891152902702,
+      "mission_recall@5": null,
+      "mission_mrr": null,
+      "passage_normrecall@100": null,
+      "passage_ndcg@100": 0.0357844212751209,
+      "n_relevant_missions": 0,
+      "n_gold_passages": 0
+    },
+    "T1-vega-vv17": {
+      "mission_ndcg@5": 0.10961051126301759,
+      "mission_ndcg@10": 0.44379797891758127,
+      "mission_recall@5": 0.0,
+      "mission_mrr": 0.1,
+      "passage_normrecall@100": 0.0,
+      "passage_ndcg@100": 0.0,
+      "n_relevant_missions": 1,
+      "n_gold_passages": 3
+    },
+    "T1-vegac-vv22": {
+      "mission_ndcg@5": null,
+      "mission_ndcg@10": null,
+      "mission_recall@5": null,
+      "mission_mrr": null,
+      "passage_normrecall@100": null,
+      "passage_ndcg@100": null,
+      "n_relevant_missions": 0,
+      "n_gold_passages": 0
+    },
+    "T1-wire": {
+      "mission_ndcg@5": 0.6132659801521241,
+      "mission_ndcg@10": 0.7026021065246804,
+      "mission_recall@5": 0.25,
+      "mission_mrr": 0.25,
+      "passage_normrecall@100": 0.03333333333333333,
+      "passage_ndcg@100": 0.08922006478056595,
+      "n_relevant_missions": 4,
+      "n_gold_passages": 30
+    }
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "args": {
+    "run_id": "poc_d3_synthetic",
+    "systems": [
+      "B3"
+    ],
+    "queries": "evalutation/benchmark/synthetic/d3_queries.jsonl",
+    "embedder": "BAAI/bge-m3",
+    "generate": [],
+    "proposed": [
+      "P"
+    ],
+    "qa": [
+      "B0",
+      "B3",
+      "P"
+    ],
+    "allow_draft_fields": true
+  },
+  "dev_run": true,
+  "systems": {
+    "B3": {
+      "fields": [
+        "summary",
+        "causes",
+        "disposition"
+      ],
+      "methods": [
+        "bm25",
+        "dense"
+      ]
+    }
+  },
+  "skipped_no_embedder": [],
+  "bm25": {
+    "k1": 1.2,
+    "b": 0.75,
+    "tokenizer": "lowercase [a-z0-9]+, no stemming/stopwords"
+  },
+  "rrf_k": 60,
+  "list_depth": 1000,
+  "top_k": 100,
+  "dense": {
+    "model": "BAAI/bge-m3",
+    "revision": "5617a9f61b028005a4858fdac845db406aefb181",
+    "max_seq_length": 1024,
+    "normalized": true,
+    "cache": "data\\processed\\emb_cache\\BAAI__bge-m3@5617a9f61b02_len1024\\a82b6b9f0b879ea4d539.npy",
+    "cache_hit": true
+  },
+  "generation": {
+    "top_k_gen": 40,
+    "context_word_budget": 4200,
+    "num_ctx": 8192
+  },
+  "queries": {
+    "source": "evalutation/benchmark/synthetic/d3_queries.jsonl",
+    "n": 52,
+    "sha256": "a9552f56afcf8f8652258e38450264f233a0fb77ce2eab7a7b16394f60d8b376"
+  }
+}

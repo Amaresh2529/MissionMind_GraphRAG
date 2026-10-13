@@ -1,0 +1,11 @@
+{
+  "load_units": 0.3,
+  "load_embedder": 123.07,
+  "build_indexes": 2.35,
+  "query_factors": 60.28,
+  "search_B3": 23.12,
+  "search_P": 40.27,
+  "qa_B0": 151.21,
+  "qa_B3": 448.23,
+  "qa_P": 476.21
+}
