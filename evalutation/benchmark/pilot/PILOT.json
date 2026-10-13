@@ -13,6 +13,8 @@
   "starliner-cft"
  ],
  "created": "2026-10-13",
- "labels_by": "project owner (human)",
- "d2b": "derived from D2a by the guide's grading rule"
+ "labels_by": "MIXED: owner (D2q for all 10 missions; D2a factors and quotes for Columbia, Genesis, SOHO, WIRE, Starliner) + assistant Claude (taxonomy codes/roles/page fixes for owner rows; D2a for Challenger, MCO, Ariane 501, Apollo 13, Hitomi). Not a human-only benchmark.",
+ "d2b": "derived from D2a by the guide's grading rule",
+ "assistant_rows": 21,
+ "owner_rows": 20
 }

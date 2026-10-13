@@ -1,0 +1,41 @@
+﻿mission,factor_code,role,factor_short,doc_id,page,quote,note
+sts-51l-challenger,,,,Challenger,,,
+sts-51l-challenger,,,,Challenger,,,
+sts-51l-challenger,,,,Challenger,,,
+sts-51l-challenger,,,,Challenger,,,
+sts-107-columbia,PHYS-01,Proximate,Foam Strike,NASA_Columbia_CAIB_Vol1,9,"""The physical cause of the loss of Columbia and its crew was a breach in the Thermal Protection System on the leading edge of the left wing, caused by a piece of insulating foam...""",Initiating physical event during launch.
+sts-107-columbia,ORG-01,Root,,NASA_Columbia_CAIB_Vol1,9,"""The organizational causes of this accident are rooted in the Space Shuttle Program's history and culture...""",NASA's culture allowed safety traits to degrade over time.
+sts-107-columbia,ORG-02,Root,,NASA_Columbia_CAIB_Vol1,12,"""...an explanation of the intense pressure the program was under to stay on schedule, driven largely by the self-imposed requirement to complete the International Space Station.""",Self-imposed pressures frequently overrode safety checks.
+sts-107-columbia,ORG-03,Root,,NASA_Columbia_CAIB_Vol1,12,"""The Board concludes that NASA's current organization does not provide effective checks and balances, does not have an independant safety program...""",Highlighted ineffective communication and safety oversight.
+mars-climate-orbiter,,,,Mars_Climate_Orbiter,,,
+mars-climate-orbiter,,,,Mars_Climate_Orbiter,,,
+mars-climate-orbiter,,,,Mars_Climate_Orbiter,,,
+mars-climate-orbiter,,,,Mars_Climate_Orbiter,,,
+ariane5-501,,,,ESA_Ariane5_501_Inquiry_Board_Report,,,
+ariane5-501,,,,ESA_Ariane5_501_Inquiry_Board_Report,,,
+ariane5-501,,,,ESA_Ariane5_501_Inquiry_Board_Report,,,
+ariane5-501,,,,ESA_Ariane5_501_Inquiry_Board_Report,,,
+apollo13,,,,NASA_Apollo13_Review_Board,,,
+apollo13,,,,NASA_Apollo13_Review_Board,,,
+apollo13,,,,NASA_Apollo13_Review_Board,,,
+apollo13,,,,NASA_Apollo13_Review_Board,,,
+genesis,PHYS-01,Proximate,,NASA_Genesis_MIB_Report,22,"""X-rays of the Engineering Design Unit clearly showed the G-switches to be installed in the opposite direction they should have been...""",SRC failed to deploy the drogue parachute.
+genesis,ORG-01,Root,,NASA_Genesis_MIB_Report,30,"""The JPL Development Project Manager did not implement a penetrating systems engineering process and chose not to assign individual JPL responsibility...""",Lack of rigorous oversight from JPL management.
+genesis,ENG-01,Root,,NASA_Genesis_MIB_Report,vii,"""The project, however, did not truly understand that the heritage was broken and, consequently, more careful oversight was needed.""",Unverified and blind reliance on the Stardust heritage design.
+genesis,TEST-01,Root,,NASA_Genesis_MIB_Report,vii,"""The project during development and integration did not develop a comprehensive Test As You Fly exceptions list.""",The centrifuge test was omitted without proper review or mitigation.
+soho-1998,ENG-01,Direct,,NASA_ESA_SOHO_Interruption_Final_Report,6,"""Due to an omission in the modified predefined command sequence actually used, the onboard software function that activates the gyro needed by ESR was not enabled.""",Removed safe mode functionality prior to the emergency.
+soho-1998,ENG-02,Direct,,NASA_ESA_SOHO_Interruption_Final_Report,7,"""A rapid decision was made that Gyro B was faulty because its output disagreed with the rate indicated by Gyro A. This decision led to the commanding off of Gyro B.""","Disabled the final safety net, leading to the unrecoverable spin."
+soho-1998,ORG-01,Indirect,,NASA_ESA_SOHO_Interruption_Final_Report,8,"""The procedure modifications appear to have not been adequately controlled by ATSC configuration board, properly documented, nor reviewed and approved by ESA and/or NASA.""",Modifications to procedures were not properly vetted.
+soho-1998,ORG-02,Indirect,,NASA_ESA_SOHO_Interruption_Final_Report,11,"""It appeared that the FOT's overly aggressive operations plan... was primarily driven by DSN scheduling and science planning.""",Led to rushed decisions and missed telemetry checks during the incident.
+wire,ENG-01,Root,,NASA_WIRE_MIB_Vol1,19,"""The root cause of the WIRE mission loss is a digital logic design error in the instrument pyro electronics box. The transient performance of components was not adequately accounted for in its design.""",Caused inadvertent pyrotechnic firing upon startup.
+wire,ENG-02,Root,,NASA_WIRE_MIB_Vol1,19,"""However, the start-up time of the Vectron crystal clock oscillator was not taken into consideration, leaving the circuit in a non-deterministic state...""",Allowed the telescope cover to eject prematurely.
+wire,ORG-01,Contributing,,NASA_WIRE_MIB_Vol1,8,"""The pyro electronics box design was not peer reviewed, and other system reviews conducted by the instrument design organization did not focus on the electronics box.""",Review would have likely caught the startup flow flaw.
+wire,TEST-01,Contributing,,NASA_WIRE_MIB_Vol1,20,"""The box-level testing used the turn-on of a laboratory power supply instead of the closure of a relay to power the pyro box.""",Slow rise time of the lab supply masked the failure mechanism during tests.
+hitomi,,,,JAXA_Hitomi_Experience_Report,,,
+hitomi,,,,JAXA_Hitomi_Experience_Report,,,
+hitomi,,,,JAXA_Hitomi_Experience_Report,,,
+hitomi,,,,JAXA_Hitomi_Experience_Report,,,
+starliner-cft,TEST-01,Root,,NASA_Starliner_CFT_Propulsion_Anomalies,3,"The propulsion system lacked enveloping, mission-representative testing, and NASA accepted insufficient verification data in lieu of qualification",Led directly to in-flight discovery of hardware flaws.
+starliner-cft,PHYS-01,Proximate,,NASA_Starliner_CFT_Propulsion_Anomalies,26,Teflon poppet extrusion within the thruster valve causing an obstruction in oxidizer flow,Resulted in temporary loss of 6DOF control during docking.
+starliner-cft,PHYS-02,Proximate,,NASA_Starliner_CFT_Propulsion_Anomalies,71,the most probable proximate cause was the material of the seals within the Starliner helium manifold being incompatible with NTO...,Allowed Helium to leak across seven of eight manifolds during flight.
+starliner-cft,ORG-01,Root,,NASA_Starliner_CFT_Propulsion_Anomalies,3,Acceptance of unexplained anomalies (UAs) without root cause resolution allowed systemic issues to persist from OFT1 and OFT2 into CFT.,Recurring anomalies were dismissed without uncovering actual root causes.

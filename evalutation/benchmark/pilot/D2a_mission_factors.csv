@@ -1,41 +1,42 @@
 ﻿mission,factor_code,role,factor_short,doc_id,page,quote,note
-sts-51l-challenger,,,,Challenger,,,
-sts-51l-challenger,,,,Challenger,,,
-sts-51l-challenger,,,,Challenger,,,
-sts-51l-challenger,,,,Challenger,,,
-sts-107-columbia,,,,NASA_Columbia_CAIB_Vol1,,,
-sts-107-columbia,,,,NASA_Columbia_CAIB_Vol1,,,
-sts-107-columbia,,,,NASA_Columbia_CAIB_Vol1,,,
-sts-107-columbia,,,,NASA_Columbia_CAIB_Vol1,,,
-mars-climate-orbiter,,,,Mars_Climate_Orbiter,,,
-mars-climate-orbiter,,,,Mars_Climate_Orbiter,,,
-mars-climate-orbiter,,,,Mars_Climate_Orbiter,,,
-mars-climate-orbiter,,,,Mars_Climate_Orbiter,,,
-ariane5-501,,,,ESA_Ariane5_501_Inquiry_Board_Report,,,
-ariane5-501,,,,ESA_Ariane5_501_Inquiry_Board_Report,,,
-ariane5-501,,,,ESA_Ariane5_501_Inquiry_Board_Report,,,
-ariane5-501,,,,ESA_Ariane5_501_Inquiry_Board_Report,,,
-apollo13,,,,NASA_Apollo13_Review_Board,,,
-apollo13,,,,NASA_Apollo13_Review_Board,,,
-apollo13,,,,NASA_Apollo13_Review_Board,,,
-apollo13,,,,NASA_Apollo13_Review_Board,,,
-genesis,,,,NASA_Genesis_MIB_Report,,,
-genesis,,,,NASA_Genesis_MIB_Report,,,
-genesis,,,,NASA_Genesis_MIB_Report,,,
-genesis,,,,NASA_Genesis_MIB_Report,,,
-soho-1998,,,,NASA_ESA_SOHO_Interruption_Final_Report,,,
-soho-1998,,,,NASA_ESA_SOHO_Interruption_Final_Report,,,
-soho-1998,,,,NASA_ESA_SOHO_Interruption_Final_Report,,,
-soho-1998,,,,NASA_ESA_SOHO_Interruption_Final_Report,,,
-wire,,,,NASA_WIRE_MIB_Vol1,,,
-wire,,,,NASA_WIRE_MIB_Vol1,,,
-wire,,,,NASA_WIRE_MIB_Vol1,,,
-wire,,,,NASA_WIRE_MIB_Vol1,,,
-hitomi,,,,JAXA_Hitomi_Experience_Report,,,
-hitomi,,,,JAXA_Hitomi_Experience_Report,,,
-hitomi,,,,JAXA_Hitomi_Experience_Report,,,
-hitomi,,,,JAXA_Hitomi_Experience_Report,,,
-starliner-cft,,,,NASA_Starliner_CFT_Propulsion_Anomalies,,,
-starliner-cft,,,,NASA_Starliner_CFT_Propulsion_Anomalies,,,
-starliner-cft,,,,NASA_Starliner_CFT_Propulsion_Anomalies,,,
-starliner-cft,,,,NASA_Starliner_CFT_Propulsion_Anomalies,,,
+sts-51l-challenger,T1,root,Faulty aft field joint design sensitive to temperature and other factors,Challenger,79,The failure was due to a faulty design unacceptably sensitive to a number of factors,ASSISTANT (Claude) from board statement; verified verbatim
+sts-51l-challenger,T5,contributing,Cold launch temperature degraded O-ring sealing,Challenger,79,These factors were the effects of temperature,ASSISTANT (Claude) from board statement; verified verbatim
+sts-51l-challenger,M2,contributing,Launch constraints waived at the expense of flight safety,Challenger,111,The waiving of launch constraints appears to have been at the expense of flight safety,ASSISTANT (Claude) from board statement; verified verbatim
+sts-51l-challenger,M5,contributing,Management structure let safety problems bypass key managers,Challenger,89,a NASA management structure that permitted internal flight safety problems to bypass key Shuttle managers,ASSISTANT (Claude) from board statement; verified verbatim
+sts-51l-challenger,M1,contributing,Overambitious flight rate without adequate resources,Challenger,170,goal of two flights a month was overambitious,ASSISTANT (Claude) from board statement; verified verbatim
+sts-107-columbia,T5,root,Foam Strike,NASA_Columbia_CAIB_Vol1,9,"The physical cause of the loss of Columbia and its crew was a breach in the Thermal Protection System on the leading edge of the left wing, caused by a piece of insulating foam","OWNER factor+quote; assistant mapped code PHYS-01->T5, role Proximate->root; quote cut at '...'"
+sts-107-columbia,M2,root,NASA's culture allowed safety traits to degrade over time.,NASA_Columbia_CAIB_Vol1,9,The organizational causes of this accident are rooted in the Space Shuttle Program's history and culture,"OWNER factor+quote; assistant mapped code ORG-01->M2, role Root->root; quote cut at '...'"
+sts-107-columbia,M1,root,Self-imposed pressures frequently overrode safety checks.,NASA_Columbia_CAIB_Vol1,12,"an explanation of the intense pressure the program was under to stay on schedule, driven largely by the self-imposed requirement to complete the International Space Station.","OWNER factor+quote; assistant mapped code ORG-02->M1, role Root->root; quote cut at '...'"
+sts-107-columbia,M3,root,Highlighted ineffective communication and safety oversight.,NASA_Columbia_CAIB_Vol1,12,"The Board concludes that NASA's current organization does not provide effective checks and balances, does not have an independant safety program","OWNER factor+quote; assistant mapped code ORG-03->M3, role Root->root; quote cut at '...'"
+mars-climate-orbiter,T4,root,English instead of metric units in ground software file,Mars_Climate_Orbiter,16,the failure to use metric units in the coding of a ground software file,ASSISTANT (Claude) from board statement; verified verbatim
+mars-climate-orbiter,V2,contributing,Spacecraft velocity changes mismodelled,Mars_Climate_Orbiter,17,MCO Contributing Cause No. 1: Modeling of Spacecraft Velocity Changes,ASSISTANT (Claude) from board statement; verified verbatim
+mars-climate-orbiter,O3,contributing,Contingency manoeuvre TCM-5 discussed but never executed,Mars_Climate_Orbiter,19,"A request to perform a TCM-5 was discussed verbally shortly before the MOI onboard procedure was initiated, but was never executed",ASSISTANT (Claude) from board statement; verified verbatim
+mars-climate-orbiter,M4,contributing,Systems engineering did not transition to operations,Mars_Climate_Orbiter,21,the systems engineering process did not adequately transition from development to operations,ASSISTANT (Claude) from board statement; verified verbatim
+mars-climate-orbiter,H3,contributing,Inadequate communication between project elements,Mars_Climate_Orbiter,22,evidence of inadequate communications between the project elements,ASSISTANT (Claude) from board statement; verified verbatim
+mars-climate-orbiter,M6,contributing,Navigation team understaffed,Mars_Climate_Orbiter,23,the staffing of the operations navigation team was less than adequate,ASSISTANT (Claude) from board statement; verified verbatim
+ariane5-501,T2,root,Specification and design errors in inertial reference software,ESA_Ariane5_501_Inquiry_Board_Report,16,This loss of information was due to specification and design errors in the software of the inertial reference system,ASSISTANT (Claude) from board statement; verified verbatim
+ariane5-501,V1,contributing,Reviews and tests lacked adequate analysis and testing of the SRI,ESA_Ariane5_501_Inquiry_Board_Report,16,did not include adequate analysis and testing of the inertial reference system or of the complete flight control system,ASSISTANT (Claude) from board statement; verified verbatim
+ariane5-501,T4,contributing,Ariane 4 software reused on a different Ariane 5 trajectory,ESA_Ariane5_501_Inquiry_Board_Report,8,part of the trajectory of Ariane 5 differs from that of Ariane 4 and results in considerably higher horizontal velocity values,ASSISTANT (Claude) from board statement; verified verbatim
+apollo13,T1,root,Combination of mistakes with a deficient and unforgiving tank design,NASA_Apollo13_Review_Board,174,"resulted from an unusual combination of mistakes, coupled with a somewhat deficient and unforgiving design",ASSISTANT (Claude) from board statement; verified verbatim
+apollo13,T4,root,28 V thermostatic switches used with 65 V ground power,NASA_Apollo13_Review_Board,132,could not open properly at 65 V,ASSISTANT (Claude) from board statement; verified verbatim
+apollo13,V1,contributing,Qualification tests never checked switches opening under full current,NASA_Apollo13_Review_Board,132,Qualification and test procedures for the heater assemblies and switches do not at any time test the capability of the switches to open while under full current conditions,ASSISTANT (Claude) from board statement; verified verbatim
+genesis,T1,root,SRC failed to deploy the drogue parachute.,NASA_Genesis_MIB_Report,30,X-rays of the Engineering Design Unit clearly showed the G-switches to be installed in the opposite direction they should have been,"OWNER factor+quote; assistant mapped code PHYS-01->T1, role Proximate->root, page 22->30; quote cut at '...'"
+genesis,M4,root,Lack of rigorous oversight from JPL management.,NASA_Genesis_MIB_Report,37,The JPL Development Project Manager did not implement a penetrating systems engineering process and chose not to assign individual JPL responsibility,"OWNER factor+quote; assistant mapped code ORG-01->M4, role Root->root, page 30->37; quote cut at '...'"
+genesis,T4,root,Unverified and blind reliance on the Stardust heritage design.,NASA_Genesis_MIB_Report,8,"The project, however, did not truly understand that the heritage was broken and, consequently, more careful oversight was needed.","OWNER factor+quote; assistant mapped code ENG-01->T4, role Root->root, page vii->8"
+genesis,V1,root,The centrifuge test was omitted without proper review or mitigation.,NASA_Genesis_MIB_Report,8,The project during development and integration did not develop a comprehensive Test As You Fly exceptions list.,"OWNER factor+quote; assistant mapped code TEST-01->V1, role Root->root, page vii->8"
+soho-1998,O2,root,Removed safe mode functionality prior to the emergency.,NASA_ESA_SOHO_Interruption_Final_Report,9,"Due to an omission in the modified predefined command sequence actually used, the onboard software function that activates the gyro needed by ESR was not enabled.","OWNER factor+quote; assistant mapped code ENG-01->O2, role Direct->root, page 6->9"
+soho-1998,H1,root,"Disabled the final safety net, leading to the unrecoverable spin.",NASA_ESA_SOHO_Interruption_Final_Report,10,A rapid decision was made that Gyro B was faulty because its output disagreed with the rate indicated by Gyro A. This decision led to the commanding off of Gyro B.,"OWNER factor+quote; assistant mapped code ENG-02->H1, role Direct->root, page 7->10"
+soho-1998,M4,contributing,Modifications to procedures were not properly vetted.,NASA_ESA_SOHO_Interruption_Final_Report,11,"The procedure modifications appear to have not been adequately controlled by ATSC configuration board, properly documented, nor reviewed and approved by ESA and/or NASA.","OWNER factor+quote; assistant mapped code ORG-01->M4, role Indirect->contributing, page 8->11"
+soho-1998,M1,contributing,Led to rushed decisions and missed telemetry checks during the incident.,NASA_ESA_SOHO_Interruption_Final_Report,14,It appeared that the FOT's overly aggressive operations plan,"OWNER factor+quote; assistant mapped code ORG-02->M1, role Indirect->contributing, page 11->14; quote cut at '...'"
+wire,T1,root,Caused inadvertent pyrotechnic firing upon startup.,NASA_WIRE_MIB_Vol1,19,The root cause of the WIRE mission loss is a digital logic design error in the instrument pyro electronics box. The transient performance of components was not adequately accounted for in its design.,"OWNER factor+quote; assistant mapped code ENG-01->T1, role Root->root"
+wire,T1,root,Allowed the telescope cover to eject prematurely.,NASA_WIRE_MIB_Vol1,19,"However, the start-up time of the Vectron crystal clock oscillator was not taken into consideration, leaving the circuit in a non-deterministic state","OWNER factor+quote; assistant mapped code ENG-02->T1, role Root->root; quote cut at '...'"
+wire,V3,contributing,Review would have likely caught the startup flow flaw.,NASA_WIRE_MIB_Vol1,8,"The pyro electronics box design was not peer reviewed, and other system reviews conducted by the instrument design organization did not focus on the electronics box.","OWNER factor+quote; assistant mapped code ORG-01->V3, role Contributing->contributing"
+wire,V1,contributing,Slow rise time of the lab supply masked the failure mechanism during,NASA_WIRE_MIB_Vol1,20,The box-level testing used the turn-on of a laboratory power supply instead of the closure of a relay to power the pyro box.,"OWNER factor+quote; assistant mapped code TEST-01->V1, role Contributing->contributing"
+hitomi,T2,root,Attitude control system wrongly determined the satellite was rotating,JAXA_Hitomi_Experience_Report,29,"caused incorrect determination of its attitude as rotating, although the satellite was not rotating actually",ASSISTANT (Claude) from board statement; verified verbatim
+hitomi,O2,root,Inappropriate thruster control parameters accelerated the rotation,JAXA_Hitomi_Experience_Report,29,by the inappropriate thruster control parameters,ASSISTANT (Claude) from board statement; verified verbatim
+hitomi,T1,contributing,Anomaly detection relied only on attitude estimates (FDIR design),JAXA_Hitomi_Experience_Report,60,the satellite was designed to rely on only the ACFS estimates,ASSISTANT (Claude) from board statement; verified verbatim
+hitomi,M3,contributing,Insufficient recognition of needs for safe operations,JAXA_Hitomi_Experience_Report,82,There was insufficient recognition of the needs for safe satellite operations,ASSISTANT (Claude) from board statement; verified verbatim
+starliner-cft,V1,root,Led directly to in-flight discovery of hardware flaws.,NASA_Starliner_CFT_Propulsion_Anomalies,3,"The propulsion system lacked enveloping, mission-representative testing, and NASA accepted insufficient verification data in lieu of qualification","OWNER factor+quote; assistant mapped code TEST-01->V1, role Root->root"
+starliner-cft,T5,root,Resulted in temporary loss of 6DOF control during docking.,NASA_Starliner_CFT_Propulsion_Anomalies,24,Teflon poppet extrusion within the thruster valve causing an obstruction in oxidizer flow,"OWNER factor+quote; assistant mapped code PHYS-01->T5, role Proximate->root, page 26->24"
+starliner-cft,T1,root,Allowed Helium to leak across seven of eight manifolds during flight.,NASA_Starliner_CFT_Propulsion_Anomalies,70,the most probable proximate cause was the material of the seals within the Starliner helium manifold being incompatible with NTO,"OWNER factor+quote; assistant mapped code PHYS-02->T1, role Proximate->root, page 71->70; quote cut at '...'"
+starliner-cft,M2,root,Recurring anomalies were dismissed without uncovering actual root causes.,NASA_Starliner_CFT_Propulsion_Anomalies,3,Acceptance of unexplained anomalies (UAs) without root cause resolution allowed systemic issues to persist from OFT1 and OFT2 into CFT.,"OWNER factor+quote; assistant mapped code ORG-01->M2, role Root->root"
