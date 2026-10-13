@@ -143,3 +143,12 @@ def test_citation_normalisation_is_uniform():
     ans = {"probable_root_causes": [{"cause": "x", "evidence": ["[C1] mission=a"]}], "contributing_factors": [],
            "similar_precedents": [], "recommended_actions": []}
     assert validate(ans, {"C1"})["invalid_citations"] == 0
+
+
+def test_b3_bal_uses_sqrt_field_weights(retriever):
+    import math
+    w = retriever.field_weights({"summary/bm25": [], "causes/bm25": [], "disposition/bm25": []})
+    n = {"summary": 2, "causes": 3, "disposition": 2}          # field sizes of UNITS
+    tot = sum(math.sqrt(x) for x in n.values())
+    assert w["causes/bm25"] == pytest.approx(3 * math.sqrt(3) / tot)
+    assert sum(w.values()) / 3 == pytest.approx(1.0)

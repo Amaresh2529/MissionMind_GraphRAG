@@ -20,6 +20,7 @@ removed before ranking. Each ranked list is cut at LIST_DEPTH before fusion
 (the paper does not state a depth).
 """
 
+import math
 from dataclasses import dataclass
 
 from retrieval.bm25 import BM25Index
@@ -36,7 +37,7 @@ class SystemConfig:
     id: str
     fields: tuple[str, ...] | None     # None = whole (single index over all fields)
     methods: tuple[str, ...]           # "bm25", "dense"
-    field_balanced: bool = False       # B3-bal: each field's lists weighted by the field's share of units
+    field_balanced: bool = False       # B3-bal: each field's lists weighted by sqrt(field size)
 
 
 def _sf(field: str) -> list[SystemConfig]:
@@ -52,8 +53,9 @@ SYSTEMS = {c.id: c for c in [
     *_sf("summary"), *_sf("causes"),
     SystemConfig("B3", FIELDS, ("bm25", "dense")),
     # Secondary baseline (decided 2026-10-13, before any test label exists): Stage 3 found B3's top-100
-    # dominated by the 187-unit Disposition field; here each field's RRF contribution is multiplied by
-    # 3 * n_field / n_total, so fields count in proportion to their size (weights average to 1).
+    # dominated by the 187-unit Disposition field. Each field's RRF contribution is multiplied by
+    # 3 * sqrt(n_field) / sum_f sqrt(n_f) (weights average to 1). Owner's decision 2026-10-13, before any
+    # human label: size-proportional weights (first version) made the top-100 100% Causes.
     SystemConfig("B3-bal", FIELDS, ("bm25", "dense"), field_balanced=True),
 ]}
 
@@ -95,8 +97,9 @@ class Retriever:
         return {i for i, u in enumerate(self.units) if not exclude_missions.intersection(u.missions)}
 
     def field_weights(self, lists: dict[str, list]) -> dict[str, float]:
-        n = len(self.units)
-        return {name: len(FIELDS) * len(self.field_members[name.split("/")[0]]) / n
+        root = {f: math.sqrt(len(m)) for f, m in self.field_members.items()}
+        total = sum(root.values())
+        return {name: len(FIELDS) * root[name.split("/")[0]] / total
                 for name in lists if name.split("/")[0] in self.field_members}
 
     def search(self, cfg: SystemConfig, query: str, exclude_missions: set[str] = frozenset(),
