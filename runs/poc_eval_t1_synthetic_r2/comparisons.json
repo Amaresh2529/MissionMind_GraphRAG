@@ -1,0 +1,950 @@
+{
+  "primary": {
+    "comparison": "P vs B3",
+    "metric": "mission_ndcg@5",
+    "permutation": {
+      "n": 21,
+      "mean_diff": -0.008077328055542303,
+      "p": 0.6768161591920404,
+      "exact": false
+    },
+    "bootstrap95": {
+      "n": 21,
+      "mean_diff": -0.008077328055542303,
+      "low": -0.042797714423858504,
+      "high": 0.02966699776963521
+    }
+  },
+  "secondary": {
+    "B3 vs B1 [mission_ndcg@5]": {
+      "permutation": {
+        "n": 21,
+        "mean_diff": -0.018876717424533302,
+        "p": 0.5007249637518124,
+        "exact": false
+      },
+      "bootstrap95": {
+        "n": 21,
+        "mean_diff": -0.018876717424533302,
+        "low": -0.07107476183492174,
+        "high": 0.035582451375625164
+      },
+      "p_holm": 1.0
+    },
+    "B3 vs B1 [passage_normrecall@100]": {
+      "permutation": {
+        "n": 17,
+        "mean_diff": -0.019806059249261612,
+        "p": 0.03604819759012049,
+        "exact": false
+      },
+      "bootstrap95": {
+        "n": 17,
+        "mean_diff": -0.019806059249261612,
+        "low": -0.04234850727031147,
+        "high": -0.0028898039022763897
+      },
+      "p_holm": 1.0
+    },
+    "B3 vs B2 [mission_ndcg@5]": {
+      "permutation": {
+        "n": 21,
+        "mean_diff": 0.003542967591582922,
+        "p": 0.9083045847707615,
+        "exact": false
+      },
+      "bootstrap95": {
+        "n": 21,
+        "mean_diff": 0.003542967591582922,
+        "low": -0.056689822368575976,
+        "high": 0.05841717092502396
+      },
+      "p_holm": 1.0
+    },
+    "B3 vs B2 [passage_normrecall@100]": {
+      "permutation": {
+        "n": 17,
+        "mean_diff": -0.002896245573864489,
+        "p": 0.6987150642467876,
+        "exact": false
+      },
+      "bootstrap95": {
+        "n": 17,
+        "mean_diff": -0.002896245573864489,
+        "low": -0.016167958390169337,
+        "high": 0.011412106257020549
+      },
+      "p_holm": 1.0
+    },
+    "B3 vs B3-bal [mission_ndcg@5]": {
+      "permutation": {
+        "n": 21,
+        "mean_diff": -0.0024651017716086176,
+        "p": 0.9400529973501325,
+        "exact": false
+      },
+      "bootstrap95": {
+        "n": 21,
+        "mean_diff": -0.0024651017716086176,
+        "low": -0.0654029110887248,
+        "high": 0.056646818266854165
+      },
+      "p_holm": 1.0
+    },
+    "B3 vs B3-bal [passage_normrecall@100]": {
+      "permutation": {
+        "n": 17,
+        "mean_diff": -0.020466127990104464,
+        "p": 0.00839958002099895,
+        "exact": false
+      },
+      "bootstrap95": {
+        "n": 17,
+        "mean_diff": -0.020466127990104464,
+        "low": -0.04223262080024054,
+        "high": -0.005340743668098284
+      },
+      "p_holm": 0.48717564121793905
+    },
+    "B3 vs H-whole [mission_ndcg@5]": {
+      "permutation": {
+        "n": 21,
+        "mean_diff": 0.00746058098455287,
+        "p": 0.7179641017949102,
+        "exact": false
+      },
+      "bootstrap95": {
+        "n": 21,
+        "mean_diff": 0.00746058098455287,
+        "low": -0.03298938133031605,
+        "high": 0.0451081129409414
+      },
+      "p_holm": 1.0
+    },
+    "B3 vs H-whole [passage_normrecall@100]": {
+      "permutation": {
+        "n": 17,
+        "mean_diff": -0.015662824841990584,
+        "p": 0.0012999350032498376,
+        "exact": false
+      },
+      "bootstrap95": {
+        "n": 17,
+        "mean_diff": -0.015662824841990584,
+        "low": -0.024948824595427313,
+        "high": -0.007695459370674322
+      },
+      "p_holm": 0.07929603519824009
+    },
+    "B3 vs P-graphonly [mission_ndcg@5]": {
+      "permutation": {
+        "n": 21,
+        "mean_diff": 0.1312420989334108,
+        "p": 0.029498525073746312,
+        "exact": false
+      },
+      "bootstrap95": {
+        "n": 21,
+        "mean_diff": 0.1312420989334108,
+        "low": 0.026658437605831625,
+        "high": 0.24235908896781463
+      },
+      "p_holm": 1.0
+    },
+    "B3 vs P-graphonly [passage_normrecall@100]": {
+      "permutation": {
+        "n": 17,
+        "mean_diff": -0.07784432633147419,
+        "p": 0.02014899255037248,
+        "exact": false
+      },
+      "bootstrap95": {
+        "n": 17,
+        "mean_diff": -0.07784432633147419,
+        "low": -0.1654910892024248,
+        "high": -0.01763635949175658
+      },
+      "p_holm": 1.0
+    },
+    "B3 vs P-nofields [mission_ndcg@5]": {
+      "permutation": {
+        "n": 21,
+        "mean_diff": -0.007101759796540776,
+        "p": 0.7540122993850308,
+        "exact": false
+      },
+      "bootstrap95": {
+        "n": 21,
+        "mean_diff": -0.007101759796540776,
+        "low": -0.05247466817361285,
+        "high": 0.03632145194051042
+      },
+      "p_holm": 1.0
+    },
+    "B3 vs P-nofields [passage_normrecall@100]": {
+      "permutation": {
+        "n": 17,
+        "mean_diff": -0.036470721802683854,
+        "p": 0.000999950002499875,
+        "exact": false
+      },
+      "bootstrap95": {
+        "n": 17,
+        "mean_diff": -0.036470721802683854,
+        "low": -0.06035824903579932,
+        "high": -0.016972410759175466
+      },
+      "p_holm": 0.06199690015499225
+    },
+    "B3 vs P-noidf [mission_ndcg@5]": {
+      "permutation": {
+        "n": 21,
+        "mean_diff": 0.008433291821903798,
+        "p": 0.6619169041547922,
+        "exact": false
+      },
+      "bootstrap95": {
+        "n": 21,
+        "mean_diff": 0.008433291821903798,
+        "low": -0.028635554265452286,
+        "high": 0.04249515740445055
+      },
+      "p_holm": 1.0
+    },
+    "B3 vs P-noidf [passage_normrecall@100]": {
+      "permutation": {
+        "n": 17,
+        "mean_diff": -0.0124564482670503,
+        "p": 0.03219839008049598,
+        "exact": false
+      },
+      "bootstrap95": {
+        "n": 17,
+        "mean_diff": -0.0124564482670503,
+        "low": -0.026402236951118475,
+        "high": -0.0024019607843137254
+      },
+      "p_holm": 1.0
+    },
+    "B3 vs P-noprf [mission_ndcg@5]": {
+      "permutation": {
+        "n": 21,
+        "mean_diff": -0.007584568542170232,
+        "p": 0.7813109344532774,
+        "exact": false
+      },
+      "bootstrap95": {
+        "n": 21,
+        "mean_diff": -0.007584568542170232,
+        "low": -0.05197415740531941,
+        "high": 0.03666088009755529
+      },
+      "p_holm": 1.0
+    },
+    "B3 vs P-noprf [passage_normrecall@100]": {
+      "permutation": {
+        "n": 17,
+        "mean_diff": -0.0048391151332327804,
+        "p": 0.37728113594320284,
+        "exact": false
+      },
+      "bootstrap95": {
+        "n": 17,
+        "mean_diff": -0.0048391151332327804,
+        "low": -0.012518853695324284,
+        "high": 0.0008798391151332329
+      },
+      "p_holm": 1.0
+    },
+    "B3 vs P-noverif [mission_ndcg@5]": {
+      "permutation": {
+        "n": 21,
+        "mean_diff": -0.025868640619209956,
+        "p": 0.2246887655617219,
+        "exact": false
+      },
+      "bootstrap95": {
+        "n": 21,
+        "mean_diff": -0.025868640619209956,
+        "low": -0.0656194489676212,
+        "high": 0.013700129706032172
+      },
+      "p_holm": 1.0
+    },
+    "B3 vs P-noverif [passage_normrecall@100]": {
+      "permutation": {
+        "n": 17,
+        "mean_diff": -0.01361517301821203,
+        "p": 0.046347682615869204,
+        "exact": false
+      },
+      "bootstrap95": {
+        "n": 17,
+        "mean_diff": -0.01361517301821203,
+        "low": -0.03154668365063401,
+        "high": -0.0018636780940012088
+      },
+      "p_holm": 1.0
+    },
+    "B3 vs SF-causes-bm25 [mission_ndcg@5]": {
+      "permutation": {
+        "n": 21,
+        "mean_diff": 0.005916632996894768,
+        "p": 0.8526573671316434,
+        "exact": false
+      },
+      "bootstrap95": {
+        "n": 21,
+        "mean_diff": 0.005916632996894768,
+        "low": -0.05396819385978892,
+        "high": 0.06529313934472034
+      },
+      "p_holm": 1.0
+    },
+    "B3 vs SF-causes-bm25 [passage_normrecall@100]": {
+      "permutation": {
+        "n": 17,
+        "mean_diff": -0.023455686027269333,
+        "p": 0.0030498475076246186,
+        "exact": false
+      },
+      "bootstrap95": {
+        "n": 17,
+        "mean_diff": -0.023455686027269333,
+        "low": -0.04134443128547521,
+        "high": -0.009223653556320602
+      },
+      "p_holm": 0.1799410029498525
+    },
+    "B3 vs SF-causes-dense [mission_ndcg@5]": {
+      "permutation": {
+        "n": 21,
+        "mean_diff": -0.00036364650389615616,
+        "p": 0.9935003249837508,
+        "exact": false
+      },
+      "bootstrap95": {
+        "n": 21,
+        "mean_diff": -0.00036364650389615616,
+        "low": -0.08038242340096138,
+        "high": 0.07642510850172692
+      },
+      "p_holm": 1.0
+    },
+    "B3 vs SF-causes-dense [passage_normrecall@100]": {
+      "permutation": {
+        "n": 17,
+        "mean_diff": -0.0018460553414660686,
+        "p": 0.8050097495125244,
+        "exact": false
+      },
+      "bootstrap95": {
+        "n": 17,
+        "mean_diff": -0.0018460553414660686,
+        "low": -0.015169918750077335,
+        "high": 0.011887049265803959
+      },
+      "p_holm": 1.0
+    },
+    "B3 vs SF-causes-hybrid [mission_ndcg@5]": {
+      "permutation": {
+        "n": 21,
+        "mean_diff": -0.004642971226460844,
+        "p": 0.8913554322283885,
+        "exact": false
+      },
+      "bootstrap95": {
+        "n": 21,
+        "mean_diff": -0.004642971226460844,
+        "low": -0.07010355364932311,
+        "high": 0.056288062780451766
+      },
+      "p_holm": 1.0
+    },
+    "B3 vs SF-causes-hybrid [passage_normrecall@100]": {
+      "permutation": {
+        "n": 17,
+        "mean_diff": -0.017979988309364137,
+        "p": 0.010499475026248688,
+        "exact": false
+      },
+      "bootstrap95": {
+        "n": 17,
+        "mean_diff": -0.017979988309364137,
+        "low": -0.035695112165967664,
+        "high": -0.004641239479949159
+      },
+      "p_holm": 0.5984700764961752
+    },
+    "B3 vs SF-summary-bm25 [mission_ndcg@5]": {
+      "permutation": {
+        "n": 21,
+        "mean_diff": -0.02643714360220067,
+        "p": 0.25653717314134294,
+        "exact": false
+      },
+      "bootstrap95": {
+        "n": 21,
+        "mean_diff": -0.02643714360220067,
+        "low": -0.06933000585804468,
+        "high": 0.018481950633059418
+      },
+      "p_holm": 1.0
+    },
+    "B3 vs SF-summary-bm25 [passage_normrecall@100]": {
+      "permutation": {
+        "n": 17,
+        "mean_diff": -0.002804128247781547,
+        "p": 0.7161141942902854,
+        "exact": false
+      },
+      "bootstrap95": {
+        "n": 17,
+        "mean_diff": -0.002804128247781547,
+        "low": -0.017725994739061987,
+        "high": 0.011381606822783292
+      },
+      "p_holm": 1.0
+    },
+    "B3 vs SF-summary-dense [mission_ndcg@5]": {
+      "permutation": {
+        "n": 21,
+        "mean_diff": -0.006750507574533205,
+        "p": 0.8215089245537723,
+        "exact": false
+      },
+      "bootstrap95": {
+        "n": 21,
+        "mean_diff": -0.006750507574533205,
+        "low": -0.06609831311593092,
+        "high": 0.04887353085973349
+      },
+      "p_holm": 1.0
+    },
+    "B3 vs SF-summary-dense [passage_normrecall@100]": {
+      "permutation": {
+        "n": 17,
+        "mean_diff": -0.00888783634891373,
+        "p": 0.20418979051047448,
+        "exact": false
+      },
+      "bootstrap95": {
+        "n": 17,
+        "mean_diff": -0.00888783634891373,
+        "low": -0.021356130978552008,
+        "high": 0.004178962871078015
+      },
+      "p_holm": 1.0
+    },
+    "B3 vs SF-summary-hybrid [mission_ndcg@5]": {
+      "permutation": {
+        "n": 21,
+        "mean_diff": -0.0036070634320902275,
+        "p": 0.8151592420378981,
+        "exact": false
+      },
+      "bootstrap95": {
+        "n": 21,
+        "mean_diff": -0.0036070634320902275,
+        "low": -0.03395092986576761,
+        "high": 0.024991018243082638
+      },
+      "p_holm": 1.0
+    },
+    "B3 vs SF-summary-hybrid [passage_normrecall@100]": {
+      "permutation": {
+        "n": 17,
+        "mean_diff": -0.001961982963515951,
+        "p": 0.7615119244037798,
+        "exact": false
+      },
+      "bootstrap95": {
+        "n": 17,
+        "mean_diff": -0.001961982963515951,
+        "low": -0.014137701079832593,
+        "high": 0.010368738346412264
+      },
+      "p_holm": 1.0
+    },
+    "P vs B1 [mission_ndcg@5]": {
+      "permutation": {
+        "n": 21,
+        "mean_diff": -0.026954045480075607,
+        "p": 0.4208289585520724,
+        "exact": false
+      },
+      "bootstrap95": {
+        "n": 21,
+        "mean_diff": -0.026954045480075607,
+        "low": -0.09021500395056581,
+        "high": 0.03675947494799783
+      },
+      "p_holm": 1.0
+    },
+    "P vs B1 [passage_normrecall@100]": {
+      "permutation": {
+        "n": 17,
+        "mean_diff": -0.006173140393976015,
+        "p": 0.39073046347682616,
+        "exact": false
+      },
+      "bootstrap95": {
+        "n": 17,
+        "mean_diff": -0.006173140393976015,
+        "low": -0.020162886796652374,
+        "high": 0.005995026131804247
+      },
+      "p_holm": 1.0
+    },
+    "P vs B2 [mission_ndcg@5]": {
+      "permutation": {
+        "n": 21,
+        "mean_diff": -0.004534360463959382,
+        "p": 0.9071046447677616,
+        "exact": false
+      },
+      "bootstrap95": {
+        "n": 21,
+        "mean_diff": -0.004534360463959382,
+        "low": -0.07724180472729286,
+        "high": 0.06744611848009577
+      },
+      "p_holm": 1.0
+    },
+    "P vs B2 [passage_normrecall@100]": {
+      "permutation": {
+        "n": 17,
+        "mean_diff": 0.010736673281421106,
+        "p": 0.431978401079946,
+        "exact": false
+      },
+      "bootstrap95": {
+        "n": 17,
+        "mean_diff": 0.010736673281421106,
+        "low": -0.006768864672212177,
+        "high": 0.034460697317766194
+      },
+      "p_holm": 1.0
+    },
+    "P vs B3-bal [mission_ndcg@5]": {
+      "permutation": {
+        "n": 21,
+        "mean_diff": -0.010542429827150921,
+        "p": 0.792110394480276,
+        "exact": false
+      },
+      "bootstrap95": {
+        "n": 21,
+        "mean_diff": -0.010542429827150921,
+        "low": -0.08571921554536173,
+        "high": 0.06499240299549103
+      },
+      "p_holm": 1.0
+    },
+    "P vs B3-bal [passage_normrecall@100]": {
+      "permutation": {
+        "n": 17,
+        "mean_diff": -0.006833209134818867,
+        "p": 0.26148692565371734,
+        "exact": false
+      },
+      "bootstrap95": {
+        "n": 17,
+        "mean_diff": -0.006833209134818867,
+        "low": -0.01838706456777433,
+        "high": 0.00353549862579006
+      },
+      "p_holm": 1.0
+    },
+    "P vs B3 [mission_ndcg@5]": {
+      "permutation": {
+        "n": 21,
+        "mean_diff": -0.008077328055542303,
+        "p": 0.6768161591920404,
+        "exact": false
+      },
+      "bootstrap95": {
+        "n": 21,
+        "mean_diff": -0.008077328055542303,
+        "low": -0.042797714423858504,
+        "high": 0.02966699776963521
+      },
+      "p_holm": 1.0
+    },
+    "P vs B3 [passage_normrecall@100]": {
+      "permutation": {
+        "n": 17,
+        "mean_diff": 0.013632918855285597,
+        "p": 0.01654917254137293,
+        "exact": false
+      },
+      "bootstrap95": {
+        "n": 17,
+        "mean_diff": 0.013632918855285597,
+        "low": 0.004021946806891771,
+        "high": 0.027209011264080096
+      },
+      "p_holm": 0.926753662316884
+    },
+    "P vs H-whole [mission_ndcg@5]": {
+      "permutation": {
+        "n": 21,
+        "mean_diff": -0.0006167470709894348,
+        "p": 0.9828508574571272,
+        "exact": false
+      },
+      "bootstrap95": {
+        "n": 21,
+        "mean_diff": -0.0006167470709894348,
+        "low": -0.05175390235438099,
+        "high": 0.0537928975229758
+      },
+      "p_holm": 1.0
+    },
+    "P vs H-whole [passage_normrecall@100]": {
+      "permutation": {
+        "n": 17,
+        "mean_diff": -0.0020299059867049897,
+        "p": 0.6244187790610469,
+        "exact": false
+      },
+      "bootstrap95": {
+        "n": 17,
+        "mean_diff": -0.0020299059867049897,
+        "low": -0.009417021567956924,
+        "high": 0.005797430083144367
+      },
+      "p_holm": 1.0
+    },
+    "P vs P-graphonly [mission_ndcg@5]": {
+      "permutation": {
+        "n": 21,
+        "mean_diff": 0.12316477087786847,
+        "p": 0.0255987200639968,
+        "exact": false
+      },
+      "bootstrap95": {
+        "n": 21,
+        "mean_diff": 0.12316477087786847,
+        "low": 0.028611677307634545,
+        "high": 0.22632730009039898
+      },
+      "p_holm": 1.0
+    },
+    "P vs P-graphonly [passage_normrecall@100]": {
+      "permutation": {
+        "n": 17,
+        "mean_diff": -0.06421140747618859,
+        "p": 0.03769811509424529,
+        "exact": false
+      },
+      "bootstrap95": {
+        "n": 17,
+        "mean_diff": -0.06421140747618859,
+        "low": -0.1512187381862504,
+        "high": -0.008423783224943126
+      },
+      "p_holm": 1.0
+    },
+    "P vs P-nofields [mission_ndcg@5]": {
+      "permutation": {
+        "n": 21,
+        "mean_diff": -0.01517908785208308,
+        "p": 0.3793810309484526,
+        "exact": false
+      },
+      "bootstrap95": {
+        "n": 21,
+        "mean_diff": -0.01517908785208308,
+        "low": -0.048252801041103334,
+        "high": 0.014744382935178721
+      },
+      "p_holm": 1.0
+    },
+    "P vs P-nofields [passage_normrecall@100]": {
+      "permutation": {
+        "n": 17,
+        "mean_diff": -0.022837802947398258,
+        "p": 0.0016999150042497876,
+        "exact": false
+      },
+      "bootstrap95": {
+        "n": 17,
+        "mean_diff": -0.022837802947398258,
+        "low": -0.03605756346506385,
+        "high": -0.011188507349780372
+      },
+      "p_holm": 0.10199490025498725
+    },
+    "P vs P-noidf [mission_ndcg@5]": {
+      "permutation": {
+        "n": 21,
+        "mean_diff": 0.0003559637663614943,
+        "p": 0.7489625518724063,
+        "exact": false
+      },
+      "bootstrap95": {
+        "n": 21,
+        "mean_diff": 0.0003559637663614943,
+        "low": -0.0008589831945427374,
+        "high": 0.0016496577803721242
+      },
+      "p_holm": 1.0
+    },
+    "P vs P-noidf [passage_normrecall@100]": {
+      "permutation": {
+        "n": 17,
+        "mean_diff": 0.0011764705882352942,
+        "p": 1.0,
+        "exact": false
+      },
+      "bootstrap95": {
+        "n": 17,
+        "mean_diff": 0.0011764705882352942,
+        "low": 0.0,
+        "high": 0.003529411764705882
+      },
+      "p_holm": 1.0
+    },
+    "P vs P-noprf [mission_ndcg@5]": {
+      "permutation": {
+        "n": 21,
+        "mean_diff": -0.015661896597712537,
+        "p": 0.5606719664016799,
+        "exact": false
+      },
+      "bootstrap95": {
+        "n": 21,
+        "mean_diff": -0.015661896597712537,
+        "low": -0.06567642935448754,
+        "high": 0.035326980957002554
+      },
+      "p_holm": 1.0
+    },
+    "P vs P-noprf [passage_normrecall@100]": {
+      "permutation": {
+        "n": 17,
+        "mean_diff": 0.008793803722052814,
+        "p": 0.11829408529573521,
+        "exact": false
+      },
+      "bootstrap95": {
+        "n": 17,
+        "mean_diff": 0.008793803722052814,
+        "low": -0.0005038938652384031,
+        "high": 0.019369140024404524
+      },
+      "p_holm": 1.0
+    },
+    "P vs P-noverif [mission_ndcg@5]": {
+      "permutation": {
+        "n": 21,
+        "mean_diff": -0.03394596867475226,
+        "p": 0.037798110094495276,
+        "exact": false
+      },
+      "bootstrap95": {
+        "n": 21,
+        "mean_diff": -0.03394596867475226,
+        "low": -0.06516376201527922,
+        "high": -0.005433543956810984
+      },
+      "p_holm": 1.0
+    },
+    "P vs P-noverif [passage_normrecall@100]": {
+      "permutation": {
+        "n": 17,
+        "mean_diff": 1.7745837073566993e-05,
+        "p": 1.0,
+        "exact": false
+      },
+      "bootstrap95": {
+        "n": 17,
+        "mean_diff": 1.7745837073566993e-05,
+        "low": -0.006001589825119238,
+        "high": 0.005495937113584173
+      },
+      "p_holm": 1.0
+    },
+    "P vs SF-causes-bm25 [mission_ndcg@5]": {
+      "permutation": {
+        "n": 21,
+        "mean_diff": -0.0021606950586475367,
+        "p": 0.9496025198740063,
+        "exact": false
+      },
+      "bootstrap95": {
+        "n": 21,
+        "mean_diff": -0.0021606950586475367,
+        "low": -0.06914113718748169,
+        "high": 0.06074155357216063
+      },
+      "p_holm": 1.0
+    },
+    "P vs SF-causes-bm25 [passage_normrecall@100]": {
+      "permutation": {
+        "n": 17,
+        "mean_diff": -0.009822767171983734,
+        "p": 0.11469426528673567,
+        "exact": false
+      },
+      "bootstrap95": {
+        "n": 17,
+        "mean_diff": -0.009822767171983734,
+        "low": -0.02167014803559178,
+        "high": 0.0009942713018593523
+      },
+      "p_holm": 1.0
+    },
+    "P vs SF-causes-dense [mission_ndcg@5]": {
+      "permutation": {
+        "n": 21,
+        "mean_diff": -0.008440974559438463,
+        "p": 0.8686565671716414,
+        "exact": false
+      },
+      "bootstrap95": {
+        "n": 21,
+        "mean_diff": -0.008440974559438463,
+        "low": -0.10195431289911436,
+        "high": 0.08983217638033263
+      },
+      "p_holm": 1.0
+    },
+    "P vs SF-causes-dense [passage_normrecall@100]": {
+      "permutation": {
+        "n": 17,
+        "mean_diff": 0.011786863513819527,
+        "p": 0.3488825558722064,
+        "exact": false
+      },
+      "bootstrap95": {
+        "n": 17,
+        "mean_diff": 0.011786863513819527,
+        "low": -0.005303048113367586,
+        "high": 0.03513771064649867
+      },
+      "p_holm": 1.0
+    },
+    "P vs SF-causes-hybrid [mission_ndcg@5]": {
+      "permutation": {
+        "n": 21,
+        "mean_diff": -0.01272029928200315,
+        "p": 0.7545622718864057,
+        "exact": false
+      },
+      "bootstrap95": {
+        "n": 21,
+        "mean_diff": -0.01272029928200315,
+        "low": -0.09034649812081066,
+        "high": 0.06377599575363897
+      },
+      "p_holm": 1.0
+    },
+    "P vs SF-causes-hybrid [passage_normrecall@100]": {
+      "permutation": {
+        "n": 17,
+        "mean_diff": -0.0043470694540785415,
+        "p": 0.33538323083845806,
+        "exact": false
+      },
+      "bootstrap95": {
+        "n": 17,
+        "mean_diff": -0.0043470694540785415,
+        "low": -0.012708949486350138,
+        "high": 0.0038728010655765957
+      },
+      "p_holm": 1.0
+    },
+    "P vs SF-summary-bm25 [mission_ndcg@5]": {
+      "permutation": {
+        "n": 21,
+        "mean_diff": -0.034514471657742976,
+        "p": 0.14864256787160643,
+        "exact": false
+      },
+      "bootstrap95": {
+        "n": 21,
+        "mean_diff": -0.034514471657742976,
+        "low": -0.07726049007569909,
+        "high": 0.00978625186162871
+      },
+      "p_holm": 1.0
+    },
+    "P vs SF-summary-bm25 [passage_normrecall@100]": {
+      "permutation": {
+        "n": 17,
+        "mean_diff": 0.010828790607504048,
+        "p": 0.3354332283385831,
+        "exact": false
+      },
+      "bootstrap95": {
+        "n": 17,
+        "mean_diff": 0.010828790607504048,
+        "low": -0.007131900481110855,
+        "high": 0.031594988827797446
+      },
+      "p_holm": 1.0
+    },
+    "P vs SF-summary-dense [mission_ndcg@5]": {
+      "permutation": {
+        "n": 21,
+        "mean_diff": -0.014827835630075508,
+        "p": 0.6212689365531724,
+        "exact": false
+      },
+      "bootstrap95": {
+        "n": 21,
+        "mean_diff": -0.014827835630075508,
+        "low": -0.07159530909389134,
+        "high": 0.03917196975047771
+      },
+      "p_holm": 1.0
+    },
+    "P vs SF-summary-dense [passage_normrecall@100]": {
+      "permutation": {
+        "n": 17,
+        "mean_diff": 0.004745082506371866,
+        "p": 0.4966751662416879,
+        "exact": false
+      },
+      "bootstrap95": {
+        "n": 17,
+        "mean_diff": 0.004745082506371866,
+        "low": -0.007862981744729786,
+        "high": 0.01778798742780359
+      },
+      "p_holm": 1.0
+    },
+    "P vs SF-summary-hybrid [mission_ndcg@5]": {
+      "permutation": {
+        "n": 21,
+        "mean_diff": -0.011684391487632532,
+        "p": 0.4913754312284386,
+        "exact": false
+      },
+      "bootstrap95": {
+        "n": 21,
+        "mean_diff": -0.011684391487632532,
+        "low": -0.04244667988322625,
+        "high": 0.020433783391661672
+      },
+      "p_holm": 1.0
+    },
+    "P vs SF-summary-hybrid [passage_normrecall@100]": {
+      "permutation": {
+        "n": 17,
+        "mean_diff": 0.011670935891769645,
+        "p": 0.2360381980900955,
+        "exact": false
+      },
+      "bootstrap95": {
+        "n": 17,
+        "mean_diff": 0.011670935891769645,
+        "low": -0.0038227808306034337,
+        "high": 0.031053867513285788
+      },
+      "p_holm": 1.0
+    }
+  }
+}

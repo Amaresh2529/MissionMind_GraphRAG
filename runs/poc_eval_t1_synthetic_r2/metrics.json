@@ -1,0 +1,189 @@
+{
+  "DEV_NOT_REPORTABLE": true,
+  "SYNTHETIC_LABELS_NOT_REPORTABLE": true,
+  "labels_dir": "evalutation\\benchmark\\synthetic",
+  "problems": [
+    "SYNTHETIC pseudo-labels (evalutation/benchmark/synthetic): proof of concept only",
+    "retrieval run is a DEV run (draft field maps or automatic queries)"
+  ],
+  "run": "runs\\poc_t1_synthetic_r2",
+  "labels_sha256": {
+    "D1_passage_factors.csv": "327b0d710ed653f36eda0e23bd2ceae0ca5d16485fbb28589ff588e13a343f7b",
+    "D2a_mission_factors.csv": "076291c226a9aae28362fa22d3e121739d2f69aa1c9c1e23bab63ff923842f9d",
+    "D2b_mission_pairs.csv": "3fcbe874fe13059a7335cc26359005793c0a51468884cee90fe3e5eea7e056bf",
+    "D2q_query_descriptions.csv": "cd689c0a41169219e79ae3918ccf29b9d916c460aea11359ebff51d303fc74c0",
+    "D3_questions.csv": "5a9db5a686dcbc8440b497930efbed5ab67e48504454e44bd02610a6142e2956"
+  },
+  "summary": {
+    "B1": {
+      "mission_ndcg@5": 0.7408411081785303,
+      "mission_ndcg@10": 0.7656947432880641,
+      "mission_recall@5": 0.37395904748845926,
+      "mission_mrr": 0.7483660130718954,
+      "passage_normrecall@100": 0.04808040278589404,
+      "passage_ndcg@100": 0.05909633170773229,
+      "queries": 22,
+      "queries_defined_ndcg@5": 21
+    },
+    "B2": {
+      "mission_ndcg@5": 0.7184214231624141,
+      "mission_ndcg@10": 0.7624514733654112,
+      "mission_recall@5": 0.27892891422303184,
+      "mission_mrr": 0.8319327731092436,
+      "passage_normrecall@100": 0.03117058911049692,
+      "passage_ndcg@100": 0.05088221729304337,
+      "queries": 22,
+      "queries_defined_ndcg@5": 21
+    },
+    "B3-bal": {
+      "mission_ndcg@5": 0.7244294925256056,
+      "mission_ndcg@10": 0.7463780793758772,
+      "mission_recall@5": 0.32225650166826636,
+      "mission_mrr": 0.8174019607843137,
+      "passage_normrecall@100": 0.0487404715267369,
+      "passage_ndcg@100": 0.056873239671497426,
+      "queries": 22,
+      "queries_defined_ndcg@5": 21
+    },
+    "B3": {
+      "mission_ndcg@5": 0.721964390753997,
+      "mission_ndcg@10": 0.7593048332904745,
+      "mission_recall@5": 0.2744133317662729,
+      "mission_mrr": 0.8480392156862745,
+      "passage_normrecall@100": 0.02827434353663243,
+      "passage_ndcg@100": 0.03537077791529554,
+      "queries": 22,
+      "queries_defined_ndcg@5": 21
+    },
+    "H-whole": {
+      "mission_ndcg@5": 0.7145038097694442,
+      "mission_ndcg@10": 0.7471143817556927,
+      "mission_recall@5": 0.29377697465932756,
+      "mission_mrr": 0.7438725490196079,
+      "passage_normrecall@100": 0.043937168378623014,
+      "passage_ndcg@100": 0.05757964277965014,
+      "queries": 22,
+      "queries_defined_ndcg@5": 21
+    },
+    "P-graphonly": {
+      "mission_ndcg@5": 0.5907222918205862,
+      "mission_ndcg@10": 0.6444416535472622,
+      "mission_recall@5": 0.231937996643879,
+      "mission_mrr": 0.5539215686274509,
+      "passage_normrecall@100": 0.10611866986810661,
+      "passage_ndcg@100": 0.08155851528774812,
+      "queries": 22,
+      "queries_defined_ndcg@5": 21
+    },
+    "P-nofields": {
+      "mission_ndcg@5": 0.7290661505505378,
+      "mission_ndcg@10": 0.7553008804931738,
+      "mission_recall@5": 0.30358089622795503,
+      "mission_mrr": 0.7426024955436721,
+      "passage_normrecall@100": 0.06474506533931629,
+      "passage_ndcg@100": 0.07906762653710378,
+      "queries": 22,
+      "queries_defined_ndcg@5": 21
+    },
+    "P-noidf": {
+      "mission_ndcg@5": 0.7135310989320933,
+      "mission_ndcg@10": 0.7472273275935667,
+      "mission_recall@5": 0.2783349003937239,
+      "mission_mrr": 0.7144607843137255,
+      "passage_normrecall@100": 0.04073079180368273,
+      "passage_ndcg@100": 0.05265903441890428,
+      "queries": 22,
+      "queries_defined_ndcg@5": 21
+    },
+    "P-noprf": {
+      "mission_ndcg@5": 0.7295489592961673,
+      "mission_ndcg@10": 0.7480548436977708,
+      "mission_recall@5": 0.2993630552454082,
+      "mission_mrr": 0.8088235294117647,
+      "passage_normrecall@100": 0.03311345866986521,
+      "passage_ndcg@100": 0.04557279895598113,
+      "queries": 22,
+      "queries_defined_ndcg@5": 21
+    },
+    "P-noverif": {
+      "mission_ndcg@5": 0.747833031373207,
+      "mission_ndcg@10": 0.7631242753846168,
+      "mission_recall@5": 0.3143023643023643,
+      "mission_mrr": 0.802479815455594,
+      "passage_normrecall@100": 0.041889516554844464,
+      "passage_ndcg@100": 0.05013617560393658,
+      "queries": 22,
+      "queries_defined_ndcg@5": 21
+    },
+    "P": {
+      "mission_ndcg@5": 0.7138870626984547,
+      "mission_ndcg@10": 0.748033352851237,
+      "mission_recall@5": 0.2783349003937239,
+      "mission_mrr": 0.7131907308377897,
+      "passage_normrecall@100": 0.041907262391918026,
+      "passage_ndcg@100": 0.05243639876345748,
+      "queries": 22,
+      "queries_defined_ndcg@5": 21
+    },
+    "SF-causes-bm25": {
+      "mission_ndcg@5": 0.7160477577571023,
+      "mission_ndcg@10": 0.7437031546436358,
+      "mission_recall@5": 0.3351204351204351,
+      "mission_mrr": 0.6607843137254902,
+      "passage_normrecall@100": 0.05173002956390176,
+      "passage_ndcg@100": 0.06012645291358575,
+      "queries": 22,
+      "queries_defined_ndcg@5": 21
+    },
+    "SF-causes-dense": {
+      "mission_ndcg@5": 0.7223280372578932,
+      "mission_ndcg@10": 0.7381849831787346,
+      "mission_recall@5": 0.308782067605597,
+      "mission_mrr": 0.8415032679738562,
+      "passage_normrecall@100": 0.030120398878098503,
+      "passage_ndcg@100": 0.043025474378308476,
+      "queries": 22,
+      "queries_defined_ndcg@5": 21
+    },
+    "SF-causes-hybrid": {
+      "mission_ndcg@5": 0.7266073619804578,
+      "mission_ndcg@10": 0.7527144933664136,
+      "mission_recall@5": 0.32225650166826636,
+      "mission_mrr": 0.8176470588235294,
+      "passage_normrecall@100": 0.04625433184599657,
+      "passage_ndcg@100": 0.05520585546692113,
+      "queries": 22,
+      "queries_defined_ndcg@5": 21
+    },
+    "SF-summary-bm25": {
+      "mission_ndcg@5": 0.7484015343561977,
+      "mission_ndcg@10": 0.7894249795976739,
+      "mission_recall@5": 0.33862036656154304,
+      "mission_mrr": 0.7394957983193278,
+      "passage_normrecall@100": 0.031078471784413978,
+      "passage_ndcg@100": 0.04396541761379339,
+      "queries": 22,
+      "queries_defined_ndcg@5": 21
+    },
+    "SF-summary-dense": {
+      "mission_ndcg@5": 0.7287148983285302,
+      "mission_ndcg@10": 0.7796536514412825,
+      "mission_recall@5": 0.3354181765946472,
+      "mission_mrr": 0.8063725490196079,
+      "passage_normrecall@100": 0.03716217988554616,
+      "passage_ndcg@100": 0.047563723644493267,
+      "queries": 22,
+      "queries_defined_ndcg@5": 21
+    },
+    "SF-summary-hybrid": {
+      "mission_ndcg@5": 0.7255714541860873,
+      "mission_ndcg@10": 0.7776478904757228,
+      "mission_recall@5": 0.31555356408297586,
+      "mission_mrr": 0.7166666666666667,
+      "passage_normrecall@100": 0.030236326500148382,
+      "passage_ndcg@100": 0.04460418542205623,
+      "queries": 22,
+      "queries_defined_ndcg@5": 21
+    }
+  }
+}

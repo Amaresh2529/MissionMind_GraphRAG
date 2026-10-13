@@ -32,7 +32,7 @@ The project owner asked (2026-10-13) for synthetic pseudo-labels, so that Stages
 | SF-summary-hybrid | 0.726 | 0.316 | 0.717 | 0.030 | 0.045 |
 | SF-causes-hybrid | 0.727 | 0.322 | 0.818 | 0.046 | 0.055 |
 | **B3** (base paper) | 0.722 | 0.274 | 0.848 | 0.028 | 0.035 |
-| B3-bal | 0.727 | 0.322 | 0.818 | 0.046 | 0.055 |
+| B3-bal (√-weighted, run r2) | 0.724 | 0.322 | 0.817 | 0.049 | 0.057 |
 | **P** | 0.714 | 0.278 | 0.713 | 0.042 | 0.052 |
 | P-noverif | 0.748 | 0.314 | 0.802 | 0.042 | 0.050 |
 | P-nofields | 0.729 | 0.304 | 0.743 | 0.065 | 0.079 |
@@ -69,7 +69,7 @@ P vs B3 key-point recall: +0.058, p = 0.34 (not significant).
 ## 5. Findings that hold without labels (structural, from the runs themselves)
 
 1. **Direct query factors are usually empty.** A new-mishap description states symptoms, not causes. Direct extraction gave codes for only 7/19 dev queries. P therefore now takes query codes from the verified factors in B3's top 20 passages; fallback to B3 dropped from 12/22 to 2/22 queries. P-noprf keeps the old behaviour. Changed before any human label.
-2. **B3-bal overshoots.** Weighting each field by its size makes B3-bal's top-100 consist entirely of Causes passages; it is identical to SF-causes-hybrid on all 22 queries. Faithful B3 has the opposite problem: 45% Disposition. A milder weighting (e.g. √size) is a decision for the owner **before** human labelling. It was not changed here, to avoid choosing a baseline after seeing results.
+2. **B3-bal weighting.** The first version weighted each field by its size, and its top 100 became entirely Causes passages, identical to SF-causes-hybrid on all 22 queries. On 2026-10-13, before any human label, the owner chose **√(field size)** weights instead: Summary 0.90, Causes 1.70, Disposition 0.40. The new top 100 is 84.5% Causes and 15.5% Summary. That is close to the corpus shares (75% Causes, 21% Summary, 4% Disposition), whereas faithful B3 is 20/33/47. Disposition passages no longer reach the top 100. B3-bal now differs from SF-causes-hybrid on all 22 queries. Re-run: `runs/poc_t1_synthetic_r2` → `poc_eval_t1_synthetic_r2`, audit `poc_audit_t1_synthetic_r2` PASS. The other 16 systems' per-query results are identical to the first run.
 3. **Analogy favours long reports.** Full board reports yield 17–21 factor categories, press releases 1–3. The idf-weighted Jaccard is therefore high between long reports (Columbia–Challenger 0.88, Genesis–Starliner 0.87).
 4. **Verification rejects about 27% of LLM proposals**, mostly quotes that do not occur in the passage.
 5. **Abstention:** only the retrieval-grounded systems abstain on questions outside the corpus. B0 answered all 10 from its own knowledge.
