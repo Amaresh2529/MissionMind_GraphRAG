@@ -1,0 +1,18 @@
+{
+ "PILOT": true,
+ "missions": [
+  "sts-51l-challenger",
+  "sts-107-columbia",
+  "mars-climate-orbiter",
+  "ariane5-501",
+  "apollo13",
+  "genesis",
+  "soho-1998",
+  "wire",
+  "hitomi",
+  "starliner-cft"
+ ],
+ "created": "2026-10-13",
+ "labels_by": "project owner (human)",
+ "d2b": "derived from D2a by the guide's grading rule"
+}

@@ -30,8 +30,11 @@ from runlog import new_run_dir, write_json  # noqa: E402
 PRIMARY = ("P", "B3", "mission_ndcg@5")
 
 
-def evaluate_run(run: Path, labels: Labels, units_by_page: dict) -> tuple[dict, dict]:
+def evaluate_run(run: Path, labels: Labels, units_by_page: dict, missions_of: dict | None = None) -> tuple[dict, dict]:
+    """Rankings are restricted to the LABELLED missions (all 22 in the full benchmark; 10 in the pilot), so
+    unlabelled missions never count as non-relevant. missions_of: passage id -> mission ids."""
     per_query, summary = {}, {}
+    labelled = set(labels.missions)
     for f in sorted((run / "predictions").glob("*.jsonl")):
         system = f.stem
         rows = [json.loads(l) for l in open(f, encoding="utf-8")]
@@ -40,7 +43,7 @@ def evaluate_run(run: Path, labels: Labels, units_by_page: dict) -> tuple[dict, 
             q = r["mission"]
             gains = {m: labels.grade(q, m) or 0 for m in labels.missions if m != q}
             rel = {m for m, g in gains.items() if g >= 2}
-            ranking = [m for m in r["mission_ranking"] if m != q]
+            ranking = [m for m in r["mission_ranking"] if m != q and m in labelled]
             page_gain = {}
             for m, g in gains.items():
                 if g >= 1:
@@ -48,7 +51,8 @@ def evaluate_run(run: Path, labels: Labels, units_by_page: dict) -> tuple[dict, 
                         page_gain[page] = max(page_gain.get(page, 0), g)
             p_gain = {pid: page_gain[key] for key, pids in units_by_page.items() if key in page_gain for pid in pids}
             gold = {pid for pid, g in p_gain.items() if g >= 2}
-            pids = [p["id"] for p in r["passages"]]
+            pids = [p["id"] for p in r["passages"]
+                    if missions_of is None or labelled & set(missions_of.get(p["id"], ()))]
             pq[r["query_id"]] = {
                 "mission_ndcg@5": M.ndcg_at_k(ranking, gains, 5), "mission_ndcg@10": M.ndcg_at_k(ranking, gains, 10),
                 "mission_recall@5": M.recall_at_k(ranking, rel, 5), "mission_mrr": M.mrr(ranking, rel),
@@ -94,6 +98,8 @@ def main(argv=None):
     ap.add_argument("--eval-id", required=True)
     ap.add_argument("--labels", default=None)
     ap.add_argument("--dev", action="store_true")
+    ap.add_argument("--pilot", action="store_true",
+                    help="human pilot labels: draft field maps are accepted and recorded as a limitation")
     args = ap.parse_args(argv)
     run = Path(args.run)
     from bench.labels import IncompleteLabels
@@ -103,11 +109,17 @@ def main(argv=None):
         print("REFUSED: human labels incomplete:", err)
         return 2
     cfg = json.loads((run / "config.json").read_text(encoding="utf-8"))
-    problems = []
+    problems, limitations = [], []
+    pilot = (labels.base / "PILOT.json").exists()
+    if pilot and not args.pilot:
+        problems.append("pilot labels: run with --pilot")
     if labels.synthetic:
         problems.append("SYNTHETIC pseudo-labels (evalutation/benchmark/synthetic): proof of concept only")
     if cfg.get("dev_run"):
-        problems.append("retrieval run is a DEV run (draft field maps or automatic queries)")
+        if args.pilot and pilot and cfg["args"].get("queries"):
+            limitations.append("field maps are drafts (not yet human-reviewed)")
+        else:
+            problems.append("retrieval run is a DEV run (draft field maps or automatic queries)")
     try:
         t1 = labels.queries_t1()
         run_q = [json.loads(l) for l in open(run / "queries.jsonl", encoding="utf-8")]
@@ -120,12 +132,15 @@ def main(argv=None):
         return 2
     sys.path.append(str(ROOT / "src"))
     from retrieval.corpus import load_units
-    units_by_page = {}
+    units_by_page, missions_of = {}, {}
     for u in load_units(None):
         units_by_page.setdefault((u.doc_id, u.page), []).append(u.id)
-    per_query, summary = evaluate_run(run, labels, units_by_page)
+        missions_of[u.id] = u.missions
+    per_query, summary = evaluate_run(run, labels, units_by_page, missions_of)
     out = new_run_dir(args.eval_id, prefix="eval")
     write_json(out / "metrics.json", {"DEV_NOT_REPORTABLE": bool(problems), "SYNTHETIC_LABELS_NOT_REPORTABLE": labels.synthetic,
+                                      "PILOT_HUMAN_LABELS": pilot, "labelled_missions": labels.missions,
+                                      "limitations": limitations,
                                       "labels_dir": str(labels.base), "problems": problems, "run": str(run),
                                       "labels_sha256": {p.name: hashlib.sha256(p.read_bytes()).hexdigest()
                                                         for p in sorted(labels.base.glob("*.csv"))},

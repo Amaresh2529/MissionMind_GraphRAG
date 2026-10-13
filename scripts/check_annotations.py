@@ -170,7 +170,11 @@ def check() -> dict:
 def main(argv=None):
     ap = argparse.ArgumentParser()
     ap.add_argument("--out", default=None)
+    ap.add_argument("--dir", default=None, help="sheet folder (default: evalutation/benchmark), e.g. the pilot")
     args = ap.parse_args(argv)
+    global B
+    if args.dir:
+        B = Path(args.dir) if Path(args.dir).is_absolute() else ROOT / args.dir
     rep = check()
     if args.out:
         out = Path(args.out); out.mkdir(parents=True, exist_ok=False)

@@ -136,7 +136,8 @@ def main(argv=None):
             for r in rws:
                 q = r["mission"]
                 gains = {m: grade.get(frozenset((q, m)), 0) for m in missions if m != q}
-                mine = ndcg5([m for m in r["mission_ranking"] if m != q], gains)
+                labelled = set(missions)       # same rule as the evaluator: rank only labelled missions
+                mine = ndcg5([m for m in r["mission_ranking"] if m != q and m in labelled], gains)
                 theirs = ev.get(s, {}).get(r["query_id"], {}).get("mission_ndcg@5")
                 if (mine is None) != (theirs is None) or (mine is not None and abs(mine - theirs) > 1e-9):
                     mism.append((s, r["query_id"], mine, theirs))
