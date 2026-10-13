@@ -1,0 +1,37 @@
+{
+  "passages": 3456,
+  "cached": 2,
+  "parse_fail": 1,
+  "proposed": 2790,
+  "accepted": 2031,
+  "passages_with_factor": 1758,
+  "rejection_reasons": {
+    "quote_not_in_passage": 501,
+    "quote_too_short": 239,
+    "bad_code": 19
+  },
+  "accepted_by_code": {
+    "O1": 303,
+    "T1": 233,
+    "M5": 203,
+    "T4": 192,
+    "V1": 122,
+    "M6": 122,
+    "M4": 103,
+    "T5": 94,
+    "H3": 94,
+    "T3": 87,
+    "M1": 86,
+    "V2": 75,
+    "M3": 74,
+    "M2": 50,
+    "H1": 41,
+    "O3": 39,
+    "T2": 34,
+    "O4": 32,
+    "H2": 16,
+    "O2": 15,
+    "T6": 9,
+    "V3": 7
+  }
+}

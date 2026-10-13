@@ -1,2 +1,18 @@
 200/3456 passages, 363 s, accepted 77
 400/3456 passages, 823 s, accepted 194
+600/3456 passages, 1301 s, accepted 301
+800/3456 passages, 1742 s, accepted 411
+1000/3456 passages, 2146 s, accepted 526
+1200/3456 passages, 2483 s, accepted 626
+1400/3456 passages, 2963 s, accepted 779
+1600/3456 passages, 3315 s, accepted 861
+1800/3456 passages, 3621 s, accepted 961
+2000/3456 passages, 3879 s, accepted 1068
+2200/3456 passages, 4224 s, accepted 1188
+2400/3456 passages, 4735 s, accepted 1359
+2600/3456 passages, 6103 s, accepted 1478
+2800/3456 passages, 6479 s, accepted 1555
+3000/3456 passages, 6993 s, accepted 1733
+3200/3456 passages, 7434 s, accepted 1874
+3400/3456 passages, 7793 s, accepted 1990
+{"passages": 3456, "cached": 2, "parse_fail": 1, "proposed": 2790, "accepted": 2031, "passages_with_factor": 1758, "rejection_reasons": {"quote_not_in_passage": 501, "quote_too_short": 239, "bad_code": 19}}

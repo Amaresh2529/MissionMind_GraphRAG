@@ -1,0 +1,1653 @@
+{
+  "mentions": 2031,
+  "missions": 22,
+  "neo4j": {
+    "missions": 22,
+    "has": 226,
+    "states": 2031
+  },
+  "idf": {
+    "H1": 1.6931,
+    "H2": 2.0116,
+    "H3": 1.8938,
+    "M1": 2.0116,
+    "M2": 2.9924,
+    "M3": 1.5261,
+    "M4": 1.6061,
+    "M5": 1.6061,
+    "M6": 1.7885,
+    "O1": 1.5261,
+    "O2": 2.1451,
+    "O3": 1.8938,
+    "O4": 2.0116,
+    "T1": 1.5261,
+    "T2": 2.0116,
+    "T3": 1.5261,
+    "T4": 1.1466,
+    "T5": 1.8938,
+    "T6": 2.9924,
+    "V1": 1.3185,
+    "V2": 1.3185,
+    "V3": 2.2993
+  },
+  "profiles": {
+    "antares-orb3": {
+      "M4": {
+        "roles": {
+          "observation": 1
+        },
+        "n_evidence": 1
+      },
+      "M5": {
+        "roles": {
+          "contributing": 1
+        },
+        "n_evidence": 1
+      },
+      "T1": {
+        "roles": {
+          "root": 6,
+          "observation": 1
+        },
+        "n_evidence": 7
+      },
+      "T3": {
+        "roles": {
+          "contributing": 1
+        },
+        "n_evidence": 1
+      },
+      "T4": {
+        "roles": {
+          "root": 1,
+          "observation": 1
+        },
+        "n_evidence": 2
+      },
+      "T5": {
+        "roles": {
+          "root": 1
+        },
+        "n_evidence": 1
+      },
+      "V2": {
+        "roles": {
+          "contributing": 2
+        },
+        "n_evidence": 2
+      },
+      "V3": {
+        "roles": {
+          "observation": 1
+        },
+        "n_evidence": 1
+      }
+    },
+    "apollo1-as204": {
+      "H1": {
+        "roles": {
+          "root": 5
+        },
+        "n_evidence": 5
+      },
+      "M3": {
+        "roles": {
+          "contributing": 1
+        },
+        "n_evidence": 1
+      },
+      "M4": {
+        "roles": {
+          "observation": 4,
+          "contributing": 4
+        },
+        "n_evidence": 8
+      },
+      "M5": {
+        "roles": {
+          "contributing": 1,
+          "root": 1,
+          "observation": 1
+        },
+        "n_evidence": 3
+      },
+      "M6": {
+        "roles": {
+          "observation": 3,
+          "contributing": 1
+        },
+        "n_evidence": 4
+      },
+      "O1": {
+        "roles": {
+          "observation": 7,
+          "contributing": 16,
+          "root": 13
+        },
+        "n_evidence": 36
+      },
+      "O2": {
+        "roles": {
+          "contributing": 2
+        },
+        "n_evidence": 2
+      },
+      "O4": {
+        "roles": {
+          "observation": 1,
+          "contributing": 1
+        },
+        "n_evidence": 2
+      },
+      "T1": {
+        "roles": {
+          "root": 19,
+          "observation": 1,
+          "contributing": 2
+        },
+        "n_evidence": 22
+      },
+      "T3": {
+        "roles": {
+          "contributing": 1,
+          "root": 2
+        },
+        "n_evidence": 3
+      },
+      "T4": {
+        "roles": {
+          "contributing": 3
+        },
+        "n_evidence": 3
+      },
+      "T5": {
+        "roles": {
+          "root": 8
+        },
+        "n_evidence": 8
+      },
+      "V1": {
+        "roles": {
+          "contributing": 1
+        },
+        "n_evidence": 1
+      },
+      "V3": {
+        "roles": {
+          "observation": 1
+        },
+        "n_evidence": 1
+      }
+    },
+    "apollo13": {
+      "H1": {
+        "roles": {
+          "root": 1
+        },
+        "n_evidence": 1
+      },
+      "H3": {
+        "roles": {
+          "observation": 1
+        },
+        "n_evidence": 1
+      },
+      "M1": {
+        "roles": {
+          "contributing": 2
+        },
+        "n_evidence": 2
+      },
+      "M3": {
+        "roles": {
+          "observation": 1,
+          "root": 1
+        },
+        "n_evidence": 2
+      },
+      "M4": {
+        "roles": {
+          "root": 3,
+          "contributing": 3,
+          "observation": 1
+        },
+        "n_evidence": 7
+      },
+      "M5": {
+        "roles": {
+          "root": 1,
+          "observation": 1
+        },
+        "n_evidence": 2
+      },
+      "M6": {
+        "roles": {
+          "observation": 1
+        },
+        "n_evidence": 1
+      },
+      "O1": {
+        "roles": {
+          "root": 14,
+          "observation": 5,
+          "contributing": 15
+        },
+        "n_evidence": 34
+      },
+      "O2": {
+        "roles": {
+          "root": 2,
+          "observation": 1
+        },
+        "n_evidence": 3
+      },
+      "O3": {
+        "roles": {
+          "observation": 2,
+          "root": 1
+        },
+        "n_evidence": 3
+      },
+      "O4": {
+        "roles": {
+          "contributing": 3,
+          "observation": 4
+        },
+        "n_evidence": 7
+      },
+      "T1": {
+        "roles": {
+          "root": 17,
+          "contributing": 1
+        },
+        "n_evidence": 18
+      },
+      "T3": {
+        "roles": {
+          "root": 5,
+          "contributing": 7,
+          "observation": 4
+        },
+        "n_evidence": 16
+      },
+      "T4": {
+        "roles": {
+          "contributing": 12,
+          "root": 12,
+          "observation": 2
+        },
+        "n_evidence": 26
+      },
+      "T5": {
+        "roles": {
+          "root": 7
+        },
+        "n_evidence": 7
+      },
+      "V1": {
+        "roles": {
+          "contributing": 3,
+          "observation": 2,
+          "root": 1
+        },
+        "n_evidence": 6
+      },
+      "V2": {
+        "roles": {
+          "contributing": 1,
+          "root": 1,
+          "observation": 1
+        },
+        "n_evidence": 3
+      }
+    },
+    "ariane5-501": {
+      "H1": {
+        "roles": {
+          "root": 1
+        },
+        "n_evidence": 1
+      },
+      "O4": {
+        "roles": {
+          "observation": 1
+        },
+        "n_evidence": 1
+      },
+      "T2": {
+        "roles": {
+          "root": 10,
+          "contributing": 1,
+          "observation": 1
+        },
+        "n_evidence": 12
+      },
+      "T4": {
+        "roles": {
+          "root": 2,
+          "contributing": 2
+        },
+        "n_evidence": 4
+      },
+      "V1": {
+        "roles": {
+          "contributing": 4,
+          "observation": 2,
+          "root": 1
+        },
+        "n_evidence": 7
+      },
+      "V2": {
+        "roles": {
+          "contributing": 4
+        },
+        "n_evidence": 4
+      }
+    },
+    "dart-2005": {
+      "H2": {
+        "roles": {
+          "root": 2
+        },
+        "n_evidence": 2
+      },
+      "M1": {
+        "roles": {
+          "root": 1
+        },
+        "n_evidence": 1
+      },
+      "M4": {
+        "roles": {
+          "root": 3,
+          "contributing": 1
+        },
+        "n_evidence": 4
+      },
+      "M5": {
+        "roles": {
+          "root": 1,
+          "observation": 1,
+          "contributing": 2
+        },
+        "n_evidence": 4
+      },
+      "M6": {
+        "roles": {
+          "contributing": 1
+        },
+        "n_evidence": 1
+      },
+      "O1": {
+        "roles": {
+          "root": 3
+        },
+        "n_evidence": 3
+      },
+      "T2": {
+        "roles": {
+          "contributing": 1,
+          "root": 1
+        },
+        "n_evidence": 2
+      },
+      "T4": {
+        "roles": {
+          "root": 1
+        },
+        "n_evidence": 1
+      },
+      "V1": {
+        "roles": {
+          "contributing": 1
+        },
+        "n_evidence": 1
+      },
+      "V2": {
+        "roles": {
+          "contributing": 1,
+          "root": 1
+        },
+        "n_evidence": 2
+      }
+    },
+    "exomars2016-schiaparelli": {
+      "M3": {
+        "roles": {
+          "root": 1
+        },
+        "n_evidence": 1
+      },
+      "M4": {
+        "roles": {
+          "contributing": 1,
+          "root": 1
+        },
+        "n_evidence": 2
+      },
+      "O1": {
+        "roles": {
+          "root": 4,
+          "contributing": 1
+        },
+        "n_evidence": 5
+      },
+      "T2": {
+        "roles": {
+          "root": 4
+        },
+        "n_evidence": 4
+      },
+      "T4": {
+        "roles": {
+          "contributing": 2,
+          "root": 1
+        },
+        "n_evidence": 3
+      },
+      "T5": {
+        "roles": {
+          "contributing": 2,
+          "root": 1
+        },
+        "n_evidence": 3
+      },
+      "V1": {
+        "roles": {
+          "contributing": 4
+        },
+        "n_evidence": 4
+      },
+      "V2": {
+        "roles": {
+          "observation": 1,
+          "contributing": 3,
+          "root": 3
+        },
+        "n_evidence": 7
+      },
+      "V3": {
+        "roles": {
+          "contributing": 1
+        },
+        "n_evidence": 1
+      }
+    },
+    "genesis": {
+      "H1": {
+        "roles": {
+          "root": 2
+        },
+        "n_evidence": 2
+      },
+      "H2": {
+        "roles": {
+          "root": 1
+        },
+        "n_evidence": 1
+      },
+      "H3": {
+        "roles": {
+          "root": 3,
+          "contributing": 3
+        },
+        "n_evidence": 6
+      },
+      "M1": {
+        "roles": {
+          "contributing": 3,
+          "root": 2
+        },
+        "n_evidence": 5
+      },
+      "M3": {
+        "roles": {
+          "observation": 1,
+          "root": 1
+        },
+        "n_evidence": 2
+      },
+      "M4": {
+        "roles": {
+          "root": 1,
+          "contributing": 5,
+          "observation": 2
+        },
+        "n_evidence": 8
+      },
+      "M5": {
+        "roles": {
+          "observation": 6,
+          "root": 1,
+          "contributing": 1
+        },
+        "n_evidence": 8
+      },
+      "M6": {
+        "roles": {
+          "root": 1,
+          "observation": 2,
+          "contributing": 1
+        },
+        "n_evidence": 4
+      },
+      "O1": {
+        "roles": {
+          "observation": 5,
+          "contributing": 5,
+          "root": 5
+        },
+        "n_evidence": 15
+      },
+      "O2": {
+        "roles": {
+          "observation": 1
+        },
+        "n_evidence": 1
+      },
+      "O3": {
+        "roles": {
+          "contributing": 8,
+          "root": 2
+        },
+        "n_evidence": 10
+      },
+      "O4": {
+        "roles": {
+          "contributing": 1,
+          "observation": 1
+        },
+        "n_evidence": 2
+      },
+      "T1": {
+        "roles": {
+          "root": 9,
+          "observation": 2
+        },
+        "n_evidence": 11
+      },
+      "T2": {
+        "roles": {
+          "root": 1
+        },
+        "n_evidence": 1
+      },
+      "T3": {
+        "roles": {
+          "observation": 13,
+          "root": 7,
+          "contributing": 1
+        },
+        "n_evidence": 21
+      },
+      "T4": {
+        "roles": {
+          "contributing": 6,
+          "root": 6,
+          "observation": 1
+        },
+        "n_evidence": 13
+      },
+      "T5": {
+        "roles": {
+          "root": 6,
+          "observation": 3
+        },
+        "n_evidence": 9
+      },
+      "T6": {
+        "roles": {
+          "root": 1
+        },
+        "n_evidence": 1
+      },
+      "V1": {
+        "roles": {
+          "observation": 6,
+          "root": 1
+        },
+        "n_evidence": 7
+      },
+      "V2": {
+        "roles": {
+          "observation": 1
+        },
+        "n_evidence": 1
+      },
+      "V3": {
+        "roles": {
+          "observation": 1
+        },
+        "n_evidence": 1
+      }
+    },
+    "glory-taurus-t9": {
+      "M3": {
+        "roles": {
+          "root": 1
+        },
+        "n_evidence": 1
+      },
+      "T1": {
+        "roles": {
+          "root": 8,
+          "contributing": 1
+        },
+        "n_evidence": 9
+      },
+      "T2": {
+        "roles": {
+          "contributing": 1
+        },
+        "n_evidence": 1
+      },
+      "T3": {
+        "roles": {
+          "root": 6
+        },
+        "n_evidence": 6
+      },
+      "T4": {
+        "roles": {
+          "root": 1,
+          "contributing": 5,
+          "observation": 1
+        },
+        "n_evidence": 7
+      },
+      "V1": {
+        "roles": {
+          "contributing": 2,
+          "observation": 1
+        },
+        "n_evidence": 3
+      },
+      "V2": {
+        "roles": {
+          "contributing": 2
+        },
+        "n_evidence": 2
+      }
+    },
+    "gslv-f10": {
+      "T3": {
+        "roles": {
+          "root": 2
+        },
+        "n_evidence": 2
+      }
+    },
+    "hitomi": {
+      "H1": {
+        "roles": {
+          "root": 1
+        },
+        "n_evidence": 1
+      },
+      "H2": {
+        "roles": {
+          "root": 1
+        },
+        "n_evidence": 1
+      },
+      "H3": {
+        "roles": {
+          "observation": 2
+        },
+        "n_evidence": 2
+      },
+      "M3": {
+        "roles": {
+          "root": 3
+        },
+        "n_evidence": 3
+      },
+      "M4": {
+        "roles": {
+          "observation": 1,
+          "contributing": 2
+        },
+        "n_evidence": 3
+      },
+      "M5": {
+        "roles": {
+          "contributing": 1,
+          "root": 1
+        },
+        "n_evidence": 2
+      },
+      "M6": {
+        "roles": {
+          "observation": 3,
+          "contributing": 1
+        },
+        "n_evidence": 4
+      },
+      "O1": {
+        "roles": {
+          "contributing": 21,
+          "root": 15,
+          "observation": 5
+        },
+        "n_evidence": 41
+      },
+      "O2": {
+        "roles": {
+          "contributing": 3,
+          "root": 1,
+          "observation": 1
+        },
+        "n_evidence": 5
+      },
+      "O4": {
+        "roles": {
+          "observation": 2,
+          "contributing": 1
+        },
+        "n_evidence": 3
+      },
+      "T1": {
+        "roles": {
+          "root": 1,
+          "observation": 1
+        },
+        "n_evidence": 2
+      },
+      "T3": {
+        "roles": {
+          "observation": 1
+        },
+        "n_evidence": 1
+      },
+      "T4": {
+        "roles": {
+          "root": 3,
+          "contributing": 1
+        },
+        "n_evidence": 4
+      },
+      "T5": {
+        "roles": {
+          "root": 2,
+          "observation": 1
+        },
+        "n_evidence": 3
+      },
+      "T6": {
+        "roles": {
+          "root": 1
+        },
+        "n_evidence": 1
+      },
+      "V1": {
+        "roles": {
+          "contributing": 2
+        },
+        "n_evidence": 2
+      },
+      "V2": {
+        "roles": {
+          "contributing": 2
+        },
+        "n_evidence": 2
+      }
+    },
+    "mars-climate-orbiter": {
+      "H1": {
+        "roles": {
+          "root": 2
+        },
+        "n_evidence": 2
+      },
+      "H2": {
+        "roles": {
+          "contributing": 4
+        },
+        "n_evidence": 4
+      },
+      "H3": {
+        "roles": {
+          "contributing": 6
+        },
+        "n_evidence": 6
+      },
+      "M1": {
+        "roles": {
+          "observation": 1
+        },
+        "n_evidence": 1
+      },
+      "M3": {
+        "roles": {
+          "observation": 3
+        },
+        "n_evidence": 3
+      },
+      "M4": {
+        "roles": {
+          "contributing": 5,
+          "observation": 1
+        },
+        "n_evidence": 6
+      },
+      "M5": {
+        "roles": {
+          "observation": 7
+        },
+        "n_evidence": 7
+      },
+      "O1": {
+        "roles": {
+          "root": 2,
+          "contributing": 5,
+          "observation": 2
+        },
+        "n_evidence": 9
+      },
+      "O3": {
+        "roles": {
+          "observation": 1
+        },
+        "n_evidence": 1
+      },
+      "T2": {
+        "roles": {
+          "root": 3,
+          "contributing": 1
+        },
+        "n_evidence": 4
+      },
+      "T3": {
+        "roles": {
+          "observation": 1
+        },
+        "n_evidence": 1
+      },
+      "T4": {
+        "roles": {
+          "root": 1,
+          "contributing": 2,
+          "observation": 2
+        },
+        "n_evidence": 5
+      },
+      "V1": {
+        "roles": {
+          "contributing": 7,
+          "root": 1,
+          "observation": 1
+        },
+        "n_evidence": 9
+      },
+      "V2": {
+        "roles": {
+          "contributing": 5,
+          "observation": 3
+        },
+        "n_evidence": 8
+      },
+      "V3": {
+        "roles": {
+          "observation": 2
+        },
+        "n_evidence": 2
+      }
+    },
+    "noaa-n-prime": {
+      "H1": {
+        "roles": {
+          "contributing": 2,
+          "root": 6
+        },
+        "n_evidence": 8
+      },
+      "H2": {
+        "roles": {
+          "contributing": 3,
+          "root": 1
+        },
+        "n_evidence": 4
+      },
+      "H3": {
+        "roles": {
+          "contributing": 12,
+          "root": 1
+        },
+        "n_evidence": 13
+      },
+      "M1": {
+        "roles": {
+          "contributing": 2
+        },
+        "n_evidence": 2
+      },
+      "M3": {
+        "roles": {
+          "observation": 1,
+          "contributing": 4,
+          "root": 9
+        },
+        "n_evidence": 14
+      },
+      "M4": {
+        "roles": {
+          "contributing": 1,
+          "root": 1
+        },
+        "n_evidence": 2
+      },
+      "M5": {
+        "roles": {
+          "root": 11,
+          "contributing": 9,
+          "observation": 3
+        },
+        "n_evidence": 23
+      },
+      "M6": {
+        "roles": {
+          "observation": 4,
+          "contributing": 1,
+          "root": 4
+        },
+        "n_evidence": 9
+      },
+      "O1": {
+        "roles": {
+          "contributing": 8,
+          "root": 16,
+          "observation": 2
+        },
+        "n_evidence": 26
+      },
+      "O3": {
+        "roles": {
+          "contributing": 5,
+          "observation": 2,
+          "root": 2
+        },
+        "n_evidence": 9
+      },
+      "T4": {
+        "roles": {
+          "root": 1
+        },
+        "n_evidence": 1
+      },
+      "V2": {
+        "roles": {
+          "root": 1
+        },
+        "n_evidence": 1
+      }
+    },
+    "oco-taurus-t8": {
+      "M3": {
+        "roles": {
+          "root": 1
+        },
+        "n_evidence": 1
+      },
+      "T1": {
+        "roles": {
+          "root": 8,
+          "contributing": 1
+        },
+        "n_evidence": 9
+      },
+      "T3": {
+        "roles": {
+          "root": 6
+        },
+        "n_evidence": 6
+      },
+      "T4": {
+        "roles": {
+          "contributing": 2,
+          "root": 1
+        },
+        "n_evidence": 3
+      },
+      "V1": {
+        "roles": {
+          "contributing": 1,
+          "observation": 1
+        },
+        "n_evidence": 2
+      },
+      "V2": {
+        "roles": {
+          "contributing": 2
+        },
+        "n_evidence": 2
+      }
+    },
+    "soho-1998": {
+      "H1": {
+        "roles": {
+          "root": 1,
+          "contributing": 1
+        },
+        "n_evidence": 2
+      },
+      "H3": {
+        "roles": {
+          "contributing": 1
+        },
+        "n_evidence": 1
+      },
+      "M3": {
+        "roles": {
+          "observation": 1
+        },
+        "n_evidence": 1
+      },
+      "M5": {
+        "roles": {
+          "contributing": 2,
+          "observation": 2
+        },
+        "n_evidence": 4
+      },
+      "O1": {
+        "roles": {
+          "root": 5,
+          "observation": 3,
+          "contributing": 7
+        },
+        "n_evidence": 15
+      },
+      "O2": {
+        "roles": {
+          "contributing": 1
+        },
+        "n_evidence": 1
+      },
+      "O3": {
+        "roles": {
+          "contributing": 1
+        },
+        "n_evidence": 1
+      },
+      "T4": {
+        "roles": {
+          "contributing": 1,
+          "observation": 1
+        },
+        "n_evidence": 2
+      },
+      "V1": {
+        "roles": {
+          "observation": 2,
+          "contributing": 4
+        },
+        "n_evidence": 6
+      },
+      "V2": {
+        "roles": {
+          "contributing": 1
+        },
+        "n_evidence": 1
+      }
+    },
+    "spacex-crs7": {
+      "M6": {
+        "roles": {
+          "observation": 1
+        },
+        "n_evidence": 1
+      },
+      "T1": {
+        "roles": {
+          "root": 1
+        },
+        "n_evidence": 1
+      },
+      "T4": {
+        "roles": {
+          "root": 1
+        },
+        "n_evidence": 1
+      }
+    },
+    "starliner-cft": {
+      "H1": {
+        "roles": {
+          "root": 2
+        },
+        "n_evidence": 2
+      },
+      "H2": {
+        "roles": {
+          "contributing": 1
+        },
+        "n_evidence": 1
+      },
+      "H3": {
+        "roles": {
+          "root": 1,
+          "contributing": 5,
+          "observation": 6
+        },
+        "n_evidence": 12
+      },
+      "M1": {
+        "roles": {
+          "contributing": 3,
+          "root": 1
+        },
+        "n_evidence": 4
+      },
+      "M2": {
+        "roles": {
+          "contributing": 4,
+          "root": 10
+        },
+        "n_evidence": 14
+      },
+      "M3": {
+        "roles": {
+          "contributing": 2,
+          "observation": 4
+        },
+        "n_evidence": 6
+      },
+      "M4": {
+        "roles": {
+          "root": 6,
+          "contributing": 14,
+          "observation": 7
+        },
+        "n_evidence": 27
+      },
+      "M5": {
+        "roles": {
+          "root": 6,
+          "contributing": 20,
+          "observation": 24
+        },
+        "n_evidence": 50
+      },
+      "M6": {
+        "roles": {
+          "root": 8,
+          "observation": 10,
+          "contributing": 7
+        },
+        "n_evidence": 25
+      },
+      "O1": {
+        "roles": {
+          "root": 10,
+          "contributing": 6,
+          "observation": 2
+        },
+        "n_evidence": 18
+      },
+      "O2": {
+        "roles": {
+          "contributing": 1,
+          "root": 1
+        },
+        "n_evidence": 2
+      },
+      "O3": {
+        "roles": {
+          "observation": 2
+        },
+        "n_evidence": 2
+      },
+      "O4": {
+        "roles": {
+          "contributing": 7,
+          "observation": 1
+        },
+        "n_evidence": 8
+      },
+      "T1": {
+        "roles": {
+          "root": 19,
+          "contributing": 9
+        },
+        "n_evidence": 28
+      },
+      "T2": {
+        "roles": {
+          "root": 4,
+          "contributing": 2
+        },
+        "n_evidence": 6
+      },
+      "T3": {
+        "roles": {
+          "root": 3,
+          "observation": 2,
+          "contributing": 4
+        },
+        "n_evidence": 9
+      },
+      "T4": {
+        "roles": {
+          "root": 14,
+          "contributing": 28,
+          "observation": 3
+        },
+        "n_evidence": 45
+      },
+      "T5": {
+        "roles": {
+          "root": 5,
+          "observation": 1,
+          "contributing": 4
+        },
+        "n_evidence": 10
+      },
+      "T6": {
+        "roles": {
+          "root": 5,
+          "observation": 1,
+          "contributing": 1
+        },
+        "n_evidence": 7
+      },
+      "V1": {
+        "roles": {
+          "root": 2,
+          "contributing": 22,
+          "observation": 7
+        },
+        "n_evidence": 31
+      },
+      "V2": {
+        "roles": {
+          "observation": 5,
+          "contributing": 17
+        },
+        "n_evidence": 22
+      }
+    },
+    "sts-107-columbia": {
+      "H1": {
+        "roles": {
+          "root": 6,
+          "contributing": 1
+        },
+        "n_evidence": 7
+      },
+      "H2": {
+        "roles": {
+          "contributing": 1,
+          "observation": 1
+        },
+        "n_evidence": 2
+      },
+      "H3": {
+        "roles": {
+          "observation": 4,
+          "contributing": 31,
+          "root": 2
+        },
+        "n_evidence": 37
+      },
+      "M1": {
+        "roles": {
+          "contributing": 33,
+          "root": 9
+        },
+        "n_evidence": 42
+      },
+      "M2": {
+        "roles": {
+          "root": 23,
+          "contributing": 5,
+          "observation": 4
+        },
+        "n_evidence": 32
+      },
+      "M3": {
+        "roles": {
+          "observation": 16,
+          "contributing": 14,
+          "root": 3
+        },
+        "n_evidence": 33
+      },
+      "M4": {
+        "roles": {
+          "root": 1,
+          "contributing": 10,
+          "observation": 11
+        },
+        "n_evidence": 22
+      },
+      "M5": {
+        "roles": {
+          "contributing": 40,
+          "root": 8,
+          "observation": 33
+        },
+        "n_evidence": 81
+      },
+      "M6": {
+        "roles": {
+          "root": 1,
+          "observation": 22,
+          "contributing": 20
+        },
+        "n_evidence": 43
+      },
+      "O1": {
+        "roles": {
+          "contributing": 23,
+          "root": 7,
+          "observation": 9
+        },
+        "n_evidence": 39
+      },
+      "O2": {
+        "roles": {
+          "contributing": 1
+        },
+        "n_evidence": 1
+      },
+      "O3": {
+        "roles": {
+          "observation": 4,
+          "contributing": 3
+        },
+        "n_evidence": 7
+      },
+      "O4": {
+        "roles": {
+          "observation": 3
+        },
+        "n_evidence": 3
+      },
+      "T1": {
+        "roles": {
+          "root": 29,
+          "contributing": 1,
+          "observation": 3
+        },
+        "n_evidence": 33
+      },
+      "T3": {
+        "roles": {
+          "root": 2,
+          "observation": 4,
+          "contributing": 4
+        },
+        "n_evidence": 10
+      },
+      "T4": {
+        "roles": {
+          "root": 9,
+          "contributing": 12,
+          "observation": 3
+        },
+        "n_evidence": 24
+      },
+      "T5": {
+        "roles": {
+          "root": 35,
+          "contributing": 4,
+          "observation": 1
+        },
+        "n_evidence": 40
+      },
+      "V1": {
+        "roles": {
+          "contributing": 14,
+          "observation": 6
+        },
+        "n_evidence": 20
+      },
+      "V2": {
+        "roles": {
+          "observation": 5,
+          "contributing": 8
+        },
+        "n_evidence": 13
+      },
+      "V3": {
+        "roles": {
+          "observation": 1
+        },
+        "n_evidence": 1
+      }
+    },
+    "sts-51l-challenger": {
+      "H1": {
+        "roles": {
+          "root": 10
+        },
+        "n_evidence": 10
+      },
+      "H2": {
+        "roles": {
+          "contributing": 1
+        },
+        "n_evidence": 1
+      },
+      "H3": {
+        "roles": {
+          "contributing": 16
+        },
+        "n_evidence": 16
+      },
+      "M1": {
+        "roles": {
+          "root": 3,
+          "contributing": 25,
+          "observation": 1
+        },
+        "n_evidence": 29
+      },
+      "M2": {
+        "roles": {
+          "root": 3,
+          "contributing": 1
+        },
+        "n_evidence": 4
+      },
+      "M3": {
+        "roles": {
+          "observation": 5,
+          "contributing": 2
+        },
+        "n_evidence": 7
+      },
+      "M4": {
+        "roles": {
+          "contributing": 9,
+          "root": 1,
+          "observation": 3
+        },
+        "n_evidence": 13
+      },
+      "M5": {
+        "roles": {
+          "contributing": 7,
+          "observation": 9,
+          "root": 2
+        },
+        "n_evidence": 18
+      },
+      "M6": {
+        "roles": {
+          "contributing": 15,
+          "observation": 15
+        },
+        "n_evidence": 30
+      },
+      "O1": {
+        "roles": {
+          "contributing": 28,
+          "root": 17,
+          "observation": 11
+        },
+        "n_evidence": 56
+      },
+      "O3": {
+        "roles": {
+          "contributing": 5
+        },
+        "n_evidence": 5
+      },
+      "O4": {
+        "roles": {
+          "contributing": 4,
+          "observation": 2
+        },
+        "n_evidence": 6
+      },
+      "T1": {
+        "roles": {
+          "root": 83,
+          "contributing": 7,
+          "observation": 1
+        },
+        "n_evidence": 91
+      },
+      "T3": {
+        "roles": {
+          "contributing": 6,
+          "observation": 5,
+          "root": 5
+        },
+        "n_evidence": 16
+      },
+      "T4": {
+        "roles": {
+          "root": 12,
+          "contributing": 29,
+          "observation": 4
+        },
+        "n_evidence": 45
+      },
+      "T5": {
+        "roles": {
+          "root": 9,
+          "observation": 3,
+          "contributing": 1
+        },
+        "n_evidence": 13
+      },
+      "V1": {
+        "roles": {
+          "observation": 10,
+          "contributing": 7
+        },
+        "n_evidence": 17
+      },
+      "V2": {
+        "roles": {
+          "observation": 4,
+          "contributing": 2
+        },
+        "n_evidence": 6
+      }
+    },
+    "vega-vv15": {
+      "T1": {
+        "roles": {
+          "root": 2
+        },
+        "n_evidence": 2
+      }
+    },
+    "vega-vv17": {
+      "O3": {
+        "roles": {
+          "contributing": 1
+        },
+        "n_evidence": 1
+      },
+      "T4": {
+        "roles": {
+          "root": 1
+        },
+        "n_evidence": 1
+      },
+      "V1": {
+        "roles": {
+          "contributing": 1
+        },
+        "n_evidence": 1
+      }
+    },
+    "vegac-vv22": {
+      "T3": {
+        "roles": {
+          "root": 1
+        },
+        "n_evidence": 1
+      }
+    },
+    "wire": {
+      "O1": {
+        "roles": {
+          "contributing": 3,
+          "root": 3
+        },
+        "n_evidence": 6
+      },
+      "T1": {
+        "roles": {
+          "root": 3,
+          "contributing": 1
+        },
+        "n_evidence": 4
+      },
+      "T2": {
+        "roles": {
+          "root": 2,
+          "contributing": 2
+        },
+        "n_evidence": 4
+      },
+      "T4": {
+        "roles": {
+          "root": 2,
+          "observation": 1
+        },
+        "n_evidence": 3
+      },
+      "V1": {
+        "roles": {
+          "contributing": 6,
+          "observation": 1
+        },
+        "n_evidence": 7
+      },
+      "V2": {
+        "roles": {
+          "contributing": 1
+        },
+        "n_evidence": 1
+      }
+    }
+  },
+  "pairwise_analogy_top20": {
+    "gslv-f10|vegac-vv22": 1.0,
+    "sts-107-columbia|sts-51l-challenger": 0.8756,
+    "genesis|starliner-cft": 0.8701,
+    "starliner-cft|sts-107-columbia": 0.8207,
+    "starliner-cft|sts-51l-challenger": 0.814,
+    "glory-taurus-t9|oco-taurus-t8": 0.8061,
+    "genesis|sts-107-columbia": 0.8037,
+    "apollo13|sts-107-columbia": 0.7956,
+    "apollo13|sts-51l-challenger": 0.7862,
+    "genesis|hitomi": 0.7823,
+    "hitomi|starliner-cft": 0.7682,
+    "apollo13|genesis": 0.7532,
+    "apollo13|starliner-cft": 0.7396,
+    "apollo13|hitomi": 0.7335,
+    "genesis|sts-51l-challenger": 0.6946,
+    "apollo1-as204|apollo13": 0.6936,
+    "hitomi|sts-107-columbia": 0.6852,
+    "genesis|mars-climate-orbiter": 0.6726,
+    "mars-climate-orbiter|noaa-n-prime": 0.6709,
+    "apollo1-as204|hitomi": 0.6696
+  }
+}
