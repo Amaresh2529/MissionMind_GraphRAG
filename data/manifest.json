@@ -38,7 +38,7 @@
       "source_record": "NTRS 20030093634 (different, 157 MB edition)",
       "source_check": "unverified",
       "licence": "US Government work",
-      "notes": "Local 10.7 MB copy matches neither checked NTRS file; probable origin is the CAIB website archive (govinfo.library.unt.edu/caib, '11 MB'). Volume I was revised 2003-09-08 for typographic errors; edition of the local file unknown.",
+      "notes": "Local 10.7 MB copy matches neither checked NTRS file; probable origin is the CAIB website archive (govinfo.library.unt.edu/caib, '11 MB'). Volume I was revised 2003-09-08 for typographic errors; edition of the local file unknown. 2026-10-13: tried nasa.gov / history.nasa.gov paths by HEAD; no official PDF URL confirmed.",
       "sha256": "b66d10ce2945ed7d3ab824245d67e31af60573896897276288bf3848699d7d70",
       "bytes": 10704354,
       "pages": 248,
@@ -88,7 +88,13 @@
       "pages": 15,
       "mission_ids": [
         "ariane5-501"
-      ]
+      ],
+      "official_copy_found": {
+        "url": "https://esamultimedia.esa.int/docs/esa-x-1819eng.pdf",
+        "bytes": 2168608,
+        "checked": "2026-10-13 (HTTP HEAD only, not downloaded)",
+        "note": "Official ESA host; different file from the MIT mirror used now. Replacing needs user approval, a re-parse and a field-map update."
+      }
     },
     {
       "doc_id": "ExoMars_2016_Schiaparelli_Module_Trajectory",
