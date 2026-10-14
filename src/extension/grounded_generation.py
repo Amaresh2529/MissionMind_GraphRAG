@@ -74,6 +74,64 @@ def mechanism_block(mechs: dict) -> str:
             + "\n".join(lines) + "\n")
 
 
+# P2-2step-hyp (protocol section 11): causes are hypotheses attributed to a named precedent mission
+HYPOTHESIS = ("\nIMPORTANT: the NEW mishap's own investigation is NOT available. A precedent's mechanism is NOT the cause of "
+              "the new mishap; it is only a hypothesis to investigate. For every root cause and contributing factor give "
+              "\"statement\" (the specific mechanism), \"type\": \"analogy_hypothesis\", \"precedent_mission\" (the "
+              "mission of the chunk you cite) and \"evidence\" (chunk ids). Use \"type\": \"established\" ONLY if a cited "
+              "chunk is from the new mishap itself.")
+TYPES = ("established", "analogy_hypothesis", "insufficient_evidence")
+
+
+def _norm_mission(s: str) -> str:
+    return "".join(ch for ch in str(s).lower() if ch.isalnum())
+
+
+def enforce_hypotheses(answer, chunk_map: dict, units_by_id: dict, query_missions: set[str],
+                       category_names: set[str], mission_names: dict) -> tuple[dict | None, dict]:
+    """Deterministic rules of protocol section 11 for root causes / contributing factors; the other keys follow P2."""
+    base, stats = enforce(answer, set(chunk_map), category_names)
+    stats.update({"relabelled_established": 0, "precedent_corrected": 0, "hypothesis_items": 0, "established_items": 0})
+    if base is None or stats["abstain"]:
+        return base, stats
+    out = dict(base)
+    for k, field in (("probable_root_causes", "cause"), ("contributing_factors", "factor")):
+        items = []
+        for it in base.get(k) or []:
+            cited = [chunk_map[c] for c in it["evidence"] if c in chunk_map]
+            cited_m = []
+            for uid in cited:
+                for m in units_by_id[uid].missions:
+                    if m not in cited_m:
+                        cited_m.append(m)
+            typ = str(it.get("type", "")).strip().lower()
+            typ = typ if typ in TYPES else "analogy_hypothesis"
+            if typ == "established" and not (set(cited_m) & query_missions):
+                typ = "analogy_hypothesis"
+                stats["relabelled_established"] += 1
+            if typ == "insufficient_evidence":
+                typ = "analogy_hypothesis"
+            pm_raw = str(it.get("precedent_mission", ""))
+            pm = next((m for m in cited_m if _norm_mission(m) == _norm_mission(pm_raw)
+                       or _norm_mission(mission_names.get(m, "")) == _norm_mission(pm_raw)), None)
+            if pm is None:
+                pm = cited_m[0] if cited_m else None
+                stats["precedent_corrected"] += 1
+            text = str(it.get("statement") or it.get(field) or "").strip()
+            low = text.lower()
+            if low.startswith("by analogy with") and ":" in text:
+                text = text.split(":", 1)[1].strip()
+            if typ == "established":
+                stats["established_items"] += 1
+                rendered = text
+            else:
+                stats["hypothesis_items"] += 1
+                rendered = f"By analogy with {mission_names.get(pm, pm)}: {text}"
+            items.append({field: rendered, "type": typ, "precedent_mission": pm, "evidence": it["evidence"]})
+        out[k] = items
+    return out, stats
+
+
 def is_generic(text: str, category_names: set[str]) -> bool:
     """True when an item is only a taxonomy category name (optionally with a code prefix or a few words)."""
     s = " ".join(str(text).lower().replace("/", " ").split()).strip(" .:-")
@@ -113,7 +171,7 @@ def enforce(answer, allowed: set[str], category_names: set[str] | None = None) -
             ev = ev if isinstance(ev, list) else [ev]
             good = [rg.norm_cite(e) for e in ev if rg.norm_cite(e) in allowed]
             removed += len(ev) - len(good)
-            text = it.get("cause") or it.get("factor") or it.get("action") or ""
+            text = it.get("cause") or it.get("factor") or it.get("action") or it.get("statement") or ""
             if category_names and k != "similar_precedents" and is_generic(text, category_names):
                 generic += 1
                 dropped += 1
@@ -133,7 +191,8 @@ def enforce(answer, allowed: set[str], category_names: set[str] | None = None) -
 
 def draft_rca_p(query: str, passages: list[dict], units_by_id: dict, graph: dict, code_names: dict,
                 mission_evidence: dict, model: str | None = None, specific: bool = False,
-                two_step: bool = False) -> dict:
+                two_step: bool = False, hypothesis: bool = False, query_missions: set[str] | None = None,
+                mission_names: dict | None = None, top_missions: list[str] | None = None) -> dict:
     from config import get_settings
     model = model or get_settings().llm_model
     context, used = rg.pack_context(passages, units_by_id)
@@ -142,12 +201,21 @@ def draft_rca_p(query: str, passages: list[dict], units_by_id: dict, graph: dict
     mechs = extract_mechanisms(chunk_map, units_by_id, model) if two_step else {}
     prompt = GROUNDED_P.format(context=context, graph=graph_block(graph, code_names, mission_evidence, chunk_of)
                                + mechanism_block(mechs), query=query)
-    r = rg._chat(prompt, model, SYSTEM_P + (SPECIFIC if specific else ""))
+    r = rg._chat(prompt, model, SYSTEM_P + (SPECIFIC if specific else "") + (HYPOTHESIS if hypothesis else ""))
     try:
         raw_answer = json.loads(r["raw"])
     except json.JSONDecodeError:
         raw_answer = None
-    enforced, stats = enforce(raw_answer, set(chunk_map), set(code_names.values()) if specific else None)
+    if hypothesis:
+        enforced, stats = enforce_hypotheses(raw_answer, chunk_map, units_by_id, query_missions or set(),
+                                             set(code_names.values()), mission_names or {})
+        if enforced and not stats["abstain"] and top_missions is not None:
+            pms = [it.get("precedent_mission") for k in ("probable_root_causes", "contributing_factors")
+                   for it in enforced.get(k) or []]
+            stats["precedent_in_top5"] = sum(1 for m in pms if m in top_missions[:5])
+            stats["precedent_items"] = len(pms)
+    else:
+        enforced, stats = enforce(raw_answer, set(chunk_map), set(code_names.values()) if specific else None)
     return {"model": model, "chunks_used": len(chunk_map), "chunk_map": chunk_map,
             "prompt_sha256": hashlib.sha256(prompt.encode("utf-8")).hexdigest(),
             "prompt_eval_count": r.get("prompt_eval_count"), "cached": r["cached"],

@@ -65,6 +65,10 @@ def main(argv=None):
                                          "generic_dropped": sum(e.get("generic_dropped", 0) for e in enf),
                                          "abstained": sum(e["abstain"] for e in enf),
                                          "mechanisms_found": sum(len(r.get("mechanisms") or {}) for r in rows)})
+            if any("hypothesis_items" in e for e in enf):
+                report["C6"][f.stem].update({k: sum(e.get(k, 0) for e in enf) for k in (
+                    "hypothesis_items", "established_items", "relabelled_established", "precedent_corrected",
+                    "precedent_in_top5", "precedent_items")})
     if args.run_b:
         b = Path(args.run_b)
         diff = {}

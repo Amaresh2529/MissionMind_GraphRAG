@@ -40,7 +40,7 @@ def main(argv=None):
     ap.add_argument("--systems", nargs="*", default=list(systems.SYSTEMS))
     ap.add_argument("--queries", default=None, help="jsonl with query_id, mission, text; default: automatic dev queries")
     ap.add_argument("--embedder", default=dense.DEFAULT_MODEL, help="model name, or 'none' for BM25-only runs")
-    ap.add_argument("--generate", nargs="*", default=[], choices=["B3", "B0", "P", "P2", "P2-2step"])
+    ap.add_argument("--generate", nargs="*", default=[], choices=["B3", "B0", "P", "P2", "P2-2step", "P2-2step-hyp"])
     ap.add_argument("--proposed", nargs="*", default=[],
                     choices=["P", "P-noverif", "P-nofields", "P-graphonly", "P-noidf", "P-noprf", "P2", "P2-nofilter"],
                     help="Stage 4 method and ablations (need data/processed/factors from extract_factors.py)")
@@ -135,15 +135,18 @@ def main(argv=None):
                 torch.cuda.empty_cache()
             (run / "generation").mkdir()
             units_by_id = {u.id: u for u in units}
+            from retrieval.corpus import manifest as _man
+            mission_names = {m: d["mission"] for d in _man().values() if d["role"] == "primary"
+                             for m in d["mission_ids"] if len(d["mission_ids"]) == 1}
             for g in args.generate:
-                src = "P2" if g == "P2-2step" else g
+                src = "P2" if g in ("P2-2step", "P2-2step-hyp") else g
                 if src in ("B3", "P", "P2") and src not in results:
                     print(f"{g} generation needs {g} retrieval in this run; skipped")
                     continue
                 with timer.step(f"generate_{g}"):
                     rows = []
                     for qi, q in enumerate(queries):
-                        if g in ("P", "P2", "P2-2step"):
+                        if g in ("P", "P2", "P2-2step", "P2-2step-hyp"):
                             from extension.grounded_generation import draft_rca_p
                             pr = results[src][qi]
                             prof = prop.variants["verified"]["profiles"]
@@ -152,7 +155,10 @@ def main(argv=None):
                                    for m in pr["graph"]["mission_analogy"]}
                             names = {c: v["name"] for c, v in fx.codes().items()}
                             out = draft_rca_p(q["text"], pr["passages"], units_by_id, pr["graph"], names, mev,
-                                              specific=(g in ("P2", "P2-2step")), two_step=(g == "P2-2step"))
+                                              specific=(g in ("P2", "P2-2step", "P2-2step-hyp")),
+                                              two_step=(g in ("P2-2step", "P2-2step-hyp")),
+                                              hypothesis=(g == "P2-2step-hyp"), query_missions=_exclusions(q),
+                                              mission_names=mission_names, top_missions=pr["mission_ranking"])
                         else:
                             passages = results["B3"][qi]["passages"] if g == "B3" else None
                             out = rca_generation.draft_rca(q["text"], passages, units_by_id)

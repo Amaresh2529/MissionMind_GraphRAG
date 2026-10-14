@@ -149,3 +149,24 @@ def test_enforce_reports_retention():
            "contributing_factors": [{"factor": "x", "evidence": []}], "similar_precedents": [], "recommended_actions": []}
     out, st = enforce(ans, {"C1"}, {"Procedure deficient or not followed"})
     assert st["cause_items_raw"] == 3 and st["cause_items_kept"] == 1
+
+
+def test_hypothesis_enforcement_relabels_and_attributes():
+    from extension.grounded_generation import enforce_hypotheses
+    units = {u.id: u for u in [_unit("Da::p0001::00", "a"), _unit("Dq::p0001::00", "q")]}
+    chunk_map = {"C1": "Da::p0001::00", "C2": "Dq::p0001::00"}
+    ans = {"probable_root_causes": [
+        {"statement": "Oxygen tank heater switches welded shut", "type": "established", "precedent_mission": "zzz",
+         "evidence": ["C1"]},
+        {"statement": "Procedure deficient or not followed", "type": "analogy_hypothesis", "evidence": ["C1"]},
+        {"statement": "Units mismatch in ground software", "type": "established", "evidence": ["C2"]}],
+        "contributing_factors": [], "similar_precedents": [{"mission": "a", "similarity": "s", "evidence": ["C1"]}],
+        "recommended_actions": []}
+    out, st = enforce_hypotheses(ans, chunk_map, units, {"q"}, {"Procedure deficient or not followed"},
+                                 {"a": "Mission A", "q": "Mission Q"})
+    causes = out["probable_root_causes"]
+    assert causes[0] == {"cause": "By analogy with Mission A: Oxygen tank heater switches welded shut",
+                         "type": "analogy_hypothesis", "precedent_mission": "a", "evidence": ["C1"]}
+    assert causes[1]["type"] == "established" and causes[1]["cause"] == "Units mismatch in ground software"
+    assert len(causes) == 2                                      # category-only item dropped
+    assert st["relabelled_established"] == 1 and st["precedent_corrected"] >= 1 and st["generic_dropped"] == 1
