@@ -1,79 +1,97 @@
-# 🚀 MissionMind: Graph-RAG Aerospace Failure Analysis
+# MissionMind: Evidence-Anchored, Graph-Augmented Retrieval for Spaceflight Mishap Reports
 
-![Python](https://img.shields.io/badge/Python-3.10%2B-blue)
-![Neo4j](https://img.shields.io/badge/Neo4j-Graph_Database-008CC1)
-![NLP](https://img.shields.io/badge/NLP-spaCy-09A3D5)
-![LLM](https://img.shields.io/badge/LLM-Llama_3-000000)
-![FastAPI](https://img.shields.io/badge/Backend-FastAPI-009688)
+MissionMind helps investigators find **earlier spaceflight accidents with similar causes** in long official
+investigation reports, and drafts **evidence-cited hypotheses** about a new mishap. It reproduces the multi-field hybrid
+retrieval method of Kim & Kim (IEEE CASE 2026) as a controlled baseline and adds a **causal-factor graph** whose every
+link is tied to a verified, page-located quote.
 
-> **Project status (2026-10-13): research prototype, Stages 1–4 implemented, Stages 5–6 tooling ready; no experimental result exists yet.**
-> Reportable results need the human benchmark labels in `evalutation/benchmark/` (see `ANNOTATION_GUIDE.md`).
-> Claims further below such as "hallucination-free", "transformer-backed NER", `neo4j-graphrag` and RAGAS describe the
-> original plan and are **not** supported by evidence. Verified state and reports: `docs/research/05`–`09`.
->
-> **Setup:** `pip install -r requirements.txt` (exact versions: `requirements-lock.txt`), `python -m spacy download en_core_web_sm`,
-> Tesseract + Poppler for OCR, `ollama pull llama3`, `cp .env.example .env` pointing `NEO4J_*` at a **fresh** Neo4j 5 instance.
->
-> | Stage | Command |
-> |---|---|
-> | 2 Parse PDFs/HTML into page-aware passages | `python src/pipeline/page_parser.py --run-id <id>`; check with `python scripts/validate_passages.py --run-id <id>` |
-> | 2b Fields from curated maps; load passages into Neo4j | `python scripts/field_map_tool.py apply`; `python scripts/ingest_passages_run.py <id>` |
-> | 3 Base-paper baselines (B1, B2, H-whole, SF-*, B3, B3-bal) | `python scripts/run_retrieval.py --run-id <id> [--generate B3 B0]` |
-> | 4 Causal-factor extraction, then proposed method P and ablations | `python scripts/extract_factors.py --run-id <id>`; `python scripts/run_retrieval.py --run-id <id> --proposed P P-noverif P-nofields P-graphonly P-noidf --generate P` |
-> | 5 Evaluation (refuses without complete human labels) | `python scripts/evaluate.py --run runs/<id> --eval-id <eid>`; `scripts/evaluate_extraction.py`; `scripts/d3_queries.py` + `scripts/evaluate_answers.py` |
-> | 6 Independent audit | `python scripts/audit.py --run runs/<id> --eval runs/<eid> --out runs/<aid>` |
-> | Annotation format check | `python scripts/check_annotations.py` |
-> | Tests | `python -m pytest -m "not integration"` (no services) / `python -m pytest` |
->
-> The Stage 1 system (`run_pipeline.py`, `src/backend/`, `GraphRAGRetriever`) is kept unchanged as baseline B4.
+> **Status (2026-10-14): research prototype.**
+> All stages are implemented, tested and audited. Results so far come from a **10-mission pilot with AI-assisted labels**.
+> A fully human-labelled evaluation is planned before any paper submission.
+> MissionMind **proposes precedent-based hypotheses; it does not establish the root cause of a new mishap.**
 
-**MissionMind** is an advanced Natural Language Processing (NLP) and Knowledge Graph pipeline designed to automatically extract, link, and analyze aerospace failure modes across multiple international space agencies (NASA, ESA, and ISRO). 
+**Full guide (27 pages):** [`docs/MissionMind_Project_Guide.pdf`](docs/MissionMind_Project_Guide.pdf) ·
+**Summary:** [`docs/PROJECT_SUBMISSION_SUMMARY.md`](docs/PROJECT_SUBMISSION_SUMMARY.md) ·
+**Stage reports:** [`docs/research/`](docs/research/)
 
-Traditional Retrieval-Augmented Generation (RAG) systems frequently hallucinate or lose causal structural integrity when processing complex engineering and numerical failure data. MissionMind solves this by mapping unstructured, multi-hundred-page incident reports into an explicit **Failure Mode and Effects Analysis (FMEA) Knowledge Graph**, enabling deterministic, hallucination-free LLM diagnostic querying.
+## What it does
 
----
+1. **Corpus:** 27 documents (23 official investigation reports or summaries from NASA, ESA, JAXA and ISRO, 22 missions,
+   1967–2024), split into 7,117 passages that keep their exact page and character position (OCR for scanned reports).
+2. **Baseline (B3):** BM25 + bge-m3 dense retrieval over three report fields (Summary / Causes / Disposition), fused with
+   Reciprocal Rank Fusion (k = 60). This is a controlled reproduction and adaptation of the base paper.
+3. **Proposed method (P / P2):**
+   - an LLM proposes causal factors, and a factor is kept only if its quote is found word-for-word in the report (2,067 of 2,830 kept);
+   - the kept factors form a graph of missions linked by shared causal categories (22-category taxonomy);
+   - the graph is used as an extra retrieval channel.
+4. **Answers:** must cite retrieved passages. Causes are written as *"By analogy with <mission>: <mechanism>"*. The system
+   abstains when no grounded answer remains.
 
-## ✨ Key Features
+## Pilot results (10 missions, AI-assisted labels; exploratory)
 
-*   **Automated Unstructured Ingestion:** Parses dense, unstructured PDF inquiry reports (e.g., Columbia CAIB, ISRO GSLV-F10 FAC, ESA Ariane 5) into clean text streams.
-*   **FMEA Entity Recognition:** Utilizes transformer-backed NLP pipelines to isolate critical engineering entities: *Mission Phase, Subsystem, Failure Mode, Root Cause, and Mitigation*.
-*   **Cross-Agency Causal Discovery:** Discovers hidden engineering parallels by linking causal failure chains between independent missions (e.g., automatically linking an ISRO telemetry anomaly to a historical ESA flight software failure).
-*   **Hybrid Graph-Vector Retrieval:** Combines Cypher graph traversal (for structural exactness) with dense vector search (for semantic context) using `neo4j-graphrag`.
-*   **Secure Local Synthesis:** Employs **Llama-3-8B** running locally via Ollama to synthesize retrieved engineering data without leaking sensitive diagnostics to external APIs.
+| System | nDCG@5 |
+|---|---|
+| B3 — base-paper method | 0.648 |
+| P — proposed (primary comparison) | 0.638 |
+| P2 — weighted graph channel (secondary) | 0.678 |
+| Graph channel alone (exploratory) | 0.713 |
 
----
+- **P vs B3:** −0.010, 95% CI [−0.068, +0.049], p = 0.78. **No significant difference.**
+- **P2 vs B3:** +0.030, p = 0.65. Not significant.
+- **Length bias:** the text-based systems strongly favour missions with long reports (correlation ≈ 0.6); the graph channel did not (≈ 0.03).
+- **Support check:** quote verification is necessary but not sufficient. An LLM check judged 16% of verified factors unsupported by their quote; a human review (sheet D4) is pending.
+- **Generation:** 0 invalid citations; all generated causes are labelled as precedent-based hypotheses.
 
-## 🏗️ Architecture & Tech Stack
+## Setup
 
-This project is engineered as a modular, pure `.py` backend, designed for seamless DevOps deployment and rigorous academic evaluation.
+```
+pip install -r requirements.txt          # exact versions: requirements-lock.txt
+python -m spacy download en_core_web_sm
+ollama pull llama3
+copy .env.example .env                   # set NEO4J_URI, NEO4J_USERNAME, NEO4J_PASSWORD
+```
+Also needed: Neo4j 5, Tesseract + Poppler (OCR), and the bge-m3 model (downloaded once).
 
-| Component | Technology / Framework | Function |
-| :--- | :--- | :--- |
-| **Data Extraction** | `PyMuPDF` (`fitz`) | High-speed text extraction and sanitization from raw mission PDFs. |
-| **NLP & NER** | `spaCy` | Dependency parsing and custom Named Entity Recognition for FMEA nodes. |
-| **Embeddings** | `Sentence-Transformers` | Generating dense semantic vector representations for text chunks. |
-| **Knowledge Graph** | `Neo4j` & `neo4j-graphrag` | Network graph storage and hybrid Cypher/Vector query execution. |
-| **Synthesis Engine** | `Llama-3 (8B)` / `Ollama` | Factual, grounded summarization of retrieved failure graphs. |
-| **API Backend** | `FastAPI` & `Uvicorn` | RESTful API layer for routing GraphRAG queries. |
-| **Evaluation** | `RAGAS` | Automated academic validation of *Faithfulness* and *Context Precision*. |
+## Commands
 
----
+| Step | Command |
+|---|---|
+| Parse PDFs/HTML into page-aware passages | `python src/pipeline/page_parser.py --run-id ID` |
+| Check provenance | `python scripts/validate_passages.py --run-id ID` |
+| Apply field maps; load passages into Neo4j | `python scripts/field_map_tool.py apply`; `python scripts/ingest_passages_run.py ID` |
+| Extract causal factors; build the factor graph | `python scripts/extract_factors.py --run-id ID`; `python scripts/build_factor_graph.py --run-id ID` |
+| Run baselines, P, P2 and ablations | `python scripts/run_retrieval.py --run-id ID --queries FILE --proposed P P2 P-graphonly ...` |
+| Evaluate (refuses without complete labels) | `python scripts/evaluate.py --run runs/ID --eval-id EID` |
+| Independent audit | `python scripts/audit.py --run runs/ID --eval runs/EID --out runs/AID` |
+| Check annotation sheets | `python scripts/check_annotations.py` |
+| Tests | `python -m pytest` |
 
-## 📂 Repository Structure
+Every run writes its configuration, environment, predictions, metrics and log to `runs/<run_id>/`; runs are never
+overwritten.
 
-```text
-MissionMind_GraphRAG/
-├── data/                       # Local data storage (Ignored in Git)
-│   ├── raw/                    # Original NASA/ISRO/ESA PDFs
-│   ├── processed/              # Cleaned text chunks (.txt)
-│   └── kg_triples/             # Extracted NER entities for Neo4j
-├── src/                        # Core Python Modules
-│   ├── pipeline/               # Extraction & text cleaning scripts
-│   ├── models/                 # Embedding generation & NLP rules
-│   └── graph/                  # Neo4j database connector & Cypher builders
-├── backend/                    # FastAPI web layer
-│   ├── main.py                 
-│   └── routes/                 # GraphRAG search endpoints
-├── evaluation/                 # RAGAS metrics and performance testing
-├── requirements.txt            # Project dependencies
-└── run_pipeline.py             # Main CLI execution script
+## Repository layout
+
+| Folder | Contents |
+|---|---|
+| `src/pipeline/` | Page-aware parsing, OCR, normalisation, field maps |
+| `src/retrieval/` | BM25, dense retrieval, RRF, base-paper systems, RCA generation |
+| `src/extension/` | Causal-factor extraction and verification, factor graph, proposed method, QA |
+| `src/bench/` | Benchmark labels, metrics, statistics |
+| `src/graph/`, `src/backend/`, `run_pipeline.py` | Original Stage 1 system (kept as baseline B4) |
+| `scripts/` | Runners, evaluators, audit, annotation tools |
+| `evalutation/benchmark/` | Human annotation kit (guide, taxonomy, blank sheets), pilot and synthetic labels |
+| `docs/` | Project guide, submission summary, stage reports, commit-ID map |
+| `runs/` | Every experiment with full records |
+| `paper/` | IEEE manuscript skeleton (results pending human labels) |
+
+## Limitations
+
+- The pilot labels are partly written by the AI assistant that built the system, and the pilot has 10 query missions (low power).
+- Field maps and the taxonomy are drafts pending human review.
+- The local 8B model does not reproduce its answers across sessions; reported outputs are read from saved caches.
+- 10 of 23 primary documents are summaries, press releases or slides.
+
+## Base paper
+
+S. Kim and S. Kim, "Multi-Field Hybrid Retrieval-Augmented Generation for Maritime Accident Root Cause Analysis,"
+*Proc. IEEE CASE*, 2026, pp. 238–243, doi:10.1109/CASE69030.2026.11704480.
