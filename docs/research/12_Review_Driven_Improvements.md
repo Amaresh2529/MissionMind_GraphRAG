@@ -93,3 +93,46 @@ before the human labels are used.
 1. P2 is a pre-registered **secondary** system. The primary comparison stays P vs B3.
 2. Reported results must include the 12 held-out missions and the document-type strata, because text-based systems are length-biased.
 3. Generation needs either a stronger generator or a two-step design (extract the mechanism from the cited chunk, then write). Prompting alone did not remove generic answers.
+
+## 7. Third round (second external review; protocol §10 frozen in commit `71487da` before running)
+
+### 7.1 Assessment of the reviews
+
+- **Accurate review (adopted):** keep P vs B3 as the only primary test; validate the support check with humans (D4);
+  measure the coverage cost of dropping generic answers; reconcile guide chapters 15 and 17.
+- **Enthusiastic review (partly adopted):** the two-step generation idea was adopted. The following statements were
+  **not** adopted because they overstate the evidence:
+  - "P2 outperforms B3": +0.030, p = 0.65;
+  - "eradicated the generic problem": items were dropped, not fixed;
+  - "proved the graph ranks by causal similarity": only the absence of length bias was shown;
+  - "100% hallucination-free / eliminating 27% hallucinated citations": the 27% were rejected extraction quotes, and the support check found 16% of verified factors unsupported.
+
+  The pre-specified framing table (protocol §10) now fixes which claims are allowed for each final outcome.
+- **The P2 "29 dropped" vs "28 generic" figures** in the guide are both correct: 28 items dropped as generic plus 1 uncited item.
+
+### 7.2 Two-step generation (`runs/pilot_t1_generation_v3`, check `pilot_generation_check_v3`, audit PASS)
+
+| System | Cause/factor items generated | Category-only items dropped | Kept (retention) | Abstained | Verified mechanism sentences |
+|---|---|---|---|---|---|
+| P | 43 | 0 (P does not filter; all 43 are category names) | 43 (100%) | 0 | — |
+| P2 | 41 | 28 | 12 (29%) | 0 | — |
+| **P2-2step** | 45 | 11 | **25 (56%)** | 1 | 190 |
+
+0 invalid citations for every system. Two-step generation roughly doubles the share of specific items kept.
+
+**Caveat found on inspection (important):** specific is not the same as correct. Because the query mission's own reports are
+excluded (leave-one-mission-out), the specific mechanisms are those of the precedents, and the model presents them as
+the new mishap's "probable root causes". For example, Apollo 13's oxygen-tank failure is given as a root cause for the
+Mars Climate Orbiter query. Some items are still semi-generic and pass the detector ("MALFUNCTION OF ELECTRICAL POWERED
+EQUIPMENT").
+
+**Proposed for the full study** (to be decided by the owner before the D3 labels exist): an output schema in which every
+cause is an explicit hypothesis tied to a named precedent ("by analogy with <mission>: <mechanism>"), plus human
+rating of correctness and relevance (RQ5).
+
+### 7.3 Coverage cost and D4
+
+- Retention (`retained_share`) is now reported by `scripts/verify_stage3.py`.
+- Key-point recall for P2 and P2-2step in QA mode is available (`--qa P2 P2-2step`) and becomes meaningful with the human D3 labels.
+- `scripts/score_d4.py` scores the human D4 review: precision of accepted factors, the correct-but-rejected share, and LLM-vs-human agreement (κ). It refuses until all 150 verdicts are filled.
+

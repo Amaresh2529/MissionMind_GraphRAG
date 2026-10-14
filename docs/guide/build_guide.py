@@ -51,6 +51,7 @@ v2c = J("runs/pilot_eval_t1_v2/comparisons.json")["secondary"]
 bias = J("runs/pilot_bias_t1_v2/bias_diagnostic.json")["systems"]
 sup_path = ROOT / "runs/stage4_support_check/support_stats.json"
 sup = J("runs/stage4_support_check/support_stats.json") if sup_path.exists() else None
+g3 = J("runs/pilot_generation_check_v3/stage3_check.json")["C6"]
 
 
 def f3(x):
@@ -411,11 +412,20 @@ does not (correlation near zero), and P2 reduces the bias. Part of the text syst
 rather than causal similarity; the human benchmark will test this with results split by document type. (This corrects
 an earlier statement that the analogy score favours long reports: pairwise scores do, rankings do not.)</p>
 <h3>Specific answers</h3>
-""" + table(["System", "Cause/factor items", "Only a category name", "Kept"], [
-    ["B3", "31", "0", "31"], ["P", "43", "43 (100%)", "43"], ["<b>P2</b>", "41", "28 (68%)", "<b>12, all specific</b>"]]) + """
-<p>The prompt alone removed only part of the generic answers; the enforcement removed the rest, leaving specific
-mechanisms such as "Frangible joint on one of the forward side fairing rails did not fracture". The cost is shorter
-answers. A two-step design (extract the mechanism from the cited passage first) is the next candidate.</p>
+""" + table(["System", "Cause/factor items", "Dropped as category-only", "Kept (retention)"], [
+    ["P", "43", "0 (not filtered; all 43 are category names)", "43 (100%)"],
+    ["P2", str(g3["P2"]["cause_items_raw"]), str(g3["P2"]["generic_dropped"]),
+     f"{g3['P2']['cause_items_kept']} ({100 * g3['P2']['retained_share']:.0f}%)"],
+    ["<b>P2-2step</b>", str(g3["P2-2step"]["cause_items_raw"]), str(g3["P2-2step"]["generic_dropped"]),
+     f"<b>{g3['P2-2step']['cause_items_kept']} ({100 * g3['P2-2step']['retained_share']:.0f}%)</b>"]]) + f"""
+<p>P2's prompt alone removed only part of the generic answers; enforcement dropped 28 category-only items and 1 uncited
+item, keeping 12. The <b>two-step version</b> (P2-2step, added after a second review and frozen before running) first copies a
+verbatim mechanism sentence from each cited passage ({g3['P2-2step']['mechanisms_found']} found), then writes the analysis: it
+keeps about twice as many specific items. 0 invalid citations for all systems.</p>
+""" + note("<b>Caveat.</b> Specific is not the same as correct. Because the query mission's own reports are excluded, the "
+           "specific mechanisms come from precedents, and the model presents them as the new mishap's causes (for example, "
+           "Apollo 13's oxygen-tank failure offered for the Mars Climate Orbiter query). For the full study, causes should "
+           "be phrased as hypotheses tied to a named precedent, and their correctness rated by humans.", "warn") + """
 <h3>Does the quote support the claimed cause?</h3>
 """ + sup_html)
 
@@ -432,10 +442,18 @@ P2's prompt plus enforcement leaves only specific mechanisms.</li>
 <li><b>Abstention works:</b> only the retrieval-grounded systems declined questions outside the corpus.</li>
 <li><b>Local LLMs are not reproducible across sessions;</b> caching outputs is necessary for honest reporting.</li>
 </ol>
-<h3>Proposed improvements before the full study (to be decided before human labelling)</h3>
-<ul><li>Add the graph-only or a weighted graph list as a pre-registered secondary system.</li>
-<li>A generation prompt that requires specific mechanisms rather than category names.</li>
-<li>Down-weight generic categories (O1, T1, T5) that appear for most queries.</li></ul>
+<h3>Improvements already implemented (chapter 14)</h3>
+<ul><li>P2: graph channel weighted equally with the text channels, plus a generic-category filter (secondary system).</li>
+<li>Specific-mechanism generation with enforcement, and two-step generation (P2-2step).</li>
+<li>Support check of verified factors, D4 human review sheet, bias diagnostic, held-out reporting.</li></ul>
+<h3>Pre-specified framing of the final paper (fixed before any human-labelled result)</h3>\n""" + table(["Final outcome", "Claim allowed"], [
+    ["P vs B3 significant, CI above 0", "The causal-factor graph channel improves analogy retrieval over the reproduced base method"],
+    ["Not significant, CI includes 0", "P performs on par with the base method; P2, graph-only, bias, citation and abstention results reported as secondary"],
+    ["Graph bias near 0, text bias above 0.4 again", "Text retrieval favours missions with long reports; the graph channel did not show this bias in our corpus (not 'unbiased')"],
+    ["Support check / D4", "Report the measured precision; never 'hallucination-free'"],
+]) + """
+<h3>Open design question for the owner (before human labelling)</h3>
+<ul><li>Phrase generated causes as hypotheses tied to a named precedent ("by analogy with mission X: mechanism").</li></ul>
 """)
 
 chapter("limits", "16. Limitations and Honest Scope", """
@@ -463,9 +481,9 @@ chapter("status", "17. Project Status: Done and Remaining", """
     ["Synthetic proof of concept", "Done (not reportable)"],
     ["10-mission pilot with AI-assisted labels", "Done; results in chapter 12"],
     ["Stage reports, submission summary, this guide", "Done"],
-    ["Review-driven improvements (P2, bias diagnostic, support check, D4 sheet)", "Done (chapter 14)"],
+    ["Review-driven improvements (P2, P2-2step, bias diagnostic, support check, D4 sheet and scorer)", "Done (chapter 14)"],
 ]) + "<h3>Remaining (after the project submission)</h3>" + table(["Task", "Who", "Effort"], [
-    ["Decide the three design improvements (chapter 14)", "Owner", "1 h"],
+    ["Decide the open design question (causes as precedent-tied hypotheses)", "Owner", "30 min"],
     ["Review taxonomy and field maps", "Owner", "2–3 h"],
     ["Full human labelling: D2a, D2q, D2b, D1, D3 + second annotator", "Owner (+ 1 person)", "60–80 h + 12 h"],
     ["Rate 40 blind answers (validate the automatic judge)", "Owner", "2 h"],

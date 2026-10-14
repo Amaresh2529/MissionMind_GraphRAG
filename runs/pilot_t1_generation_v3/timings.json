@@ -1,0 +1,13 @@
+{
+  "load_units": 0.33,
+  "load_embedder": 85.38,
+  "build_indexes": 1.98,
+  "query_factors": 0.05,
+  "search_B3": 6.42,
+  "search_P": 9.28,
+  "search_P2": 9.04,
+  "generate_B3": 0.12,
+  "generate_P": 0.2,
+  "generate_P2": 0.24,
+  "generate_P2-2step": 267.26
+}
