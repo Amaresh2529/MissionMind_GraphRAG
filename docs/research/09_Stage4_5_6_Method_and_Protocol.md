@@ -168,3 +168,22 @@ influenced the design, so the final paper reports every result twice:
 | Bias diagnostic: graph ρ near 0, text ρ > 0.4 again | "Text-based retrieval favours missions with long reports; the graph channel did not show this bias in our corpus" — not "unbiased" |
 | Support check / D4 | Report measured precision; never "hallucination-free" |
 
+## 11. Precedent-attributed hypotheses (owner's decision 2026-10-14; frozen before running)
+
+**Trigger:** two-step answers presented a precedent's mechanism as the queried mission's cause (Apollo 13 oxygen tank
+offered for Mars Climate Orbiter). The owner decided, following two external reviews: causes must be stated as
+hypotheses attributed to a named precedent.
+
+**Variant P2-2step-hyp** (secondary; P2-2step results remain unchanged and reported):
+
+| Element | Specification |
+|---|---|
+| Output schema | Each cause/factor item: `statement`, `type` ∈ {established, analogy_hypothesis, insufficient_evidence}, `precedent_mission`, `evidence` (chunk ids) |
+| Deterministic enforcement | `established` is allowed only if a cited chunk belongs to the queried mission. Under leave-one-mission-out this never happens in T1, so such items are **relabelled** `analogy_hypothesis` and counted. `precedent_mission` is set from the cited chunks' missions: the model's value if it matches one, else the mission of the first cited chunk (counted as corrected). Uncited and category-only items are dropped (as P2) |
+| Rendering | The final text of every analogy item is rebuilt by code: `By analogy with <precedent mission>: <statement>`, so a precedent's mechanism can never appear as a bare claim about the queried mission |
+| Abstention | If no item remains, `insufficient_evidence` (abstain) |
+| Measures | Retention; relabelled `established`; corrected precedent attributions; share of items whose precedent is among the system's own top-5 missions (consistency); human-rated correctness and usefulness (D3 and ratings) |
+
+**Benchmark-size risk (external review):** 22 query missions give low power. Results are reported with CIs, per-mission
+values and effect sizes. Extending the benchmark with independently labelled missions is listed as future work.
+
