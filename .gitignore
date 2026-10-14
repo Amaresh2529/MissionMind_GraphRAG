@@ -13,3 +13,6 @@ data/raw_html/*
 .env
 !data/manifest.json
 !data/corpus_candidates.json
+
+# Local archives of downloaded reports (never commit: >100 MB, third-party documents)
+data/*.zip
