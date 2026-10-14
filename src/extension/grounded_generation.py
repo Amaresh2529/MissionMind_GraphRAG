@@ -42,6 +42,38 @@ SPECIFIC = ("\nEach cause, factor and action must name the SPECIFIC component, p
             "'Procedure deficient or not followed') is NOT an acceptable cause and will be discarded.")
 
 
+MECH_SYSTEM = ('You read one excerpt from a spaceflight mishap investigation report. Respond with ONLY a JSON object '
+               '{"mechanism": "<one sentence copied EXACTLY from the excerpt that states a specific failure, defect, '
+               'error or causal mechanism>"} or {"mechanism": "NONE"} if the excerpt states none.')
+
+
+def extract_mechanisms(chunk_map: dict, units_by_id: dict, model: str) -> dict:
+    """Step 1 of two-step generation (protocol section 10): one verbatim mechanism sentence per chunk, kept only if
+    it is found in the chunk text (same quote check as factor extraction)."""
+    from extension.factor_extractor import locate_quote
+    out = {}
+    for cid, uid in chunk_map.items():
+        text = units_by_id[uid].text
+        r = rg._chat(f"Excerpt:\n\"\"\"{text}\"\"\"", model, MECH_SYSTEM)
+        try:
+            m = str(json.loads(r["raw"]).get("mechanism", "")).strip()
+        except (json.JSONDecodeError, AttributeError):
+            m = ""
+        if m and m.upper() != "NONE" and len(m.split()) >= 5:
+            span = locate_quote(text, m)
+            if span:
+                out[cid] = text[span[0]:span[1]]
+    return out
+
+
+def mechanism_block(mechs: dict) -> str:
+    if not mechs:
+        return ""
+    lines = [f"[{c}] {s}" for c, s in sorted(mechs.items(), key=lambda x: int(x[0][1:]))]
+    return ("\nSpecific mechanisms copied verbatim from the evidence (use these to state WHAT failed; cite the chunk id):\n"
+            + "\n".join(lines) + "\n")
+
+
 def is_generic(text: str, category_names: set[str]) -> bool:
     """True when an item is only a taxonomy category name (optionally with a code prefix or a few words)."""
     s = " ".join(str(text).lower().replace("/", " ").split()).strip(" .:-")
@@ -67,8 +99,10 @@ def graph_block(graph: dict, code_names: dict, mission_evidence: dict, chunk_of:
 def enforce(answer, allowed: set[str], category_names: set[str] | None = None) -> tuple[dict | None, dict]:
     """category_names given (P2): items whose text is only a category name are dropped and counted."""
     if not isinstance(answer, dict):
-        return None, {"abstain": True, "dropped_items": 0, "removed_citations": 0, "generic_dropped": 0}
+        return None, {"abstain": True, "dropped_items": 0, "removed_citations": 0, "generic_dropped": 0,
+                      "cause_items_raw": 0, "cause_items_kept": 0}
     out, dropped, removed, generic = copy.deepcopy(answer), 0, 0, 0
+    raw_causes = sum(len(answer.get(k) or []) for k in ("probable_root_causes", "contributing_factors"))
     for k in KEYS:
         kept = []
         for it in out.get(k) or []:
@@ -92,18 +126,22 @@ def enforce(answer, allowed: set[str], category_names: set[str] | None = None) -
     abstain = not out["probable_root_causes"] and not out["similar_precedents"]
     if abstain:
         out = {k: [] for k in KEYS} | {"abstained": "insufficient evidence in the retrieved precedents"}
-    return out, {"abstain": abstain, "dropped_items": dropped, "removed_citations": removed, "generic_dropped": generic}
+    kept_causes = 0 if abstain else sum(len(out.get(k) or []) for k in ("probable_root_causes", "contributing_factors"))
+    return out, {"abstain": abstain, "dropped_items": dropped, "removed_citations": removed, "generic_dropped": generic,
+                 "cause_items_raw": raw_causes, "cause_items_kept": kept_causes}
 
 
 def draft_rca_p(query: str, passages: list[dict], units_by_id: dict, graph: dict, code_names: dict,
-                mission_evidence: dict, model: str | None = None, specific: bool = False) -> dict:
+                mission_evidence: dict, model: str | None = None, specific: bool = False,
+                two_step: bool = False) -> dict:
     from config import get_settings
     model = model or get_settings().llm_model
     context, used = rg.pack_context(passages, units_by_id)
     chunk_map = {f"C{i}": uid for i, uid in enumerate(used, 1)}
     chunk_of = {uid: c for c, uid in chunk_map.items()}
-    prompt = GROUNDED_P.format(context=context, graph=graph_block(graph, code_names, mission_evidence, chunk_of),
-                               query=query)
+    mechs = extract_mechanisms(chunk_map, units_by_id, model) if two_step else {}
+    prompt = GROUNDED_P.format(context=context, graph=graph_block(graph, code_names, mission_evidence, chunk_of)
+                               + mechanism_block(mechs), query=query)
     r = rg._chat(prompt, model, SYSTEM_P + (SPECIFIC if specific else ""))
     try:
         raw_answer = json.loads(r["raw"])
@@ -113,7 +151,7 @@ def draft_rca_p(query: str, passages: list[dict], units_by_id: dict, graph: dict
     return {"model": model, "chunks_used": len(chunk_map), "chunk_map": chunk_map,
             "prompt_sha256": hashlib.sha256(prompt.encode("utf-8")).hexdigest(),
             "prompt_eval_count": r.get("prompt_eval_count"), "cached": r["cached"],
-            "answer": enforced, "raw_answer": raw_answer, "enforcement": stats,
+            "answer": enforced, "raw_answer": raw_answer, "enforcement": stats, "mechanisms": mechs,
             "checks": rg.validate(enforced if enforced and not stats["abstain"] else None, set(chunk_map))
             if not stats["abstain"] else {"schema_ok": True, "citations": 0, "invalid_citations": 0,
                                           "items": 0, "uncited_items": 0},

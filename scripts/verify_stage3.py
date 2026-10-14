@@ -57,6 +57,14 @@ def main(argv=None):
             "chunks_used_min_max": [min(r["chunks_used"] for r in rows), max(r["chunks_used"] for r in rows)],
             "prompt_tokens_max": max((r["prompt_eval_count"] or 0) for r in rows),
         }
+        enf = [r["enforcement"] for r in rows if r.get("enforcement") and "cause_items_raw" in r["enforcement"]]
+        if enf:                                  # retention after enforcement (protocol section 10)
+            raw_n, kept_n = sum(e["cause_items_raw"] for e in enf), sum(e["cause_items_kept"] for e in enf)
+            report["C6"][f.stem].update({"cause_items_raw": raw_n, "cause_items_kept": kept_n,
+                                         "retained_share": round(kept_n / raw_n, 4) if raw_n else None,
+                                         "generic_dropped": sum(e.get("generic_dropped", 0) for e in enf),
+                                         "abstained": sum(e["abstain"] for e in enf),
+                                         "mechanisms_found": sum(len(r.get("mechanisms") or {}) for r in rows)})
     if args.run_b:
         b = Path(args.run_b)
         diff = {}

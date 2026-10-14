@@ -40,11 +40,11 @@ def main(argv=None):
     ap.add_argument("--systems", nargs="*", default=list(systems.SYSTEMS))
     ap.add_argument("--queries", default=None, help="jsonl with query_id, mission, text; default: automatic dev queries")
     ap.add_argument("--embedder", default=dense.DEFAULT_MODEL, help="model name, or 'none' for BM25-only runs")
-    ap.add_argument("--generate", nargs="*", default=[], choices=["B3", "B0", "P", "P2"])
+    ap.add_argument("--generate", nargs="*", default=[], choices=["B3", "B0", "P", "P2", "P2-2step"])
     ap.add_argument("--proposed", nargs="*", default=[],
                     choices=["P", "P-noverif", "P-nofields", "P-graphonly", "P-noidf", "P-noprf", "P2", "P2-nofilter"],
                     help="Stage 4 method and ablations (need data/processed/factors from extract_factors.py)")
-    ap.add_argument("--qa", nargs="*", default=[], choices=["B0", "B3", "P"],
+    ap.add_argument("--qa", nargs="*", default=[], choices=["B0", "B3", "P", "P2", "P2-2step"],
                     help="answer the queries as D3 questions (QA schema) with these systems")
     ap.add_argument("--allow-draft-fields", action="store_true")
     args = ap.parse_args(argv)
@@ -136,22 +136,23 @@ def main(argv=None):
             (run / "generation").mkdir()
             units_by_id = {u.id: u for u in units}
             for g in args.generate:
-                if g in ("B3", "P", "P2") and g not in results:
+                src = "P2" if g == "P2-2step" else g
+                if src in ("B3", "P", "P2") and src not in results:
                     print(f"{g} generation needs {g} retrieval in this run; skipped")
                     continue
                 with timer.step(f"generate_{g}"):
                     rows = []
                     for qi, q in enumerate(queries):
-                        if g in ("P", "P2"):
+                        if g in ("P", "P2", "P2-2step"):
                             from extension.grounded_generation import draft_rca_p
-                            pr = results[g][qi]
+                            pr = results[src][qi]
                             prof = prop.variants["verified"]["profiles"]
                             qc = set(pr["graph"]["query_codes"])
                             mev = {m: {c: [e["passage_id"] for e in prof[m][c]["evidence"]] for c in qc & set(prof[m])}
                                    for m in pr["graph"]["mission_analogy"]}
                             names = {c: v["name"] for c, v in fx.codes().items()}
                             out = draft_rca_p(q["text"], pr["passages"], units_by_id, pr["graph"], names, mev,
-                                              specific=(g == "P2"))
+                                              specific=(g in ("P2", "P2-2step")), two_step=(g == "P2-2step"))
                         else:
                             passages = results["B3"][qi]["passages"] if g == "B3" else None
                             out = rca_generation.draft_rca(q["text"], passages, units_by_id)
@@ -170,17 +171,18 @@ def main(argv=None):
             (run / "qa").mkdir(exist_ok=True)
             units_by_id = {u.id: u for u in units}
             for s_ in args.qa:
-                if s_ != "B0" and s_ not in results:
+                src_qa = "P2" if s_ == "P2-2step" else s_
+                if s_ != "B0" and src_qa not in results:
                     print(f"QA with {s_} needs {s_} retrieval in this run; skipped")
                     continue
                 with timer.step(f"qa_{s_}"):
                     rows = []
                     for qi, q in enumerate(queries):
                         kw = {}
-                        if s_ in ("B3", "P"):
-                            kw = {"passages": results[s_][qi]["passages"], "units_by_id": units_by_id}
-                        if s_ == "P":
-                            pr = results["P"][qi]
+                        if s_ in ("B3", "P", "P2", "P2-2step"):
+                            kw = {"passages": results[src_qa][qi]["passages"], "units_by_id": units_by_id}
+                        if s_ in ("P", "P2", "P2-2step"):
+                            pr = results[src_qa][qi]
                             prof = prop.variants["verified"]["profiles"]
                             qc = set(pr["graph"]["query_codes"])
                             kw |= {"graph": pr["graph"], "code_names": {c: v["name"] for c, v in fx.codes().items()},

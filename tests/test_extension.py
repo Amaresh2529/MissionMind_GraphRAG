@@ -91,7 +91,8 @@ def test_enforce_drops_uncited_and_abstains():
     out, st = enforce(ans, {"C1", "C2"})
     assert out["probable_root_causes"] == [{"cause": "x", "evidence": ["C1"]}]
     assert out["recommended_actions"] == [] and st == {"abstain": False, "dropped_items": 2, "removed_citations": 2,
-                                                            "generic_dropped": 0}
+                                                            "generic_dropped": 0,
+                                                            "cause_items_raw": 2, "cause_items_kept": 1}
     out2, st2 = enforce({k: [] for k in ("probable_root_causes", "contributing_factors", "similar_precedents",
                                          "recommended_actions")}, {"C1"})
     assert st2["abstain"] and "abstained" in out2
@@ -126,3 +127,25 @@ def test_p2_weights_graph_list_and_filters_generic_codes(tmp_path, monkeypatch):
     assert out_nf["graph"]["generic_codes_dropped"] == [] and out_nf["graph"]["query_codes"] == ["M2", "V1"]
     out_p = prop2.search("P", "seal test", qf, exclude_missions={"a"})
     assert out_p["graph"]["graph_weight"] == 1.0
+
+
+def test_mechanism_block_and_qa_generic_enforcement():
+    from extension.grounded_generation import mechanism_block
+    from extension.qa import _enforce
+    assert mechanism_block({}) == ""
+    blk = mechanism_block({"C10": "the seal eroded", "C2": "the switch welded shut"})
+    assert blk.index("[C2]") < blk.index("[C10]")
+    ans = {"answer": "a", "abstain": False, "key_points": [
+        {"point": "Hardware design deficiency", "evidence": ["C1"]},
+        {"point": "Switches rated for 28 V could not open at 65 V", "evidence": ["C1"]}]}
+    out, st = _enforce(ans, {"C1"}, {"Hardware design deficiency"})
+    assert [k["point"] for k in out["key_points"]] == ["Switches rated for 28 V could not open at 65 V"]
+    assert st["generic_dropped"] == 1 and st["points_raw"] == 2 and st["points_kept"] == 1
+
+
+def test_enforce_reports_retention():
+    ans = {"probable_root_causes": [{"cause": "Procedure deficient or not followed", "evidence": ["C1"]},
+                                    {"cause": "Valve seat cracked under thermal cycling", "evidence": ["C1"]}],
+           "contributing_factors": [{"factor": "x", "evidence": []}], "similar_precedents": [], "recommended_actions": []}
+    out, st = enforce(ans, {"C1"}, {"Procedure deficient or not followed"})
+    assert st["cause_items_raw"] == 3 and st["cause_items_kept"] == 1
