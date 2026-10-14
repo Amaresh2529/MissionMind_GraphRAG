@@ -146,3 +146,25 @@ influenced the design, so the final paper reports every result twice:
 
 **Not adopted:** dropping the 3-field lists and fusing the graph only with B3-bal (suggested by one review). Choosing a combination because it scored well on the pilot would be tuning on evaluation data. P-graphonly and P2 already cover the "stronger graph" hypothesis.
 
+## 10. Third round (frozen 2026-10-14, before any run of it)
+
+**Trigger:** a second round of external reviews of the 27-page guide.
+
+| Change | Specification | Status |
+|---|---|---|
+| **Two-step generation (P2-2step)** | Step 1: for each packed chunk, the LLM copies the single sentence that states a specific failure mechanism (or NONE); the sentence must be found verbatim in the chunk, else discarded. Step 2: the P2 prompt also receives these verified mechanism sentences keyed by chunk id. Same enforcement as P2 (uncited and category-only items dropped) | Secondary generation system |
+| P2 and P2-2step in QA (D3) | Same specificity rule and generic-item enforcement as RCA drafting | Lets key-point recall measure the coverage cost of enforcement |
+| Retention metric | Share of generated cause/factor items kept after enforcement (`retained_share`), reported next to key-point recall | Reported for P, P2, P2-2step |
+| D4 scoring | `scripts/score_d4.py`: precision of accepted factors, share of rejected factors that were correct, agreement of the LLM support check with the human verdicts (Cohen's κ), false accepts/rejects | Reported for RQ1 |
+
+**Unchanged:** the primary test remains **P vs B3, nDCG@5**. P2 and P2-2step are secondary. No system is promoted to "final method" because it scored highest on the pilot.
+
+### Pre-specified framing of the final paper (written before any human-labelled result exists)
+
+| Final outcome on the human benchmark | Claim allowed |
+|---|---|
+| P − B3 significant (primary), CI > 0 | "The causal-factor graph channel improves cross-mission analogy retrieval over the reproduced base method" |
+| Primary not significant, CI includes 0 | "P performs on par with the base method" (equivalence is NOT claimed unless the CI lies within ±0.05). Secondary results (P2, graph-only, bias diagnostic, citation enforcement, abstention) are reported as **secondary/exploratory**, with their measured numbers only |
+| Bias diagnostic: graph ρ near 0, text ρ > 0.4 again | "Text-based retrieval favours missions with long reports; the graph channel did not show this bias in our corpus" — not "unbiased" |
+| Support check / D4 | Report measured precision; never "hallucination-free" |
+
