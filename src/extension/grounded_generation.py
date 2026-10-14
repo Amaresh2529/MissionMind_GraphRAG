@@ -36,6 +36,21 @@ Draft the root cause analysis for the NEW mishap. Every item must cite the ids o
 
 KEYS = ("probable_root_causes", "contributing_factors", "similar_precedents", "recommended_actions")
 
+# P2 generation (fixed 2026-10-13 after the pilot: 21/43 of P's causes were bare category names)
+SPECIFIC = ("\nEach cause, factor and action must name the SPECIFIC component, process or decision that failed and "
+            "HOW it led to the mishap, in the words of the evidence. A taxonomy category name alone (for example "
+            "'Procedure deficient or not followed') is NOT an acceptable cause and will be discarded.")
+
+
+def is_generic(text: str, category_names: set[str]) -> bool:
+    """True when an item is only a taxonomy category name (optionally with a code prefix or a few words)."""
+    s = " ".join(str(text).lower().replace("/", " ").split()).strip(" .:-")
+    for name in category_names:
+        n = " ".join(name.lower().replace("/", " ").split())
+        if s == n or (s.startswith(n) and len(s.split()) <= len(n.split()) + 2) or s.endswith(n) and len(s.split()) <= len(n.split()) + 2:
+            return True
+    return False
+
 
 def graph_block(graph: dict, code_names: dict, mission_evidence: dict, chunk_of: dict) -> str:
     lines = []
@@ -49,10 +64,11 @@ def graph_block(graph: dict, code_names: dict, mission_evidence: dict, chunk_of:
     return "\n".join(lines) if lines else "- none found"
 
 
-def enforce(answer, allowed: set[str]) -> tuple[dict | None, dict]:
+def enforce(answer, allowed: set[str], category_names: set[str] | None = None) -> tuple[dict | None, dict]:
+    """category_names given (P2): items whose text is only a category name are dropped and counted."""
     if not isinstance(answer, dict):
-        return None, {"abstain": True, "dropped_items": 0, "removed_citations": 0}
-    out, dropped, removed = copy.deepcopy(answer), 0, 0
+        return None, {"abstain": True, "dropped_items": 0, "removed_citations": 0, "generic_dropped": 0}
+    out, dropped, removed, generic = copy.deepcopy(answer), 0, 0, 0
     for k in KEYS:
         kept = []
         for it in out.get(k) or []:
@@ -63,6 +79,11 @@ def enforce(answer, allowed: set[str]) -> tuple[dict | None, dict]:
             ev = ev if isinstance(ev, list) else [ev]
             good = [rg.norm_cite(e) for e in ev if rg.norm_cite(e) in allowed]
             removed += len(ev) - len(good)
+            text = it.get("cause") or it.get("factor") or it.get("action") or ""
+            if category_names and k != "similar_precedents" and is_generic(text, category_names):
+                generic += 1
+                dropped += 1
+                continue
             if good:
                 kept.append({**it, "evidence": good})
             else:
@@ -71,11 +92,11 @@ def enforce(answer, allowed: set[str]) -> tuple[dict | None, dict]:
     abstain = not out["probable_root_causes"] and not out["similar_precedents"]
     if abstain:
         out = {k: [] for k in KEYS} | {"abstained": "insufficient evidence in the retrieved precedents"}
-    return out, {"abstain": abstain, "dropped_items": dropped, "removed_citations": removed}
+    return out, {"abstain": abstain, "dropped_items": dropped, "removed_citations": removed, "generic_dropped": generic}
 
 
 def draft_rca_p(query: str, passages: list[dict], units_by_id: dict, graph: dict, code_names: dict,
-                mission_evidence: dict, model: str | None = None) -> dict:
+                mission_evidence: dict, model: str | None = None, specific: bool = False) -> dict:
     from config import get_settings
     model = model or get_settings().llm_model
     context, used = rg.pack_context(passages, units_by_id)
@@ -83,12 +104,12 @@ def draft_rca_p(query: str, passages: list[dict], units_by_id: dict, graph: dict
     chunk_of = {uid: c for c, uid in chunk_map.items()}
     prompt = GROUNDED_P.format(context=context, graph=graph_block(graph, code_names, mission_evidence, chunk_of),
                                query=query)
-    r = rg._chat(prompt, model, SYSTEM_P)
+    r = rg._chat(prompt, model, SYSTEM_P + (SPECIFIC if specific else ""))
     try:
         raw_answer = json.loads(r["raw"])
     except json.JSONDecodeError:
         raw_answer = None
-    enforced, stats = enforce(raw_answer, set(chunk_map))
+    enforced, stats = enforce(raw_answer, set(chunk_map), set(code_names.values()) if specific else None)
     return {"model": model, "chunks_used": len(chunk_map), "chunk_map": chunk_map,
             "prompt_sha256": hashlib.sha256(prompt.encode("utf-8")).hexdigest(),
             "prompt_eval_count": r.get("prompt_eval_count"), "cached": r["cached"],

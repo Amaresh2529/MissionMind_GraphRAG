@@ -21,6 +21,13 @@ Ablations (Proposal v2, Sec. 13):
   P-graphonly   graph list alone; missions ranked by analogy score ("graph only")
   P-noidf       analogy with all idf weights = 1 ("idf off")
   P-noprf       query codes from the query text only (no expansion through B3's top passages)
+
+Second-generation variants (fixed 2026-10-13 BEFORE any new run, after the pilot showed the graph list being
+diluted as 1 of 7 equal RRF lists; external reviews suggested the same; nothing below was tuned):
+  P2            B3 lists + graph list with RRF weight GRAPH_WEIGHT = 6 (the graph gets the same total voice as
+                the six text lists together) + expanded query codes present in >= GENERIC_DF of all missions'
+                profiles are dropped (generic categories), unless stated directly in the query
+  P2-nofilter   P2 without the generic-code filter
 """
 
 from dataclasses import dataclass
@@ -30,6 +37,8 @@ from retrieval.systems import SYSTEMS, Retriever
 
 ROLE_ORDER = fg.ROLE_ORDER
 PRF_N = 20
+GRAPH_WEIGHT = 6.0      # = number of B3 lists; pre-specified, not tuned
+GENERIC_DF = 0.8        # share of missions; pre-specified, not tuned
 
 
 @dataclass
@@ -90,6 +99,13 @@ class ProposedRetriever:
             codes, prf = set(qf.codes), set()
         else:
             codes, prf = self.expanded_codes(qf, query, exclude_missions, variant)
+        dropped = set()
+        if system == "P2":
+            prof = self.variants[variant]["profiles"]
+            n = len(prof)
+            generic = {c for c in codes if sum(c in p_ for p_ in prof.values()) >= GENERIC_DF * n}
+            dropped = generic - set(qf.codes)
+            codes = codes - dropped
         qx = QueryFactors(codes, qf.accepted, qf.rejected)
         glist, mscores = self.graph_list(qx, allowed, exclude_missions, variant, use_idf=(system != "P-noidf"))
         if system == "P-graphonly":
@@ -99,13 +115,15 @@ class ProposedRetriever:
             lists = self.base._lists(base_cfg, query, allowed)
             if glist:
                 lists["graph/factors"] = glist
+        weights = {"graph/factors": GRAPH_WEIGHT} if system in ("P2", "P2-nofilter") else None
         if lists:
-            out = self.base.assemble(system, lists, k)
+            out = self.base.assemble(system, lists, k, weights)
         else:
             out = {"system": system, "lists": [], "passages": [], "mission_ranking": []}
         if system == "P-graphonly":           # missions by analogy score directly
             out["mission_ranking"] = [m for m, _ in sorted(mscores.items(), key=lambda x: (-x[1], x[0]))]
         out["graph"] = {"query_codes": sorted(codes), "direct_query_codes": sorted(qf.codes),
+                        "generic_codes_dropped": sorted(dropped), "graph_weight": weights["graph/factors"] if weights else 1.0,
                         "prf_codes": sorted(prf), "graph_list_len": len(glist),
                         "fallback_to_base": not glist,
                         "mission_analogy": {m: round(s, 4) for m, s in sorted(mscores.items(), key=lambda x: (-x[1], x[0]))[:10]}}

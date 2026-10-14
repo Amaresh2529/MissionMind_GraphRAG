@@ -1,0 +1,1121 @@
+﻿item,passage_text,claimed_statement,code,role,quote,factor_correct_yes_no,quote_supports_yes_no,note
+F001,"Two of the 45 left wing strain gauges also recorded an anomaly around EI+500 to EI+580, but their readings were not erratic or off-scale until late in the re-entry, at EI+930. Strain gauge V12G9048A was far forward on a cross spar in the front of the wheel well on the lower spar cap, and strain gauge V12G9049A was on the upper spar cap. Their responses appear to be the actual strain at that location until their failure at EI+935. The exposed wiring for most of the left wing sensors runs along the front of the spar that crosses in front of the left wheel well. The very late failure times of these two sensors indicate that the damage did not spread into the wing cavity forward of the wheel well until at least EI+935, which implies that the breach was aft of the cross spar. Because the cross spar attaches to the transition spar behind RCC panel 6, the breach must have been aft (outboard) of panel 6. The superheated air likely burned through the outboard wall of the wheel well, rather than snaking forward and then back through the vent at the front of the wheel well. Had the gases flowed through the access opening in the cross spar and then through the vent into the wheel well, it is unlikely that the lower strain gauge wiring would have survived.",Exposed wiring failed due to superheated air,T1,root,"The very late failure times of these two sensors indicate that the damage did not spread into the wing cavity forward of the wheel well until at least EI+935, which implies that the breach was aft of the cross spar.",,,
+F002,"Boeing thermal model did not include the effects of jet firings before CFT. - The thruster performance from OFT1 & OFT2 experienced greater than expected temperatures and continuing to operate lead to a false sense of security of the thruster capability/performance. - Flight instrumentation locations for thermal sensors were limited and in different locations than the locations for RCS Thruster ground firings. - OFT1 & OFT2 investigations did not include RCS/OMAC thruster firings and fault trees were not validated through subsequent ground testing. - Limitations of flight measurements and data rates made troubleshooting RCS difficult. - For OFT2, NASA/Boeing did not have tools to measure thruster degradation, simply treated the thruster as failed/operational.",Thermal model didn't include jet firing effects,V1,contributing,Boeing thermal model did not include the effects of jet firings before CFT.,,,
+F003,"Debris Assessment Team Co-Chair Pam Madera distributed an e-mail summarizing the day's events and outlined the agenda for Tuesday's first formal Debris Assessment Team meeting. Included on the agenda was the desire to obtain on-orbit images of Columbia's left wing.
+
+According to an 11:39 a.m. entry in the Mission Evaluation Room Manager's log:
+
+""...the debris ʻblob' is estimated at 20"" +/-10"" in some direction, using the Orbiter hatch as a basis. It appears to be similar size as that seen in STS-112. There will be more comparison work done, and more info and details in tomorrow's report.""
+
+This entry illustrates, in NASA language, an initial attempt by managers to classify this bipod ramp foam strike as close to being within the experience base and therefore, being almost an ""in-family"" event, not necessarily a safety concern. While the size and source of STS-107 debris was somewhat similar to what STS-112 had experienced, the impact sites (the wing versus the Solid Rocket Booster) differed - a distinction not examined by mission managers.",initial attempt to classify foam strike as 'in-family' event,M2,contributing,"an initial attempt by managers to classify this bipod ramp foam strike as close to being within the experience base and therefore, being almost an 'in-family' event, not necessarily a safety concern",,,
+F004,"model not being anchored in test, it is unknown the extent to which RCS Soakback contributed to the potential failures. This will be unknown until a new model is generated and is anchored in test. Upon evaluation of the evidence, Pulse Train (Duty Cycle/Pulse Width) has been labelled as a credible cause. A3.2 Inadequate Thruster Fail-Off FDIR identifies the possibility that the FDIR used to determine thruster health may have caused or contributed to the observed thruster fail-offs. A3.2.1 Detection identifies the possibility that the FDIR may have falsely detected a thruster failure. A3.2.2 Execution identifies that FDIR may have improperly executed and removed an incorrect thruster or unable to remove a failed thruster. The purpose of the Thruster Fail-off FDIR is to monitor the pressure in the combustion chamber and determine if a thruster is considered healthy. The threshold for determining if a thruster is healthy is if the chamber pressure is higher than . This is to prevent a build-up of Fuel Oxidizer Residual Propellant (FORP) and potential detonation of associated FORP if the thruster is operated below healthy threshold. The thruster fail-off FDIR inhibited the unhealthy jets, which resulted in loss of 6DOF. It takes a minimum of 3 RCS thruster failures in the same direction in order to cause a loss of 6DOF. The failed-off RCS jets not producing adequate thrust, in conjunction with low Pc, demonstrates that the failures were real and FDIR responded appropriately. The thruster fail-off FDIR was determined not to be a cause or contributor to the thruster fail offs.",model not being anchored in test,V2,contributing,"model not being anchored in test, it is unknown the extent to which RCS Soakback contributed to the potential failures.",,,
+F005,"The Board's investigation of what caused the Columbia accident thus begins in the fields of East Texas but reaches more than 30 years into the past, to a series of economically and politically driven decisions that cast the Shuttle program in a role that its nascent technology could not support. To understand the cause of the Columbia accident is to understand how a program promising reliability and cost efficiency resulted instead in a developmental vehicle that never achieved the fully operational status NASA and the nation accorded it.",economically and politically driven decisions,M2,root,a series of economically and politically driven decisions,,,
+F006,"generated by a fired separation bolt. This means that the force at which a separation bolt is predicted to come apart during flight could exceed the bolt catcher's ability to safely capture the bolt. If these results are consistent with further tests, the factor of safety for the bolt catcher system would be 0.956 - far below the design requirement of 1.4 (that is, able to withstand 1.4 times the maximum load ever expected in operation).
+
+Every bolt catcher must be inspected (via X-ray) as a final step in the manufacturing process to ensure specification compliance. There are specific requirements for film type/ quality to allow sufficient visibility of weld quality (where the dome is mated to the mounting flange) and reveal any flaws. There is also a requirement to archive the film for several years after the hardware has been used. The manufacturer is required to evaluate the film, and a Defense Contract Management Agency representative certifies that requirements have been met. The substandard performance of the Summa bolt catchers tested by NASA at Marshall Space Flight Center and subsequent investigation revealed that the contractor's use of film failed to meet quality requirements and, because of this questionable quality, there were ""probable"" weld defects in most of the archived film. Film of STS-107's bolt catchers (serial numbers 1 and 19, both Summa-manufactured), was also determined to be substandard with ""probable"" weld defects (cracks, porosity, lack of penetration) on number 1 (left Solid Rocket Booster to External Tank attach point). Number 19 appeared adequate, though the substandard film quality leaves some doubt.",substandard performance of bolt catchers,T3,contributing,The substandard performance of the Summa bolt catchers tested by NASA at Marshall Space Flight Center and subsequent investigation revealed that the contractor's use of film failed to meet quality requirements,,,
+F007,"inappropriate thruster control parameters. As a result, it thrusted in an unexpected manner, and it is
+
+estimated that the satellite rotation was accelerated. 【Presumed Mechanism 3】
+
+(5)Since the rotation speed of the satellite exceeded the designed speed, parts of the satellite that are
+
+vulnerable to the rotation such as solar array paddles (SAPs), Extensible Optical Bench (EOB) and
+
+others separated off from the satellite. There is high possibility that the both SAPs had broken off at
+
+their bases and were separated. 【Presumed Mechanism 4】",inappropriate thruster control parameters,T6,root,"inappropriate thruster control parameters. As a result, it thrusted in an unexpected manner",,,
+F008,"OSMA's Critique of NOAA N-Prime Mishap Investigation Board Report
+
+OSMA''s Recommendations
+
+| OSMA's MIB MIB Finding | ~~ OSMA's Opinion MIB's Recommendations OSMA's Opinion | Categorization | Report Text Do Facets For Each Finding Concerning | of Finding Substantiate Whether | Findings ) Na. (From pg. 58-59 Finding/Comments? (From pg. 89 or 93 of Recommendation of MIB Repon) the MIB report) Addresses Finding *In some cases, the MIB report listed multiple recommendations for nm a finding These are shown below. | | Observation L-i3 Ineffective No facts to substantiate RS) Establish an effective | R5) This should not System Safety this. safety program with a be construed to be Program. well-defined system safety | limited to the safety policy and mandatory organization. ft Tequirements. Safety applies to the whole awareness must be organization. promoted to all levels of | the organization through a | training program ora training module within other applicable training - programs, - Root Cause G-1 The government Fact does not substantiate | G-R4) Establish effective | G-R4) Yes, the quality assurance | the entire finding. Some oversight guideline for recommendation and safety facts included in the MIB I&T operations planning, addresses the finding. provided report conflict with procedure development, ""inadequate finding. and procedure execution oversight"". discipline. Oversight MIB report paragraph : function became 5.2.4 states that DCMA or ""issue driven"". QA is not required on ] Procedures rarely | procedures at any tevel. reviewed; non-conformances not | Pacis de support thal there trended; rarely was little audit and make impromptu | inspection. inspections. | | Observation G2 In substituting for | Faets conflict: G-R2) Establish and G-R2) Yes, the",Inadequate oversight,M3,root,Oversight MIB report paragraph : function became 'issue driven'. QA is not required on procedures at any level.,,,
+F009,"4.7.1 Observations and Recommendations
+
+Observation 1: Safety Review-1 NASA performed the phase I Safety Review Process (SRP) with Boeing during the CPC funding phase of CST-100, AFTER the SM PDR. The SM propulsion design reviewed by the NASA safety panel did not support meeting the two-fault tolerance for reentry requirement.
+
+- A Phase I Safety Review should typically be performed prior to Preliminary Design Review (PDR) in accordance with SSP 30599 such that the Safety review process can inform the preliminary design. The CST-100 Service Module Propulsion Subsystem PDR was held in January 2012 during the CCiCap/CPC contract timeframes which was a year before the Phase I SRP which began in May, 2013 under the Certification Products Contract (CPC). - The Phased Safety process was contractually levied as documented in DCC1-00459-01
+
+o Section 3.7 states the CCTS safety reviews will follow the phased safety process, which meets the intent of SSP 30599, ""Safety Review Process"" o Section 6.4 Figure 10 'Characteristics of Phased Hazard Reports' states the following characteristics for Phase I Safety data:",Phased safety process did not follow typical sequence,M4,observation,,,,
+F010,"Changes in Space Shuttle Program structure contributed to the accident in a second important way. Despite the constraints that the agency was under, prior to both accidents NASA appeared to be immersed in a culture of invincibility, in stark contradiction to post-accident reality. The Rogers Commission found a NASA blinded by its ""Can-Do"" attitude,27 a cultural artifact of the Apollo era that was inappropriate in a Space Shuttle Program so strapped by schedule pressures and shortages that spare parts had to be cannibalized from one vehicle to launch another.28 This can-do attitude bolstered administrators' belief in an achievable launch rate, the belief that they had an operational system, and an unwillingness to listen to outside experts. The Aerospace Safety and Advisory Panel in a 1985 report told NASA that the vehicle was not operational and NASA should stop
+
+treating it as if it were.29 The Board found that even after the loss of Challenger, NASA was guilty of treating an experimental vehicle as if it were operational and of not listening to outside experts. In a repeat of the pre-Challenger warning, the 1999 Shuttle Independent Assessment Team report reiterated that ""the Shuttle was not an ʻoperational' vehicle in the usual meaning of the term.""30 Engineers and program planners were also affected by ""Can-Do,"" which, when taken too far, can create a reluctance to say that something cannot be done.",NASA's 'can-do' attitude and unwillingness to listen to outside experts contributed to the accident,M5,contributing,"This can-do attitude bolstered administrators' belief in an achievable launch rate, the belief that they had an operational system, and an unwillingness to listen to outside experts.",,,
+F011,"SRM Project.
+
+NASA Project Managers and Contractor Support Personnel (including Morton
+
+(1) Boyd C. Brinton, Manager, Space Booster Project, MTI;
+
+(2) Lawrence O. Wear, Manager, SRM Project Office, Marshall.
+
+@ Launch Scrub. Decision is made to scrub due to high crosswinds at launch site. :
+
+@ Post-Scrub Discussion. All appropriate personnel are polled as to feasibility to launch again with 24-hour cycle and it results in no SRB constraints for
+
+launch at 9:38 AM, 28 January 1986.
+
+@ Request is made for all participants to report any constraints.
+
+@ Conversation. Wear asks Brinton if Thiokol had any concerns about predicted low temperatures and about what Thiokol had said about cold temperature effects following January 1985 flight 51-C.
+
+@ Brinton telephones Thompson and other MTT personnel to ask them to determine if there were concerns based on predicted weather conditions. Ebel-ing and other engineers are notified and asked for evaluation.",Conversation and communication between personnel,H3,observation,Wear asks Brinton if Thiokol had any concerns...,,,
+F012,"@ Conversation at Kennedy. McDonald continues to argue for delay.
+
+@ McDonald challenges Reinartz's rationale that SRM is qualified ai 40 degrees F. to 90 degrees F., and Mulloy's explanation that Propellant Mean Bulk Temperatures are within specifications.
+
+@ Second Teleconference (Contd). Thiokol indicates it had reassessed; temperature effects are concern, but data is inconclusive.
+
+@ Kilminster reads the rationale for recommending launch.
+
+@ Thiokol recommends launch.
+
+@ Hardy requests that Thiokol put in writing their recommendation and send it by fax to both Kennedy and Marshall.",Thiokol recommends launch despite concerns,O1,contributing,@ Thiokol recommends launch.,,,
+F013,"OFT-2 Mission (5/19/2022 - 5/25/2022)
+
+The SM propulsion system uses a Fault Detection, Isolation, and Recovery (FDIR) scheme where it checks for thruster chamber pressure as an indicator of thruster status. Any chamber pressure less than 110 pounds per square inch absolute (psia) is considered ""off"" or degraded by FDIR. Any pressure above this limit and the thruster is considered to be ""on"". The Integrated Propulsion Controller (IPC) and the Flight Management Computer (FMC) use these measurements to determine if the thruster is on when it has been commanded off (thruster failed on) or off when commanded on (thruster failed off). For the OFT-2 mission, the persistence, or the number of failed thruster flags required for the FMC to remove a thruster from the availability table was set to two. This means that the IPC had to detect low chamber pressure readings and set the ""failed off flag"" twice for the FMC to read on the data bus.",FDIR scheme did not detect thruster failure correctly,O1,observation,,,,
+F014,"refurbishment is performed in the three Orbiter Processing Facilities at Kennedy. One was occupied by Discovery during its scheduled extended maintenance. This left two to serve the other three Orbiters over the next several months. The 2003 schedule indicated plans to move Columbia (after its return from STS-107) from an Orbiter Processing Facility to the Vehicle Assembly Building and back several times in order to make room for Atlantis (OV-104) and Endeavour (OV-105) and prepare them for missions. Moving an Orbiter is tedious, time-consuming, carefully orchestrated work. Each move introduces an opportunity for problems. Those 2003 moves were often slated to occur without a day of margin between them - another indication of the additional risks that managers were willing to incur to meet the schedule.
+
+The effect of the compressed schedule was also evident in the Mission Operations Directorate. The plans for flight controller staffing of Mission Control showed that of the seven flight controllers who lacked current certifications during STS-107 (see Chapter 4), five were scheduled to work the next mission, and three were scheduled to work the next three missions (STS-114, -115, and -116). These controllers would have been constantly either supporting missions or supporting mission training, and were unlikely to have",insufficient staffing and training,M6,observation,"These controllers would have been constantly either supporting missions or supporting mission training, and were unlikely to have",,,
+F015,"L
+
+Event
+
+Oxygen tank no. 1 pressure drops 4.2 psi. 2.8-amp rise in total fuel cell current. X, Y, and Z accelerations in CM indicate 1.17¢, 0.65g and 0.65g, respectively.
+
+1.8-Second Data Loss Loss of telemetry begins. Master caution and warning triggered by de main bus B undervoltage. Alarm is turned off in 6 seconds. All indications are that the cryogenic oxygen tank no. 2 lost pressure in this time period",Procedure deficient or not followed,O1,root,Alarm is turned off in 6 seconds.,,,
+F016,"Both engineers felt that the potential ramifications of landing with two flat tires had not been sufficiently explored. They discussed using Shuttle simulator facilities at Ames Research Center to simulate a landing with two flat tires, but initially ruled it out because there was no formal request from the Mission Management Team to work the problem. Because astronauts were training in the Ames simulation facility, the two engineers looked into conducting the simulations after hours. Daugherty contacted his management on Tuesday, January 28, to update them on the plan for after-hours simulations. He reviewed previous data runs, current simulation results, and prepared scenarios that could result from main landing gear problems.
+
+The simulated landings with two flat tires that Daugherty eventually conducted indicated that it was a survivable but very serious malfunction. Of the various scenarios he prepared, Daugherty shared the most unfavorable only with his management and selected Johnson Space Center engineers. In contrast, his favorable simulation results were forwarded to a wider Johnson audience for review, including Rodney Rocha and other Debris Assessment Team members. The Board is disappointed that Daugherty's favorable scenarios received a wider distribution than his discovery of a potentially serious malfunction, and also does not approve of the reticence that he and his managers displayed in not notifying the Mission Management Team of their concerns or his assumption that they could not displace astronauts who were training in the Ames simulator.",failure to communicate concerns to Mission Management Team,H3,contributing,"The Board is disappointed that Daugherty's favorable scenarios received a wider distribution than his discovery of a potentially serious malfunction, and also does not approve of the reticence that he and his managers displayed in not notifying the Mission Management Team of their concerns or his assumption that they could not displace astronauts who were training in the Ames simulator.",,,
+F017,"Proximate Cause: Material of the seals within the Starliner helium manifolds were incompatible with NTO. Recommendation: R.5 [Boeing, CCP] - Material Degradation-1 When testing is complete, formally disposition SM Helium Leaks IFA and address residual risk of NTO exposure to an seal in this location. Show via test, or analysis that the proximate cause of the failure is rectified, through replacement of the seal, to complete necessary Starliner vehicle certification. AR Phase 2 Material exposure testing while in flight like configuration (a and testing of the replacement material), resulted in degradation of an O-ring, but not a leak. NTO-Max testing is currently being performed to quantify seal performance. The test is gathering data on O-ring material mechanical response to NTO and O-ring leak prevention performance in the presence of controlled NTO concentration(s) while in flight like the RCS and OMAC configurations. This may confirm/validate proximate cause but testing it not yet complete. Additional testing may include validating the proximate cause of the helium leakage that occurred by demonstrating that the RCS/OMAC flange both can act as a transport for NTO to the O-ring of the flanges, and that the O-ring will degrade to then generate the observed leaks, with the expected amount of NTO and duration necessary to mirror the CFT wetted time. Recommendation: R.6 [Boeing, CCP, ISSP] - Material Degradation-2 When testing is complete, formally disposition the SM Helium Leaks IFA and address residual risk of material incompatibility in the remaining softgoods (EPDM/Vespel) in the helium system. Show how these materials will meet the required 210-day mission duration, as well as ground wetted time, and complete necessary Starliner vehicle certification. The STAR Report has identified this as a potential contributor and generated action tracked in A-13/A-14.",Material of the seals within the Starliner helium manifolds were incompatible with NTO.,T3,contributing,"""Material of the seals within the Starliner helium manifolds were incompatible with NTO.""",,,
+F018,"SRB CRITICAL ITEMS LIS] Poot 2 ot 2
+
+TPL I TTL ET OTE TINY CA IEE ET - "" | ' lmmegi ate Supevatom SH 19 ONCVET BACETER Costecaliry Category oj Aesction Tine on far
+
+Pree: 4-68
+
+troaw Code; 16-1601.
+
+*ease, P/N (See Ratention Rationale) 4 e Fase PIM IEAM) Ffojae WweAPT
+
+Iepen Ngete:
+
+RATIONALE FOR RETENTION (CONT O}
+
+A laboratory test program demonstrated the aoility of the Oering to coerate successfully when eatruded | into gas well over these encountered in this Ocoring sonlication. Uniform gaps of 1/8eincn and over (Trae 13485) successfully witnstood pressures of 1660 psi. The Hycresurst Pregram (TWR-11664) and the Structural Tes? Program (STAel} for the standard weignt case (Tw2-12051) and she Ligntwetgnt Case Joint Certification fest (TwRo 12229) a1] have shown that the O-ring can withstand 8 minitue of fovr pressurizations before damage
+
+%@ bhe Ping can permit any leakege. |
+
+Further demonstration of the capability ef joint seating ts found fn she hydro-praof testing of new and ' refurpigned case segnents. Over 540 joints have been exgosed co liould pressurtzations at Sevels exceeding motor MEGP with no leakage exoerienced past the srirary ring, The only occasions where leskace was experienced was during refuroisrment of STS-} where two stiffener segments were severely damuged during eavity eollagse at water impact.",O-ring design inadequate for conditions,T1,root,Uniform gaps of 1/8 inch and over successfully withstood pressures of 1660 psi.,,,
+F019,"The message was followed by directives from James A. (Gene) Thomas, Deputy Director of Launch and Landing Operations at Kennedy on January 2, 1986; by the National Space Transportation System Program Manager, Arnold Aldrich, on January 3; by William R. Lucas, the Marshall Center Director, on January 7; and by the Marshall Shuttle Projects Office on January 8. Each of these implementing directives prescribed for Level ITI the preparatory steps for the Flight Readiness Review.
+
+The Flight Readiness Review was held, as scheduled, on Januarv 15. On the following day, Aldrich issued the schedule for the combined Level I/Mission Management Team meetings; he also announced plans for the Mission Management Team meetings continuing throughout the mission and included the schedule for the L-1 review.
+
+On January 23, Moore issued a directive stating that the Flight Readiness Review had been conducted on the 15th and that 51-L was ready to fly pending closeout of open work, satisfactory countdown, and completion of remaining Flight Readiness Review action items, which were to be closed out during the L-1 meeting. No problems with the Solid Rocket Booster were identified.",directives prescribed for Level ITI preparatory steps for Flight Readiness Review,O1,contributing,prescribed for Level ITI the preparatory steps for the Flight Readiness Review,,,
+F020,"connector. Evidence indicates that although the connector was not in its originally stored position after the accident, it probably was there during the initial stages of the fire. (2) AC Bus 2 Voltage Anomaly
+
+A momentary increase in AC bus 2 voltage on all three phases was noted at approximately 9 seconds before the report of fire, and at the same time telemetry data from equipment powered from AC bus 2 showed abnormalties. These were:
+
+1. Dropout of C-band decoder and transmitter outputs for 1.7 seconds.
+
+2. Momentary dropout of VHF-FM transmitter.
+
+3. Fluctuation of rotation controller null outputs.
+
+4. Gas chromatograph telemetry signal transient. Other equipment connected to AC bus 2 at this time had no data monitoring capability that would detect effects of power transients.
+
+The power distribution system was in the standard configuration at the time of the anomaly. DC bus A was receiving power from the ground DC ''A""' power supply. This power supply in turn powered AC bus 1 through inverter no. 1. Similarly DC bus B received power from the DC ''B'' power supply and powered AC bus 2 through inverter no. 2.",momentary increase in AC bus 2 voltage,T4,contributing,A momentary increase in AC bus 2 voltage on all three phases was noted at approximately 9 seconds before the report of fire...,,,
+F021,"system in the Phase I level Hazard Reports provided by Boeing and jointly reviewed with the NASA Safety community. This flaw in the design was carried forward through all Starliner safety review phases leading to CFT.
+
+The Prop System Integrated System Review (August 21, 2012) hd iii and sufficient level of fault tolerance for the He system in the doghouses.
+
+The propulsion schematic from PDR (2013) also has . During this time, the planned deorbit configuration was communicated to be two fault tolerant and that only six RCS thrusters would be utilized for maneuvers. Additionally, only four OMACs would be utilized at any one time. Below is the updated schematic and the proposed operating modes from PDR.
+
+Figure 61: Prop Schematic from 2012
+
+The propulsion schematic from CDR ) indicates two helium manifolds per doghouse, and GNC Subsystem CDR which occurred in April of 2014 now indicates the 4 OMAC config and 8 RCS jet config for Deorbit fault tolerance. This design change between PDR and CDR is not flagged as an impact to the fault tolerance requirement for deorbit. The oxidizer and fuel lines still meet the necessary requirements, it's only the helium, used to pressurize tanks and pneumatically control valves, that is affected.",design change not flagged as impact to fault tolerance requirement,M4,contributing,The design change between PDR and CDR is not flagged as an impact to the fault tolerance requirement for deorbit.,,,
+F022,"Specifically: Require contract structures chosen for commercial services to have and determine NASA expectations for quick and ready access to subcontractor design experts at all stages of system design and especially to aide in efficient anomaly resolution. Evaluate contract structures and shared accountability implementation with providers to determine what level of insight/oversight NASA needs during the design phase, test flight phase and into operational phases. Ensure contract structure enables subcontractors to provide insight during missions for anomaly resolution. Else, accept the risk that the data is not accessible.",Inadequate contractor/government oversight or insight,M5,observation,Evaluate contract structures and shared accountability implementation with providers to determine what level of insight/oversight NASA needs...,,,
+F023,"Ariane 501 Inquiry Board report page 9
+
+-. When the project test philosophy was defined, the importance of having the SRIs in the loop was recognized and a decision was taken to select method B above. At a later stage of the programme (in 1992), this decision was changed. It was decided not to have the actual SRIs in the loop for the following reasons :
+
+- The SRIs should be considered to be fully qualified at equipment level
+
+- The precision of the navigation software in the On-Board Computer depends critically on the precision of the SRI measurements. In the ISF, this precision could not be achieved by the electronics creating the test signals.
+
+- The simulation of failure modes is not possible with real equipment, but only with a model.
+
+- The base period of the SRI is 1 millisecond whilst that of the simulation at the ISF is 6 milliseconds. This adds to the complexity of the interfacing electronics and may further reduce the precision of the simulation.",simulation not representative due to equipment level differences,V2,contributing,"The precision of the navigation software in the On-Board Computer depends critically on the precision of the SRI measurements. In the ISF, this precision could not be achieved by the electronics creating the test signals.",,,
+F024,"Judson A. Lovingood, Deputy Manager, Shuttle Projects Office, MSFC.
+
+At Kennedy Space Center
+
+Stanley R. Reinartz, Manager, Shuttle Projects Office, MSFC.
+
+Event
+
+@ Telephone Conversation. Cecil Houston calls Lovingood, informing him of the concerns of temperature on the O-rings and asks him to establish a telecon with: .
+
+(1) Stanley R. Reinartz, Manager, Shuttle Projects Office, MSFC (at Kennedy);
+
+(2) Lawrence B. Mulloy, Manager, SRB Project, MSFC (at Kennedy); (3) George Hardy, Deputy Director, Science and Engineering (at Marshall); (4) Thiokol Wasatch Division personnel.
+
+@ Telephone Conversation. Lovingood calls Reinartz to inform him of planned 5:45 PM (EST) teleconference.
+
+@ Lovingood proposes that Kingsbury (Director of Science and Engineering, MSFC), participate in teleconference.
+
+@ First Teleconference. Concerns regarding temperature effects on the O-rings are discussed. /
+
+@ MTI is of the opinion launch should be delayed until Noon or afternoon.
+
+@ It is decided that another telecon at 8:15 PM will be set up to transmit the data to all of the parties and to have more personnel involved.",Procedure deficient or not followed,O1,contributing,Concerns regarding temperature effects on the O-rings are discussed.,,,
+F025,"(1) Facts: JAXA has confirmed the following events on March 26.
+
+-03:02 - 03:13 after the USC pass: The Kalman filter was reset by time-line
+
+commands after completion of the maneuver.
+
+-05:49 - 06:02 in the MGN pass: The IRU bias rate was maintained at 21.7 deg/h.",Kalman filter reset by time-line commands,O1,observation,The Kalman filter was reset by time-line commands after completion of the maneuver.,,,
+F026,"In wing locations other than left RCC panels 8 and 9, the deposits were generally thinner and relatively uniform. This suggests no particular breach location other than in left RCC panels 8 and 9. These other slag deposits contained primarily aluminum and aluminum oxides mixed with A-286, Inconel, and Cerachrome, with no consistent layering. This mixing of multiple metals in no apparent order suggests concurrent melting and re-depositing of all leading-edge components, which is more consistent with post-breakup damage than the organized melting and depositing of materials that occurred near the original breach at left RCC panels 8 and 9. RCC panel 9-left also differs from the rest of the locations analyzed. It was similar to panel 8-left on the inboard side, but more like the remainder of the samples analyzed on its outboard side. The deposition of molten deposits strongly suggests the original breach occurred in RCC panel 8-left.",post-breakup damage,T5,root,"This mixing of multiple metals in no apparent order suggests concurrent melting and re-depositing of all leading-edge components, which is more consistent with post-breakup damage...",,,
+F027,"Pyro Electronics Analysis: Failure Mechanism Determination
+
+The initial step in this investigation, conducted at GSFC with support from JPL and SDL, was to
+
+review the design schematics and the parts list. The schematics were analyzed for possible sources of
+
+error combined with known characteristics of the parts used to implement the design. Several design
+
+issues became apparent and these areas were probed further, to see if there was a feasible explanation for
+
+the mishap. Initially, components available in the GSFC laboratory were tested and evaluated; based on
+
+the preliminary results, the experiments and characterization was repeated on flight spare components,
+
+obtained from Space Dynamics Laboratory (SDL), lending credibility to theories. (Volume II, Appendix
+
+F provides the full text of Richard Katz's analysis of the failure mechanism.)
+
+Analysis of the power-on transient characteristics of the Field Programmable Gate Array (FPGA)
+
+used to implement the logic in the Pyro Box Electronics demonstrated that a specific signature emerged; a",design issues were not thoroughly tested or evaluated,V1,contributing,"Several design issues became apparent and these areas were probed further, to see if there was a feasible explanation for the mishap.",,,
+F028,"APPENDIX B
+
+The post-flight battery weight of 1.810 kg indicated a decrease of about 250 grams compared to the as-built weight (ATLO battery weight was 2.060 kg). Later procedures would show that this was due to loss of active materials from the cells due to venting.
+
+Battery voltages were measured at JPL and read 0.379 volts and 0.206 volts, lower than the last measurements taken at UTTR. This would indicate that (a) the batteries continued to discharge, (b) the internal impedance of the batteries increased, or (c) possibly more SO2 was released from the individual cells after the first measurement. Battery isolation resistance was measured between the battery terminals (through the electrical connector) and chassis; there was adequate isolation.
+
+There are four AD 590 temperature sensors on the battery, two on each side at diagonally
+
+opposing corners. The performance of all the sensors was measured using the circuit shown in Figure B-5.",loss of active materials from cells due to venting,T3,observation,Later procedures would show that this was due to loss of active materials from the cells due to venting.,,,
+F029,"General Accounting Office Review - 1990
+
+A 1990 review by the U.S. General Accounting Office questioned the effectiveness of NASA's new safety organi",NASA's new safety organization was ineffective,M5,observation,A 1990 review by the U.S. General Accounting Office questioned the effectiveness of NASA's new safety organization,,,
+F030,"To understand the effects of potential contaminants on sealing performance, tests were conducted employing metal contaminants simulating those generated in the segment assembly tests. The tests were to determine if joints with metal shavings positioned between the O-ring and sealing surface could pass a static leak check but fail under dynamic conditions. The contaminants that passed the 50 pounds per square inch leak check were between 0.001 and 0.003 inches thick. Testing to determine seal performance under dynamic conditions with these representative con-taminations is not complete. However, the possibility cannot be dismissed that contamination generated under some assembly conditions could pass a leak check and yet cause the seal to leak under dynamic conditions.
+
+A second concern was structural damage to the clevis due to abnormal loading during assembly. An analysis was made to determine the deflections and stresses experienced during assembly of the right Solid Rocket Motor aft center segment to the aft segment. These stresses were then used in a fracture mechanics analysis of the O-ring groove to detemine the maximum flaw size that would not fail under the 51-L case segment life cycle history. Included in this analvsis was the single point load needed to deflect a suspended",structural damage to clevis due to abnormal loading during assembly,T4,contributing,An analysis was made to determine the deflections and stresses experienced during assembly of the right Solid Rocket Motor aft center segment to the aft segment.,,,
+F031,"- Operational Tempo - Pressure to work towards decision need dates that were continually pushed out, led the workforce to become chronically fatigued over time. The quantity of meetings also increased after unanticipated anomalies were encountered which made it difficult to get the proper experts to all meetings, further hindering communication and team interaction. One interview used the word chaotic to describe the operational pace for everyone trying to work towards the finishing line of getting the vehicle undocked. This is also related to issues brought up regarding communication of unrealistic launch dates and the consequences (e.g. frustration, fatigue) on the workforce and crew (e.g. morale).
+
+- Operational Risk Management - Potential issues identified years prior were not addressed which indicates failure of risk management processes at the organizational level. After Starliner docked to the ISS ongoing circumstances weighing risk became contentions and lengthy. An interview noted the use of "" engineering judgement"" as a foundation for moving forward without engineering data which indicates an inadequate risk assessment.",failure to address identified issues,M5,contributing,- Potential issues identified years prior were not addressed which indicates failure of risk management processes at the organizational level.,,,
+F032,"The basic External Tank was designed more than 30 years ago. The design process then was substantially different than it is today. In the 1970s, engineers often developed particular facets of a design (structural, thermal, and so on) one after another and in relative isolation from other engineers working on different facets. Today, engineers usually work together on all aspects of a design as an integrated team. The bipod fitting was designed first from a structural standpoint, and the application processes for foam (to prevent ice formation) and Super Lightweight Ablator (to protect from high heating) were developed separately. Unfortunately, the structurally optimum fitting design, along with the geometric complexity of its location (near the flange between the intertank and the liquid hydrogen tank), posed many problems in the application of foam and Super Lightweight Ablator that would lead to foam-ramp defects.
+
+Although there is no evidence that substandard methods were used to qualify the bipod ramp design, tests made nearly three decades ago were rudimentary by today's standards and capabilities. Also, testing did not follow the often-used engineering and design philosophy of ""Fly what you test and test what you fly."" Wind tunnel tests observed the aerodynamics and strength of two geometries of foam bipod enclosures (flat-faced and a 20-degree ramp), but these tests were done on essentially solid foam blocks that were not sprayed onto the complex bipod fitting geometry. Extensive material property tests gauged the strength, insulating potential, and ablative characteristics of foam and Super Lightweight Ablator specimens.",tests made nearly three decades ago were rudimentary by today's standards,V1,contributing,tests made nearly three decades ago were rudimentary by today's standards and capabilities.,,,
+F033,"Area 2
+
+A view of the damage at Area 2 is shown in figure 5. The aluminized Mylar wrap was charred black in this area. The shrink tubing on the exterior of the aluminized Mylar wrap (shown at the right in figure 5) was blackened and melted adjacent to this. A power cable wire melt bead was observed penetrating through the aluminized Mylar wrap as indicated by the arrow in figure 5.",power cable wire melt bead penetrated through aluminized Mylar wrap,T4,contributing,A power cable wire melt bead was observed penetrating through the aluminized Mylar wrap as indicated by the arrow in figure 5.,,,
+F034,"Thiokol was selected to receive the NASA contract to design and build the Solid Rocket Boosters on November 20, 1973.4 The booster was the largest Solid Rocket Motor ever produced in the United States; it was also the first solid motor program managed by NASA's Marshall Space Flight Center in Huntsville, Alabama.
+
+Costs were the primary concern of NASA's selection board, particularly those incurred early in the prograrn.",Costs were the primary concern,M1,root,"Costs were the primary concern of NASA's selection board, particularly those incurred early in the program.",,,
+F035,"The RCCA investigation found that excessive lubricant was observed on SM6 and SM7, although this could lead to some leakage, testing conducted at MSFC did not show leakage at levels consistent with those seen during CFT.",excessive lubricant on SM6 and SM7,O2,contributing,"although this could lead to some leakage, testing conducted at MSFC did not show leakage at levels consistent with those seen during CFT",,,
+F036,"Figure 7-2: Latent Failures Contributory to the Decision Error of the RTE
+
+1) Decision Error RTE ""assure the configuration"" of the TOC based on paper work rather than following procedure to verify torque values
+
+4) Adverse Mental State Complacency: Routine operation; Pre-conceived notion that the TOC was already properly configured External constraints: Signed up for 1⁄2 day of work
+
+5) Substandard Crew Resources Poor communication between DMSP and TIROS project in sharing of GSE Poor documentation and red-tagging for GSE configuration control Extensively redlined procedures Ambiguous use of ""assure"" in the procedure
+
+6) Planned Inappropriate Operation Team formed late in harried fashion
+
+with atypical mix of personnel and poor test documentation
+
+8) Failed to Correct Known Problems Failed to recognize and correct GSE configuration control problems Failed to recognize and correct poor procedure development/redline process Failed to correct similar problems documented in NCRs and CARs
+
+11) Organizational Climate Dynamic I&T environment thrives on optimal schedule utilization Operational program/routine operation fosters complacent attitudes and lax discipline",Decision error based on paperwork rather than procedure,H1,root,assure the configuration of the TOC based on paper work rather than following procedure to verify torque values,,,
+F037,"Views of power cable strand 4 are shown in figures 26 and 28. The strand end was bent and individual wires were sheared, consistent with contact with another object. Some charring was observed on the insulator adjacent to the bare strand, and where the insulator was charred, the exposed strand was tinted slightly brown mixed with some black deposits.
+
+Views of power cable strand 5 are shown in figures 29 and 30. The strand end was bent and individual wires were sheared, consistent with contact with another object. Black deposits were observed on the fractured ends, and where deposits were not present, the strands had a light brown color. The insulator adjacent to the exposed bare strand was charred. Black fibrous deposits also were observed in the area.
+
+Views of power cable strand 6 are shown in figures 31 and 32. The wires of the strand end were flattened, bent, and sheared, consistent with contact with another object. The insulator adjacent to the bare strand was discolored slightly brown.",contact with another object,T4,root,consistent with contact with another object,,,
+F038,"impacts the safety culture. This directly relates and is impacted by Organizational Factor 6: Insufficient Recognition of Risk. This was also identified by the STAR team. There is already a recommendation from the STAR: ""Use as is dispositions should only be considered after exhausting options for hardware changes. Increase the rigor in evaluating UAs by investing in more hardware testing, recreation of failure modes, to validate fault tree closure rationale."" The closure plan for the CCP Program for the associated action (A-22), is which is ""Evaluate NASA participation in Boeing PMRB to ensure proper elevation of risk acceptance."" Observation 1: Mission/Appropriate usage definitions Boeing did not define the thruster usage requirements adequately to subcontractors. As a result, the thruster profiles/operations, given to vendor/subcontractor, did not cover the worst-case operation. When combined with the insufficient definition of the thermal environment, the firing sequences for CFT (which were not worst case) resulted in the thrusters exceeding their qualified temperatures. This observation stems from the RCCA team investigation 2.4.2 Thruster Usage/Conops Definition. This was previously tracked as a top risk prior to OFT1 for NASA as the risk of insufficient thermal environment correlation for the worst case predictions was highlighted as the top risk during Boeing RCS/OMAC (Engine) Qual Issues for CFT in September of 2019 (PCB-19-383).",Insufficient recognition of risk,M6,observation,impacts the safety culture. This directly relates and is impacted by Organizational Factor 6: Insufficient Recognition of Risk,,,
+F039,"3a) Routine Violation PQC and PA signed-off the procedure step of ""assure the configuration"" of the TOC without witnessing and verifying
+
+3b) Routine Violation Safety Representative not present as called for in the procedure
+
+SATELLITE FELL
+
+OFF TURNOVER
+
+CART
+
+Failed to install 24 bolts attaching
+
+the spacecraft adapter plate to
+
+The Turnover Cart base plate
+
+1) Decision Error RTE ""assure the configuration"" of the TOC based on paper Work rather than following procedure to verify torque values
+
+2) Skill-Based Error Technicians failed to notice the missing bolts while wiping down the adapter plates and bolting down the spacecraft to The spacecraft adapter plate
+
+3a) Routine Violation PQC and PA signed-off the procedure step of ""assure the configuration"" of the TOC without witnessing and verifying
+
+3b) Routine Violation Safety Representative not present as called for in the procedure
+
+PROXIMATE CAUSE
+
+Figure 7-1: Level 1 Active Failures or Unsafe Acts Leading to the NOAA N-Prime Mishap",Failed to follow procedure step 'assure the configuration',O1,root,Routine Violation PQC and PA signed-off the procedure step of 'assure the configuration' of the TOC without witnessing and verifying,,,
+F040,"The initial Shuttle design predicted neither foam debris problems nor poor sealing action of the Solid Rocket Booster joints. To experience either on a mission was a violation of design specifications. These anomalies were signals of potential danger, not something to be tolerated, but in both cases after the first incident the engineering analysis concluded that the design could tolerate the damage. These engineers decided to implement a temporary fix and/or accept the risk, and fly. For both O-rings and foam, that first decision was a turning point. It established a precedent for accepting, rather than eliminating, these technical deviations. As a result of this new classification, subsequent incidents of O-ring erosion or foam debris strikes were not defined as signals of danger, but as evidence that the design was now acting as predicted. Engineers and managers incorporated worsening anomalies into the engineering experience base, which functioned as an elastic waistband, expanding to hold larger deviations from the original design. Anomalies that did not lead to catastrophic failure were treated as a source of valid engineering data that justified further flights. These anomalies were translated into a safety margin that was extremely influential, allowing engineers and managers to add incrementally to the amount and seriousness of damage that was acceptable. Both O-ring erosion and foam debris events were repeatedly ""addressed"" in NASA's Flight Readiness Reviews but never fully resolved. In both cases, the engineering analysis was incomplete and inadequate. Engineers understood what was happening, but they never understood why. NASA continued to implement a series of small corrective actions, living with the problems until it was too late.4",Normalization of deviance in design deviations,M2,root,"For both O-rings and foam, that first decision was a turning point.",,,
+F041,"Figure 2-10. G-switch views; X-ray shows mass and spring
+
+The Forensic Process
+
+Shortly after the mishap, LMA engincers identified the proximate cause of the failure in less than a week. The forensic evidence indicated that the first pyro event had not occurred (i.e., the drogue chute had not deployed). The list of possible common mode failures that could affect both avionics units was small. LMA engineers quickly identified the improper orientation of the G-switch as a simple common fault in both redundant avionics units that could explain the entire failure.
+
+Examination of the as-built relay module indicated that this was indeed what had happened.",improper orientation of G-switch,T4,root,The improper orientation of the G-switch as a simple common fault in both redundant avionics units that could explain the entire failure.,,,
+F042,"In fact, most of Linda Ham's inquiries about the foam strike were not to determine what action to take during Columbia's mission, but to understand the implications for STS-114. During a Mission Management Team meeting on January 21, she asked about the rationale put forward at the STS-113 Flight Readiness Review, which she had attended. Later that morning she reviewed the charts presented at that Flight Readiness Review. Her assessment, which she e-mailed to Shuttle Program Manager Ron Dittemore on January 21, was ""Rationale was lousy then and still is ..."" (See Section 6.3 for the e-mail.)
+
+One of Ham's STS-114 duties was to chair a review to determine if the mission's Orbiter, Atlantis, should be rolled from the Orbiter Processing Facility to the Vehicle Assembly Building, per its pre-launch schedule. In the above e-mail to Ron Dittemore, Ham indicates a desire to have the same individual responsible for the ""lousy"" STS-113 flight rationale start working the foam shedding issue - and presumably present a new flight rationale - very soon.",Poor communication between team members,H3,contributing,"Her assessment, which she e-mailed to Shuttle Program Manager Ron Dittemore on January 21, was 'Rationale was lousy then and still is ...'",,,
+F043,"primary cause.
+
+- The launcher started to disintegrate at about H, + 39 seconds because of high aerodynamic loads due to an angle of attack of more than 20 degrees that led to separation of the boosters from the main stage, in tum triggering the self-destruct | system of the launcher.
+
+- This angle of attack was caused by full nozzle deflections of the solid boosters and the Vulcain main engine.
+
+- These nozzle deflections were commanded by the On-Board Computer (OBC) software on the basis of data transmitted by the active Inertial Reference System (SRI 2). Part of these data at that time did not contain proper flight data, but showed a diagnostic bit pattem of the computer of the SRI 2, which was",OBC software commanded nozzle deflections based on incorrect data,T2,contributing,"These nozzle deflections were commanded by the On-Board Computer (OBC) software on the basis of data transmitted by the active Inertial Reference System (SRI 2). Part of these data at that time did not contain proper flight data, but showed a diagnostic bit pattern of the computer of the SRI 2, which was",,,
+F044,"2) In the JAXA ASTRO-H project, development proceeded without clarification of the responsibilities and authority of designer companies and the researchers and others within each the organizations.
+
+- About requirements for the attitude control system, when researchers have requests in excess of requirements,
+
+ISAS and industries should conduct an in-depth investigation. However, important tasks, such as issuing
+
+documents that clearly identified roles, were not performed, leading to misunderstandings between the parties.
+
+- Documents did not clarify who was responsible for managing verifications and concerns brought up during design
+
+review meetings, such as readjustments of Kalman filter parameters and STT continuous non-update operations,
+
+and so comprehensive management was insufficient. This led to JAXA being unable to obtain an overview of the
+
+ASTRO-H project, resulting in only locally optimal solutions, not global solutions.
+
+- The project systems were large and complex, making it difficult to foresee that the management methods
+
+previously employed by ISAS were no longer suitable.",misunderstandings between parties due to unclear roles,M5,contributing,"important tasks, such as issuing documents that clearly identified roles, were not performed, leading to misunderstandings between the parties.",,,
+F045,Figure 6.4-1. The speculative repair option would have sent astronauts hanging over the payload bay door to reach the left wing RCC panels using a ladder scavenged from the crew module.,Speculative repair option was impractical and potentially dangerous,O3,observation,The speculative repair option would have sent astronauts hanging over the payload bay door to reach the left wing RCC panels using a ladder scavenged from the crew module.,,,
+F046,"Space Admnnistration NJ A f\
+
+George C. Marshail Space Flight Center Marshall Space Flight Center, Alabama
+
+35812
+
+EP25 (79-13) January 19, 1979 TO: EESI/Mr. Eudy
+
+FROMM: EP25/mMr. Miller
+
+SUBJECT: Evaluation of SRM Clevis Joint Behavior
+
+As requested by your memorandum, EE51 (79-10), Thiokol documents THR-12019 and letter 7000/£D-78-484 have been revaluated. We find the Thiokol position regarding design adequacy of the clevis joint to be completely unacceptable for the following reasons:
+
+a. The large sealing surface gap created by excessive tang/clevis relative movement causes the primary O-ring seal to extrude into the aap, forcing the seal to function in a way which violates industry and Government O-ring application practices.
+
+b. Excessive tang/clevis movement as explained above also allows the secendary O-ring seal to become completely disengaged from its sealing surface on the tang.
+
+c. Contract End Item Specification, CPW1-2500D, page I-28, paragraph 3.2.1.2 requires that the integrity of al] high pressure case seals be verifiable; the clevis joint secondary O-ring seal has been verified by tests to be unsatisfactory.",unacceptable design adequacy of the clevis joint,T4,root,The Thiokol position regarding design adequacy of the clevis joint to be completely unacceptable...,,,
+F047,"The need to have each provider be successful, coupled with insufficient resources for certification, created an environment rich for inadequate insight and lack of oversight. This led to a failure of the shared accountability concept that was central to the success of CCP at its inception (as self-identified by CCP in the STAR report). Process and Communication Recommendations R.18 [SOMD, CCP, ISSP] - Establish a multi-program anomaly resolution process with entrance and exit criteria, and who gets to decide when it gets turned on/off.
+
+R.19 [ARMO] - Implement a common tool for risk evaluation across commercial providers.
+
+Implemented correctly, this process should provide a technically based risk characterization. Strong consideration should be given to using the 7 Elements of Effective Flight Rational created after Columbia, that appropriately assesses:
+
+1. Technical Understanding 2. Condition Relative to Experience Base 3. Bounding Cases 4. Self-Limiting Aspects 5. Understanding of Margins 6. Assessment Based on Data, Testing, & Analysis 7. Interactions with Other Elements/Condition. R.20 [CCP] - Establish structured communication path and forums with clearly defined expectations and responsible parties in an anomaly.",insufficient resources for certification,M5,observation,"The need to have each provider be successful, coupled with insufficient resources for certification, created an environment rich for inadequate insight and lack of oversight.",,,
+F048,"Johnson also has a Shuttle Program Safety and Mission Assurance Manager who oversees United Space Alliance's safety organization. The Shuttle Program further receives program safety support from the Center's Safety, Reliability, and Quality Assurance Space Shuttle Division. Johnson's Space Shuttle Division Chief has the additional role of Shuttle Program Safety, Reliability, and Quality Assurance Manager (see Figure 7.4-1). Over the years, this dual designation has resulted in a general acceptance of the fact that the Johnson Space Shuttle Division Chief performs duties on both the Center's and Program's behalf. The detached nature of the support provided by the Space Shuttle Division Chief, and the wide band of the position's responsibilities throughout multiple layers of NASA's hierarchy, confuses lines of authority, responsibility, and accountability in a manner that almost defies explanation.
+
+A March 2001 NASA Office of Inspector General Audit Report on Space Shuttle Program Management Safety Observations made the same point:","Confused lines of authority, responsibility, and accountability",M5,observation,"The detached nature of the support provided by the Space Shuttle Division Chief, and the wide band of the position's responsibilities throughout multiple layers of NASA's hierarchy, confuses lines of authority, responsibility, and accountability in a manner that almost defies explanation.",,,
+F049,"D. GROUND SYSTEMS
+
+12. Failure to resolve a critical deficiency report in a timely manner
+
+SOHO was designed to store within its on-board-computer, for diagnostic purposes, the last three telemetry frames that precede a safe mode entry. A deficiency report that was written in 1994, stating that the SOHO control center was unable to display this data in a convenient (user friendly) format, was never resolved. Ironically, this feature had been included in the newly configured IMOC; and although the FOT had been resident in the IMOC when the first safe mode entry was triggered (ESR-5), the frozen data was not displayed. Had it been displayed, it would have become obvious that Gyro-A was not spinning, and the sequence of events that followed should have been avoided.
+
+13. Failure to validate the planned sequence of events in advance
+
+As part of the planning of the ambitious timeline for the week of June 24, the NASA simulator was unable to independently substantiate the planned sequence of events. In fact, the NASA simulation results indicated that problems existed in the planned timeline. Analysis of the differing simulation results (ESA vs. NASA simulator runs) was continuing as the timeline execution was in process. This, in itself, was an indirect factor in the failure scenario since the technical support staff were distracted by the on-going simulation evaluation rather than focusing on the ESR recovery efforts.",failure to resolve a critical deficiency report,V1,contributing,"A deficiency report that was written in 1994, stating that the SOHO control center was unable to display this data in a convenient (user friendly) format, was never resolved.",,,
+F050,"Efforts need to continue at an accelerated pace ito eliminate SRM seal erosion
+
+munication failure was contrary to the requirement, contained in the NASA Problem Reporting and Corrective Action Requirements System, that launch constraints were to be taken to Level
+
+IT.",communication failure,O3,contributing,communication failure was contrary to the requirement,,,
+F051,"In summary, as long as the Solid Rocket Boosters are still thrusting, fast-separation does not provide a way to escape. It would be useful during first stage only if Solid Rocket Booster thrust could first be terminated.
+
+The current concept of fast-separation does, however, have some use. Contingency aborts resulting from loss of two or three main engines early in ascent are time-critical, and every fraction of a second that can be trimmed from the separation sequence helps. These abort procedures are executed after the Solid Rocket Boosters are expended, and fast-separation is used to reduce the time required for separation as the Shuttle must attain entry attitude very quickly. Unfortunately, all contingency aborts culminate in water impact.",contingency abort procedures not fully considered,O1,observation,"These abort procedures are executed after the Solid Rocket Boosters are expended, and fast-separation is used to reduce the time required for separation as the Shuttle must attain entry attitude very quickly.",,,
+F052,"Root Cause Analysis
+
+While the T9 MIB was able to identify the proximate cause and two possible intermediate causes for the T9 mishap, they were unable to identify the root cause for this failure. As a matter of explanation, an intermediate cause is between the proximate cause and the root cause in the causal chain. The root cause is the factor or set of factors that contributes to, or creates the proximate cause. Typically multiple root causes contribute to an undesired outcome.
+
+The T9 MIB was unable to determine a root cause for the mishap mainly due to limited flight telemetry and the inability to recover the payload fairing hardware for analysis that would have enabled the determination of a definitive intermediate cause or causes. While the T9 MIB was unable to identify a root cause, they made several technical observations and findings which are summarized below:
+
+e The T9 MIB determined that side rail charge holder slumping (compression) could possibly occur because of the following:",side rail charge holder slumping (compression),T4,observation,could possibly occur because of the following,,,
+F053,"Fiscal Year 2000
+
+- Congress added $25 million to Shuttle budget for upgrades and transferred $25 million from operations to upgrades. - NASA reduced Shuttle $11.5 million per government-wide rescission requirement and transferred $15.3 million to ISS.
+
+Fiscal Year 2001
+
+- At NASA's request, Congress reduced Shuttle budget by $40 million to fund Mars initiative. - NASA reduced Shuttle $6.9 million per rescission requirement.
+
+Fiscal Year 2002
+
+- Congress reduced Shuttle budget $50 million to reflect cancellation of electric Auxiliary Power Unit and added $20 million for Shuttle upgrades and $25 million for Vehicle Assembly Building repairs. - NASA transferred $7.6 million to fund Headquarters requirements and cut $1.2 million per rescission requirement.
+
+[Source: Marcia Smith, Congressional Research Service, Presentation at CAIB Public Hearing, June 12, 2003]",Congressional budget reductions affected NASA's ability to fund upgrades and maintenance,M1,contributing,,,,
+F054,"STS 51-B and the Launch Constraint
+
+Joint seal problems occurred in each.of the next four Shuttle flights. Flight 51-D, launched April 12, 1985 had nozzle O-ring erosion and blow-by on an igniter joint. STS 51-B, launched 17 davs later, experienced both nozzle O-ring erosion and blow-by as did 51-G, which flew on the following June 17. STS 51-F, launched July 29, 1985 had nozzle O-ring blow-by. !%*
+
+In reponse to the apparent negative effect of cold leading to the extensive O-ring problems on flight 51-C in January, Thiokol conducted some O-ring resiliency tests in early 1985.195 The tests were conducted to quantify the seal timing function of the secondary O-ring and the effect of joint rotation on its ability to back up the primary ring. The key variable was temperature. The June 3 test report, which was described in an August 9, 1985 letter from Brian Russell at Thiokol to Jim Thomas at Marshall, showed:",nozzle O-ring erosion and blow-by due to cold temperature,T1,root,nozzle O-ring erosion and blow-by,,,
+F055,"- Mentally exhausted/Fatigued - Individuals described long hours worked by teams from both NASA and Boeing. This occurred prior to launch and during the mission, increasing individual stress levels and diminishing mental capability during anomaly troubleshooting and decision-making processes.
+
+- Complacency - Most NASA interviewees felt Boeing overestimated positive outcomes with insufficient data to support conclusions, were reluctant to get additional testing data and requested hard to get results/transparency. Multiple technical representatives noted acceptance of system anomalies as within risk limits when they were ""outside of quals.""
+
+- Expectancy - Many individuals expressed a mental framework of expecting smooth operations without serious anomalies to occur (again) and to subsequently be working through them. This impacted the preparedness for understanding what decisions would need to be made. TA's were frustrated with Boeing's expectations for the mission to go nominally.
+
+- Motivation - (Green Light) Both Boeing and NASA team members appeared to have the drive to ""figure this out"" and that giving up was not going to be an option. This mitigated some of the distrust at certain points in the resolution phase of the effort regarding how to bring the crew home.","Motivation drove teams to 'figure this out' and not give up, mitigating some distrust.",H1,contributing,- Motivation - (Green Light) Both Boeing and NASA team members appeared to have the drive to 'figure this out' and that giving up was not going to be an option.,,,
+F056,"The Board believes that deficiencies in communication, including those spelled out by the Shuttle Independent Assessment Team, were a foundation for the Columbia accident. These deficiencies are byproducts of a cumbersome, bureaucratic, and highly complex Shuttle Program structure and the absence of authority in two key program areas that are responsible for integrating information across all programs and elements in the Shuttle program.",deficiencies in communication,H3,contributing,"deficiencies in communication, including those spelled out by the Shuttle Independent Assessment Team, were a foundation for the Columbia accident",,,
+F057,"Key Data
+
+55:54:52 Last valid temperature indication (-151° F) from oxygen tank no. 2.
+
+55:54:52,763 Last pressure reading from oxygen tank no. 2 before loss of data--996 psia.
+
+55:54:53,182 Sudden accelerometer activity on X, Y, and Z axes.",Oxygen tank design inadequate for conditions,T1,root,,,,
+F058,"The Lunar Module Pilot was in the tunnel between the CSM and the LM, returning to the CSM. The Command Module Pilot was in the left-hand couch, monitoring spacecraft performance. Because of the master alarm indicating low voltage, the CMP moved across to the right-hand couch where CSM voltages can be observed. He reported that voltages were ""looking good"" at 55:56:10. At this time, main bus B had recovered and fuel cell 3 did not fail for another 1-1/2 minutes. He also reported fluctuations in the oxygen tank no. 2 quantity, followed by a return to ""ye off-scale high position. (See fig. 4-13 for CM panel arrangement).
+
+When fuel cells 1 and 3 electrical output readings went to zero, the ground controllers could not be certain that the cells had not somehow been disconnected from their respective busses and were not otherwise all right. Attention continued to be focused on electrical problems.",fluctuations in oxygen tank no. 2 quantity,O4,observation,followed by a return to 'off-scale high position',,,
+F059,"Findings:
+
+F10.3-1 The engineering drawing system contains outdated information and is paper-based rather than computer-aided. F10.3-2 The current drawing system cannot quickly portray Shuttle sub-systems for on-orbit troubleshooting. F10.3-3 NASA normally uses closeout photographs but lacks a clear system to define which critical sub-systems should have such photographs. The current system does not allow the immediate retrieval of closeout photos.
+
+Recommendations:
+
+R10.3-1 Develop an interim program of closeout photographs for all critical sub-systems that differ from engineering drawings. Digitize the closeout photograph system so that images are immediately available for on-orbit troubleshooting.
+
+R10.3-2 Provide adequate resources for a long-term program to upgrade the Shuttle engineering drawing system including:
+
+- Reviewing drawings for accuracy - Converting all drawings to a computer-aided drafting system - Incorporating engineering changes",outdated information in engineering drawing system,M4,contributing,The engineering drawing system contains outdated information...,,,
+F060,"- Inadequate Qualification Testing: The propulsion system lacked enveloping, mission-representative testing, and NASA accepted insufficient verification data in lieu of qualification. - Insufficient Flight Data: Low telemetry sample rates and lack of onboard data storage limited the ability to assess thruster performance and contributed to misdiagnosis of anomalies on Orbital Flight Test (OFT) 1 and OFT2. - Anomaly Resolution Discipline: Acceptance of unexplained anomalies (UAs) without root cause resolution allowed systemic issues to persist from OFT1 and OFT2 into CFT. - Oversight and Insight Limitations: NASA's insight into subcontractor-level data was restricted, limiting its ability to independently verify system readiness. - Schedule Pressure: Persistent proximity to launch over several years created a high-stress environment, dictated a restrictive risk reduction initiative, and contributed to degraded trust with the workforce and overall fatigue. - Cultural and Contractual Misalignment: The shared accountability model was poorly understood and inconsistently applied, leading to muddling of roles, responsibilities, and risk ownership. - Hardware Longevity and Sparing Concerns: Starliner's limited hardware spares and the impending retirement of the Atlas V launch vehicle raise concerns about the program's long-term viability.",NASA's insight into subcontractor-level data was restricted,M5,root,"- Oversight and Insight Limitations: NASA's insight into subcontractor-level data was restricted, limiting its ability to independently verify system readiness.",,,
+F061,"Report No. 04-133
+
+~~
+
+Bolt catcher -10411A00200, Project No.: 2004110004
+
+Imag
+
+Figure 1. Overall view of the as-received wiring harness and bolt catcher. Wrap disturbance at areas 1 to 3 are indicated. Also, a splice consisting of wood tongue depressors for stabilization during shipping is indicated.
+
+Image No.:0411A00202, Project No.: 2004110004
+
+Figure 2. Another view of the harness at areas 1 to 3 with the packaging material removed.",Wrap disturbance at areas 1 to 3 are indicated.,T3,observation,,,,
+F062,"While Mulloy and Wear both testified that the constraint was still in effect and waived for Challenger's flight, they told the Commission that there had been two erroneous entries on the O-ring erosion nozzle problem assessment report stating the O-ring erosion problem had been resolved or closed.!!6 Thiokol had suggested this closure on December 10, 1985 (at Marshall's request according to Brian Russell) but Wear and Mulloy told the Commission they rejected that recommendation and the problem was still being addressed in Flight Readiness Reviews.'1"" NASA Levels I and II apparently did not realize Marshall had assigned a launch constraint within the Problem Assessment System.!!8 This com-",Incorrect closure of O-ring erosion problem,O3,contributing,"Thiokol had suggested this closure on December 10, 1985 (at Marshall's request according to Brian Russell) but Wear and Mulloy told the Commission they rejected that recommendation and the problem was still being addressed in Flight Readiness Reviews.",,,
+F063,"External criticism and doubt, rather than spurring NASA to change for the better, instead reinforced the will to ""impose the party line vision on the environment, not to reconsider it,"" according to one authority on organizational behavior. This in turn led to ""flawed decision making, self deception, introversion and a diminished curiosity about the world outside the perfect place.""14 The NASA human space flight culture the Board found during its investigation manifested many of these characteristics, in particular a self-confidence about NASA possessing unique knowledge about how to
+
+safely launch people into space.15 As will be discussed later in this chapter, as well as in Chapters 6, 7, and 8, the Board views this cultural resistance as a fundamental impediment to NASA's effective organizational performance.",flawed decision making and self deception,M2,contributing,"flawed decision making, self deception, introversion and a diminished curiosity about the world outside the perfect place",,,
+F064,"Further investigation revealed that a lack of qualified non-destructive inspection technicians and differing interpretations of inspection requirements contributed to this oversight. United Space Alliance, NASA's agent in procuring bolt catchers, exercises limited process oversight and delegates actual contract compliance verification to the Defense Contract Management Agency. The Defense Contract Management Agency interpreted its responsibility as limited to certifying compliance with the requirement for X-ray inspections. Since neither the Defense Contract Management Agency nor United Space Alliance had a resident non-destructive inspection specialist, they could not read the X-ray film or certify the weld. Consequently, the required inspections of weld quality and end-item certification were not properly performed. Inadequate oversight and confusion over the requirement on the parts of NASA, United Space Alliance, and the Defense Contract Management Agency all contributed to this problem.
+
+In addition, STS-107 radar data from the U.S. Air Force Eastern Range tracking system identified an object with a radar cross-section consistent with a bolt catcher departing the Shuttle stack at the time of Solid Rocket Booster separation. The resolution of the radar return was not sufficient to definitively identify the object. However, an object that has about the same radar signature as a bolt catcher was seen on at least five other Shuttle missions. Debris shedding during Solid Rocket Booster separation is not an unusual event. However, the size of this object indicated that it could be a potential threat if it came close to the Orbiter after coming off the stack.",inadequate oversight,M5,contributing,"Inadequate oversight and confusion over the requirement on the parts of NASA, United Space Alliance, and the Defense Contract Management Agency all contributed to this problem.",,,
+F065,"In the Challenger teleconference, a key engineering chart presented a qualitative argument about the relationship between cold temperatures and O-ring erosion that engineers were asked to prove. Thiokol's Roger Boisjoly said, ""I had no data to quantify it. But I did say I knew it was away from goodness in the current data base.""41 Similarly, the Debris Assessment Team was asked to prove that the foam hit was a threat to flight safety, a determination that only the imagery they were requesting could help them make. Ignored by management was the qualitative data that the engineering teams did have: both instances were outside the experience base. In stark contrast to the requirement that engineers adhere to protocol and hierarchy was management's failure to apply this criterion to their own activities. The Mission Management Team did not meet on a regular schedule during the mission, proceeded in a loose format that allowed informal influence and status differences to shape their decisions, and allowed unchallenged opinions and assumptions to prevail, all the while holding the engineers who were making risk assessments to higher standards. In highly uncertain circumstances, when lives were immediately at risk, management failed to defer to its engineers and failed to recognize that different data standards - qualitative, subjective, and intuitive - and different processes - democratic rather than protocol and chain of command - were more appropriate.",Unchallenged opinions and assumptions prevailed in decision-making,H1,contributing,"allowed unchallenged opinions and assumptions to prevail, all the while holding the engineers who were making risk assessments to higher standards",,,
+F066,"On the surface, the program seemed to be progressing well. But those close to it realized that there were numerous problems. The system was proving difficult to operate, with more maintenance required between flights than had been expected. Rather than needing the 10 working days projected in 1975 to process a returned Orbiter for its next flight, by the end of 1985 an average of 67 days elapsed before the Shuttle was ready for launch.15
+
+Though assigned an operational role by NASA, during this period the Shuttle was in reality still in its early flight-test stage. As with any other first-generation technology, operators were learning more about its strengths and weaknesses from each flight, and making what changes they could, while still attempting to ramp up to the ambitious flight schedule NASA set forth years earlier. Already, the goal of launching 50 flights a year had given way to a goal of 24 flights per year by 1989. The per-mission cost was more than $140 million, a figure that when adjusted for inflation was seven times greater than what NASA projected over a decade earlier.16 More troubling, the pressure of maintaining the flight schedule created a management atmosphere that increasingly accepted less-than-specification performance of various components and systems, on the grounds that such deviations had not interfered with the success of previous flights.17",pressure to maintain flight schedule led to acceptance of less-than-specification performance,M2,contributing,on the grounds that such deviations had not interfered with the success of previous flights.,,,
+F067,"The Aerospace Corporation
+
+The Aerospace Corporation, created in 1960, operates as a Federally Funded Research and Development Center that supports the government in science and technology that is critical to national security. It is the equivalent of a $500 million enterprise that supports U.S. Air Force planning, development, and acquisition of space launch systems. The Aerospace Corporation employs approximately 3,200 people including 2,200 technical staff (29 percent Doctors of Philosophy, 41 percent Masters of Science) who conduct advanced planning, system design and integration, verify readiness, and provide technical oversight of contractors.26
+
+The Aerospace Corporation's independent launch verification process offers another relevant benchmark for NASA's safety and mission assurance program. Several aspects of the Aerospace Corporation launch verification process and independent mission assurance structure could be tailored to the Shuttle Program.
+
+Aerospace's primary product is a formal verification letter to the Air Force Systems Program Office stating a vehicle has been independently verified as ready for launch. The verification includes an independent General Systems Engineering and Integration review of launch preparations by",independent mission assurance structure could be tailored to the Shuttle Program,M5,observation,Several aspects of the Aerospace Corporation launch verification process and independent mission assurance structure could be tailored to the Shuttle Program.,,,
+F068,"APPENDIX B
+
+In-orbit depassivation data was compared to the ATLO battery depassivation data and the voltages were very consistent. After the depassivation process, the ATLO battery was subjected to the SRC load profile, including simulated firing of ordnance, and showed adequate margin. All the ground-aging packs were also subjected to the 5-minute depassivation process and the SRC load profile, and successfully passed, with the exception of the pack that was stored at a constant 70°C.
+
+All test data indicate ample battery performance margin after a 5-minute depassivation.
+
+The lower-than-expected end of depassivation voltage (as compared to ground test data) was determined to be a result of using a 10% higher value depassivation resistor in the ground test. A correction for the resistor value brought the two values within the expected range.",depassivation process not representative,V1,observation,In-orbit depassivation data was compared to the ATLO battery depassivation data and the voltages were very consistent.,,,
+F069,"Flight Day Nine, Friday, January 24, 2003
+
+At 7:00 a.m., Boeing and United Space Alliance contract personnel presented the Debris Assessment Team's findings to Don McCormack, the Mission Evaluation Room manager. In yet another signal that working engineers and mission personnel shared a high level of concern for Columbia's condition, so many engineers crowded the briefing room that it was standing room only, with people lining the hallway.
+
+The presentation included viewgraphs that discussed the team's analytical methodology and five scenarios for debris damage, each based on different estimates of debris size and impact point. A sixth scenario had not yet been completed, but early indications suggested that it would not differ significantly from the other five. Each case was presented with a general overview of transport mechanics, results from the Crater modeling, aerothermal considerations, and predicted thermal and structural effects for Columbia's re-entry. The briefing focused primarily on potential damage to the tiles, not the RCC panels. (An analysis of how the poor construction of these viewgraphs effectively minimized key assumptions and uncertainties is presented in Chapter 7.)",poor construction of viewgraphs minimized key assumptions and uncertainties,V1,contributing,An analysis of how the poor construction of these viewgraphs effectively minimized key assumptions and uncertainties is presented in Chapter 7.,,,
+F070,"At 6.6 seconds before launch, the Challenger's liquid fueled main engines were ignited in sequence and run up to full thrust while the entire Shuttle structure was bolted to the launch pad. Thrust of the main engines bends the Shuttle assembly forward from the bolts anchoring it to the pad. When the Shuttle assembly springs back to the vertical, the Solid Rocket Boosters' restraining bolts are explosively released. During this pre-release ""twang"" motion, structural loads are stored in the assembled structure. These loads are released during the first few seconds of flight in a structural vibration mode at a frequency of about
+
+3 cycles per second. The maximum structural loads on the aft field joints of the Solid Rocket Boosters occur during the ""twang,"" exceeding even those of the maximum dynamic pressure period experienced later in flight.
+
+Just after liftoff at .678 seconds into the flight, photographic data show a strong puff of gray smoke was spurting from the vicinity of the aft field joint on the right Solid Rocket Booster. The two pad 39B cameras that would have recorded the precise location of the puff were inoperative. Computer graphic analysis of film from other cameras indicated the initial smoke came from the 270 to 310-degree sector of the circumference of the aft field joint of the right Solid Rocket Booster. This area of the solid booster faces the External Tank. The vaporized material streaming from the joint indicated there was not complete sealing action within the joint.",structural loads exceeded during 'twang' motion,T1,root,"The maximum structural loads on the aft field joints of the Solid Rocket Boosters occur during the 'twang,' exceeding even those of the maximum dynamic pressure period experienced later in flight.",,,
+F071,"Similarly, at Kennedy the capabilities of the Shuttle processing and facilities support work force became increasingly strained as the Orbiter turnaround time decreased to accommodate the accelerated launch schedule. This factor has resulted in overtime percentages of almost 28 percent in some directorates. Numerous contract employees have worked 72 hours per week or longer and frequent 12-hour shifts. The potential implications of such overtime for safety were made apparent during the attempted launch of mission 61-C. on January 6, 1986, when fatigue and shiftwork were cited as major contributing factors to a serious incident involving a liquid oxygen depletion that occurred less than five minutes before scheduled lift off. The issue of workload at Kennedy is discussed in more detail in Appendix G.
+
+Another example of a system designed during the developmental phase and struggling to keep up with operational requirements is the Shuttle Mission Simulator. There are currently two simulators. They support the bulk of.a crew's training for ascent, orbit and entry phases of a Shuttle mission. Studies indicate two simulators can support no more than 12-15 flights per year. The flight rate at the time of the accident was about to saturate the system's capability to provide trained astronauts for those flights. Furthermore, the two existing simulators are out-of-date and require constant attention to keep them operating at capacity to meet even the rate of 12-15 flights per year. Although there are plans to improve capability, funds for those im-",accelerated launch schedule strained processing and facilities support workforce,M1,contributing,at Kennedy the capabilities of the Shuttle processing and facilities support work force became increasingly strained as the Orbiter turnaround time decreased to accommodate the accelerated launch schedule,,,
+F072,"Throughout the history of Orbiter Major Modifications, a major area of concern has been their wide variability in content and duration. Columbia's last Orbiter Major Modification is just the most recent example of overruns due to technical surprises and management difficulties. It exceeded the schedule by 186 days. While many factors contributed to this delay, the two most prominent were the introduction of a major wiring inspection one month after Orbiter Major Modification roll-in, and what an internal NASA assessment cited as ""poor performance on the parts of NASA, USA [United Space Alliance], and Boeing.""
+
+While the Shuttle Program has made efforts to correct these problems, there is still much to be done. The transfer to Kennedy creates a steep learning curve both for technicians and managers. Planning and scheduling the integration of all three Orbiters, as well as ground support systems maintenance, is critical to limit competition for resources. Moreover, estimating the ""right"" amount of work required on each Orbiter continues to be a challenge. For example, 20 modifications were planned for Discovery's modification; the number has since grown to 84. Such changes introduce turmoil and increase the potential for mistakes.","poor performance on the parts of NASA, USA [United Space Alliance], and Boeing",M6,contributing,"what an internal NASA assessment cited as 'poor performance on the parts of NASA, USA [United Space Alliance], and Boeing'",,,
+F073,"Table 5-5: Findings Summary (government) NO. PARA. FINDING
+
+G-1 G-2 G-3 G-4
+
+5.2.4 5.3.3.3 5.3.3.1 5.3.3.3 Sect. 8
+
+UNSAFE OVERSIGHT FACTORS 1) The government quality assurance and safety provided ""inadequate oversight"". Oversight function became ""issue driven"". Procedures rarely reviewed; non-conformances not trended; rarely make impromptu inspections. 2) In substituting for the DCMA, the QAR failed to enforce a Government Inspection Point by failing to enforce his presence at the operation. 3) Government has very limited safety oversight. 4) Government ""failed to correct known problems"" such as PA signoff after the fact and poor test documentation. G-5 G-6 G-7 G-8 G-9
+
+5.2 5.3.3.3 5.3.3.3 Sect. 8.2 Table 8-4 5.3.3.1 5.3.3.2 Sect. 8.2 Table 8-4
+
+ORGANIZATIONAL INFLUENCES 5) Deficient ""resource management"" include: rapid trade-offs between the schedules, staffing and milestones for the two remaining satellites exacerbated the already fast operational tempo of the LMSSC I&T team, lack of resources in the safety area. 6) Unhealthy ""organizational climate"" factors include: using retired LMSSC employees as government representatives, lax and casual oversight toward an I&T environment with routine operations. 7) Government lacks ""organizational processes"" to effectively monitor, verify, and audit the performance and effectiveness of the I&T processes and activities. 8) The government safety program placed an overemphasis on launch site safety and inadequate in-plant safety. 9) Deficient DCMA CAR assessment and reporting processes.",government lacks organizational processes,M5,root,"Government lacks 'organizational processes' to effectively monitor, verify, and audit the performance and effectiveness of the I&T processes and activities.",,,
+F074,"Also directly behind RCC panel 8 were pressure sensors V07P8010A (Sensor 5), on the upper interior surface of the wing, and V07P8058A (Sensor 6), on the lower interior surface of the wing. Sensor 5 failed abruptly at EI+497. Sensor 6, which was slightly more protected, began falling at EI+495, and failed completely at EI+505. Closeout photographs show that the wiring from Sensor 5 travels down from the top of the wing to join the uppermost harness, A, which then travels along the leading edge spar. Similarly, wiring from Sensor 6 travels up from the bottom of the wing, joins harness A, and continues along the spar. It appears that Sensor 5's wiring, on the upper wing surface, was damaged at EI+497, right after Sensor 1 failed. Noting the times of the sensor failures, and the locations of Sensors 5 and 6 forward of Sensors 1 through 4, spar burn-through must have occurred near where these wires came together.",Sensor wiring damaged,T3,root,"It appears that Sensor 5's wiring, on the upper wing surface, was damaged at EI+497",,,
+F075,"Engineering Data Storage (Black Box)
+
+Genesis did not have any system for tracking its health or performance during re-entry. There was no requirement for a black box similar to that required on commercial airlines. Given the simplicity of the Genesis EDL system, this idea is probably not cost effective. However, where possible, simple data storage implementations can provide critical engineering understanding for real life applications.
+
+Lack of Functional Redundancy in the Design
+
+The Genesis design provided block redundancy but no real functional redundancy. This class of designs is known to be vulnerable to design flaws that manifest themselves as common mode failure mechanisms. These flaws are usually mitigated by a thorough test program. Although Genesis may have benefited from some form of functional redundancy, the added cost may have been greater than the delta required to properly test the baseline block redundant system. Adding the centrifuge test to an incompressible test list would have verified the availability of the SRC-AU redundant design.",no requirement for a black box similar to that required on commercial airlines,V1,observation,There was no requirement for a black box similar to that required on commercial airlines.,,,
+F076,"the budget for that sort of work, it would have to come through me, and it would have been clear that something was going on here that I ought to know about.
+
+And so there are three areas of breakdown, and_I haven't exactly answered your question. But I have explained it in the way that I best know it and- well, I can say a fourth thing.
+
+There was some discussion earlier about the amount of material that was or was not reported on O-ring erosion in the FRRs [Flight Readiness Reviews] and I researched the FRR back reports and also the flight anomaly reports that were forwarded to my center-to my office-by the SRB [Solid Rocket Booster] project and as was indicated, there is a treatment of the Solid Rocket Motor O-ring erosion, I believe, for the STS 41-C FRR, which quantifies it and indicates some limited amount of concern.",insufficient resources and oversight,M6,contributing,"the budget for that sort of work, it would have to come through me, and it would have been clear that something was going on here that I ought to know about.",,,
+F077,"OMAC thruster heat soak-back into SM RCS jet hardware was observed on OFT-2, but was not deemed to be as significant as the heating produced by firing the RCS jets. [RCS thruster injector temperatures during soakback appear to have exceeded temps observed during qual, OFT-2-76, Francisco Fusco, 13 March 202333]
+
+Findings
+
+- Driving thermal design concern for the SM doghouses was maintaining propulsion system temperatures using heaters during quiescent operations (i.e., the cold cases). - The AR thermal model was validated for quiescent operations by ground testing. - The AR thermal model included the effects of jet firings, but these effects were not validated by ground testing. - NASA engineering submitted a Boeing RID (B-RID) comment during a propulsion system design review in the SAA timeframe that the AR thermal model was immature. B-RID comment was withdrawn to be discussed at a later technical interchange meeting (TIM). No evidence of resolution was found. - Boeing thermal model did not include the effects of jet firings before CFT. - RCS thruster testing configuration was not flight-like as it did not reflect the insulative properties of the doghouse assembly and included active cooling to reduce the turn-around time between tests.",propulsion system temperatures exceeded design temps during quiescent operations,T1,root,"maintaining propulsion system temperatures using heaters during quiescent operations (i.e., the cold cases)",,,
+F078,"At a lower level, the SOHO ESA/NASA Mission Management Plan further states that following in-orbit commissioning, mission management authority would be",mission management plan lacked clear authority transfer,M5,observation,,,,
+F079,"consistent with high-rate discharge over a significant duration.
+
+Figure B-7. SRC battery Eccofoam insulation
+
+GENESIS FAILURE INVESTIGATION REPORT). -AA AAA __ 9",high-rate discharge over a significant duration,T5,root,consistent with high-rate discharge over a significant duration.,,,
+F080,"Recommendation:
+
+R6.2-1 Adopt and maintain a Shuttle flight schedule that is consistent with available resources. Although schedule deadlines are an important management tool, those deadlines must be regularly evaluated to ensure that any additional risk incurred to meet the schedule is recognized, understood, and acceptable.
+
+-----Original Message----- From: HAM, LINDA J. (JSC-MA2) (NASA) Sent: Wednesday, January 22, 2003 10:16 AM To: DITTEMORE, RONALD D. (JSC-MA) (NASA) Subject: RE: ET Briefing - STS-112 Foam Loss
+
+Yes, I remember....It was not good. I told Jerry to address it at the ORR next Tuesday (even though he won't have any more data and it really doesn't impact Orbiter roll to the VAB). I just want him to be thinking hard about this now, not wait until IFA review to get a formal action.
+
+[ORR=Orbiter Rollout Review, VAB=Vehicle Assembly Building, IFA=In-Flight Anomaly]",schedule pressure,M1,contributing,,,,
+F081,"More precisely, the IEC concludes that the VV17 cause of failure is not attributable to a flaw in the qualification of the design but to the wrong routing and connection of the control lanes of the electro-mechanical actuators of the AVUM upper stage Thrust Vector Control (TVC) system, inverting steering commands and causing trajectory degradation leading to the loss of the vehicle. The detailed series of causes are described as (i) a misleading integration procedure causing (ii) an inversion of electrical connections, not detected through (iii) the different control steps and tests executed between the integration of the AVUM upper stage and the final acceptance of the launcher due to some inconsistencies between specific requirements and prescribed controls.
+
+A comprehensive set of both immediate and permanent recommendations has been presented by the IEC to ensure safe and prompt return to flight, as well as to ensure launch vehicles reliability on the long term. The first set of recommendations include additional inspections and tests on the next two Vega launchers, whose hardware is already totally or partially produced, and workmanship. Permanent recommendations have been proposed to further mitigate the identified root causes, regarding the manufacturing, integration and acceptance processes on Vega assembly lines in Italy and its final acceptance in French Guiana.",inversion of electrical connections not detected,O3,contributing,"an inversion of electrical connections, not detected through",,,
+F082,"Assigned Value: Credible
+
+No. Fault Type ""Credible Unlikely Not Credible 2.1 G-switch did not activate sequencer x 2.1.1 Improper orientation of G-switch xX 2.1.2 Loads prevented G-switch activation x 2.1.2.1 G-switch cannot handle design spin loads xX 2.1.2.2 Spin rate exceeded G-switch capability X 2123 eeeten cannot handle design angle of attack x 2.1.2.4 Angle of attack exceeded G-switch capability x 2.1.3 High-frequency chatter activation interference X 2.1.4 Space effects rendered G-switch unusable Xx 2.1.5 G-switch shorted at test connector xX 2.1.6 G-load profile off-nominal x 2.1.6.1 Loads never reached trigger level Combined with 2.1.6 2.1.6.2 Loads never dropped below trigger prior to impact Combined with 2.1.6 2.1.7 Incorrect G-switch installed x 2.1.8 Mechanical failure of G-switch x 2.2 Low pass filter wrong time constant x 2.2.1 Improper filter design xX 2.2.2 Entry dynamics exceeded filter capability x 2.3 Reset on timer trigger x 2.4 Oscillator frequency wrong x 2.5 Latent fault due to high voltage discharge x 26 pyro ballast (current limiting) resistors damaged in X S| 2.7 Timing of ANDed circuits out of phase x 2.8 Timer jumpers wrong, causing excess delay x 2.9 EMI disrupted circuit operation x 2.9.1 Internal EM! x 2.9.2 External EMI x 2.10 Environment effects on avionics x 2.10.1 Space (micrometeoroid, orbit debris, radiation, Closure record combined with vacuum) 2.10 2.10.2 Entry effects, thermal induced Closure record combined with 2.10.3 Entry effects, plasma induced Closure record combined with 2.10.4 Entry effects, mechanical induced Closure record combined with 214 Cross-strapped pressure transducer interferes with fire command 2.12 Avionics shorted, internal xX 2.13 Fuses opened x 52 GENESIS FAILURE INVESTIGATION REPORT",Improper orientation of G-switch,T1,root,xX 2.1.1 Improper orientation of G-switch,,,
+F083,"During External Tank propellant loading in preparation for launch, the liquid hydrogen 17-inch disconnect valve was opened prior to reducing the pressure in the Orbiter liquid hydrogen manifold, through a procedural error by the console operator. The valve was opened with a six pounds per square inch differential. This was contrary to the critical requirement that the differential be no greater than one pound per square inch. This pressure held the valve closed for approximately 18 seconds before it finally slammed open abruptly. These valves are extremely critical and have very stringent tolerances to preclude inadvertent closure of the valve during mainstage thrusting. Accidental closing of a disconnect valve would mean catastrophic loss of Orbiter and crew. The slamming of this valve (which could have damaged it) was not reported by the operator and was not discovered until the post-accident data review. Although this incident did not contribute to the 51-L incident, this type of error cannot be tolerated in future operations, and a policy of rigorous reporting of anomalies in processing must be strictly enforced.",procedural error by console operator,O1,root,During External Tank propellant loading... procedural error by the console operator.,,,
+F084,". Findings
+
+The cryogenic oxygen storage tanks contained a combination of oxidizer, combustible material, and potential ignition sources.
+
+Supercritical oxygen was used to minimize the weight, volume, and fluid-handling problems of the oxygen supply system.
+
+The heaters, fans, and tank instrumentation are used in the measurement and management of the oxygen supply.
+
+Determinations","Combination of oxidizer, combustible material, and potential ignition sources",T3,observation,"The cryogenic oxygen storage tanks contained a combination of oxidizer, combustible material, and potential ignition sources.",,,
+F085,"Item/functional Identification (nomenclature) Function
+
+Identification Number
+
+Failure Mode Causes
+
+Potential Causes/ Mechanisms of Failure
+
+Single Point Failure? (Y/N) Design Controls
+
+Mission Phase/ Operational Mode
+
+Local Effects
+
+Next Higher Level Effects
+
+End Effects 10 11 12 13 14 15 16 17 18 19 20 21
+
+ISOLATES LEAKAGE SMPROP-HMI-
+
+LEAK
+
+Leakage 1. Poor design 2. Improper material selection 3. Assembly area and damage 4. Over pressurization, improper handling 5. Corrosion contamination
+
+1. Improper design tolerances 2. Improper material compatiability with hydrazine 3. Quality control failures resulting in assembly failure 4. Improper qual program to verify pressure band 5. Improper cleanliness during assembly
+
+No 1. Robust Design, Factor of Safety 2. M&P approval, Inspection and Workmanship Screens 3. Qual acceptance 4. Qual test 5. Inspection
+
+entry/abort first failure - none
+
+(redundancy) 2nd failure - loss of propellant to
+
+thruster half-
+
+system 3rd failure - failed-on/excessively leaking thruster on remaining half-
+
+system
+
+no prop flow to thruster leg/ lost",Poor design,T1,contributing,1. Poor design,,,
+F086,"Figure 99 - General Findings Matrix - Helium Seal Material Compatibility
+
+SM Doghouse Thermal Issue Issue
+
+During CFT, extreme Reaction Control System (RCS) injector temperatures were observed and multiple SM RCS jets failed during the approach to ISS leading to loss of 6-degrees of freedom (DOF) control.
+
+Background
+
+Unexpected heating of the SM RCS thrusters, leading to thruster failures, was observed on the OFT-1 and OFT-2 flight tests but the hardware failure modes and temperature capability/tolerance of the hardware components was not explored through additional ground testing, except for the pressure transducers and valve solenoids. The fact that higher temperatures were resulting in deformation of the RCS thruster internal soft-goods was not understood until ground testing was performed during CFT.
+
+The thermal environment understanding of the SM propulsion system dog houses during powered flight was primarily based on analytical models. The most complete model was developed by AR and included the heating effects of the OMAC and RCS thrusters firing. Boeing also had a thermal model for the SM which included a simplified model of the doghouses, but that was intended to address quiescent operations and did not include heating from firing the thrusters. The AR thermal model was validated for limited jet firing histories, as it was primarily intended to evaluate the temperature performance of the propellant tank and line heaters when the propulsion system was docked/quiescent. The ability to maintain propellant temperatures above their minimum acceptance temperatures, as well as the commodity freezing point during the long quiescent period docked at ISS, while using minimal electrical power, was a primary design challenge for the AR team and was the focus of ground and flight test objectives. The key aspects of that design challenge during quiescent operations were validated through thermal vacuum testing on the ground and flight instrumentation.",Unexpected heating of SM RCS thrusters,T1,root,"Unexpected heating of the SM RCS thrusters, leading to thruster failures, was observed",,,
+F087,"UNDERSTANDING CAUSES
+
+In the Board's view, NASA's organizational culture and structure had as much to do with this accident as the External Tank foam. Organizational culture refers to the values, norms, beliefs, and practices that govern how an institution functions. At the most basic level, organizational culture defines the assumptions that employees make as they carry out their work. It is a powerful force that can persist through reorganizations and the reassignment of key personnel.
+
+Given that today's risks in human space flight are as high and the safety margins as razor thin as they have ever been, there is little room for overconfidence. Yet the attitudes and decision-making of Shuttle Program managers and engineers during the events leading up to this accident were clearly overconfident and often bureaucratic in nature. They deferred to layered and cumbersome regulations rather than the fundamentals of safety. The Shuttle Program's safety culture is straining to hold together the vestiges of a once robust systems safety program.",overconfident attitudes and decision-making,M3,root,they deferred to layered and cumbersome regulations rather than the fundamentals of safety,,,
+F088,"commanding were not possible, a backup sequence stored on the spacecraft would execute and open the
+
+vent about 40 minutes after separation.
+
+The WIRE Operations team took advantage of a tracking pass from the McMurdo ground station
+
+starting at about 20 minutes after separation. The following uplink commands were transmitted on
+
+approximately one second centers; Pyro Electronics-A on; Pyro Electronics-B on; Pyro Arm; Secondary
+
+Vent Pyro Fire. Subsequent ""quick-look"" review of telemetry indicated that the pyro electronics was
+
+initially off before the first command (as expected), and that the firing telemetry for the secondary vent
+
+command from the electronics was normal.
+
+At about the time the command to fire the secondary vent pyro was sent, spacecraft attitude
+
+control rates were observed to increase. This was expected since the vent opening would release the
+
+small amount of hydrogen gas liberated by the heating of the cryostat after liquid helium cooling had been",commands not followed as expected,O1,contributing,The following uplink commands were transmitted on approximately one second centers; Pyro Electronics-A on; Pyro Electronics-B on; Pyro Arm; Secondary Vent Pyro Fire.,,,
+F089,"S$ mozele/cese joint since they dDelieve the purty 8 the prise
+
+cause of the eresion. A decision on this change is planned to be
+
+wode this week, I heve reservations sbout doing it, considering
+
+it significance of the @i-$ firing in qualifying the FUC for ght.
+
+It is importent te mete thet the cause and effect of the putty varies. There ere sowe RSFC personne! wbe sre mot coavinced that the holes in the putty are the source of the problow but foek thet it way be a reverse effect in that the het gases aa
+
+Considering the fect thet there doesn't appear te be 8 velidstod resolution es te the effect of putty, I would cortaialy question the wisdes in remeviag it om Gi-5.
+
+B. Case to Case 0"" Ring Erosion
+
+There have been five ($) oceurrences during flight where there was prisery field joint ""O"" ring erosion. There was one case where the secondary ""0"" ring wes heet effected with eo erosion. The erosion with the field joint primery ""0"" rings is considered",poor quality of O-ring design,T1,root,the holes in the putty are the source of the problem,,,
+F090,"LSP determined SPI's Extrusion Process was incapable of supplying extrusions that could meet the required material property specifications According to court documents, SPI has acknowledged altering test results on extrusions sold to hundreds of its customers on thousands of occasions over a 19 year period. In a more recent example, in February 2012, NASA purchased a flight certified frangible joint base ring from another government agency as backup hardware for NASA's NuStar mission. The extrusion used in the NuStar base ring was manufactured by SPI/TDA on January 5, 2009. In April 2017, NASA destructively tested the NuStar base ring to measure its extrusion dimensions. The ligament measurements on one side were within specification; however, the other side consistently exceeded the maximum allowed limit. The out-of-tolerance ligament thickness observed in the NuStar ring indicated a lack of both dimensional control and quality inspection processes by SPI/TDA. The out-of-tolerance oversized ligament in the NuStar ring would cause an additional unplanned loss of fracture margin. SPI/TDA produced the NuStar extrusion, which was outside the dimensions allowed by the Orbital drawing, but delivered the extrusion with a Certificate of Mechanical Properties claiming it met the drawing requirements. These facts demonstrate that SPI's production process was not capable of consistently extruding material that met specifications. LSP Determined Substandard Extrusion Material Properties is enough to be the sole cause of a frangible joint not to fracture on command In 2014, frangible joint test article N41-1 was functioned in a controlled laboratory environment and the test article did not completely fracture at one end of the extrusion. The N41-1 test article was assembled using procedures that were consistent with the way the T8 and T9 flight frangible joints were made. During the function test, the N41-1 test article was mounted on a flight-like stationary fixture.",SPI's production process was not capable of consistently extruding material that met specifications.,T3,root,These facts demonstrate that SPI's production process was not capable of consistently extruding material that met specifications.,,,
+F091,"- A separate compliance verification organization independently assesses program management.24 NASA's Flight Preparation Process, which leads to Certification of Flight Readiness, is supposed to be an independent check-and-balance process. However, the Shuttle Program's control of both engineering and safety compromises the independence of the Flight Preparation Process.
+
+- The submarine Navy has a strong safety culture that emphasizes understanding and learning from past failures. NASA emphasizes safety as well, but training programs are not robust and methods of learning from past failures are informal.
+
+- The Navy implements extensive safety training based on the Thresher and Scorpion accidents. NASA has not focused on any of its past accidents as a means of mentoring new engineers or those destined for management positions.
+
+- The SUBSAFE structure is enhanced by the clarity, uniformity, and consistency of submarine safety requirements and responsibilities. Program managers are not permitted to ""tailor"" requirements without approval from the organization with final authority for technical requirements and the organization that verifies SUBSAFE's compliance with critical design and process requirements.25",NASA's control of both engineering and safety compromises independence of Flight Preparation Process,M5,contributing,"- A separate compliance verification organization independently assesses program management.24 NASA's Flight Preparation Process, which leads to Certification of Flight Readiness, is supposed to be an independent check-and-balance process. However, the Shuttle Program's control of both engineering and safety compromises the independence of the Flight Preparation Process.",,,
+F092,"r
+
+I e
+
+- Dimension a depends on value of e
+
+Part Max Nom Min dim dim dim
+
+a :_ 0.28 0.24 0.16
+
+b 1.095!1.0801.065
+
+c 0.26 0.20 0.14
+
+d 1.45 1.43 1.41
+
+e 18 ° 21 ° 24 °
+
+Adverse
+
+tolerance case
+
+Fill tube",Temperature exceeded design tolerance,T5,root,,,,
+F093,"One of the pieces of casing showed evidence
+
+of O-ring seal tracks on the tang of the field joint. The tracks were cleaned with hexane to remove the grease preservative that had been applied after recovery of the piece, and samples of the track material were removed for analysis. Chemical analysis of the track material showed that the tracks were not composed of degraded O-ring seal material.
+
+The possible Solid Rocket Booster faults or failures assessed were: structural overload, Solid Rocket Motor pressure integrity violation, and premature linear shaped charge detonation.
+
+Reconstructed lift off and flight loads were compared with design loads to determine if a structural failure may have caused the accident. The STS 51-L loads were within the bounds of design and capability and were not a factor. Photographic and video imagery confirmed that both Solid Rocket Boosters remained structurally intact until the time of the explosion except for the leak observed on right Solid Rocket Motor.",O-ring seal tracks on field joint casing,T1,root,One of the pieces of casing showed evidence of O-ring seal tracks on the tang of the field joint.,,,
+F094,"IMAGERY REQUEST 2
+
+Responding to concerns from his employees who were participating in the Debris Assessment Team, United Space Alliance manager Bob White called Lambert Austin on Flight Day Six to ask what it would take to get imagery of Columbia on orbit. They discussed the analytical debris damage work plan, as well as the belief of some integration team members that such imaging might be beneficial.
+
+Austin subsequently telephoned the Department of Defense Manned Space Flight Support Office representative to ask about actions necessary to get imagery of Columbia on orbit. Austin emphasized that this was merely information gathering, not a request for action. This call indicates that Austin was unfamiliar with NASA/National Imagery and Mapping Agency imagery request procedures.
+
+An e-mail that Lieutenant Colonel Timothy Lee sent to Don McCormack the following day shows that the Defense Department had begun to implement Austin's request.
+
+[continued from previous page]",unfamiliarity with NASA/National Imagery and Mapping Agency imagery request procedures,H3,contributing,"Austin emphasized that this was merely information gathering, not a request for action.",,,
+F095,"Schedule Slippage
+
+STS-107 was finally scheduled for launch on January 11, 2001. After 13 delays over two years, due mainly to other missions taking priority, Columbia was launched on January 16, 2003 (see Figure 2.1-1). Delays may take several forms. When any delay is mentioned, most people think of a Space Shuttle sitting on the launch pad waiting for launch. But most delays actually occur long before the Shuttle is configured for a mission. This was the case for STS-107 - of the 13 delays, only a few occurred after the Orbiter was configured for flight; most happened earlier in the planning process. Three specific events caused delays for STS-107:
+
+- Removal of Triana: This Earth-observing satellite was replaced with the FREESTAR payload.
+
+- Orbiter Maintenance Down Period: Columbia's depot-level maintenance took six months longer than originally planned, primarily to correct problems encountered with Kapton wiring (see Chapter 4). This resulted in the STS-109 Hubble Space Telescope service mission be",launch delays due to other missions taking priority,M1,root,"After 13 delays over two years, due mainly to other missions taking priority",,,
+F096,"By November 2002, NASA had flown 16 Space Shuttle missions dedicated to Station assembly and crew rotation. Five crews had lived onboard the Station, the last four of them delivered via Space Shuttles. As the Station had grown, so had the complexity of the missions required to complete it. With the International Space Station assembly more than half complete, the Station and Shuttle programs had become irreversibly linked. Any problems with or perturbations to the planned schedule of one program reverberated through both programs. For the Shuttle program, this meant that the conduct of all missions, even non-Station missions like STS-107, would have an impact on the Node 2 launch date.
+
+In 2002, this reality, and the events of the months that would follow, began to place additional schedule pressures on the Space Shuttle Program. Those pressures are discussed in Section 6.2.",schedule pressure increased with Station assembly complexity,M1,contributing,,,,
+F097,"During the flight and prior to the accident, tracking and control functions performed normally. There were no communications problems throughout the range or with the NASA flight dynamics officer in Mission Control. Houston.
+
+Range safety data displays did not provide useful information immediately after the accident. The range safety officer depended upon the video displays for evidence concerning the performance of the Solid Rocket Boosters. Without that information, the range safety officer would not have sent the destruct signals. Detailed studies from Marshall had indicated that Solid Rocket Boosters would tumble if prematurely separated. That assumption made possible the prediction of impact points. When the Challenger Solid Rocket Boosters separated after the explosion, however, they continued powered, stabilized flight and did not tumble, contrary to the expectations upon which range safety rules had been based. Without the live television pictures, the range safety officer would not have known about the unexpected performance of the boosters.",range safety rules based on incorrect assumption,T4,contributing,Detailed studies from Marshall had indicated that Solid Rocket Boosters would tumble if prematurely separated.,,,
+F098,"The Cause of e Accident
+
+= he consensus of the Commission and "" participating investigative agencies is that the loss of the Space Shuttle 7 Challenger was caused by a failure in the j joint between the two lower segments of the right Solid Rocket Motor. The specific failure was the destruction of the seals that are intended to prevent hot gases from leaking through the joint during the propellant burn of the rocket motor. The evidence assembled by the Commission indicates that no other element of the Space Shuttle system contributed to this failure.",failure in the joint between the two lower segments,T1,root,The specific failure was the destruction of the seals that are intended to prevent hot gases from leaking through the joint during the propellant burn of the rocket motor.,,,
+F099,"Investigators ran multiple analyses and wind tunnel tests to understand this significant aerodynamic event. Analysis showed that by EI+850, the temperatures inside the wing
+
+were high enough to substantially damage the wing skins, wing leading edge spar, and the wheel well wall, and melt the wing's support struts. Once structural support was lost, the wing likely deformed, effectively changing shape and resulting in increased lift and a corresponding increase in drag on the left wing. The increased drag on the left wing further increased the Orbiter's tendency to yaw left.
+
+Loss of Vehicle Control (EI+612 through EI+970)
+
+A rise in hydraulic line temperatures inside the left wheel well indicated that superheated air had penetrated the wheel well wall by EI+727. This temperature rise, telemetered to Mission Control, was noted by the Maintenance, Mechanical, and Crew Systems officer. The Orbiter initiated and completed its roll reversal by EI+766 and was positioned left-wing-down for this portion of re-entry. The Guidance and Flight Control Systems performed normally, although the aero-control surfaces (aileron trim) continued to counteract the additional drag and lift from the left wing.",high temperatures inside the wing damaged structural components,T5,root,"Analysis showed that by EI+850, the temperatures inside the wing were high enough to substantially damage the wing skins, wing leading edge spar, and the wheel well wall, and melt the wing's support struts.",,,
+F100,"10.7 ORBITER CORROSION
+
+Removing and replacing Thermal Protection System tiles sometimes results in damage to the anti-corrosion primer that covers the Orbiters' sheet metal skin. Tile replacement often occurs without first re-priming the primed aluminum substrate. The current repair practice allows Room Temperature Vulcanizing adhesive to be applied over a bare aluminum substrate (with no Koropon corrosion-inhibiting compound) when bonding tile to the Orbiter.
+
+A video borescope of Columbia prior to STS-107 found corrosion on the lower forward fuselage skin panel and stringer areas. Corrosion on visible rivets and on the sides and feet of stringer sections was also uncovered during borescope inspections, but was not repaired.
+
+Other corrosion concerns focus on the area between the crew module and outer hull, which is a difficult area to access for inspection and repair. At present, corrosion in this area is only monitored with borescope inspections. There is also concern that unchecked corrosion could progress from internal areas to external surfaces through fastener holes, joints, or directly through the skin. If this occurs beneath the tile, the tile system bond line could degrade.",corrosion on Orbiters' sheet metal skin,T3,contributing,A video borescope of Columbia prior to STS-107 found corrosion on the lower forward fuselage skin panel and stringer areas.,,,
+F101,"Momentary loss of telemetry.
+
+Closing of several valves by shock loading.
+
+Loss of integrity of the oxygen tank no. 1 system.
+
+Slight temperature increases in bay 4 and adjacent sectors of the SM.
+
+Loss of the panel covering bay h of the SM, as observed and photographed by the crew.
+
+Displacement of the fuel cells as photographed by the crew. Damage to the high-gain antenna as photographed by the crew.
+
+The panel covering of bay 4 could be blown off by pressurization of the bay. About 25 psi of uniform pressure in bay 4 is required to blow off the panel.
+
+The various bays and sectors of the SM are interconnected with open passages so that all would be pressurized if any one were supplied with a pressurant at a relatively slow rate,
+
+The CM attachments would be failed by an average pressure of about 10 psi on the CM heat shield and this would separate the CM from the SM.",Closing of several valves by shock loading,T1,root,Closing of several valves by shock loading.,,,
+F102,"RENO LENA AE | QWELASSTPLED
+
+~ bie Ts re 'és c= [em
+
+Ci cnmnocoomme 333
+
+DISTRIBUTION
+
+SUBJECT: STS Siok FLIGHT RRADINASS REVIEW
+
+THE STS Sick PLIGHT RBADINBSS RAVIBW (FRR) [S$ SCHBDULED FOR JANUARY 15, 2986 PROM 2:0026:30 PM BST. TMB LEVBL 22 MSTS OFFICE {3 RESPONSIBLE POR IMPLEMENTING THIS REVIEW. | MBADQUARTERS 4°H3RR MUMBBR 221 WILL BB OSBD FOR THIS TELECON. TBLEVISION WiLL BB OSAP AS BEFORE.
+
+THE INITIAL MEETING OF THE MISSION MANAGEMENT TRAN (ett) WILL SERVE THE PUNCTION OF THE bok BAY RSVIIG.
+
+a > wOORR
+
+ASSOCIATE ADMINISTRATOR FOR SPACB FLIGHT
+
+fama aeameos | aren] CWELADAZSPILLH The NASA Associate Administrator for Space Flight
+
+issued this notice of scheduling of the Flight Readiness Review for mission 51-L.
+
+Rocket Booster design, a term denoting a failure point ~ without back-up -that could cause a loss of life or vehicle if the component fails. In July. 1985, after a nozzle joint on STS 51-B showed erosion of a secondary O-ring, indicating that the primary seal failed, a launch constraint was placed on flight 51-F and subsequent launches. These constraints had been imposed and regularly waived by the Solid Rocket Booster Project Manager at Marshall, Lawrence B. Mulloy.",launch constraint waiver,M6,contributing,These constraints had been imposed and regularly waived by the Solid Rocket Booster Project Manager,,,
+F103,"Leading Edge Maintenance
+
+Post-flight RCC component inspections for cracks, chips, scratches, pinholes, and abnormal discoloration are primarily visual, with tactile evaluations (pushing with a finger) of some regions. Boeing personnel at the Kennedy Space Center make minor repairs to the silicon carbide coating and surface defects.
+
+With the goal of a long service life, panels 6 through 17 are refurbished every 18 missions, and panels 18 and 19 every 36 missions. The remaining panels have no specific refurbishment requirement.
+
+At the time of STS-107, most of the RCC panels on Columbia's left wing were original equipment, but panel 10-left, T-seal 10-left, panel 11-left, and T-seal 11-left had been replaced (along with panel 12 on the right wing). Panel 10-left was tested to destruction after 19 flights. Minor surface repairs had been made to panels 5, 7, 10, 11, 12, 13, and 19 and T-seals 3, 11, 12, 13, 14, and 19. Panels and T-seals 6 through 9 and 11 through 17 of the left wing had been refurbished.",insufficient refurbishment schedule for some panels,M6,contributing,,,,
+F104,"Technical Findings
+
+TF-1 The AJ26 LO2 turbopump thrust bearing and HBA have numerous intricacies and sensitivities that make it difficult to reliably manage the bearing loads and makes this area of the turbopump vulnerable to failure and oxygen fires.
+
+TF-2 Given the non-linear rotordynamic behavior of the NK-33/AJ26 LO2 turbopump, life testing at the 2x Antares mission profile and duration was not sufficient to demonstrate bearing life margin.
+
+TF-3 The instrumentation suite for the engines during flight and ATP was not sufficient to gain adequate insight into engine performance and to support anomaly investigation efforts.
+
+TF-4 A comprehensive delta-qualification program for the AJ26 engine with the design changes and flight parameters planned for Antares missions was not performed.
+
+TF-5 Although the IRT cannot definitively conclude that FOD was the cause or a contributor to the E15 failure, evidence suggests that FOD was present within E15 at the time of failure.",FOD present within E15 at time of failure,T5,root,"Although the IRT cannot definitively conclude that FOD was the cause or a contributor to the E15 failure, evidence suggests that FOD was present within E15 at the time of failure.",,,
+F105,"And there was an exchange amongst the technical people on that data as to what it meant. . . But the real exchange never really came until the conclusions and recommendations came in.
+
+At that point in time, our vice president, Mr. Bob Lund, presented those charts and he presented the charts on the conclusions and recommendations. And the bottom line was that the engineering people would not recommend a launch below 53 degrees Fahrenheit. The basis for that recommendation was primarily our concern with the launch that had occurred about a year earlier, in January of 1985, I believe it was",engineering people would not recommend a launch below 53 degrees Fahrenheit,O3,contributing,"The basis for that recommendation was primarily our concern with the launch that had occurred about a year earlier, in January of 1985, I believe it was",,,
+F106,"Following all of these procedures, measurement of the tang showed the differential between the tang and clevis along the 0-180 degree axis to be + .138 inch, which was considered suitable for mate. The right aft center segment was hoisted from the transfer aisle and lowered into position above the aft segment in the Vehicle Assembly Building high bay. The alignment tool was removed and final tang measurements showed a differential of + .216 inch, indicating mating was possible. Installation of both O-rings and successful stacking of the segments then took place without incident. No further problems were identified during engagement of the two segments. 'Table 1 shows the measurements taken at various stages of the entire procedure.°®
+
+The several sets of tang/clevis diametric measurements referred to in the foregoing discussion, and presented in Table 1, were reported by the stacking crews at Kennedy.
+
+Two conspicuous aspects of the 51-L right aft field joint warrant comparison with joint history of earlier flights. Those aspects are the use of the",inadequate interface between tang and clevis,T4,root,,,,
+F107,"Figure 17: Software Section of Fault Tree
+
+A1 Sensor
+
+The sensor section of the fault tree was investigated to determine if the A1.1 loss of sensor(s), A1.2 inaccurate sensor(s), or A1.3 insufficient sample rate could produce, contribute to, or cause the SM RCS failure. Suspect thrusters were removed from the firings solution as a result of the jet fail-off FDIR registering insufficient Pc from the combustion chamber. In this consideration there were no sensors lost. The sensors were deemed healthy and capable of relaying accurate sample data. However, there is insufficient IPC sampling occurring for the IPCs to address the physics within the RCS thruster. There is insufficient telemetry sampling to provide sufficient insight to thruster operations. This is due to the thruster firing for 5ms pulse, the shortest duration allowed. The sampling rate of the IPC is. which is a sampling rate of every The IPC may not capture all pulses below instead it relies on pulse aftereffects and modelling to identify the follow-on effects. This sampling rate did not directly cause the thruster fail offs during CFT as the vehicle was able to safely operate without capturing all possible thruster pulses. A1.1 loss of sensor(s), A1.2 inaccurate sensor(s), or A1.3 insufficient sample rate were deemed not credible.",insufficient IPC sampling and telemetry sampling,V2,contributing,There is insufficient IPC sampling occurring for the IPCs to address the physics within the RCS thruster. There is insufficient telemetry sampling to provide sufficient insight to thruster operations.,,,
+F108,"This e-mail was followed by another to the crew with an attachment of the video showing the debris impact. Husband acknowledged receipt of these messages.
+
+Later, a NASA liaison to USSTRATCOM sent an e-mail thanking personnel for the prompt response to the imagery request. The e-mail asked that they help NASA observe ""official channels"" for this type of support in the future. Excerpts from this message follow.
+
+""Let me assure you that, as of yesterday afternoon, the Shuttle was in excellent shape, mission objectives were being performed, and that there were no major debris system problems identified. The request that you received was based on a piece of debris, most likely ice or insulation from the ET, that came off shortly after launch and hit the underside of the vehicle. Even though this is not a common occurrence it is something that has happened before and is not considered to be a major problem. The one problem that this has identified is the need for some additional coordination within NASA to assure that when a request is made it is done through the official channels. The NASA/ USSTRAT (USSPACE) MOA identifies the need for this type of support and that it will be provided by USSTRAT. Procedures have been long established that identifies the Flight Dynamics Officer (for the Shuttle) and the Trajectory Operations Officer (for the International Space Station) as the POCs to work these issues with the personnel in Cheyenne Mountain. One of the primary purposes for this chain is to make sure that requests like this one does not slip through the system and spin the community up about potential problems that have not been fully vetted through the proper channels.",Poor communication between NASA and USSTRATCOM,H3,contributing,"Let me assure you that, as of yesterday afternoon, the Shuttle was in excellent shape... The one problem that this has identified is the need for some additional coordination within NASA to assure that when a request is made it is done through the official channels.",,,
+F109,"Modification of IRU-WAKE and IRU-REST
+
+These procedures initially turned on (IRU-WAKE) or turned off (IRU-REST) all 3 gyros. As a result of the March 1997 decision, they were modified to be more flexible and allow turning on or off individual gyros as required.
+
+Procedure change was discussed between the FOT and ESA/MMS personnel. Through e-mail exchange, the MMS resident engineer communicated that each time Gyro A is despun, the automatic software function ""Gyro Setting at ESR"" must be re-enabled.",Procedure change was not fully implemented,O1,observation,Procedure change was discussed between the FOT and ESA/MMS personnel.,,,
+F110,"1.1 Mission Background
+
+The Boeing Starliner Crewed Flight Test (CFT) represents a critical milestone in NASA's Commercial Crew Program (CCP) certification of Starliner as a U.S. commercial spacecraft to transport astronauts to and from the International Space Station (ISS). Starliner was launched on June 5, 2024, from Cape Canaveral Space Force Station, carrying NASA astronauts Barry ""Butch"" Wilmore (CDR) and Sunita ""Suni"" Williams (PLT) to the ISS. Initially planned as an 8- to 14-day mission, the flight was extended to 93 days due to technical anomalies. These anomalies ultimately culminated in an uncrewed return of the Starliner capsule to White Sands Space Harbor (WSSH) on September 7, 2024. Wilmore and Williams remained aboard the ISS as part of Expedition 71/72 and returned to Earth on March 18, 2025, aboard SpaceX's Crew-9 Dragon. The CFT mission encountered challenges that tested both the spacecraft and operations team. Anomalies included a loss of 6 degree of freedom control due to reduced thrust from service module reaction control system jets, leaks from the helium lines used to pressurize the propulsion system and pneumatically operate valves, and a crew module thruster that did not operate during descent. Acquiring vehicle operational knowledge, testing new systems, and working through anomalies are expected on test flights of a new spacecraft. However, the propulsion system anomalies on the Starliner during CFT were more significant than anticipated. The unknown likelihood associated with the reliability of using the SM RCS for departure, from ISS, posed a risk to human life that could not be bounded with agreed to margins, during the mission. The anomalies experienced during CFT require attention and rigor in resolution. This report provides an in-depth evaluation of technical details regarding the anomalies prompting this investigation, as they are known at the time of writing this report.",propulsion system anomalies,T4,root,a loss of 6 degree of freedom control due to reduced thrust from service module reaction control system jets,,,
+F111,"(2) Direct factors (estimation)
+
+JAXA estimates the following three factors caused the IRU bias rate to remain high and led to the
+
+attitude anomaly.
+
+a. Parameter setting where the IRU bias rate temporally took a high value when the Kalman filter
+
+was reset after a maneuver.
+
+To maximize observation time, it was necessary to complete calculations for attitude
+
+determination as soon as possible after the completion of a maneuver. Thus, the Kalman gain
+
+was designed to take a rather high value when the Kalman filter was reset after a maneuver. This
+
+resulted in a period in which the IRU bias rate took a high value during attitude determination.
+
+Note that the same behavior happened before the events on March 26. However, in the
+
+previous cases, the conversion time was short, as planned, because the STT data were included
+
+continuously.
+
+b. Design concept where the two STT were not used as a redundancy system",Design concept did not use STTs as redundancy system,T4,root,Design concept where the two STT were not used as a redundancy system,,,
+F112,"The solid hydrogen in the instrument cryogen tanks nominally absorbs a small amount of heat
+
+when ground cooling is terminated before lift off. Since the cryostat had a limited ground hold time,
+
+approximately 9 hours, the opening of the secondary tank vent as soon as possible on orbit to effect the
+
+timely cool down of the onboard hydrogen was important to maximize mission life. Because of this, the
+
+secondary tank vent pyro was to be opened at the earliest opportunity by ground commanding. If ground",ground cooling terminated too early,O1,contributing,"Since the cryostat had a limited ground hold time, approximately 9 hours...",,,
+F113,"The most obvious source of energy needed to initiate the fire existed in the spacecraft's power distribution system. Current carrying wires were distributed through out every major region of the Command Module. The most likely ways in which electrical power can initiate a fire are the following:
+
+1. Through malfunction of the equipment being powered which in turn ignites or initiates a fire in nearby combustibles. 2. Overload in the conductor resulting from shorts in equipment or wiring. This overload will
+
+cause the conductor to overheat and ignite nearby combustibles (Enclosure 26).
+
+3. Electric arcs that are created when the insulation is defeated between power carrying conductors and the spacecraft structure or equipment.
+
+A large majority of the wires were left undamaged. However, there were a number of cases where exposed wire showed extensive burning, overheating or complete destruction. There were also several places where pitting of exposed conductors and adjacent structure indicate that an electric arc had occured.","Exposed wire showed extensive burning, overheating or complete destruction",O1,contributing,"However, there were a number of cases where exposed wire showed extensive burning, overheating or complete destruction.",,,
+F114,"SKB CRITICAL ITEMS LIS) aa
+
+mmediste Suprrmnem SOLID. ROCKET 00S TE anennneneenenneennenasenteeneteann® Crneaiey Cougery ot, Aesction Tene to ter,
+
+trom Code. 10-01-01 ""Case, O/H (See Retention Retionale) S e o a {
+
+23 Adé
+
+trae Meng
+
+& leberetory test program demonstrated the ability of the O-ring-to operate successfully when extruded Uniform gaos of 1/8-ineh and over (THR.
+
+into gaps well over those encountered fn this O-ring application. 134866} successfully withstood pressures of 1600 psi. The Hyeroburst Program (TWR-1]664) end the Structure! Test Program (STA-1) for the standard weight case (TWR-12051) and the Ligntweight Case Joint Certification
+
+Test (TWR-12629) all have shown that the O-ring can withstand 8 sinims ef four pressurtzstions before damage te the Ping can permte any leekage.
+
+further demonstration of the capediitty of jotnt seeling 1s found fm the hyéro-prvof 'testing cf new and refurdished case segments. Over 540 joints neve been exposed to liquid pressurizetions et levels",O-ring design inadequate for conditions,T3,root,The O-ring-to operate successfully when extruded Uniform gaos of 1/8-ineh and over,,,
+F115,"of thruster leg; one half system
+
+remains unless
+
+additional failures on second half-
+
+system
+
+inabilitiy to control vehicle during free flight
+
+Figure 63: Failure Mode Effects Analysis (FMEA) for Hazard Report 16.01
+
+These same failure modes, effects and criticality analyses (FMECA)s were utilized during the Phase II Safety Review (May 2017) and would be utilized in developing and informing the relevant hazard reports. While it appears that many changes did occur, when evaluating the Grp2_SM Prop FMECA (HR 16.01) and (HR 2.08), it still lists the end effects for to be inability to control vehicle during free flight for entry/abort phases instead of Loss of Crew/Loss of Vehicle.",inability to control vehicle during free flight,O1,contributing,inabilitiy to control vehicle during free flight,,,
+F116,"CONTINGENCY PLANNING AND GROUND SAFETY INVESTIGATION =)
+
+3.5.4
+
+e \'
+
+Root Cause 4; Poor Communications at the Scene
+
+Personnel on the scene were not equipped with proper communication capabilities; consequently,
+
+intentions were confused and conflicting. It was clear from the actions observed during the early
+
+minutes after impact that individuals were not able to communicate adequately. There are several",Poor communications at the scene,H3,root,"Personnel on the scene were not equipped with proper communication capabilities; consequently, intentions were confused and conflicting.",,,
+F117,"more fully appreciate the danger it represented. Recall that ""safety culture"" refers to the collection of characteristics and attitudes in an organization - promoted by its leaders and internalized by its members - that makes safety an overriding priority. In the following analysis, the Board outlines shortcomings in the Space Shuttle Program, Debris Assessment Team, and Mission Management Team that resulted from a flawed safety culture.
+
+Shuttle Program Shortcomings
+
+The flight readiness process, which involves every organization affiliated with a Shuttle mission, missed the danger signals in the history of foam loss.
+
+Generally, the higher information is transmitted in a hierarchy, the more it gets ""rolled-up,"" abbreviated, and simplified. Sometimes information gets lost altogether, as weak signals drop from memos, problem identification systems, and formal presentations. The same conclusions, repeated over time, can result in problems eventually being deemed non-problems. An extraordinary example of this phenomenon is how Shuttle Program managers assumed the foam strike on STS-112 was not a warning sign (see Chapter 6).",problems eventually being deemed non-problems due to repetition of conclusions,M3,contributing,"The same conclusions, repeated over time, can result in problems eventually being deemed non-problems.",,,
+F118,"5 (Wee bran 6 COSCO ee. eo eo BT ; _ in ; ; ; a ORIGINAL PAgE iS a a. OF POOR QuaLiry aN "" O Cm SE ee eS . ""eS _- -_- se ew aD - a AFT SEGMENT/AFT CENTER SEGMENT FIELD JOINT CONFIGURATION ZZ ; cae > INHIBITOR (CASTAGLE) INHIBITOR (MOLDED) O---RINGS (0.283 OIA)
+
+STRESS
+
+RELIEF FLAP
+
+EPOM
+
+O-RING (.072' DIA) LEAK CHECK PORT INSULATION HD-2 GREASE (CORK) BEAD a9
+
+PIN RETAINER BAND",Poor quality of O-ring material,T1,root,"""OF POOR QUALITY""",,,
+F119,"4.2 REMAINING FACTORS
+
+Several significant factors caught the attention of the Board during the investigation. Although it appears that they were not causal in the STS-107 accident, they are presented here for completeness.
+
+Solid Rocket Booster Bolt Catchers
+
+The fault tree review brought to light a significant problem with the Solid Rocket Booster bolt catchers. Each Solid Rocket Booster is connected to the External Tank by four separation bolts: three at the bottom plus a larger one at the top that weighs approximately 65 pounds. These larger upper (or ""forward"") separation bolts (one on each Solid Rocket Booster) and their associated bolt catchers on the External Tank provoked a great deal of Board scrutiny.
+
+About two minutes after launch, the firing of pyrotechnic charges breaks each forward separation bolt into two pieces, allowing the spent Solid Rocket Boosters to separate from the External Tank (see Figure 4.2-1). Two ""bolt catchers"" on the External Tank each trap the upper half of a fired separation bolt, while the lower half stays attached to the Solid Rocket Booster. As a result, both halves are kept from flying free of the assembly and potentially hitting the Orbiter. Bolt catchers have a domed aluminum cover containing an aluminum honeycomb matrix that absorbs the fired bolt's energy. The two upper bolt halves and their respective catchers subsequently remain connected to the External Tank, which burns up on re-entry, while the lower halves stay with the Solid Rocket Boosters that are recovered from the ocean.",bolt catcher design inadequate for energy absorption,T1,observation,Bolt catchers have a domed aluminum cover containing an aluminum honeycomb matrix that absorbs the fired bolt's energy.,,,
+F120,"Recommendation:
+
+R4.2-5 Kennedy Space Center Quality Assurance and United Space Alliance must return to the straightforward, industry-standard definition of ""Foreign Object Debris,"" and eliminate any alternate or statistically deceptive definitions like ""processing debris.""",inadequate quality assurance process,M6,observation,"Kennedy Space Center Quality Assurance and United Space Alliance must return to the straightforward, industry-standard definition of 'Foreign Object Debris,'",,,
+F121,"plans and institute procedures to insure that high standards of quality are maintained. To accomplish that goal, elements charged with responsibility for quality assurance establish procedural controls. assess inspection programs, and participate in a problem identification and reporting system. ;
+
+The Chief Engineer at NASA Headquarters, has overall responsibility for safety, reliability and quality assurance. The ability of the Chief Engineer to manage NASA's safety program is limited by the structure of safety, reliability and quality assurance organizations within the agency. His limited staff of 20 persons? includes only one who spends 25 percent of his ume on Shuttle maintainability, reliability and quality assurance and another who spends 10 percent of his time on these vital aspects of flight safety.*
+
+At Johnson, a large number of government and contractor engineers support the safety, reliability and quality assurance program, but needed expertise concerning Marshall hardware is absent. Thus the effectiveness of the oversight responsibilities at Level II was limited.°®",insufficient staff for safety program,M6,contributing,"His limited staff of 20 persons... includes only one who spends 25 percent of his time on Shuttle maintainability, reliability and quality assurance",,,
+F122,"response from the Shuttle program management was not a redesign of the brakes, but an extension of required runway length from 10,000 to 12,500 feet. Thus, the brakes for many years have been known to have little or no margin, even if they performed as originally designed.
+
+There are four brake assemblies, one for each main landing gear wheel. Each assembly uses four rotors and three stators, the stators being attached to a torque tube. Carbon pads are attached to provide the friction surface. The Orbiter brakes were designed to absorb 36.5 million foot-pounds of energy for normal stops and 55.5 million foot-. pounds of energy for one emergency stop. The brakes were tested and qualified using standard dynamometer tests.
+
+Actual flight experience has shown brake damage on most flights. The damage is classified by cause as either dynamic or thermal. The dynamic damage is usually characterized by damage to rotors and carbon lining chipping, plus beryllium and pad retainer cracks. On the other hand, the thermal damage has been due to heating of the stator caused by energy absorption during braking. The beryllium becomes duc-tile and has a much reduced yield strength at temperatures possible during braking. Both types of damage are typical of early brake development problems experienced in the aviation industry.",brake assemblies had little or no margin even if they performed as designed,M6,contributing,"response from the Shuttle program management was not a redesign of the brakes, but an extension of required runway length from 10,000 to 12,500 feet.",,,
+F123,"3.4.2 Proximate Cause 2: Inadequate Contingency Planning and Training
+
+>
+
+The various versions of ""no MAR contingency"" requirements did not address PPE at all, in spite of the significant attention paid to the need for PPE during normal operations. There were also no
+
+operational directives in any of the various contingency plans for hazardous materials. In fact,",contingency plans lacked operational directives and PPE requirements,O3,contributing,There were also no operational directives in any of the various contingency plans for hazardous materials.,,,
+F124,"The reason for the three remaining variables, including the one denoting horizontal bias, being unprotected was that further reasoning indicated that they were either physically limited or that there was a large margin of safety, a reasoning which in the case of the variable BH turned out to be faulty. It is important to note that the decision to protect certain variables but not others was taken jointly by project partners at several contractual levels.
+
+There is no evidence that any trajectory data were used to analyse the behaviour of the unprotected variables, and it is even more important to note that it was jointly agreed not to include the Ariane 5 trajectory data in the SRI requirements and specification.
+
+Although the source of the Operand Error has been identified, this in itself did not cause the mission to fail. The specification of the exception-handling mechanism also contributed to the failure. In the event of any kind of exception, the system specification stated that: the failure . should be indicated on the databus, the failure context should be stored in an EEPROM memory (which was recovered and read out for Ariane 501), and finally, the SRI processor",Faulty reasoning led to unprotected variables,T2,root,Further reasoning indicated that they were either physically limited or that there was a large margin of safety,,,
+F125,"Pin Retainer Band il
+
+CML Tid
+
+Clevis Pin
+
+lll
+
+Figure 14 -
+
+Solid Rocket Motor cross section shows positions of tang. clevis and O-rings. Putty lines the joint on the side toward the propellant.",Insulation failure in Solid Rocket Motor joint,T1,root,,,,
+F126,"5. Failure to follow the operations script; failure to evaluate primary and ancillary data
+
+Real time data becomes limited because an autonomous data format change occurs whenever the spacecraft enters safe mode. However, the spacecraft status immediately preceding a safe mode trigger could have been determined by viewing the history tape that was generated prior to an anomaly. In addition, SOHO was designed to store, within its on-board computer for diagnostic purposes, the last three telemetry frames that preceded a safe mode entry. The operations script specifically states that the Gyro A is to be spinning upon entry into safe mode and instructs the operator to evaluate the three telemetry frames that had been stored prior to the anomaly before proceeding toward recovery.
+
+Neither the confirmation of Gyro A state nor the evaluation of the three previous telemetry frames was performed. These omissions resulted in a failure to notice that Gyro A was not spinning - a state which rendered the safe mode unstable. This ultimately resulted in a misinterpretation of Gyro B data, and eventually caused the loss of a SOHO safety net.",omission to evaluate primary and ancillary data,O2,contributing,These omissions resulted in a failure to notice that Gyro A was not spinning - a state which rendered the safe mode unstable.,,,
+F127,". Experimental evidence indicates that due to
+
+several effects associated with the Solid Rocket Booster's ignition and combustion pressures and associated vehicle motions, the gap between the tang and the clevis will open as much as .017 and .029 inches at the secondary and primary O-rings, respectively.
+
+a. This opening begins upon ignition, reaches its maximum rate of opening at about 200-300 milliseconds, and is essentially complete at 600 milliseconds when the Solid Rocket Booster reaches its operating pressure.
+
+b. The External Tank and right Solid Rocket Booster are connected by several struts, including one at 310 degrees near the aft field joint that failed. This strut's effect on the joint . dynamics is to enhance the opening of the gap between the tang and clevis by about 10-20 percent in the region of 300-320 degrees.
+
+9. O-ring resiliency is directly related to its
+
+temperature. a. A warm O-ring that has been com-",Strut failure enhanced O-ring gap opening,T4,contributing,This strut's effect on the joint dynamics is to enhance the opening of the gap between the tang and clevis by about 10-20 percent in the region of 300-320 degrees.,,,
+F128,"a compressed-gas gun. Target panel assemblies with a flight history similar to Columbia's would be mounted on a support that was structurally equivalent to Columbia's wing. The attaching hardware and fittings would be either flight certified or built to Columbia drawings. Several considerations influenced the overall RCC test design:
+
+- RCC panel assemblies were limited, particularly those with a flight history similar to Columbia's. - The basic material properties of new RCC were known to be highly variable and were not characterized for high strain rate loadings typical of an impact. - The influence of aging was uncertain. - The RCC's brittleness allowed only one test impact on each panel to avoid the possibility that hidden damage would influence the results of later impacts. - The structural system response of RCC components, their support hardware, and the wing structure was complex. - The foam projectile had to be precisely targeted, because the predicted structural response depended on the impact point.",Influence of aging was uncertain,V2,observation,The influence of aging was uncertain.,,,
+F129,"majority of these could be classified as non-initiators on the basis of external examination and recorded performance. If, however, there was any suspicion that an item was involved with the initiation of the fire, it was subjected to intensive scrutiny that involved one or more of the following procedures: Laboratory analysis of damage, electrical continuity and resistance tests, functional performance using established procedures for ''bench checks'' and careful disassembly which included repeating some of the above steps on individual parts of the assembly. The results of this effort led to the conclusion that none of the electrically powered spacecraft systems or subassemblies was associated with the initiation of the fire.",No electrical system caused the fire,O1,observation,none of the electrically powered spacecraft systems or subassemblies was associated with the initiation of the fire,,,
+F130,"Figure 51: NESC O-ring Testing
+
+D1.2 Degradation addresses that the O-ring/softgood became damaged overtime, and the associated child block D1.2.1 Material Compatibility addresses that the O-ring/softgood was incompatible with the exposure, specifically NTO.
+
+The following table provides a list of the components within the helium manifold system which contain softgoods that are incompatible with Oxidizer. Any of these components may have contributed to the leakage observed.
+
+Figure 52: Table of Components Within Each Doghouse Helium Manifold Degradation over time of the softgood materials within the helium system due incompatibility with
+
+NTO was considered one of the most probable proximate causes. NTO is described as a ""slippery molecule"" as ""NTO requires a metallic seal otherwise it is simply a controlled leak."" The NTO source",O-ring/softgood incompatible with exposure,T4,root,NTO was considered one of the most probable proximate causes. NTO is described as a 'slippery molecule' as 'NTO requires a metallic seal otherwise it is simply a controlled leak.',,,
+F131,"The Debris Assessment Team presented its analysis in a formal briefing to the Mission Evaluation Room that relied on PowerPoint slides from Boeing. When engineering analyses and risk assessments are condensed to fit on a standard form or overhead slide, information is inevitably lost. In the process, the priority assigned to information can be easily misrepresented by its placement on a chart and the language that is used. Dr. Edward Tufte of Yale University, an expert in information presentation who also researched communications failures in the Challenger accident, studied how the slides used by the Debris Assessment Team in their briefing to the Mission Evaluation Room misrepresented key information.38
+
+The slide created six levels of hierarchy, signified by the title and the symbols to the left of each line. These levels prioritized information that was already contained in 11 simple sentences. Tufte also notes that the title is confusing. ""Review of Test Data Indicates Conservatism"" refers not to the predicted tile damage, but to the choice of test models used to predict the damage.",Information prioritization misrepresented by slide placement and language,M3,observation,"In the process, the priority assigned to information can be easily misrepresented by its placement on a chart and the language that is used.",,,
+F132,"The teaming of an RTE, a lead technician, a PA inspector, a government quality assurance representative and other technicians is typical for I&T operations in the aerospace industry. Although the roles and responsibilities of the individuals of this team, i.e., RTE as the operations lead, lead technician as chief operator, and PA inspector as the independent quality assurance agent are generally understood, the dynamics of this team are often governed by the personalities and experiences of the individuals, and the conditions of the operation. For instance, the I&T manager, present at the operation, should have enforced adherence to the procedures. The PA manager should have known who was ""watching the shop"" when he was on leave, and his designee should have ensured the presence of the safety engineer and quality inspector. The MIB concluded that the lack of clear definition, proper training and reinforcement of the roles and responsibilities of these individuals and their lack of enforcement and support by the supervisory chain are contributory factors to this mishap. Whether it was personality or lack of training, the individuals of the team failed to fulfill their expected roles and","lack of clear definition, proper training and reinforcement of roles and responsibilities",M5,contributing,"the lack of clear definition, proper training and reinforcement of the roles and responsibilities of these individuals and their lack of enforcement and support by the supervisory chain are contributory factors to this mishap.",,,
+F133,"engineers' decision-making, the three worked together. Each is a critical link in the causal chain.
+
+This chapter shows that both accidents were ""failures of foresight"" in which history played a prominent role.1 First, the history of engineering decisions on foam and O-ring incidents had identical trajectories that ""normalized"" these anomalies, so that flying with these flaws became routine and acceptable. Second, NASA history had an effect. In response to White House and Congressional mandates, NASA leaders took actions that created systemic organizational flaws at the time of Challenger that were also present for Columbia. The final section compares the two critical decision sequences immediately before the loss of both Orbiters - the pre-launch teleconference for Challenger and the post-launch foam strike discussions for Columbia. It shows history again at work: how past definitions of risk combined with systemic problems in the NASA organization caused both accidents.
+
+Connecting the parts of NASA's organizational system and drawing the parallels with Challenger demonstrate three things. First, despite all the post-Challenger changes at NASA and the agency's notable achievements since, the causes of the institutional failure responsible for Challenger have not been fixed. Second, the Board strongly believes that if these persistent, systemic flaws are not resolved, the scene is set for another accident. Therefore, the recommendations for change are not only for fixing the Shuttle's technical system, but also for fixing each part of the organizational system that produced Columbia's failure. Third, the Board's focus on the context in which decision making occurred does not mean that individuals are not responsible and accountable. To the contrary, individuals always must assume responsibility for their actions. What it does mean is that NASA's problems cannot be solved simply by retirements, resignations, or transferring personnel.2",persistent systemic flaws in NASA organization,M5,contributing,the causes of the institutional failure responsible for Challenger have not been fixed,,,
+F134,"3. GHe leaks a. Assuming leaks do not grow - leak can be fed without any changes to concept of
+
+operations, which do not require closing He valves b. In the presence of range of large leaks, sufficient commodity exists to allow leak to
+
+be fed during critical burns. Sufficient regulated pressure from He tanks will be provided to allow OMAC injector valves to actuate c. Boeing MO will monitor and make Go/No-Go determinations and manage He
+
+commodity based on any leak rates observed 4. GHe Valves a. Valves are rated to 250 cycles b. Valves are acceptance tested and do not interact with any corrosive fluid c. GHe Valves are 1FT for Power and Open commands d. Noncredible for an open valve to spontaneously fail closed 5. OMAC Fuel Ox Valves a. Valves are rated to 250 cycles b. OMAC A Valves are 1FT for Power and Open commands; OMAC B valves are 0FT c. Improvements to NTO valves for OFT2 (sealing moisture intrusion gaps, GN2 purge) d. Noncredible for an open valve to spontaneously fail closed 6. FOD a. Past flight experience and propellant hardware inspections show that the conditions",acceptance of risk without credible failure modes,M2,root,Noncredible for an open valve to spontaneously fail closed,,,
+F135,"the RCC panel 6-left test used fiberglass panels and T-seals in panel 7, 8, 9, and 10 locations. As seen later in the RCC panel 8-left test, this test configuration may not have adequately reproduced the flight configuration. Testing of a full RCC panel 6, 7, and 8 configuration might have resulted in more severe damage.
+
+Test Results from Reinforced Carbon-Carbon Panel 8 (From Atlantis)
+
+The second impact test of RCC material used panel 8 from Atlantis, which had flown 26 missions. Based on forensic evidence, sensor data, and aerothermal studies, panel 8 was considered the most likely point of the foam debris impact on Columbia.
+
+Based on the system response of the leading edge in the fiberglass and RCC panel 6 impact tests, the adjacent RCC panel assemblies (9 and 10) were also flown hardware. The reference 1.67-pound foam test projectile impacted panel 8
+
+Figure 3.8-8. Two views of foam lodged into the slit during tests.",test configuration may not have adequately reproduced the flight configuration,T4,contributing,this test configuration may not have adequately reproduced the flight configuration,,,
+F136,"Shuttle will then re-enter the lower atmosphere much like a normal entry. The landing, however, will be at a pre-selected site in Africa or Europe.
+
+Design. The Shuttle design specifications do not require that the Orbiter be able to manage an intact abort (i.e., make it to a runway) if a second main engine should fail. If two (or all three) main engines fail within the first five to six minutes of the flight. the Space Shuttle will land in water. This maneuver is called a ""contingency abort"" and is not believed to be survivable because of damage incurred at water impact.
+
+The Shuttle design requirements did not specify that the Shuttle should be able to survive a Solid Rocket Booster failure. The system has no way to identify when a booster is about to fail, and no way to get the Orbiter or the crew away from a failing Solid Rocket Booster.",Shuttle design did not require intact abort after main engine failure,T4,root,"The Shuttle design specifications do not require that the Orbiter be able to manage an intact abort (i.e., make it to a runway) if a second main engine should fail.",,,
+F137,"THE KIRTLAND IMAGE
+
+As Columbia passed over Albuquerque, New Mexico, during re-entry (around EI+795), scientists at the Air Force Starfire Optical Range at Kirtland Air Force Base acquired images of the Orbiter. This imaging had not been officially assigned, and the photograph was taken using commercial equipment located at the site, not with the advanced Starfire adaptive-optics telescope.
+
+The image shows an unusual condition on the left wing, a leading-edge disturbance that might indicate damage. Several analysts concluded that the distortion evident in the image likely came from the modification and interaction of shock waves due to the damaged leading edge. The overall appearance of the leading-edge damage at this point on the trajectory is consistent with the scenario.
+
+Figure 3.6-13. The effects of removing RCC panel 9 are shown in this figure. Note the brighter colors on the front of the OMS pod show increased heating, a phenomenon supported by both the OMS pod temperature sensors and the debris analysis.",unusual condition on left wing,T1,root,a leading-edge disturbance that might indicate damage,,,
+F138,"5.1.4 Inappropriate Parameter Settings (4/5)
+
+An overview of satellite behavior resulting from the
+
+""inappropriate part of the RCS control parameter settings"" is
+
+shown on the next page. (Appendix J)
+
+Error in manual data
+
+input",inappropriate parameter settings,O2,contributing,inappropriate part of the RCS control parameter settings,,,
+F139,"Unsafe Acts
+
+Precondition for Unsafe Acts
+
+Unsafe Supervision
+
+Organizational Influences 3a) Routine Violation PQC and PA signed-off the procedure step of ""assure the configuration"" of the TOC without witnessing and verifying
+
+4) Adverse Mental State Complacency: Routine operation/ have confidence in RTE, signed off ""assure the configuration"" of the TOC without personal verification
+
+5) Substandard Crew Resources Lack notification of personnel Late arrival of PA inspector No Pre-operational safety briefing Failure of RTE leadership
+
+7) Inadequate Supervision Lack of supervisory enforcement to ensure team I&T members understand and uphold their roles and responsibilities
+
+9) Supervisory Violation RTE and I&T manager present failed to enforce rules of QA presence, allowed sign-off procedure after the fact and without personal verification
+
+11) Organizational Climate Operational program fosters complacent attitudes and lax discipline
+
+12) Organizational Processes Lack of process and training to assure procedure execution discipline
+
+10) Resource Management Inadequate quality assurance support.
+
+11) Organizational Climate Operational program fosters complacent attitude and lax discipline",Organizational climate fostered complacent attitudes and lax discipline,M5,observation,Operational program fosters complacent attitudes and lax discipline,,,
+F140,"terminated just prior to launch. This rate was expected to be quickly damped by the attitude control
+
+system as the secondary tank restored equilibrium to the solid hydrogen at its new low in-space
+
+temperature. Spacecraft attitude control rates increased rapidly with the secondary vent opening, then
+
+increased at a slower rate. At about this time, the McMurdo tracking station pass ended because the
+
+spacecraft was no longer in view.
+
+During the telemetry outage, spacecraft onboard sequences were executed to open the secondary
+
+vent (already opened by ground command), and open the primary tank vent (wax-thermal actuator).
+
+Execution of these events was nominal. The next tracking pass at the Poker Flat tracking station began
+
+about 90 minutes after separation from the Pegasus. At this time, cryostat temperatures were checked by
+
+turning on the WIRE Instrument Electronics (WIE). This action also caused the instrument to take image
+
+data from the focal plane. The spacecraft tumble rate was higher than at the end of the previous pass,",spacecraft onboard sequences executed incorrectly,O1,contributing,Execution of these events was nominal.,,,
+F141,"15. Findings
+
+a. The change in detanking procedures on the cryogenic oxygen tank was made in accordance with the existing change control system during final launch preparations for Apollo 13.
+
+b. Launch operations personnel who made the change did not have a detailed understanding of the tank internal components, or the tank history. They made appropriate contacts before making the change.
+
+c. Communications, primarily by telephone, among MSC, KSC, MR, and Beech personnel during final launch preparations regarding the cryogenic oxygen system included incomplete and inaccurate information.
+
+d. The MSC Test Specification Criteria Document (TSCD) which was used by KSC in preparing detailed tank test procedures states the tank allowable heater voltage and current as 65 to 85 V de and 9 to 17 amperes with no restrictions on time.
+
+Determinations (1) NR and MSC personnel who prepared the TSCD did not know that the tank heater thermostatic switches would not protect",incomplete and inaccurate information,T4,contributing,"Communications, primarily by telephone, among MSC, KSC, MR, and Beech personnel during final launch preparations regarding the cryogenic oxygen system included incomplete and inaccurate information.",,,
+F142,"PF-7 Aerojet-Rocketdyne and Orbital ATK lacked sufficient NK-33 design and operational knowledge, as well as failure history knowledge, for the NK-33 engine.
+
+PF-8 A lack of design and operating insight into the AJ26 engines creates a low level of confidence in loss-of-mission predictions made by Orbital ATK and Aerojet-Rocketdyne.",lacked design and operating insight into AJ26 engines,V2,contributing,A lack of design and operating insight into the AJ26 engines creates a low level of confidence in loss-of-mission predictions made by Orbital ATK and Aerojet-Rocketdyne,,,
+F143,"Many that work on the Starliner on both the Boeing and NASA teams have worked together for many years on the Starliner and other NASA programs, specifically Space Shuttle Program and Human Exploration programs. The amount of overlap between the teams can be touted as a positive, in that teams should already be bonded over previous successes, failures, and understanding of expertise and capabilities is also well understood. However, these relationships were also seen as pitfalls in decision making, with many viewing CCP program management and Boeing management as blurring boundaries. This led to the appearance of lack of objectivity, difficulty in managing conflict, and the appearance of favoritism. Even if the perceptions are not correct, they exist and are rampant in hallway conversations and outside of board discussions. Numerous interviews indicated that CCP and Boeing had historical relationships that led to private conversations that the rest of the team was not privy to, leading to decreased trust and increased frustration. An interviewee explained, ""You're talking decades-long history with folks that [...] muddied authority and roles and responsibilities. I think friendships might have gotten in the way.""",Blurred boundaries between CCP program management and Boeing management,M5,observation,"This led to the appearance of lack of objectivity, difficulty in managing conflict, and the appearance of favoritism.",,,
+F144,"Leak Check and Putty
+
+In addition to the action item from NASA Headquarters, another result of the 41-B erosion was a warning written by John Q. Miller, Marshall chief of the solid motor branch, to George Hardy, through Keith Coates.®? Miller was worried about the two charred rings on 41-B and the ""missing putty"" found when the Solid Rocket Boosters were recovered and disassembled. He specifically identified the putty's sensitivity to humidity and temperature as potential sources of problems. ""The thermal design of the [Solid Rocket Motor] joints depends on thermal protection of the O-ring by the [putty],"" Miller said. Failure of the putty to ""provide a thermal barrier can lead to burning both O-rings and subsequent catastrophic failure."" The memorandum also said that ""the O-ring leak check procedure and its potential effect on the (putty) installation and possible displacement is also an urgent concern which requires expedition of previously identified full scale tests.""",Lack of full-scale tests,V1,contributing,expedition of previously identified full scale tests,,,
+F145,"INCO: ""Flight - INCO, I didn't expect, uh, this bad of a hit
+
+on comm [communications]."" Flight: ""GC [Ground Control officer] how far are we from
+
+UHF? Is that two-minute clock good?"" GC: ""Affirmative, Flight."" GNC: ""Flight - GNC."" Flight: ""Go.""
+
+GNC: ""If we have any reason to suspect any sort of
+
+controllability issue, I would keep the control cards handy on page 4-dash-13."" Flight: ""Copy.""
+
+At 9:02:21 a.m. (EI+1092, or 18 minutes-plus), the Mission Control Center commentator reported, ""Fourteen minutes to touchdown for Columbia at the Kennedy Space Center. Flight controllers are continuing to stand by to regain communications with the spacecraft.""
+
+Flight: ""INCO, we were rolled left last data we had and you
+
+were expecting a little bit of ratty comm [communications], but not this long?"" INCO: ""That's correct, Flight. I expected it to be a little
+
+intermittent. And this is pretty solid right here."" Flight: ""No onboard system config [configuration] changes",Poor communication between flight controllers and INCO,H3,contributing,"Flight - INCO, I didn't expect, uh, this bad of a hit on comm [communications].",,,
+F146,"NASA's Safety Program
+
+The NASA Safety, Reliability and Quality Assurance Program should play an important role in agency activities, for the three concerns indicated in the program title are its functions. In general terms, the program monitors the status of equipment, validation of design, problem analysis and system acceptability. Each of these has flight safety implications.
+
+More specifically, safety includes the preparation and execution of plans for accident prevention, flight system safety and industrial safety requirements. Within the Shuttle program, safety analyses focus on potential hazards and the assessment of acceptable risks.
+
+Reliability refers to processes for determining that particular components and systems can be relied on to work as planned. One product of such processes is a Critical Iterns List that identifies how serious the failure of a particular item or system would be.
+
+Quality assurance is closely related to both safety and reliability. All NASA elements prepare",NASA's Safety Program did not play an important role in agency activities,M3,observation,"The NASA Safety, Reliability and Quality Assurance Program should play an important role in agency activities...",,,
+F147,"OFT-2 Mission (5/19/2022 - 5/25/2022):
+
+For this mission, the SDRT would summarize the outcome of this investigations and changes made to be that data rates, and thruster ramp-on rates, the root cause of failures was believed to be FDIR failures or ""strikes"". Increasing persistence on the number of strikes required to fail a thruster was believed to have eliminated the ""nuisance"" faults and thruster shutdown.
+
+- Is this an accurate understanding of the issue, or how would you characterize the failures and actions to mitigate?
+
+- Were there any similarities to the OFT-1 failures discussed at this time?
+
+- With current hindsight (and not trying to point any fingers), do you think the OFT-2 failures were / could have been from higher than expected thruster temperatures, similar to CFT?
+
+- After the first OFT-2 launch attempt, when the team discovered oxidizer valve issues, did the team discuss or expand review of oxidizer compatibility with other components outside the valves?",FDIR failures or 'strikes' caused thruster shutdowns,O1,root,the root cause of failures was believed to be FDIR failures or 'strikes',,,
+F148,"For a complete compilation of all re-entry data, see the
+
+CAIB/NAIT Working Scenario (Appendix D.7) and the Re-entry Timeline (Appendix D.9). The extensive aerothermal calculations and wind tunnel tests performed to investigate the observed re-entry phenomenon are documented in NASA report NSTS-37398.
+
+Re-Entry Environment
+
+In the demanding environment of re-entry, the Orbiter must withstand the high temperatures generated by its movement through the increasingly dense atmosphere as it decelerates from orbital speeds to land safely. At these velocities, shock waves form at the nose and along the leading edges of the wing, intersecting near RCC panel 9. The interaction between these two shock waves generates extremely high temperatures, especially around RCC panel 9, which experiences the highest surface temperatures of all the RCC panels. The flow behind these shock waves is at such a high temperature that air molecules are torn apart, or ""dissociated."" The air immediately around the leading edge surface can reach 10,000 degrees Fahrenheit; however, the boundary layer shields the Orbiter so that the actual temperature is only approximately 3,000 degrees Fahrenheit at the leading edge. The RCC panels and internal insulation protect the aluminum wing leading edge spar. A breach in one of the leading-edge RCC panels would expose the internal wing structure to temperatures well above 3,000 degrees Fahrenheit.",high temperatures generated by re-entry,T5,root,"The air immediately around the leading edge surface can reach 10,000 degrees Fahrenheit; however, the boundary layer shields the Orbiter so that the actual temperature is only approximately 3,000 degrees Fahrenheit at the leading edge.",,,
+F149,"CONTINGENCY PLANNING AND GROUND SAFETY INVESTIGATION )
+
+3.5.1. Root Cause 1: Inadequate Resources to Properly Prepare for the Event
+
+Genesis was a Discovery-class mission, which, by definition, implies limited total resources. The amount of effort required to prepare for the reentry and recovery was clearly underestimated, and there was insufficient personnel available to deal with the large number of issues that needed to be addressed. In addition, the need to support large numbers of reviews stretched thin the already limited workforce, as they not only tried to support these reviews, but attempted to follow through with the recommended actions as well. This was especially true as the date of reentry drew closer.
+
+The lack of sufficient resources was especially harmful because it resulted in the inability to properly staff the systems engineering and configuration management tasks that would have ensured that the required consistencies between important procedural documents were established and maintained. Limited resources also restricted the ability to make timely updates to the documentation. In particular, important changes were made in the last few days before reentry, resulting in insufficient time to properly inform and adequately train the recovery team. This failure caused documentation inconsistencies for the recovery team, and was magnified by the lack of a configuration management coordinator.",insufficient personnel available,M6,root,"The amount of effort required to prepare for the reentry and recovery was clearly underestimated, and there was insufficient personnel available...",,,
+F150,"10.10 SOLID ROCKET BOOSTER EXTERNAL TANK ATTACHMENT RING
+
+In Chapter 4, the Board noted how NASA's reliance on ""analysis"" to validate Shuttle components led to the use of flawed bolt catchers. NASA's use of this flawed ""analysis"" technique is endemic. The Board has found that such analysis was invoked, with potentially dire consequences, on the Solid Rocket Booster External Tank Attach Ring. Tests showed that the tensile strength of several of these rings was well below minimum safety requirements. This problem was brought to NASA's attention shortly before the launch of STS-107. To accommodate the launch schedule, the External Tanking Meeting chair, after a cursory briefing without a full technical review, reduced the Attach Rings' minimum required safety factor of 1.4 (that is, able to withstand 1.4 times the maximum load ever expected in operations) to 1.25. Though NASA has formulated short-and long-term corrections, its long-term plan has not yet been authorized.",NASA's use of flawed 'analysis' technique,V2,contributing,NASA's use of this flawed 'analysis' technique is endemic.,,,

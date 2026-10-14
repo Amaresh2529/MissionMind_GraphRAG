@@ -123,3 +123,26 @@ Trial run on Stage 3 run A: PASS. A2 flagged all 19 automatic dev queries as cop
 ## 8. Development results (NOT reportable)
 
 See `docs/research/10_Proof_of_Concept_Synthetic_Labels.md`.
+
+## 9. Second-generation design (frozen 2026-10-13, before any run of it)
+
+**Trigger:** the 10-mission pilot (`docs/research/11`) and two external reviews (Gemini, ChatGPT) of the project guide.
+Everything below was written and committed **before** the new variants were run once. The 10 pilot missions have now
+influenced the design, so the final paper reports every result twice:
+- on all 22 missions;
+- on the **12 missions not used in the pilot** (held-out subset, `summary_heldout_non_pilot_missions` in `evaluate.py`).
+
+| Change | Specification (no tuning) | Status in the final study |
+|---|---|---|
+| **P2**: weighted graph channel | RRF weight of the graph list = 6 (the number of B3 lists), i.e. graph and text get equal total voice | Secondary system |
+| **P2** generic-code filter | Expanded query codes present in ≥ 80% of mission profiles are dropped unless stated in the query (removes T4, in 19/22 profiles) | Part of P2 |
+| P2-nofilter | P2 without the filter | Ablation |
+| P2 generation | Prompt requires the specific failed component/process and how it led to the mishap; items that are only a category name are dropped and counted (`generic_dropped`) | Secondary generation system |
+| Support check | (a) LLM yes/no: does the quote support the claimed factor (weak self-check); (b) **D4 human review sheet**: 100 accepted + 50 rejected factors, shuffled, verdict columns | RQ1 secondary measurement |
+| Length/type bias diagnostic | `scripts/diagnose_bias.py` (label-free): Spearman ρ between a mission's top-5 frequency and its corpus size / profile size; top-5 rate full reports vs short documents | Reported for every run |
+| Results by query document type | `summary_by_query_doctype` in `evaluate.py` | Reported |
+
+**Unchanged:** the primary comparison stays **P vs B3 on nDCG@5** (pre-registered). It is not replaced by P2 or P-graphonly on the basis of pilot results. The baseline is described as a **controlled reproduction and adaptation** of Kim & Kim (2026), not an exact replication (generator, context size, fields and evaluation split differ; Section 3 of docs/research/08).
+
+**Not adopted:** dropping the 3-field lists and fusing the graph only with B3-bal (suggested by one review). Choosing a combination because it scored well on the pilot would be tuning on evaluation data. P-graphonly and P2 already cover the "stronger graph" hypothesis.
+

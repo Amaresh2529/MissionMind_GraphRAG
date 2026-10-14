@@ -90,8 +90,39 @@ def test_enforce_drops_uncited_and_abstains():
            "contributing_factors": [], "similar_precedents": [], "recommended_actions": [{"action": "z", "evidence": ["C7"]}]}
     out, st = enforce(ans, {"C1", "C2"})
     assert out["probable_root_causes"] == [{"cause": "x", "evidence": ["C1"]}]
-    assert out["recommended_actions"] == [] and st == {"abstain": False, "dropped_items": 2, "removed_citations": 2}
+    assert out["recommended_actions"] == [] and st == {"abstain": False, "dropped_items": 2, "removed_citations": 2,
+                                                            "generic_dropped": 0}
     out2, st2 = enforce({k: [] for k in ("probable_root_causes", "contributing_factors", "similar_precedents",
                                          "recommended_actions")}, {"C1"})
     assert st2["abstain"] and "abstained" in out2
     assert enforce(None, set())[1]["abstain"]
+
+
+def test_p2_drops_generic_category_items():
+    names = {"Procedure deficient or not followed", "Hardware design deficiency"}
+    ans = {"probable_root_causes": [{"cause": "Procedure deficient or not followed", "evidence": ["C1"]},
+                                    {"cause": "Thermostatic switches rated for 28 V failed at 65 V", "evidence": ["C1"]}],
+           "contributing_factors": [], "similar_precedents": [], "recommended_actions": []}
+    out, st = enforce(ans, {"C1"}, names)
+    assert [x["cause"] for x in out["probable_root_causes"]] == ["Thermostatic switches rated for 28 V failed at 65 V"]
+    assert st["generic_dropped"] == 1
+
+
+def test_p2_weights_graph_list_and_filters_generic_codes(tmp_path, monkeypatch):
+    from extension import proposed as pr
+    from config import get_settings
+    from test_retrieval import FakeEmbedder
+    monkeypatch.setattr(type(get_settings()), "processed_dir", property(lambda self: tmp_path), raising=True)
+    mentions = MENTIONS + [_m("Dd::p0001::00", ["d"], "V1", "observation")]       # V1 now in all 4 missions
+    units = [_unit(p, p[1]) for p in ["Da::p0001::00", "Db::p0001::00", "Db::p0002::00", "Dc::p0001::00",
+                                      "Dc::p0002::00", "Dd::p0001::00"]]
+    prop2 = ProposedRetriever(Retriever(units, FakeEmbedder()), mentions)
+    monkeypatch.setattr(prop2, "expanded_codes", lambda qf, q, ex, v="verified": ({"V1", "M2"}, {"V1", "M2"}))
+    qf = QueryFactors(set(), [], [])
+    out = prop2.search("P2", "seal test", qf, exclude_missions={"a"})
+    assert out["graph"]["graph_weight"] == pr.GRAPH_WEIGHT
+    assert out["graph"]["generic_codes_dropped"] == ["V1"] and out["graph"]["query_codes"] == ["M2"]
+    out_nf = prop2.search("P2-nofilter", "seal test", qf, exclude_missions={"a"})
+    assert out_nf["graph"]["generic_codes_dropped"] == [] and out_nf["graph"]["query_codes"] == ["M2", "V1"]
+    out_p = prop2.search("P", "seal test", qf, exclude_missions={"a"})
+    assert out_p["graph"]["graph_weight"] == 1.0

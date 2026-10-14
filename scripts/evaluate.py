@@ -137,6 +137,25 @@ def main(argv=None):
         units_by_page.setdefault((u.doc_id, u.page), []).append(u.id)
         missions_of[u.id] = u.missions
     per_query, summary = evaluate_run(run, labels, units_by_page, missions_of)
+    # pre-registered extra reports (2026-10-13): (1) queries of the 12 missions NOT used in the 10-mission pilot, whose
+    # labels informed later design changes; (2) by document type of the query mission (full report vs shorter)
+    pilot_m = set(json.loads((ROOT / "evalutation/benchmark/pilot/PILOT.json").read_text(encoding="utf-8"))["missions"])
+    man = {d["doc_id"]: d for d in json.loads((ROOT / "data/manifest.json").read_text(encoding="utf-8"))["documents"]}
+    full_m = {m for d in man.values() if d["role"] == "primary" and d["doc_type"] == "official_investigation_report"
+              for m in d["mission_ids"]}
+    qmission = {q["query_id"]: q["mission"] for q in map(json.loads, open(run / "queries.jsonl", encoding="utf-8"))}
+
+    def sub_summary(keep):
+        out_ = {}
+        for s_, pq_ in per_query.items():
+            sel = {q: v for q, v in pq_.items() if keep(qmission.get(q))}
+            if sel:
+                out_[s_] = {k: M.mean([v[k] for v in sel.values()]) for k in next(iter(sel.values())) if not k.startswith("n_")}
+                out_[s_]["queries"] = len(sel)
+        return out_
+    summary_heldout = sub_summary(lambda m: m not in pilot_m)
+    summary_by_doctype = {"full_report_queries": sub_summary(lambda m: m in full_m),
+                          "short_document_queries": sub_summary(lambda m: m not in full_m)}
     out = new_run_dir(args.eval_id, prefix="eval")
     write_json(out / "metrics.json", {"DEV_NOT_REPORTABLE": bool(problems), "SYNTHETIC_LABELS_NOT_REPORTABLE": labels.synthetic,
                                       "PILOT": pilot, "pilot_labels_by": (json.loads((labels.base / "PILOT.json").read_text(
@@ -146,7 +165,8 @@ def main(argv=None):
                                       "labels_dir": str(labels.base), "problems": problems, "run": str(run),
                                       "labels_sha256": {p.name: hashlib.sha256(p.read_bytes()).hexdigest()
                                                         for p in sorted(labels.base.glob("*.csv"))},
-                                      "summary": summary})
+                                      "summary": summary, "summary_heldout_non_pilot_missions": summary_heldout,
+                                      "summary_by_query_doctype": summary_by_doctype})
     write_json(out / "per_query.json", per_query)
     write_json(out / "comparisons.json", compare(per_query))
     for s, v in summary.items():

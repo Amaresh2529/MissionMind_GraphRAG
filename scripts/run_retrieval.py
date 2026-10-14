@@ -40,9 +40,9 @@ def main(argv=None):
     ap.add_argument("--systems", nargs="*", default=list(systems.SYSTEMS))
     ap.add_argument("--queries", default=None, help="jsonl with query_id, mission, text; default: automatic dev queries")
     ap.add_argument("--embedder", default=dense.DEFAULT_MODEL, help="model name, or 'none' for BM25-only runs")
-    ap.add_argument("--generate", nargs="*", default=[], choices=["B3", "B0", "P"])
+    ap.add_argument("--generate", nargs="*", default=[], choices=["B3", "B0", "P", "P2"])
     ap.add_argument("--proposed", nargs="*", default=[],
-                    choices=["P", "P-noverif", "P-nofields", "P-graphonly", "P-noidf", "P-noprf"],
+                    choices=["P", "P-noverif", "P-nofields", "P-graphonly", "P-noidf", "P-noprf", "P2", "P2-nofilter"],
                     help="Stage 4 method and ablations (need data/processed/factors from extract_factors.py)")
     ap.add_argument("--qa", nargs="*", default=[], choices=["B0", "B3", "P"],
                     help="answer the queries as D3 questions (QA schema) with these systems")
@@ -136,21 +136,22 @@ def main(argv=None):
             (run / "generation").mkdir()
             units_by_id = {u.id: u for u in units}
             for g in args.generate:
-                if g in ("B3", "P") and g not in results:
+                if g in ("B3", "P", "P2") and g not in results:
                     print(f"{g} generation needs {g} retrieval in this run; skipped")
                     continue
                 with timer.step(f"generate_{g}"):
                     rows = []
                     for qi, q in enumerate(queries):
-                        if g == "P":
+                        if g in ("P", "P2"):
                             from extension.grounded_generation import draft_rca_p
-                            pr = results["P"][qi]
+                            pr = results[g][qi]
                             prof = prop.variants["verified"]["profiles"]
                             qc = set(pr["graph"]["query_codes"])
                             mev = {m: {c: [e["passage_id"] for e in prof[m][c]["evidence"]] for c in qc & set(prof[m])}
                                    for m in pr["graph"]["mission_analogy"]}
                             names = {c: v["name"] for c, v in fx.codes().items()}
-                            out = draft_rca_p(q["text"], pr["passages"], units_by_id, pr["graph"], names, mev)
+                            out = draft_rca_p(q["text"], pr["passages"], units_by_id, pr["graph"], names, mev,
+                                              specific=(g == "P2"))
                         else:
                             passages = results["B3"][qi]["passages"] if g == "B3" else None
                             out = rca_generation.draft_rca(q["text"], passages, units_by_id)
