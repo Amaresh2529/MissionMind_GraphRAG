@@ -22,7 +22,8 @@ investigation reports.**
 | Reproducibility | Retrieval runs byte-identical when repeated; all generation outputs cached | `docs/research/08` |
 | End-to-end proof of concept (synthetic labels) | All 17 systems, extraction and QA evaluated and audited. **Not a quality measure** | `docs/research/10` |
 | **10-mission pilot (mixed owner / AI-assisted labels)** | P vs B3 nDCG@5 = −0.010 (95% CI [−0.068, 0.049], p = 0.78): **no difference**. Exploratory: factor graph alone 0.713 vs B3 0.648 (not significant). Audit PASS | `docs/research/11` |
-| Structural findings | B3 over-weights the small recommendation field (45%); B3-bal fixed with √ weights; direct query factors are mostly empty (fixed by evidence-based expansion); P's generation repeats category names (49% of items) | `docs/research/08`–`11` |
+| **Review-driven second version (P2), pilot** | Weighted graph channel: nDCG@5 0.678 vs B3 0.648 (not significant); text systems strongly favour long reports (ρ ≈ 0.6), the graph channel does not (ρ ≈ 0.03); P2's answers keep only specific mechanisms | `docs/research/12` |
+| Structural findings | B3 over-weights the small recommendation field (45%); B3-bal fixed with √ weights; direct query factors are mostly empty (fixed by evidence-based expansion); P's generation gives only category names (43 of 43 items; corrected from an earlier 21/43 hand count), fixed in P2 | `docs/research/08`–`11` |
 
 ## 3. Honest scope statement (please keep in the submission)
 

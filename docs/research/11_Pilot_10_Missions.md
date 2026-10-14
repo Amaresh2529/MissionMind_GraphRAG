@@ -8,6 +8,9 @@ Date: 2026-10-13. Branch `stage1-repair`. Labels: `evalutation/benchmark/pilot/`
 > labels**. They are **not** a human benchmark and do not support claims of superiority. Fully human labels are
 > planned before the IEEE submission.
 
+
+> **Correction (2026-10-14).** §4 below says 21 of 43 of P's cause/factor items are category names. The automatic check in `docs/research/12` shows that **all 43** are: the hand count missed code-prefixed items such as "O1 Procedure deficient or not followed". Second-generation results (P2, bias diagnostic) are in `docs/research/12_Review_Driven_Improvements.md`.
+
 ## 1. Labels and their provenance
 
 | Sheet | Content | Written by |

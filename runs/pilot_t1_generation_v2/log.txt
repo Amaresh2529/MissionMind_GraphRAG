@@ -1,0 +1,14 @@
+Loading weights:   0%|          | 0/391 [00:00<?, ?it/s]Loading weights: 100%|██████████| 391/391 [00:00<00:00, 22686.97it/s]
+B3                 10 queries, lists=['causes/bm25', 'causes/dense', 'disposition/bm25', 'disposition/dense', 'summary/bm25', 'summary/dense']
+P                  10 queries, fallback_to_B3=0
+P2                 10 queries, fallback_to_B3=0
+  P2 T1-sts-51l-challenger: chunks=22 schema_ok=True invalid_cites=0 cached=False
+  P2 T1-sts-107-columbia: chunks=33 schema_ok=True invalid_cites=0 cached=False
+  P2 T1-mars-climate-orbiter: chunks=33 schema_ok=True invalid_cites=0 cached=False
+  P2 T1-ariane5-501: chunks=24 schema_ok=True invalid_cites=0 cached=False
+  P2 T1-apollo13: chunks=23 schema_ok=True invalid_cites=0 cached=False
+  P2 T1-genesis: chunks=25 schema_ok=True invalid_cites=0 cached=False
+  P2 T1-soho-1998: chunks=32 schema_ok=True invalid_cites=0 cached=False
+  P2 T1-wire: chunks=24 schema_ok=True invalid_cites=0 cached=False
+  P2 T1-hitomi: chunks=25 schema_ok=True invalid_cites=0 cached=False
+  P2 T1-starliner-cft: chunks=22 schema_ok=True invalid_cites=0 cached=False

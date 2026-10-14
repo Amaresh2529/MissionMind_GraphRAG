@@ -1,0 +1,537 @@
+{
+ "run": "runs/pilot_t1_v2",
+ "systems": {
+  "B1": {
+   "rho_top5_vs_passages": 0.619,
+   "rho_top5_vs_profile_size": 0.573,
+   "top5_rate_full_reports": 0.342,
+   "top5_rate_short_docs": 0.09,
+   "most_frequent_top5": [
+    [
+     "sts-51l-challenger",
+     9
+    ],
+    [
+     "sts-107-columbia",
+     7
+    ],
+    [
+     "apollo13",
+     6
+    ],
+    [
+     "starliner-cft",
+     4
+    ],
+    [
+     "soho-1998",
+     4
+    ]
+   ]
+  },
+  "B2": {
+   "rho_top5_vs_passages": 0.439,
+   "rho_top5_vs_profile_size": 0.276,
+   "top5_rate_full_reports": 0.342,
+   "top5_rate_short_docs": 0.09,
+   "most_frequent_top5": [
+    [
+     "apollo13",
+     8
+    ],
+    [
+     "sts-107-columbia",
+     8
+    ],
+    [
+     "apollo1-as204",
+     7
+    ],
+    [
+     "sts-51l-challenger",
+     7
+    ],
+    [
+     "wire",
+     5
+    ]
+   ]
+  },
+  "B3-bal": {
+   "rho_top5_vs_passages": 0.634,
+   "rho_top5_vs_profile_size": 0.516,
+   "top5_rate_full_reports": 0.367,
+   "top5_rate_short_docs": 0.06,
+   "most_frequent_top5": [
+    [
+     "apollo13",
+     9
+    ],
+    [
+     "sts-107-columbia",
+     7
+    ],
+    [
+     "wire",
+     7
+    ],
+    [
+     "sts-51l-challenger",
+     5
+    ],
+    [
+     "apollo1-as204",
+     4
+    ]
+   ]
+  },
+  "B3": {
+   "rho_top5_vs_passages": 0.556,
+   "rho_top5_vs_profile_size": 0.427,
+   "top5_rate_full_reports": 0.367,
+   "top5_rate_short_docs": 0.06,
+   "most_frequent_top5": [
+    [
+     "sts-107-columbia",
+     9
+    ],
+    [
+     "apollo13",
+     7
+    ],
+    [
+     "sts-51l-challenger",
+     7
+    ],
+    [
+     "apollo1-as204",
+     6
+    ],
+    [
+     "wire",
+     5
+    ]
+   ]
+  },
+  "H-whole": {
+   "rho_top5_vs_passages": 0.609,
+   "rho_top5_vs_profile_size": 0.501,
+   "top5_rate_full_reports": 0.358,
+   "top5_rate_short_docs": 0.07,
+   "most_frequent_top5": [
+    [
+     "sts-107-columbia",
+     8
+    ],
+    [
+     "apollo13",
+     8
+    ],
+    [
+     "sts-51l-challenger",
+     6
+    ],
+    [
+     "wire",
+     6
+    ],
+    [
+     "soho-1998",
+     4
+    ]
+   ]
+  },
+  "P-graphonly": {
+   "rho_top5_vs_passages": 0.028,
+   "rho_top5_vs_profile_size": -0.053,
+   "top5_rate_full_reports": 0.208,
+   "top5_rate_short_docs": 0.25,
+   "most_frequent_top5": [
+    [
+     "spacex-crs7",
+     7
+    ],
+    [
+     "apollo1-as204",
+     7
+    ],
+    [
+     "apollo13",
+     6
+    ],
+    [
+     "wire",
+     6
+    ],
+    [
+     "antares-orb3",
+     5
+    ]
+   ]
+  },
+  "P-nofields": {
+   "rho_top5_vs_passages": 0.429,
+   "rho_top5_vs_profile_size": 0.281,
+   "top5_rate_full_reports": 0.333,
+   "top5_rate_short_docs": 0.1,
+   "most_frequent_top5": [
+    [
+     "sts-107-columbia",
+     7
+    ],
+    [
+     "sts-51l-challenger",
+     7
+    ],
+    [
+     "wire",
+     7
+    ],
+    [
+     "apollo13",
+     6
+    ],
+    [
+     "apollo1-as204",
+     5
+    ]
+   ]
+  },
+  "P-noidf": {
+   "rho_top5_vs_passages": 0.408,
+   "rho_top5_vs_profile_size": 0.302,
+   "top5_rate_full_reports": 0.342,
+   "top5_rate_short_docs": 0.09,
+   "most_frequent_top5": [
+    [
+     "sts-107-columbia",
+     8
+    ],
+    [
+     "apollo13",
+     8
+    ],
+    [
+     "apollo1-as204",
+     6
+    ],
+    [
+     "sts-51l-challenger",
+     6
+    ],
+    [
+     "wire",
+     5
+    ]
+   ]
+  },
+  "P-noprf": {
+   "rho_top5_vs_passages": 0.62,
+   "rho_top5_vs_profile_size": 0.505,
+   "top5_rate_full_reports": 0.333,
+   "top5_rate_short_docs": 0.1,
+   "most_frequent_top5": [
+    [
+     "apollo13",
+     7
+    ],
+    [
+     "sts-107-columbia",
+     7
+    ],
+    [
+     "apollo1-as204",
+     6
+    ],
+    [
+     "sts-51l-challenger",
+     6
+    ],
+    [
+     "wire",
+     5
+    ]
+   ]
+  },
+  "P-noverif": {
+   "rho_top5_vs_passages": 0.462,
+   "rho_top5_vs_profile_size": 0.347,
+   "top5_rate_full_reports": 0.358,
+   "top5_rate_short_docs": 0.07,
+   "most_frequent_top5": [
+    [
+     "sts-107-columbia",
+     8
+    ],
+    [
+     "apollo13",
+     8
+    ],
+    [
+     "apollo1-as204",
+     6
+    ],
+    [
+     "sts-51l-challenger",
+     6
+    ],
+    [
+     "soho-1998",
+     5
+    ]
+   ]
+  },
+  "P": {
+   "rho_top5_vs_passages": 0.447,
+   "rho_top5_vs_profile_size": 0.344,
+   "top5_rate_full_reports": 0.358,
+   "top5_rate_short_docs": 0.07,
+   "most_frequent_top5": [
+    [
+     "sts-107-columbia",
+     8
+    ],
+    [
+     "apollo13",
+     8
+    ],
+    [
+     "sts-51l-challenger",
+     7
+    ],
+    [
+     "apollo1-as204",
+     6
+    ],
+    [
+     "wire",
+     5
+    ]
+   ]
+  },
+  "P2-nofilter": {
+   "rho_top5_vs_passages": 0.132,
+   "rho_top5_vs_profile_size": 0.028,
+   "top5_rate_full_reports": 0.258,
+   "top5_rate_short_docs": 0.19,
+   "most_frequent_top5": [
+    [
+     "apollo1-as204",
+     8
+    ],
+    [
+     "apollo13",
+     7
+    ],
+    [
+     "wire",
+     6
+    ],
+    [
+     "antares-orb3",
+     5
+    ],
+    [
+     "sts-51l-challenger",
+     4
+    ]
+   ]
+  },
+  "P2": {
+   "rho_top5_vs_passages": 0.215,
+   "rho_top5_vs_profile_size": 0.074,
+   "top5_rate_full_reports": 0.267,
+   "top5_rate_short_docs": 0.18,
+   "most_frequent_top5": [
+    [
+     "apollo1-as204",
+     8
+    ],
+    [
+     "vega-vv15",
+     7
+    ],
+    [
+     "apollo13",
+     7
+    ],
+    [
+     "wire",
+     6
+    ],
+    [
+     "sts-51l-challenger",
+     4
+    ]
+   ]
+  },
+  "SF-causes-bm25": {
+   "rho_top5_vs_passages": 0.619,
+   "rho_top5_vs_profile_size": 0.55,
+   "top5_rate_full_reports": 0.358,
+   "top5_rate_short_docs": 0.07,
+   "most_frequent_top5": [
+    [
+     "sts-107-columbia",
+     8
+    ],
+    [
+     "sts-51l-challenger",
+     8
+    ],
+    [
+     "wire",
+     7
+    ],
+    [
+     "apollo13",
+     5
+    ],
+    [
+     "apollo1-as204",
+     3
+    ]
+   ]
+  },
+  "SF-causes-dense": {
+   "rho_top5_vs_passages": 0.457,
+   "rho_top5_vs_profile_size": 0.276,
+   "top5_rate_full_reports": 0.358,
+   "top5_rate_short_docs": 0.07,
+   "most_frequent_top5": [
+    [
+     "apollo13",
+     9
+    ],
+    [
+     "sts-107-columbia",
+     8
+    ],
+    [
+     "apollo1-as204",
+     7
+    ],
+    [
+     "wire",
+     7
+    ],
+    [
+     "sts-51l-challenger",
+     6
+    ]
+   ]
+  },
+  "SF-causes-hybrid": {
+   "rho_top5_vs_passages": 0.634,
+   "rho_top5_vs_profile_size": 0.516,
+   "top5_rate_full_reports": 0.367,
+   "top5_rate_short_docs": 0.06,
+   "most_frequent_top5": [
+    [
+     "apollo13",
+     9
+    ],
+    [
+     "sts-107-columbia",
+     7
+    ],
+    [
+     "wire",
+     7
+    ],
+    [
+     "sts-51l-challenger",
+     5
+    ],
+    [
+     "apollo1-as204",
+     4
+    ]
+   ]
+  },
+  "SF-summary-bm25": {
+   "rho_top5_vs_passages": 0.515,
+   "rho_top5_vs_profile_size": 0.527,
+   "top5_rate_full_reports": 0.292,
+   "top5_rate_short_docs": 0.15,
+   "most_frequent_top5": [
+    [
+     "sts-51l-challenger",
+     7
+    ],
+    [
+     "sts-107-columbia",
+     6
+    ],
+    [
+     "apollo13",
+     6
+    ],
+    [
+     "dart-2005",
+     6
+    ],
+    [
+     "spacex-crs7",
+     4
+    ]
+   ]
+  },
+  "SF-summary-dense": {
+   "rho_top5_vs_passages": 0.663,
+   "rho_top5_vs_profile_size": 0.595,
+   "top5_rate_full_reports": 0.367,
+   "top5_rate_short_docs": 0.06,
+   "most_frequent_top5": [
+    [
+     "sts-107-columbia",
+     9
+    ],
+    [
+     "sts-51l-challenger",
+     9
+    ],
+    [
+     "apollo13",
+     8
+    ],
+    [
+     "apollo1-as204",
+     5
+    ],
+    [
+     "antares-orb3",
+     4
+    ]
+   ]
+  },
+  "SF-summary-hybrid": {
+   "rho_top5_vs_passages": 0.517,
+   "rho_top5_vs_profile_size": 0.531,
+   "top5_rate_full_reports": 0.333,
+   "top5_rate_short_docs": 0.1,
+   "most_frequent_top5": [
+    [
+     "sts-107-columbia",
+     9
+    ],
+    [
+     "apollo13",
+     8
+    ],
+    [
+     "sts-51l-challenger",
+     7
+    ],
+    [
+     "apollo1-as204",
+     5
+    ],
+    [
+     "glory-taurus-t9",
+     3
+    ]
+   ]
+  }
+ }
+}

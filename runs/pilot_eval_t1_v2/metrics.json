@@ -1,0 +1,571 @@
+{
+  "DEV_NOT_REPORTABLE": false,
+  "SYNTHETIC_LABELS_NOT_REPORTABLE": false,
+  "PILOT": true,
+  "pilot_labels_by": "MIXED: owner (D2q for all 10 missions; D2a factors and quotes for Columbia, Genesis, SOHO, WIRE, Starliner) + assistant Claude (taxonomy codes/roles/page fixes for owner rows; D2a for Challenger, MCO, Ariane 501, Apollo 13, Hitomi). Not a human-only benchmark.",
+  "labelled_missions": [
+    "apollo13",
+    "ariane5-501",
+    "genesis",
+    "hitomi",
+    "mars-climate-orbiter",
+    "soho-1998",
+    "starliner-cft",
+    "sts-107-columbia",
+    "sts-51l-challenger",
+    "wire"
+  ],
+  "limitations": [
+    "field maps are drafts (not yet human-reviewed)"
+  ],
+  "labels_dir": "evalutation\\benchmark\\pilot",
+  "problems": [],
+  "run": "runs\\pilot_t1_v2",
+  "labels_sha256": {
+    "D2a_mission_factors.csv": "0c74934f01e506d976bdc057b53d0900d68ad59455de72c64d2546c9f321297a",
+    "D2a_mission_factors.owner_original.csv": "9858b1efea6b761303055cd7f8f13e0343be08ea6dc860061de763dc3a2dc901",
+    "D2b_mission_pairs.csv": "553044466a37ea4e78e634f697ddaa8ea52cd884f1f34e3384f41984ff27f348",
+    "D2q_query_descriptions.csv": "a25f5458d13e03cf4703c5eaf729e109ca664f675aba61461e6c1c4b06ecff28"
+  },
+  "summary": {
+    "B1": {
+      "mission_ndcg@5": 0.6436714775680186,
+      "mission_ndcg@10": 0.8307196858622307,
+      "mission_recall@5": 0.5353571428571429,
+      "mission_mrr": 0.8333333333333334,
+      "passage_normrecall@100": 0.02227272727272727,
+      "passage_ndcg@100": 0.01454688305663871,
+      "queries": 10,
+      "queries_defined_ndcg@5": 10
+    },
+    "B2": {
+      "mission_ndcg@5": 0.6437931404563391,
+      "mission_ndcg@10": 0.8059804833543278,
+      "mission_recall@5": 0.5713095238095238,
+      "mission_mrr": 0.7333333333333333,
+      "passage_normrecall@100": 0.046951316091283335,
+      "passage_ndcg@100": 0.03104085820611303,
+      "queries": 10,
+      "queries_defined_ndcg@5": 10
+    },
+    "B3-bal": {
+      "mission_ndcg@5": 0.641937106066007,
+      "mission_ndcg@10": 0.8283456204476828,
+      "mission_recall@5": 0.5153571428571428,
+      "mission_mrr": 0.9,
+      "passage_normrecall@100": 0.03450677577037632,
+      "passage_ndcg@100": 0.02405555759505844,
+      "queries": 10,
+      "queries_defined_ndcg@5": 10
+    },
+    "B3": {
+      "mission_ndcg@5": 0.6476289818782355,
+      "mission_ndcg@10": 0.8003449910462658,
+      "mission_recall@5": 0.5796428571428571,
+      "mission_mrr": 0.7333333333333333,
+      "passage_normrecall@100": 0.018686371100164204,
+      "passage_ndcg@100": 0.010648658761382875,
+      "queries": 10,
+      "queries_defined_ndcg@5": 10
+    },
+    "H-whole": {
+      "mission_ndcg@5": 0.6577107590035522,
+      "mission_ndcg@10": 0.8258211458148021,
+      "mission_recall@5": 0.5570238095238096,
+      "mission_mrr": 0.85,
+      "passage_normrecall@100": 0.029887300252312864,
+      "passage_ndcg@100": 0.019373168395535212,
+      "queries": 10,
+      "queries_defined_ndcg@5": 10
+    },
+    "P-graphonly": {
+      "mission_ndcg@5": 0.7131438124763869,
+      "mission_ndcg@10": 0.8596642115485078,
+      "mission_recall@5": 0.5980952380952381,
+      "mission_mrr": 0.8833333333333334,
+      "passage_normrecall@100": 0.056195825407237034,
+      "passage_ndcg@100": 0.05335467884015934,
+      "queries": 10,
+      "queries_defined_ndcg@5": 10
+    },
+    "P-nofields": {
+      "mission_ndcg@5": 0.6296478368433849,
+      "mission_ndcg@10": 0.804402050372181,
+      "mission_recall@5": 0.5403571428571429,
+      "mission_mrr": 0.7833333333333333,
+      "passage_normrecall@100": 0.03990193658318132,
+      "passage_ndcg@100": 0.025521920789906137,
+      "queries": 10,
+      "queries_defined_ndcg@5": 10
+    },
+    "P-noidf": {
+      "mission_ndcg@5": 0.6375813002730594,
+      "mission_ndcg@10": 0.8161565726596081,
+      "mission_recall@5": 0.5403571428571429,
+      "mission_mrr": 0.8333333333333334,
+      "passage_normrecall@100": 0.022686371100164204,
+      "passage_ndcg@100": 0.011768820158069402,
+      "queries": 10,
+      "queries_defined_ndcg@5": 10
+    },
+    "P-noprf": {
+      "mission_ndcg@5": 0.6376709593990058,
+      "mission_ndcg@10": 0.8111531160261649,
+      "mission_recall@5": 0.5546428571428572,
+      "mission_mrr": 0.7833333333333333,
+      "passage_normrecall@100": 0.02213464696223317,
+      "passage_ndcg@100": 0.013121831932643388,
+      "queries": 10,
+      "queries_defined_ndcg@5": 10
+    },
+    "P-noverif": {
+      "mission_ndcg@5": 0.6722841284704069,
+      "mission_ndcg@10": 0.831472724959154,
+      "mission_recall@5": 0.5546428571428572,
+      "mission_mrr": 0.9,
+      "passage_normrecall@100": 0.018686371100164204,
+      "passage_ndcg@100": 0.010621901098979059,
+      "queries": 10,
+      "queries_defined_ndcg@5": 10
+    },
+    "P": {
+      "mission_ndcg@5": 0.6375813002730594,
+      "mission_ndcg@10": 0.8161565726596081,
+      "mission_recall@5": 0.5403571428571429,
+      "mission_mrr": 0.8333333333333334,
+      "passage_normrecall@100": 0.022686371100164204,
+      "passage_ndcg@100": 0.011747615503088112,
+      "queries": 10,
+      "queries_defined_ndcg@5": 10
+    },
+    "P2-nofilter": {
+      "mission_ndcg@5": 0.676620646555042,
+      "mission_ndcg@10": 0.8484506552029789,
+      "mission_recall@5": 0.5338095238095237,
+      "mission_mrr": 0.8833333333333334,
+      "passage_normrecall@100": 0.04749110907094175,
+      "passage_ndcg@100": 0.03745043251059639,
+      "queries": 10,
+      "queries_defined_ndcg@5": 10
+    },
+    "P2": {
+      "mission_ndcg@5": 0.6777610851498084,
+      "mission_ndcg@10": 0.8468036745258505,
+      "mission_recall@5": 0.5445238095238095,
+      "mission_mrr": 0.8833333333333334,
+      "passage_normrecall@100": 0.05549110907094175,
+      "passage_ndcg@100": 0.040694501744611644,
+      "queries": 10,
+      "queries_defined_ndcg@5": 10
+    },
+    "SF-causes-bm25": {
+      "mission_ndcg@5": 0.6076726362982713,
+      "mission_ndcg@10": 0.7925978423952169,
+      "mission_recall@5": 0.5189285714285714,
+      "mission_mrr": 0.7666666666666667,
+      "passage_normrecall@100": 0.03014792409573517,
+      "passage_ndcg@100": 0.021151413708751978,
+      "queries": 10,
+      "queries_defined_ndcg@5": 10
+    },
+    "SF-causes-dense": {
+      "mission_ndcg@5": 0.6550762173781053,
+      "mission_ndcg@10": 0.8138617107674214,
+      "mission_recall@5": 0.5713095238095238,
+      "mission_mrr": 0.8166666666666667,
+      "passage_normrecall@100": 0.052052532508731875,
+      "passage_ndcg@100": 0.03795453459012908,
+      "queries": 10,
+      "queries_defined_ndcg@5": 10
+    },
+    "SF-causes-hybrid": {
+      "mission_ndcg@5": 0.641937106066007,
+      "mission_ndcg@10": 0.8283456204476828,
+      "mission_recall@5": 0.5153571428571428,
+      "mission_mrr": 0.9,
+      "passage_normrecall@100": 0.03926868053228108,
+      "passage_ndcg@100": 0.026790888606167445,
+      "queries": 10,
+      "queries_defined_ndcg@5": 10
+    },
+    "SF-summary-bm25": {
+      "mission_ndcg@5": 0.6046396306004247,
+      "mission_ndcg@10": 0.799222165244059,
+      "mission_recall@5": 0.5153571428571428,
+      "mission_mrr": 0.7333333333333333,
+      "passage_normrecall@100": 0.023982538347550965,
+      "passage_ndcg@100": 0.013304374621206944,
+      "queries": 10,
+      "queries_defined_ndcg@5": 10
+    },
+    "SF-summary-dense": {
+      "mission_ndcg@5": 0.6428409323313649,
+      "mission_ndcg@10": 0.8117586742867351,
+      "mission_recall@5": 0.5605952380952381,
+      "mission_mrr": 0.7333333333333333,
+      "passage_normrecall@100": 0.041326910249091645,
+      "passage_ndcg@100": 0.024300556616263715,
+      "queries": 10,
+      "queries_defined_ndcg@5": 10
+    },
+    "SF-summary-hybrid": {
+      "mission_ndcg@5": 0.6750845297117292,
+      "mission_ndcg@10": 0.8352058941955033,
+      "mission_recall@5": 0.5639285714285714,
+      "mission_mrr": 0.8333333333333334,
+      "passage_normrecall@100": 0.03877414481995952,
+      "passage_ndcg@100": 0.022112516714317756,
+      "queries": 10,
+      "queries_defined_ndcg@5": 10
+    }
+  },
+  "summary_heldout_non_pilot_missions": {},
+  "summary_by_query_doctype": {
+    "full_report_queries": {
+      "B1": {
+        "mission_ndcg@5": 0.6207719539140015,
+        "mission_ndcg@10": 0.8223312983683567,
+        "mission_recall@5": 0.5253968253968254,
+        "mission_mrr": 0.8148148148148148,
+        "passage_normrecall@100": 0.024747474747474747,
+        "passage_ndcg@100": 0.016163203396265233,
+        "queries": 9
+      },
+      "B2": {
+        "mission_ndcg@5": 0.6151971836244062,
+        "mission_ndcg@10": 0.7930908700311834,
+        "mission_recall@5": 0.5653439153439153,
+        "mission_mrr": 0.7037037037037037,
+        "passage_normrecall@100": 0.0406738761167516,
+        "passage_ndcg@100": 0.02708075202761652,
+        "queries": 9
+      },
+      "B3-bal": {
+        "mission_ndcg@5": 0.618844874467322,
+        "mission_ndcg@10": 0.8186343457132298,
+        "mission_recall@5": 0.5031746031746032,
+        "mission_mrr": 0.8888888888888888,
+        "passage_normrecall@100": 0.03450944434256373,
+        "passage_ndcg@100": 0.02294547636789114,
+        "queries": 9
+      },
+      "B3": {
+        "mission_ndcg@5": 0.6251691809253536,
+        "mission_ndcg@10": 0.787522535267211,
+        "mission_recall@5": 0.5746031746031747,
+        "mission_mrr": 0.7037037037037037,
+        "passage_normrecall@100": 0.01693121693121693,
+        "passage_ndcg@100": 0.009273679495502497,
+        "queries": 9
+      },
+      "H-whole": {
+        "mission_ndcg@5": 0.6363711555090389,
+        "mission_ndcg@10": 0.815829373898918,
+        "mission_recall@5": 0.5494708994708994,
+        "mission_mrr": 0.8333333333333334,
+        "passage_normrecall@100": 0.029376693766937672,
+        "passage_ndcg@100": 0.018196064001708524,
+        "queries": 9
+      },
+      "P-graphonly": {
+        "mission_ndcg@5": 0.705343442111023,
+        "mission_ndcg@10": 0.8555126695795378,
+        "mission_recall@5": 0.5951058201058201,
+        "mission_mrr": 0.8703703703703703,
+        "passage_normrecall@100": 0.05860838838352007,
+        "passage_ndcg@100": 0.05412879353733623,
+        "queries": 9
+      },
+      "P-nofields": {
+        "mission_ndcg@5": 0.6062133455779186,
+        "mission_ndcg@10": 0.7932542776429087,
+        "mission_recall@5": 0.530952380952381,
+        "mission_mrr": 0.7592592592592592,
+        "passage_normrecall@100": 0.04050406746790262,
+        "passage_ndcg@100": 0.024985241496209662,
+        "queries": 9
+      },
+      "P-noidf": {
+        "mission_ndcg@5": 0.6150283049442237,
+        "mission_ndcg@10": 0.8058985414481706,
+        "mission_recall@5": 0.530952380952381,
+        "mission_mrr": 0.8148148148148148,
+        "passage_normrecall@100": 0.021375661375661374,
+        "passage_ndcg@100": 0.010458753071422194,
+        "queries": 9
+      },
+      "P-noprf": {
+        "mission_ndcg@5": 0.6151279261952752,
+        "mission_ndcg@10": 0.8003391451887891,
+        "mission_recall@5": 0.5468253968253969,
+        "mission_mrr": 0.7592592592592592,
+        "passage_normrecall@100": 0.01693121693121693,
+        "passage_ndcg@100": 0.009714186507875798,
+        "queries": 9
+      },
+      "P-noverif": {
+        "mission_ndcg@5": 0.6535870029412764,
+        "mission_ndcg@10": 0.822916488447666,
+        "mission_recall@5": 0.5468253968253969,
+        "mission_mrr": 0.8888888888888888,
+        "passage_normrecall@100": 0.01693121693121693,
+        "passage_ndcg@100": 0.009319691567763745,
+        "queries": 9
+      },
+      "P": {
+        "mission_ndcg@5": 0.6150283049442237,
+        "mission_ndcg@10": 0.8058985414481706,
+        "mission_recall@5": 0.530952380952381,
+        "mission_mrr": 0.8148148148148148,
+        "passage_normrecall@100": 0.021375661375661374,
+        "passage_ndcg@100": 0.010445717838431115,
+        "queries": 9
+      },
+      "P2-nofilter": {
+        "mission_ndcg@5": 0.6590521953662439,
+        "mission_ndcg@10": 0.8438834186425576,
+        "mission_recall@5": 0.5236772486772486,
+        "mission_mrr": 0.8703703703703703,
+        "passage_normrecall@100": 0.04893648134319198,
+        "passage_ndcg@100": 0.03941852751389539,
+        "queries": 9
+      },
+      "P2": {
+        "mission_ndcg@5": 0.6603193493604289,
+        "mission_ndcg@10": 0.8420534401124152,
+        "mission_recall@5": 0.5355820105820106,
+        "mission_mrr": 0.8703703703703703,
+        "passage_normrecall@100": 0.05782537023208087,
+        "passage_ndcg@100": 0.04302304888502346,
+        "queries": 9
+      },
+      "SF-causes-bm25": {
+        "mission_ndcg@5": 0.5881532463575614,
+        "mission_ndcg@10": 0.7812324897403077,
+        "mission_recall@5": 0.5071428571428571,
+        "mission_mrr": 0.7407407407407408,
+        "passage_normrecall@100": 0.03349769343970574,
+        "passage_ndcg@100": 0.0235015707875022,
+        "queries": 9
+      },
+      "SF-causes-dense": {
+        "mission_ndcg@5": 0.6315113625733417,
+        "mission_ndcg@10": 0.8010158489706666,
+        "mission_recall@5": 0.5653439153439153,
+        "mission_mrr": 0.7962962962962963,
+        "passage_normrecall@100": 0.046341894358361085,
+        "passage_ndcg@100": 0.032545079200502314,
+        "queries": 9
+      },
+      "SF-causes-hybrid": {
+        "mission_ndcg@5": 0.618844874467322,
+        "mission_ndcg@10": 0.8186343457132298,
+        "mission_recall@5": 0.5031746031746032,
+        "mission_mrr": 0.8888888888888888,
+        "passage_normrecall@100": 0.03980044963356902,
+        "passage_ndcg@100": 0.02598473304690115,
+        "queries": 9
+      },
+      "SF-summary-bm25": {
+        "mission_ndcg@5": 0.5754707105981409,
+        "mission_ndcg@10": 0.7858087894725597,
+        "mission_recall@5": 0.5031746031746032,
+        "mission_mrr": 0.7037037037037037,
+        "passage_normrecall@100": 0.02664726483061218,
+        "passage_ndcg@100": 0.014782638468007715,
+        "queries": 9
+      },
+      "SF-summary-dense": {
+        "mission_ndcg@5": 0.6141391745966572,
+        "mission_ndcg@10": 0.7995110821783025,
+        "mission_recall@5": 0.5534391534391534,
+        "mission_mrr": 0.7037037037037037,
+        "passage_normrecall@100": 0.03442453629209417,
+        "passage_ndcg@100": 0.02136296387989521,
+        "queries": 9
+      },
+      "SF-summary-hybrid": {
+        "mission_ndcg@5": 0.6537428207218127,
+        "mission_ndcg@10": 0.8247316083352019,
+        "mission_recall@5": 0.5571428571428572,
+        "mission_mrr": 0.8148148148148148,
+        "passage_normrecall@100": 0.03925096550876729,
+        "passage_ndcg@100": 0.022605189333192437,
+        "queries": 9
+      }
+    },
+    "short_document_queries": {
+      "B1": {
+        "mission_ndcg@5": 0.8497671904541724,
+        "mission_ndcg@10": 0.9062151733070962,
+        "mission_recall@5": 0.625,
+        "mission_mrr": 1.0,
+        "passage_normrecall@100": 0.0,
+        "passage_ndcg@100": 0.0,
+        "queries": 1
+      },
+      "B2": {
+        "mission_ndcg@5": 0.9011567519437345,
+        "mission_ndcg@10": 0.9219870032626278,
+        "mission_recall@5": 0.625,
+        "mission_mrr": 1.0,
+        "passage_normrecall@100": 0.10344827586206896,
+        "passage_ndcg@100": 0.06668181381258163,
+        "queries": 1
+      },
+      "B3-bal": {
+        "mission_ndcg@5": 0.8497671904541724,
+        "mission_ndcg@10": 0.9157470930577589,
+        "mission_recall@5": 0.625,
+        "mission_mrr": 1.0,
+        "passage_normrecall@100": 0.034482758620689655,
+        "passage_ndcg@100": 0.03404628863956413,
+        "queries": 1
+      },
+      "B3": {
+        "mission_ndcg@5": 0.8497671904541724,
+        "mission_ndcg@10": 0.9157470930577589,
+        "mission_recall@5": 0.625,
+        "mission_mrr": 1.0,
+        "passage_normrecall@100": 0.034482758620689655,
+        "passage_ndcg@100": 0.023023472154306272,
+        "queries": 1
+      },
+      "H-whole": {
+        "mission_ndcg@5": 0.8497671904541724,
+        "mission_ndcg@10": 0.9157470930577589,
+        "mission_recall@5": 0.625,
+        "mission_mrr": 1.0,
+        "passage_normrecall@100": 0.034482758620689655,
+        "passage_ndcg@100": 0.02996710793997538,
+        "queries": 1
+      },
+      "P-graphonly": {
+        "mission_ndcg@5": 0.7833471457646615,
+        "mission_ndcg@10": 0.8970280892692392,
+        "mission_recall@5": 0.625,
+        "mission_mrr": 1.0,
+        "passage_normrecall@100": 0.034482758620689655,
+        "passage_ndcg@100": 0.04638764656556731,
+        "queries": 1
+      },
+      "P-nofields": {
+        "mission_ndcg@5": 0.8405582582325805,
+        "mission_ndcg@10": 0.9047320049356322,
+        "mission_recall@5": 0.625,
+        "mission_mrr": 1.0,
+        "passage_normrecall@100": 0.034482758620689655,
+        "passage_ndcg@100": 0.030352034433174403,
+        "queries": 1
+      },
+      "P-noidf": {
+        "mission_ndcg@5": 0.8405582582325805,
+        "mission_ndcg@10": 0.9084788535625455,
+        "mission_recall@5": 0.625,
+        "mission_mrr": 1.0,
+        "passage_normrecall@100": 0.034482758620689655,
+        "passage_ndcg@100": 0.023559423937894283,
+        "queries": 1
+      },
+      "P-noprf": {
+        "mission_ndcg@5": 0.8405582582325805,
+        "mission_ndcg@10": 0.9084788535625455,
+        "mission_recall@5": 0.625,
+        "mission_mrr": 1.0,
+        "passage_normrecall@100": 0.06896551724137931,
+        "passage_ndcg@100": 0.04379064075555168,
+        "queries": 1
+      },
+      "P-noverif": {
+        "mission_ndcg@5": 0.8405582582325805,
+        "mission_ndcg@10": 0.9084788535625455,
+        "mission_recall@5": 0.625,
+        "mission_mrr": 1.0,
+        "passage_normrecall@100": 0.034482758620689655,
+        "passage_ndcg@100": 0.022341786879916888,
+        "queries": 1
+      },
+      "P": {
+        "mission_ndcg@5": 0.8405582582325805,
+        "mission_ndcg@10": 0.9084788535625455,
+        "mission_recall@5": 0.625,
+        "mission_mrr": 1.0,
+        "passage_normrecall@100": 0.034482758620689655,
+        "passage_ndcg@100": 0.023464694485001096,
+        "queries": 1
+      },
+      "P2-nofilter": {
+        "mission_ndcg@5": 0.8347367072542236,
+        "mission_ndcg@10": 0.8895557842467697,
+        "mission_recall@5": 0.625,
+        "mission_mrr": 1.0,
+        "passage_normrecall@100": 0.034482758620689655,
+        "passage_ndcg@100": 0.019737577480905336,
+        "queries": 1
+      },
+      "P2": {
+        "mission_ndcg@5": 0.8347367072542236,
+        "mission_ndcg@10": 0.8895557842467697,
+        "mission_recall@5": 0.625,
+        "mission_mrr": 1.0,
+        "passage_normrecall@100": 0.034482758620689655,
+        "passage_ndcg@100": 0.019737577480905336,
+        "queries": 1
+      },
+      "SF-causes-bm25": {
+        "mission_ndcg@5": 0.7833471457646615,
+        "mission_ndcg@10": 0.8948860162893997,
+        "mission_recall@5": 0.625,
+        "mission_mrr": 1.0,
+        "passage_normrecall@100": 0.0,
+        "passage_ndcg@100": 0.0,
+        "queries": 1
+      },
+      "SF-causes-dense": {
+        "mission_ndcg@5": 0.8671599106209781,
+        "mission_ndcg@10": 0.9294744669382152,
+        "mission_recall@5": 0.625,
+        "mission_mrr": 1.0,
+        "passage_normrecall@100": 0.10344827586206896,
+        "passage_ndcg@100": 0.08663963309677,
+        "queries": 1
+      },
+      "SF-causes-hybrid": {
+        "mission_ndcg@5": 0.8497671904541724,
+        "mission_ndcg@10": 0.9157470930577589,
+        "mission_recall@5": 0.625,
+        "mission_mrr": 1.0,
+        "passage_normrecall@100": 0.034482758620689655,
+        "passage_ndcg@100": 0.03404628863956413,
+        "queries": 1
+      },
+      "SF-summary-bm25": {
+        "mission_ndcg@5": 0.8671599106209781,
+        "mission_ndcg@10": 0.9199425471875526,
+        "mission_recall@5": 0.625,
+        "mission_mrr": 1.0,
+        "passage_normrecall@100": 0.0,
+        "passage_ndcg@100": 0.0,
+        "queries": 1
+      },
+      "SF-summary-dense": {
+        "mission_ndcg@5": 0.9011567519437345,
+        "mission_ndcg@10": 0.9219870032626278,
+        "mission_recall@5": 0.625,
+        "mission_mrr": 1.0,
+        "passage_normrecall@100": 0.10344827586206896,
+        "passage_ndcg@100": 0.05073889124358029,
+        "queries": 1
+      },
+      "SF-summary-hybrid": {
+        "mission_ndcg@5": 0.8671599106209781,
+        "mission_ndcg@10": 0.9294744669382152,
+        "mission_recall@5": 0.625,
+        "mission_mrr": 1.0,
+        "passage_normrecall@100": 0.034482758620689655,
+        "passage_ndcg@100": 0.01767846314444563,
+        "queries": 1
+      }
+    }
+  }
+}

@@ -45,7 +45,12 @@ gen = J("runs/pilot_generation_check/stage3_check.json")["C6"]
 d3 = J("runs/poc_eval_d3_synthetic/answer_metrics.json")["results"]
 synth_t1 = J("runs/poc_eval_t1_synthetic_r2/metrics.json")["summary"]
 pilot_meta = J("evalutation/benchmark/pilot/PILOT.json")
-n_tests = 160
+n_tests = 162
+v2 = J("runs/pilot_eval_t1_v2/metrics.json")["summary"]
+v2c = J("runs/pilot_eval_t1_v2/comparisons.json")["secondary"]
+bias = J("runs/pilot_bias_t1_v2/bias_diagnostic.json")["systems"]
+sup_path = ROOT / "runs/stage4_support_check/support_stats.json"
+sup = J("runs/stage4_support_check/support_stats.json") if sup_path.exists() else None
 
 
 def f3(x):
@@ -102,6 +107,9 @@ p = {prim_c['permutation']['p']:.2f}) — <b>no significant difference</b>.</li>
 <b>{f3(pilot['P-graphonly']['mission_ndcg@5'])}</b> — a promising but not yet significant signal.</li>
 <li>Verification rejected <b>{100 * (proposed - accepted) / proposed:.0f}%</b> of the LLM's proposed factors, mostly because the
 "quoted" evidence does not exist in the report.</li>
+<li>After external reviews, a pre-specified second version <b>P2</b> (graph channel weighted equally with the text
+channels) reached nDCG@5 <b>{f3(v2['P2']['mission_ndcg@5'])}</b>; it also removed generic answers and reduced the text systems'
+bias towards long reports (chapter 14). Not significant on 10 queries.</li>
 </ul>
 """ + note("<b>Important disclosure.</b> The pilot labels are <b>AI-assisted</b>: the project owner wrote all query "
            "descriptions and part of the causal-factor labels; the AI assistant (Claude) wrote the rest, using verbatim "
@@ -345,9 +353,10 @@ study, not a conclusion.</p>
 """ + table(["System", "Valid JSON", "Items", "Citations", "Invalid citations", "Uncited items"], [
     [s, f"{gen[s]['schema_ok']}/{gen[s]['queries']}", gen[s]["items"], gen[s]["citations"], gen[s]["invalid_citations"], gen[s]["uncited_items"]]
     for s in ("B0", "B3", "P")]) + """
-<p>P cites evidence for every item, but about half of its cause statements (21 of 43) repeat taxonomy category names
-("Procedure deficient or not followed") instead of specific mechanisms; B3 had none. Citation validity is not
-correctness: answer quality still needs human rating.</p>
+<p>P cites evidence for every item, but <b>all 43</b> of its cause and factor statements are taxonomy category names
+("Procedure deficient or not followed", "O1 Procedure deficient or not followed") instead of specific mechanisms; B3 had
+none. (An earlier hand count of 21 missed the code-prefixed items.) Citation validity is not correctness. The fix (P2) is
+in chapter 14.</p>
 <h3>Abstention (questions about missions not in the corpus, synthetic question set)</h3>
 """ + table(["System", "Abstained on 10 unanswerable questions"], [["B0 (no documents)", "0 / 10"], ["B3", "8 / 10"], ["P", "9 / 10"]]) + f"""
 <h3>Audit</h3>
@@ -356,7 +365,61 @@ descriptions are original), every retrieved passage verified against its page, a
 independently and found equal.</p>
 """)
 
-chapter("findings", "14. Key Findings and Discussion", f"""
+v2rows = [[f"<b>{s}</b>" if s == "P2" else s, f3(v2[s]["mission_ndcg@5"]), f3(v2[s]["mission_ndcg@10"]),
+           f3(v2[s]["mission_recall@5"]), f3(v2[s]["mission_mrr"]), f3(v2[s]["passage_normrecall@100"])]
+          for s in ("B3", "P", "P2", "P2-nofilter", "P-graphonly")]
+
+
+def _cmp(key):
+    v = v2c[key]
+    return [f"{-v['permutation']['mean_diff']:+.3f}", f"[{-v['bootstrap95']['high']:+.3f}, {-v['bootstrap95']['low']:+.3f}]",
+            f"{v['permutation']['p']:.2f}", f"{v['p_holm']:.2f}"]
+
+
+if sup:
+    sup_html = (f"<p>The local LLM judged that <b>{sup['supported']:,} of {sup['accepted_checked']:,}</b> verified factors "
+                f"({100 * sup['supported_share']:.0f}%) are supported by their own quote. This is a weak self-check (same model "
+                f"family as the extractor); the human verdicts in sheet D4 (100 accepted + 50 rejected factors) are the real "
+                f"measurement.</p>")
+else:
+    sup_html = "<p>The LLM support check was still running when this guide was built; see runs/stage4_support_check.</p>"
+
+chapter("review", "14. Review-Driven Improvements (P2)", """
+<p>The guide was reviewed by two external AI assistants (Gemini, ChatGPT). Useful suggestions were adopted, but only
+after <b>freezing the design in writing before running it</b> (protocol section 9, commit e999e42), so that nothing was
+tuned on the pilot results. A suggestion that amounted to picking whatever scored best on the pilot was declined.</p>
+""" + table(["Change", "Specification"], [
+    ["P2: weighted graph channel", "Graph list gets RRF weight 6 (= the six text lists together)"],
+    ["Generic-code filter", "Drop expanded query codes present in at least 80% of missions (removes T4)"],
+    ["Specific-mechanism generation", "Prompt demands the specific failure and how it led to the mishap; bare category names are dropped"],
+    ["Support check", "LLM check that each quote supports its claimed factor, plus a 150-item human review sheet (D4)"],
+    ["Bias diagnostic", "Label-free test of whether systems favour missions with long reports"],
+    ["Held-out reporting", "Final results also on the 12 missions not used in the pilot"],
+]) + "<h3>Retrieval (pilot, AI-assisted labels)</h3>" + table(
+    ["System", "nDCG@5", "nDCG@10", "Recall@5", "MRR", "NormRecall@100"], v2rows) + table(
+    ["Comparison (nDCG@5)", "Difference", "95% CI", "p", "p (Holm)"],
+    [["P2 - B3"] + _cmp("B3 vs P2 [mission_ndcg@5]"), ["P2 - P"] + _cmp("P vs P2 [mission_ndcg@5]"),
+     ["P-graphonly - P"] + _cmp("P vs P-graphonly [mission_ndcg@5]")]) + """
+<p>Weighting the graph channel moves P towards the graph-only result; none of the differences is significant on 10
+queries. The primary comparison remains P vs B3.</p>
+<h3>Bias towards long reports (no labels needed)</h3>
+""" + table(["System", "Correlation with report size", "Top-5 rate: full reports", "Top-5 rate: short documents"],
+            [[s, f"{bias[s]['rho_top5_vs_passages']:+.2f}", f"{bias[s]['top5_rate_full_reports']:.2f}",
+              f"{bias[s]['top5_rate_short_docs']:.2f}"] for s in ("B1", "B2", "B3", "P", "P2", "P-graphonly")]) + """
+<p>The text-based systems mostly rank missions with long reports in the top 5, whatever the query; the graph channel
+does not (correlation near zero), and P2 reduces the bias. Part of the text systems' scores may reflect report length
+rather than causal similarity; the human benchmark will test this with results split by document type. (This corrects
+an earlier statement that the analogy score favours long reports: pairwise scores do, rankings do not.)</p>
+<h3>Specific answers</h3>
+""" + table(["System", "Cause/factor items", "Only a category name", "Kept"], [
+    ["B3", "31", "0", "31"], ["P", "43", "43 (100%)", "43"], ["<b>P2</b>", "41", "28 (68%)", "<b>12, all specific</b>"]]) + """
+<p>The prompt alone removed only part of the generic answers; the enforcement removed the rest, leaving specific
+mechanisms such as "Frangible joint on one of the forward side fairing rails did not fracture". The cost is shorter
+answers. A two-step design (extract the mechanism from the cited passage first) is the next candidate.</p>
+<h3>Does the quote support the claimed cause?</h3>
+""" + sup_html)
+
+chapter("findings", "15. Key Findings and Discussion", f"""
 <ol>
 <li><b>The base method transfers to spaceflight reports</b> and is reproducible, but its fusion is sensitive to field
 size: a small recommendation field dominated the results until weights were balanced.</li>
@@ -364,7 +427,8 @@ size: a small recommendation field dominated the results until weights were bala
 {rej['quote_not_in_passage']} cited "quotes" did not exist in the passage — exactly the hallucination risk the method guards against.</li>
 <li><b>No significant gain yet.</b> On the pilot, P matched B3. The causal-factor graph alone ranked best, which points to
 a better way of combining the graph with text retrieval.</li>
-<li><b>Grounded answers can still be generic.</b> P never cited a missing passage, but often answered with category names.</li>
+<li><b>Grounded answers can still be generic.</b> P never cited a missing passage, but answered only with category names;
+P2's prompt plus enforcement leaves only specific mechanisms.</li>
 <li><b>Abstention works:</b> only the retrieval-grounded systems declined questions outside the corpus.</li>
 <li><b>Local LLMs are not reproducible across sessions;</b> caching outputs is necessary for honest reporting.</li>
 </ol>
@@ -374,21 +438,21 @@ a better way of combining the graph with text retrieval.</li>
 <li>Down-weight generic categories (O1, T1, T5) that appear for most queries.</li></ul>
 """)
 
-chapter("limits", "15. Limitations and Honest Scope", """
+chapter("limits", "16. Limitations and Honest Scope", """
 <ul>
 <li><b>Labels:</b> the pilot labels are AI-assisted; the synthetic proof-of-concept labels are keyword rules. Neither is
 a human benchmark.</li>
 <li><b>Sample size:</b> 10 pilot queries (22 in the full design) — only large effects can be detected.</li>
 <li><b>Field maps</b> are drafts pending human review.</li>
-<li><b>Corpus:</b> 10 of 23 primary documents are summaries, press releases or slides, much shorter than full reports;
-long reports dominate the factor analogy score.</li>
+<li><b>Corpus:</b> 10 of 23 primary documents are summaries, press releases or slides, much shorter than full reports.
+The text-based systems strongly favour missions with long reports (chapter 14); the graph channel does not.</li>
 <li><b>Models:</b> an 8-billion-parameter local model generates, extracts and judges; the automatic answer judge proved
 too lenient (it gave 0.81 key-point recall to the system that sees no documents).</li>
 <li><b>Claims:</b> the project does not claim that P outperforms the base paper.</li>
 </ul>
 """)
 
-chapter("status", "16. Project Status: Done and Remaining", """
+chapter("status", "17. Project Status: Done and Remaining", """
 <h3>Done</h3>
 """ + table(["Part", "Status"], [
     ["Corpus, ingestion, provenance (27 documents, 22 missions)", "Done, verified"],
@@ -399,16 +463,18 @@ chapter("status", "16. Project Status: Done and Remaining", """
     ["Synthetic proof of concept", "Done (not reportable)"],
     ["10-mission pilot with AI-assisted labels", "Done; results in chapter 12"],
     ["Stage reports, submission summary, this guide", "Done"],
+    ["Review-driven improvements (P2, bias diagnostic, support check, D4 sheet)", "Done (chapter 14)"],
 ]) + "<h3>Remaining (after the project submission)</h3>" + table(["Task", "Who", "Effort"], [
     ["Decide the three design improvements (chapter 14)", "Owner", "1 h"],
     ["Review taxonomy and field maps", "Owner", "2–3 h"],
     ["Full human labelling: D2a, D2q, D2b, D1, D3 + second annotator", "Owner (+ 1 person)", "60–80 h + 12 h"],
     ["Rate 40 blind answers (validate the automatic judge)", "Owner", "2 h"],
+    ["Review 150 extracted factors (sheet D4)", "Owner", "3 h"],
     ["Final runs, audit, fill the IEEE paper's results", "Assistant", "about 2 h compute"],
     ["Final secret scan, push to GitHub, pull request into main", "Together", "at the end"],
 ]))
 
-chapter("howto", "17. How to Run the Project", """
+chapter("howto", "18. How to Run the Project", """
 <h3>Setup</h3>
 <pre>pip install -r requirements.txt
 python -m spacy download en_core_web_sm
@@ -433,7 +499,7 @@ copy .env.example .env      (set NEO4J_URI, NEO4J_USERNAME, NEO4J_PASSWORD)</pre
 log to <code>runs/&lt;run_id&gt;/</code>; existing run folders are never overwritten.</p>
 """)
 
-chapter("labelling", "18. Guide to the Remaining Human Labelling", """
+chapter("labelling", "19. Guide to the Remaining Human Labelling", """
 <p>The full guide is <code>evalutation/benchmark/ANNOTATION_GUIDE.md</code>. In short:</p>
 <ol>
 <li><b>Review the taxonomy</b> (causal_taxonomy.json) and freeze it.</li>
@@ -448,7 +514,7 @@ verbatim quote. At least one root factor per mission.</li>
 """ + note("Rules: record only what the board states; do not look at any system output while labelling; do not change the "
            "method after seeing labels. Run the checker after each step."))
 
-chapter("glossary", "19. Glossary", table(["Term", "Meaning"], [
+chapter("glossary", "20. Glossary", table(["Term", "Meaning"], [
     ["BM25", "Classic keyword ranking: rewards rare words that appear often in a passage"],
     ["Dense retrieval / bge-m3", "Ranking by meaning: text is turned into vectors and compared by similarity"],
     ["RRF", "Reciprocal Rank Fusion: merges ranked lists by summing 1 / (60 + rank)"],
@@ -465,7 +531,7 @@ chapter("glossary", "19. Glossary", table(["Term", "Meaning"], [
     ["Pilot", "A small first evaluation (here: 10 missions) to test the full procedure"],
 ]))
 
-chapter("refs", "20. References", """<ol class="refs">
+chapter("refs", "21. References", """<ol class="refs">
 <li>S. Kim and S. Kim, "Multi-field hybrid retrieval-augmented generation for maritime accident root cause analysis," in <i>Proc. IEEE CASE</i>, 2026, pp. 238–243, doi:10.1109/CASE69030.2026.11704480.</li>
 <li>X. Xiang, X. Chen, and J. Yang, "Knowledge graph-based causal analysis of aviation accidents: A hybrid approach integrating retrieval-augmented generation and prompt engineering," <i>Aerospace</i>, vol. 13, no. 1, Art. 16, 2026, doi:10.3390/aerospace13010016.</li>
 <li>Y. Yang, G. Chen, B. He, and Y. Zhao, "Grounded knowledge graph extraction via LLMs: An anchor-constrained framework with provenance tracking," <i>Computers</i>, vol. 15, no. 3, Art. 178, 2026, doi:10.3390/computers15030178.</li>

@@ -1,0 +1,98 @@
+{
+  "accepted_checked": 2038,
+  "supported": 1712,
+  "not_supported": 326,
+  "unparsed": 0,
+  "supported_share": 0.84,
+  "by_code": {
+    "H1": {
+      "supported": 32,
+      "n": 41
+    },
+    "H2": {
+      "supported": 15,
+      "n": 16
+    },
+    "H3": {
+      "supported": 73,
+      "n": 94
+    },
+    "M1": {
+      "supported": 68,
+      "n": 86
+    },
+    "M2": {
+      "supported": 40,
+      "n": 51
+    },
+    "M3": {
+      "supported": 64,
+      "n": 74
+    },
+    "M4": {
+      "supported": 90,
+      "n": 103
+    },
+    "M5": {
+      "supported": 182,
+      "n": 203
+    },
+    "M6": {
+      "supported": 85,
+      "n": 122
+    },
+    "O1": {
+      "supported": 238,
+      "n": 306
+    },
+    "O2": {
+      "supported": 13,
+      "n": 15
+    },
+    "O3": {
+      "supported": 30,
+      "n": 39
+    },
+    "O4": {
+      "supported": 22,
+      "n": 31
+    },
+    "T1": {
+      "supported": 206,
+      "n": 233
+    },
+    "T2": {
+      "supported": 34,
+      "n": 36
+    },
+    "T3": {
+      "supported": 79,
+      "n": 87
+    },
+    "T4": {
+      "supported": 167,
+      "n": 190
+    },
+    "T5": {
+      "supported": 86,
+      "n": 94
+    },
+    "T6": {
+      "supported": 8,
+      "n": 9
+    },
+    "V1": {
+      "supported": 105,
+      "n": 122
+    },
+    "V2": {
+      "supported": 68,
+      "n": 79
+    },
+    "V3": {
+      "supported": 7,
+      "n": 7
+    }
+  },
+  "note": "LLM self-check (same model family as the extractor); validate with the D4 human sheet"
+}
