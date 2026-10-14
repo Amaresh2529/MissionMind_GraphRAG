@@ -136,3 +136,39 @@ rating of correctness and relevance (RQ5).
 - Key-point recall for P2 and P2-2step in QA mode is available (`--qa P2 P2-2step`) and becomes meaningful with the human D3 labels.
 - `scripts/score_d4.py` scores the human D4 review: precision of accepted factors, the correct-but-rejected share, and LLM-vs-human agreement (κ). It refuses until all 150 verdicts are filled.
 
+## 8. Fourth round: precedent-attributed hypotheses (protocol §11, frozen in `f4d8e3a`; code `dfd1657`)
+
+**Decision (owner, following two external reviews):** generated causes are hypotheses attributed to a named precedent.
+In T1 the queried mission's reports are excluded, so a cause can never be "established". Every item is rendered by
+code as `By analogy with <precedent mission>: <mechanism>`.
+
+Run `runs/pilot_t1_generation_v4`; check `pilot_generation_check_v4`; audit **PASS**.
+
+| System | Cause items generated | Category-only dropped | Kept (retention) | Presented as fact about the queried mission | Precedent among the system's top-5 missions | Abstained | Invalid citations |
+|---|---|---|---|---|---|---|---|
+| P2-2step | 45 | 11 | 25 (56%) | yes (e.g. Apollo 13 tank given as the MCO cause) | — | 1/10 | 0 |
+| **P2-2step-hyp** | 42 | 14 | 16 (38%) | **0** (16/16 rendered as precedent hypotheses) | 16/16 | 3/10 | 0 |
+
+**Finding: the model ignored the hypothesis schema.**
+- llama3 returned no `type` and no `precedent_mission` field in any item.
+- All 16 attributions were therefore set by the deterministic rule (mission of the first cited chunk). 0 were taken from the model.
+
+With an 8B local model, prompting alone does not prevent false attribution; the deterministic enforcement does. This
+supports enforcing grounding rules in code rather than relying on instructions.
+
+**Cost:** retention fell from 56% to 38% and abstentions rose from 1 to 3 of 10. This is a single pilot run with a changed
+prompt, so the drop cannot be separated from run-to-run variation.
+
+**Still open:** whether the hypotheses are apt and useful. This needs human ratings; no correctness claim is made. Wording
+for the paper: "MissionMind retrieves precedents and proposes evidence-grounded hypotheses; it does not establish the
+root cause of a new mishap."
+
+### Statements from the latest external reviews that are NOT adopted
+
+| Statement | Reason |
+|---|---|
+| "Mathematically de-biases" / "objectively superior for practical use" | A near-zero correlation on 10 pilot queries is a measurement, not a proof; superiority needs human-rated usefulness |
+| "Vastly superior architecture" (two-step) | Doubled specific retention on 10 queries; specificity is not correctness (see the Apollo 13 → MCO example) |
+| "Completely solves the hallucination problem" (hypothesis framing) | It removes false attribution in the output; the aptness of each analogy is unmeasured |
+| "Submission-ready / exceeds typical IEEE rigour" | Not before the human-labelled benchmark exists |
+

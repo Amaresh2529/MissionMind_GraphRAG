@@ -1,0 +1,81 @@
+{
+ "C3": {
+  "B3": {
+   "queries": 10,
+   "queries_not_100": [],
+   "missing_provenance": 0,
+   "n_lists": [
+    6
+   ],
+   "empty_mission_ranking": 0
+  },
+  "P2": {
+   "queries": 10,
+   "queries_not_100": [],
+   "missing_provenance": 0,
+   "n_lists": [
+    7
+   ],
+   "empty_mission_ranking": 0
+  }
+ },
+ "C4": {
+  "B3": {
+   "leaked_passages": 0,
+   "leaked_missions": []
+  },
+  "P2": {
+   "leaked_passages": 0,
+   "leaked_missions": []
+  }
+ },
+ "C6": {
+  "P2-2step-hyp": {
+   "queries": 10,
+   "parsed": 10,
+   "schema_ok": 10,
+   "items": 42,
+   "citations": 139,
+   "invalid_citations": 0,
+   "uncited_items": 0,
+   "chunks_used_min_max": [
+    22,
+    33
+   ],
+   "prompt_tokens_max": 7708,
+   "cause_items_raw": 42,
+   "cause_items_kept": 16,
+   "retained_share": 0.381,
+   "generic_dropped": 14,
+   "abstained": 3,
+   "mechanisms_found": 190,
+   "hypothesis_items": 16,
+   "established_items": 0,
+   "relabelled_established": 0,
+   "precedent_corrected": 16,
+   "precedent_in_top5": 16,
+   "precedent_items": 16
+  },
+  "P2-2step": {
+   "queries": 10,
+   "parsed": 10,
+   "schema_ok": 10,
+   "items": 58,
+   "citations": 189,
+   "invalid_citations": 0,
+   "uncited_items": 0,
+   "chunks_used_min_max": [
+    22,
+    33
+   ],
+   "prompt_tokens_max": 7602,
+   "cause_items_raw": 45,
+   "cause_items_kept": 25,
+   "retained_share": 0.5556,
+   "generic_dropped": 11,
+   "abstained": 1,
+   "mechanisms_found": 190
+  }
+ },
+ "failures": []
+}

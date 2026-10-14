@@ -52,6 +52,7 @@ bias = J("runs/pilot_bias_t1_v2/bias_diagnostic.json")["systems"]
 sup_path = ROOT / "runs/stage4_support_check/support_stats.json"
 sup = J("runs/stage4_support_check/support_stats.json") if sup_path.exists() else None
 g3 = J("runs/pilot_generation_check_v3/stage3_check.json")["C6"]
+g4 = J("runs/pilot_generation_check_v4/stage3_check.json")["C6"]["P2-2step-hyp"]
 
 
 def f3(x):
@@ -423,9 +424,25 @@ item, keeping 12. The <b>two-step version</b> (P2-2step, added after a second re
 verbatim mechanism sentence from each cited passage ({g3['P2-2step']['mechanisms_found']} found), then writes the analysis: it
 keeps about twice as many specific items. 0 invalid citations for all systems.</p>
 """ + note("<b>Caveat.</b> Specific is not the same as correct. Because the query mission's own reports are excluded, the "
-           "specific mechanisms come from precedents, and the model presents them as the new mishap's causes (for example, "
-           "Apollo 13's oxygen-tank failure offered for the Mars Climate Orbiter query). For the full study, causes should "
-           "be phrased as hypotheses tied to a named precedent, and their correctness rated by humans.", "warn") + """
+           "specific mechanisms come from precedents, and the model presented them as the new mishap's causes (for example, "
+           "Apollo 13's oxygen-tank failure offered for the Mars Climate Orbiter query).", "warn") + f"""
+<h3>Causes as precedent-attributed hypotheses (P2-2step-hyp)</h3>
+<p>The owner decided that every generated cause must be a hypothesis tied to a named precedent. The code now renders
+each cause as "By analogy with &lt;mission&gt;: &lt;mechanism&gt;", allows "established" only when the evidence comes from the
+queried mission itself (never the case in this test), and checks that the named precedent matches the cited evidence.</p>
+""" + table(["Measure", "P2-2step", "P2-2step-hyp"], [
+    ["Cause items kept", f"{g3['P2-2step']['cause_items_kept']} of {g3['P2-2step']['cause_items_raw']}",
+     f"{g4['cause_items_kept']} of {g4['cause_items_raw']}"],
+    ["Presented as fact about the queried mission", "yes", "0 (all rendered as hypotheses)"],
+    ["Named precedent among the system's top-5 missions", "-", f"{g4['precedent_in_top5']} of {g4['precedent_items']}"],
+    ["Abstained (of 10 queries)", str(g3['P2-2step']['abstained']), str(g4['abstained'])],
+    ["Invalid citations", "0", str(g4['invalid_citations'])],
+]) + f"""
+<p><b>Finding:</b> the local model ignored the requested hypothesis fields completely; all {g4['precedent_items']}
+attributions were set by the code. With an 8B model, prompting alone does not prevent false attribution; deterministic
+enforcement does. Whether each analogy is apt still needs human rating. For the paper: <i>MissionMind retrieves
+precedents and proposes evidence-grounded hypotheses; it does not establish the root cause of a new mishap.</i></p>
+""" + """
 <h3>Does the quote support the claimed cause?</h3>
 """ + sup_html)
 
@@ -452,8 +469,8 @@ P2's prompt plus enforcement leaves only specific mechanisms.</li>
     ["Graph bias near 0, text bias above 0.4 again", "Text retrieval favours missions with long reports; the graph channel did not show this bias in our corpus (not 'unbiased')"],
     ["Support check / D4", "Report the measured precision; never 'hallucination-free'"],
 ]) + """
-<h3>Open design question for the owner (before human labelling)</h3>
-<ul><li>Phrase generated causes as hypotheses tied to a named precedent ("by analogy with mission X: mechanism").</li></ul>
+<h3>Decided</h3>
+<ul><li>Generated causes are hypotheses tied to a named precedent (implemented as P2-2step-hyp, chapter 14).</li></ul>
 """)
 
 chapter("limits", "16. Limitations and Honest Scope", """
@@ -466,7 +483,10 @@ a human benchmark.</li>
 The text-based systems strongly favour missions with long reports (chapter 14); the graph channel does not.</li>
 <li><b>Models:</b> an 8-billion-parameter local model generates, extracts and judges; the automatic answer judge proved
 too lenient (it gave 0.81 key-point recall to the system that sees no documents).</li>
-<li><b>Claims:</b> the project does not claim that P outperforms the base paper.</li>
+<li><b>Claims:</b> the project does not claim that P outperforms the base paper, and it does not diagnose the root
+cause of a new mishap: it proposes precedent-based hypotheses.</li>
+<li><b>Benchmark size:</b> 22 query missions (10 in the pilot) give low statistical power; results are reported with
+confidence intervals and per-mission values, and extending the benchmark is future work.</li>
 </ul>
 """)
 
@@ -481,9 +501,9 @@ chapter("status", "17. Project Status: Done and Remaining", """
     ["Synthetic proof of concept", "Done (not reportable)"],
     ["10-mission pilot with AI-assisted labels", "Done; results in chapter 12"],
     ["Stage reports, submission summary, this guide", "Done"],
-    ["Review-driven improvements (P2, P2-2step, bias diagnostic, support check, D4 sheet and scorer)", "Done (chapter 14)"],
+    ["Review-driven improvements (P2, P2-2step, precedent hypotheses, bias diagnostic, support check, D4)", "Done (chapter 14)"],
 ]) + "<h3>Remaining (after the project submission)</h3>" + table(["Task", "Who", "Effort"], [
-    ["Decide the open design question (causes as precedent-tied hypotheses)", "Owner", "30 min"],
+    ["Human rating of the precedent hypotheses (aptness, usefulness)", "Owner", "part of the 40-answer rating"],
     ["Review taxonomy and field maps", "Owner", "2–3 h"],
     ["Full human labelling: D2a, D2q, D2b, D1, D3 + second annotator", "Owner (+ 1 person)", "60–80 h + 12 h"],
     ["Rate 40 blind answers (validate the automatic judge)", "Owner", "2 h"],
